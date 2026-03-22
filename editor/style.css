@@ -2539,10 +2539,105 @@ tbody tr:last-child td { border-bottom: none; }
 }
 .sb-preview-help p { margin: 0 0 8px; }
 .sb-preview-help strong { color: var(--text); }
+/* ─── Event Placement & Config ──────────────── */
+.sb-event-config {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+}
+.sb-config-section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px;
+}
+.sb-event-type-grid {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+.sb-event-type-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text-dim);
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.15s;
+}
+.sb-event-type-btn:hover {
+    border-color: var(--accent-dim);
+    color: var(--text);
+    background: var(--bg-hover);
+}
+.sb-event-type-btn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(79,143,247,0.1);
+}
+.sb-event-type-icon { font-size: 18px; }
+.sb-sprite-picker {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-top: 8px;
+}
+.sb-sprite-preview {
+    width: 56px;
+    height: 56px;
+    background: var(--bg);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.sb-sprite-fields {
+    flex: 1;
+    min-width: 0;
+}
+.sb-placement-wrap {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+.sb-placement-wrap canvas {
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    cursor: crosshair;
+    image-rendering: pixelated;
+    background: #000;
+    max-width: 100%;
+    height: auto;
+}
+.sb-placement-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.sb-placement-coords {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-left: 6px;
+}
 @media (max-width: 768px) {
     .sb-layout { flex-direction: column; height: auto; }
     .sb-sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; overflow-y: visible; padding-right: 0; }
     .sb-sidebar-heading { width: 100%; }
     .sb-game-preview-wrap { flex-direction: column; }
     .sb-preview-help { max-width: 100%; }
+    .sb-placement-wrap { flex-direction: column; }
+    .sb-event-type-grid { flex-direction: column; }
 }
