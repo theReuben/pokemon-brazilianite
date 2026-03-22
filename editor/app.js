@@ -7320,35 +7320,35 @@ const SB_COMMANDS = [
 ];
 
 const SB_TEMPLATES = [
-    { name: 'Simple NPC', icon: '\u{1F9D1}', desc: 'NPC that says a message when talked to',
+    { name: 'Simple NPC', icon: '\u{1F9D1}', desc: 'NPC that says a message when talked to', eventType: 'npc',
       blocks: [
         { cmd: 'lock', values: {} },
         { cmd: 'msgbox', values: { text: 'Hello there!\\nHow are you?', type: 'MSGBOX_NPC' } },
         { cmd: 'release', values: {} }
       ] },
-    { name: 'Sign Post', icon: '\u{1FAA7}', desc: 'A readable sign with a message',
+    { name: 'Sign Post', icon: '\u{1FAA7}', desc: 'A readable sign with a message', eventType: 'sign',
       blocks: [
         { cmd: 'msgbox', values: { text: 'PETALBURG CITY\\nWhere people mingle with nature', type: 'MSGBOX_SIGN' } },
         { cmd: 'end', values: {} }
       ] },
-    { name: 'Item Pickup', icon: '\u{1F381}', desc: 'Give the player an item when interacted with',
+    { name: 'Item Pickup', icon: '\u{1F381}', desc: 'Give the player an item when interacted with', eventType: 'npc',
       blocks: [
         { cmd: 'lock', values: {} },
         { cmd: 'giveitem', values: { item: 'ITEM_POTION', count: '1' } },
         { cmd: 'release', values: {} }
       ] },
-    { name: 'Yes/No Choice', icon: '\u2753', desc: 'Ask the player a yes/no question',
+    { name: 'Yes/No Choice', icon: '\u2753', desc: 'Ask the player a yes/no question', eventType: 'npc',
       blocks: [
         { cmd: 'lock', values: {} },
         { cmd: 'msgbox', values: { text: 'Would you like to proceed?', type: 'MSGBOX_YESNO' } },
         { cmd: 'release', values: {} }
       ] },
-    { name: 'Trainer Battle', icon: '\u2694', desc: 'NPC that initiates a trainer battle',
+    { name: 'Trainer Battle', icon: '\u2694', desc: 'NPC that initiates a trainer battle', eventType: 'npc',
       blocks: [
         { cmd: 'trainerbattle', values: { type: 'TRAINER_BATTLE_SINGLE', trainer: 'TRAINER_NAME', intro: 'Text_Intro', defeat: 'Text_Defeat' } },
         { cmd: 'end', values: {} }
       ] },
-    { name: 'Warp Event', icon: '\u{1F30C}', desc: 'Warp the player to another map',
+    { name: 'Warp Event', icon: '\u{1F30C}', desc: 'Warp the player to another map', eventType: 'coord_trigger',
       blocks: [
         { cmd: 'lockall', values: {} },
         { cmd: 'warp', values: { map: 'MAP_NAME', x: '0', y: '0' } },
@@ -7356,7 +7356,241 @@ const SB_TEMPLATES = [
       ] },
 ];
 
-let sbState = { blocks: [], scriptName: '', mapDir: '', tab: 'build', previewStep: 0 };
+let sbState = {
+    blocks: [], scriptName: '', mapDir: '', tab: 'build', previewStep: 0,
+    // Event placement
+    eventType: 'npc',          // 'npc', 'sign', 'hidden_item', 'coord_trigger'
+    graphicsId: 'OBJ_EVENT_GFX_WOMAN_1',
+    movementType: 'MOVEMENT_TYPE_FACE_DOWN',
+    trainerType: 'TRAINER_TYPE_NONE',
+    placementX: 7, placementY: 5,
+    flag: '0',
+    // Map grid state
+    mapWidth: 15, mapHeight: 10,
+};
+
+const SB_MOVEMENT_TYPES = [
+    'MOVEMENT_TYPE_FACE_UP', 'MOVEMENT_TYPE_FACE_DOWN', 'MOVEMENT_TYPE_FACE_LEFT', 'MOVEMENT_TYPE_FACE_RIGHT',
+    'MOVEMENT_TYPE_LOOK_AROUND', 'MOVEMENT_TYPE_WALK_SEQUENCE_UP_RIGHT_LEFT_DOWN',
+    'MOVEMENT_TYPE_WALK_IN_PLACE_DOWN', 'MOVEMENT_TYPE_WALK_IN_PLACE_UP',
+    'MOVEMENT_TYPE_WALK_IN_PLACE_LEFT', 'MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT',
+    'MOVEMENT_TYPE_WANDER_AROUND', 'MOVEMENT_TYPE_WANDER_UP_AND_DOWN', 'MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT',
+    'MOVEMENT_TYPE_NONE',
+];
+
+const SB_EVENT_TYPES = [
+    { id: 'npc', label: 'NPC', icon: '\u{1F9D1}', desc: 'A person or character on the map' },
+    { id: 'sign', label: 'Sign', icon: '\u{1FAA7}', desc: 'A sign post readable by the player' },
+    { id: 'hidden_item', label: 'Hidden Item', icon: '\u{1F48E}', desc: 'A hidden item the player can find' },
+    { id: 'coord_trigger', label: 'Step Trigger', icon: '\u{1F463}', desc: 'Triggers when player steps on tile' },
+];
+
+function sbRenderEventConfig() {
+    const graphicsIds = getUniqueGraphicsIds();
+    const isNPC = sbState.eventType === 'npc';
+    const isSign = sbState.eventType === 'sign';
+
+    return `
+        <div class="sb-event-config">
+            <div class="sb-config-section">
+                <div class="sb-sidebar-heading">Event Type</div>
+                <div class="sb-event-type-grid">
+                    ${SB_EVENT_TYPES.map(t => `
+                        <button class="sb-event-type-btn${sbState.eventType === t.id ? ' active' : ''}" data-etype="${t.id}" title="${escAttr(t.desc)}">
+                            <span class="sb-event-type-icon">${t.icon}</span>
+                            <span>${escHtml(t.label)}</span>
+                        </button>
+                    `).join('')}
+                </div>
+            </div>
+            ${isNPC ? `
+            <div class="sb-config-section">
+                <div class="sb-sidebar-heading">NPC Sprite</div>
+                <div class="sb-sprite-picker">
+                    <div class="sb-sprite-preview" id="sb-sprite-preview">
+                        ${getSpriteHtml(sbState.graphicsId, 48)}
+                    </div>
+                    <div class="sb-sprite-fields">
+                        ${makeDatalistHtml('sb-graphics-id', sbState.graphicsId, graphicsIds, 'style="font-family:monospace;font-size:12px;width:100%"')}
+                        <select id="sb-movement-type" style="width:100%;margin-top:6px;font-size:12px">
+                            ${SB_MOVEMENT_TYPES.map(m => `<option value="${escAttr(m)}"${m === sbState.movementType ? ' selected' : ''}>${escHtml(m.replace('MOVEMENT_TYPE_', '').replace(/_/g, ' ').toLowerCase())}</option>`).join('')}
+                        </select>
+                        <select id="sb-trainer-type" style="width:100%;margin-top:6px;font-size:12px">
+                            <option value="TRAINER_TYPE_NONE"${sbState.trainerType === 'TRAINER_TYPE_NONE' ? ' selected' : ''}>Not a trainer</option>
+                            <option value="TRAINER_TYPE_NORMAL"${sbState.trainerType === 'TRAINER_TYPE_NORMAL' ? ' selected' : ''}>Trainer (normal)</option>
+                            <option value="TRAINER_TYPE_SEE_ALL_DIRECTIONS"${sbState.trainerType === 'TRAINER_TYPE_SEE_ALL_DIRECTIONS' ? ' selected' : ''}>Trainer (see all dirs)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            ` : ''}
+            <div class="sb-config-section">
+                <div class="sb-sidebar-heading">Map Placement <span class="sb-placement-coords">(${sbState.placementX}, ${sbState.placementY})</span></div>
+                <div class="sb-placement-wrap">
+                    <canvas id="sb-placement-canvas" width="240" height="160" title="Click to place event on the map"></canvas>
+                    <div class="sb-placement-info">
+                        <div class="sb-field" style="margin-bottom:4px">
+                            <label>X</label>
+                            <input type="number" id="sb-place-x" value="${sbState.placementX}" min="0" max="99" style="width:60px">
+                        </div>
+                        <div class="sb-field" style="margin-bottom:4px">
+                            <label>Y</label>
+                            <input type="number" id="sb-place-y" value="${sbState.placementY}" min="0" max="99" style="width:60px">
+                        </div>
+                        <div class="sb-field">
+                            <label>Flag</label>
+                            <input type="text" id="sb-flag" value="${escAttr(sbState.flag)}" placeholder="0 or FLAG_NAME" style="width:100px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+}
+
+function sbDrawPlacementGrid() {
+    const canvas = $('#sb-placement-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width, h = canvas.height;
+    const tileW = w / sbState.mapWidth;
+    const tileH = h / sbState.mapHeight;
+
+    // Background
+    ctx.fillStyle = '#48a048';
+    ctx.fillRect(0, 0, w, h);
+
+    // Grid
+    ctx.strokeStyle = '#409040';
+    ctx.lineWidth = 0.5;
+    for (let x = 0; x <= sbState.mapWidth; x++) {
+        ctx.beginPath(); ctx.moveTo(x * tileW, 0); ctx.lineTo(x * tileW, h); ctx.stroke();
+    }
+    for (let y = 0; y <= sbState.mapHeight; y++) {
+        ctx.beginPath(); ctx.moveTo(0, y * tileH); ctx.lineTo(w, y * tileH); ctx.stroke();
+    }
+
+    // Grass tufts
+    ctx.fillStyle = '#58b858';
+    for (let tx = 0; tx < sbState.mapWidth; tx++) {
+        for (let ty = 0; ty < sbState.mapHeight; ty++) {
+            ctx.fillRect(tx * tileW + tileW * 0.25, ty * tileH + tileH * 0.6, 2, 2);
+            ctx.fillRect(tx * tileW + tileW * 0.65, ty * tileH + tileH * 0.35, 2, 2);
+        }
+    }
+
+    // Player sprite at center
+    const pcX = Math.floor(sbState.mapWidth / 2);
+    const pcY = Math.floor(sbState.mapHeight / 2);
+    ctx.fillStyle = '#e04040';
+    ctx.fillRect(pcX * tileW + 3, pcY * tileH + 1, tileW - 6, tileH * 0.3);
+    ctx.fillStyle = '#f8d0a0';
+    ctx.fillRect(pcX * tileW + 3, pcY * tileH + tileH * 0.3, tileW - 6, tileH * 0.25);
+    ctx.fillStyle = '#4060c0';
+    ctx.fillRect(pcX * tileW + 2, pcY * tileH + tileH * 0.55, tileW - 4, tileH * 0.45);
+
+    // Placed event marker
+    const ex = sbState.placementX, ey = sbState.placementY;
+    if (ex >= 0 && ex < sbState.mapWidth && ey >= 0 && ey < sbState.mapHeight) {
+        const isNPC = sbState.eventType === 'npc';
+        const isSign = sbState.eventType === 'sign';
+        const isTrigger = sbState.eventType === 'coord_trigger';
+
+        if (isNPC) {
+            // NPC sprite placeholder
+            ctx.fillStyle = '#f8c040';
+            ctx.fillRect(ex * tileW + 3, ey * tileH + 1, tileW - 6, tileH * 0.3);
+            ctx.fillStyle = '#f8d0a0';
+            ctx.fillRect(ex * tileW + 3, ey * tileH + tileH * 0.3, tileW - 6, tileH * 0.25);
+            ctx.fillStyle = '#40a040';
+            ctx.fillRect(ex * tileW + 2, ey * tileH + tileH * 0.55, tileW - 4, tileH * 0.45);
+        } else if (isSign) {
+            // Sign post
+            ctx.fillStyle = '#8B6914';
+            ctx.fillRect(ex * tileW + tileW * 0.25, ey * tileH + tileH * 0.15, tileW * 0.5, tileH * 0.5);
+            ctx.fillStyle = '#A0824A';
+            ctx.fillRect(ex * tileW + tileW * 0.3, ey * tileH + tileH * 0.2, tileW * 0.4, tileH * 0.35);
+            ctx.fillStyle = '#8B6914';
+            ctx.fillRect(ex * tileW + tileW * 0.42, ey * tileH + tileH * 0.65, tileW * 0.16, tileH * 0.3);
+        } else if (isTrigger) {
+            // Step trigger - translucent blue overlay
+            ctx.fillStyle = 'rgba(79, 143, 247, 0.4)';
+            ctx.fillRect(ex * tileW + 1, ey * tileH + 1, tileW - 2, tileH - 2);
+            ctx.strokeStyle = '#4F8FF7';
+            ctx.lineWidth = 1.5;
+            ctx.strokeRect(ex * tileW + 1, ey * tileH + 1, tileW - 2, tileH - 2);
+        } else {
+            // Hidden item - sparkle dot
+            ctx.fillStyle = 'rgba(234, 179, 8, 0.6)';
+            ctx.fillRect(ex * tileW + 1, ey * tileH + 1, tileW - 2, tileH - 2);
+            ctx.fillStyle = '#EAB308';
+            ctx.beginPath();
+            ctx.arc(ex * tileW + tileW / 2, ey * tileH + tileH / 2, 3, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        // Selection highlight border
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(ex * tileW, ey * tileH, tileW, tileH);
+    }
+}
+
+function sbWirePlacementEvents() {
+    const canvas = $('#sb-placement-canvas');
+    if (canvas) {
+        canvas.addEventListener('click', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+            const mx = (e.clientX - rect.left) * scaleX;
+            const my = (e.clientY - rect.top) * scaleY;
+            const tileW = canvas.width / sbState.mapWidth;
+            const tileH = canvas.height / sbState.mapHeight;
+            sbState.placementX = Math.floor(mx / tileW);
+            sbState.placementY = Math.floor(my / tileH);
+            const xi = $('#sb-place-x'); if (xi) xi.value = sbState.placementX;
+            const yi = $('#sb-place-y'); if (yi) yi.value = sbState.placementY;
+            const coords = document.querySelector('.sb-placement-coords');
+            if (coords) coords.textContent = `(${sbState.placementX}, ${sbState.placementY})`;
+            sbDrawPlacementGrid();
+            if (sbState.tab === 'preview') sbRefreshGamePreview();
+        });
+    }
+    const xi = $('#sb-place-x');
+    const yi = $('#sb-place-y');
+    if (xi) xi.addEventListener('input', () => { sbState.placementX = parseInt(xi.value) || 0; sbDrawPlacementGrid(); });
+    if (yi) yi.addEventListener('input', () => { sbState.placementY = parseInt(yi.value) || 0; sbDrawPlacementGrid(); });
+    const flagInput = $('#sb-flag');
+    if (flagInput) flagInput.addEventListener('input', () => { sbState.flag = flagInput.value; });
+
+    // Event type buttons
+    $$('.sb-event-type-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            sbState.eventType = btn.dataset.etype;
+            sbRefresh();
+        });
+    });
+
+    // Graphics ID
+    const gfxInput = $('#sb-graphics-id');
+    if (gfxInput) {
+        gfxInput.addEventListener('input', () => {
+            sbState.graphicsId = gfxInput.value;
+            const prev = $('#sb-sprite-preview');
+            if (prev) prev.innerHTML = getSpriteHtml(sbState.graphicsId, 48);
+            sbDrawPlacementGrid();
+            if (sbState.tab === 'preview') sbRefreshGamePreview();
+        });
+    }
+
+    // Movement type
+    const movInput = $('#sb-movement-type');
+    if (movInput) movInput.addEventListener('change', () => { sbState.movementType = movInput.value; });
+
+    // Trainer type
+    const ttInput = $('#sb-trainer-type');
+    if (ttInput) ttInput.addEventListener('change', () => { sbState.trainerType = ttInput.value; });
+}
 
 function sbGetCmd(id) { return SB_COMMANDS.find(c => c.id === id); }
 
@@ -7519,6 +7753,7 @@ function sbWireEvents() {
             const tpl = SB_TEMPLATES[tplIdx];
             if (!tpl) return;
             sbState.blocks = tpl.blocks.map(b => ({ cmd: b.cmd, values: { ...b.values } }));
+            if (tpl.eventType) sbState.eventType = tpl.eventType;
             sbState.tab = 'build';
             sbRefresh();
             toast(`Loaded template: ${tpl.name}`);
@@ -7534,11 +7769,26 @@ function sbWireEvents() {
         });
     }
 
-    // Map select
+    // Map select — also try to load map dimensions for placement grid
     const mapSelect = $('#sb-map-select');
     if (mapSelect) {
-        mapSelect.addEventListener('change', () => {
+        mapSelect.addEventListener('change', async () => {
             sbState.mapDir = mapSelect.value;
+            if (sbState.mapDir) {
+                try {
+                    const maps = await loadMaps();
+                    const map = maps.find(m => (m._dirName || m.name) === sbState.mapDir);
+                    if (map && map.layout) {
+                        const layouts = state.layouts || [];
+                        const layout = layouts.find(l => l.id === map.layout);
+                        if (layout && layout.width && layout.height) {
+                            sbState.mapWidth = Math.min(layout.width, 30);
+                            sbState.mapHeight = Math.min(layout.height, 20);
+                        }
+                    }
+                } catch {}
+            }
+            if (sbState.tab === 'placement') sbDrawPlacementGrid();
         });
     }
 
@@ -7605,9 +7855,18 @@ function sbRefresh() {
     $$('.sb-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === sbState.tab));
     const buildPanel = $('#sb-build-panel');
     const tplPanel = $('#sb-templates-panel');
+    const placePanel = $('#sb-placement-panel');
     const prevPanel = $('#sb-preview-panel');
     if (buildPanel) buildPanel.style.display = sbState.tab === 'build' ? '' : 'none';
     if (tplPanel) tplPanel.style.display = sbState.tab === 'templates' ? '' : 'none';
+    if (placePanel) {
+        placePanel.style.display = sbState.tab === 'placement' ? '' : 'none';
+        if (sbState.tab === 'placement') {
+            placePanel.innerHTML = sbRenderEventConfig();
+            sbWirePlacementEvents();
+            sbDrawPlacementGrid();
+        }
+    }
     if (prevPanel) prevPanel.style.display = sbState.tab === 'preview' ? '' : 'none';
     if (sbState.tab === 'preview') {
         sbWirePreviewEvents();
@@ -7619,6 +7878,8 @@ async function sbSaveToMap() {
     if (!sbState.mapDir) { toast('Select a map first', true); return; }
     if (!sbState.scriptName) { toast('Enter a script name first', true); return; }
     if (sbState.blocks.length === 0) { toast('Add some commands first', true); return; }
+
+    // Save script to scripts.inc
     const filePath = `data/maps/${sbState.mapDir}/scripts.inc`;
     let existing = '';
     try { existing = await loadMapScript(sbState.mapDir); } catch {}
@@ -7629,7 +7890,69 @@ async function sbSaveToMap() {
     const updated = existing.trimEnd() + newScript + '\n';
     scriptCache[sbState.mapDir] = updated;
     markChanged(filePath, updated);
-    toast(`Script appended to ${sbState.mapDir}/scripts.inc`);
+
+    // Also add event to map.json if placement info is set
+    try {
+        const maps = await loadMaps();
+        const map = maps.find(m => (m._dirName || m.name) === sbState.mapDir);
+        if (map) {
+            const scriptLabel = sbState.scriptName;
+            if (sbState.eventType === 'npc') {
+                if (!map.object_events) map.object_events = [];
+                map.object_events.push({
+                    graphics_id: sbState.graphicsId,
+                    x: sbState.placementX,
+                    y: sbState.placementY,
+                    elevation: 3,
+                    movement_type: sbState.movementType,
+                    movement_range_x: 0,
+                    movement_range_y: 0,
+                    trainer_type: sbState.trainerType,
+                    trainer_sight_or_berry_tree_id: '0',
+                    script: scriptLabel,
+                    flag: sbState.flag || '0',
+                });
+            } else if (sbState.eventType === 'sign') {
+                if (!map.bg_events) map.bg_events = [];
+                map.bg_events.push({
+                    type: 'sign',
+                    x: sbState.placementX,
+                    y: sbState.placementY,
+                    elevation: 0,
+                    player_facing_dir: 'BG_EVENT_PLAYER_FACING_ANY',
+                    script: scriptLabel,
+                });
+            } else if (sbState.eventType === 'hidden_item') {
+                if (!map.bg_events) map.bg_events = [];
+                map.bg_events.push({
+                    type: 'hidden_item',
+                    x: sbState.placementX,
+                    y: sbState.placementY,
+                    elevation: 0,
+                    item: 'ITEM_POTION',
+                    flag: sbState.flag || 'FLAG_HIDDEN_ITEM',
+                });
+            } else if (sbState.eventType === 'coord_trigger') {
+                if (!map.coord_events) map.coord_events = [];
+                map.coord_events.push({
+                    type: 'trigger',
+                    x: sbState.placementX,
+                    y: sbState.placementY,
+                    elevation: 0,
+                    var: 'VAR_TEMP_1',
+                    var_value: '0',
+                    script: scriptLabel,
+                });
+            }
+            const mapJsonPath = `data/maps/${sbState.mapDir}/map.json`;
+            markChanged(mapJsonPath, JSON.stringify(map, null, 4));
+            toast(`Script + ${sbState.eventType} event saved to ${sbState.mapDir}`);
+        } else {
+            toast(`Script appended to ${sbState.mapDir}/scripts.inc`);
+        }
+    } catch {
+        toast(`Script appended to ${sbState.mapDir}/scripts.inc`);
+    }
 }
 
 // ─── GBA In-Game Preview ────────────────────────────────────────────────────
@@ -7825,9 +8148,31 @@ function gbaDrawOverworld(ctx, s) {
             ctx.fillRect((tx + 10) * s, (ty + 6) * s, 2 * s, 2 * s);
         }
     }
-    // Player sprite (simple)
+
+    // Calculate camera-relative positions: player is at center, event is offset
+    const playerCenterTileX = Math.floor(GBA_W / 32); // tile index where player is
+    const playerCenterTileY = Math.floor(GBA_H / 32);
+    const relX = sbState.placementX - Math.floor(sbState.mapWidth / 2);
+    const relY = sbState.placementY - Math.floor(sbState.mapHeight / 2);
+    const eventTileX = playerCenterTileX + relX;
+    const eventTileY = playerCenterTileY + relY;
+
+    // Draw event at placed position
+    const evtOnScreen = eventTileX >= 0 && eventTileX < GBA_W / 16 && eventTileY >= 0 && eventTileY < GBA_H / 16;
+    if (evtOnScreen) {
+        if (sbState.eventType === 'npc') {
+            gbaDrawNPC(ctx, s, eventTileX, eventTileY);
+        } else if (sbState.eventType === 'sign') {
+            gbaDrawSign(ctx, s, eventTileX, eventTileY);
+        } else if (sbState.eventType === 'coord_trigger') {
+            gbaDrawTrigger(ctx, s, eventTileX, eventTileY);
+        } else {
+            gbaDrawHiddenItem(ctx, s, eventTileX, eventTileY);
+        }
+    }
+
+    // Player sprite (always at center)
     const px = (GBA_W / 2 - 8) * s, py = (GBA_H / 2 - 16) * s;
-    // Body
     ctx.fillStyle = '#e04040'; // red hat
     ctx.fillRect(px + 4 * s, py, 8 * s, 4 * s);
     ctx.fillStyle = '#383838'; // hair
@@ -7839,10 +8184,53 @@ function gbaDrawOverworld(ctx, s) {
     ctx.fillStyle = '#383838'; // pants
     ctx.fillRect(px + 4 * s, py + 17 * s, 3 * s, 5 * s);
     ctx.fillRect(px + 9 * s, py + 17 * s, 3 * s, 5 * s);
-    // Eyes
     ctx.fillStyle = '#383838';
     ctx.fillRect(px + 5 * s, py + 8 * s, s, 2 * s);
     ctx.fillRect(px + 10 * s, py + 8 * s, s, 2 * s);
+
+    // Event type label at top
+    const evtLabel = SB_EVENT_TYPES.find(t => t.id === sbState.eventType);
+    if (evtLabel) {
+        gbaDrawText(ctx, evtLabel.icon + ' ' + evtLabel.label.toUpperCase(), 4 * s, 4 * s, s, '#ffffff', '#000000');
+    }
+    // Position label
+    gbaDrawText(ctx, '(' + sbState.placementX + ',' + sbState.placementY + ')', (GBA_W - 40) * s, 4 * s, s, '#ffffff', '#000000');
+}
+
+function gbaDrawSign(ctx, s, xTile, yTile) {
+    const px = xTile * 16 * s, py = yTile * 16 * s;
+    // Sign post body
+    ctx.fillStyle = '#8B6914';
+    ctx.fillRect(px + 3 * s, py + 2 * s, 10 * s, 8 * s);
+    ctx.fillStyle = '#A0824A';
+    ctx.fillRect(px + 4 * s, py + 3 * s, 8 * s, 6 * s);
+    // Post
+    ctx.fillStyle = '#8B6914';
+    ctx.fillRect(px + 6 * s, py + 10 * s, 4 * s, 6 * s);
+}
+
+function gbaDrawTrigger(ctx, s, xTile, yTile) {
+    const px = xTile * 16 * s, py = yTile * 16 * s;
+    ctx.fillStyle = 'rgba(79, 143, 247, 0.35)';
+    ctx.fillRect(px + s, py + s, 14 * s, 14 * s);
+    ctx.strokeStyle = '#4F8FF7';
+    ctx.lineWidth = s;
+    ctx.strokeRect(px + s, py + s, 14 * s, 14 * s);
+    // Step icon
+    gbaDrawText(ctx, '!', px + 6 * s, py + 4 * s, s, '#4F8FF7', null);
+}
+
+function gbaDrawHiddenItem(ctx, s, xTile, yTile) {
+    const px = xTile * 16 * s, py = yTile * 16 * s;
+    // Sparkle effect
+    ctx.fillStyle = '#EAB308';
+    ctx.fillRect(px + 7 * s, py + 3 * s, 2 * s, 2 * s);
+    ctx.fillRect(px + 3 * s, py + 7 * s, 2 * s, 2 * s);
+    ctx.fillRect(px + 11 * s, py + 7 * s, 2 * s, 2 * s);
+    ctx.fillRect(px + 7 * s, py + 11 * s, 2 * s, 2 * s);
+    ctx.fillRect(px + 5 * s, py + 5 * s, 6 * s, 6 * s);
+    ctx.fillStyle = '#FDE68A';
+    ctx.fillRect(px + 6 * s, py + 6 * s, 4 * s, 4 * s);
 }
 
 function gbaDrawNPC(ctx, s, xTile, yTile) {
@@ -7906,10 +8294,8 @@ function sbRenderPreviewFrame(canvas, frameIdx) {
     const idx = Math.max(0, Math.min(frameIdx, frames.length - 1));
     const frame = frames[idx];
 
-    // Always draw overworld base
+    // Always draw overworld base (includes placed event and player)
     gbaDrawOverworld(ctx, s);
-    // Draw an NPC near player for context
-    gbaDrawNPC(ctx, s, GBA_W / 32 + 2, GBA_H / 32);
 
     switch (frame.type) {
         case 'msgbox':
@@ -8011,6 +8397,7 @@ async function renderScriptBuilder() {
         <div class="sb-tab-bar">
             <div class="sb-tab${sbState.tab === 'build' ? ' active' : ''}" data-tab="build">Build</div>
             <div class="sb-tab${sbState.tab === 'templates' ? ' active' : ''}" data-tab="templates">Templates</div>
+            <div class="sb-tab${sbState.tab === 'placement' ? ' active' : ''}" data-tab="placement">Placement</div>
             <div class="sb-tab${sbState.tab === 'preview' ? ' active' : ''}" data-tab="preview">Game Preview</div>
         </div>
         <div id="sb-build-panel" style="${sbState.tab !== 'build' ? 'display:none' : ''}">
@@ -8034,6 +8421,9 @@ async function renderScriptBuilder() {
                 `).join('')}
             </div>
         </div>
+        <div id="sb-placement-panel" style="${sbState.tab !== 'placement' ? 'display:none' : ''}">
+            ${sbRenderEventConfig()}
+        </div>
         <div id="sb-preview-panel" style="${sbState.tab !== 'preview' ? 'display:none' : ''}">
             <div class="sb-game-preview-wrap">
                 <div class="sb-gba-shell">
@@ -8048,13 +8438,18 @@ async function renderScriptBuilder() {
                 <div class="sb-preview-help">
                     <p><strong>In-Game Preview</strong></p>
                     <p>Step through your script to see how dialogue boxes, item pickups, battles, and warps will look on a GBA screen.</p>
-                    <p>Use the Prev/Next buttons or add more commands in the Build tab to see additional frames.</p>
+                    <p>Use the Prev/Next buttons to step through frames. The preview shows your ${sbState.eventType === 'npc' ? 'NPC' : sbState.eventType === 'sign' ? 'sign' : 'event'} at position (${sbState.placementX}, ${sbState.placementY}) on the map.</p>
+                    ${sbState.eventType === 'npc' ? `<p><strong>NPC Sprite:</strong> ${escHtml(sbState.graphicsId.replace('OBJ_EVENT_GFX_', '').replace(/_/g, ' '))}</p>` : ''}
                 </div>
             </div>
         </div>
     `;
 
     sbWireEvents();
+    if (sbState.tab === 'placement') {
+        sbWirePlacementEvents();
+        sbDrawPlacementGrid();
+    }
     if (sbState.tab === 'preview') {
         sbWirePreviewEvents();
         sbRefreshGamePreview();
