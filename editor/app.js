@@ -7353,7 +7353,7 @@ function sbGenerateScript() {
             const textLabel = name + '_Text_' + i;
             const msgLines = (b.values.text || '').split('\\n');
             const stringLines = msgLines.map((l, li) =>
-                `\t.string "${l}${li < msgLines.length - 1 ? '$' : '$"}"`
+                `\t.string "${l}${li < msgLines.length - 1 ? '$' : ''}"`
             );
             textBlocks.push(`\n${textLabel}:\n${stringLines.join('\n')}`);
         }
