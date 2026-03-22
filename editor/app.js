@@ -69,6 +69,35 @@ const $ = (sel, el = document) => el.querySelector(sel);
 const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
 const content = $('#content');
 
+// ─── Session Cache ──────────────────────────────────────────────────────────
+// Cache fetched files in sessionStorage to avoid re-fetching on page reload.
+// Keys are prefixed with 'fc:' (file cache). Large files (>512KB) are skipped.
+const SESSION_CACHE_PREFIX = 'fc:';
+const SESSION_CACHE_MAX_SIZE = 512 * 1024; // 512KB per item
+
+function sessionCacheGet(key) {
+    try {
+        return sessionStorage.getItem(SESSION_CACHE_PREFIX + key);
+    } catch { return null; }
+}
+function sessionCacheSet(key, value) {
+    if (typeof value !== 'string' || value.length > SESSION_CACHE_MAX_SIZE) return;
+    try {
+        sessionStorage.setItem(SESSION_CACHE_PREFIX + key, value);
+    } catch {
+        // Storage full — clear old cache entries and retry once
+        try {
+            const toRemove = [];
+            for (let i = 0; i < sessionStorage.length; i++) {
+                const k = sessionStorage.key(i);
+                if (k && k.startsWith(SESSION_CACHE_PREFIX)) toRemove.push(k);
+            }
+            for (const k of toRemove) sessionStorage.removeItem(k);
+            sessionStorage.setItem(SESSION_CACHE_PREFIX + key, value);
+        } catch {}
+    }
+}
+
 // ─── GitHub API ─────────────────────────────────────────────────────────────
 async function ghFetch(path, opts = {}) {
     const headers = { 'Accept': 'application/vnd.github.v3+json', ...opts.headers };
@@ -81,29 +110,43 @@ async function ghFetch(path, opts = {}) {
     return res.json();
 }
 
-async function fetchFile(filePath) {
-    try {
-        const data = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/${filePath}?ref=${BRANCH}`);
-        if (data.content) {
-            const text = atob(data.content.replace(/\n/g, ''));
-            // Handle UTF-8 properly
-            const bytes = Uint8Array.from(text, c => c.charCodeAt(0));
-            const decoded = new TextDecoder().decode(bytes);
-            originalContent[filePath] = decoded;
-            return decoded;
-        }
-        // File too large for Contents API — fall through to raw fetch
-    } catch {
-        // File may exceed GitHub's 1MB Contents API limit — fall through to raw fetch
-    }
+// Fetch a file via raw.githubusercontent.com (faster, no base64 overhead)
+async function fetchFileRaw(filePath) {
     const rawUrl = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}/${filePath}`;
     const headers = {};
     if (ghToken) headers['Authorization'] = `token ${ghToken}`;
     const res = await fetch(rawUrl, { headers });
     if (!res.ok) throw new Error(`Failed to fetch file: ${res.status}`);
-    const decoded = await res.text();
-    originalContent[filePath] = decoded;
-    return decoded;
+    return res.text();
+}
+
+async function fetchFile(filePath) {
+    // Check session cache first
+    const cached = sessionCacheGet(filePath);
+    if (cached !== null) {
+        originalContent[filePath] = cached;
+        return cached;
+    }
+    // Prefer raw fetch — faster than Contents API (no base64 decode overhead)
+    try {
+        const decoded = await fetchFileRaw(filePath);
+        originalContent[filePath] = decoded;
+        sessionCacheSet(filePath, decoded);
+        return decoded;
+    } catch {}
+    // Fallback to Contents API for private repos or other issues
+    try {
+        const data = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/${filePath}?ref=${BRANCH}`);
+        if (data.content) {
+            const text = atob(data.content.replace(/\n/g, ''));
+            const bytes = Uint8Array.from(text, c => c.charCodeAt(0));
+            const decoded = new TextDecoder().decode(bytes);
+            originalContent[filePath] = decoded;
+            sessionCacheSet(filePath, decoded);
+            return decoded;
+        }
+    } catch {}
+    throw new Error(`Failed to fetch file: ${filePath}`);
 }
 
 async function fetchJSON(filePath) {
@@ -908,24 +951,33 @@ async function loadConfig() {
         // List config files
         const listing = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/include/config?ref=${BRANCH}`);
         const hFiles = listing.filter(f => f.name.endsWith('.h'));
-        const allSettings = [];
-        for (const file of hFiles) {
+        // Load all config files in parallel
+        const results = await Promise.all(hFiles.map(async file => {
             const text = await fetchFile(`include/config/${file.name}`);
-            allSettings.push(...parseConfig(text, file.name));
-        }
-        state.config = allSettings;
+            return parseConfig(text, file.name);
+        }));
+        state.config = results.flat();
     }
     return state.config;
 }
 
 async function loadMaps() {
     if (!state.maps) {
+        // Check sessionStorage for cached map data (all maps as a single blob)
+        const cachedMaps = sessionCacheGet('__all_maps__');
+        if (cachedMaps) {
+            try {
+                state.maps = JSON.parse(cachedMaps);
+                return state.maps;
+            } catch {}
+        }
+
         const listing = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/data/maps?ref=${BRANCH}`);
         const dirs = listing.filter(f => f.type === 'dir');
         const maps = [];
-        // Load map.json for each map directory (batch in groups of 10 for perf)
-        for (let i = 0; i < dirs.length; i += 10) {
-            const batch = dirs.slice(i, i + 10);
+        // Load map.json for each map directory (batch in groups of 50 for speed)
+        for (let i = 0; i < dirs.length; i += 50) {
+            const batch = dirs.slice(i, i + 50);
             const results = await Promise.all(batch.map(async d => {
                 try {
                     const text = await fetchFile(`data/maps/${d.name}/map.json`);
@@ -937,6 +989,22 @@ async function loadMaps() {
             maps.push(...results.filter(Boolean));
         }
         state.maps = maps;
+        // Cache the full map list — individual map.json files are too large for
+        // per-file caching, but the combined lightweight data fits.
+        try {
+            // Store a slimmed version with only the fields needed for list view
+            const slim = maps.map(m => ({
+                _dirName: m._dirName, id: m.id, name: m.name,
+                map_type: m.map_type, weather: m.weather,
+                object_events: m.object_events, connections: m.connections,
+                bg_events: m.bg_events
+            }));
+            const blob = JSON.stringify(slim);
+            // Only cache if under 4MB (sessionStorage limit is ~5MB)
+            if (blob.length < 4 * 1024 * 1024) {
+                try { sessionStorage.setItem(SESSION_CACHE_PREFIX + '__all_maps__', blob); } catch {}
+            }
+        } catch {}
     }
     return state.maps;
 }
@@ -2376,8 +2444,8 @@ async function renderMaps() {
     }
 
     const maps = await loadMaps();
-    // Also pre-load encounters for the tags
-    try { await loadEncounters(); } catch {}
+    // Encounters loaded lazily — only fetched when user searches by species
+    // or views a specific map detail, not upfront for the list view
 
     const search = state.search.toLowerCase();
     const versionFilter = state.gameVersionFilter || 'all';
@@ -2502,6 +2570,10 @@ async function renderMaps() {
     $('#map-search').addEventListener('input', async e => {
         const pos = e.target.selectionStart;
         state.search = e.target.value;
+        // Lazy-load encounters on first search so species search works
+        if (state.search && !state.encounters) {
+            try { await loadEncounters(); } catch {}
+        }
         await renderMaps();
         const el = $('#map-search');
         if (el) { el.focus(); el.selectionStart = el.selectionEnd = pos; }
@@ -5406,9 +5478,9 @@ async function loadPokemonSpecies() {
         const listing = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/src/data/pokemon/species_info?ref=${BRANCH}`);
         const genFiles = listing.filter(f => f.name.startsWith('gen_') && f.name.endsWith('.h'));
         const allPokemon = [];
-        // Load in batches of 3
-        for (let i = 0; i < genFiles.length; i += 3) {
-            const batch = genFiles.slice(i, i + 3);
+        // Load in batches of 10 for faster parallel fetching
+        for (let i = 0; i < genFiles.length; i += 10) {
+            const batch = genFiles.slice(i, i + 10);
             const results = await Promise.all(batch.map(async f => {
                 try {
                     const text = await fetchFile(`src/data/pokemon/species_info/${f.name}`);
@@ -5599,8 +5671,8 @@ async function loadLearnsets() {
         if (!Array.isArray(listing)) throw new Error('Unexpected response when listing learnset files');
         const genFiles = listing.filter(f => f.name.startsWith('gen_') && f.name.endsWith('.h'));
         const all = {};
-        for (let i = 0; i < genFiles.length; i += 3) {
-            const batch = genFiles.slice(i, i + 3);
+        for (let i = 0; i < genFiles.length; i += 10) {
+            const batch = genFiles.slice(i, i + 10);
             const results = await Promise.all(batch.map(async f => {
                 try {
                     const text = await fetchFile(`src/data/pokemon/level_up_learnsets/${f.name}`);
