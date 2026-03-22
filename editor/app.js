@@ -957,6 +957,7 @@ async function render() {
             case 'starters': await renderStarters(); break;
             case 'music': await renderMusic(); break;
             case 'sprite-creator': await renderSpriteCreator(); break;
+            case 'script-builder': await renderScriptBuilder(); break;
         }
     } catch (e) {
         content.innerHTML = `<div class="loading-center" style="color:var(--red)">Error loading data: ${escHtml(e.message)}</div>`;
@@ -7189,6 +7190,824 @@ getUniqueGraphicsIds = function() {
     }
     return ids.sort();
 };
+
+// ─── Script Builder ─────────────────────────────────────────────────────────
+
+const SB_COMMANDS = [
+    { cat: 'Dialogue', id: 'msgbox', label: 'Message Box', color: '#3b82f6', icon: '\u{1F4AC}',
+      fields: [
+        { key: 'text', label: 'Text', type: 'textarea', placeholder: 'Dialogue text...' },
+        { key: 'type', label: 'Type', type: 'select', options: ['MSGBOX_DEFAULT', 'MSGBOX_NPC', 'MSGBOX_SIGN', 'MSGBOX_YESNO', 'MSGBOX_AUTOCLOSE'] }
+      ] },
+    { cat: 'Dialogue', id: 'closemessage', label: 'Close Message', color: '#3b82f6', icon: '\u{1F4AD}', fields: [] },
+    { cat: 'Flow', id: 'lock', label: 'Lock Player', color: '#8b5cf6', icon: '\u{1F512}', fields: [] },
+    { cat: 'Flow', id: 'release', label: 'Release Player', color: '#8b5cf6', icon: '\u{1F513}', fields: [] },
+    { cat: 'Flow', id: 'lockall', label: 'Lock All', color: '#8b5cf6', icon: '\u{1F510}', fields: [] },
+    { cat: 'Flow', id: 'releaseall', label: 'Release All', color: '#8b5cf6', icon: '\u{1F511}', fields: [] },
+    { cat: 'Flow', id: 'end', label: 'End Script', color: '#8b5cf6', icon: '\u{1F6D1}', fields: [] },
+    { cat: 'Flow', id: 'return', label: 'Return', color: '#8b5cf6', icon: '\u21A9', fields: [] },
+    { cat: 'Flow', id: 'goto', label: 'Go To Label', color: '#8b5cf6', icon: '\u{1F517}',
+      fields: [{ key: 'target', label: 'Label', type: 'text', placeholder: 'ScriptLabel' }] },
+    { cat: 'Flow', id: 'call', label: 'Call Subroutine', color: '#8b5cf6', icon: '\u{1F4DE}',
+      fields: [{ key: 'target', label: 'Label', type: 'text', placeholder: 'ScriptLabel' }] },
+    { cat: 'Conditions', id: 'goto_if_eq', label: 'Go To If Equal', color: '#f59e0b', icon: '\u2753',
+      fields: [
+        { key: 'var', label: 'Variable', type: 'text', placeholder: 'VAR_NAME' },
+        { key: 'value', label: 'Value', type: 'text', placeholder: '0' },
+        { key: 'target', label: 'Label', type: 'text', placeholder: 'ScriptLabel' }
+      ] },
+    { cat: 'Conditions', id: 'call_if_eq', label: 'Call If Equal', color: '#f59e0b', icon: '\u2754',
+      fields: [
+        { key: 'var', label: 'Variable', type: 'text', placeholder: 'VAR_NAME' },
+        { key: 'value', label: 'Value', type: 'text', placeholder: '0' },
+        { key: 'target', label: 'Label', type: 'text', placeholder: 'ScriptLabel' }
+      ] },
+    { cat: 'Variables', id: 'setvar', label: 'Set Variable', color: '#10b981', icon: '\u270D',
+      fields: [
+        { key: 'var', label: 'Variable', type: 'text', placeholder: 'VAR_NAME' },
+        { key: 'value', label: 'Value', type: 'text', placeholder: '0' }
+      ] },
+    { cat: 'Variables', id: 'setflag', label: 'Set Flag', color: '#10b981', icon: '\u2691',
+      fields: [{ key: 'flag', label: 'Flag', type: 'text', placeholder: 'FLAG_NAME' }] },
+    { cat: 'Variables', id: 'clearflag', label: 'Clear Flag', color: '#10b981', icon: '\u2690',
+      fields: [{ key: 'flag', label: 'Flag', type: 'text', placeholder: 'FLAG_NAME' }] },
+    { cat: 'Movement', id: 'applymovement', label: 'Apply Movement', color: '#ef4444', icon: '\u{1F3C3}',
+      fields: [
+        { key: 'target', label: 'Object', type: 'text', placeholder: 'LOCALID_PLAYER or object ID' },
+        { key: 'movement', label: 'Movement', type: 'text', placeholder: 'Movement_Label' }
+      ] },
+    { cat: 'Movement', id: 'waitmovement', label: 'Wait Movement', color: '#ef4444', icon: '\u23F3',
+      fields: [{ key: 'target', label: 'Object', type: 'text', placeholder: '0' }] },
+    { cat: 'Sound', id: 'playse', label: 'Play Sound', color: '#ec4899', icon: '\u{1F50A}',
+      fields: [{ key: 'se', label: 'Sound', type: 'text', placeholder: 'SE_SELECT' }] },
+    { cat: 'Sound', id: 'playfanfare', label: 'Play Fanfare', color: '#ec4899', icon: '\u{1F3B6}',
+      fields: [{ key: 'fanfare', label: 'Fanfare', type: 'text', placeholder: 'MUS_OBTAINED_ITEM' }] },
+    { cat: 'Sound', id: 'waitfanfare', label: 'Wait Fanfare', color: '#ec4899', icon: '\u{1F3B5}', fields: [] },
+    { cat: 'Items', id: 'giveitem', label: 'Give Item', color: '#06b6d4', icon: '\u{1F381}',
+      fields: [
+        { key: 'item', label: 'Item', type: 'text', placeholder: 'ITEM_POTION' },
+        { key: 'count', label: 'Count', type: 'text', placeholder: '1' }
+      ] },
+    { cat: 'Battle', id: 'trainerbattle', label: 'Trainer Battle', color: '#dc2626', icon: '\u2694',
+      fields: [
+        { key: 'type', label: 'Type', type: 'select', options: ['TRAINER_BATTLE_SINGLE', 'TRAINER_BATTLE_DOUBLE', 'TRAINER_BATTLE_REMATCH'] },
+        { key: 'trainer', label: 'Trainer ID', type: 'text', placeholder: 'TRAINER_NAME' },
+        { key: 'intro', label: 'Intro Text', type: 'text', placeholder: 'Text_IntroLabel' },
+        { key: 'defeat', label: 'Defeat Text', type: 'text', placeholder: 'Text_DefeatLabel' }
+      ] },
+    { cat: 'Special', id: 'special', label: 'Special Function', color: '#6366f1', icon: '\u2728',
+      fields: [{ key: 'func', label: 'Function', type: 'text', placeholder: 'HealPlayerParty' }] },
+    { cat: 'Special', id: 'warp', label: 'Warp', color: '#6366f1', icon: '\u{1F30C}',
+      fields: [
+        { key: 'map', label: 'Map', type: 'text', placeholder: 'MAP_NAME' },
+        { key: 'x', label: 'X', type: 'text', placeholder: '0' },
+        { key: 'y', label: 'Y', type: 'text', placeholder: '0' }
+      ] },
+    { cat: 'Special', id: 'delay', label: 'Delay', color: '#6366f1', icon: '\u23F1',
+      fields: [{ key: 'frames', label: 'Frames', type: 'text', placeholder: '16' }] },
+];
+
+const SB_TEMPLATES = [
+    { name: 'Simple NPC', icon: '\u{1F9D1}', desc: 'NPC that says a message when talked to',
+      blocks: [
+        { cmd: 'lock', values: {} },
+        { cmd: 'msgbox', values: { text: 'Hello there!\\nHow are you?', type: 'MSGBOX_NPC' } },
+        { cmd: 'release', values: {} }
+      ] },
+    { name: 'Sign Post', icon: '\u{1FAA7}', desc: 'A readable sign with a message',
+      blocks: [
+        { cmd: 'msgbox', values: { text: 'PETALBURG CITY\\nWhere people mingle with nature', type: 'MSGBOX_SIGN' } },
+        { cmd: 'end', values: {} }
+      ] },
+    { name: 'Item Pickup', icon: '\u{1F381}', desc: 'Give the player an item when interacted with',
+      blocks: [
+        { cmd: 'lock', values: {} },
+        { cmd: 'giveitem', values: { item: 'ITEM_POTION', count: '1' } },
+        { cmd: 'release', values: {} }
+      ] },
+    { name: 'Yes/No Choice', icon: '\u2753', desc: 'Ask the player a yes/no question',
+      blocks: [
+        { cmd: 'lock', values: {} },
+        { cmd: 'msgbox', values: { text: 'Would you like to proceed?', type: 'MSGBOX_YESNO' } },
+        { cmd: 'release', values: {} }
+      ] },
+    { name: 'Trainer Battle', icon: '\u2694', desc: 'NPC that initiates a trainer battle',
+      blocks: [
+        { cmd: 'trainerbattle', values: { type: 'TRAINER_BATTLE_SINGLE', trainer: 'TRAINER_NAME', intro: 'Text_Intro', defeat: 'Text_Defeat' } },
+        { cmd: 'end', values: {} }
+      ] },
+    { name: 'Warp Event', icon: '\u{1F30C}', desc: 'Warp the player to another map',
+      blocks: [
+        { cmd: 'lockall', values: {} },
+        { cmd: 'warp', values: { map: 'MAP_NAME', x: '0', y: '0' } },
+        { cmd: 'end', values: {} }
+      ] },
+];
+
+let sbState = { blocks: [], scriptName: '', mapDir: '', tab: 'build', previewStep: 0 };
+
+function sbGetCmd(id) { return SB_COMMANDS.find(c => c.id === id); }
+
+function sbBlockToScript(block) {
+    const def = sbGetCmd(block.cmd);
+    if (!def) return `\t${block.cmd}`;
+    const v = block.values || {};
+    switch (block.cmd) {
+        case 'msgbox': {
+            const lines = (v.text || '').split('\\n');
+            const textLabel = (sbState.scriptName || 'Script') + '_Text_' + (block._idx || 0);
+            return `\tmsgbox ${textLabel}, ${v.type || 'MSGBOX_DEFAULT'}`;
+        }
+        case 'goto': return `\tgoto ${v.target || 'Label'}`;
+        case 'call': return `\tcall ${v.target || 'Label'}`;
+        case 'goto_if_eq': return `\tgoto_if_eq ${v.var || 'VAR'}, ${v.value || '0'}, ${v.target || 'Label'}`;
+        case 'call_if_eq': return `\tcall_if_eq ${v.var || 'VAR'}, ${v.value || '0'}, ${v.target || 'Label'}`;
+        case 'setvar': return `\tsetvar ${v.var || 'VAR'}, ${v.value || '0'}`;
+        case 'setflag': return `\tsetflag ${v.flag || 'FLAG'}`;
+        case 'clearflag': return `\tclearflag ${v.flag || 'FLAG'}`;
+        case 'applymovement': return `\tapplymovement ${v.target || '0'}, ${v.movement || 'Movement'}`;
+        case 'waitmovement': return `\twaitmovement ${v.target || '0'}`;
+        case 'playse': return `\tplayse ${v.se || 'SE_SELECT'}`;
+        case 'playfanfare': return `\tplayfanfare ${v.fanfare || 'MUS_OBTAINED_ITEM'}`;
+        case 'trainerbattle': return `\ttrainerbattle ${v.type || 'TRAINER_BATTLE_SINGLE'}, ${v.trainer || 'TRAINER'}, 0, ${v.intro || 'Text_Intro'}, ${v.defeat || 'Text_Defeat'}`;
+        case 'special': return `\tspecial ${v.func || 'Func'}`;
+        case 'warp': return `\twarp ${v.map || 'MAP'}, ${v.x || '0'}, ${v.y || '0'}`;
+        case 'delay': return `\tdelay ${v.frames || '16'}`;
+        case 'giveitem': {
+            const lines = [];
+            lines.push(`\tgiveitem ${v.item || 'ITEM_POTION'}` + (v.count && v.count !== '1' ? `, ${v.count}` : ''));
+            return lines.join('\n');
+        }
+        default: return `\t${block.cmd}`;
+    }
+}
+
+function sbGenerateScript() {
+    const name = sbState.scriptName || 'MyScript';
+    const lines = [`${name}::`];
+    sbState.blocks.forEach((b, i) => { b._idx = i; lines.push(sbBlockToScript(b)); });
+    // Generate text labels for msgbox commands
+    const textBlocks = [];
+    sbState.blocks.forEach((b, i) => {
+        if (b.cmd === 'msgbox' && b.values.text) {
+            const textLabel = name + '_Text_' + i;
+            const msgLines = (b.values.text || '').split('\\n');
+            const stringLines = msgLines.map((l, li) =>
+                `\t.string "${l}${li < msgLines.length - 1 ? '$' : '$"}"`
+            );
+            textBlocks.push(`\n${textLabel}:\n${stringLines.join('\n')}`);
+        }
+    });
+    return lines.join('\n') + '\n' + textBlocks.join('\n');
+}
+
+function sbRenderSidebar() {
+    const cats = [...new Set(SB_COMMANDS.map(c => c.cat))];
+    return cats.map(cat => {
+        const cmds = SB_COMMANDS.filter(c => c.cat === cat);
+        return `<div class="sb-sidebar-heading">${escHtml(cat)}</div>` +
+            cmds.map(c => `<button class="sb-add-btn" data-cmd="${c.id}">
+                <span class="sb-add-icon" style="background:${c.color}">${c.icon}</span>
+                ${escHtml(c.label)}
+            </button>`).join('');
+    }).join('');
+}
+
+function sbRenderBlock(block, idx) {
+    const def = sbGetCmd(block.cmd);
+    if (!def) return '';
+    const v = block.values || {};
+    const fieldsHtml = def.fields.map(f => {
+        if (f.type === 'select') {
+            const opts = f.options.map(o => `<option value="${escAttr(o)}"${v[f.key] === o ? ' selected' : ''}>${escHtml(o)}</option>`).join('');
+            return `<div class="sb-field"><label>${escHtml(f.label)}</label><select data-idx="${idx}" data-key="${f.key}">${opts}</select></div>`;
+        }
+        if (f.type === 'textarea') {
+            return `<div class="sb-field"><label>${escHtml(f.label)}</label><textarea data-idx="${idx}" data-key="${f.key}" placeholder="${escAttr(f.placeholder || '')}">${escHtml(v[f.key] || '')}</textarea></div>`;
+        }
+        return `<div class="sb-field"><label>${escHtml(f.label)}</label><input type="text" data-idx="${idx}" data-key="${f.key}" value="${escAttr(v[f.key] || '')}" placeholder="${escAttr(f.placeholder || '')}"></div>`;
+    }).join('');
+    const total = sbState.blocks.length;
+    return `<div class="sb-block" data-idx="${idx}">
+        <div class="sb-block-header">
+            <span class="sb-block-tag" style="background:${def.color}">${def.icon} ${escHtml(def.label)}</span>
+            <span class="sb-block-title"></span>
+            <div class="sb-block-controls">
+                <button title="Move up" data-action="up" data-idx="${idx}"${idx === 0 ? ' disabled' : ''}>\u25B2</button>
+                <button title="Move down" data-action="down" data-idx="${idx}"${idx >= total - 1 ? ' disabled' : ''}>\u25BC</button>
+                <button title="Duplicate" data-action="dup" data-idx="${idx}">\u2398</button>
+                <button title="Delete" class="sb-del" data-action="del" data-idx="${idx}">\u2715</button>
+            </div>
+        </div>
+        ${fieldsHtml ? `<div class="sb-block-body">${fieldsHtml}</div>` : ''}
+    </div>`;
+}
+
+function sbRenderCanvas() {
+    if (sbState.blocks.length === 0) {
+        return `<div class="sb-empty"><span class="sb-empty-icon">\u{1F4DC}</span>Add commands from the sidebar<br>or pick a template to get started</div>`;
+    }
+    return sbState.blocks.map((b, i) => sbRenderBlock(b, i)).join('');
+}
+
+function sbWireEvents() {
+    // Sidebar add buttons
+    $$('.sb-add-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const cmdId = btn.dataset.cmd;
+            const def = sbGetCmd(cmdId);
+            if (!def) return;
+            const values = {};
+            def.fields.forEach(f => { values[f.key] = ''; });
+            sbState.blocks.push({ cmd: cmdId, values });
+            sbRefresh();
+        });
+    });
+
+    // Block controls (up/down/dup/del)
+    $$('.sb-block-controls button').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const idx = parseInt(btn.dataset.idx);
+            const action = btn.dataset.action;
+            if (action === 'up' && idx > 0) {
+                [sbState.blocks[idx - 1], sbState.blocks[idx]] = [sbState.blocks[idx], sbState.blocks[idx - 1]];
+            } else if (action === 'down' && idx < sbState.blocks.length - 1) {
+                [sbState.blocks[idx], sbState.blocks[idx + 1]] = [sbState.blocks[idx + 1], sbState.blocks[idx]];
+            } else if (action === 'dup') {
+                sbState.blocks.splice(idx + 1, 0, JSON.parse(JSON.stringify(sbState.blocks[idx])));
+            } else if (action === 'del') {
+                sbState.blocks.splice(idx, 1);
+            }
+            sbRefresh();
+        });
+    });
+
+    // Field inputs
+    $$('.sb-block-body input, .sb-block-body select, .sb-block-body textarea').forEach(el => {
+        el.addEventListener('input', () => {
+            const idx = parseInt(el.dataset.idx);
+            const key = el.dataset.key;
+            sbState.blocks[idx].values[key] = el.value;
+            sbRefreshPreview();
+        });
+    });
+
+    // Tab switching
+    $$('.sb-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            sbState.tab = tab.dataset.tab;
+            sbRefresh();
+        });
+    });
+
+    // Template cards
+    $$('.sb-template-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const tplIdx = parseInt(card.dataset.tpl);
+            const tpl = SB_TEMPLATES[tplIdx];
+            if (!tpl) return;
+            sbState.blocks = tpl.blocks.map(b => ({ cmd: b.cmd, values: { ...b.values } }));
+            sbState.tab = 'build';
+            sbRefresh();
+            toast(`Loaded template: ${tpl.name}`);
+        });
+    });
+
+    // Script name input
+    const nameInput = $('#sb-script-name');
+    if (nameInput) {
+        nameInput.addEventListener('input', () => {
+            sbState.scriptName = nameInput.value;
+            sbRefreshPreview();
+        });
+    }
+
+    // Map select
+    const mapSelect = $('#sb-map-select');
+    if (mapSelect) {
+        mapSelect.addEventListener('change', () => {
+            sbState.mapDir = mapSelect.value;
+        });
+    }
+
+    // Save to map button
+    const saveBtn = $('#sb-save-btn');
+    if (saveBtn) {
+        saveBtn.addEventListener('click', () => sbSaveToMap());
+    }
+
+    // Copy button
+    const copyBtn = $('#sb-copy-btn');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            const output = sbGenerateScript();
+            navigator.clipboard.writeText(output).then(() => toast('Script copied to clipboard'));
+        });
+    }
+
+    // Clear button
+    const clearBtn = $('#sb-clear-btn');
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            sbState.blocks = [];
+            sbRefresh();
+        });
+    }
+}
+
+function sbRefreshPreview() {
+    const box = $('#sb-preview');
+    if (box) box.textContent = sbGenerateScript();
+}
+
+function sbRefresh() {
+    const canvas = $('#sb-canvas');
+    if (canvas) canvas.innerHTML = sbRenderCanvas();
+    sbRefreshPreview();
+    // Re-wire block events only
+    $$('.sb-block-controls button').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const idx = parseInt(btn.dataset.idx);
+            const action = btn.dataset.action;
+            if (action === 'up' && idx > 0) {
+                [sbState.blocks[idx - 1], sbState.blocks[idx]] = [sbState.blocks[idx], sbState.blocks[idx - 1]];
+            } else if (action === 'down' && idx < sbState.blocks.length - 1) {
+                [sbState.blocks[idx], sbState.blocks[idx + 1]] = [sbState.blocks[idx + 1], sbState.blocks[idx]];
+            } else if (action === 'dup') {
+                sbState.blocks.splice(idx + 1, 0, JSON.parse(JSON.stringify(sbState.blocks[idx])));
+            } else if (action === 'del') {
+                sbState.blocks.splice(idx, 1);
+            }
+            sbRefresh();
+        });
+    });
+    $$('.sb-block-body input, .sb-block-body select, .sb-block-body textarea').forEach(el => {
+        el.addEventListener('input', () => {
+            const idx = parseInt(el.dataset.idx);
+            const key = el.dataset.key;
+            sbState.blocks[idx].values[key] = el.value;
+            sbRefreshPreview();
+        });
+    });
+    // Update tab visuals
+    $$('.sb-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === sbState.tab));
+    const buildPanel = $('#sb-build-panel');
+    const tplPanel = $('#sb-templates-panel');
+    const prevPanel = $('#sb-preview-panel');
+    if (buildPanel) buildPanel.style.display = sbState.tab === 'build' ? '' : 'none';
+    if (tplPanel) tplPanel.style.display = sbState.tab === 'templates' ? '' : 'none';
+    if (prevPanel) prevPanel.style.display = sbState.tab === 'preview' ? '' : 'none';
+    if (sbState.tab === 'preview') {
+        sbWirePreviewEvents();
+        sbRefreshGamePreview();
+    }
+}
+
+async function sbSaveToMap() {
+    if (!sbState.mapDir) { toast('Select a map first', true); return; }
+    if (!sbState.scriptName) { toast('Enter a script name first', true); return; }
+    if (sbState.blocks.length === 0) { toast('Add some commands first', true); return; }
+    const filePath = `data/maps/${sbState.mapDir}/scripts.inc`;
+    let existing = '';
+    try { existing = await loadMapScript(sbState.mapDir); } catch {}
+    if (!existing) {
+        try { existing = await fetchFile(filePath); } catch { existing = ''; }
+    }
+    const newScript = '\n\n' + sbGenerateScript();
+    const updated = existing.trimEnd() + newScript + '\n';
+    scriptCache[sbState.mapDir] = updated;
+    markChanged(filePath, updated);
+    toast(`Script appended to ${sbState.mapDir}/scripts.inc`);
+}
+
+// ─── GBA In-Game Preview ────────────────────────────────────────────────────
+
+const GBA_W = 240, GBA_H = 160, GBA_SCALE = 2;
+const GBA_COLORS = {
+    bg: '#48a048',       // grass green overworld
+    msgBg: '#f8f8f8',    // message box fill
+    msgBorder: '#484848', // dark border
+    msgShadow: '#a0a0a0', // inner shadow line
+    text: '#383838',      // main text
+    textShadow: '#b8b8b8', // text shadow
+    yesNo: '#f8f8f8',     // yes/no box fill
+    cursor: '#e04040',    // selection arrow
+    itemBg: '#303030',    // item received bar bg
+    itemText: '#f8f8f8',  // item received text
+    signBg: '#e8d8a8',    // sign background (slightly tan)
+};
+
+// Simple 3x5 pixel font map for GBA-style rendering
+const GBA_FONT = (() => {
+    const chars = {};
+    const def = (c, rows) => { chars[c] = rows; };
+    // Uppercase
+    def('A', [0b010, 0b101, 0b111, 0b101, 0b101]);
+    def('B', [0b110, 0b101, 0b110, 0b101, 0b110]);
+    def('C', [0b011, 0b100, 0b100, 0b100, 0b011]);
+    def('D', [0b110, 0b101, 0b101, 0b101, 0b110]);
+    def('E', [0b111, 0b100, 0b110, 0b100, 0b111]);
+    def('F', [0b111, 0b100, 0b110, 0b100, 0b100]);
+    def('G', [0b011, 0b100, 0b101, 0b101, 0b011]);
+    def('H', [0b101, 0b101, 0b111, 0b101, 0b101]);
+    def('I', [0b111, 0b010, 0b010, 0b010, 0b111]);
+    def('J', [0b001, 0b001, 0b001, 0b101, 0b010]);
+    def('K', [0b101, 0b101, 0b110, 0b101, 0b101]);
+    def('L', [0b100, 0b100, 0b100, 0b100, 0b111]);
+    def('M', [0b101, 0b111, 0b111, 0b101, 0b101]);
+    def('N', [0b101, 0b111, 0b111, 0b111, 0b101]);
+    def('O', [0b010, 0b101, 0b101, 0b101, 0b010]);
+    def('P', [0b110, 0b101, 0b110, 0b100, 0b100]);
+    def('Q', [0b010, 0b101, 0b101, 0b111, 0b011]);
+    def('R', [0b110, 0b101, 0b110, 0b101, 0b101]);
+    def('S', [0b011, 0b100, 0b010, 0b001, 0b110]);
+    def('T', [0b111, 0b010, 0b010, 0b010, 0b010]);
+    def('U', [0b101, 0b101, 0b101, 0b101, 0b010]);
+    def('V', [0b101, 0b101, 0b101, 0b101, 0b010]);
+    def('W', [0b101, 0b101, 0b111, 0b111, 0b101]);
+    def('X', [0b101, 0b101, 0b010, 0b101, 0b101]);
+    def('Y', [0b101, 0b101, 0b010, 0b010, 0b010]);
+    def('Z', [0b111, 0b001, 0b010, 0b100, 0b111]);
+    // Lowercase (same as uppercase but 1px smaller visual feel — just reuse)
+    'abcdefghijklmnopqrstuvwxyz'.split('').forEach(c => {
+        chars[c] = chars[c.toUpperCase()] || [0b010, 0b010, 0b010, 0b010, 0b010];
+    });
+    // Numbers
+    def('0', [0b111, 0b101, 0b101, 0b101, 0b111]);
+    def('1', [0b010, 0b110, 0b010, 0b010, 0b111]);
+    def('2', [0b110, 0b001, 0b010, 0b100, 0b111]);
+    def('3', [0b110, 0b001, 0b010, 0b001, 0b110]);
+    def('4', [0b101, 0b101, 0b111, 0b001, 0b001]);
+    def('5', [0b111, 0b100, 0b110, 0b001, 0b110]);
+    def('6', [0b011, 0b100, 0b110, 0b101, 0b010]);
+    def('7', [0b111, 0b001, 0b010, 0b010, 0b010]);
+    def('8', [0b010, 0b101, 0b010, 0b101, 0b010]);
+    def('9', [0b010, 0b101, 0b011, 0b001, 0b110]);
+    // Punctuation
+    def(' ', [0b000, 0b000, 0b000, 0b000, 0b000]);
+    def('.', [0b000, 0b000, 0b000, 0b000, 0b010]);
+    def(',', [0b000, 0b000, 0b000, 0b010, 0b100]);
+    def('!', [0b010, 0b010, 0b010, 0b000, 0b010]);
+    def('?', [0b110, 0b001, 0b010, 0b000, 0b010]);
+    def('-', [0b000, 0b000, 0b111, 0b000, 0b000]);
+    def('\'', [0b010, 0b010, 0b000, 0b000, 0b000]);
+    def('"', [0b101, 0b101, 0b000, 0b000, 0b000]);
+    def(':', [0b000, 0b010, 0b000, 0b010, 0b000]);
+    def('/', [0b001, 0b001, 0b010, 0b100, 0b100]);
+    def('(', [0b001, 0b010, 0b010, 0b010, 0b001]);
+    def(')', [0b100, 0b010, 0b010, 0b010, 0b100]);
+    return chars;
+})();
+
+function gbaDrawChar(ctx, ch, x, y, scale, color) {
+    const glyph = GBA_FONT[ch];
+    if (!glyph) return;
+    ctx.fillStyle = color;
+    for (let row = 0; row < 5; row++) {
+        for (let col = 0; col < 3; col++) {
+            if (glyph[row] & (1 << (2 - col))) {
+                ctx.fillRect(x + col * scale, y + row * scale, scale, scale);
+            }
+        }
+    }
+}
+
+function gbaDrawText(ctx, text, x, y, scale, color, shadowColor) {
+    const charW = 4 * scale;
+    for (let i = 0; i < text.length; i++) {
+        if (shadowColor) gbaDrawChar(ctx, text[i], x + i * charW + scale, y + scale, scale, shadowColor);
+        gbaDrawChar(ctx, text[i], x + i * charW, y, scale, color);
+    }
+}
+
+function gbaDrawMsgBox(ctx, s, lines, type) {
+    const boxY = GBA_H * s - 48 * s;
+    const boxH = 46 * s;
+    const isSign = type === 'MSGBOX_SIGN';
+    const bgColor = isSign ? GBA_COLORS.signBg : GBA_COLORS.msgBg;
+
+    // Border
+    ctx.fillStyle = GBA_COLORS.msgBorder;
+    ctx.fillRect(2 * s, boxY - 2 * s, (GBA_W - 4) * s, boxH + 4 * s);
+    // Inner fill
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(4 * s, boxY, (GBA_W - 8) * s, boxH);
+    // Inner shadow line
+    ctx.fillStyle = GBA_COLORS.msgShadow;
+    ctx.fillRect(4 * s, boxY, (GBA_W - 8) * s, s);
+
+    // Text lines (max 2 visible at a time in GBA)
+    const visLines = lines.slice(0, 2);
+    visLines.forEach((line, i) => {
+        gbaDrawText(ctx, line, 10 * s, boxY + 6 * s + i * 14 * s, s, GBA_COLORS.text, GBA_COLORS.textShadow);
+    });
+
+    // Continuation arrow if more lines
+    if (lines.length > 2) {
+        ctx.fillStyle = GBA_COLORS.text;
+        const arrowX = (GBA_W - 10) * s;
+        const arrowY = boxY + boxH - 6 * s;
+        ctx.beginPath();
+        ctx.moveTo(arrowX, arrowY);
+        ctx.lineTo(arrowX + 4 * s, arrowY);
+        ctx.lineTo(arrowX + 2 * s, arrowY + 3 * s);
+        ctx.fill();
+    }
+}
+
+function gbaDrawYesNo(ctx, s) {
+    const boxX = (GBA_W - 44) * s;
+    const boxY = (GBA_H - 80) * s;
+    const boxW = 40 * s;
+    const boxH = 30 * s;
+
+    ctx.fillStyle = GBA_COLORS.msgBorder;
+    ctx.fillRect(boxX - 2 * s, boxY - 2 * s, boxW + 4 * s, boxH + 4 * s);
+    ctx.fillStyle = GBA_COLORS.yesNo;
+    ctx.fillRect(boxX, boxY, boxW, boxH);
+
+    gbaDrawText(ctx, 'YES', boxX + 12 * s, boxY + 4 * s, s, GBA_COLORS.text, GBA_COLORS.textShadow);
+    gbaDrawText(ctx, 'NO', boxX + 12 * s, boxY + 18 * s, s, GBA_COLORS.text, GBA_COLORS.textShadow);
+
+    // Cursor arrow pointing at YES
+    ctx.fillStyle = GBA_COLORS.cursor;
+    const ax = boxX + 4 * s, ay = boxY + 5 * s;
+    ctx.beginPath();
+    ctx.moveTo(ax, ay);
+    ctx.lineTo(ax + 4 * s, ay + 3 * s);
+    ctx.lineTo(ax, ay + 6 * s);
+    ctx.fill();
+}
+
+function gbaDrawItemReceived(ctx, s, itemName) {
+    const barY = (GBA_H / 2 - 10) * s;
+    const barH = 20 * s;
+    ctx.fillStyle = GBA_COLORS.itemBg;
+    ctx.fillRect(0, barY, GBA_W * s, barH);
+    ctx.fillStyle = GBA_COLORS.msgBorder;
+    ctx.fillRect(0, barY, GBA_W * s, s);
+    ctx.fillRect(0, barY + barH - s, GBA_W * s, s);
+    const name = itemName.replace('ITEM_', '').replace(/_/g, ' ');
+    const text = 'Obtained ' + name + '!';
+    gbaDrawText(ctx, text, 10 * s, barY + 6 * s, s, GBA_COLORS.itemText, null);
+}
+
+function gbaDrawOverworld(ctx, s) {
+    // Simple grass tile pattern
+    ctx.fillStyle = GBA_COLORS.bg;
+    ctx.fillRect(0, 0, GBA_W * s, GBA_H * s);
+    // Grid lines for tile feel
+    ctx.strokeStyle = '#409040';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < GBA_W * s; x += 16 * s) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, GBA_H * s); ctx.stroke();
+    }
+    for (let y = 0; y < GBA_H * s; y += 16 * s) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(GBA_W * s, y); ctx.stroke();
+    }
+    // Tiny grass tufts
+    ctx.fillStyle = '#58b858';
+    for (let tx = 0; tx < GBA_W; tx += 16) {
+        for (let ty = 0; ty < GBA_H; ty += 16) {
+            ctx.fillRect((tx + 4) * s, (ty + 10) * s, 2 * s, 2 * s);
+            ctx.fillRect((tx + 10) * s, (ty + 6) * s, 2 * s, 2 * s);
+        }
+    }
+    // Player sprite (simple)
+    const px = (GBA_W / 2 - 8) * s, py = (GBA_H / 2 - 16) * s;
+    // Body
+    ctx.fillStyle = '#e04040'; // red hat
+    ctx.fillRect(px + 4 * s, py, 8 * s, 4 * s);
+    ctx.fillStyle = '#383838'; // hair
+    ctx.fillRect(px + 3 * s, py + 4 * s, 10 * s, 3 * s);
+    ctx.fillStyle = '#f8d0a0'; // face
+    ctx.fillRect(px + 4 * s, py + 7 * s, 8 * s, 4 * s);
+    ctx.fillStyle = '#4060c0'; // shirt
+    ctx.fillRect(px + 3 * s, py + 11 * s, 10 * s, 6 * s);
+    ctx.fillStyle = '#383838'; // pants
+    ctx.fillRect(px + 4 * s, py + 17 * s, 3 * s, 5 * s);
+    ctx.fillRect(px + 9 * s, py + 17 * s, 3 * s, 5 * s);
+    // Eyes
+    ctx.fillStyle = '#383838';
+    ctx.fillRect(px + 5 * s, py + 8 * s, s, 2 * s);
+    ctx.fillRect(px + 10 * s, py + 8 * s, s, 2 * s);
+}
+
+function gbaDrawNPC(ctx, s, xTile, yTile) {
+    const px = xTile * 16 * s, py = yTile * 16 * s;
+    ctx.fillStyle = '#f8c040'; // hat/hair
+    ctx.fillRect(px + 4 * s, py, 8 * s, 4 * s);
+    ctx.fillStyle = '#f8d0a0'; // face
+    ctx.fillRect(px + 4 * s, py + 4 * s, 8 * s, 4 * s);
+    ctx.fillStyle = '#40a040'; // shirt
+    ctx.fillRect(px + 3 * s, py + 8 * s, 10 * s, 6 * s);
+    ctx.fillStyle = '#6060a0'; // pants
+    ctx.fillRect(px + 4 * s, py + 14 * s, 3 * s, 2 * s);
+    ctx.fillRect(px + 9 * s, py + 14 * s, 3 * s, 2 * s);
+}
+
+function sbGetPreviewFrames() {
+    const frames = [];
+    // Always start with overworld
+    frames.push({ type: 'overworld' });
+
+    for (const block of sbState.blocks) {
+        const v = block.values || {};
+        switch (block.cmd) {
+            case 'msgbox': {
+                const rawText = v.text || 'Hello!';
+                const lines = rawText.split('\\n');
+                // Show 2 lines at a time
+                for (let i = 0; i < lines.length; i += 2) {
+                    const visible = lines.slice(i, i + 2);
+                    const hasMore = i + 2 < lines.length;
+                    frames.push({ type: 'msgbox', lines: visible, hasMore, msgType: v.type || 'MSGBOX_DEFAULT' });
+                }
+                if (v.type === 'MSGBOX_YESNO') {
+                    frames.push({ type: 'yesno', lines: lines.slice(-2) });
+                }
+                break;
+            }
+            case 'giveitem':
+                frames.push({ type: 'item', item: v.item || 'ITEM_POTION' });
+                break;
+            case 'trainerbattle':
+                frames.push({ type: 'battle', trainer: v.trainer || 'TRAINER' });
+                break;
+            case 'warp':
+                frames.push({ type: 'warp', map: v.map || 'MAP' });
+                break;
+            case 'playse':
+            case 'playfanfare':
+                frames.push({ type: 'sfx', sound: v.se || v.fanfare || 'SE_SELECT' });
+                break;
+        }
+    }
+    if (frames.length === 1) frames.push({ type: 'overworld' }); // nothing visual
+    return frames;
+}
+
+function sbRenderPreviewFrame(canvas, frameIdx) {
+    const ctx = canvas.getContext('2d');
+    const s = GBA_SCALE;
+    const frames = sbGetPreviewFrames();
+    const idx = Math.max(0, Math.min(frameIdx, frames.length - 1));
+    const frame = frames[idx];
+
+    // Always draw overworld base
+    gbaDrawOverworld(ctx, s);
+    // Draw an NPC near player for context
+    gbaDrawNPC(ctx, s, GBA_W / 32 + 2, GBA_H / 32);
+
+    switch (frame.type) {
+        case 'msgbox':
+            gbaDrawMsgBox(ctx, s, frame.lines, frame.msgType);
+            break;
+        case 'yesno':
+            gbaDrawMsgBox(ctx, s, frame.lines, 'MSGBOX_DEFAULT');
+            gbaDrawYesNo(ctx, s);
+            break;
+        case 'item':
+            gbaDrawItemReceived(ctx, s, frame.item);
+            break;
+        case 'battle': {
+            // Flash to battle transition
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, GBA_W * s, GBA_H * s);
+            ctx.fillStyle = '#ffffff';
+            const text = 'VS ' + (frame.trainer || 'TRAINER').replace('TRAINER_', '').replace(/_/g, ' ');
+            gbaDrawText(ctx, text, (GBA_W / 2 - text.length * 2) * s, (GBA_H / 2 - 3) * s, s, '#ffffff', null);
+            break;
+        }
+        case 'warp': {
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, GBA_W * s, GBA_H * s);
+            const mapName = (frame.map || 'MAP').replace('MAP_', '').replace(/_/g, ' ');
+            gbaDrawText(ctx, mapName, 10 * s, (GBA_H / 2 - 3) * s, s, '#ffffff', null);
+            break;
+        }
+        case 'sfx': {
+            // Show a small note icon overlay
+            gbaDrawText(ctx, 'SFX: ' + (frame.sound || ''), 10 * s, 10 * s, s, '#ffffff', '#000000');
+            break;
+        }
+        // 'overworld' — already drawn
+    }
+
+    return { current: idx, total: frames.length };
+}
+
+function sbRefreshGamePreview() {
+    const canvas = $('#sb-gba-canvas');
+    if (!canvas) return;
+    const frames = sbGetPreviewFrames();
+    sbState.previewStep = Math.max(0, Math.min(sbState.previewStep, frames.length - 1));
+    const info = sbRenderPreviewFrame(canvas, sbState.previewStep);
+    const counter = $('#sb-frame-counter');
+    if (counter) counter.textContent = `${info.current + 1} / ${info.total}`;
+    // Update button states
+    const prevBtn = $('#sb-prev-frame');
+    const nextBtn = $('#sb-next-frame');
+    if (prevBtn) prevBtn.disabled = info.current <= 0;
+    if (nextBtn) nextBtn.disabled = info.current >= info.total - 1;
+}
+
+function sbWirePreviewEvents() {
+    const prevBtn = $('#sb-prev-frame');
+    const nextBtn = $('#sb-next-frame');
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            sbState.previewStep = Math.max(0, sbState.previewStep - 1);
+            sbRefreshGamePreview();
+        });
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            sbState.previewStep++;
+            sbRefreshGamePreview();
+        });
+    }
+}
+
+async function renderScriptBuilder() {
+    const maps = await loadMaps();
+    const mapDirs = maps.map(m => m._dirName || m.name).filter(Boolean).sort();
+    const mapOpts = mapDirs.map(d => `<option value="${escAttr(d)}"${d === sbState.mapDir ? ' selected' : ''}>${escHtml(d)}</option>`).join('');
+
+    content.innerHTML = `
+        <div class="page-header">
+            <h1>Script Builder</h1>
+            <div class="page-header-actions">
+                <button class="btn btn-sm" id="sb-clear-btn">Clear</button>
+                <button class="btn btn-sm" id="sb-copy-btn">\u{1F4CB} Copy Script</button>
+                <button class="btn btn-primary btn-sm" id="sb-save-btn">\u{1F4BE} Save to Map</button>
+            </div>
+        </div>
+        <div style="display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap;align-items:center">
+            <div class="sb-field" style="flex:0 0 auto">
+                <label>Script Name</label>
+                <input type="text" id="sb-script-name" value="${escAttr(sbState.scriptName)}" placeholder="MapName_EventScript_MyScript" style="width:300px">
+            </div>
+            <div class="sb-field" style="flex:0 0 auto">
+                <label>Target Map</label>
+                <select id="sb-map-select" style="width:220px">
+                    <option value="">-- Select Map --</option>
+                    ${mapOpts}
+                </select>
+            </div>
+        </div>
+        <div class="sb-tab-bar">
+            <div class="sb-tab${sbState.tab === 'build' ? ' active' : ''}" data-tab="build">Build</div>
+            <div class="sb-tab${sbState.tab === 'templates' ? ' active' : ''}" data-tab="templates">Templates</div>
+            <div class="sb-tab${sbState.tab === 'preview' ? ' active' : ''}" data-tab="preview">Game Preview</div>
+        </div>
+        <div id="sb-build-panel" style="${sbState.tab !== 'build' ? 'display:none' : ''}">
+            <div class="sb-layout">
+                <div class="sb-sidebar">${sbRenderSidebar()}</div>
+                <div id="sb-canvas" class="sb-canvas">${sbRenderCanvas()}</div>
+            </div>
+            <div style="margin-top:12px">
+                <div class="sb-sidebar-heading" style="margin-bottom:6px">Script Preview</div>
+                <pre class="sb-preview-box" id="sb-preview">${escHtml(sbGenerateScript())}</pre>
+            </div>
+        </div>
+        <div id="sb-templates-panel" style="${sbState.tab !== 'templates' ? 'display:none' : ''}">
+            <div class="sb-template-grid">
+                ${SB_TEMPLATES.map((t, i) => `
+                    <div class="sb-template-card" data-tpl="${i}">
+                        <div class="sb-template-icon">${t.icon}</div>
+                        <div class="sb-template-name">${escHtml(t.name)}</div>
+                        <div class="sb-template-desc">${escHtml(t.desc)}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+        <div id="sb-preview-panel" style="${sbState.tab !== 'preview' ? 'display:none' : ''}">
+            <div class="sb-game-preview-wrap">
+                <div class="sb-gba-shell">
+                    <div class="sb-gba-screen-label">Game Boy Advance</div>
+                    <canvas id="sb-gba-canvas" width="${GBA_W * GBA_SCALE}" height="${GBA_H * GBA_SCALE}"></canvas>
+                    <div class="sb-gba-controls">
+                        <button class="btn btn-sm" id="sb-prev-frame">\u25C0 Prev</button>
+                        <span id="sb-frame-counter" class="sb-frame-counter">1 / 1</span>
+                        <button class="btn btn-sm" id="sb-next-frame">Next \u25B6</button>
+                    </div>
+                </div>
+                <div class="sb-preview-help">
+                    <p><strong>In-Game Preview</strong></p>
+                    <p>Step through your script to see how dialogue boxes, item pickups, battles, and warps will look on a GBA screen.</p>
+                    <p>Use the Prev/Next buttons or add more commands in the Build tab to see additional frames.</p>
+                </div>
+            </div>
+        </div>
+    `;
+
+    sbWireEvents();
+    if (sbState.tab === 'preview') {
+        sbWirePreviewEvents();
+        sbRefreshGamePreview();
+    }
+}
 
 // ─── Init ───────────────────────────────────────────────────────────────────
 checkAuth();
