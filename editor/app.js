@@ -60,8 +60,10 @@ let ghUser = null;
 // Active editing branch — created on first edit, persisted across reloads
 let editorBranch = localStorage.getItem('editor_branch') || '';
 let editorBranchLastCommit = localStorage.getItem('editor_branch_last_commit') || '';
-// Queue for serialising auto-commits (prevents races)
-let commitQueue = Promise.resolve();
+// Debounce timer for batching auto-commits
+let commitDebounceTimer = null;
+// Guard to prevent overlapping commits
+let commitInFlight = false;
 
 const $ = (sel, el = document) => el.querySelector(sel);
 const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
@@ -135,53 +137,103 @@ async function ensureEditorBranch() {
     return await createNewEditorBranch();
 }
 
-// Commit a single file to the editor branch
-async function commitFile(filePath, content) {
+// Commit all pending changes in a single commit using the Git Data API.
+// This avoids 409 Conflict errors that occur when using the Contents API
+// for sequential per-file commits (the branch SHA moves after each commit,
+// causing subsequent requests to fail with a stale SHA).
+async function commitPendingChanges() {
     const branch = await ensureEditorBranch();
+    const filesToCommit = { ...pendingChanges };
+    const paths = Object.keys(filesToCommit);
+    if (paths.length === 0) return;
 
-    // Get the current file SHA on the branch (needed for updates)
-    let fileSha;
-    try {
-        const existing = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/${filePath}?ref=${branch}`);
-        fileSha = existing.sha;
-    } catch { /* new file */ }
+    // 1. Get the current commit SHA at the tip of the branch
+    const ref = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/git/refs/heads/${branch}`);
+    const baseCommitSha = ref.object.sha;
 
-    const encoder = new TextEncoder();
-    const bytes = encoder.encode(content);
-    let binary = '';
-    for (let i = 0; i < bytes.length; i++) {
-        binary += String.fromCharCode(bytes[i]);
-    }
-    const base64 = btoa(binary);
+    // 2. Get the tree SHA of the base commit
+    const baseCommit = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/git/commits/${baseCommitSha}`);
+    const baseTreeSha = baseCommit.tree.sha;
 
-    const result = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/contents/${filePath}`, {
-        method: 'PUT',
+    // 3. Create blobs for each changed file
+    const treeItems = await Promise.all(paths.map(async (filePath) => {
+        const content = filesToCommit[filePath];
+        const encoder = new TextEncoder();
+        const bytes = encoder.encode(content);
+        let binary = '';
+        for (let i = 0; i < bytes.length; i++) {
+            binary += String.fromCharCode(bytes[i]);
+        }
+        const base64 = btoa(binary);
+
+        const blob = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/git/blobs`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ content: base64, encoding: 'base64' })
+        });
+
+        return {
+            path: filePath,
+            mode: '100644',
+            type: 'blob',
+            sha: blob.sha
+        };
+    }));
+
+    // 4. Create a new tree with the changed files
+    const newTree = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/git/trees`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ base_tree: baseTreeSha, tree: treeItems })
+    });
+
+    // 5. Create a new commit
+    const message = paths.length === 1
+        ? `Update ${paths[0]} via web editor`
+        : `Update ${paths.length} files via web editor\n\n${paths.map(p => `- ${p}`).join('\n')}`;
+
+    const newCommit = await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/git/commits`, {
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            message: `Update ${filePath} via web editor`,
-            content: base64,
-            sha: fileSha,
-            branch
+            message,
+            tree: newTree.sha,
+            parents: [baseCommitSha]
         })
     });
 
+    // 6. Update the branch ref to point to the new commit
+    await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/git/refs/heads/${branch}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sha: newCommit.sha })
+    });
+
     // Update last commit timestamp
-    editorBranchLastCommit = result.commit?.committer?.date || new Date().toISOString();
+    editorBranchLastCommit = newCommit.committer?.date || new Date().toISOString();
     localStorage.setItem('editor_branch_last_commit', editorBranchLastCommit);
     updateBranchUI();
 }
 
-// markChanged: queue an auto-commit for this file
+// markChanged: debounce and batch auto-commits for all pending changes
 function markChanged(filePath, newContent) {
     pendingChanges[filePath] = newContent;
     updateChangesUI();
 
-    // Auto-commit (serialised via queue to prevent races)
-    commitQueue = commitQueue
-        .then(() => commitFile(filePath, newContent))
-        .catch(e => {
+    // Debounce: wait 1s after the last change before committing,
+    // so rapid edits across files are batched into a single commit.
+    if (commitDebounceTimer) clearTimeout(commitDebounceTimer);
+    commitDebounceTimer = setTimeout(async () => {
+        if (commitInFlight) return;   // a commit is already running
+        commitInFlight = true;
+        try {
+            await commitPendingChanges();
+        } catch (e) {
             toast('Auto-save failed: ' + e.message, true);
-        });
+        } finally {
+            commitInFlight = false;
+        }
+    }, 1000);
 }
 
 function getChangeCount() {
