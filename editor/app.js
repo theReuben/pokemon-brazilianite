@@ -957,6 +957,7 @@ async function render() {
             case 'starters': await renderStarters(); break;
             case 'music': await renderMusic(); break;
             case 'sprite-creator': await renderSpriteCreator(); break;
+            case 'script-builder': await renderScriptBuilder(); break;
         }
     } catch (e) {
         content.innerHTML = `<div class="loading-center" style="color:var(--red)">Error loading data: ${escHtml(e.message)}</div>`;
@@ -7189,6 +7190,446 @@ getUniqueGraphicsIds = function() {
     }
     return ids.sort();
 };
+
+// ─── Script Builder ─────────────────────────────────────────────────────────
+
+const SB_COMMANDS = [
+    { cat: 'Dialogue', id: 'msgbox', label: 'Message Box', color: '#3b82f6', icon: '\u{1F4AC}',
+      fields: [
+        { key: 'text', label: 'Text', type: 'textarea', placeholder: 'Dialogue text...' },
+        { key: 'type', label: 'Type', type: 'select', options: ['MSGBOX_DEFAULT', 'MSGBOX_NPC', 'MSGBOX_SIGN', 'MSGBOX_YESNO', 'MSGBOX_AUTOCLOSE'] }
+      ] },
+    { cat: 'Dialogue', id: 'closemessage', label: 'Close Message', color: '#3b82f6', icon: '\u{1F4AD}', fields: [] },
+    { cat: 'Flow', id: 'lock', label: 'Lock Player', color: '#8b5cf6', icon: '\u{1F512}', fields: [] },
+    { cat: 'Flow', id: 'release', label: 'Release Player', color: '#8b5cf6', icon: '\u{1F513}', fields: [] },
+    { cat: 'Flow', id: 'lockall', label: 'Lock All', color: '#8b5cf6', icon: '\u{1F510}', fields: [] },
+    { cat: 'Flow', id: 'releaseall', label: 'Release All', color: '#8b5cf6', icon: '\u{1F511}', fields: [] },
+    { cat: 'Flow', id: 'end', label: 'End Script', color: '#8b5cf6', icon: '\u{1F6D1}', fields: [] },
+    { cat: 'Flow', id: 'return', label: 'Return', color: '#8b5cf6', icon: '\u21A9', fields: [] },
+    { cat: 'Flow', id: 'goto', label: 'Go To Label', color: '#8b5cf6', icon: '\u{1F517}',
+      fields: [{ key: 'target', label: 'Label', type: 'text', placeholder: 'ScriptLabel' }] },
+    { cat: 'Flow', id: 'call', label: 'Call Subroutine', color: '#8b5cf6', icon: '\u{1F4DE}',
+      fields: [{ key: 'target', label: 'Label', type: 'text', placeholder: 'ScriptLabel' }] },
+    { cat: 'Conditions', id: 'goto_if_eq', label: 'Go To If Equal', color: '#f59e0b', icon: '\u2753',
+      fields: [
+        { key: 'var', label: 'Variable', type: 'text', placeholder: 'VAR_NAME' },
+        { key: 'value', label: 'Value', type: 'text', placeholder: '0' },
+        { key: 'target', label: 'Label', type: 'text', placeholder: 'ScriptLabel' }
+      ] },
+    { cat: 'Conditions', id: 'call_if_eq', label: 'Call If Equal', color: '#f59e0b', icon: '\u2754',
+      fields: [
+        { key: 'var', label: 'Variable', type: 'text', placeholder: 'VAR_NAME' },
+        { key: 'value', label: 'Value', type: 'text', placeholder: '0' },
+        { key: 'target', label: 'Label', type: 'text', placeholder: 'ScriptLabel' }
+      ] },
+    { cat: 'Variables', id: 'setvar', label: 'Set Variable', color: '#10b981', icon: '\u270D',
+      fields: [
+        { key: 'var', label: 'Variable', type: 'text', placeholder: 'VAR_NAME' },
+        { key: 'value', label: 'Value', type: 'text', placeholder: '0' }
+      ] },
+    { cat: 'Variables', id: 'setflag', label: 'Set Flag', color: '#10b981', icon: '\u2691',
+      fields: [{ key: 'flag', label: 'Flag', type: 'text', placeholder: 'FLAG_NAME' }] },
+    { cat: 'Variables', id: 'clearflag', label: 'Clear Flag', color: '#10b981', icon: '\u2690',
+      fields: [{ key: 'flag', label: 'Flag', type: 'text', placeholder: 'FLAG_NAME' }] },
+    { cat: 'Movement', id: 'applymovement', label: 'Apply Movement', color: '#ef4444', icon: '\u{1F3C3}',
+      fields: [
+        { key: 'target', label: 'Object', type: 'text', placeholder: 'LOCALID_PLAYER or object ID' },
+        { key: 'movement', label: 'Movement', type: 'text', placeholder: 'Movement_Label' }
+      ] },
+    { cat: 'Movement', id: 'waitmovement', label: 'Wait Movement', color: '#ef4444', icon: '\u23F3',
+      fields: [{ key: 'target', label: 'Object', type: 'text', placeholder: '0' }] },
+    { cat: 'Sound', id: 'playse', label: 'Play Sound', color: '#ec4899', icon: '\u{1F50A}',
+      fields: [{ key: 'se', label: 'Sound', type: 'text', placeholder: 'SE_SELECT' }] },
+    { cat: 'Sound', id: 'playfanfare', label: 'Play Fanfare', color: '#ec4899', icon: '\u{1F3B6}',
+      fields: [{ key: 'fanfare', label: 'Fanfare', type: 'text', placeholder: 'MUS_OBTAINED_ITEM' }] },
+    { cat: 'Sound', id: 'waitfanfare', label: 'Wait Fanfare', color: '#ec4899', icon: '\u{1F3B5}', fields: [] },
+    { cat: 'Items', id: 'giveitem', label: 'Give Item', color: '#06b6d4', icon: '\u{1F381}',
+      fields: [
+        { key: 'item', label: 'Item', type: 'text', placeholder: 'ITEM_POTION' },
+        { key: 'count', label: 'Count', type: 'text', placeholder: '1' }
+      ] },
+    { cat: 'Battle', id: 'trainerbattle', label: 'Trainer Battle', color: '#dc2626', icon: '\u2694',
+      fields: [
+        { key: 'type', label: 'Type', type: 'select', options: ['TRAINER_BATTLE_SINGLE', 'TRAINER_BATTLE_DOUBLE', 'TRAINER_BATTLE_REMATCH'] },
+        { key: 'trainer', label: 'Trainer ID', type: 'text', placeholder: 'TRAINER_NAME' },
+        { key: 'intro', label: 'Intro Text', type: 'text', placeholder: 'Text_IntroLabel' },
+        { key: 'defeat', label: 'Defeat Text', type: 'text', placeholder: 'Text_DefeatLabel' }
+      ] },
+    { cat: 'Special', id: 'special', label: 'Special Function', color: '#6366f1', icon: '\u2728',
+      fields: [{ key: 'func', label: 'Function', type: 'text', placeholder: 'HealPlayerParty' }] },
+    { cat: 'Special', id: 'warp', label: 'Warp', color: '#6366f1', icon: '\u{1F30C}',
+      fields: [
+        { key: 'map', label: 'Map', type: 'text', placeholder: 'MAP_NAME' },
+        { key: 'x', label: 'X', type: 'text', placeholder: '0' },
+        { key: 'y', label: 'Y', type: 'text', placeholder: '0' }
+      ] },
+    { cat: 'Special', id: 'delay', label: 'Delay', color: '#6366f1', icon: '\u23F1',
+      fields: [{ key: 'frames', label: 'Frames', type: 'text', placeholder: '16' }] },
+];
+
+const SB_TEMPLATES = [
+    { name: 'Simple NPC', icon: '\u{1F9D1}', desc: 'NPC that says a message when talked to',
+      blocks: [
+        { cmd: 'lock', values: {} },
+        { cmd: 'msgbox', values: { text: 'Hello there!\\nHow are you?', type: 'MSGBOX_NPC' } },
+        { cmd: 'release', values: {} }
+      ] },
+    { name: 'Sign Post', icon: '\u{1FAA7}', desc: 'A readable sign with a message',
+      blocks: [
+        { cmd: 'msgbox', values: { text: 'PETALBURG CITY\\nWhere people mingle with nature', type: 'MSGBOX_SIGN' } },
+        { cmd: 'end', values: {} }
+      ] },
+    { name: 'Item Pickup', icon: '\u{1F381}', desc: 'Give the player an item when interacted with',
+      blocks: [
+        { cmd: 'lock', values: {} },
+        { cmd: 'giveitem', values: { item: 'ITEM_POTION', count: '1' } },
+        { cmd: 'release', values: {} }
+      ] },
+    { name: 'Yes/No Choice', icon: '\u2753', desc: 'Ask the player a yes/no question',
+      blocks: [
+        { cmd: 'lock', values: {} },
+        { cmd: 'msgbox', values: { text: 'Would you like to proceed?', type: 'MSGBOX_YESNO' } },
+        { cmd: 'release', values: {} }
+      ] },
+    { name: 'Trainer Battle', icon: '\u2694', desc: 'NPC that initiates a trainer battle',
+      blocks: [
+        { cmd: 'trainerbattle', values: { type: 'TRAINER_BATTLE_SINGLE', trainer: 'TRAINER_NAME', intro: 'Text_Intro', defeat: 'Text_Defeat' } },
+        { cmd: 'end', values: {} }
+      ] },
+    { name: 'Warp Event', icon: '\u{1F30C}', desc: 'Warp the player to another map',
+      blocks: [
+        { cmd: 'lockall', values: {} },
+        { cmd: 'warp', values: { map: 'MAP_NAME', x: '0', y: '0' } },
+        { cmd: 'end', values: {} }
+      ] },
+];
+
+let sbState = { blocks: [], scriptName: '', mapDir: '', tab: 'build' };
+
+function sbGetCmd(id) { return SB_COMMANDS.find(c => c.id === id); }
+
+function sbBlockToScript(block) {
+    const def = sbGetCmd(block.cmd);
+    if (!def) return `\t${block.cmd}`;
+    const v = block.values || {};
+    switch (block.cmd) {
+        case 'msgbox': {
+            const lines = (v.text || '').split('\\n');
+            const textLabel = (sbState.scriptName || 'Script') + '_Text_' + (block._idx || 0);
+            return `\tmsgbox ${textLabel}, ${v.type || 'MSGBOX_DEFAULT'}`;
+        }
+        case 'goto': return `\tgoto ${v.target || 'Label'}`;
+        case 'call': return `\tcall ${v.target || 'Label'}`;
+        case 'goto_if_eq': return `\tgoto_if_eq ${v.var || 'VAR'}, ${v.value || '0'}, ${v.target || 'Label'}`;
+        case 'call_if_eq': return `\tcall_if_eq ${v.var || 'VAR'}, ${v.value || '0'}, ${v.target || 'Label'}`;
+        case 'setvar': return `\tsetvar ${v.var || 'VAR'}, ${v.value || '0'}`;
+        case 'setflag': return `\tsetflag ${v.flag || 'FLAG'}`;
+        case 'clearflag': return `\tclearflag ${v.flag || 'FLAG'}`;
+        case 'applymovement': return `\tapplymovement ${v.target || '0'}, ${v.movement || 'Movement'}`;
+        case 'waitmovement': return `\twaitmovement ${v.target || '0'}`;
+        case 'playse': return `\tplayse ${v.se || 'SE_SELECT'}`;
+        case 'playfanfare': return `\tplayfanfare ${v.fanfare || 'MUS_OBTAINED_ITEM'}`;
+        case 'trainerbattle': return `\ttrainerbattle ${v.type || 'TRAINER_BATTLE_SINGLE'}, ${v.trainer || 'TRAINER'}, 0, ${v.intro || 'Text_Intro'}, ${v.defeat || 'Text_Defeat'}`;
+        case 'special': return `\tspecial ${v.func || 'Func'}`;
+        case 'warp': return `\twarp ${v.map || 'MAP'}, ${v.x || '0'}, ${v.y || '0'}`;
+        case 'delay': return `\tdelay ${v.frames || '16'}`;
+        case 'giveitem': {
+            const lines = [];
+            lines.push(`\tgiveitem ${v.item || 'ITEM_POTION'}` + (v.count && v.count !== '1' ? `, ${v.count}` : ''));
+            return lines.join('\n');
+        }
+        default: return `\t${block.cmd}`;
+    }
+}
+
+function sbGenerateScript() {
+    const name = sbState.scriptName || 'MyScript';
+    const lines = [`${name}::`];
+    sbState.blocks.forEach((b, i) => { b._idx = i; lines.push(sbBlockToScript(b)); });
+    // Generate text labels for msgbox commands
+    const textBlocks = [];
+    sbState.blocks.forEach((b, i) => {
+        if (b.cmd === 'msgbox' && b.values.text) {
+            const textLabel = name + '_Text_' + i;
+            const msgLines = (b.values.text || '').split('\\n');
+            const stringLines = msgLines.map((l, li) =>
+                `\t.string "${l}${li < msgLines.length - 1 ? '$' : '$"}"`
+            );
+            textBlocks.push(`\n${textLabel}:\n${stringLines.join('\n')}`);
+        }
+    });
+    return lines.join('\n') + '\n' + textBlocks.join('\n');
+}
+
+function sbRenderSidebar() {
+    const cats = [...new Set(SB_COMMANDS.map(c => c.cat))];
+    return cats.map(cat => {
+        const cmds = SB_COMMANDS.filter(c => c.cat === cat);
+        return `<div class="sb-sidebar-heading">${escHtml(cat)}</div>` +
+            cmds.map(c => `<button class="sb-add-btn" data-cmd="${c.id}">
+                <span class="sb-add-icon" style="background:${c.color}">${c.icon}</span>
+                ${escHtml(c.label)}
+            </button>`).join('');
+    }).join('');
+}
+
+function sbRenderBlock(block, idx) {
+    const def = sbGetCmd(block.cmd);
+    if (!def) return '';
+    const v = block.values || {};
+    const fieldsHtml = def.fields.map(f => {
+        if (f.type === 'select') {
+            const opts = f.options.map(o => `<option value="${escAttr(o)}"${v[f.key] === o ? ' selected' : ''}>${escHtml(o)}</option>`).join('');
+            return `<div class="sb-field"><label>${escHtml(f.label)}</label><select data-idx="${idx}" data-key="${f.key}">${opts}</select></div>`;
+        }
+        if (f.type === 'textarea') {
+            return `<div class="sb-field"><label>${escHtml(f.label)}</label><textarea data-idx="${idx}" data-key="${f.key}" placeholder="${escAttr(f.placeholder || '')}">${escHtml(v[f.key] || '')}</textarea></div>`;
+        }
+        return `<div class="sb-field"><label>${escHtml(f.label)}</label><input type="text" data-idx="${idx}" data-key="${f.key}" value="${escAttr(v[f.key] || '')}" placeholder="${escAttr(f.placeholder || '')}"></div>`;
+    }).join('');
+    const total = sbState.blocks.length;
+    return `<div class="sb-block" data-idx="${idx}">
+        <div class="sb-block-header">
+            <span class="sb-block-tag" style="background:${def.color}">${def.icon} ${escHtml(def.label)}</span>
+            <span class="sb-block-title"></span>
+            <div class="sb-block-controls">
+                <button title="Move up" data-action="up" data-idx="${idx}"${idx === 0 ? ' disabled' : ''}>\u25B2</button>
+                <button title="Move down" data-action="down" data-idx="${idx}"${idx >= total - 1 ? ' disabled' : ''}>\u25BC</button>
+                <button title="Duplicate" data-action="dup" data-idx="${idx}">\u2398</button>
+                <button title="Delete" class="sb-del" data-action="del" data-idx="${idx}">\u2715</button>
+            </div>
+        </div>
+        ${fieldsHtml ? `<div class="sb-block-body">${fieldsHtml}</div>` : ''}
+    </div>`;
+}
+
+function sbRenderCanvas() {
+    if (sbState.blocks.length === 0) {
+        return `<div class="sb-empty"><span class="sb-empty-icon">\u{1F4DC}</span>Add commands from the sidebar<br>or pick a template to get started</div>`;
+    }
+    return sbState.blocks.map((b, i) => sbRenderBlock(b, i)).join('');
+}
+
+function sbWireEvents() {
+    // Sidebar add buttons
+    $$('.sb-add-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const cmdId = btn.dataset.cmd;
+            const def = sbGetCmd(cmdId);
+            if (!def) return;
+            const values = {};
+            def.fields.forEach(f => { values[f.key] = ''; });
+            sbState.blocks.push({ cmd: cmdId, values });
+            sbRefresh();
+        });
+    });
+
+    // Block controls (up/down/dup/del)
+    $$('.sb-block-controls button').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const idx = parseInt(btn.dataset.idx);
+            const action = btn.dataset.action;
+            if (action === 'up' && idx > 0) {
+                [sbState.blocks[idx - 1], sbState.blocks[idx]] = [sbState.blocks[idx], sbState.blocks[idx - 1]];
+            } else if (action === 'down' && idx < sbState.blocks.length - 1) {
+                [sbState.blocks[idx], sbState.blocks[idx + 1]] = [sbState.blocks[idx + 1], sbState.blocks[idx]];
+            } else if (action === 'dup') {
+                sbState.blocks.splice(idx + 1, 0, JSON.parse(JSON.stringify(sbState.blocks[idx])));
+            } else if (action === 'del') {
+                sbState.blocks.splice(idx, 1);
+            }
+            sbRefresh();
+        });
+    });
+
+    // Field inputs
+    $$('.sb-block-body input, .sb-block-body select, .sb-block-body textarea').forEach(el => {
+        el.addEventListener('input', () => {
+            const idx = parseInt(el.dataset.idx);
+            const key = el.dataset.key;
+            sbState.blocks[idx].values[key] = el.value;
+            sbRefreshPreview();
+        });
+    });
+
+    // Tab switching
+    $$('.sb-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            sbState.tab = tab.dataset.tab;
+            sbRefresh();
+        });
+    });
+
+    // Template cards
+    $$('.sb-template-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const tplIdx = parseInt(card.dataset.tpl);
+            const tpl = SB_TEMPLATES[tplIdx];
+            if (!tpl) return;
+            sbState.blocks = tpl.blocks.map(b => ({ cmd: b.cmd, values: { ...b.values } }));
+            sbState.tab = 'build';
+            sbRefresh();
+            toast(`Loaded template: ${tpl.name}`);
+        });
+    });
+
+    // Script name input
+    const nameInput = $('#sb-script-name');
+    if (nameInput) {
+        nameInput.addEventListener('input', () => {
+            sbState.scriptName = nameInput.value;
+            sbRefreshPreview();
+        });
+    }
+
+    // Map select
+    const mapSelect = $('#sb-map-select');
+    if (mapSelect) {
+        mapSelect.addEventListener('change', () => {
+            sbState.mapDir = mapSelect.value;
+        });
+    }
+
+    // Save to map button
+    const saveBtn = $('#sb-save-btn');
+    if (saveBtn) {
+        saveBtn.addEventListener('click', () => sbSaveToMap());
+    }
+
+    // Copy button
+    const copyBtn = $('#sb-copy-btn');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            const output = sbGenerateScript();
+            navigator.clipboard.writeText(output).then(() => toast('Script copied to clipboard'));
+        });
+    }
+
+    // Clear button
+    const clearBtn = $('#sb-clear-btn');
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            sbState.blocks = [];
+            sbRefresh();
+        });
+    }
+}
+
+function sbRefreshPreview() {
+    const box = $('#sb-preview');
+    if (box) box.textContent = sbGenerateScript();
+}
+
+function sbRefresh() {
+    const canvas = $('#sb-canvas');
+    if (canvas) canvas.innerHTML = sbRenderCanvas();
+    sbRefreshPreview();
+    // Re-wire block events only
+    $$('.sb-block-controls button').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const idx = parseInt(btn.dataset.idx);
+            const action = btn.dataset.action;
+            if (action === 'up' && idx > 0) {
+                [sbState.blocks[idx - 1], sbState.blocks[idx]] = [sbState.blocks[idx], sbState.blocks[idx - 1]];
+            } else if (action === 'down' && idx < sbState.blocks.length - 1) {
+                [sbState.blocks[idx], sbState.blocks[idx + 1]] = [sbState.blocks[idx + 1], sbState.blocks[idx]];
+            } else if (action === 'dup') {
+                sbState.blocks.splice(idx + 1, 0, JSON.parse(JSON.stringify(sbState.blocks[idx])));
+            } else if (action === 'del') {
+                sbState.blocks.splice(idx, 1);
+            }
+            sbRefresh();
+        });
+    });
+    $$('.sb-block-body input, .sb-block-body select, .sb-block-body textarea').forEach(el => {
+        el.addEventListener('input', () => {
+            const idx = parseInt(el.dataset.idx);
+            const key = el.dataset.key;
+            sbState.blocks[idx].values[key] = el.value;
+            sbRefreshPreview();
+        });
+    });
+    // Update tab visuals
+    $$('.sb-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === sbState.tab));
+    const buildPanel = $('#sb-build-panel');
+    const tplPanel = $('#sb-templates-panel');
+    if (buildPanel) buildPanel.style.display = sbState.tab === 'build' ? '' : 'none';
+    if (tplPanel) tplPanel.style.display = sbState.tab === 'templates' ? '' : 'none';
+}
+
+async function sbSaveToMap() {
+    if (!sbState.mapDir) { toast('Select a map first', true); return; }
+    if (!sbState.scriptName) { toast('Enter a script name first', true); return; }
+    if (sbState.blocks.length === 0) { toast('Add some commands first', true); return; }
+    const filePath = `data/maps/${sbState.mapDir}/scripts.inc`;
+    let existing = '';
+    try { existing = await loadMapScript(sbState.mapDir); } catch {}
+    if (!existing) {
+        try { existing = await fetchFile(filePath); } catch { existing = ''; }
+    }
+    const newScript = '\n\n' + sbGenerateScript();
+    const updated = existing.trimEnd() + newScript + '\n';
+    scriptCache[sbState.mapDir] = updated;
+    markChanged(filePath, updated);
+    toast(`Script appended to ${sbState.mapDir}/scripts.inc`);
+}
+
+async function renderScriptBuilder() {
+    const maps = await loadMaps();
+    const mapDirs = maps.map(m => m._dirName || m.name).filter(Boolean).sort();
+    const mapOpts = mapDirs.map(d => `<option value="${escAttr(d)}"${d === sbState.mapDir ? ' selected' : ''}>${escHtml(d)}</option>`).join('');
+
+    content.innerHTML = `
+        <div class="page-header">
+            <h1>Script Builder</h1>
+            <div class="page-header-actions">
+                <button class="btn btn-sm" id="sb-clear-btn">Clear</button>
+                <button class="btn btn-sm" id="sb-copy-btn">\u{1F4CB} Copy Script</button>
+                <button class="btn btn-primary btn-sm" id="sb-save-btn">\u{1F4BE} Save to Map</button>
+            </div>
+        </div>
+        <div style="display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap;align-items:center">
+            <div class="sb-field" style="flex:0 0 auto">
+                <label>Script Name</label>
+                <input type="text" id="sb-script-name" value="${escAttr(sbState.scriptName)}" placeholder="MapName_EventScript_MyScript" style="width:300px">
+            </div>
+            <div class="sb-field" style="flex:0 0 auto">
+                <label>Target Map</label>
+                <select id="sb-map-select" style="width:220px">
+                    <option value="">-- Select Map --</option>
+                    ${mapOpts}
+                </select>
+            </div>
+        </div>
+        <div class="sb-tab-bar">
+            <div class="sb-tab${sbState.tab === 'build' ? ' active' : ''}" data-tab="build">Build</div>
+            <div class="sb-tab${sbState.tab === 'templates' ? ' active' : ''}" data-tab="templates">Templates</div>
+        </div>
+        <div id="sb-build-panel" style="${sbState.tab !== 'build' ? 'display:none' : ''}">
+            <div class="sb-layout">
+                <div class="sb-sidebar">${sbRenderSidebar()}</div>
+                <div id="sb-canvas" class="sb-canvas">${sbRenderCanvas()}</div>
+            </div>
+            <div style="margin-top:12px">
+                <div class="sb-sidebar-heading" style="margin-bottom:6px">Script Preview</div>
+                <pre class="sb-preview-box" id="sb-preview">${escHtml(sbGenerateScript())}</pre>
+            </div>
+        </div>
+        <div id="sb-templates-panel" style="${sbState.tab !== 'templates' ? 'display:none' : ''}">
+            <div class="sb-template-grid">
+                ${SB_TEMPLATES.map((t, i) => `
+                    <div class="sb-template-card" data-tpl="${i}">
+                        <div class="sb-template-icon">${t.icon}</div>
+                        <div class="sb-template-name">${escHtml(t.name)}</div>
+                        <div class="sb-template-desc">${escHtml(t.desc)}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+
+    sbWireEvents();
+}
 
 // ─── Init ───────────────────────────────────────────────────────────────────
 checkAuth();
