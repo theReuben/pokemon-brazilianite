@@ -7304,7 +7304,7 @@ const SB_TEMPLATES = [
       ] },
 ];
 
-let sbState = { blocks: [], scriptName: '', mapDir: '', tab: 'build' };
+let sbState = { blocks: [], scriptName: '', mapDir: '', tab: 'build', previewStep: 0 };
 
 function sbGetCmd(id) { return SB_COMMANDS.find(c => c.id === id); }
 
@@ -7553,8 +7553,14 @@ function sbRefresh() {
     $$('.sb-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === sbState.tab));
     const buildPanel = $('#sb-build-panel');
     const tplPanel = $('#sb-templates-panel');
+    const prevPanel = $('#sb-preview-panel');
     if (buildPanel) buildPanel.style.display = sbState.tab === 'build' ? '' : 'none';
     if (tplPanel) tplPanel.style.display = sbState.tab === 'templates' ? '' : 'none';
+    if (prevPanel) prevPanel.style.display = sbState.tab === 'preview' ? '' : 'none';
+    if (sbState.tab === 'preview') {
+        sbWirePreviewEvents();
+        sbRefreshGamePreview();
+    }
 }
 
 async function sbSaveToMap() {
@@ -7572,6 +7578,355 @@ async function sbSaveToMap() {
     scriptCache[sbState.mapDir] = updated;
     markChanged(filePath, updated);
     toast(`Script appended to ${sbState.mapDir}/scripts.inc`);
+}
+
+// ─── GBA In-Game Preview ────────────────────────────────────────────────────
+
+const GBA_W = 240, GBA_H = 160, GBA_SCALE = 2;
+const GBA_COLORS = {
+    bg: '#48a048',       // grass green overworld
+    msgBg: '#f8f8f8',    // message box fill
+    msgBorder: '#484848', // dark border
+    msgShadow: '#a0a0a0', // inner shadow line
+    text: '#383838',      // main text
+    textShadow: '#b8b8b8', // text shadow
+    yesNo: '#f8f8f8',     // yes/no box fill
+    cursor: '#e04040',    // selection arrow
+    itemBg: '#303030',    // item received bar bg
+    itemText: '#f8f8f8',  // item received text
+    signBg: '#e8d8a8',    // sign background (slightly tan)
+};
+
+// Simple 3x5 pixel font map for GBA-style rendering
+const GBA_FONT = (() => {
+    const chars = {};
+    const def = (c, rows) => { chars[c] = rows; };
+    // Uppercase
+    def('A', [0b010, 0b101, 0b111, 0b101, 0b101]);
+    def('B', [0b110, 0b101, 0b110, 0b101, 0b110]);
+    def('C', [0b011, 0b100, 0b100, 0b100, 0b011]);
+    def('D', [0b110, 0b101, 0b101, 0b101, 0b110]);
+    def('E', [0b111, 0b100, 0b110, 0b100, 0b111]);
+    def('F', [0b111, 0b100, 0b110, 0b100, 0b100]);
+    def('G', [0b011, 0b100, 0b101, 0b101, 0b011]);
+    def('H', [0b101, 0b101, 0b111, 0b101, 0b101]);
+    def('I', [0b111, 0b010, 0b010, 0b010, 0b111]);
+    def('J', [0b001, 0b001, 0b001, 0b101, 0b010]);
+    def('K', [0b101, 0b101, 0b110, 0b101, 0b101]);
+    def('L', [0b100, 0b100, 0b100, 0b100, 0b111]);
+    def('M', [0b101, 0b111, 0b111, 0b101, 0b101]);
+    def('N', [0b101, 0b111, 0b111, 0b111, 0b101]);
+    def('O', [0b010, 0b101, 0b101, 0b101, 0b010]);
+    def('P', [0b110, 0b101, 0b110, 0b100, 0b100]);
+    def('Q', [0b010, 0b101, 0b101, 0b111, 0b011]);
+    def('R', [0b110, 0b101, 0b110, 0b101, 0b101]);
+    def('S', [0b011, 0b100, 0b010, 0b001, 0b110]);
+    def('T', [0b111, 0b010, 0b010, 0b010, 0b010]);
+    def('U', [0b101, 0b101, 0b101, 0b101, 0b010]);
+    def('V', [0b101, 0b101, 0b101, 0b101, 0b010]);
+    def('W', [0b101, 0b101, 0b111, 0b111, 0b101]);
+    def('X', [0b101, 0b101, 0b010, 0b101, 0b101]);
+    def('Y', [0b101, 0b101, 0b010, 0b010, 0b010]);
+    def('Z', [0b111, 0b001, 0b010, 0b100, 0b111]);
+    // Lowercase (same as uppercase but 1px smaller visual feel — just reuse)
+    'abcdefghijklmnopqrstuvwxyz'.split('').forEach(c => {
+        chars[c] = chars[c.toUpperCase()] || [0b010, 0b010, 0b010, 0b010, 0b010];
+    });
+    // Numbers
+    def('0', [0b111, 0b101, 0b101, 0b101, 0b111]);
+    def('1', [0b010, 0b110, 0b010, 0b010, 0b111]);
+    def('2', [0b110, 0b001, 0b010, 0b100, 0b111]);
+    def('3', [0b110, 0b001, 0b010, 0b001, 0b110]);
+    def('4', [0b101, 0b101, 0b111, 0b001, 0b001]);
+    def('5', [0b111, 0b100, 0b110, 0b001, 0b110]);
+    def('6', [0b011, 0b100, 0b110, 0b101, 0b010]);
+    def('7', [0b111, 0b001, 0b010, 0b010, 0b010]);
+    def('8', [0b010, 0b101, 0b010, 0b101, 0b010]);
+    def('9', [0b010, 0b101, 0b011, 0b001, 0b110]);
+    // Punctuation
+    def(' ', [0b000, 0b000, 0b000, 0b000, 0b000]);
+    def('.', [0b000, 0b000, 0b000, 0b000, 0b010]);
+    def(',', [0b000, 0b000, 0b000, 0b010, 0b100]);
+    def('!', [0b010, 0b010, 0b010, 0b000, 0b010]);
+    def('?', [0b110, 0b001, 0b010, 0b000, 0b010]);
+    def('-', [0b000, 0b000, 0b111, 0b000, 0b000]);
+    def('\'', [0b010, 0b010, 0b000, 0b000, 0b000]);
+    def('"', [0b101, 0b101, 0b000, 0b000, 0b000]);
+    def(':', [0b000, 0b010, 0b000, 0b010, 0b000]);
+    def('/', [0b001, 0b001, 0b010, 0b100, 0b100]);
+    def('(', [0b001, 0b010, 0b010, 0b010, 0b001]);
+    def(')', [0b100, 0b010, 0b010, 0b010, 0b100]);
+    return chars;
+})();
+
+function gbaDrawChar(ctx, ch, x, y, scale, color) {
+    const glyph = GBA_FONT[ch];
+    if (!glyph) return;
+    ctx.fillStyle = color;
+    for (let row = 0; row < 5; row++) {
+        for (let col = 0; col < 3; col++) {
+            if (glyph[row] & (1 << (2 - col))) {
+                ctx.fillRect(x + col * scale, y + row * scale, scale, scale);
+            }
+        }
+    }
+}
+
+function gbaDrawText(ctx, text, x, y, scale, color, shadowColor) {
+    const charW = 4 * scale;
+    for (let i = 0; i < text.length; i++) {
+        if (shadowColor) gbaDrawChar(ctx, text[i], x + i * charW + scale, y + scale, scale, shadowColor);
+        gbaDrawChar(ctx, text[i], x + i * charW, y, scale, color);
+    }
+}
+
+function gbaDrawMsgBox(ctx, s, lines, type) {
+    const boxY = GBA_H * s - 48 * s;
+    const boxH = 46 * s;
+    const isSign = type === 'MSGBOX_SIGN';
+    const bgColor = isSign ? GBA_COLORS.signBg : GBA_COLORS.msgBg;
+
+    // Border
+    ctx.fillStyle = GBA_COLORS.msgBorder;
+    ctx.fillRect(2 * s, boxY - 2 * s, (GBA_W - 4) * s, boxH + 4 * s);
+    // Inner fill
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(4 * s, boxY, (GBA_W - 8) * s, boxH);
+    // Inner shadow line
+    ctx.fillStyle = GBA_COLORS.msgShadow;
+    ctx.fillRect(4 * s, boxY, (GBA_W - 8) * s, s);
+
+    // Text lines (max 2 visible at a time in GBA)
+    const visLines = lines.slice(0, 2);
+    visLines.forEach((line, i) => {
+        gbaDrawText(ctx, line, 10 * s, boxY + 6 * s + i * 14 * s, s, GBA_COLORS.text, GBA_COLORS.textShadow);
+    });
+
+    // Continuation arrow if more lines
+    if (lines.length > 2) {
+        ctx.fillStyle = GBA_COLORS.text;
+        const arrowX = (GBA_W - 10) * s;
+        const arrowY = boxY + boxH - 6 * s;
+        ctx.beginPath();
+        ctx.moveTo(arrowX, arrowY);
+        ctx.lineTo(arrowX + 4 * s, arrowY);
+        ctx.lineTo(arrowX + 2 * s, arrowY + 3 * s);
+        ctx.fill();
+    }
+}
+
+function gbaDrawYesNo(ctx, s) {
+    const boxX = (GBA_W - 44) * s;
+    const boxY = (GBA_H - 80) * s;
+    const boxW = 40 * s;
+    const boxH = 30 * s;
+
+    ctx.fillStyle = GBA_COLORS.msgBorder;
+    ctx.fillRect(boxX - 2 * s, boxY - 2 * s, boxW + 4 * s, boxH + 4 * s);
+    ctx.fillStyle = GBA_COLORS.yesNo;
+    ctx.fillRect(boxX, boxY, boxW, boxH);
+
+    gbaDrawText(ctx, 'YES', boxX + 12 * s, boxY + 4 * s, s, GBA_COLORS.text, GBA_COLORS.textShadow);
+    gbaDrawText(ctx, 'NO', boxX + 12 * s, boxY + 18 * s, s, GBA_COLORS.text, GBA_COLORS.textShadow);
+
+    // Cursor arrow pointing at YES
+    ctx.fillStyle = GBA_COLORS.cursor;
+    const ax = boxX + 4 * s, ay = boxY + 5 * s;
+    ctx.beginPath();
+    ctx.moveTo(ax, ay);
+    ctx.lineTo(ax + 4 * s, ay + 3 * s);
+    ctx.lineTo(ax, ay + 6 * s);
+    ctx.fill();
+}
+
+function gbaDrawItemReceived(ctx, s, itemName) {
+    const barY = (GBA_H / 2 - 10) * s;
+    const barH = 20 * s;
+    ctx.fillStyle = GBA_COLORS.itemBg;
+    ctx.fillRect(0, barY, GBA_W * s, barH);
+    ctx.fillStyle = GBA_COLORS.msgBorder;
+    ctx.fillRect(0, barY, GBA_W * s, s);
+    ctx.fillRect(0, barY + barH - s, GBA_W * s, s);
+    const name = itemName.replace('ITEM_', '').replace(/_/g, ' ');
+    const text = 'Obtained ' + name + '!';
+    gbaDrawText(ctx, text, 10 * s, barY + 6 * s, s, GBA_COLORS.itemText, null);
+}
+
+function gbaDrawOverworld(ctx, s) {
+    // Simple grass tile pattern
+    ctx.fillStyle = GBA_COLORS.bg;
+    ctx.fillRect(0, 0, GBA_W * s, GBA_H * s);
+    // Grid lines for tile feel
+    ctx.strokeStyle = '#409040';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < GBA_W * s; x += 16 * s) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, GBA_H * s); ctx.stroke();
+    }
+    for (let y = 0; y < GBA_H * s; y += 16 * s) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(GBA_W * s, y); ctx.stroke();
+    }
+    // Tiny grass tufts
+    ctx.fillStyle = '#58b858';
+    for (let tx = 0; tx < GBA_W; tx += 16) {
+        for (let ty = 0; ty < GBA_H; ty += 16) {
+            ctx.fillRect((tx + 4) * s, (ty + 10) * s, 2 * s, 2 * s);
+            ctx.fillRect((tx + 10) * s, (ty + 6) * s, 2 * s, 2 * s);
+        }
+    }
+    // Player sprite (simple)
+    const px = (GBA_W / 2 - 8) * s, py = (GBA_H / 2 - 16) * s;
+    // Body
+    ctx.fillStyle = '#e04040'; // red hat
+    ctx.fillRect(px + 4 * s, py, 8 * s, 4 * s);
+    ctx.fillStyle = '#383838'; // hair
+    ctx.fillRect(px + 3 * s, py + 4 * s, 10 * s, 3 * s);
+    ctx.fillStyle = '#f8d0a0'; // face
+    ctx.fillRect(px + 4 * s, py + 7 * s, 8 * s, 4 * s);
+    ctx.fillStyle = '#4060c0'; // shirt
+    ctx.fillRect(px + 3 * s, py + 11 * s, 10 * s, 6 * s);
+    ctx.fillStyle = '#383838'; // pants
+    ctx.fillRect(px + 4 * s, py + 17 * s, 3 * s, 5 * s);
+    ctx.fillRect(px + 9 * s, py + 17 * s, 3 * s, 5 * s);
+    // Eyes
+    ctx.fillStyle = '#383838';
+    ctx.fillRect(px + 5 * s, py + 8 * s, s, 2 * s);
+    ctx.fillRect(px + 10 * s, py + 8 * s, s, 2 * s);
+}
+
+function gbaDrawNPC(ctx, s, xTile, yTile) {
+    const px = xTile * 16 * s, py = yTile * 16 * s;
+    ctx.fillStyle = '#f8c040'; // hat/hair
+    ctx.fillRect(px + 4 * s, py, 8 * s, 4 * s);
+    ctx.fillStyle = '#f8d0a0'; // face
+    ctx.fillRect(px + 4 * s, py + 4 * s, 8 * s, 4 * s);
+    ctx.fillStyle = '#40a040'; // shirt
+    ctx.fillRect(px + 3 * s, py + 8 * s, 10 * s, 6 * s);
+    ctx.fillStyle = '#6060a0'; // pants
+    ctx.fillRect(px + 4 * s, py + 14 * s, 3 * s, 2 * s);
+    ctx.fillRect(px + 9 * s, py + 14 * s, 3 * s, 2 * s);
+}
+
+function sbGetPreviewFrames() {
+    const frames = [];
+    // Always start with overworld
+    frames.push({ type: 'overworld' });
+
+    for (const block of sbState.blocks) {
+        const v = block.values || {};
+        switch (block.cmd) {
+            case 'msgbox': {
+                const rawText = v.text || 'Hello!';
+                const lines = rawText.split('\\n');
+                // Show 2 lines at a time
+                for (let i = 0; i < lines.length; i += 2) {
+                    const visible = lines.slice(i, i + 2);
+                    const hasMore = i + 2 < lines.length;
+                    frames.push({ type: 'msgbox', lines: visible, hasMore, msgType: v.type || 'MSGBOX_DEFAULT' });
+                }
+                if (v.type === 'MSGBOX_YESNO') {
+                    frames.push({ type: 'yesno', lines: lines.slice(-2) });
+                }
+                break;
+            }
+            case 'giveitem':
+                frames.push({ type: 'item', item: v.item || 'ITEM_POTION' });
+                break;
+            case 'trainerbattle':
+                frames.push({ type: 'battle', trainer: v.trainer || 'TRAINER' });
+                break;
+            case 'warp':
+                frames.push({ type: 'warp', map: v.map || 'MAP' });
+                break;
+            case 'playse':
+            case 'playfanfare':
+                frames.push({ type: 'sfx', sound: v.se || v.fanfare || 'SE_SELECT' });
+                break;
+        }
+    }
+    if (frames.length === 1) frames.push({ type: 'overworld' }); // nothing visual
+    return frames;
+}
+
+function sbRenderPreviewFrame(canvas, frameIdx) {
+    const ctx = canvas.getContext('2d');
+    const s = GBA_SCALE;
+    const frames = sbGetPreviewFrames();
+    const idx = Math.max(0, Math.min(frameIdx, frames.length - 1));
+    const frame = frames[idx];
+
+    // Always draw overworld base
+    gbaDrawOverworld(ctx, s);
+    // Draw an NPC near player for context
+    gbaDrawNPC(ctx, s, GBA_W / 32 + 2, GBA_H / 32);
+
+    switch (frame.type) {
+        case 'msgbox':
+            gbaDrawMsgBox(ctx, s, frame.lines, frame.msgType);
+            break;
+        case 'yesno':
+            gbaDrawMsgBox(ctx, s, frame.lines, 'MSGBOX_DEFAULT');
+            gbaDrawYesNo(ctx, s);
+            break;
+        case 'item':
+            gbaDrawItemReceived(ctx, s, frame.item);
+            break;
+        case 'battle': {
+            // Flash to battle transition
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, GBA_W * s, GBA_H * s);
+            ctx.fillStyle = '#ffffff';
+            const text = 'VS ' + (frame.trainer || 'TRAINER').replace('TRAINER_', '').replace(/_/g, ' ');
+            gbaDrawText(ctx, text, (GBA_W / 2 - text.length * 2) * s, (GBA_H / 2 - 3) * s, s, '#ffffff', null);
+            break;
+        }
+        case 'warp': {
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, GBA_W * s, GBA_H * s);
+            const mapName = (frame.map || 'MAP').replace('MAP_', '').replace(/_/g, ' ');
+            gbaDrawText(ctx, mapName, 10 * s, (GBA_H / 2 - 3) * s, s, '#ffffff', null);
+            break;
+        }
+        case 'sfx': {
+            // Show a small note icon overlay
+            gbaDrawText(ctx, 'SFX: ' + (frame.sound || ''), 10 * s, 10 * s, s, '#ffffff', '#000000');
+            break;
+        }
+        // 'overworld' — already drawn
+    }
+
+    return { current: idx, total: frames.length };
+}
+
+function sbRefreshGamePreview() {
+    const canvas = $('#sb-gba-canvas');
+    if (!canvas) return;
+    const frames = sbGetPreviewFrames();
+    sbState.previewStep = Math.max(0, Math.min(sbState.previewStep, frames.length - 1));
+    const info = sbRenderPreviewFrame(canvas, sbState.previewStep);
+    const counter = $('#sb-frame-counter');
+    if (counter) counter.textContent = `${info.current + 1} / ${info.total}`;
+    // Update button states
+    const prevBtn = $('#sb-prev-frame');
+    const nextBtn = $('#sb-next-frame');
+    if (prevBtn) prevBtn.disabled = info.current <= 0;
+    if (nextBtn) nextBtn.disabled = info.current >= info.total - 1;
+}
+
+function sbWirePreviewEvents() {
+    const prevBtn = $('#sb-prev-frame');
+    const nextBtn = $('#sb-next-frame');
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            sbState.previewStep = Math.max(0, sbState.previewStep - 1);
+            sbRefreshGamePreview();
+        });
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            sbState.previewStep++;
+            sbRefreshGamePreview();
+        });
+    }
 }
 
 async function renderScriptBuilder() {
@@ -7604,6 +7959,7 @@ async function renderScriptBuilder() {
         <div class="sb-tab-bar">
             <div class="sb-tab${sbState.tab === 'build' ? ' active' : ''}" data-tab="build">Build</div>
             <div class="sb-tab${sbState.tab === 'templates' ? ' active' : ''}" data-tab="templates">Templates</div>
+            <div class="sb-tab${sbState.tab === 'preview' ? ' active' : ''}" data-tab="preview">Game Preview</div>
         </div>
         <div id="sb-build-panel" style="${sbState.tab !== 'build' ? 'display:none' : ''}">
             <div class="sb-layout">
@@ -7626,9 +7982,31 @@ async function renderScriptBuilder() {
                 `).join('')}
             </div>
         </div>
+        <div id="sb-preview-panel" style="${sbState.tab !== 'preview' ? 'display:none' : ''}">
+            <div class="sb-game-preview-wrap">
+                <div class="sb-gba-shell">
+                    <div class="sb-gba-screen-label">Game Boy Advance</div>
+                    <canvas id="sb-gba-canvas" width="${GBA_W * GBA_SCALE}" height="${GBA_H * GBA_SCALE}"></canvas>
+                    <div class="sb-gba-controls">
+                        <button class="btn btn-sm" id="sb-prev-frame">\u25C0 Prev</button>
+                        <span id="sb-frame-counter" class="sb-frame-counter">1 / 1</span>
+                        <button class="btn btn-sm" id="sb-next-frame">Next \u25B6</button>
+                    </div>
+                </div>
+                <div class="sb-preview-help">
+                    <p><strong>In-Game Preview</strong></p>
+                    <p>Step through your script to see how dialogue boxes, item pickups, battles, and warps will look on a GBA screen.</p>
+                    <p>Use the Prev/Next buttons or add more commands in the Build tab to see additional frames.</p>
+                </div>
+            </div>
+        </div>
     `;
 
     sbWireEvents();
+    if (sbState.tab === 'preview') {
+        sbWirePreviewEvents();
+        sbRefreshGamePreview();
+    }
 }
 
 // ─── Init ───────────────────────────────────────────────────────────────────

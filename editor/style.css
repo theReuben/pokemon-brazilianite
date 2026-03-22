@@ -2473,8 +2473,76 @@ tbody tr:last-child td { border-bottom: none; }
 }
 .sb-tab:hover { color: var(--text); }
 .sb-tab.active { color: var(--accent); border-color: var(--accent); }
+/* ─── GBA Game Preview ──────────────────────── */
+.sb-game-preview-wrap {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.sb-gba-shell {
+    background: #2a2a3a;
+    border-radius: 16px;
+    padding: 20px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+    border: 2px solid #3a3a4a;
+}
+.sb-gba-screen-label {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #8888aa;
+    margin-bottom: 2px;
+}
+.sb-gba-shell canvas {
+    border: 3px solid #1a1a2a;
+    border-radius: 4px;
+    image-rendering: pixelated;
+    background: #000;
+}
+.sb-gba-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+}
+.sb-gba-controls .btn {
+    background: #3a3a5a;
+    border-color: #4a4a6a;
+    color: #ccccee;
+    min-width: 70px;
+}
+.sb-gba-controls .btn:hover {
+    background: #4a4a6a;
+}
+.sb-gba-controls .btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+.sb-frame-counter {
+    font-size: 12px;
+    font-weight: 600;
+    color: #9999bb;
+    min-width: 50px;
+    text-align: center;
+}
+.sb-preview-help {
+    max-width: 280px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-dim);
+}
+.sb-preview-help p { margin: 0 0 8px; }
+.sb-preview-help strong { color: var(--text); }
 @media (max-width: 768px) {
     .sb-layout { flex-direction: column; height: auto; }
     .sb-sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; overflow-y: visible; padding-right: 0; }
     .sb-sidebar-heading { width: 100%; }
+    .sb-game-preview-wrap { flex-direction: column; }
+    .sb-preview-help { max-width: 100%; }
 }
