@@ -1306,7 +1306,7 @@ async function openTrainerModal(trainer, isNew, onSaveCallback) {
                 </div>
                 <div class="form-group">
                     <label>AI Flags</label>
-                    ${makeDatalistHtml('t-ai', trainer.ai || '', AI_PRESETS, 'placeholder="e.g. Check Bad Move / Try To Faint"')}
+                    ${makeMultiSelectHtml('t-ai', trainer.ai || '', AI_FLAG_OPTIONS, AI_FLAG_GROUPS)}
                 </div>
             </div>
             <div class="form-row">
@@ -1322,7 +1322,7 @@ async function openTrainerModal(trainer, isNew, onSaveCallback) {
             <div class="form-row">
                 <div class="form-group">
                     <label>Starting Status</label>
-                    ${makeSelectHtml('t-starting-status', trainer.starting_status || '', STARTING_STATUS_OPTIONS)}
+                    ${makeMultiSelectHtml('t-starting-status', trainer.starting_status || '', STARTING_STATUS_OPTIONS, STARTING_STATUS_GROUPS)}
                 </div>
             </div>
             <h3 style="margin:16px 0 10px;font-size:14px">Pokemon (${trainer.pokemon.length})</h3>
@@ -2213,8 +2213,74 @@ const ENC_ICONS = { land_mons: '&#127793;', water_mons: '&#127754;', rock_smash_
 const TRAINER_TYPES_LIST = ['TRAINER_TYPE_NONE', 'TRAINER_TYPE_NORMAL', 'TRAINER_TYPE_SEE_ALL_DIRECTIONS', 'TRAINER_TYPE_BURIED'];
 const MUGSHOT_OPTIONS = ['', 'Purple', 'Green', 'Pink', 'Blue', 'Yellow'];
 const AI_FLAG_OPTIONS = ['Check Bad Move','Try To Faint','Check Viability','Force Setup First Turn','Risky','Try To 2HKO','Prefer Baton Pass','Double Battle','HP Aware','Powerful Status','Negate Unaware','Will Suicide','Prefer Status Moves','Stall','Smart Switching','Ace Pokemon','Omniscient','Smart Mon Choices','Conservative','Sequence Switching','Double Ace Pokemon','Weigh Ability Prediction','Prefer Highest Damage Move','Predict Switch','Predict Incoming Mon','PP Stall Prevention','Predict Move','Smart Tera','Assume STAB','Assume Status Moves'];
-const AI_PRESETS = ['Basic Trainer','Check Bad Move','Check Bad Move / Try To Faint','Check Bad Move / Try To Faint / Force Setup First Turn','Basic Trainer / Force Setup First Turn','Basic Trainer / Risky'];
-const STARTING_STATUS_OPTIONS = ['', 'STATUS1_NONE', 'STATUS1_POISON', 'STATUS1_BURN', 'STATUS1_FREEZE', 'STATUS1_PARALYSIS', 'STATUS1_TOXIC_POISON', 'STATUS1_SLEEP', 'STATUS1_FROSTBITE'];
+const AI_FLAG_OPTIONS = [
+    '__GROUP_CORE__',
+    'Check Bad Move', 'Try To Faint', 'Check Viability',
+    '__GROUP_BEHAVIOR__',
+    'Force Setup First Turn', 'Risky', 'Conservative', 'Stall',
+    'Will Suicide', 'Prefer Status Moves', 'Powerful Status',
+    'Prefer Baton Pass', 'Prefer Highest Damage Move',
+    'Hp Aware', 'Try To 2hko',
+    '__GROUP_KNOWLEDGE__',
+    'Omniscient', 'Assume Stab', 'Assume Status Moves',
+    'Negate Unaware', 'Know Opponent Party',
+    '__GROUP_SWITCHING__',
+    'Smart Switching', 'Smart Mon Choices', 'Sequence Switching',
+    'Randomize Switchin', 'Randomize Party Indices',
+    '__GROUP_PREDICTION__',
+    'Predict Switch', 'Predict Incoming Mon', 'Predict Move',
+    'Weigh Ability Prediction', 'Pp Stall Prevention',
+    '__GROUP_SPECIAL__',
+    'Ace Pokemon', 'Double Ace Pokemon', 'Smart Tera',
+    'Attacks Partner', 'Double Battle',
+];
+const AI_FLAG_GROUPS = {
+    '__GROUP_CORE__': 'Core',
+    '__GROUP_BEHAVIOR__': 'Behavior',
+    '__GROUP_KNOWLEDGE__': 'Knowledge',
+    '__GROUP_SWITCHING__': 'Switching',
+    '__GROUP_PREDICTION__': 'Prediction',
+    '__GROUP_SPECIAL__': 'Special',
+};
+const STARTING_STATUS_OPTIONS = [
+    '__GROUP_WEATHER__',
+    'Rain', 'Rain Temporary', 'Sun', 'Sun Temporary',
+    'Sandstorm', 'Sandstorm Temporary', 'Hail', 'Hail Temporary',
+    'Snow', 'Snow Temporary', 'Fog', 'Fog Temporary',
+    '__GROUP_TERRAIN__',
+    'Electric Terrain', 'Electric Terrain Temporary',
+    'Misty Terrain', 'Misty Terrain Temporary',
+    'Grassy Terrain', 'Grassy Terrain Temporary',
+    'Psychic Terrain', 'Psychic Terrain Temporary',
+    '__GROUP_ROOMS__',
+    'Trick Room', 'Trick Room Temporary',
+    'Magic Room', 'Magic Room Temporary',
+    'Wonder Room', 'Wonder Room Temporary',
+    '__GROUP_SIDE__',
+    'Tailwind Player', 'Tailwind Player Temporary',
+    'Tailwind Opponent', 'Tailwind Opponent Temporary',
+    'Rainbow Player', 'Rainbow Player Temporary',
+    'Rainbow Opponent', 'Rainbow Opponent Temporary',
+    'Sea Of Fire Player', 'Sea Of Fire Player Temporary',
+    'Sea Of Fire Opponent', 'Sea Of Fire Opponent Temporary',
+    'Swamp Player', 'Swamp Player Temporary',
+    'Swamp Opponent', 'Swamp Opponent Temporary',
+    '__GROUP_HAZARDS__',
+    'Spikes Player L1', 'Spikes Player L2', 'Spikes Player L3',
+    'Spikes Opponent L1', 'Spikes Opponent L2', 'Spikes Opponent L3',
+    'Toxic Spikes Player L1', 'Toxic Spikes Player L2',
+    'Toxic Spikes Opponent L1', 'Toxic Spikes Opponent L2',
+    'Sticky Web Player', 'Sticky Web Opponent',
+    'Stealth Rock Player', 'Stealth Rock Opponent',
+    'Sharp Steel Player', 'Sharp Steel Opponent',
+];
+const STARTING_STATUS_GROUPS = {
+    '__GROUP_WEATHER__': 'Weather',
+    '__GROUP_TERRAIN__': 'Terrain',
+    '__GROUP_ROOMS__': 'Rooms',
+    '__GROUP_SIDE__': 'Side Effects',
+    '__GROUP_HAZARDS__': 'Hazards',
+};
 const COORD_EVENT_TYPES = ['trigger', 'weather'];
 const NATURES = ['Hardy','Lonely','Brave','Adamant','Naughty','Bold','Docile','Relaxed','Impish','Lax','Timid','Hasty','Serious','Jolly','Naive','Modest','Mild','Quiet','Bashful','Rash','Calm','Gentle','Sassy','Careful','Quirky'];
 const BALLS = ['Poke Ball','Great Ball','Ultra Ball','Master Ball','Net Ball','Dive Ball','Nest Ball','Repeat Ball','Timer Ball','Luxury Ball','Premier Ball','Dusk Ball','Heal Ball','Quick Ball','Cherish Ball','Dream Ball','Beast Ball'];
@@ -2319,6 +2385,31 @@ function getAbilityNames() {
 function getUniqueSpeciesIds() {
     if (!state.pokemon) return [];
     return state.pokemon.map(p => p.id).filter(Boolean).sort();
+}
+
+function makeMultiSelectHtml(id, value, options, groupLabels = {}) {
+    const selected = value ? value.split(/\s*\/\s*/).map(s => s.trim()).filter(Boolean) : [];
+    let html = `<div class="multi-select-container" id="${id}-container">`;
+    let currentGroup = '';
+    for (const o of options) {
+        if (!o) continue;
+        if (groupLabels[o]) {
+            currentGroup = groupLabels[o];
+            html += `<div class="multi-select-group-label">${escHtml(currentGroup)}</div>`;
+            continue;
+        }
+        const checked = selected.includes(o) ? 'checked' : '';
+        html += `<label class="multi-select-option"><input type="checkbox" value="${escAttr(o)}" ${checked} onchange="updateMultiSelect('${id}')"> ${escHtml(o)}</label>`;
+    }
+    html += `</div><input type="hidden" id="${id}" value="${escAttr(value || '')}">`;
+    return html;
+}
+
+function updateMultiSelect(id) {
+    const container = document.getElementById(id + '-container');
+    const hidden = document.getElementById(id);
+    const checked = Array.from(container.querySelectorAll('input[type=checkbox]:checked')).map(cb => cb.value);
+    hidden.value = checked.join(' / ');
 }
 
 function makeDatalistHtml(id, value, options, extraAttrs = '') {

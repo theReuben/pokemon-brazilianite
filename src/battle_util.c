@@ -2554,6 +2554,20 @@ static u32 GetFirstBattlerOnSide(enum BattleSide side)
     return GetBattlerAtPosition(side == B_SIDE_PLAYER ? B_POSITION_PLAYER_LEFT : B_POSITION_OPPONENT_LEFT);
 }
 
+static inline bool32 SetStartingWeather(u32 weatherFlag, u32 anim, u32 overworldWeatherId, u8 duration)
+{
+    if (!(gBattleWeather & weatherFlag))
+    {
+        gBattleWeather = weatherFlag;
+        gBattleScripting.animArg1 = anim;
+        gBattleCommunication[MULTISTRING_CHOOSER] = overworldWeatherId;
+        gBattleStruct->weatherDuration = duration;
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 static inline bool32 SetStartingFieldStatus(u32 flag, u32 message, u32 anim, u16 *timer, u16 time)
 {
     if (!(gFieldStatuses & flag))
@@ -2663,7 +2677,75 @@ bool32 TryFieldEffects(enum FieldEffectCases caseId)
     switch (caseId)
     {
     case FIELD_EFFECT_TRAINER_STATUSES:  // starting field/side/etc statuses with a variable
-        if (gStartingStatuses.electricTerrain || gStartingStatuses.electricTerrainTemporary)
+        // Weather
+        if (gStartingStatuses.rain || gStartingStatuses.rainTemporary)
+        {
+            effect = SetStartingWeather(B_WEATHER_RAIN_NORMAL, B_ANIM_RAIN_CONTINUES, WEATHER_RAIN,
+                                        gStartingStatuses.rain ? 0 : 5);
+            gStartingStatuses.rainTemporary = gStartingStatuses.rain = FALSE;
+            if (effect)
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_OverworldWeatherStarts);
+                return TRUE;
+            }
+        }
+        else if (gStartingStatuses.sun || gStartingStatuses.sunTemporary)
+        {
+            effect = SetStartingWeather(B_WEATHER_SUN_NORMAL, B_ANIM_SUN_CONTINUES, WEATHER_DROUGHT,
+                                        gStartingStatuses.sun ? 0 : 5);
+            gStartingStatuses.sunTemporary = gStartingStatuses.sun = FALSE;
+            if (effect)
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_OverworldWeatherStarts);
+                return TRUE;
+            }
+        }
+        else if (gStartingStatuses.sandstorm || gStartingStatuses.sandstormTemporary)
+        {
+            effect = SetStartingWeather(B_WEATHER_SANDSTORM, B_ANIM_SANDSTORM_CONTINUES, WEATHER_SANDSTORM,
+                                        gStartingStatuses.sandstorm ? 0 : 5);
+            gStartingStatuses.sandstormTemporary = gStartingStatuses.sandstorm = FALSE;
+            if (effect)
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_OverworldWeatherStarts);
+                return TRUE;
+            }
+        }
+        else if (gStartingStatuses.hail || gStartingStatuses.hailTemporary)
+        {
+            effect = SetStartingWeather(B_WEATHER_HAIL, B_ANIM_HAIL_CONTINUES, WEATHER_SNOW,
+                                        gStartingStatuses.hail ? 0 : 5);
+            gStartingStatuses.hailTemporary = gStartingStatuses.hail = FALSE;
+            if (effect)
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_OverworldWeatherStarts);
+                return TRUE;
+            }
+        }
+        else if (gStartingStatuses.snow || gStartingStatuses.snowTemporary)
+        {
+            effect = SetStartingWeather(B_WEATHER_SNOW, B_ANIM_SNOW_CONTINUES, WEATHER_SNOW,
+                                        gStartingStatuses.snow ? 0 : 5);
+            gStartingStatuses.snowTemporary = gStartingStatuses.snow = FALSE;
+            if (effect)
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_OverworldWeatherStarts);
+                return TRUE;
+            }
+        }
+        else if (gStartingStatuses.fog || gStartingStatuses.fogTemporary)
+        {
+            effect = SetStartingWeather(B_WEATHER_FOG, B_ANIM_FOG_CONTINUES, WEATHER_FOG_HORIZONTAL,
+                                        gStartingStatuses.fog ? 0 : 5);
+            gStartingStatuses.fogTemporary = gStartingStatuses.fog = FALSE;
+            if (effect)
+            {
+                BattleScriptPushCursorAndCallback(BattleScript_OverworldWeatherStarts);
+                return TRUE;
+            }
+        }
+        // Terrain
+        else if (gStartingStatuses.electricTerrain || gStartingStatuses.electricTerrainTemporary)
         {
             effect = SetStartingFieldStatus(
                         STATUS_FIELD_ELECTRIC_TERRAIN,
