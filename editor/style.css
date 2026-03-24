@@ -636,6 +636,27 @@ tbody tr:last-child td { border-bottom: none; }
     font-size: 16px;
 }
 
+/* ─── Move Slots ──────────────────────────────────── */
+.move-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.move-slot-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.move-slot-row input {
+    flex: 1;
+}
+.move-info {
+    font-size: 11px;
+    color: var(--text-dim);
+    white-space: nowrap;
+    min-width: 180px;
+}
+
 /* ─── Toast ──────────────────────────────────────── */
 .toast {
     position: fixed;
