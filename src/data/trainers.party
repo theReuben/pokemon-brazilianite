@@ -1650,14 +1650,12 @@ Double Battle: No
 AI: Basic Trainer
 Items: Hyper Potion
 
-Drifblim
+Froslass
 Level: 26
+Ability: Snowcloak
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Ball: Dusk Ball
-- Minimize
-- Will-o-wisp
-- Strength Sap
-- Hex
+Ball: Timer Ball
+- Ominous Wind
 
 === TRAINER_ALEXIA ===
 Name: ALEXIA
