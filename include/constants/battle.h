@@ -781,6 +781,19 @@ enum FaintedActions
     F(STARTING_STATUS_SWAMP_PLAYER_TEMPORARY,         swampPlayerTemporary,       (u32, 1)) /* Swamp Player Temporary (4 turns) */         \
     F(STARTING_STATUS_SWAMP_OPPONENT,                 swampOpponent,              (u32, 1)) /* Swamp Opponent (Permanent) */               \
     F(STARTING_STATUS_SWAMP_OPPONENT_TEMPORARY,       swampOpponentTemporary,     (u32, 1)) /* Swamp Opponent Temporary (4 turns) */       \
+    /* Weather */                                                                                                                          \
+    F(STARTING_STATUS_RAIN,                              rain,                       (u32, 1)) /* Rain (Permanent) */                      \
+    F(STARTING_STATUS_RAIN_TEMPORARY,                    rainTemporary,              (u32, 1)) /* Rain Temporary (5 turns) */              \
+    F(STARTING_STATUS_SUN,                               sun,                        (u32, 1)) /* Sun (Permanent) */                       \
+    F(STARTING_STATUS_SUN_TEMPORARY,                     sunTemporary,               (u32, 1)) /* Sun Temporary (5 turns) */               \
+    F(STARTING_STATUS_SANDSTORM,                         sandstorm,                  (u32, 1)) /* Sandstorm (Permanent) */                 \
+    F(STARTING_STATUS_SANDSTORM_TEMPORARY,               sandstormTemporary,         (u32, 1)) /* Sandstorm Temporary (5 turns) */         \
+    F(STARTING_STATUS_HAIL,                              hail,                       (u32, 1)) /* Hail (Permanent) */                      \
+    F(STARTING_STATUS_HAIL_TEMPORARY,                    hailTemporary,              (u32, 1)) /* Hail Temporary (5 turns) */              \
+    F(STARTING_STATUS_SNOW,                              snow,                       (u32, 1)) /* Snow (Permanent) */                      \
+    F(STARTING_STATUS_SNOW_TEMPORARY,                    snowTemporary,              (u32, 1)) /* Snow Temporary (5 turns) */              \
+    F(STARTING_STATUS_FOG,                               fog,                        (u32, 1)) /* Fog (Permanent) */                       \
+    F(STARTING_STATUS_FOG_TEMPORARY,                     fogTemporary,               (u32, 1)) /* Fog Temporary (5 turns) */               \
     /* Hazards */                                                                                                                          \
     F(STARTING_STATUS_SPIKES_PLAYER_L1,               spikesPlayerL1,             (u32, 1)) /* Spikes Player Layer 1 */                    \
     F(STARTING_STATUS_SPIKES_PLAYER_L2,               spikesPlayerL2,             (u32, 1)) /* Spikes Player Layer 2 */                    \
