@@ -66,6 +66,7 @@ This file is processed with a custom preprocessor.
 */
 
 === TRAINER_NONE ===
+Name: 
 Class: Pkmn Trainer 1
 Pic: Hiker
 Gender: Male
@@ -232,9 +233,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Manectric
 Level: 29
@@ -520,9 +521,9 @@ Class: Aqua Admin
 Pic: Aqua Admin M
 Gender: Male
 Music: Aqua
+Items: Super Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Super Potion
 
 Mightyena
 Level: 34
@@ -585,9 +586,9 @@ Class: Aqua Leader
 Pic: Aqua Leader Archie
 Gender: Male
 Music: Aqua
+Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Super Potion / Super Potion
 
 Mightyena
 Level: 41
@@ -658,9 +659,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Medicham
 Level: 43
@@ -1255,16 +1256,16 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
-Regieleki
+Swellow
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Ball: Quick Ball
-Tera Type: Electric
-- Thunderbolt
+- Quick Attack
+- Agility
+- Wing Attack
 
 === TRAINER_PARKER ===
 Name: PARKER
@@ -1272,9 +1273,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Spinda
 Level: 26
@@ -1289,9 +1290,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Slakoth @ Sitrus Berry
 Level: 26
@@ -1306,9 +1307,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Vigoroth
 Level: 26
@@ -1322,9 +1323,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Swellow
 Level: 28
@@ -1372,9 +1373,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Sableye
 Level: 44
@@ -1394,9 +1395,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Mawile
 Level: 46
@@ -1412,9 +1413,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Super Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Super Potion
 
 Electrike
 Level: 17
@@ -1434,9 +1435,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Cacturne
 Level: 43
@@ -1452,9 +1453,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Magneton
 Level: 43
@@ -1470,9 +1471,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Swellow
 Level: 42
@@ -1492,9 +1493,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Dodrio
 Level: 42
@@ -1518,9 +1519,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Kecleon
 Level: 42
@@ -1540,9 +1541,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Electrike
 Level: 26
@@ -1562,9 +1563,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Manectric
 Level: 29
@@ -1584,9 +1585,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Manectric
 Level: 32
@@ -1606,9 +1607,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Manectric
 Level: 35
@@ -1628,9 +1629,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Graveler
 Level: 33
@@ -1646,15 +1647,15 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
-Froslass
+Froslass @ Bright Powder
 Level: 26
-Ability: Snowcloak
+Ability: Snow Cloak
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Ball: Timer Ball
+Ball: Luxury Ball
 - Ominous Wind
 
 === TRAINER_ALEXIA ===
@@ -1663,9 +1664,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Wigglytuff
 Level: 26
@@ -1680,9 +1681,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
-Items: Hyper Potion
 
 Zangoose
 Level: 26
@@ -1696,9 +1697,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
-Items: Full Restore
 
 Mawile
 Level: 29
@@ -1730,9 +1731,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
-Items: Full Restore
 
 Lairon
 Level: 45
@@ -1748,9 +1749,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Super Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Super Potion
 
 Wingull
 Level: 17
@@ -1770,9 +1771,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Sableye
 Level: 30
@@ -1784,9 +1785,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Roselia
 Level: 45
@@ -1798,9 +1799,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Claydol
 Level: 45
@@ -1812,9 +1813,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Torkoal
 Level: 42
@@ -1834,9 +1835,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Skarmory
 Level: 43
@@ -1852,9 +1853,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Sandslash
 Level: 42
@@ -1874,9 +1875,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Wingull
 Level: 26
@@ -1896,9 +1897,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Pelipper
 Level: 29
@@ -1918,9 +1919,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Pelipper
 Level: 32
@@ -1940,9 +1941,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Pelipper
 Level: 34
@@ -2111,9 +2112,9 @@ Class: Lady
 Pic: Lady
 Gender: Female
 Music: Female
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Zigzagoon @ Nugget
 Level: 7
@@ -2125,9 +2126,9 @@ Class: Lady
 Pic: Lady
 Gender: Female
 Music: Female
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Luvdisc @ Nugget
 Level: 39
@@ -2172,9 +2173,9 @@ Class: Lady
 Pic: Lady
 Gender: Female
 Music: Female
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Zigzagoon @ Nugget
 Level: 11
@@ -2188,9 +2189,9 @@ Class: Lady
 Pic: Lady
 Gender: Female
 Music: Female
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Seaking @ Nugget
 Level: 40
@@ -2202,9 +2203,9 @@ Class: Lady
 Pic: Lady
 Gender: Female
 Music: Female
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Roselia @ Nugget
 Level: 45
@@ -2216,9 +2217,9 @@ Class: Lady
 Pic: Lady
 Gender: Female
 Music: Female
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Linoone @ Nugget
 Level: 27
@@ -2230,9 +2231,9 @@ Class: Lady
 Pic: Lady
 Gender: Female
 Music: Female
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Linoone @ Nugget
 Level: 30
@@ -2244,9 +2245,9 @@ Class: Lady
 Pic: Lady
 Gender: Female
 Music: Female
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Linoone @ Nugget
 Level: 33
@@ -2258,9 +2259,9 @@ Class: Lady
 Pic: Lady
 Gender: Female
 Music: Female
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Linoone @ Nugget
 Level: 36
@@ -2515,9 +2516,9 @@ Class: Rich Boy
 Pic: Rich Boy
 Gender: Male
 Music: Rich
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Zigzagoon @ Nugget
 Level: 7
@@ -2546,9 +2547,9 @@ Class: Rich Boy
 Pic: Rich Boy
 Gender: Male
 Music: Rich
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Azumarill @ Nugget
 Level: 45
@@ -2560,9 +2561,9 @@ Class: Rich Boy
 Pic: Rich Boy
 Gender: Male
 Music: Rich
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Linoone @ Nugget
 Level: 27
@@ -2574,9 +2575,9 @@ Class: Rich Boy
 Pic: Rich Boy
 Gender: Male
 Music: Rich
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Linoone @ Nugget
 Level: 30
@@ -2588,9 +2589,9 @@ Class: Rich Boy
 Pic: Rich Boy
 Gender: Male
 Music: Rich
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Linoone @ Nugget
 Level: 33
@@ -2602,9 +2603,9 @@ Class: Rich Boy
 Pic: Rich Boy
 Gender: Male
 Music: Rich
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Linoone @ Nugget
 Level: 36
@@ -4582,9 +4583,9 @@ Class: Elite Four
 Pic: Elite Four Sidney
 Gender: Male
 Music: Elite Four
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer / Force Setup First Turn
-Items: Full Restore / Full Restore
 Mugshot: Purple
 
 Mightyena
@@ -4633,9 +4634,9 @@ Class: Elite Four
 Pic: Elite Four Phoebe
 Gender: Female
 Music: Elite Four
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore / Full Restore
 Mugshot: Green
 
 Dusclops
@@ -4684,9 +4685,9 @@ Class: Elite Four
 Pic: Elite Four Glacia
 Gender: Female
 Music: Elite Four
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore / Full Restore
 Mugshot: Pink
 
 Sealeo
@@ -4735,9 +4736,9 @@ Class: Elite Four
 Pic: Elite Four Drake
 Gender: Male
 Music: Elite Four
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore / Full Restore
 Mugshot: Blue
 
 Shelgon
@@ -4786,9 +4787,9 @@ Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Female
+Items: Potion / Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Potion / Potion
 
 Geodude
 Level: 12
@@ -4820,9 +4821,9 @@ Class: Leader
 Pic: Leader Brawly
 Gender: Male
 Music: Male
+Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Super Potion / Super Potion
 
 Machop
 Level: 16
@@ -4854,9 +4855,9 @@ Class: Leader
 Pic: Leader Wattson
 Gender: Male
 Music: Male
+Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Super Potion / Super Potion
 
 Voltorb
 Level: 20
@@ -4896,9 +4897,9 @@ Class: Leader
 Pic: Leader Flannery
 Gender: Female
 Music: Female
+Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion / Hyper Potion
 
 Numel
 Level: 24
@@ -4938,9 +4939,9 @@ Class: Leader
 Pic: Leader Norman
 Gender: Male
 Music: Male
+Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion / Hyper Potion
 
 Spinda
 Level: 27
@@ -4980,9 +4981,9 @@ Class: Leader
 Pic: Leader Winona
 Gender: Female
 Music: Female
+Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer / Risky
-Items: Hyper Potion / Hyper Potion
 
 Swablu
 Level: 29
@@ -5030,9 +5031,9 @@ Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
 Music: Female
+Items: Hyper Potion / Hyper Potion / Hyper Potion / Hyper Potion
 Double Battle: Yes
 AI: Basic Trainer
-Items: Hyper Potion / Hyper Potion / Hyper Potion / Hyper Potion
 
 Claydol
 Level: 41
@@ -5072,9 +5073,9 @@ Class: Leader
 Pic: Leader Juan
 Gender: Male
 Music: Male
+Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion / Hyper Potion
 
 Luvdisc
 Level: 41
@@ -6037,9 +6038,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Slaking
 Level: 43
@@ -6063,9 +6064,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Gardevoir
 Level: 43
@@ -6238,9 +6239,9 @@ Class: Champion
 Pic: Champion Wallace
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore / Full Restore
 Mugshot: Yellow
 
 Wailord
@@ -7602,8 +7603,8 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
-Double Battle: No
 Items: Full Restore
+Double Battle: No
 
 Claydol
 Level: 43
@@ -9179,9 +9180,9 @@ Class: Cooltrainer 2
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Absol
 Level: 27
@@ -9261,9 +9262,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Manectric
 Level: 34
@@ -9449,9 +9450,9 @@ Class: Rival
 Pic: Wally
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore / Full Restore
 
 Altaria
 Level: 44
@@ -10065,9 +10066,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Sableye
 Level: 43
@@ -10228,9 +10229,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Breloom
 Level: 27
@@ -10242,9 +10243,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Seedot
 Level: 28
@@ -10264,9 +10265,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Cacturne
 Level: 39
@@ -10278,9 +10279,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
-Items: Full Restore
 
 Breloom
 Level: 31
@@ -10292,9 +10293,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Breloom
 Level: 34
@@ -10306,9 +10307,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
-Items: Full Restore
 
 Breloom
 Level: 37
@@ -10320,9 +10321,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger M
 Gender: Male
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Kecleon
 Level: 39
@@ -10338,9 +10339,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
-Items: Full Restore
 
 Gloom
 Level: 26
@@ -10356,9 +10357,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
-Items: Full Restore
 
 Lotad
 Level: 28
@@ -10378,9 +10379,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Swablu
 Level: 38
@@ -10396,9 +10397,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
-Items: Full Restore
 
 Gloom
 Level: 30
@@ -10414,9 +10415,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Gloom
 Level: 33
@@ -10432,9 +10433,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
-Items: Full Restore
 
 Gloom
 Level: 36
@@ -10450,9 +10451,9 @@ Class: Pkmn Ranger
 Pic: Pokemon Ranger F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Bellossom
 Level: 39
@@ -10631,9 +10632,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Manectric
 Level: 32
@@ -10946,9 +10947,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
-Items: Hyper Potion
 
 Kecleon
 Level: 33
@@ -10998,9 +10999,9 @@ Class: Magma Leader
 Pic: Magma Leader Maxie
 Gender: Male
 Music: Magma
+Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Super Potion / Super Potion
 
 Mightyena
 Level: 37
@@ -11020,9 +11021,9 @@ Class: Magma Leader
 Pic: Magma Leader Maxie
 Gender: Male
 Music: Magma
+Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Super Potion / Super Potion
 
 Mightyena
 Level: 24
@@ -11857,9 +11858,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Kecleon
 Level: 23
@@ -12043,9 +12044,9 @@ Class: Rival
 Pic: Wally
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore / Full Restore
 
 Altaria
 Level: 47
@@ -12093,9 +12094,9 @@ Class: Rival
 Pic: Wally
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore / Full Restore
 
 Altaria
 Level: 50
@@ -12143,9 +12144,9 @@ Class: Rival
 Pic: Wally
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore / Full Restore
 
 Altaria
 Level: 53
@@ -12193,9 +12194,9 @@ Class: Rival
 Pic: Wally
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore / Full Restore
 
 Altaria
 Level: 56
@@ -12452,9 +12453,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore
 
 Gloom
 Level: 34
@@ -12470,9 +12471,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Shiftry
 Level: 34
@@ -12947,9 +12948,9 @@ Class: Lady
 Pic: Lady
 Gender: Female
 Music: Female
+Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
-Items: Full Restore
 
 Lotad
 Level: 8
@@ -13506,9 +13507,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Pelipper
 Level: 33
@@ -13639,9 +13640,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Manectric
 Level: 24
@@ -13921,9 +13922,9 @@ Class: Expert
 Pic: Expert F
 Gender: Female
 Music: Intense
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Roselia
 Level: 33
@@ -13982,9 +13983,9 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Manectric
 Level: 30
@@ -14099,9 +14100,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Loudred
 Level: 29
@@ -14151,9 +14152,9 @@ Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Golem
 Level: 32
@@ -14193,9 +14194,9 @@ Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Omanyte
 Level: 37
@@ -14243,9 +14244,9 @@ Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Omastar
 Level: 42
@@ -14293,9 +14294,9 @@ Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Aerodactyl
 Level: 47
@@ -14351,9 +14352,9 @@ Class: Leader
 Pic: Leader Brawly
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Machamp @ Sitrus Berry
 Level: 33
@@ -14393,9 +14394,9 @@ Class: Leader
 Pic: Leader Brawly
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Machamp @ Sitrus Berry
 Level: 38
@@ -14435,9 +14436,9 @@ Class: Leader
 Pic: Leader Brawly
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Hitmonchan
 Level: 40
@@ -14485,9 +14486,9 @@ Class: Leader
 Pic: Leader Brawly
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Hitmonlee
 Level: 46
@@ -14543,9 +14544,9 @@ Class: Leader
 Pic: Leader Wattson
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Mareep
 Level: 36
@@ -14585,9 +14586,9 @@ Class: Leader
 Pic: Leader Wattson
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Pikachu
 Level: 39
@@ -14635,9 +14636,9 @@ Class: Leader
 Pic: Leader Wattson
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Raichu
 Level: 44
@@ -14685,9 +14686,9 @@ Class: Leader
 Pic: Leader Wattson
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Electabuzz
 Level: 50
@@ -14743,9 +14744,9 @@ Class: Leader
 Pic: Leader Flannery
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Magcargo @ White Herb
 Level: 38
@@ -14785,9 +14786,9 @@ Class: Leader
 Pic: Leader Flannery
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Growlithe
 Level: 41
@@ -14835,9 +14836,9 @@ Class: Leader
 Pic: Leader Flannery
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Houndour
 Level: 46
@@ -14893,9 +14894,9 @@ Class: Leader
 Pic: Leader Flannery
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Arcanine
 Level: 51
@@ -14951,9 +14952,9 @@ Class: Leader
 Pic: Leader Norman
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Chansey
 Level: 42
@@ -14993,9 +14994,9 @@ Class: Leader
 Pic: Leader Norman
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Slaking @ Sitrus Berry
 Level: 47
@@ -15043,9 +15044,9 @@ Class: Leader
 Pic: Leader Norman
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Slaking @ Sitrus Berry
 Level: 52
@@ -15093,9 +15094,9 @@ Class: Leader
 Pic: Leader Norman
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Slaking @ Sitrus Berry
 Level: 57
@@ -15151,9 +15152,9 @@ Class: Leader
 Pic: Leader Winona
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer / Risky
-Items: Full Restore / Full Restore / Full Restore
 
 Dratini @ Sitrus Berry
 Level: 40
@@ -15201,9 +15202,9 @@ Class: Leader
 Pic: Leader Winona
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer / Risky
-Items: Full Restore / Full Restore / Full Restore
 
 Hoothoot
 Level: 43
@@ -15259,9 +15260,9 @@ Class: Leader
 Pic: Leader Winona
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer / Risky
-Items: Full Restore / Full Restore / Full Restore
 
 Noctowl
 Level: 48
@@ -15317,9 +15318,9 @@ Class: Leader
 Pic: Leader Winona
 Gender: Female
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer / Risky
-Items: Full Restore / Full Restore / Full Restore
 
 Noctowl
 Level: 53
@@ -15375,9 +15376,9 @@ Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Slowpoke
 Level: 48
@@ -15425,9 +15426,9 @@ Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Drowzee
 Level: 53
@@ -15483,9 +15484,9 @@ Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Hypno
 Level: 58
@@ -15541,9 +15542,9 @@ Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
 Music: Female
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Hypno
 Level: 63
@@ -15599,9 +15600,9 @@ Class: Leader
 Pic: Leader Juan
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Poliwag
 Level: 46
@@ -15649,9 +15650,9 @@ Class: Leader
 Pic: Leader Juan
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Poliwhirl
 Level: 50
@@ -15699,9 +15700,9 @@ Class: Leader
 Pic: Leader Juan
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Lapras
 Level: 56
@@ -15757,9 +15758,9 @@ Class: Leader
 Pic: Leader Juan
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore
 
 Lapras
 Level: 61
@@ -15851,9 +15852,9 @@ Class: Rival
 Pic: Steven
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
-Items: Full Restore / Full Restore / Full Restore / Full Restore
 
 Skarmory
 Level: 77
@@ -16324,9 +16325,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Loudred
 Level: 35
@@ -16342,9 +16343,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Spinda
 Level: 37
@@ -16364,9 +16365,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Spinda
 Level: 39
@@ -16386,9 +16387,9 @@ Class: Cooltrainer
 Pic: Cooltrainer F
 Gender: Female
 Music: Cool
+Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-Items: Hyper Potion
 
 Spinda
 Level: 41
