@@ -1441,7 +1441,7 @@ PetalburgCity_Gym_Text_MaryIntro:
 	.string "Giggle…\n"
 	.string "This is the ACCURACY ROOM.\p"
 	.string "It's pretty nasty when every attack\n"
-	.string "lands without fail.$"
+	.string "misses.$"
 
 PetalburgCity_Gym_Text_MaryDefeat:
 	.string "You were a cut above me…$"
