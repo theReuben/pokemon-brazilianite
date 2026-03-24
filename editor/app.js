@@ -1322,7 +1322,7 @@ async function openTrainerModal(trainer, isNew, onSaveCallback) {
             <div class="form-row">
                 <div class="form-group">
                     <label>Starting Status</label>
-                    ${makeDatalistHtml('t-starting-status', trainer.starting_status || '', STARTING_STATUS_OPTIONS, 'placeholder="e.g. Rain / Stealth Rock Opponent"')}
+                    ${makeMultiSelectHtml('t-starting-status', trainer.starting_status || '', STARTING_STATUS_OPTIONS, STARTING_STATUS_GROUPS)}
                 </div>
             </div>
             <h3 style="margin:16px 0 10px;font-size:14px">Pokemon (${trainer.pokemon.length})</h3>
@@ -2215,21 +2215,20 @@ const MUGSHOT_OPTIONS = ['', 'Purple', 'Green', 'Pink', 'Blue', 'Yellow'];
 const AI_FLAG_OPTIONS = ['Check Bad Move','Try To Faint','Check Viability','Force Setup First Turn','Risky','Try To 2HKO','Prefer Baton Pass','Double Battle','HP Aware','Powerful Status','Negate Unaware','Will Suicide','Prefer Status Moves','Stall','Smart Switching','Ace Pokemon','Omniscient','Smart Mon Choices','Conservative','Sequence Switching','Double Ace Pokemon','Weigh Ability Prediction','Prefer Highest Damage Move','Predict Switch','Predict Incoming Mon','PP Stall Prevention','Predict Move','Smart Tera','Assume STAB','Assume Status Moves'];
 const AI_PRESETS = ['Basic Trainer','Check Bad Move','Check Bad Move / Try To Faint','Check Bad Move / Try To Faint / Force Setup First Turn','Basic Trainer / Force Setup First Turn','Basic Trainer / Risky'];
 const STARTING_STATUS_OPTIONS = [
-    '',
-    // Weather
+    '__GROUP_WEATHER__',
     'Rain', 'Rain Temporary', 'Sun', 'Sun Temporary',
     'Sandstorm', 'Sandstorm Temporary', 'Hail', 'Hail Temporary',
     'Snow', 'Snow Temporary', 'Fog', 'Fog Temporary',
-    // Terrain
+    '__GROUP_TERRAIN__',
     'Electric Terrain', 'Electric Terrain Temporary',
     'Misty Terrain', 'Misty Terrain Temporary',
     'Grassy Terrain', 'Grassy Terrain Temporary',
     'Psychic Terrain', 'Psychic Terrain Temporary',
-    // Rooms
+    '__GROUP_ROOMS__',
     'Trick Room', 'Trick Room Temporary',
     'Magic Room', 'Magic Room Temporary',
     'Wonder Room', 'Wonder Room Temporary',
-    // Side effects
+    '__GROUP_SIDE__',
     'Tailwind Player', 'Tailwind Player Temporary',
     'Tailwind Opponent', 'Tailwind Opponent Temporary',
     'Rainbow Player', 'Rainbow Player Temporary',
@@ -2238,7 +2237,7 @@ const STARTING_STATUS_OPTIONS = [
     'Sea Of Fire Opponent', 'Sea Of Fire Opponent Temporary',
     'Swamp Player', 'Swamp Player Temporary',
     'Swamp Opponent', 'Swamp Opponent Temporary',
-    // Hazards
+    '__GROUP_HAZARDS__',
     'Spikes Player L1', 'Spikes Player L2', 'Spikes Player L3',
     'Spikes Opponent L1', 'Spikes Opponent L2', 'Spikes Opponent L3',
     'Toxic Spikes Player L1', 'Toxic Spikes Player L2',
@@ -2247,6 +2246,13 @@ const STARTING_STATUS_OPTIONS = [
     'Stealth Rock Player', 'Stealth Rock Opponent',
     'Sharp Steel Player', 'Sharp Steel Opponent',
 ];
+const STARTING_STATUS_GROUPS = {
+    '__GROUP_WEATHER__': 'Weather',
+    '__GROUP_TERRAIN__': 'Terrain',
+    '__GROUP_ROOMS__': 'Rooms',
+    '__GROUP_SIDE__': 'Side Effects',
+    '__GROUP_HAZARDS__': 'Hazards',
+};
 const COORD_EVENT_TYPES = ['trigger', 'weather'];
 const NATURES = ['Hardy','Lonely','Brave','Adamant','Naughty','Bold','Docile','Relaxed','Impish','Lax','Timid','Hasty','Serious','Jolly','Naive','Modest','Mild','Quiet','Bashful','Rash','Calm','Gentle','Sassy','Careful','Quirky'];
 const BALLS = ['Poke Ball','Great Ball','Ultra Ball','Master Ball','Net Ball','Dive Ball','Nest Ball','Repeat Ball','Timer Ball','Luxury Ball','Premier Ball','Dusk Ball','Heal Ball','Quick Ball','Cherish Ball','Dream Ball','Beast Ball'];
@@ -2351,6 +2357,31 @@ function getAbilityNames() {
 function getUniqueSpeciesIds() {
     if (!state.pokemon) return [];
     return state.pokemon.map(p => p.id).filter(Boolean).sort();
+}
+
+function makeMultiSelectHtml(id, value, options, groupLabels = {}) {
+    const selected = value ? value.split(/\s*\/\s*/).map(s => s.trim()).filter(Boolean) : [];
+    let html = `<div class="multi-select-container" id="${id}-container">`;
+    let currentGroup = '';
+    for (const o of options) {
+        if (!o) continue;
+        if (groupLabels[o]) {
+            currentGroup = groupLabels[o];
+            html += `<div class="multi-select-group-label">${escHtml(currentGroup)}</div>`;
+            continue;
+        }
+        const checked = selected.includes(o) ? 'checked' : '';
+        html += `<label class="multi-select-option"><input type="checkbox" value="${escAttr(o)}" ${checked} onchange="updateMultiSelect('${id}')"> ${escHtml(o)}</label>`;
+    }
+    html += `</div><input type="hidden" id="${id}" value="${escAttr(value || '')}">`;
+    return html;
+}
+
+function updateMultiSelect(id) {
+    const container = document.getElementById(id + '-container');
+    const hidden = document.getElementById(id);
+    const checked = Array.from(container.querySelectorAll('input[type=checkbox]:checked')).map(cb => cb.value);
+    hidden.value = checked.join(' / ');
 }
 
 function makeDatalistHtml(id, value, options, extraAttrs = '') {
