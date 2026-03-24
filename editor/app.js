@@ -617,14 +617,16 @@ function serializeTrainers(trainers) {
     const parts = [];
     for (const t of trainers) {
         let block = `=== ${t.id} ===\n`;
-        const fieldOrder = ['name', 'class', 'pic', 'gender', 'music', 'double_battle', 'ai', 'items', 'mugshot', 'starting_status'];
+        const fieldOrder = ['name', 'class', 'pic', 'gender', 'music', 'items', 'double_battle', 'ai', 'mugshot', 'starting_status'];
         const fieldLabels = {
             name: 'Name', class: 'Class', pic: 'Pic', gender: 'Gender',
             music: 'Music', double_battle: 'Double Battle', ai: 'AI',
             items: 'Items', mugshot: 'Mugshot', starting_status: 'Starting Status'
         };
         for (const key of fieldOrder) {
-            if (t[key] !== undefined && t[key] !== '') {
+            if (key === 'name') {
+                block += `${fieldLabels[key]}: ${t[key] || ''}\n`;
+            } else if (t[key] !== undefined && t[key] !== '') {
                 block += `${fieldLabels[key]}: ${t[key]}\n`;
             }
         }
@@ -1068,6 +1070,7 @@ async function render() {
     try {
         switch (page) {
             case 'maps': await renderMaps(); break;
+            case 'trainers': await renderTrainers(); break;
             case 'npcs': await renderNPCs(); break;
             case 'pokemon': await renderPokemonPage(); break;
             case 'dashboard': await renderDashboard(); break;
@@ -1216,9 +1219,9 @@ function addTrainer() {
     }, true);
 }
 
-function editTrainer(id) {
+function editTrainer(id, onSaveCallback) {
     const trainer = state.trainers.find(t => t.id === id);
-    if (trainer) openTrainerModal({ ...trainer, pokemon: trainer.pokemon.map(p => ({ ...p, moves: [...(p.moves || [])] })) }, false);
+    if (trainer) openTrainerModal({ ...trainer, pokemon: trainer.pokemon.map(p => ({ ...p, moves: [...(p.moves || [])] })) }, false, onSaveCallback);
 }
 
 function deleteTrainer(id) {
@@ -1229,7 +1232,9 @@ function deleteTrainer(id) {
     renderTrainers();
 }
 
-function openTrainerModal(trainer, isNew) {
+async function openTrainerModal(trainer, isNew, onSaveCallback) {
+    // Preload data for dropdowns
+    try { await Promise.all([loadItems(), loadMoves(), loadPokemonSpecies(), loadAbilities()]); } catch {}
     const overlay = document.createElement('div');
     overlay.className = 'modal-overlay';
     overlay.innerHTML = `
@@ -1307,7 +1312,7 @@ function openTrainerModal(trainer, isNew) {
             <div class="form-row">
                 <div class="form-group">
                     <label>Items</label>
-                    <input type="text" id="t-items" value="${escAttr(trainer.items || '')}" placeholder="e.g. Full Restore / Hyper Potion">
+                    ${makeDatalistHtml('t-items', trainer.items || '', getBattleItemNames(), 'placeholder="e.g. Full Restore / Hyper Potion"')}
                 </div>
                 <div class="form-group">
                     <label>Mugshot</label>
@@ -1326,14 +1331,29 @@ function openTrainerModal(trainer, isNew) {
         `;
 
         const pokemonList = $('#pokemon-list');
+        const holdableItems = getHoldableItemNames();
+        const pokemonNames = getPokemonNames();
+        const abilityNames = getAbilityNames();
         trainer.pokemon.forEach((mon, i) => {
+            // Extract held item from species line for separate editing
+            const atMatch = mon.species.match(/^(.+?)\s*@\s*(.+)$/);
+            const speciesOnly = atMatch ? atMatch[1].trim() : mon.species;
+            const heldItem = atMatch ? atMatch[2].trim() : '';
+            const moves = mon.moves || [];
+            const moveSlots = [moves[0] || '', moves[1] || '', moves[2] || '', moves[3] || ''];
             pokemonList.innerHTML += `
                 <div class="pokemon-form-card">
                     <button class="remove-mon" onclick="removePokemonFromModal(${i})">&#10005;</button>
                     <h4>Pokemon #${i + 1}</h4>
-                    <div class="form-group">
-                        <label>Species Line</label>
-                        <input type="text" class="mon-species" data-idx="${i}" value="${escAttr(mon.species)}" placeholder="e.g. Pikachu (M) @ Light Ball">
+                    <div class="form-row">
+                        <div class="form-group" style="flex:2">
+                            <label>Species Line</label>
+                            ${makeDatalistHtml('mon-species-' + i, speciesOnly, pokemonNames, 'class="mon-species" data-idx="' + i + '" placeholder="e.g. Pikachu (M)"')}
+                        </div>
+                        <div class="form-group" style="flex:1">
+                            <label>Held Item</label>
+                            ${makeDatalistHtml('mon-held-' + i, heldItem, holdableItems, 'class="mon-held-item" data-idx="' + i + '" placeholder="e.g. Light Ball"')}
+                        </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
@@ -1349,7 +1369,7 @@ function openTrainerModal(trainer, isNew) {
                         </div>
                         <div class="form-group">
                             <label>Ability</label>
-                            <input type="text" class="mon-ability" data-idx="${i}" value="${escAttr(mon.ability || '')}">
+                            ${makeDatalistHtml('mon-ability-' + i, mon.ability || '', abilityNames, 'class="mon-ability" data-idx="' + i + '" placeholder="e.g. Static"')}
                         </div>
                     </div>
                     <div class="form-row">
@@ -1386,13 +1406,24 @@ function openTrainerModal(trainer, isNew) {
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Moves (one per line)</label>
-                        <textarea class="mon-moves" data-idx="${i}" rows="4" placeholder="Thunderbolt\nVolt Switch\n...">${escHtml((mon.moves || []).join('\n'))}</textarea>
+                        <label>Moves</label>
+                        <div class="move-slots">
+                            ${moveSlots.map((mv, si) => getMoveOptionHtml(mv, i, si)).join('')}
+                        </div>
                     </div>
                 </div>
             `;
         });
     }
+
+    window.updateMoveInfo = (el) => {
+        const moveName = el.value.trim();
+        const infoSpan = el.parentElement.querySelector('.move-info');
+        if (infoSpan && state.moves) {
+            const moveInfo = state.moves.find(m => m.name === moveName);
+            infoSpan.textContent = moveInfo ? ` (${moveInfo.type || '?'}, ${moveInfo.category || '?'}, Pwr:${moveInfo.power || '-'}, Acc:${moveInfo.accuracy || '-'})` : '';
+        }
+    };
 
     window.addPokemonToModal = () => {
         collectPokemonFromModal(trainer);
@@ -1408,21 +1439,31 @@ function openTrainerModal(trainer, isNew) {
 
     function collectPokemonFromModal(t) {
         const speciesEls = $$('.mon-species');
-        t.pokemon = speciesEls.map((el, i) => ({
-            species: el.value,
-            level: $$('.mon-level')[i]?.value || '',
-            nature: $$('.mon-nature')[i]?.value || '',
-            ability: $$('.mon-ability')[i]?.value || '',
-            ivs: $$('.mon-ivs')[i]?.value || '',
-            evs: $$('.mon-evs')[i]?.value || '',
-            ball: $$('.mon-ball')[i]?.value || '',
-            shiny: $$('.mon-shiny')[i]?.value || '',
-            tera_type: $$('.mon-tera')[i]?.value || '',
-            happiness: $$('.mon-happiness')[i]?.value || '',
-            dynamax_level: $$('.mon-dynamax')[i]?.value || '',
-            gigantamax: $$('.mon-gigantamax')[i]?.value || '',
-            moves: ($$('.mon-moves')[i]?.value || '').split('\n').map(m => m.trim()).filter(Boolean)
-        }));
+        t.pokemon = speciesEls.map((el, i) => {
+            let species = el.value;
+            const heldItem = ($$('.mon-held-item')[i]?.value || '').trim();
+            if (heldItem) {
+                species = species.trim() + ' @ ' + heldItem;
+            }
+            // Collect moves from individual slot dropdowns
+            const moveSlots = $$('.mon-move-slot').filter(s => parseInt(s.dataset.idx) === i);
+            const moves = moveSlots.map(s => s.value.trim()).filter(Boolean);
+            return {
+                species,
+                level: $$('.mon-level')[i]?.value || '',
+                nature: $$('.mon-nature')[i]?.value || '',
+                ability: $$('.mon-ability')[i]?.value || '',
+                ivs: $$('.mon-ivs')[i]?.value || '',
+                evs: $$('.mon-evs')[i]?.value || '',
+                ball: $$('.mon-ball')[i]?.value || '',
+                shiny: $$('.mon-shiny')[i]?.value || '',
+                tera_type: $$('.mon-tera')[i]?.value || '',
+                happiness: $$('.mon-happiness')[i]?.value || '',
+                dynamax_level: $$('.mon-dynamax')[i]?.value || '',
+                gigantamax: $$('.mon-gigantamax')[i]?.value || '',
+                moves
+            };
+        });
     }
 
     renderModalBody();
@@ -1454,7 +1495,11 @@ function openTrainerModal(trainer, isNew) {
         markChanged('src/data/trainers.party', serializeTrainers(state.trainers));
         toast('Trainer saved (auto-saved)');
         overlay.remove();
-        renderTrainers();
+        if (onSaveCallback) {
+            onSaveCallback();
+        } else {
+            renderTrainers();
+        }
     });
 }
 
@@ -2236,6 +2281,39 @@ function getUniqueScripts() {
 function getUniqueItemIds() {
     if (!state.items) return [];
     return state.items.map(i => i.id).filter(Boolean).sort();
+}
+
+function getHoldableItemNames() {
+    if (!state.items) return [];
+    return state.items.map(i => i.name).filter(Boolean).sort();
+}
+
+function getBattleItemNames() {
+    if (!state.items) return [];
+    return state.items.filter(i => i.name).map(i => i.name).sort();
+}
+
+function getPokemonNames() {
+    if (!state.pokemon) return [];
+    return state.pokemon.map(p => p.name).filter(Boolean).sort();
+}
+
+function getMoveNames() {
+    if (!state.moves) return [];
+    return state.moves.filter(m => m.name).map(m => m.name).sort();
+}
+
+function getMoveOptionHtml(selectedMove, idx, slotIdx) {
+    if (!state.moves) return `<input type="text" class="mon-move-slot" data-idx="${idx}" data-slot="${slotIdx}" value="${escAttr(selectedMove)}" placeholder="Select a move">`;
+    const listId = `dl-move-${idx}-${slotIdx}-${Date.now()}`;
+    const moveInfo = selectedMove ? state.moves.find(m => m.name === selectedMove) : null;
+    const infoStr = moveInfo ? ` (${moveInfo.type || '?'}, ${moveInfo.category || '?'}, Pwr:${moveInfo.power || '-'}, Acc:${moveInfo.accuracy || '-'})` : '';
+    return `<div class="move-slot-row"><input type="text" class="mon-move-slot" data-idx="${idx}" data-slot="${slotIdx}" value="${escAttr(selectedMove)}" list="${listId}" placeholder="Select a move" onchange="updateMoveInfo(this)"><datalist id="${listId}">${state.moves.filter(m => m.name).map(m => `<option value="${escAttr(m.name)}" label="${m.type || '?'} | ${m.category || '?'} | Pwr:${m.power || '-'} | Acc:${m.accuracy || '-'}">`).join('')}</datalist><span class="move-info">${escHtml(infoStr)}</span></div>`;
+}
+
+function getAbilityNames() {
+    if (!state.abilities) return [];
+    return state.abilities.map(a => a.name).filter(Boolean).sort();
 }
 
 function getUniqueSpeciesIds() {
@@ -3614,7 +3692,7 @@ async function editTrainerPartyFromScript(dirName, scriptName) {
     }
 
     if (matchedTrainer) {
-        editTrainer(matchedTrainer.id);
+        editTrainer(matchedTrainer.id, () => renderMapDetail(dirName));
     } else {
         toast('Could not match script to a trainer party entry. Try searching in the Trainers tab.', true);
     }
@@ -3658,8 +3736,8 @@ async function editTrainerPartyFromMap(dirName, trainerIdx) {
     }
 
     if (matchedTrainer) {
-        // Open the trainer party editor
-        editTrainer(matchedTrainer.id);
+        // Open the trainer party editor, return to map detail on save
+        editTrainer(matchedTrainer.id, () => renderMapDetail(dirName));
     } else {
         // Show a picker modal to find or create the trainer
         showTrainerMatchModal(dirName, trainerEvt, trainerIdx);
