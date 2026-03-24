@@ -2212,7 +2212,6 @@ const ENC_ICONS = { land_mons: '&#127793;', water_mons: '&#127754;', rock_smash_
 
 const TRAINER_TYPES_LIST = ['TRAINER_TYPE_NONE', 'TRAINER_TYPE_NORMAL', 'TRAINER_TYPE_SEE_ALL_DIRECTIONS', 'TRAINER_TYPE_BURIED'];
 const MUGSHOT_OPTIONS = ['', 'Purple', 'Green', 'Pink', 'Blue', 'Yellow'];
-const AI_FLAG_OPTIONS = ['Check Bad Move','Try To Faint','Check Viability','Force Setup First Turn','Risky','Try To 2HKO','Prefer Baton Pass','Double Battle','HP Aware','Powerful Status','Negate Unaware','Will Suicide','Prefer Status Moves','Stall','Smart Switching','Ace Pokemon','Omniscient','Smart Mon Choices','Conservative','Sequence Switching','Double Ace Pokemon','Weigh Ability Prediction','Prefer Highest Damage Move','Predict Switch','Predict Incoming Mon','PP Stall Prevention','Predict Move','Smart Tera','Assume STAB','Assume Status Moves'];
 const AI_FLAG_OPTIONS = [
     '__GROUP_CORE__',
     'Check Bad Move', 'Try To Faint', 'Check Viability',
