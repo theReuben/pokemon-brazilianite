@@ -247,33 +247,112 @@ function buildRegistry() {
     // Track which trainer IDs have been assigned to NPCs
     const trainerIdToNpcId = {};
 
-    // 1) Trainer NPCs: group by Name + Class
-    const trainerGroups = {}; // "class|name" → [trainers]
+    // ── Grunt detection helpers ────────────────────────────────────────────
+    // Grunts are merged by team + gender into collective NPCs.
+    // Detection: Name == "GRUNT" with Class starting with "Team Aqua"/"Team Magma"/"Team Rocket"
+    // Gender determined from Pic field (e.g., "Aqua Grunt M" → M, "Magma Grunt F" → F)
+
+    const GRUNT_GRAPHICS_TO_TEAM_GENDER = {
+        'aqua_member_m': 'team_aqua_grunt_m',
+        'aqua_member_f': 'team_aqua_grunt_f',
+        'magma_member_m': 'team_magma_grunt_m',
+        'magma_member_f': 'team_magma_grunt_f',
+        'rocket_m': 'team_rocket_grunt_m',
+        'rocket_f': 'team_rocket_grunt_f',
+    };
+
+    function detectGruntGender(trainer) {
+        const pic = (trainer.pic || '').toLowerCase();
+        if (pic.includes('grunt f') || pic.includes('admin')) return 'f';
+        return 'm'; // default to male
+    }
+
+    function isGruntTrainer(trainer) {
+        const name = (trainer.name || '').trim().toUpperCase();
+        const cls = (trainer.class || '').trim().toLowerCase();
+        return name === 'GRUNT' && (
+            cls.startsWith('team aqua') ||
+            cls.startsWith('team magma') ||
+            cls.startsWith('team rocket')
+        );
+    }
+
+    function gruntTeamKey(trainer) {
+        const cls = (trainer.class || '').trim().toLowerCase();
+        if (cls.startsWith('team aqua')) return 'team_aqua';
+        if (cls.startsWith('team magma')) return 'team_magma';
+        if (cls.startsWith('team rocket')) return 'team_rocket';
+        return null;
+    }
+
+    function isGruntGraphicsId(gfxShort) {
+        return gfxShort in GRUNT_GRAPHICS_TO_TEAM_GENDER;
+    }
+
+    // 1) Trainer NPCs: group by Name + Class, with grunt special handling
+    const trainerGroups = {}; // "class|name" → [trainers]  OR  for grunts: "team_X_grunt_G" → [trainers]
     for (const t of allTrainers) {
         const name = (t.name || '').trim();
         const cls = (t.class || 'PkMn Trainer').trim();
         if (!name) continue;
-        const key = `${cls}|${name}`;
-        if (!trainerGroups[key]) trainerGroups[key] = [];
-        trainerGroups[key].push(t);
+
+        if (isGruntTrainer(t)) {
+            // Group grunts by team + gender
+            const team = gruntTeamKey(t);
+            const gender = detectGruntGender(t);
+            const key = `${team}_grunt_${gender}`;
+            if (!trainerGroups[key]) trainerGroups[key] = [];
+            trainerGroups[key].push(t);
+        } else {
+            const key = `${cls}|${name}`;
+            if (!trainerGroups[key]) trainerGroups[key] = [];
+            trainerGroups[key].push(t);
+        }
     }
 
-    for (const [key, trainers] of Object.entries(trainerGroups)) {
-        const [cls, name] = key.split('|');
-        const npcId = sanitizeId(`${cls}_${name}`);
+    // Pre-build the grunt NPC entries so non-trainer grunt appearances can merge into them
+    const gruntNpcIds = new Set();
 
-        // Find the sprite set from the first object_event that references any of these trainers
-        let spriteSet = null;
-        for (const evt of objectEvents) {
-            if (evt._trainerIds.some(tid => trainers.some(t => t.id === tid))) {
-                spriteSet = graphicsIdShort(evt.graphics_id);
-                break;
+    for (const [key, trainers] of Object.entries(trainerGroups)) {
+        let npcId, displayName, cls, spriteSet;
+
+        const gruntMatch = key.match(/^(team_\w+)_grunt_(m|f)$/);
+        if (gruntMatch) {
+            // Grunt collective NPC
+            npcId = key; // e.g., "team_aqua_grunt_m"
+            const teamName = gruntMatch[1].replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+            const genderLabel = gruntMatch[2] === 'f' ? 'F' : 'M';
+            displayName = `Grunt (${genderLabel})`;
+            cls = teamName;
+            gruntNpcIds.add(npcId);
+
+            // Determine sprite set from the grunt graphics mapping
+            const expectedGfx = key.replace('team_', '').replace('grunt_', 'member_')
+                .replace('rocket_member_', 'rocket_');
+            spriteSet = Object.keys(GRUNT_GRAPHICS_TO_TEAM_GENDER).find(
+                k => GRUNT_GRAPHICS_TO_TEAM_GENDER[k] === key
+            ) || null;
+        } else {
+            // Normal trainer grouping: "class|name"
+            const parts = key.split('|');
+            cls = parts[0];
+            const name = parts[1];
+            npcId = sanitizeId(`${cls}_${name}`);
+            displayName = titleCase(name);
+
+            // Find the sprite set from the first object_event that references any of these trainers
+            spriteSet = null;
+            for (const evt of objectEvents) {
+                if (evt._trainerIds.some(tid => trainers.some(t => t.id === tid))) {
+                    spriteSet = graphicsIdShort(evt.graphics_id);
+                    break;
+                }
             }
         }
 
         npcs[npcId] = {
             id: npcId,
-            name: titleCase(name),
+            name: displayName,
             class: cls,
             sprite_set: spriteSet,
             sprite_overrides: {},
@@ -296,7 +375,10 @@ function buildRegistry() {
     }
 
     // Detect rematch trainer IDs (e.g., TRAINER_TRENT_2 → rematch of TRAINER_TRENT_1)
+    // Skip grunts: their numeric suffixes denote different individuals, not rematches
     for (const [battleId, battle] of Object.entries(battles)) {
+        if (gruntNpcIds.has(battle.npc_id)) continue;
+
         const baseMatch = battle.trainer_id.match(/^(TRAINER_\w+?)_(\d+)$/);
         if (baseMatch) {
             const baseTrainer = baseMatch[1];
@@ -327,6 +409,8 @@ function buildRegistry() {
     // Build a lookup of trainer names (lowercase) to NPC IDs for name-matching
     const trainerNameToNpcId = {}; // lowercase name -> npcId
     for (const [key, trainers] of Object.entries(trainerGroups)) {
+        // Skip grunt collective keys (they don't have '|' separator)
+        if (!key.includes('|')) continue;
         const [cls, name] = key.split('|');
         const npcId = sanitizeId(`${cls}_${name}`);
         trainerNameToNpcId[name.toLowerCase()] = npcId;
@@ -334,9 +418,18 @@ function buildRegistry() {
 
     // 2) Non-trainer NPCs: group by (graphics_id_short, script_stem)
     //    But first check if a script stem matches a known trainer name
+    //    Also merge grunt map appearances into collective grunt NPCs
     const nonTrainerGroups = {}; // "gfx_short|stem" -> [events]
     for (const evt of objectEvents) {
         if (evt._trainerIds.length > 0) continue; // Already handled as trainer
+        const gfxShort = graphicsIdShort(evt.graphics_id);
+
+        // Merge non-trainer grunt appearances into collective grunt NPCs
+        if (isGruntGraphicsId(gfxShort)) {
+            evt._npcId = GRUNT_GRAPHICS_TO_TEAM_GENDER[gfxShort];
+            continue;
+        }
+
         const stem = extractScriptStem(evt.script);
 
         // Check if this non-trainer event's script stem matches a trainer name
@@ -345,7 +438,6 @@ function buildRegistry() {
             continue;
         }
 
-        const gfxShort = graphicsIdShort(evt.graphics_id);
         const key = stem ? `${gfxShort}|${stem}` : `${gfxShort}|_anonymous_${evt._mapFolder}_${evt.x}_${evt.y}`;
         if (!nonTrainerGroups[key]) nonTrainerGroups[key] = [];
         nonTrainerGroups[key].push(evt);

@@ -1985,9 +1985,9 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "team_aqua_grunt": {
-      "id": "team_aqua_grunt",
-      "name": "Grunt",
+    "team_aqua_grunt_m": {
+      "id": "team_aqua_grunt_m",
+      "name": "Grunt (M)",
       "class": "Team Aqua",
       "sprite_set": "aqua_member_m",
       "sprite_overrides": {},
@@ -2025,6 +2025,14 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "team_aqua_grunt_f": {
+      "id": "team_aqua_grunt_f",
+      "name": "Grunt (F)",
+      "class": "Team Aqua",
+      "sprite_set": "aqua_member_f",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "swimmer_m_declan": {
       "id": "swimmer_m_declan",
       "name": "Declan",
@@ -2033,9 +2041,9 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "team_magma_grunt": {
-      "id": "team_magma_grunt",
-      "name": "Grunt",
+    "team_magma_grunt_m": {
+      "id": "team_magma_grunt_m",
+      "name": "Grunt (M)",
       "class": "Team Magma",
       "sprite_set": "magma_member_m",
       "sprite_overrides": {},
@@ -2590,6 +2598,14 @@
       "name": "Mark",
       "class": "Pokemaniac",
       "sprite_set": "maniac",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "team_magma_grunt_f": {
+      "id": "team_magma_grunt_f",
+      "name": "Grunt (F)",
+      "class": "Team Magma",
+      "sprite_set": "magma_member_f",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -7641,10 +7657,10 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "team_rocket_frlg_grunt": {
-      "id": "team_rocket_frlg_grunt",
-      "name": "Grunt",
-      "class": "Team Rocket Frlg",
+    "team_rocket_grunt_m": {
+      "id": "team_rocket_grunt_m",
+      "name": "Grunt (M)",
+      "class": "Team Rocket",
       "sprite_set": "rocket_m",
       "sprite_overrides": {},
       "notes": ""
@@ -8286,6 +8302,14 @@
       "name": "Prof. Oak",
       "class": "Pkmn Prof Frlg",
       "sprite_set": null,
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "team_rocket_grunt_f": {
+      "id": "team_rocket_grunt_f",
+      "name": "Grunt (F)",
+      "class": "Team Rocket",
+      "sprite_set": "rocket_f",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -9062,22 +9086,6 @@
       "name": "Registeel",
       "class": "Registeel",
       "sprite_set": "registeel",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_hideoutentrancegrunt1": {
-      "id": "aqua_member_m_hideoutentrancegrunt1",
-      "name": "HideoutEntranceGrunt1",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_hideoutentrancegrunt2": {
-      "id": "aqua_member_m_hideoutentrancegrunt2",
-      "name": "HideoutEntranceGrunt2",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -11465,14 +11473,6 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "rocket_m_rocketgrunt1": {
-      "id": "rocket_m_rocketgrunt1",
-      "name": "RocketGrunt1",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "fat_man_frlg_fatman": {
       "id": "fat_man_frlg_fatman",
       "name": "FatMan",
@@ -11510,14 +11510,6 @@
       "name": "SoftboiledTutor",
       "class": "Old Man 2",
       "sprite_set": "old_man_2",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "rocket_m_rocketgrunt2": {
-      "id": "rocket_m_rocketgrunt2",
-      "name": "RocketGrunt2",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -11726,22 +11718,6 @@
       "name": "RocketChief",
       "class": "Old Man 2",
       "sprite_set": "old_man_2",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "rocket_m_rocket1": {
-      "id": "rocket_m_rocket1",
-      "name": "Rocket1",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "rocket_m_rocket2": {
-      "id": "rocket_m_rocket2",
-      "name": "Rocket2",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -12881,30 +12857,6 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "rocket_m_anonymous_fourisland_icefallcave_back_frlg_11_14": {
-      "id": "rocket_m_anonymous_fourisland_icefallcave_back_frlg_11_14",
-      "name": "Rocket M",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "rocket_m_anonymous_fourisland_icefallcave_back_frlg_13_14": {
-      "id": "rocket_m_anonymous_fourisland_icefallcave_back_frlg_13_14",
-      "name": "Rocket M",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "rocket_m_anonymous_fourisland_icefallcave_back_frlg_10_15": {
-      "id": "rocket_m_anonymous_fourisland_icefallcave_back_frlg_10_15",
-      "name": "Rocket M",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "wigglytuff_doll": {
       "id": "wigglytuff_doll",
       "name": "Doll",
@@ -13305,14 +13257,6 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "magma_member_m_magmahideoutguard": {
-      "id": "magma_member_m_magmahideoutguard",
-      "name": "MagmaHideoutGuard",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "hot_springs_old_woman_hotspringsoldwoman1": {
       "id": "hot_springs_old_woman_hotspringsoldwoman1",
       "name": "HotSpringsOldWoman1",
@@ -13454,46 +13398,6 @@
       "name": "ExpertM2",
       "class": "Expert M",
       "sprite_set": "expert_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_wailmertrainergrunt": {
-      "id": "aqua_member_m_wailmertrainergrunt",
-      "name": "WailmerTrainerGrunt",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_aquagrunt4": {
-      "id": "aqua_member_m_aquagrunt4",
-      "name": "AquaGrunt4",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_aquagrunt1": {
-      "id": "aqua_member_m_aquagrunt1",
-      "name": "AquaGrunt1",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_aquagrunt2": {
-      "id": "aqua_member_m_aquagrunt2",
-      "name": "AquaGrunt2",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_aquagrunt3": {
-      "id": "aqua_member_m_aquagrunt3",
-      "name": "AquaGrunt3",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -14713,43 +14617,11 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "magma_member_m_anonymous_meteorfalls_1f_1r_12_20": {
-      "id": "magma_member_m_anonymous_meteorfalls_1f_1r_12_20",
-      "name": "Magma Member M",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_anonymous_meteorfalls_1f_1r_14_21": {
-      "id": "magma_member_m_anonymous_meteorfalls_1f_1r_14_21",
-      "name": "Magma Member M",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "archie_anonymous_meteorfalls_1f_1r_6_20": {
       "id": "archie_anonymous_meteorfalls_1f_1r_6_20",
       "name": "Archie",
       "class": "Archie",
       "sprite_set": "archie",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_anonymous_meteorfalls_1f_1r_6_20": {
-      "id": "aqua_member_m_anonymous_meteorfalls_1f_1r_6_20",
-      "name": "Aqua Member M",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_anonymous_meteorfalls_1f_1r_6_21": {
-      "id": "aqua_member_m_anonymous_meteorfalls_1f_1r_6_21",
-      "name": "Aqua Member M",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -14798,38 +14670,6 @@
       "name": "KingsRockBoy",
       "class": "Boy 2",
       "sprite_set": "boy_2",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_anonymous_mossdeepcity_44_23": {
-      "id": "magma_member_m_anonymous_mossdeepcity_44_23",
-      "name": "Magma Member M",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_anonymous_mossdeepcity_44_24": {
-      "id": "magma_member_m_anonymous_mossdeepcity_44_24",
-      "name": "Magma Member M",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_anonymous_mossdeepcity_44_25": {
-      "id": "magma_member_m_anonymous_mossdeepcity_44_25",
-      "name": "Magma Member M",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_anonymous_mossdeepcity_44_26": {
-      "id": "magma_member_m_anonymous_mossdeepcity_44_26",
-      "name": "Magma Member M",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -15081,43 +14921,11 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "magma_member_m_grunt2": {
-      "id": "magma_member_m_grunt2",
-      "name": "Grunt2",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "ninja_boy_magmanote": {
       "id": "ninja_boy_magmanote",
       "name": "MagmaNote",
       "class": "Ninja Boy",
       "sprite_set": "ninja_boy",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_grunt6": {
-      "id": "magma_member_m_grunt6",
-      "name": "Grunt6",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_grunt5": {
-      "id": "magma_member_m_grunt5",
-      "name": "Grunt5",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_grunt7": {
-      "id": "magma_member_m_grunt7",
-      "name": "Grunt7",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -15129,59 +14937,11 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "magma_member_m_busymagmagrunt5": {
-      "id": "magma_member_m_busymagmagrunt5",
-      "name": "BusyMagmaGrunt5",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_busymagmagrunt4": {
-      "id": "magma_member_m_busymagmagrunt4",
-      "name": "BusyMagmaGrunt4",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_busyaquagrunt2": {
-      "id": "aqua_member_m_busyaquagrunt2",
-      "name": "BusyAquaGrunt2",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_busyaquagrunt1": {
-      "id": "aqua_member_m_busyaquagrunt1",
-      "name": "BusyAquaGrunt1",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_busyaquagrunt3": {
-      "id": "aqua_member_m_busyaquagrunt3",
-      "name": "BusyAquaGrunt3",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "old_woman_lavacookielady": {
       "id": "old_woman_lavacookielady",
       "name": "LavaCookieLady",
       "class": "Old Woman",
       "sprite_set": "old_woman",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_busymagmagrunt6": {
-      "id": "magma_member_m_busymagmagrunt6",
-      "name": "BusyMagmaGrunt6",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -15198,30 +14958,6 @@
       "name": "MagmaPoochyena",
       "class": "Poochyena",
       "sprite_set": "poochyena",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_busymagmagrunt2": {
-      "id": "magma_member_m_busymagmagrunt2",
-      "name": "BusyMagmaGrunt2",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_busymagmagrunt3": {
-      "id": "magma_member_m_busymagmagrunt3",
-      "name": "BusyMagmaGrunt3",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_busymagmagrunt1": {
-      "id": "magma_member_m_busymagmagrunt1",
-      "name": "BusyMagmaGrunt1",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -15246,22 +14982,6 @@
       "name": "ExplosionTutor",
       "class": "Hiker Frlg",
       "sprite_set": "hiker_frlg",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "rocket_m_grunt1": {
-      "id": "rocket_m_grunt1",
-      "name": "Grunt1",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "rocket_m_grunt2": {
-      "id": "rocket_m_grunt2",
-      "name": "Grunt2",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -16225,14 +15945,6 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "aqua_member_m_anonymous_petalburgwoods_26_17": {
-      "id": "aqua_member_m_anonymous_petalburgwoods_26_17",
-      "name": "Aqua Member M",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "man_2_anonymous_petalburgwoods_26_20": {
       "id": "man_2_anonymous_petalburgwoods_26_20",
       "name": "Man 2",
@@ -16793,14 +16505,6 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "aqua_member_m_anonymous_route110_8_82": {
-      "id": "aqua_member_m_anonymous_route110_8_82",
-      "name": "Aqua Member M",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "var_0_anonymous_route110_34_54": {
       "id": "var_0_anonymous_route110_34_54",
       "name": "Var 0",
@@ -17209,14 +16913,6 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "magma_member_m_magmagrunts": {
-      "id": "magma_member_m_magmagrunts",
-      "name": "MagmaGrunts",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "cable_car_anonymous_route112_cablecarstation_6_3": {
       "id": "cable_car_anonymous_route112_cablecarstation_6_3",
       "name": "Cable Car",
@@ -17537,22 +17233,6 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "aqua_member_m_bridgeaquagrunt1": {
-      "id": "aqua_member_m_bridgeaquagrunt1",
-      "name": "BridgeAquaGrunt1",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_bridgeaquagrunt2": {
-      "id": "aqua_member_m_bridgeaquagrunt2",
-      "name": "BridgeAquaGrunt2",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "var_3_anonymous_route119_17_33": {
       "id": "var_3_anonymous_route119_17_33",
       "name": "Var 3",
@@ -17638,14 +17318,6 @@
       "name": "Man 4",
       "class": "Man 4",
       "sprite_set": "man_4",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_anonymous_route119_weatherinstitute_2f_16_6": {
-      "id": "aqua_member_m_anonymous_route119_weatherinstitute_2f_16_6",
-      "name": "Aqua Member M",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -17758,30 +17430,6 @@
       "name": "Kecleon4",
       "class": "Kecleon",
       "sprite_set": "kecleon",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_anonymous_route121_30_8": {
-      "id": "aqua_member_m_anonymous_route121_30_8",
-      "name": "Aqua Member M",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_anonymous_route121_30_7": {
-      "id": "aqua_member_m_anonymous_route121_30_7",
-      "name": "Aqua Member M",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_anonymous_route121_31_7": {
-      "id": "aqua_member_m_anonymous_route121_31_7",
-      "name": "Aqua Member M",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -18369,14 +18017,6 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "aqua_member_m_anonymous_rustborocity_13_21": {
-      "id": "aqua_member_m_anonymous_rustborocity_13_21",
-      "name": "Aqua Member M",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "devon_employee_devonemployee2": {
       "id": "devon_employee_devonemployee2",
       "name": "DevonEmployee2",
@@ -18937,54 +18577,6 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "rocket_m_rocketgrunt3": {
-      "id": "rocket_m_rocketgrunt3",
-      "name": "RocketGrunt3",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "rocket_m_rocketgrunt4": {
-      "id": "rocket_m_rocketgrunt4",
-      "name": "RocketGrunt4",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "rocket_m_rocketgrunt5": {
-      "id": "rocket_m_rocketgrunt5",
-      "name": "RocketGrunt5",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "rocket_m_doorguardgrunt": {
-      "id": "rocket_m_doorguardgrunt",
-      "name": "DoorGuardGrunt",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "rocket_m_rocketgrunt7": {
-      "id": "rocket_m_rocketgrunt7",
-      "name": "RocketGrunt7",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "rocket_m_rocketgrunt6": {
-      "id": "rocket_m_rocketgrunt6",
-      "name": "RocketGrunt6",
-      "class": "Rocket M",
-      "sprite_set": "rocket_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "pidgeot_pidgeot": {
       "id": "pidgeot_pidgeot",
       "name": "Pidgeot",
@@ -19342,22 +18934,6 @@
       "name": "Maxie",
       "class": "Maxie",
       "sprite_set": "maxie",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_m_anonymous_seafloorcavern_room9_8_41": {
-      "id": "magma_member_m_anonymous_seafloorcavern_room9_8_41",
-      "name": "Magma Member M",
-      "class": "Magma Member M",
-      "sprite_set": "magma_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "magma_member_f_anonymous_seafloorcavern_room9_8_42": {
-      "id": "magma_member_f_anonymous_seafloorcavern_room9_8_42",
-      "name": "Magma Member F",
-      "class": "Magma Member F",
-      "sprite_set": "magma_member_f",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -22649,14 +22225,6 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "aqua_member_f_aquagrunt1": {
-      "id": "aqua_member_f_aquagrunt1",
-      "name": "AquaGrunt1",
-      "class": "Aqua Member F",
-      "sprite_set": "aqua_member_f",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "cameraman_ty": {
       "id": "cameraman_ty",
       "name": "Ty",
@@ -22737,62 +22305,6 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "aqua_member_m_aquagrunt5": {
-      "id": "aqua_member_m_aquagrunt5",
-      "name": "AquaGrunt5",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_aquagrunt6": {
-      "id": "aqua_member_m_aquagrunt6",
-      "name": "AquaGrunt6",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_aquagrunt7": {
-      "id": "aqua_member_m_aquagrunt7",
-      "name": "AquaGrunt7",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_aquagrunt8": {
-      "id": "aqua_member_m_aquagrunt8",
-      "name": "AquaGrunt8",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_aquagrunt9": {
-      "id": "aqua_member_m_aquagrunt9",
-      "name": "AquaGrunt9",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_aquagrunt10": {
-      "id": "aqua_member_m_aquagrunt10",
-      "name": "AquaGrunt10",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_aquagrunt11": {
-      "id": "aqua_member_m_aquagrunt11",
-      "name": "AquaGrunt11",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "pokefan_f_berrypowderclerk": {
       "id": "pokefan_f_berrypowderclerk",
       "name": "BerryPowderClerk",
@@ -22865,14 +22377,6 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "aqua_member_m_anonymous_slateportcity_harbor_7_10": {
-      "id": "aqua_member_m_anonymous_slateportcity_harbor_7_10",
-      "name": "Aqua Member M",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "archie_anonymous_slateportcity_harbor_8_10": {
       "id": "archie_anonymous_slateportcity_harbor_8_10",
       "name": "Archie",
@@ -22902,54 +22406,6 @@
       "name": "EntranceAttendant",
       "class": "Beauty",
       "sprite_set": "beauty",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_museumgrunt3": {
-      "id": "aqua_member_m_museumgrunt3",
-      "name": "MuseumGrunt3",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_museumgrunt4": {
-      "id": "aqua_member_m_museumgrunt4",
-      "name": "MuseumGrunt4",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_museumgrunt2": {
-      "id": "aqua_member_m_museumgrunt2",
-      "name": "MuseumGrunt2",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_f_museumgrunt1": {
-      "id": "aqua_member_f_museumgrunt1",
-      "name": "MuseumGrunt1",
-      "class": "Aqua Member F",
-      "sprite_set": "aqua_member_f",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_museumgrunt5": {
-      "id": "aqua_member_m_museumgrunt5",
-      "name": "MuseumGrunt5",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_museumgrunt6": {
-      "id": "aqua_member_m_museumgrunt6",
-      "name": "MuseumGrunt6",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -22985,27 +22441,11 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "aqua_member_m_familiargrunt": {
-      "id": "aqua_member_m_familiargrunt",
-      "name": "FamiliarGrunt",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
-      "sprite_overrides": {},
-      "notes": ""
-    },
     "archie_anonymous_slateportcity_oceanicmuseum_2f_6_1": {
       "id": "archie_anonymous_slateportcity_oceanicmuseum_2f_6_1",
       "name": "Archie",
       "class": "Archie",
       "sprite_set": "archie",
-      "sprite_overrides": {},
-      "notes": ""
-    },
-    "aqua_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1": {
-      "id": "aqua_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1",
-      "name": "Aqua Member M",
-      "class": "Aqua Member M",
-      "sprite_set": "aqua_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -24431,9 +23871,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_REGISTEEL"
     },
-    "aqua_member_m_hideoutentrancegrunt1_aquahideout_1f": {
-      "id": "aqua_member_m_hideoutentrancegrunt1_aquahideout_1f",
-      "npc_id": "aqua_member_m_hideoutentrancegrunt1",
+    "team_aqua_grunt_m_aquahideout_1f": {
+      "id": "team_aqua_grunt_m_aquahideout_1f",
+      "npc_id": "team_aqua_grunt_m",
       "map": "AquaHideout_1F",
       "map_id": "MAP_AQUA_HIDEOUT_1F",
       "script": "AquaHideout_1F_EventScript_HideoutEntranceGrunt1",
@@ -24451,9 +23891,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_1F_GRUNT_1_BLOCKING_ENTRANCE"
     },
-    "aqua_member_m_hideoutentrancegrunt2_aquahideout_1f": {
-      "id": "aqua_member_m_hideoutentrancegrunt2_aquahideout_1f",
-      "npc_id": "aqua_member_m_hideoutentrancegrunt2",
+    "team_aqua_grunt_m_aquahideout_1f_2": {
+      "id": "team_aqua_grunt_m_aquahideout_1f_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "AquaHideout_1F",
       "map_id": "MAP_AQUA_HIDEOUT_1F",
       "script": "AquaHideout_1F_EventScript_HideoutEntranceGrunt2",
@@ -24471,9 +23911,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_1F_GRUNT_2_BLOCKING_ENTRANCE"
     },
-    "team_aqua_grunt_aquahideout_1f": {
-      "id": "team_aqua_grunt_aquahideout_1f",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_aquahideout_1f_3": {
+      "id": "team_aqua_grunt_m_aquahideout_1f_3",
+      "npc_id": "team_aqua_grunt_m",
       "map": "AquaHideout_1F",
       "map_id": "MAP_AQUA_HIDEOUT_1F",
       "script": "AquaHideout_1F_EventScript_Grunt1",
@@ -24491,9 +23931,9 @@
       "battle_id": "trainer_grunt_aqua_hideout_1",
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
     },
-    "team_aqua_grunt_aquahideout_b1f": {
-      "id": "team_aqua_grunt_aquahideout_b1f",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_aquahideout_b1f": {
+      "id": "team_aqua_grunt_m_aquahideout_b1f",
+      "npc_id": "team_aqua_grunt_m",
       "map": "AquaHideout_B1F",
       "map_id": "MAP_AQUA_HIDEOUT_B1F",
       "script": "AquaHideout_B1F_EventScript_Grunt2",
@@ -24508,12 +23948,12 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_aqua_hideout_2",
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
     },
-    "team_aqua_grunt_aquahideout_b1f_2": {
-      "id": "team_aqua_grunt_aquahideout_b1f_2",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_aquahideout_b1f_2": {
+      "id": "team_aqua_grunt_m_aquahideout_b1f_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "AquaHideout_B1F",
       "map_id": "MAP_AQUA_HIDEOUT_B1F",
       "script": "AquaHideout_B1F_EventScript_Grunt3",
@@ -24528,12 +23968,12 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_aqua_hideout_3",
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
     },
-    "team_aqua_grunt_aquahideout_b1f_3": {
-      "id": "team_aqua_grunt_aquahideout_b1f_3",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_f_aquahideout_b1f": {
+      "id": "team_aqua_grunt_f_aquahideout_b1f",
+      "npc_id": "team_aqua_grunt_f",
       "map": "AquaHideout_B1F",
       "map_id": "MAP_AQUA_HIDEOUT_B1F",
       "script": "AquaHideout_B1F_EventScript_Grunt5",
@@ -24548,12 +23988,12 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_aqua_hideout_5",
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
     },
-    "team_aqua_grunt_aquahideout_b1f_4": {
-      "id": "team_aqua_grunt_aquahideout_b1f_4",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_f_aquahideout_b1f_2": {
+      "id": "team_aqua_grunt_f_aquahideout_b1f_2",
+      "npc_id": "team_aqua_grunt_f",
       "map": "AquaHideout_B1F",
       "map_id": "MAP_AQUA_HIDEOUT_B1F",
       "script": "AquaHideout_B1F_EventScript_Grunt7",
@@ -24568,7 +24008,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_aqua_hideout_7",
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
     },
     "aqua_admin_matt_aquahideout_b2f": {
@@ -24591,9 +24031,9 @@
       "battle_id": "trainer_matt",
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
     },
-    "team_aqua_grunt_aquahideout_b2f": {
-      "id": "team_aqua_grunt_aquahideout_b2f",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_aquahideout_b2f": {
+      "id": "team_aqua_grunt_m_aquahideout_b2f",
+      "npc_id": "team_aqua_grunt_m",
       "map": "AquaHideout_B2F",
       "map_id": "MAP_AQUA_HIDEOUT_B2F",
       "script": "AquaHideout_B2F_EventScript_Grunt4",
@@ -24608,7 +24048,7 @@
         "y": 3
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_aqua_hideout_4",
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
     },
     "submarine_shadow_anonymous_aquahideout_b2f_19_20_aquahideout_b2f": {
@@ -24631,9 +24071,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_B2F_SUBMARINE_SHADOW"
     },
-    "team_aqua_grunt_aquahideout_b2f_2": {
-      "id": "team_aqua_grunt_aquahideout_b2f_2",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_f_aquahideout_b2f": {
+      "id": "team_aqua_grunt_f_aquahideout_b2f",
+      "npc_id": "team_aqua_grunt_f",
       "map": "AquaHideout_B2F",
       "map_id": "MAP_AQUA_HIDEOUT_B2F",
       "script": "AquaHideout_B2F_EventScript_Grunt6",
@@ -24648,12 +24088,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_aqua_hideout_6",
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
     },
-    "team_aqua_grunt_aquahideout_b2f_3": {
-      "id": "team_aqua_grunt_aquahideout_b2f_3",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_aquahideout_b2f_2": {
+      "id": "team_aqua_grunt_m_aquahideout_b2f_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "AquaHideout_B2F",
       "map_id": "MAP_AQUA_HIDEOUT_B2F",
       "script": "AquaHideout_B2F_EventScript_Grunt8",
@@ -24668,7 +24108,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_aqua_hideout_8",
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
     },
     "link_receptionist_attendant_battlecolosseum_2p": {
@@ -31691,9 +31131,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "rocket_m_rocketgrunt1_celadoncity_frlg": {
-      "id": "rocket_m_rocketgrunt1_celadoncity_frlg",
-      "npc_id": "rocket_m_rocketgrunt1",
+    "team_rocket_grunt_m_celadoncity_frlg": {
+      "id": "team_rocket_grunt_m_celadoncity_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "CeladonCity_Frlg",
       "map_id": "MAP_CELADON_CITY",
       "script": "CeladonCity_EventScript_RocketGrunt1",
@@ -31831,9 +31271,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "rocket_m_rocketgrunt2_celadoncity_frlg": {
-      "id": "rocket_m_rocketgrunt2_celadoncity_frlg",
-      "npc_id": "rocket_m_rocketgrunt2",
+    "team_rocket_grunt_m_celadoncity_frlg_2": {
+      "id": "team_rocket_grunt_m_celadoncity_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "CeladonCity_Frlg",
       "map_id": "MAP_CELADON_CITY",
       "script": "CeladonCity_EventScript_RocketGrunt2",
@@ -32170,9 +31610,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_rocket_frlg_grunt_celadoncity_gamecorner_frlg": {
-      "id": "team_rocket_frlg_grunt_celadoncity_gamecorner_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_celadoncity_gamecorner_frlg": {
+      "id": "team_rocket_grunt_m_celadoncity_gamecorner_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "CeladonCity_GameCorner_Frlg",
       "map_id": "MAP_CELADON_CITY_GAME_CORNER",
       "script": "CeladonCity_GameCorner_EventScript_RocketGrunt",
@@ -32610,9 +32050,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "rocket_m_rocket1_celadoncity_house1_frlg": {
-      "id": "rocket_m_rocket1_celadoncity_house1_frlg",
-      "npc_id": "rocket_m_rocket1",
+    "team_rocket_grunt_m_celadoncity_house1_frlg": {
+      "id": "team_rocket_grunt_m_celadoncity_house1_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "CeladonCity_House1_Frlg",
       "map_id": "MAP_CELADON_CITY_HOUSE1",
       "script": "CeladonCity_House1_EventScript_Rocket1",
@@ -32630,9 +32070,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "rocket_m_rocket2_celadoncity_house1_frlg": {
-      "id": "rocket_m_rocket2_celadoncity_house1_frlg",
-      "npc_id": "rocket_m_rocket2",
+    "team_rocket_grunt_m_celadoncity_house1_frlg_2": {
+      "id": "team_rocket_grunt_m_celadoncity_house1_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "CeladonCity_House1_Frlg",
       "map_id": "MAP_CELADON_CITY_HOUSE1",
       "script": "CeladonCity_House1_EventScript_Rocket2",
@@ -33510,9 +32950,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_rocket_frlg_grunt_ceruleancity_frlg": {
-      "id": "team_rocket_frlg_grunt_ceruleancity_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_ceruleancity_frlg": {
+      "id": "team_rocket_grunt_m_ceruleancity_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "CeruleanCity_Frlg",
       "map_id": "MAP_CERULEAN_CITY",
       "script": "CeruleanCity_EventScript_Grunt",
@@ -37408,9 +36848,9 @@
       "battle_id": "trainer_psychic_laura",
       "flag": "0"
     },
-    "team_rocket_frlg_grunt_fiveisland_meadow_frlg": {
-      "id": "team_rocket_frlg_grunt_fiveisland_meadow_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_f_fiveisland_meadow_frlg": {
+      "id": "team_rocket_grunt_f_fiveisland_meadow_frlg",
+      "npc_id": "team_rocket_grunt_f",
       "map": "FiveIsland_Meadow_Frlg",
       "map_id": "MAP_FIVE_ISLAND_MEADOW",
       "script": "FiveIsland_Meadow_EventScript_Rocket3",
@@ -37428,9 +36868,9 @@
       "battle_id": "trainer_team_rocket_grunt_51",
       "flag": "FLAG_HIDE_FIVE_ISLAND_ROCKETS"
     },
-    "team_rocket_frlg_grunt_fiveisland_meadow_frlg_2": {
-      "id": "team_rocket_frlg_grunt_fiveisland_meadow_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_fiveisland_meadow_frlg": {
+      "id": "team_rocket_grunt_m_fiveisland_meadow_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "FiveIsland_Meadow_Frlg",
       "map_id": "MAP_FIVE_ISLAND_MEADOW",
       "script": "FiveIsland_Meadow_EventScript_Rocket1",
@@ -37448,9 +36888,9 @@
       "battle_id": "trainer_team_rocket_grunt_49",
       "flag": "FLAG_HIDE_FIVE_ISLAND_ROCKETS"
     },
-    "team_rocket_frlg_grunt_fiveisland_meadow_frlg_3": {
-      "id": "team_rocket_frlg_grunt_fiveisland_meadow_frlg_3",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_fiveisland_meadow_frlg_2": {
+      "id": "team_rocket_grunt_m_fiveisland_meadow_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "FiveIsland_Meadow_Frlg",
       "map_id": "MAP_FIVE_ISLAND_MEADOW",
       "script": "FiveIsland_Meadow_EventScript_Rocket2",
@@ -37968,9 +37408,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SELPHYS_BUTLER"
     },
-    "team_rocket_frlg_grunt_fiveisland_rocketwarehouse_frlg": {
-      "id": "team_rocket_frlg_grunt_fiveisland_rocketwarehouse_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_fiveisland_rocketwarehouse_frlg": {
+      "id": "team_rocket_grunt_m_fiveisland_rocketwarehouse_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "FiveIsland_RocketWarehouse_Frlg",
       "map_id": "MAP_FIVE_ISLAND_ROCKET_WAREHOUSE",
       "script": "FiveIsland_RocketWarehouse_EventScript_Grunt2",
@@ -37988,9 +37428,9 @@
       "battle_id": "trainer_team_rocket_grunt_47",
       "flag": "FLAG_HIDE_FIVE_ISLAND_ROCKETS"
     },
-    "team_rocket_frlg_grunt_fiveisland_rocketwarehouse_frlg_2": {
-      "id": "team_rocket_frlg_grunt_fiveisland_rocketwarehouse_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_fiveisland_rocketwarehouse_frlg_2": {
+      "id": "team_rocket_grunt_m_fiveisland_rocketwarehouse_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "FiveIsland_RocketWarehouse_Frlg",
       "map_id": "MAP_FIVE_ISLAND_ROCKET_WAREHOUSE",
       "script": "FiveIsland_RocketWarehouse_EventScript_Grunt3",
@@ -38048,9 +37488,9 @@
       "battle_id": "trainer_team_rocket_admin_2",
       "flag": "FLAG_HIDE_FIVE_ISLAND_ROCKETS"
     },
-    "team_rocket_frlg_grunt_fiveisland_rocketwarehouse_frlg_3": {
-      "id": "team_rocket_frlg_grunt_fiveisland_rocketwarehouse_frlg_3",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_f_fiveisland_rocketwarehouse_frlg": {
+      "id": "team_rocket_grunt_f_fiveisland_rocketwarehouse_frlg",
+      "npc_id": "team_rocket_grunt_f",
       "map": "FiveIsland_RocketWarehouse_Frlg",
       "map_id": "MAP_FIVE_ISLAND_ROCKET_WAREHOUSE",
       "script": "FiveIsland_RocketWarehouse_EventScript_Grunt1",
@@ -39308,9 +38748,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "rocket_m_anonymous_fourisland_icefallcave_back_frlg_11_14_fourisland_icefallcave_back_frlg": {
-      "id": "rocket_m_anonymous_fourisland_icefallcave_back_frlg_11_14_fourisland_icefallcave_back_frlg",
-      "npc_id": "rocket_m_anonymous_fourisland_icefallcave_back_frlg_11_14",
+    "team_rocket_grunt_m_fourisland_icefallcave_back_frlg": {
+      "id": "team_rocket_grunt_m_fourisland_icefallcave_back_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "FourIsland_IcefallCave_Back_Frlg",
       "map_id": "MAP_FOUR_ISLAND_ICEFALL_CAVE_BACK",
       "script": "0x0",
@@ -39328,9 +38768,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ICEFALL_CAVE_ROCKETS"
     },
-    "rocket_m_anonymous_fourisland_icefallcave_back_frlg_13_14_fourisland_icefallcave_back_frlg": {
-      "id": "rocket_m_anonymous_fourisland_icefallcave_back_frlg_13_14_fourisland_icefallcave_back_frlg",
-      "npc_id": "rocket_m_anonymous_fourisland_icefallcave_back_frlg_13_14",
+    "team_rocket_grunt_m_fourisland_icefallcave_back_frlg_2": {
+      "id": "team_rocket_grunt_m_fourisland_icefallcave_back_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "FourIsland_IcefallCave_Back_Frlg",
       "map_id": "MAP_FOUR_ISLAND_ICEFALL_CAVE_BACK",
       "script": "0x0",
@@ -39368,9 +38808,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ICEFALL_CAVE_LORELEI"
     },
-    "rocket_m_anonymous_fourisland_icefallcave_back_frlg_10_15_fourisland_icefallcave_back_frlg": {
-      "id": "rocket_m_anonymous_fourisland_icefallcave_back_frlg_10_15_fourisland_icefallcave_back_frlg",
-      "npc_id": "rocket_m_anonymous_fourisland_icefallcave_back_frlg_10_15",
+    "team_rocket_grunt_m_fourisland_icefallcave_back_frlg_3": {
+      "id": "team_rocket_grunt_m_fourisland_icefallcave_back_frlg_3",
+      "npc_id": "team_rocket_grunt_m",
       "map": "FourIsland_IcefallCave_Back_Frlg",
       "map_id": "MAP_FOUR_ISLAND_ICEFALL_CAVE_BACK",
       "script": "0x0",
@@ -41508,9 +40948,9 @@
       "battle_id": "trainer_diana_1",
       "flag": "0"
     },
-    "magma_member_m_magmahideoutguard_jaggedpass": {
-      "id": "magma_member_m_magmahideoutguard_jaggedpass",
-      "npc_id": "magma_member_m_magmahideoutguard",
+    "team_magma_grunt_m_jaggedpass": {
+      "id": "team_magma_grunt_m_jaggedpass",
+      "npc_id": "team_magma_grunt_m",
       "map": "JaggedPass",
       "map_id": "MAP_JAGGED_PASS",
       "script": "JaggedPass_EventScript_MagmaHideoutGuard",
@@ -42968,9 +42408,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "aqua_member_m_wailmertrainergrunt_lilycovecity": {
-      "id": "aqua_member_m_wailmertrainergrunt_lilycovecity",
-      "npc_id": "aqua_member_m_wailmertrainergrunt",
+    "team_aqua_grunt_m_lilycovecity": {
+      "id": "team_aqua_grunt_m_lilycovecity",
+      "npc_id": "team_aqua_grunt_m",
       "map": "LilycoveCity",
       "map_id": "MAP_LILYCOVE_CITY",
       "script": "LilycoveCity_EventScript_WailmerTrainerGrunt",
@@ -42988,9 +42428,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS"
     },
-    "aqua_member_m_aquagrunt4_lilycovecity": {
-      "id": "aqua_member_m_aquagrunt4_lilycovecity",
-      "npc_id": "aqua_member_m_aquagrunt4",
+    "team_aqua_grunt_m_lilycovecity_2": {
+      "id": "team_aqua_grunt_m_lilycovecity_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "LilycoveCity",
       "map_id": "MAP_LILYCOVE_CITY",
       "script": "LilycoveCity_EventScript_AquaGrunt4",
@@ -43008,9 +42448,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS"
     },
-    "aqua_member_m_aquagrunt1_lilycovecity": {
-      "id": "aqua_member_m_aquagrunt1_lilycovecity",
-      "npc_id": "aqua_member_m_aquagrunt1",
+    "team_aqua_grunt_m_lilycovecity_3": {
+      "id": "team_aqua_grunt_m_lilycovecity_3",
+      "npc_id": "team_aqua_grunt_m",
       "map": "LilycoveCity",
       "map_id": "MAP_LILYCOVE_CITY",
       "script": "LilycoveCity_EventScript_AquaGrunt1",
@@ -43028,9 +42468,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS"
     },
-    "aqua_member_m_aquagrunt2_lilycovecity": {
-      "id": "aqua_member_m_aquagrunt2_lilycovecity",
-      "npc_id": "aqua_member_m_aquagrunt2",
+    "team_aqua_grunt_m_lilycovecity_4": {
+      "id": "team_aqua_grunt_m_lilycovecity_4",
+      "npc_id": "team_aqua_grunt_m",
       "map": "LilycoveCity",
       "map_id": "MAP_LILYCOVE_CITY",
       "script": "LilycoveCity_EventScript_AquaGrunt2",
@@ -43048,9 +42488,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS"
     },
-    "aqua_member_m_aquagrunt3_lilycovecity": {
-      "id": "aqua_member_m_aquagrunt3_lilycovecity",
-      "npc_id": "aqua_member_m_aquagrunt3",
+    "team_aqua_grunt_m_lilycovecity_5": {
+      "id": "team_aqua_grunt_m_lilycovecity_5",
+      "npc_id": "team_aqua_grunt_m",
       "map": "LilycoveCity",
       "map_id": "MAP_LILYCOVE_CITY",
       "script": "LilycoveCity_EventScript_AquaGrunt3",
@@ -47248,9 +46688,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL"
     },
-    "team_magma_grunt_magmahideout_1f": {
-      "id": "team_magma_grunt_magmahideout_1f",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_1f": {
+      "id": "team_magma_grunt_m_magmahideout_1f",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_1F",
       "map_id": "MAP_MAGMA_HIDEOUT_1F",
       "script": "MagmaHideout_1F_EventScript_Grunt1",
@@ -47268,9 +46708,9 @@
       "battle_id": "trainer_grunt_magma_hideout_1",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_1f_2": {
-      "id": "team_magma_grunt_magmahideout_1f_2",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_1f_2": {
+      "id": "team_magma_grunt_m_magmahideout_1f_2",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_1F",
       "map_id": "MAP_MAGMA_HIDEOUT_1F",
       "script": "MagmaHideout_1F_EventScript_Grunt2",
@@ -47285,7 +46725,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_2",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
     "pushable_boulder_anonymous_magmahideout_1f_5_22_magmahideout_1f": {
@@ -47348,9 +46788,9 @@
       "battle_id": null,
       "flag": "FLAG_TEMP_13"
     },
-    "team_magma_grunt_magmahideout_2f_1r": {
-      "id": "team_magma_grunt_magmahideout_2f_1r",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_2f_1r": {
+      "id": "team_magma_grunt_m_magmahideout_2f_1r",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_2F_1R",
       "map_id": "MAP_MAGMA_HIDEOUT_2F_1R",
       "script": "MagmaHideout_2F_1R_EventScript_Grunt4",
@@ -47365,12 +46805,12 @@
         "y": 4
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_4",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_2f_1r_2": {
-      "id": "team_magma_grunt_magmahideout_2f_1r_2",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_2f_1r_2": {
+      "id": "team_magma_grunt_m_magmahideout_2f_1r_2",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_2F_1R",
       "map_id": "MAP_MAGMA_HIDEOUT_2F_1R",
       "script": "MagmaHideout_2F_1R_EventScript_Grunt5",
@@ -47385,12 +46825,12 @@
         "y": 6
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_5",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_2f_1r_3": {
-      "id": "team_magma_grunt_magmahideout_2f_1r_3",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_f_magmahideout_2f_1r": {
+      "id": "team_magma_grunt_f_magmahideout_2f_1r",
+      "npc_id": "team_magma_grunt_f",
       "map": "MagmaHideout_2F_1R",
       "map_id": "MAP_MAGMA_HIDEOUT_2F_1R",
       "script": "MagmaHideout_2F_1R_EventScript_Grunt14",
@@ -47405,12 +46845,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_14",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_2f_1r_4": {
-      "id": "team_magma_grunt_magmahideout_2f_1r_4",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_2f_1r_3": {
+      "id": "team_magma_grunt_m_magmahideout_2f_1r_3",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_2F_1R",
       "map_id": "MAP_MAGMA_HIDEOUT_2F_1R",
       "script": "MagmaHideout_2F_1R_EventScript_Grunt3",
@@ -47425,12 +46865,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_3",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_2f_2r": {
-      "id": "team_magma_grunt_magmahideout_2f_2r",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_2f_2r": {
+      "id": "team_magma_grunt_m_magmahideout_2f_2r",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_2F_2R",
       "map_id": "MAP_MAGMA_HIDEOUT_2F_2R",
       "script": "MagmaHideout_2F_2R_EventScript_Grunt8",
@@ -47445,12 +46885,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_8",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_2f_2r_2": {
-      "id": "team_magma_grunt_magmahideout_2f_2r_2",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_2f_2r_2": {
+      "id": "team_magma_grunt_m_magmahideout_2f_2r_2",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_2F_2R",
       "map_id": "MAP_MAGMA_HIDEOUT_2F_2R",
       "script": "MagmaHideout_2F_2R_EventScript_Grunt7",
@@ -47465,12 +46905,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_7",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_2f_2r_3": {
-      "id": "team_magma_grunt_magmahideout_2f_2r_3",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_2f_2r_3": {
+      "id": "team_magma_grunt_m_magmahideout_2f_2r_3",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_2F_2R",
       "map_id": "MAP_MAGMA_HIDEOUT_2F_2R",
       "script": "MagmaHideout_2F_2R_EventScript_Grunt6",
@@ -47485,12 +46925,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_6",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_2f_2r_4": {
-      "id": "team_magma_grunt_magmahideout_2f_2r_4",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_f_magmahideout_2f_2r": {
+      "id": "team_magma_grunt_f_magmahideout_2f_2r",
+      "npc_id": "team_magma_grunt_f",
       "map": "MagmaHideout_2F_2R",
       "map_id": "MAP_MAGMA_HIDEOUT_2F_2R",
       "script": "MagmaHideout_2F_2R_EventScript_Grunt15",
@@ -47505,12 +46945,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_15",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_3f_1r": {
-      "id": "team_magma_grunt_magmahideout_3f_1r",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_3f_1r": {
+      "id": "team_magma_grunt_m_magmahideout_3f_1r",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_3F_1R",
       "map_id": "MAP_MAGMA_HIDEOUT_3F_1R",
       "script": "MagmaHideout_3F_1R_EventScript_Grunt9",
@@ -47525,12 +46965,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_9",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_3f_1r_2": {
-      "id": "team_magma_grunt_magmahideout_3f_1r_2",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_f_magmahideout_3f_1r": {
+      "id": "team_magma_grunt_f_magmahideout_3f_1r",
+      "npc_id": "team_magma_grunt_f",
       "map": "MagmaHideout_3F_1R",
       "map_id": "MAP_MAGMA_HIDEOUT_3F_1R",
       "script": "MagmaHideout_3F_1R_EventScript_Grunt16",
@@ -47545,12 +46985,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_16",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_3f_2r": {
-      "id": "team_magma_grunt_magmahideout_3f_2r",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_3f_2r": {
+      "id": "team_magma_grunt_m_magmahideout_3f_2r",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_3F_2R",
       "map_id": "MAP_MAGMA_HIDEOUT_3F_2R",
       "script": "MagmaHideout_3F_2R_EventScript_Grunt10",
@@ -47565,7 +47005,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_10",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
     "groudon_front_anonymous_magmahideout_4f_16_17_magmahideout_4f": {
@@ -47588,9 +47028,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_4F_GROUDON"
     },
-    "team_magma_grunt_magmahideout_4f": {
-      "id": "team_magma_grunt_magmahideout_4f",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_4f": {
+      "id": "team_magma_grunt_m_magmahideout_4f",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_4F",
       "map_id": "MAP_MAGMA_HIDEOUT_4F",
       "script": "MagmaHideout_4F_EventScript_Grunt11",
@@ -47605,12 +47045,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_11",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_4f_2": {
-      "id": "team_magma_grunt_magmahideout_4f_2",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_4f_2": {
+      "id": "team_magma_grunt_m_magmahideout_4f_2",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_4F",
       "map_id": "MAP_MAGMA_HIDEOUT_4F",
       "script": "MagmaHideout_4F_EventScript_Grunt12",
@@ -47625,12 +47065,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_12",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "team_magma_grunt_magmahideout_4f_3": {
-      "id": "team_magma_grunt_magmahideout_4f_3",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_magmahideout_4f_3": {
+      "id": "team_magma_grunt_m_magmahideout_4f_3",
+      "npc_id": "team_magma_grunt_m",
       "map": "MagmaHideout_4F",
       "map_id": "MAP_MAGMA_HIDEOUT_4F",
       "script": "MagmaHideout_4F_EventScript_Grunt13",
@@ -47645,7 +47085,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_magma_hideout_13",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
     "magma_admin_tabitha_magmahideout_4f": {
@@ -48648,9 +48088,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "magma_member_m_anonymous_meteorfalls_1f_1r_12_20_meteorfalls_1f_1r": {
-      "id": "magma_member_m_anonymous_meteorfalls_1f_1r_12_20_meteorfalls_1f_1r",
-      "npc_id": "magma_member_m_anonymous_meteorfalls_1f_1r_12_20",
+    "team_magma_grunt_m_meteorfalls_1f_1r": {
+      "id": "team_magma_grunt_m_meteorfalls_1f_1r",
+      "npc_id": "team_magma_grunt_m",
       "map": "MeteorFalls_1F_1R",
       "map_id": "MAP_METEOR_FALLS_1F_1R",
       "script": "0x0",
@@ -48668,9 +48108,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_METEOR_FALLS_TEAM_MAGMA"
     },
-    "magma_member_m_anonymous_meteorfalls_1f_1r_14_21_meteorfalls_1f_1r": {
-      "id": "magma_member_m_anonymous_meteorfalls_1f_1r_14_21_meteorfalls_1f_1r",
-      "npc_id": "magma_member_m_anonymous_meteorfalls_1f_1r_14_21",
+    "team_magma_grunt_m_meteorfalls_1f_1r_2": {
+      "id": "team_magma_grunt_m_meteorfalls_1f_1r_2",
+      "npc_id": "team_magma_grunt_m",
       "map": "MeteorFalls_1F_1R",
       "map_id": "MAP_METEOR_FALLS_1F_1R",
       "script": "0x0",
@@ -48708,9 +48148,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_METEOR_FALLS_TEAM_AQUA"
     },
-    "aqua_member_m_anonymous_meteorfalls_1f_1r_6_20_meteorfalls_1f_1r": {
-      "id": "aqua_member_m_anonymous_meteorfalls_1f_1r_6_20_meteorfalls_1f_1r",
-      "npc_id": "aqua_member_m_anonymous_meteorfalls_1f_1r_6_20",
+    "team_aqua_grunt_m_meteorfalls_1f_1r": {
+      "id": "team_aqua_grunt_m_meteorfalls_1f_1r",
+      "npc_id": "team_aqua_grunt_m",
       "map": "MeteorFalls_1F_1R",
       "map_id": "MAP_METEOR_FALLS_1F_1R",
       "script": "0x0",
@@ -48728,9 +48168,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_METEOR_FALLS_TEAM_AQUA"
     },
-    "aqua_member_m_anonymous_meteorfalls_1f_1r_6_21_meteorfalls_1f_1r": {
-      "id": "aqua_member_m_anonymous_meteorfalls_1f_1r_6_21_meteorfalls_1f_1r",
-      "npc_id": "aqua_member_m_anonymous_meteorfalls_1f_1r_6_21",
+    "team_aqua_grunt_m_meteorfalls_1f_1r_2": {
+      "id": "team_aqua_grunt_m_meteorfalls_1f_1r_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "MeteorFalls_1F_1R",
       "map_id": "MAP_METEOR_FALLS_1F_1R",
       "script": "0x0",
@@ -49108,9 +48548,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "magma_member_m_anonymous_mossdeepcity_44_23_mossdeepcity": {
-      "id": "magma_member_m_anonymous_mossdeepcity_44_23_mossdeepcity",
-      "npc_id": "magma_member_m_anonymous_mossdeepcity_44_23",
+    "team_magma_grunt_m_mossdeepcity": {
+      "id": "team_magma_grunt_m_mossdeepcity",
+      "npc_id": "team_magma_grunt_m",
       "map": "MossdeepCity",
       "map_id": "MAP_MOSSDEEP_CITY",
       "script": "0x0",
@@ -49128,9 +48568,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA"
     },
-    "magma_member_m_anonymous_mossdeepcity_44_24_mossdeepcity": {
-      "id": "magma_member_m_anonymous_mossdeepcity_44_24_mossdeepcity",
-      "npc_id": "magma_member_m_anonymous_mossdeepcity_44_24",
+    "team_magma_grunt_m_mossdeepcity_2": {
+      "id": "team_magma_grunt_m_mossdeepcity_2",
+      "npc_id": "team_magma_grunt_m",
       "map": "MossdeepCity",
       "map_id": "MAP_MOSSDEEP_CITY",
       "script": "0x0",
@@ -49148,9 +48588,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA"
     },
-    "magma_member_m_anonymous_mossdeepcity_44_25_mossdeepcity": {
-      "id": "magma_member_m_anonymous_mossdeepcity_44_25_mossdeepcity",
-      "npc_id": "magma_member_m_anonymous_mossdeepcity_44_25",
+    "team_magma_grunt_m_mossdeepcity_3": {
+      "id": "team_magma_grunt_m_mossdeepcity_3",
+      "npc_id": "team_magma_grunt_m",
       "map": "MossdeepCity",
       "map_id": "MAP_MOSSDEEP_CITY",
       "script": "0x0",
@@ -49168,9 +48608,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA"
     },
-    "magma_member_m_anonymous_mossdeepcity_44_26_mossdeepcity": {
-      "id": "magma_member_m_anonymous_mossdeepcity_44_26_mossdeepcity",
-      "npc_id": "magma_member_m_anonymous_mossdeepcity_44_26",
+    "team_magma_grunt_m_mossdeepcity_4": {
+      "id": "team_magma_grunt_m_mossdeepcity_4",
+      "npc_id": "team_magma_grunt_m",
       "map": "MossdeepCity",
       "map_id": "MAP_MOSSDEEP_CITY",
       "script": "0x0",
@@ -50568,9 +50008,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_magma_grunt_mossdeepcity_spacecenter_1f": {
-      "id": "team_magma_grunt_mossdeepcity_spacecenter_1f",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_f_mossdeepcity_spacecenter_1f": {
+      "id": "team_magma_grunt_f_mossdeepcity_spacecenter_1f",
+      "npc_id": "team_magma_grunt_f",
       "map": "MossdeepCity_SpaceCenter_1F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_1F",
       "script": "MossdeepCity_SpaceCenter_1F_EventScript_Grunt3",
@@ -50585,12 +50025,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_space_center_3",
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_TEAM_MAGMA"
     },
-    "team_magma_grunt_mossdeepcity_spacecenter_1f_2": {
-      "id": "team_magma_grunt_mossdeepcity_spacecenter_1f_2",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_mossdeepcity_spacecenter_1f": {
+      "id": "team_magma_grunt_m_mossdeepcity_spacecenter_1f",
+      "npc_id": "team_magma_grunt_m",
       "map": "MossdeepCity_SpaceCenter_1F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_1F",
       "script": "MossdeepCity_SpaceCenter_1F_EventScript_Grunt1",
@@ -50608,9 +50048,9 @@
       "battle_id": "trainer_grunt_space_center_1",
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_TEAM_MAGMA"
     },
-    "team_magma_grunt_mossdeepcity_spacecenter_1f_3": {
-      "id": "team_magma_grunt_mossdeepcity_spacecenter_1f_3",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_mossdeepcity_spacecenter_1f_2": {
+      "id": "team_magma_grunt_m_mossdeepcity_spacecenter_1f_2",
+      "npc_id": "team_magma_grunt_m",
       "map": "MossdeepCity_SpaceCenter_1F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_1F",
       "script": "MossdeepCity_SpaceCenter_1F_EventScript_Grunt4",
@@ -50625,12 +50065,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_space_center_4",
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_TEAM_MAGMA"
     },
-    "magma_member_m_grunt2_mossdeepcity_spacecenter_1f": {
-      "id": "magma_member_m_grunt2_mossdeepcity_spacecenter_1f",
-      "npc_id": "magma_member_m_grunt2",
+    "team_magma_grunt_m_mossdeepcity_spacecenter_1f_3": {
+      "id": "team_magma_grunt_m_mossdeepcity_spacecenter_1f_3",
+      "npc_id": "team_magma_grunt_m",
       "map": "MossdeepCity_SpaceCenter_1F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_1F",
       "script": "MossdeepCity_SpaceCenter_1F_EventScript_Grunt2",
@@ -50768,9 +50208,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_STEVEN"
     },
-    "magma_member_m_grunt6_mossdeepcity_spacecenter_2f": {
-      "id": "magma_member_m_grunt6_mossdeepcity_spacecenter_2f",
-      "npc_id": "magma_member_m_grunt6",
+    "team_magma_grunt_m_mossdeepcity_spacecenter_2f": {
+      "id": "team_magma_grunt_m_mossdeepcity_spacecenter_2f",
+      "npc_id": "team_magma_grunt_m",
       "map": "MossdeepCity_SpaceCenter_2F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
       "script": "MossdeepCity_SpaceCenter_2F_EventScript_Grunt6",
@@ -50788,9 +50228,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_TEAM_MAGMA"
     },
-    "magma_member_m_grunt5_mossdeepcity_spacecenter_2f": {
-      "id": "magma_member_m_grunt5_mossdeepcity_spacecenter_2f",
-      "npc_id": "magma_member_m_grunt5",
+    "team_magma_grunt_m_mossdeepcity_spacecenter_2f_2": {
+      "id": "team_magma_grunt_m_mossdeepcity_spacecenter_2f_2",
+      "npc_id": "team_magma_grunt_m",
       "map": "MossdeepCity_SpaceCenter_2F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
       "script": "MossdeepCity_SpaceCenter_2F_EventScript_Grunt5",
@@ -50808,9 +50248,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_TEAM_MAGMA"
     },
-    "magma_member_m_grunt7_mossdeepcity_spacecenter_2f": {
-      "id": "magma_member_m_grunt7_mossdeepcity_spacecenter_2f",
-      "npc_id": "magma_member_m_grunt7",
+    "team_magma_grunt_m_mossdeepcity_spacecenter_2f_3": {
+      "id": "team_magma_grunt_m_mossdeepcity_spacecenter_2f_3",
+      "npc_id": "team_magma_grunt_m",
       "map": "MossdeepCity_SpaceCenter_2F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
       "script": "MossdeepCity_SpaceCenter_2F_EventScript_Grunt7",
@@ -50828,9 +50268,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_TEAM_MAGMA"
     },
-    "magma_admin_tabitha_mossdeepcity_spacecenter_2f": {
-      "id": "magma_admin_tabitha_mossdeepcity_spacecenter_2f",
-      "npc_id": "magma_admin_tabitha",
+    "team_magma_grunt_m_mossdeepcity_spacecenter_2f_4": {
+      "id": "team_magma_grunt_m_mossdeepcity_spacecenter_2f_4",
+      "npc_id": "team_magma_grunt_m",
       "map": "MossdeepCity_SpaceCenter_2F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
       "script": "MossdeepCity_SpaceCenter_2F_EventScript_Tabitha",
@@ -50968,9 +50408,9 @@
       "battle_id": "trainer_tabitha_mt_chimney",
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "magma_member_m_busymagmagrunt5_mtchimney": {
-      "id": "magma_member_m_busymagmagrunt5_mtchimney",
-      "npc_id": "magma_member_m_busymagmagrunt5",
+    "team_magma_grunt_m_mtchimney": {
+      "id": "team_magma_grunt_m_mtchimney",
+      "npc_id": "team_magma_grunt_m",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyMagmaGrunt5",
@@ -50988,9 +50428,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "magma_member_m_busymagmagrunt4_mtchimney": {
-      "id": "magma_member_m_busymagmagrunt4_mtchimney",
-      "npc_id": "magma_member_m_busymagmagrunt4",
+    "team_magma_grunt_m_mtchimney_2": {
+      "id": "team_magma_grunt_m_mtchimney_2",
+      "npc_id": "team_magma_grunt_m",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyMagmaGrunt4",
@@ -51008,9 +50448,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "aqua_member_m_busyaquagrunt2_mtchimney": {
-      "id": "aqua_member_m_busyaquagrunt2_mtchimney",
-      "npc_id": "aqua_member_m_busyaquagrunt2",
+    "team_aqua_grunt_m_mtchimney": {
+      "id": "team_aqua_grunt_m_mtchimney",
+      "npc_id": "team_aqua_grunt_m",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyAquaGrunt2",
@@ -51028,9 +50468,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_AQUA"
     },
-    "aqua_member_m_busyaquagrunt1_mtchimney": {
-      "id": "aqua_member_m_busyaquagrunt1_mtchimney",
-      "npc_id": "aqua_member_m_busyaquagrunt1",
+    "team_aqua_grunt_m_mtchimney_2": {
+      "id": "team_aqua_grunt_m_mtchimney_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyAquaGrunt1",
@@ -51048,9 +50488,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_AQUA"
     },
-    "aqua_member_m_busyaquagrunt3_mtchimney": {
-      "id": "aqua_member_m_busyaquagrunt3_mtchimney",
-      "npc_id": "aqua_member_m_busyaquagrunt3",
+    "team_aqua_grunt_m_mtchimney_3": {
+      "id": "team_aqua_grunt_m_mtchimney_3",
+      "npc_id": "team_aqua_grunt_m",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyAquaGrunt3",
@@ -51088,9 +50528,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_LAVA_COOKIE_LADY"
     },
-    "magma_member_m_busymagmagrunt6_mtchimney": {
-      "id": "magma_member_m_busymagmagrunt6_mtchimney",
-      "npc_id": "magma_member_m_busymagmagrunt6",
+    "team_magma_grunt_m_mtchimney_3": {
+      "id": "team_magma_grunt_m_mtchimney_3",
+      "npc_id": "team_magma_grunt_m",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyMagmaGrunt6",
@@ -51148,9 +50588,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "magma_member_m_busymagmagrunt2_mtchimney": {
-      "id": "magma_member_m_busymagmagrunt2_mtchimney",
-      "npc_id": "magma_member_m_busymagmagrunt2",
+    "team_magma_grunt_m_mtchimney_4": {
+      "id": "team_magma_grunt_m_mtchimney_4",
+      "npc_id": "team_magma_grunt_m",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyMagmaGrunt2",
@@ -51208,9 +50648,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "magma_member_m_busymagmagrunt3_mtchimney": {
-      "id": "magma_member_m_busymagmagrunt3_mtchimney",
-      "npc_id": "magma_member_m_busymagmagrunt3",
+    "team_magma_grunt_m_mtchimney_5": {
+      "id": "team_magma_grunt_m_mtchimney_5",
+      "npc_id": "team_magma_grunt_m",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyMagmaGrunt3",
@@ -51228,9 +50668,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "magma_member_m_busymagmagrunt1_mtchimney": {
-      "id": "magma_member_m_busymagmagrunt1_mtchimney",
-      "npc_id": "magma_member_m_busymagmagrunt1",
+    "team_magma_grunt_m_mtchimney_6": {
+      "id": "team_magma_grunt_m_mtchimney_6",
+      "npc_id": "team_magma_grunt_m",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyMagmaGrunt1",
@@ -51328,9 +50768,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "team_magma_grunt_mtchimney": {
-      "id": "team_magma_grunt_mtchimney",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_m_mtchimney_7": {
+      "id": "team_magma_grunt_m_mtchimney_7",
+      "npc_id": "team_magma_grunt_m",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_Grunt2",
@@ -51345,7 +50785,7 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_mt_chimney_2",
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
     "poochyena_aquapoochyena_mtchimney_4": {
@@ -51468,9 +50908,9 @@
       "battle_id": "trainer_shirley",
       "flag": "FLAG_HIDE_MT_CHIMNEY_TRAINERS"
     },
-    "team_magma_grunt_mtchimney_2": {
-      "id": "team_magma_grunt_mtchimney_2",
-      "npc_id": "team_magma_grunt",
+    "team_magma_grunt_f_mtchimney": {
+      "id": "team_magma_grunt_f_mtchimney",
+      "npc_id": "team_magma_grunt_f",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_Grunt1",
@@ -51568,9 +51008,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "rocket_m_grunt1_mtember_exterior_frlg": {
-      "id": "rocket_m_grunt1_mtember_exterior_frlg",
-      "npc_id": "rocket_m_grunt1",
+    "team_rocket_grunt_m_mtember_exterior_frlg": {
+      "id": "team_rocket_grunt_m_mtember_exterior_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "MtEmber_Exterior_Frlg",
       "map_id": "MAP_MT_EMBER_EXTERIOR",
       "script": "MtEmber_Exterior_EventScript_Grunt1",
@@ -51588,9 +51028,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_EMBER_EXTERIOR_ROCKETS"
     },
-    "rocket_m_grunt2_mtember_exterior_frlg": {
-      "id": "rocket_m_grunt2_mtember_exterior_frlg",
-      "npc_id": "rocket_m_grunt2",
+    "team_rocket_grunt_m_mtember_exterior_frlg_2": {
+      "id": "team_rocket_grunt_m_mtember_exterior_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "MtEmber_Exterior_Frlg",
       "map_id": "MAP_MT_EMBER_EXTERIOR",
       "script": "MtEmber_Exterior_EventScript_Grunt2",
@@ -52988,9 +52428,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_rocket_frlg_grunt_mtmoon_b2f_frlg": {
-      "id": "team_rocket_frlg_grunt_mtmoon_b2f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_mtmoon_b2f_frlg": {
+      "id": "team_rocket_grunt_m_mtmoon_b2f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "MtMoon_B2F_Frlg",
       "map_id": "MAP_MT_MOON_B2F",
       "script": "MtMoon_B2F_EventScript_Grunt4",
@@ -53008,9 +52448,9 @@
       "battle_id": "trainer_team_rocket_grunt_4",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "team_rocket_frlg_grunt_mtmoon_b2f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_mtmoon_b2f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_mtmoon_b2f_frlg_2": {
+      "id": "team_rocket_grunt_m_mtmoon_b2f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "MtMoon_B2F_Frlg",
       "map_id": "MAP_MT_MOON_B2F",
       "script": "MtMoon_B2F_EventScript_Grunt1",
@@ -53028,9 +52468,9 @@
       "battle_id": "trainer_team_rocket_grunt",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "team_rocket_frlg_grunt_mtmoon_b2f_frlg_3": {
-      "id": "team_rocket_frlg_grunt_mtmoon_b2f_frlg_3",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_mtmoon_b2f_frlg_3": {
+      "id": "team_rocket_grunt_m_mtmoon_b2f_frlg_3",
+      "npc_id": "team_rocket_grunt_m",
       "map": "MtMoon_B2F_Frlg",
       "map_id": "MAP_MT_MOON_B2F",
       "script": "MtMoon_B2F_EventScript_Grunt3",
@@ -53048,9 +52488,9 @@
       "battle_id": "trainer_team_rocket_grunt_3",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "team_rocket_frlg_grunt_mtmoon_b2f_frlg_4": {
-      "id": "team_rocket_frlg_grunt_mtmoon_b2f_frlg_4",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_mtmoon_b2f_frlg_4": {
+      "id": "team_rocket_grunt_m_mtmoon_b2f_frlg_4",
+      "npc_id": "team_rocket_grunt_m",
       "map": "MtMoon_B2F_Frlg",
       "map_id": "MAP_MT_MOON_B2F",
       "script": "MtMoon_B2F_EventScript_Grunt2",
@@ -53468,9 +52908,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_aqua_grunt_mtpyre_summit": {
-      "id": "team_aqua_grunt_mtpyre_summit",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_mtpyre_summit": {
+      "id": "team_aqua_grunt_m_mtpyre_summit",
+      "npc_id": "team_aqua_grunt_m",
       "map": "MtPyre_Summit",
       "map_id": "MAP_MT_PYRE_SUMMIT",
       "script": "MtPyre_Summit_EventScript_Grunt1",
@@ -53488,9 +52928,9 @@
       "battle_id": "trainer_grunt_mt_pyre_1",
       "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA"
     },
-    "team_aqua_grunt_mtpyre_summit_2": {
-      "id": "team_aqua_grunt_mtpyre_summit_2",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_mtpyre_summit_2": {
+      "id": "team_aqua_grunt_m_mtpyre_summit_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "MtPyre_Summit",
       "map_id": "MAP_MT_PYRE_SUMMIT",
       "script": "MtPyre_Summit_EventScript_Grunt2",
@@ -53505,12 +52945,12 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_mt_pyre_2",
       "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA"
     },
-    "team_aqua_grunt_mtpyre_summit_3": {
-      "id": "team_aqua_grunt_mtpyre_summit_3",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_mtpyre_summit_3": {
+      "id": "team_aqua_grunt_m_mtpyre_summit_3",
+      "npc_id": "team_aqua_grunt_m",
       "map": "MtPyre_Summit",
       "map_id": "MAP_MT_PYRE_SUMMIT",
       "script": "MtPyre_Summit_EventScript_Grunt3",
@@ -53525,12 +52965,12 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_mt_pyre_3",
       "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA"
     },
-    "team_aqua_grunt_mtpyre_summit_4": {
-      "id": "team_aqua_grunt_mtpyre_summit_4",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_f_mtpyre_summit": {
+      "id": "team_aqua_grunt_f_mtpyre_summit",
+      "npc_id": "team_aqua_grunt_f",
       "map": "MtPyre_Summit",
       "map_id": "MAP_MT_PYRE_SUMMIT",
       "script": "MtPyre_Summit_EventScript_Grunt4",
@@ -53545,7 +52985,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_mt_pyre_4",
       "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA"
     },
     "maxie_anonymous_mtpyre_summit_23_6_mtpyre_summit": {
@@ -56648,9 +56088,9 @@
       "battle_id": null,
       "flag": "FLAG_TEMP_12"
     },
-    "aqua_member_m_anonymous_petalburgwoods_26_17_petalburgwoods": {
-      "id": "aqua_member_m_anonymous_petalburgwoods_26_17_petalburgwoods",
-      "npc_id": "aqua_member_m_anonymous_petalburgwoods_26_17",
+    "team_aqua_grunt_m_petalburgwoods": {
+      "id": "team_aqua_grunt_m_petalburgwoods",
+      "npc_id": "team_aqua_grunt_m",
       "map": "PetalburgWoods",
       "map_id": "MAP_PETALBURG_WOODS",
       "script": "0x0",
@@ -58308,9 +57748,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_TOWER_FUJI"
     },
-    "team_rocket_frlg_grunt_pokemontower_7f_frlg": {
-      "id": "team_rocket_frlg_grunt_pokemontower_7f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_pokemontower_7f_frlg": {
+      "id": "team_rocket_grunt_m_pokemontower_7f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "PokemonTower_7F_Frlg",
       "map_id": "MAP_POKEMON_TOWER_7F",
       "script": "PokemonTower_7F_EventScript_Grunt1",
@@ -58328,9 +57768,9 @@
       "battle_id": "trainer_team_rocket_grunt_19",
       "flag": "FLAG_HIDE_TOWER_ROCKET_1"
     },
-    "team_rocket_frlg_grunt_pokemontower_7f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_pokemontower_7f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_pokemontower_7f_frlg_2": {
+      "id": "team_rocket_grunt_m_pokemontower_7f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "PokemonTower_7F_Frlg",
       "map_id": "MAP_POKEMON_TOWER_7F",
       "script": "PokemonTower_7F_EventScript_Grunt2",
@@ -58348,9 +57788,9 @@
       "battle_id": "trainer_team_rocket_grunt_20",
       "flag": "FLAG_HIDE_TOWER_ROCKET_2"
     },
-    "team_rocket_frlg_grunt_pokemontower_7f_frlg_3": {
-      "id": "team_rocket_frlg_grunt_pokemontower_7f_frlg_3",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_pokemontower_7f_frlg_3": {
+      "id": "team_rocket_grunt_m_pokemontower_7f_frlg_3",
+      "npc_id": "team_rocket_grunt_m",
       "map": "PokemonTower_7F_Frlg",
       "map_id": "MAP_POKEMON_TOWER_7F",
       "script": "PokemonTower_7F_EventScript_Grunt3",
@@ -59048,9 +58488,9 @@
       "battle_id": null,
       "flag": "FLAG_TEMP_11"
     },
-    "team_rocket_frlg_grunt_rockethideout_b1f_frlg": {
-      "id": "team_rocket_frlg_grunt_rockethideout_b1f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_rockethideout_b1f_frlg": {
+      "id": "team_rocket_grunt_m_rockethideout_b1f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "RocketHideout_B1F_Frlg",
       "map_id": "MAP_ROCKET_HIDEOUT_B1F",
       "script": "RocketHideout_B1F_EventScript_Grunt2",
@@ -59068,9 +58508,9 @@
       "battle_id": "trainer_team_rocket_grunt_9",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "team_rocket_frlg_grunt_rockethideout_b1f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_rockethideout_b1f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_rockethideout_b1f_frlg_2": {
+      "id": "team_rocket_grunt_m_rockethideout_b1f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "RocketHideout_B1F_Frlg",
       "map_id": "MAP_ROCKET_HIDEOUT_B1F",
       "script": "RocketHideout_B1F_EventScript_Grunt1",
@@ -59088,9 +58528,9 @@
       "battle_id": "trainer_team_rocket_grunt_8",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "team_rocket_frlg_grunt_rockethideout_b1f_frlg_3": {
-      "id": "team_rocket_frlg_grunt_rockethideout_b1f_frlg_3",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_rockethideout_b1f_frlg_3": {
+      "id": "team_rocket_grunt_m_rockethideout_b1f_frlg_3",
+      "npc_id": "team_rocket_grunt_m",
       "map": "RocketHideout_B1F_Frlg",
       "map_id": "MAP_ROCKET_HIDEOUT_B1F",
       "script": "RocketHideout_B1F_EventScript_Grunt4",
@@ -59108,9 +58548,9 @@
       "battle_id": "trainer_team_rocket_grunt_11",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "team_rocket_frlg_grunt_rockethideout_b1f_frlg_4": {
-      "id": "team_rocket_frlg_grunt_rockethideout_b1f_frlg_4",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_rockethideout_b1f_frlg_4": {
+      "id": "team_rocket_grunt_m_rockethideout_b1f_frlg_4",
+      "npc_id": "team_rocket_grunt_m",
       "map": "RocketHideout_B1F_Frlg",
       "map_id": "MAP_ROCKET_HIDEOUT_B1F",
       "script": "RocketHideout_B1F_EventScript_Grunt3",
@@ -59128,9 +58568,9 @@
       "battle_id": "trainer_team_rocket_grunt_10",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "team_rocket_frlg_grunt_rockethideout_b1f_frlg_5": {
-      "id": "team_rocket_frlg_grunt_rockethideout_b1f_frlg_5",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_rockethideout_b1f_frlg_5": {
+      "id": "team_rocket_grunt_m_rockethideout_b1f_frlg_5",
+      "npc_id": "team_rocket_grunt_m",
       "map": "RocketHideout_B1F_Frlg",
       "map_id": "MAP_ROCKET_HIDEOUT_B1F",
       "script": "RocketHideout_B1F_EventScript_Grunt5",
@@ -59148,9 +58588,9 @@
       "battle_id": "trainer_team_rocket_grunt_12",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "team_rocket_frlg_grunt_rockethideout_b2f_frlg": {
-      "id": "team_rocket_frlg_grunt_rockethideout_b2f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_rockethideout_b2f_frlg": {
+      "id": "team_rocket_grunt_m_rockethideout_b2f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "RocketHideout_B2F_Frlg",
       "map_id": "MAP_ROCKET_HIDEOUT_B2F",
       "script": "RocketHideout_B2F_EventScript_Grunt",
@@ -59168,9 +58608,9 @@
       "battle_id": "trainer_team_rocket_grunt_13",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "team_rocket_frlg_grunt_rockethideout_b3f_frlg": {
-      "id": "team_rocket_frlg_grunt_rockethideout_b3f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_rockethideout_b3f_frlg": {
+      "id": "team_rocket_grunt_m_rockethideout_b3f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "RocketHideout_B3F_Frlg",
       "map_id": "MAP_ROCKET_HIDEOUT_B3F",
       "script": "RocketHideout_B3F_EventScript_Grunt2",
@@ -59188,9 +58628,9 @@
       "battle_id": "trainer_team_rocket_grunt_15",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "team_rocket_frlg_grunt_rockethideout_b3f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_rockethideout_b3f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_rockethideout_b3f_frlg_2": {
+      "id": "team_rocket_grunt_m_rockethideout_b3f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "RocketHideout_B3F_Frlg",
       "map_id": "MAP_ROCKET_HIDEOUT_B3F",
       "script": "RocketHideout_B3F_EventScript_Grunt1",
@@ -59228,9 +58668,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_HIDEOUT_GIOVANNI"
     },
-    "team_rocket_frlg_grunt_rockethideout_b4f_frlg": {
-      "id": "team_rocket_frlg_grunt_rockethideout_b4f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_rockethideout_b4f_frlg": {
+      "id": "team_rocket_grunt_m_rockethideout_b4f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "RocketHideout_B4F_Frlg",
       "map_id": "MAP_ROCKET_HIDEOUT_B4F",
       "script": "RocketHideout_B4F_EventScript_Grunt1",
@@ -59248,9 +58688,9 @@
       "battle_id": "trainer_team_rocket_grunt_18",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "team_rocket_frlg_grunt_rockethideout_b4f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_rockethideout_b4f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_rockethideout_b4f_frlg_2": {
+      "id": "team_rocket_grunt_m_rockethideout_b4f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "RocketHideout_B4F_Frlg",
       "map_id": "MAP_ROCKET_HIDEOUT_B4F",
       "script": "RocketHideout_B4F_EventScript_Grunt3",
@@ -59268,9 +58708,9 @@
       "battle_id": "trainer_team_rocket_grunt_17",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "team_rocket_frlg_grunt_rockethideout_b4f_frlg_3": {
-      "id": "team_rocket_frlg_grunt_rockethideout_b4f_frlg_3",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_rockethideout_b4f_frlg_3": {
+      "id": "team_rocket_grunt_m_rockethideout_b4f_frlg_3",
+      "npc_id": "team_rocket_grunt_m",
       "map": "RocketHideout_B4F_Frlg",
       "map_id": "MAP_ROCKET_HIDEOUT_B4F",
       "script": "RocketHideout_B4F_EventScript_Grunt2",
@@ -62028,9 +61468,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "aqua_member_m_aquagrunt1_route110": {
-      "id": "aqua_member_m_aquagrunt1_route110",
-      "npc_id": "aqua_member_m_aquagrunt1",
+    "team_aqua_grunt_m_route110": {
+      "id": "team_aqua_grunt_m_route110",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route110",
       "map_id": "MAP_ROUTE110",
       "script": "Route110_EventScript_AquaGrunt1",
@@ -62048,9 +61488,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
     },
-    "aqua_member_m_aquagrunt2_route110": {
-      "id": "aqua_member_m_aquagrunt2_route110",
-      "npc_id": "aqua_member_m_aquagrunt2",
+    "team_aqua_grunt_m_route110_2": {
+      "id": "team_aqua_grunt_m_route110_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route110",
       "map_id": "MAP_ROUTE110",
       "script": "Route110_EventScript_AquaGrunt2",
@@ -62068,9 +61508,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
     },
-    "aqua_member_m_aquagrunt3_route110": {
-      "id": "aqua_member_m_aquagrunt3_route110",
-      "npc_id": "aqua_member_m_aquagrunt3",
+    "team_aqua_grunt_m_route110_3": {
+      "id": "team_aqua_grunt_m_route110_3",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route110",
       "map_id": "MAP_ROUTE110",
       "script": "Route110_EventScript_AquaGrunt3",
@@ -62088,9 +61528,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
     },
-    "aqua_member_m_aquagrunt4_route110": {
-      "id": "aqua_member_m_aquagrunt4_route110",
-      "npc_id": "aqua_member_m_aquagrunt4",
+    "team_aqua_grunt_m_route110_4": {
+      "id": "team_aqua_grunt_m_route110_4",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route110",
       "map_id": "MAP_ROUTE110",
       "script": "Route110_EventScript_AquaGrunt4",
@@ -62108,9 +61548,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
     },
-    "aqua_member_m_anonymous_route110_8_82_route110": {
-      "id": "aqua_member_m_anonymous_route110_8_82_route110",
-      "npc_id": "aqua_member_m_anonymous_route110_8_82",
+    "team_aqua_grunt_m_route110_5": {
+      "id": "team_aqua_grunt_m_route110_5",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route110",
       "map_id": "MAP_ROUTE110",
       "script": "0x0",
@@ -64328,9 +63768,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "magma_member_m_magmagrunts_route112": {
-      "id": "magma_member_m_magmagrunts_route112",
-      "npc_id": "magma_member_m_magmagrunts",
+    "team_magma_grunt_m_route112": {
+      "id": "team_magma_grunt_m_route112",
+      "npc_id": "team_magma_grunt_m",
       "map": "Route112",
       "map_id": "MAP_ROUTE112",
       "script": "Route112_EventScript_MagmaGrunts",
@@ -64428,9 +63868,9 @@
       "battle_id": "trainer_trent_1",
       "flag": "0"
     },
-    "magma_member_m_magmagrunts_route112_2": {
-      "id": "magma_member_m_magmagrunts_route112_2",
-      "npc_id": "magma_member_m_magmagrunts",
+    "team_magma_grunt_m_route112_2": {
+      "id": "team_magma_grunt_m_route112_2",
+      "npc_id": "team_magma_grunt_m",
       "map": "Route112",
       "map_id": "MAP_ROUTE112",
       "script": "Route112_EventScript_MagmaGrunts",
@@ -67048,9 +66488,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_119_RIVAL"
     },
-    "aqua_member_m_bridgeaquagrunt1_route119": {
-      "id": "aqua_member_m_bridgeaquagrunt1_route119",
-      "npc_id": "aqua_member_m_bridgeaquagrunt1",
+    "team_aqua_grunt_m_route119": {
+      "id": "team_aqua_grunt_m_route119",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route119",
       "map_id": "MAP_ROUTE119",
       "script": "Route119_EventScript_BridgeAquaGrunt1",
@@ -67068,9 +66508,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
     },
-    "aqua_member_m_bridgeaquagrunt2_route119": {
-      "id": "aqua_member_m_bridgeaquagrunt2_route119",
-      "npc_id": "aqua_member_m_bridgeaquagrunt2",
+    "team_aqua_grunt_m_route119_2": {
+      "id": "team_aqua_grunt_m_route119_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route119",
       "map_id": "MAP_ROUTE119",
       "script": "Route119_EventScript_BridgeAquaGrunt2",
@@ -67468,9 +66908,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_aqua_grunt_route119_weatherinstitute_1f": {
-      "id": "team_aqua_grunt_route119_weatherinstitute_1f",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_route119_weatherinstitute_1f": {
+      "id": "team_aqua_grunt_m_route119_weatherinstitute_1f",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route119_WeatherInstitute_1F",
       "map_id": "MAP_ROUTE119_WEATHER_INSTITUTE_1F",
       "script": "Route119_WeatherInstitute_1F_EventScript_Grunt1",
@@ -67488,9 +66928,9 @@
       "battle_id": "trainer_grunt_weather_inst_1",
       "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
     },
-    "team_aqua_grunt_route119_weatherinstitute_1f_2": {
-      "id": "team_aqua_grunt_route119_weatherinstitute_1f_2",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_f_route119_weatherinstitute_1f": {
+      "id": "team_aqua_grunt_f_route119_weatherinstitute_1f",
+      "npc_id": "team_aqua_grunt_f",
       "map": "Route119_WeatherInstitute_1F",
       "map_id": "MAP_ROUTE119_WEATHER_INSTITUTE_1F",
       "script": "Route119_WeatherInstitute_1F_EventScript_Grunt4",
@@ -67505,7 +66945,7 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_weather_inst_4",
       "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
     },
     "man_4_instituteworker2_route119_weatherinstitute_1f": {
@@ -67568,9 +67008,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_aqua_grunt_route119_weatherinstitute_2f": {
-      "id": "team_aqua_grunt_route119_weatherinstitute_2f",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_route119_weatherinstitute_2f": {
+      "id": "team_aqua_grunt_m_route119_weatherinstitute_2f",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route119_WeatherInstitute_2F",
       "map_id": "MAP_ROUTE119_WEATHER_INSTITUTE_2F",
       "script": "Route119_WeatherInstitute_2F_EventScript_Grunt2",
@@ -67585,12 +67025,12 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_weather_inst_2",
       "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
     },
-    "team_aqua_grunt_route119_weatherinstitute_2f_2": {
-      "id": "team_aqua_grunt_route119_weatherinstitute_2f_2",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_route119_weatherinstitute_2f_2": {
+      "id": "team_aqua_grunt_m_route119_weatherinstitute_2f_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route119_WeatherInstitute_2F",
       "map_id": "MAP_ROUTE119_WEATHER_INSTITUTE_2F",
       "script": "Route119_WeatherInstitute_2F_EventScript_Grunt3",
@@ -67605,7 +67045,7 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_weather_inst_3",
       "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
     },
     "aqua_admin_shelly_route119_weatherinstitute_2f": {
@@ -67688,9 +67128,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_WEATHER_INSTITUTE_2F_WORKERS"
     },
-    "aqua_member_m_anonymous_route119_weatherinstitute_2f_16_6_route119_weatherinstitute_2f": {
-      "id": "aqua_member_m_anonymous_route119_weatherinstitute_2f_16_6_route119_weatherinstitute_2f",
-      "npc_id": "aqua_member_m_anonymous_route119_weatherinstitute_2f_16_6",
+    "team_aqua_grunt_m_route119_weatherinstitute_2f_3": {
+      "id": "team_aqua_grunt_m_route119_weatherinstitute_2f_3",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route119_WeatherInstitute_2F",
       "map_id": "MAP_ROUTE119_WEATHER_INSTITUTE_2F",
       "script": "0x0",
@@ -67708,9 +67148,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_WEATHER_INSTITUTE_2F_AQUA_GRUNT_M"
     },
-    "team_aqua_grunt_route119_weatherinstitute_2f_3": {
-      "id": "team_aqua_grunt_route119_weatherinstitute_2f_3",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_f_route119_weatherinstitute_2f": {
+      "id": "team_aqua_grunt_f_route119_weatherinstitute_2f",
+      "npc_id": "team_aqua_grunt_f",
       "map": "Route119_WeatherInstitute_2F",
       "map_id": "MAP_ROUTE119_WEATHER_INSTITUTE_2F",
       "script": "Route119_WeatherInstitute_2F_EventScript_Grunt5",
@@ -67725,7 +67165,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_weather_inst_5",
       "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
     },
     "policeman_topguard_route11_eastentrance_1f_frlg": {
@@ -68648,9 +68088,9 @@
       "battle_id": "trainer_kate_and_joy",
       "flag": "0"
     },
-    "aqua_member_m_anonymous_route121_30_8_route121": {
-      "id": "aqua_member_m_anonymous_route121_30_8_route121",
-      "npc_id": "aqua_member_m_anonymous_route121_30_8",
+    "team_aqua_grunt_m_route121": {
+      "id": "team_aqua_grunt_m_route121",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route121",
       "map_id": "MAP_ROUTE121",
       "script": "0x0",
@@ -68668,9 +68108,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_121_TEAM_AQUA_GRUNTS"
     },
-    "aqua_member_m_anonymous_route121_30_7_route121": {
-      "id": "aqua_member_m_anonymous_route121_30_7_route121",
-      "npc_id": "aqua_member_m_anonymous_route121_30_7",
+    "team_aqua_grunt_m_route121_2": {
+      "id": "team_aqua_grunt_m_route121_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route121",
       "map_id": "MAP_ROUTE121",
       "script": "0x0",
@@ -68688,9 +68128,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_121_TEAM_AQUA_GRUNTS"
     },
-    "aqua_member_m_anonymous_route121_31_7_route121": {
-      "id": "aqua_member_m_anonymous_route121_31_7_route121",
-      "npc_id": "aqua_member_m_anonymous_route121_31_7",
+    "team_aqua_grunt_m_route121_3": {
+      "id": "team_aqua_grunt_m_route121_3",
+      "npc_id": "team_aqua_grunt_m",
       "map": "Route121",
       "map_id": "MAP_ROUTE121",
       "script": "0x0",
@@ -75923,9 +75363,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1"
     },
-    "aqua_member_m_anonymous_rustborocity_13_21_rustborocity": {
-      "id": "aqua_member_m_anonymous_rustborocity_13_21_rustborocity",
-      "npc_id": "aqua_member_m_anonymous_rustborocity_13_21",
+    "team_aqua_grunt_m_rustborocity": {
+      "id": "team_aqua_grunt_m_rustborocity",
+      "npc_id": "team_aqua_grunt_m",
       "map": "RustboroCity",
       "map_id": "MAP_RUSTBORO_CITY",
       "script": "0x0",
@@ -77323,9 +76763,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_RUSTURF_TUNNEL_BRINEY"
     },
-    "team_rocket_frlg_grunt_rusturftunnel": {
-      "id": "team_rocket_frlg_grunt_rusturftunnel",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_aqua_grunt_m_rusturftunnel": {
+      "id": "team_aqua_grunt_m_rusturftunnel",
+      "npc_id": "team_aqua_grunt_m",
       "map": "RusturfTunnel",
       "map_id": "MAP_RUSTURF_TUNNEL",
       "script": "RusturfTunnel_EventScript_Grunt",
@@ -79823,9 +79263,9 @@
       "battle_id": "trainer_black_belt_koichi",
       "flag": "0"
     },
-    "rocket_m_rocketgrunt1_saffroncity_frlg": {
-      "id": "rocket_m_rocketgrunt1_saffroncity_frlg",
-      "npc_id": "rocket_m_rocketgrunt1",
+    "team_rocket_grunt_m_saffroncity_frlg": {
+      "id": "team_rocket_grunt_m_saffroncity_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SaffronCity_Frlg",
       "map_id": "MAP_SAFFRON_CITY",
       "script": "SaffronCity_EventScript_RocketGrunt1",
@@ -79843,9 +79283,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
-    "rocket_m_rocketgrunt2_saffroncity_frlg": {
-      "id": "rocket_m_rocketgrunt2_saffroncity_frlg",
-      "npc_id": "rocket_m_rocketgrunt2",
+    "team_rocket_grunt_m_saffroncity_frlg_2": {
+      "id": "team_rocket_grunt_m_saffroncity_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SaffronCity_Frlg",
       "map_id": "MAP_SAFFRON_CITY",
       "script": "SaffronCity_EventScript_RocketGrunt2",
@@ -79863,9 +79303,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
-    "rocket_m_rocketgrunt3_saffroncity_frlg": {
-      "id": "rocket_m_rocketgrunt3_saffroncity_frlg",
-      "npc_id": "rocket_m_rocketgrunt3",
+    "team_rocket_grunt_m_saffroncity_frlg_3": {
+      "id": "team_rocket_grunt_m_saffroncity_frlg_3",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SaffronCity_Frlg",
       "map_id": "MAP_SAFFRON_CITY",
       "script": "SaffronCity_EventScript_RocketGrunt3",
@@ -79883,9 +79323,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
-    "rocket_m_rocketgrunt4_saffroncity_frlg": {
-      "id": "rocket_m_rocketgrunt4_saffroncity_frlg",
-      "npc_id": "rocket_m_rocketgrunt4",
+    "team_rocket_grunt_m_saffroncity_frlg_4": {
+      "id": "team_rocket_grunt_m_saffroncity_frlg_4",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SaffronCity_Frlg",
       "map_id": "MAP_SAFFRON_CITY",
       "script": "SaffronCity_EventScript_RocketGrunt4",
@@ -79903,9 +79343,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
-    "rocket_m_rocketgrunt5_saffroncity_frlg": {
-      "id": "rocket_m_rocketgrunt5_saffroncity_frlg",
-      "npc_id": "rocket_m_rocketgrunt5",
+    "team_rocket_grunt_m_saffroncity_frlg_5": {
+      "id": "team_rocket_grunt_m_saffroncity_frlg_5",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SaffronCity_Frlg",
       "map_id": "MAP_SAFFRON_CITY",
       "script": "SaffronCity_EventScript_RocketGrunt5",
@@ -79923,9 +79363,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
-    "rocket_m_doorguardgrunt_saffroncity_frlg": {
-      "id": "rocket_m_doorguardgrunt_saffroncity_frlg",
-      "npc_id": "rocket_m_doorguardgrunt",
+    "team_rocket_grunt_m_saffroncity_frlg_6": {
+      "id": "team_rocket_grunt_m_saffroncity_frlg_6",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SaffronCity_Frlg",
       "map_id": "MAP_SAFFRON_CITY",
       "script": "SaffronCity_EventScript_DoorGuardGrunt",
@@ -79943,9 +79383,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
-    "rocket_m_rocketgrunt7_saffroncity_frlg": {
-      "id": "rocket_m_rocketgrunt7_saffroncity_frlg",
-      "npc_id": "rocket_m_rocketgrunt7",
+    "team_rocket_grunt_m_saffroncity_frlg_7": {
+      "id": "team_rocket_grunt_m_saffroncity_frlg_7",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SaffronCity_Frlg",
       "map_id": "MAP_SAFFRON_CITY",
       "script": "SaffronCity_EventScript_RocketGrunt7",
@@ -79963,9 +79403,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SAFFRON_ROCKETS"
     },
-    "rocket_m_rocketgrunt6_saffroncity_frlg": {
-      "id": "rocket_m_rocketgrunt6_saffroncity_frlg",
-      "npc_id": "rocket_m_rocketgrunt6",
+    "team_rocket_grunt_m_saffroncity_frlg_8": {
+      "id": "team_rocket_grunt_m_saffroncity_frlg_8",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SaffronCity_Frlg",
       "map_id": "MAP_SAFFRON_CITY",
       "script": "SaffronCity_EventScript_RocketGrunt6",
@@ -80863,9 +80303,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_POSTGAME_GOSSIPERS"
     },
-    "team_rocket_frlg_grunt_seafloorcavern_entrance": {
-      "id": "team_rocket_frlg_grunt_seafloorcavern_entrance",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_aqua_grunt_m_seafloorcavern_entrance": {
+      "id": "team_aqua_grunt_m_seafloorcavern_entrance",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SeafloorCavern_Entrance",
       "map_id": "MAP_SEAFLOOR_CAVERN_ENTRANCE",
       "script": "SeafloorCavern_Entrance_EventScript_Grunt",
@@ -80943,9 +80383,9 @@
       "battle_id": null,
       "flag": "FLAG_TEMP_13"
     },
-    "team_aqua_grunt_seafloorcavern_room1": {
-      "id": "team_aqua_grunt_seafloorcavern_room1",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_seafloorcavern_room1": {
+      "id": "team_aqua_grunt_m_seafloorcavern_room1",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SeafloorCavern_Room1",
       "map_id": "MAP_SEAFLOOR_CAVERN_ROOM1",
       "script": "SeafloorCavern_Room1_EventScript_Grunt1",
@@ -80963,9 +80403,9 @@
       "battle_id": "trainer_grunt_seafloor_cavern_1",
       "flag": "FLAG_HIDE_SEAFLOOR_CAVERN_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_seafloorcavern_room1_2": {
-      "id": "team_aqua_grunt_seafloorcavern_room1_2",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_seafloorcavern_room1_2": {
+      "id": "team_aqua_grunt_m_seafloorcavern_room1_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SeafloorCavern_Room1",
       "map_id": "MAP_SEAFLOOR_CAVERN_ROOM1",
       "script": "SeafloorCavern_Room1_EventScript_Grunt2",
@@ -80980,7 +80420,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_seafloor_cavern_2",
       "flag": "FLAG_HIDE_SEAFLOOR_CAVERN_AQUA_GRUNTS"
     },
     "pushable_boulder_anonymous_seafloorcavern_room2_13_3_seafloorcavern_room2": {
@@ -81303,9 +80743,9 @@
       "battle_id": "trainer_shelly_seafloor_cavern",
       "flag": "FLAG_HIDE_SEAFLOOR_CAVERN_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_seafloorcavern_room3": {
-      "id": "team_aqua_grunt_seafloorcavern_room3",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_seafloorcavern_room3": {
+      "id": "team_aqua_grunt_m_seafloorcavern_room3",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SeafloorCavern_Room3",
       "map_id": "MAP_SEAFLOOR_CAVERN_ROOM3",
       "script": "SeafloorCavern_Room3_EventScript_Grunt5",
@@ -81320,12 +80760,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_seafloor_cavern_5",
       "flag": "FLAG_HIDE_SEAFLOOR_CAVERN_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_seafloorcavern_room4": {
-      "id": "team_aqua_grunt_seafloorcavern_room4",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_m_seafloorcavern_room4": {
+      "id": "team_aqua_grunt_m_seafloorcavern_room4",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SeafloorCavern_Room4",
       "map_id": "MAP_SEAFLOOR_CAVERN_ROOM4",
       "script": "SeafloorCavern_Room4_EventScript_Grunt3",
@@ -81340,12 +80780,12 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_seafloor_cavern_3",
       "flag": "FLAG_HIDE_SEAFLOOR_CAVERN_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_seafloorcavern_room4_2": {
-      "id": "team_aqua_grunt_seafloorcavern_room4_2",
-      "npc_id": "team_aqua_grunt",
+    "team_aqua_grunt_f_seafloorcavern_room4": {
+      "id": "team_aqua_grunt_f_seafloorcavern_room4",
+      "npc_id": "team_aqua_grunt_f",
       "map": "SeafloorCavern_Room4",
       "map_id": "MAP_SEAFLOOR_CAVERN_ROOM4",
       "script": "SeafloorCavern_Room4_EventScript_Grunt4",
@@ -81360,7 +80800,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_seafloor_cavern_4",
       "flag": "FLAG_HIDE_SEAFLOOR_CAVERN_AQUA_GRUNTS"
     },
     "pushable_boulder_anonymous_seafloorcavern_room5_3_11_seafloorcavern_room5": {
@@ -81783,9 +81223,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAXIE"
     },
-    "magma_member_m_anonymous_seafloorcavern_room9_8_41_seafloorcavern_room9": {
-      "id": "magma_member_m_anonymous_seafloorcavern_room9_8_41_seafloorcavern_room9",
-      "npc_id": "magma_member_m_anonymous_seafloorcavern_room9_8_41",
+    "team_magma_grunt_m_seafloorcavern_room9": {
+      "id": "team_magma_grunt_m_seafloorcavern_room9",
+      "npc_id": "team_magma_grunt_m",
       "map": "SeafloorCavern_Room9",
       "map_id": "MAP_SEAFLOOR_CAVERN_ROOM9",
       "script": "0x0",
@@ -81803,9 +81243,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAGMA_GRUNTS"
     },
-    "magma_member_f_anonymous_seafloorcavern_room9_8_42_seafloorcavern_room9": {
-      "id": "magma_member_f_anonymous_seafloorcavern_room9_8_42_seafloorcavern_room9",
-      "npc_id": "magma_member_f_anonymous_seafloorcavern_room9_8_42",
+    "team_magma_grunt_f_seafloorcavern_room9": {
+      "id": "team_magma_grunt_f_seafloorcavern_room9",
+      "npc_id": "team_magma_grunt_f",
       "map": "SeafloorCavern_Room9",
       "map_id": "MAP_SEAFLOOR_CAVERN_ROOM9",
       "script": "0x0",
@@ -90642,9 +90082,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_rocket_frlg_grunt_silphco_10f_frlg": {
-      "id": "team_rocket_frlg_grunt_silphco_10f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_10f_frlg": {
+      "id": "team_rocket_grunt_m_silphco_10f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_10F_Frlg",
       "map_id": "MAP_SILPH_CO_10F",
       "script": "SilphCo_10F_EventScript_Grunt",
@@ -90722,9 +90162,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SILPH_ROCKETS"
     },
-    "team_rocket_frlg_grunt_silphco_11f_frlg": {
-      "id": "team_rocket_frlg_grunt_silphco_11f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_11f_frlg": {
+      "id": "team_rocket_grunt_m_silphco_11f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_11F_Frlg",
       "map_id": "MAP_SILPH_CO_11F",
       "script": "SilphCo_11F_EventScript_Grunt1",
@@ -90742,9 +90182,9 @@
       "battle_id": "trainer_team_rocket_grunt_40",
       "flag": "FLAG_HIDE_SILPH_ROCKETS"
     },
-    "team_rocket_frlg_grunt_silphco_11f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_silphco_11f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_11f_frlg_2": {
+      "id": "team_rocket_grunt_m_silphco_11f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_11F_Frlg",
       "map_id": "MAP_SILPH_CO_11F",
       "script": "SilphCo_11F_EventScript_Grunt2",
@@ -90782,9 +90222,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SAFFRON_CIVILIANS"
     },
-    "team_rocket_frlg_grunt_silphco_2f_frlg": {
-      "id": "team_rocket_frlg_grunt_silphco_2f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_2f_frlg": {
+      "id": "team_rocket_grunt_m_silphco_2f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_2F_Frlg",
       "map_id": "MAP_SILPH_CO_2F",
       "script": "SilphCo_2F_EventScript_Grunt2",
@@ -90822,9 +90262,9 @@
       "battle_id": "trainer_scientist_jerry",
       "flag": "FLAG_HIDE_SILPH_ROCKETS"
     },
-    "team_rocket_frlg_grunt_silphco_2f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_silphco_2f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_2f_frlg_2": {
+      "id": "team_rocket_grunt_m_silphco_2f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_2F_Frlg",
       "map_id": "MAP_SILPH_CO_2F",
       "script": "SilphCo_2F_EventScript_Grunt1",
@@ -90882,9 +90322,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_rocket_frlg_grunt_silphco_3f_frlg": {
-      "id": "team_rocket_frlg_grunt_silphco_3f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_3f_frlg": {
+      "id": "team_rocket_grunt_m_silphco_3f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_3F_Frlg",
       "map_id": "MAP_SILPH_CO_3F",
       "script": "SilphCo_3F_EventScript_Grunt",
@@ -90942,9 +90382,9 @@
       "battle_id": "trainer_scientist_jose",
       "flag": "FLAG_HIDE_SILPH_ROCKETS"
     },
-    "team_rocket_frlg_grunt_silphco_4f_frlg": {
-      "id": "team_rocket_frlg_grunt_silphco_4f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_4f_frlg": {
+      "id": "team_rocket_grunt_m_silphco_4f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_4F_Frlg",
       "map_id": "MAP_SILPH_CO_4F",
       "script": "SilphCo_4F_EventScript_Grunt2",
@@ -90962,9 +90402,9 @@
       "battle_id": "trainer_team_rocket_grunt_27",
       "flag": "FLAG_HIDE_SILPH_ROCKETS"
     },
-    "team_rocket_frlg_grunt_silphco_4f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_silphco_4f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_4f_frlg_2": {
+      "id": "team_rocket_grunt_m_silphco_4f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_4F_Frlg",
       "map_id": "MAP_SILPH_CO_4F",
       "script": "SilphCo_4F_EventScript_Grunt1",
@@ -91022,9 +90462,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_rocket_frlg_grunt_silphco_5f_frlg": {
-      "id": "team_rocket_frlg_grunt_silphco_5f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_5f_frlg": {
+      "id": "team_rocket_grunt_m_silphco_5f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_5F_Frlg",
       "map_id": "MAP_SILPH_CO_5F",
       "script": "SilphCo_5F_EventScript_Grunt2",
@@ -91102,9 +90542,9 @@
       "battle_id": "trainer_scientist_beau",
       "flag": "FLAG_HIDE_SILPH_ROCKETS"
     },
-    "team_rocket_frlg_grunt_silphco_5f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_silphco_5f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_5f_frlg_2": {
+      "id": "team_rocket_grunt_m_silphco_5f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_5F_Frlg",
       "map_id": "MAP_SILPH_CO_5F",
       "script": "SilphCo_5F_EventScript_Grunt1",
@@ -91142,9 +90582,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_rocket_frlg_grunt_silphco_6f_frlg": {
-      "id": "team_rocket_frlg_grunt_silphco_6f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_6f_frlg": {
+      "id": "team_rocket_grunt_m_silphco_6f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_6F_Frlg",
       "map_id": "MAP_SILPH_CO_6F",
       "script": "SilphCo_6F_EventScript_Grunt1",
@@ -91282,9 +90722,9 @@
       "battle_id": "trainer_scientist_taylor",
       "flag": "FLAG_HIDE_SILPH_ROCKETS"
     },
-    "team_rocket_frlg_grunt_silphco_6f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_silphco_6f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_6f_frlg_2": {
+      "id": "team_rocket_grunt_m_silphco_6f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_6F_Frlg",
       "map_id": "MAP_SILPH_CO_6F",
       "script": "SilphCo_6F_EventScript_Grunt2",
@@ -91342,9 +90782,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_rocket_frlg_grunt_silphco_7f_frlg": {
-      "id": "team_rocket_frlg_grunt_silphco_7f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_7f_frlg": {
+      "id": "team_rocket_grunt_m_silphco_7f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_7F_Frlg",
       "map_id": "MAP_SILPH_CO_7F",
       "script": "SilphCo_7F_EventScript_Grunt1",
@@ -91362,9 +90802,9 @@
       "battle_id": "trainer_team_rocket_grunt_33",
       "flag": "FLAG_HIDE_SILPH_ROCKETS"
     },
-    "team_rocket_frlg_grunt_silphco_7f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_silphco_7f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_7f_frlg_2": {
+      "id": "team_rocket_grunt_m_silphco_7f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_7F_Frlg",
       "map_id": "MAP_SILPH_CO_7F",
       "script": "SilphCo_7F_EventScript_Grunt2",
@@ -91382,9 +90822,9 @@
       "battle_id": "trainer_team_rocket_grunt_34",
       "flag": "FLAG_HIDE_SILPH_ROCKETS"
     },
-    "team_rocket_frlg_grunt_silphco_7f_frlg_3": {
-      "id": "team_rocket_frlg_grunt_silphco_7f_frlg_3",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_7f_frlg_3": {
+      "id": "team_rocket_grunt_m_silphco_7f_frlg_3",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_7F_Frlg",
       "map_id": "MAP_SILPH_CO_7F",
       "script": "SilphCo_7F_EventScript_Grunt3",
@@ -91482,9 +90922,9 @@
       "battle_id": "trainer_scientist_joshua",
       "flag": "FLAG_HIDE_SILPH_ROCKETS"
     },
-    "team_rocket_frlg_grunt_silphco_8f_frlg": {
-      "id": "team_rocket_frlg_grunt_silphco_8f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_8f_frlg": {
+      "id": "team_rocket_grunt_m_silphco_8f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_8F_Frlg",
       "map_id": "MAP_SILPH_CO_8F",
       "script": "SilphCo_8F_EventScript_Grunt1",
@@ -91502,9 +90942,9 @@
       "battle_id": "trainer_team_rocket_grunt_32",
       "flag": "FLAG_HIDE_SILPH_ROCKETS"
     },
-    "team_rocket_frlg_grunt_silphco_8f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_silphco_8f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_8f_frlg_2": {
+      "id": "team_rocket_grunt_m_silphco_8f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_8F_Frlg",
       "map_id": "MAP_SILPH_CO_8F",
       "script": "SilphCo_8F_EventScript_Grunt2",
@@ -91602,9 +91042,9 @@
       "battle_id": "trainer_scientist_ed",
       "flag": "FLAG_HIDE_SILPH_ROCKETS"
     },
-    "team_rocket_frlg_grunt_silphco_9f_frlg": {
-      "id": "team_rocket_frlg_grunt_silphco_9f_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_9f_frlg": {
+      "id": "team_rocket_grunt_m_silphco_9f_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_9F_Frlg",
       "map_id": "MAP_SILPH_CO_9F",
       "script": "SilphCo_9F_EventScript_Grunt2",
@@ -91642,9 +91082,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_rocket_frlg_grunt_silphco_9f_frlg_2": {
-      "id": "team_rocket_frlg_grunt_silphco_9f_frlg_2",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_silphco_9f_frlg_2": {
+      "id": "team_rocket_grunt_m_silphco_9f_frlg_2",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SilphCo_9F_Frlg",
       "map_id": "MAP_SILPH_CO_9F",
       "script": "SilphCo_9F_EventScript_Grunt1",
@@ -91882,9 +91322,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_rocket_frlg_grunt_sixisland_outcastisland_frlg": {
-      "id": "team_rocket_frlg_grunt_sixisland_outcastisland_frlg",
-      "npc_id": "team_rocket_frlg_grunt",
+    "team_rocket_grunt_m_sixisland_outcastisland_frlg": {
+      "id": "team_rocket_grunt_m_sixisland_outcastisland_frlg",
+      "npc_id": "team_rocket_grunt_m",
       "map": "SixIsland_OutcastIsland_Frlg",
       "map_id": "MAP_SIX_ISLAND_OUTCAST_ISLAND",
       "script": "SixIsland_OutcastIsland_EventScript_Rocket",
@@ -93002,9 +92442,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "aqua_member_f_aquagrunt1_slateportcity": {
-      "id": "aqua_member_f_aquagrunt1_slateportcity",
-      "npc_id": "aqua_member_f_aquagrunt1",
+    "team_aqua_grunt_f_slateportcity": {
+      "id": "team_aqua_grunt_f_slateportcity",
+      "npc_id": "team_aqua_grunt_f",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt1",
@@ -93262,9 +92702,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "aqua_member_m_aquagrunt2_slateportcity": {
-      "id": "aqua_member_m_aquagrunt2_slateportcity",
-      "npc_id": "aqua_member_m_aquagrunt2",
+    "team_aqua_grunt_m_slateportcity": {
+      "id": "team_aqua_grunt_m_slateportcity",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt2",
@@ -93282,9 +92722,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "aqua_member_m_aquagrunt3_slateportcity": {
-      "id": "aqua_member_m_aquagrunt3_slateportcity",
-      "npc_id": "aqua_member_m_aquagrunt3",
+    "team_aqua_grunt_m_slateportcity_2": {
+      "id": "team_aqua_grunt_m_slateportcity_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt3",
@@ -93422,9 +92862,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "aqua_member_m_aquagrunt4_slateportcity": {
-      "id": "aqua_member_m_aquagrunt4_slateportcity",
-      "npc_id": "aqua_member_m_aquagrunt4",
+    "team_aqua_grunt_m_slateportcity_3": {
+      "id": "team_aqua_grunt_m_slateportcity_3",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt4",
@@ -93442,9 +92882,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "aqua_member_m_aquagrunt5_slateportcity": {
-      "id": "aqua_member_m_aquagrunt5_slateportcity",
-      "npc_id": "aqua_member_m_aquagrunt5",
+    "team_aqua_grunt_m_slateportcity_4": {
+      "id": "team_aqua_grunt_m_slateportcity_4",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt5",
@@ -93462,9 +92902,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "aqua_member_m_aquagrunt6_slateportcity": {
-      "id": "aqua_member_m_aquagrunt6_slateportcity",
-      "npc_id": "aqua_member_m_aquagrunt6",
+    "team_aqua_grunt_m_slateportcity_5": {
+      "id": "team_aqua_grunt_m_slateportcity_5",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt6",
@@ -93482,9 +92922,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "aqua_member_m_aquagrunt7_slateportcity": {
-      "id": "aqua_member_m_aquagrunt7_slateportcity",
-      "npc_id": "aqua_member_m_aquagrunt7",
+    "team_aqua_grunt_m_slateportcity_6": {
+      "id": "team_aqua_grunt_m_slateportcity_6",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt7",
@@ -93502,9 +92942,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "aqua_member_m_aquagrunt8_slateportcity": {
-      "id": "aqua_member_m_aquagrunt8_slateportcity",
-      "npc_id": "aqua_member_m_aquagrunt8",
+    "team_aqua_grunt_m_slateportcity_7": {
+      "id": "team_aqua_grunt_m_slateportcity_7",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt8",
@@ -93522,9 +92962,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "aqua_member_m_aquagrunt9_slateportcity": {
-      "id": "aqua_member_m_aquagrunt9_slateportcity",
-      "npc_id": "aqua_member_m_aquagrunt9",
+    "team_aqua_grunt_m_slateportcity_8": {
+      "id": "team_aqua_grunt_m_slateportcity_8",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt9",
@@ -93542,9 +92982,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "aqua_member_m_aquagrunt10_slateportcity": {
-      "id": "aqua_member_m_aquagrunt10_slateportcity",
-      "npc_id": "aqua_member_m_aquagrunt10",
+    "team_aqua_grunt_m_slateportcity_9": {
+      "id": "team_aqua_grunt_m_slateportcity_9",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt10",
@@ -93562,9 +93002,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "aqua_member_m_aquagrunt11_slateportcity": {
-      "id": "aqua_member_m_aquagrunt11_slateportcity",
-      "npc_id": "aqua_member_m_aquagrunt11",
+    "team_aqua_grunt_m_slateportcity_10": {
+      "id": "team_aqua_grunt_m_slateportcity_10",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt11",
@@ -93902,9 +93342,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_SS_TIDAL"
     },
-    "aqua_member_m_anonymous_slateportcity_harbor_7_10_slateportcity_harbor": {
-      "id": "aqua_member_m_anonymous_slateportcity_harbor_7_10_slateportcity_harbor",
-      "npc_id": "aqua_member_m_anonymous_slateportcity_harbor_7_10",
+    "team_aqua_grunt_m_slateportcity_harbor": {
+      "id": "team_aqua_grunt_m_slateportcity_harbor",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity_Harbor",
       "map_id": "MAP_SLATEPORT_CITY_HARBOR",
       "script": "0x0",
@@ -94102,9 +93542,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "aqua_member_m_museumgrunt3_slateportcity_oceanicmuseum_1f": {
-      "id": "aqua_member_m_museumgrunt3_slateportcity_oceanicmuseum_1f",
-      "npc_id": "aqua_member_m_museumgrunt3",
+    "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f": {
+      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt3",
@@ -94122,9 +93562,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS"
     },
-    "aqua_member_m_museumgrunt4_slateportcity_oceanicmuseum_1f": {
-      "id": "aqua_member_m_museumgrunt4_slateportcity_oceanicmuseum_1f",
-      "npc_id": "aqua_member_m_museumgrunt4",
+    "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_2": {
+      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt4",
@@ -94142,9 +93582,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS"
     },
-    "aqua_member_m_museumgrunt2_slateportcity_oceanicmuseum_1f": {
-      "id": "aqua_member_m_museumgrunt2_slateportcity_oceanicmuseum_1f",
-      "npc_id": "aqua_member_m_museumgrunt2",
+    "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_3": {
+      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_3",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt2",
@@ -94162,9 +93602,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS"
     },
-    "aqua_member_f_museumgrunt1_slateportcity_oceanicmuseum_1f": {
-      "id": "aqua_member_f_museumgrunt1_slateportcity_oceanicmuseum_1f",
-      "npc_id": "aqua_member_f_museumgrunt1",
+    "team_aqua_grunt_f_slateportcity_oceanicmuseum_1f": {
+      "id": "team_aqua_grunt_f_slateportcity_oceanicmuseum_1f",
+      "npc_id": "team_aqua_grunt_f",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt1",
@@ -94182,9 +93622,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS"
     },
-    "aqua_member_m_museumgrunt5_slateportcity_oceanicmuseum_1f": {
-      "id": "aqua_member_m_museumgrunt5_slateportcity_oceanicmuseum_1f",
-      "npc_id": "aqua_member_m_museumgrunt5",
+    "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_4": {
+      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_4",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt5",
@@ -94222,9 +93662,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "aqua_member_m_museumgrunt6_slateportcity_oceanicmuseum_1f": {
-      "id": "aqua_member_m_museumgrunt6_slateportcity_oceanicmuseum_1f",
-      "npc_id": "aqua_member_m_museumgrunt6",
+    "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_5": {
+      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_5",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt6",
@@ -94322,9 +93762,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_MUSEUM_POPULATION"
     },
-    "aqua_member_m_familiargrunt_slateportcity_oceanicmuseum_1f": {
-      "id": "aqua_member_m_familiargrunt_slateportcity_oceanicmuseum_1f",
-      "npc_id": "aqua_member_m_familiargrunt",
+    "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_6": {
+      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_6",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGrunt",
@@ -94402,9 +93842,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_ARCHIE"
     },
-    "aqua_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1_slateportcity_oceanicmuseum_2f": {
-      "id": "aqua_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1_slateportcity_oceanicmuseum_2f",
-      "npc_id": "aqua_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1",
+    "team_aqua_grunt_m_slateportcity_oceanicmuseum_2f": {
+      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_2f",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity_OceanicMuseum_2F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_2F",
       "script": "0x0",
@@ -94422,9 +93862,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_AQUA_GRUNT_1"
     },
-    "aqua_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1_slateportcity_oceanicmuseum_2f_2": {
-      "id": "aqua_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1_slateportcity_oceanicmuseum_2f_2",
-      "npc_id": "aqua_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1",
+    "team_aqua_grunt_m_slateportcity_oceanicmuseum_2f_2": {
+      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_2f_2",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity_OceanicMuseum_2F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_2F",
       "script": "0x0",
@@ -102899,36 +102339,63 @@
     },
     "trainer_grunt_aqua_hideout_1": {
       "id": "trainer_grunt_aqua_hideout_1",
-      "npc_id": "team_aqua_grunt",
+      "npc_id": "team_aqua_grunt_m",
       "trainer_id": "TRAINER_GRUNT_AQUA_HIDEOUT_1",
-      "rematch_trainer_ids": [
-        "TRAINER_GRUNT_AQUA_HIDEOUT_2",
-        "TRAINER_GRUNT_AQUA_HIDEOUT_3",
-        "TRAINER_GRUNT_AQUA_HIDEOUT_4",
-        "TRAINER_GRUNT_AQUA_HIDEOUT_5",
-        "TRAINER_GRUNT_AQUA_HIDEOUT_6",
-        "TRAINER_GRUNT_AQUA_HIDEOUT_7",
-        "TRAINER_GRUNT_AQUA_HIDEOUT_8"
-      ],
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_aqua_hideout_2": {
+      "id": "trainer_grunt_aqua_hideout_2",
+      "npc_id": "team_aqua_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_AQUA_HIDEOUT_2",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_aqua_hideout_3": {
+      "id": "trainer_grunt_aqua_hideout_3",
+      "npc_id": "team_aqua_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_AQUA_HIDEOUT_3",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_aqua_hideout_4": {
+      "id": "trainer_grunt_aqua_hideout_4",
+      "npc_id": "team_aqua_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_AQUA_HIDEOUT_4",
+      "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
     },
     "trainer_grunt_seafloor_cavern_1": {
       "id": "trainer_grunt_seafloor_cavern_1",
-      "npc_id": "team_aqua_grunt",
+      "npc_id": "team_aqua_grunt_m",
       "trainer_id": "TRAINER_GRUNT_SEAFLOOR_CAVERN_1",
-      "rematch_trainer_ids": [
-        "TRAINER_GRUNT_SEAFLOOR_CAVERN_2",
-        "TRAINER_GRUNT_SEAFLOOR_CAVERN_3",
-        "TRAINER_GRUNT_SEAFLOOR_CAVERN_4",
-        "TRAINER_GRUNT_SEAFLOOR_CAVERN_5"
-      ],
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_seafloor_cavern_2": {
+      "id": "trainer_grunt_seafloor_cavern_2",
+      "npc_id": "team_aqua_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_SEAFLOOR_CAVERN_2",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_seafloor_cavern_3": {
+      "id": "trainer_grunt_seafloor_cavern_3",
+      "npc_id": "team_aqua_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_SEAFLOOR_CAVERN_3",
+      "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
     },
     "trainer_grunt_petalburg_woods": {
       "id": "trainer_grunt_petalburg_woods",
-      "npc_id": "team_aqua_grunt",
+      "npc_id": "team_aqua_grunt_m",
       "trainer_id": "TRAINER_GRUNT_PETALBURG_WOODS",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -102936,7 +102403,7 @@
     },
     "trainer_grunt_rusturf_tunnel": {
       "id": "trainer_grunt_rusturf_tunnel",
-      "npc_id": "team_aqua_grunt",
+      "npc_id": "team_aqua_grunt_m",
       "trainer_id": "TRAINER_GRUNT_RUSTURF_TUNNEL",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -102944,36 +102411,81 @@
     },
     "trainer_grunt_weather_inst_1": {
       "id": "trainer_grunt_weather_inst_1",
-      "npc_id": "team_aqua_grunt",
+      "npc_id": "team_aqua_grunt_m",
       "trainer_id": "TRAINER_GRUNT_WEATHER_INST_1",
-      "rematch_trainer_ids": [
-        "TRAINER_GRUNT_WEATHER_INST_2",
-        "TRAINER_GRUNT_WEATHER_INST_3",
-        "TRAINER_GRUNT_WEATHER_INST_4",
-        "TRAINER_GRUNT_WEATHER_INST_5"
-      ],
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_weather_inst_2": {
+      "id": "trainer_grunt_weather_inst_2",
+      "npc_id": "team_aqua_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_WEATHER_INST_2",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_weather_inst_3": {
+      "id": "trainer_grunt_weather_inst_3",
+      "npc_id": "team_aqua_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_WEATHER_INST_3",
+      "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
     },
     "trainer_grunt_museum_1": {
       "id": "trainer_grunt_museum_1",
-      "npc_id": "team_aqua_grunt",
+      "npc_id": "team_aqua_grunt_m",
       "trainer_id": "TRAINER_GRUNT_MUSEUM_1",
-      "rematch_trainer_ids": [
-        "TRAINER_GRUNT_MUSEUM_2"
-      ],
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_museum_2": {
+      "id": "trainer_grunt_museum_2",
+      "npc_id": "team_aqua_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MUSEUM_2",
+      "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
     },
     "trainer_grunt_mt_pyre_1": {
       "id": "trainer_grunt_mt_pyre_1",
-      "npc_id": "team_aqua_grunt",
+      "npc_id": "team_aqua_grunt_m",
       "trainer_id": "TRAINER_GRUNT_MT_PYRE_1",
-      "rematch_trainer_ids": [
-        "TRAINER_GRUNT_MT_PYRE_2",
-        "TRAINER_GRUNT_MT_PYRE_3",
-        "TRAINER_GRUNT_MT_PYRE_4"
-      ],
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_mt_pyre_2": {
+      "id": "trainer_grunt_mt_pyre_2",
+      "npc_id": "team_aqua_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MT_PYRE_2",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_mt_pyre_3": {
+      "id": "trainer_grunt_mt_pyre_3",
+      "npc_id": "team_aqua_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MT_PYRE_3",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_aqua_hideout_8": {
+      "id": "trainer_grunt_aqua_hideout_8",
+      "npc_id": "team_aqua_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_AQUA_HIDEOUT_8",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_seafloor_cavern_5": {
+      "id": "trainer_grunt_seafloor_cavern_5",
+      "npc_id": "team_aqua_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_SEAFLOOR_CAVERN_5",
+      "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
     },
@@ -103014,6 +102526,62 @@
       "double_battle": false,
       "notes": ""
     },
+    "trainer_grunt_seafloor_cavern_4": {
+      "id": "trainer_grunt_seafloor_cavern_4",
+      "npc_id": "team_aqua_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_SEAFLOOR_CAVERN_4",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_weather_inst_4": {
+      "id": "trainer_grunt_weather_inst_4",
+      "npc_id": "team_aqua_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_WEATHER_INST_4",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_aqua_hideout_5": {
+      "id": "trainer_grunt_aqua_hideout_5",
+      "npc_id": "team_aqua_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_AQUA_HIDEOUT_5",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_aqua_hideout_6": {
+      "id": "trainer_grunt_aqua_hideout_6",
+      "npc_id": "team_aqua_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_AQUA_HIDEOUT_6",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_aqua_hideout_7": {
+      "id": "trainer_grunt_aqua_hideout_7",
+      "npc_id": "team_aqua_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_AQUA_HIDEOUT_7",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_mt_pyre_4": {
+      "id": "trainer_grunt_mt_pyre_4",
+      "npc_id": "team_aqua_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_MT_PYRE_4",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_weather_inst_5": {
+      "id": "trainer_grunt_weather_inst_5",
+      "npc_id": "team_aqua_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_WEATHER_INST_5",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
     "trainer_declan": {
       "id": "trainer_declan",
       "npc_id": "swimmer_m_declan",
@@ -103024,66 +102592,169 @@
     },
     "trainer_grunt_space_center_1": {
       "id": "trainer_grunt_space_center_1",
-      "npc_id": "team_magma_grunt",
+      "npc_id": "team_magma_grunt_m",
       "trainer_id": "TRAINER_GRUNT_SPACE_CENTER_1",
-      "rematch_trainer_ids": [
-        "TRAINER_GRUNT_SPACE_CENTER_2",
-        "TRAINER_GRUNT_SPACE_CENTER_3",
-        "TRAINER_GRUNT_SPACE_CENTER_4",
-        "TRAINER_GRUNT_SPACE_CENTER_5",
-        "TRAINER_GRUNT_SPACE_CENTER_6",
-        "TRAINER_GRUNT_SPACE_CENTER_7"
-      ],
+      "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
     },
-    "trainer_grunt_mt_chimney_1": {
-      "id": "trainer_grunt_mt_chimney_1",
-      "npc_id": "team_magma_grunt",
-      "trainer_id": "TRAINER_GRUNT_MT_CHIMNEY_1",
-      "rematch_trainer_ids": [
-        "TRAINER_GRUNT_MT_CHIMNEY_2"
-      ],
-      "double_battle": false,
-      "notes": ""
-    },
-    "trainer_grunt_unused": {
-      "id": "trainer_grunt_unused",
-      "npc_id": "team_magma_grunt",
-      "trainer_id": "TRAINER_GRUNT_UNUSED",
+    "trainer_grunt_space_center_2": {
+      "id": "trainer_grunt_space_center_2",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_SPACE_CENTER_2",
       "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
     },
     "trainer_grunt_jagged_pass": {
       "id": "trainer_grunt_jagged_pass",
-      "npc_id": "team_magma_grunt",
+      "npc_id": "team_magma_grunt_m",
       "trainer_id": "TRAINER_GRUNT_JAGGED_PASS",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_mt_chimney_2": {
+      "id": "trainer_grunt_mt_chimney_2",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MT_CHIMNEY_2",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_space_center_4": {
+      "id": "trainer_grunt_space_center_4",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_SPACE_CENTER_4",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_space_center_5": {
+      "id": "trainer_grunt_space_center_5",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_SPACE_CENTER_5",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_space_center_6": {
+      "id": "trainer_grunt_space_center_6",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_SPACE_CENTER_6",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_space_center_7": {
+      "id": "trainer_grunt_space_center_7",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_SPACE_CENTER_7",
       "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
     },
     "trainer_grunt_magma_hideout_1": {
       "id": "trainer_grunt_magma_hideout_1",
-      "npc_id": "team_magma_grunt",
+      "npc_id": "team_magma_grunt_m",
       "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_1",
-      "rematch_trainer_ids": [
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_2",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_3",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_4",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_5",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_6",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_7",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_8",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_9",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_10",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_11",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_12",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_13",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_14",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_15",
-        "TRAINER_GRUNT_MAGMA_HIDEOUT_16"
-      ],
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_2": {
+      "id": "trainer_grunt_magma_hideout_2",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_2",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_3": {
+      "id": "trainer_grunt_magma_hideout_3",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_3",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_4": {
+      "id": "trainer_grunt_magma_hideout_4",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_4",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_5": {
+      "id": "trainer_grunt_magma_hideout_5",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_5",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_6": {
+      "id": "trainer_grunt_magma_hideout_6",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_6",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_7": {
+      "id": "trainer_grunt_magma_hideout_7",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_7",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_8": {
+      "id": "trainer_grunt_magma_hideout_8",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_8",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_9": {
+      "id": "trainer_grunt_magma_hideout_9",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_9",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_10": {
+      "id": "trainer_grunt_magma_hideout_10",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_10",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_11": {
+      "id": "trainer_grunt_magma_hideout_11",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_11",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_12": {
+      "id": "trainer_grunt_magma_hideout_12",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_12",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_13": {
+      "id": "trainer_grunt_magma_hideout_13",
+      "npc_id": "team_magma_grunt_m",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_13",
+      "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
     },
@@ -103710,6 +103381,54 @@
       "id": "trainer_mark",
       "npc_id": "pokemaniac_mark",
       "trainer_id": "TRAINER_MARK",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_mt_chimney_1": {
+      "id": "trainer_grunt_mt_chimney_1",
+      "npc_id": "team_magma_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_MT_CHIMNEY_1",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_unused": {
+      "id": "trainer_grunt_unused",
+      "npc_id": "team_magma_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_UNUSED",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_space_center_3": {
+      "id": "trainer_grunt_space_center_3",
+      "npc_id": "team_magma_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_SPACE_CENTER_3",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_14": {
+      "id": "trainer_grunt_magma_hideout_14",
+      "npc_id": "team_magma_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_14",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_15": {
+      "id": "trainer_grunt_magma_hideout_15",
+      "npc_id": "team_magma_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_15",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_grunt_magma_hideout_16": {
+      "id": "trainer_grunt_magma_hideout_16",
+      "npc_id": "team_magma_grunt_f",
+      "trainer_id": "TRAINER_GRUNT_MAGMA_HIDEOUT_16",
       "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
@@ -110002,7 +109721,7 @@
     },
     "trainer_team_rocket_grunt": {
       "id": "trainer_team_rocket_grunt",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110010,7 +109729,7 @@
     },
     "trainer_team_rocket_grunt_2": {
       "id": "trainer_team_rocket_grunt_2",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_2",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110018,7 +109737,7 @@
     },
     "trainer_team_rocket_grunt_3": {
       "id": "trainer_team_rocket_grunt_3",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_3",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110026,7 +109745,7 @@
     },
     "trainer_team_rocket_grunt_4": {
       "id": "trainer_team_rocket_grunt_4",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_4",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110034,7 +109753,7 @@
     },
     "trainer_team_rocket_grunt_5": {
       "id": "trainer_team_rocket_grunt_5",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_5",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110042,7 +109761,7 @@
     },
     "trainer_team_rocket_grunt_6": {
       "id": "trainer_team_rocket_grunt_6",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_6",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110050,7 +109769,7 @@
     },
     "trainer_team_rocket_grunt_7": {
       "id": "trainer_team_rocket_grunt_7",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_7",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110058,7 +109777,7 @@
     },
     "trainer_team_rocket_grunt_8": {
       "id": "trainer_team_rocket_grunt_8",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_8",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110066,7 +109785,7 @@
     },
     "trainer_team_rocket_grunt_9": {
       "id": "trainer_team_rocket_grunt_9",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_9",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110074,7 +109793,7 @@
     },
     "trainer_team_rocket_grunt_10": {
       "id": "trainer_team_rocket_grunt_10",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_10",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110082,7 +109801,7 @@
     },
     "trainer_team_rocket_grunt_11": {
       "id": "trainer_team_rocket_grunt_11",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_11",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110090,7 +109809,7 @@
     },
     "trainer_team_rocket_grunt_12": {
       "id": "trainer_team_rocket_grunt_12",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_12",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110098,7 +109817,7 @@
     },
     "trainer_team_rocket_grunt_13": {
       "id": "trainer_team_rocket_grunt_13",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_13",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110106,7 +109825,7 @@
     },
     "trainer_team_rocket_grunt_14": {
       "id": "trainer_team_rocket_grunt_14",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_14",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110114,7 +109833,7 @@
     },
     "trainer_team_rocket_grunt_15": {
       "id": "trainer_team_rocket_grunt_15",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_15",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110122,7 +109841,7 @@
     },
     "trainer_team_rocket_grunt_16": {
       "id": "trainer_team_rocket_grunt_16",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_16",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110130,7 +109849,7 @@
     },
     "trainer_team_rocket_grunt_17": {
       "id": "trainer_team_rocket_grunt_17",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_17",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110138,7 +109857,7 @@
     },
     "trainer_team_rocket_grunt_18": {
       "id": "trainer_team_rocket_grunt_18",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_18",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110146,7 +109865,7 @@
     },
     "trainer_team_rocket_grunt_19": {
       "id": "trainer_team_rocket_grunt_19",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_19",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110154,7 +109873,7 @@
     },
     "trainer_team_rocket_grunt_20": {
       "id": "trainer_team_rocket_grunt_20",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_20",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110162,7 +109881,7 @@
     },
     "trainer_team_rocket_grunt_21": {
       "id": "trainer_team_rocket_grunt_21",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_21",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110170,7 +109889,7 @@
     },
     "trainer_team_rocket_grunt_22": {
       "id": "trainer_team_rocket_grunt_22",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_22",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110178,7 +109897,7 @@
     },
     "trainer_team_rocket_grunt_23": {
       "id": "trainer_team_rocket_grunt_23",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_23",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110186,7 +109905,7 @@
     },
     "trainer_team_rocket_grunt_24": {
       "id": "trainer_team_rocket_grunt_24",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_24",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110194,7 +109913,7 @@
     },
     "trainer_team_rocket_grunt_25": {
       "id": "trainer_team_rocket_grunt_25",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_25",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110202,7 +109921,7 @@
     },
     "trainer_team_rocket_grunt_26": {
       "id": "trainer_team_rocket_grunt_26",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_26",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110210,7 +109929,7 @@
     },
     "trainer_team_rocket_grunt_27": {
       "id": "trainer_team_rocket_grunt_27",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_27",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110218,7 +109937,7 @@
     },
     "trainer_team_rocket_grunt_28": {
       "id": "trainer_team_rocket_grunt_28",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_28",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110226,7 +109945,7 @@
     },
     "trainer_team_rocket_grunt_29": {
       "id": "trainer_team_rocket_grunt_29",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_29",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110234,7 +109953,7 @@
     },
     "trainer_team_rocket_grunt_30": {
       "id": "trainer_team_rocket_grunt_30",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_30",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110242,7 +109961,7 @@
     },
     "trainer_team_rocket_grunt_31": {
       "id": "trainer_team_rocket_grunt_31",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_31",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110250,7 +109969,7 @@
     },
     "trainer_team_rocket_grunt_32": {
       "id": "trainer_team_rocket_grunt_32",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_32",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110258,7 +109977,7 @@
     },
     "trainer_team_rocket_grunt_33": {
       "id": "trainer_team_rocket_grunt_33",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_33",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110266,7 +109985,7 @@
     },
     "trainer_team_rocket_grunt_34": {
       "id": "trainer_team_rocket_grunt_34",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_34",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110274,7 +109993,7 @@
     },
     "trainer_team_rocket_grunt_35": {
       "id": "trainer_team_rocket_grunt_35",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_35",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110282,7 +110001,7 @@
     },
     "trainer_team_rocket_grunt_36": {
       "id": "trainer_team_rocket_grunt_36",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_36",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110290,7 +110009,7 @@
     },
     "trainer_team_rocket_grunt_37": {
       "id": "trainer_team_rocket_grunt_37",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_37",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110298,7 +110017,7 @@
     },
     "trainer_team_rocket_grunt_38": {
       "id": "trainer_team_rocket_grunt_38",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_38",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110306,7 +110025,7 @@
     },
     "trainer_team_rocket_grunt_39": {
       "id": "trainer_team_rocket_grunt_39",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_39",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110314,7 +110033,7 @@
     },
     "trainer_team_rocket_grunt_40": {
       "id": "trainer_team_rocket_grunt_40",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_40",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110322,23 +110041,15 @@
     },
     "trainer_team_rocket_grunt_41": {
       "id": "trainer_team_rocket_grunt_41",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_41",
-      "rematch_trainer_ids": [],
-      "double_battle": false,
-      "notes": ""
-    },
-    "trainer_team_rocket_grunt_42": {
-      "id": "trainer_team_rocket_grunt_42",
-      "npc_id": "team_rocket_frlg_grunt",
-      "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_42",
       "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
     },
     "trainer_team_rocket_grunt_43": {
       "id": "trainer_team_rocket_grunt_43",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_43",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110346,7 +110057,7 @@
     },
     "trainer_team_rocket_grunt_44": {
       "id": "trainer_team_rocket_grunt_44",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_44",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110354,7 +110065,7 @@
     },
     "trainer_team_rocket_grunt_45": {
       "id": "trainer_team_rocket_grunt_45",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_45",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110362,7 +110073,7 @@
     },
     "trainer_team_rocket_grunt_46": {
       "id": "trainer_team_rocket_grunt_46",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_46",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110370,7 +110081,7 @@
     },
     "trainer_team_rocket_grunt_47": {
       "id": "trainer_team_rocket_grunt_47",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_47",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110378,7 +110089,7 @@
     },
     "trainer_team_rocket_grunt_48": {
       "id": "trainer_team_rocket_grunt_48",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_48",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110386,7 +110097,7 @@
     },
     "trainer_team_rocket_grunt_49": {
       "id": "trainer_team_rocket_grunt_49",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_49",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -110394,16 +110105,8 @@
     },
     "trainer_team_rocket_grunt_50": {
       "id": "trainer_team_rocket_grunt_50",
-      "npc_id": "team_rocket_frlg_grunt",
+      "npc_id": "team_rocket_grunt_m",
       "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_50",
-      "rematch_trainer_ids": [],
-      "double_battle": false,
-      "notes": ""
-    },
-    "trainer_team_rocket_grunt_51": {
-      "id": "trainer_team_rocket_grunt_51",
-      "npc_id": "team_rocket_frlg_grunt",
-      "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_51",
       "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
@@ -111340,6 +111043,22 @@
       "id": "trainer_pkmn_prof_prof_oak",
       "npc_id": "pkmn_prof_frlg_prof_oak",
       "trainer_id": "TRAINER_PKMN_PROF_PROF_OAK",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_team_rocket_grunt_42": {
+      "id": "trainer_team_rocket_grunt_42",
+      "npc_id": "team_rocket_grunt_f",
+      "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_42",
+      "rematch_trainer_ids": [],
+      "double_battle": false,
+      "notes": ""
+    },
+    "trainer_team_rocket_grunt_51": {
+      "id": "trainer_team_rocket_grunt_51",
+      "npc_id": "team_rocket_grunt_f",
+      "trainer_id": "TRAINER_TEAM_ROCKET_GRUNT_51",
       "rematch_trainer_ids": [],
       "double_battle": false,
       "notes": ""
