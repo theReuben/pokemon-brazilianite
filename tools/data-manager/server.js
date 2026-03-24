@@ -650,6 +650,107 @@ app.delete('/api/music/file/:filename', (req, res) => {
     } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+// ─── NPC Registry ────────────────────────────────────────────────────────────
+
+const REGISTRY_PATH = path.join(ROOT, 'editor/npc_registry.json');
+
+function loadRegistry() {
+    if (!fs.existsSync(REGISTRY_PATH)) return null;
+    return JSON.parse(fs.readFileSync(REGISTRY_PATH, 'utf-8'));
+}
+
+// GET /api/npc-registry — full registry
+app.get('/api/npc-registry', (req, res) => {
+    try {
+        const registry = loadRegistry();
+        if (!registry) return res.status(404).json({ error: 'NPC registry not found. Run build_npc_registry.js first.' });
+        res.json(registry);
+    } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// PUT /api/npc-registry — overwrite the registry
+app.put('/api/npc-registry', (req, res) => {
+    try {
+        fs.writeFileSync(REGISTRY_PATH, JSON.stringify(req.body, null, 2));
+        res.json({ success: true });
+    } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// GET /api/npcs — list NPCs with optional ?class= and ?search= filters
+app.get('/api/npcs', (req, res) => {
+    try {
+        const registry = loadRegistry();
+        if (!registry) return res.status(404).json({ error: 'NPC registry not found.' });
+
+        let npcs = Object.values(registry.npcs);
+        const classFilter = req.query.class;
+        const search = (req.query.search || '').toLowerCase();
+
+        if (classFilter) {
+            npcs = npcs.filter(n => n.class.toLowerCase() === classFilter.toLowerCase());
+        }
+        if (search) {
+            npcs = npcs.filter(n =>
+                n.name.toLowerCase().includes(search) ||
+                n.class.toLowerCase().includes(search) ||
+                n.id.toLowerCase().includes(search)
+            );
+        }
+
+        // Enrich with counts
+        const result = npcs.map(n => ({
+            ...n,
+            appearance_count: Object.values(registry.appearances).filter(a => a.npc_id === n.id).length,
+            battle_count: Object.values(registry.battles).filter(b => b.npc_id === n.id).length,
+        }));
+
+        res.json(result);
+    } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// GET /api/npcs/:id — single NPC with appearances and battles
+app.get('/api/npcs/:id', (req, res) => {
+    try {
+        const registry = loadRegistry();
+        if (!registry) return res.status(404).json({ error: 'NPC registry not found.' });
+
+        const npc = registry.npcs[req.params.id];
+        if (!npc) return res.status(404).json({ error: `NPC '${req.params.id}' not found.` });
+
+        const appearances = Object.values(registry.appearances).filter(a => a.npc_id === npc.id);
+        const battles = Object.values(registry.battles).filter(b => b.npc_id === npc.id);
+        const spriteSet = npc.sprite_set ? registry.sprite_sets[npc.sprite_set] : null;
+
+        res.json({ ...npc, appearances, battles, sprite_set_detail: spriteSet });
+    } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// GET /api/sprite-sets — list all sprite sets
+app.get('/api/sprite-sets', (req, res) => {
+    try {
+        const registry = loadRegistry();
+        if (!registry) return res.status(404).json({ error: 'NPC registry not found.' });
+        res.json(Object.values(registry.sprite_sets));
+    } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// POST /api/npc-registry/rebuild — regenerate registry from game data
+app.post('/api/npc-registry/rebuild', (req, res) => {
+    try {
+        const { buildRegistry } = require('./build_npc_registry');
+        const registry = buildRegistry();
+        res.json({
+            success: true,
+            stats: {
+                sprite_sets: Object.keys(registry.sprite_sets).length,
+                npcs: Object.keys(registry.npcs).length,
+                appearances: Object.keys(registry.appearances).length,
+                battles: Object.keys(registry.battles).length,
+            }
+        });
+    } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
 // Dashboard stats
 app.get('/api/stats', (req, res) => {
     try {
