@@ -1306,7 +1306,7 @@ async function openTrainerModal(trainer, isNew, onSaveCallback) {
                 </div>
                 <div class="form-group">
                     <label>AI Flags</label>
-                    ${makeDatalistHtml('t-ai', trainer.ai || '', AI_PRESETS, 'placeholder="e.g. Check Bad Move / Try To Faint"')}
+                    ${makeMultiSelectHtml('t-ai', trainer.ai || '', AI_FLAG_OPTIONS, AI_FLAG_GROUPS)}
                 </div>
             </div>
             <div class="form-row">
@@ -2213,7 +2213,35 @@ const ENC_ICONS = { land_mons: '&#127793;', water_mons: '&#127754;', rock_smash_
 const TRAINER_TYPES_LIST = ['TRAINER_TYPE_NONE', 'TRAINER_TYPE_NORMAL', 'TRAINER_TYPE_SEE_ALL_DIRECTIONS', 'TRAINER_TYPE_BURIED'];
 const MUGSHOT_OPTIONS = ['', 'Purple', 'Green', 'Pink', 'Blue', 'Yellow'];
 const AI_FLAG_OPTIONS = ['Check Bad Move','Try To Faint','Check Viability','Force Setup First Turn','Risky','Try To 2HKO','Prefer Baton Pass','Double Battle','HP Aware','Powerful Status','Negate Unaware','Will Suicide','Prefer Status Moves','Stall','Smart Switching','Ace Pokemon','Omniscient','Smart Mon Choices','Conservative','Sequence Switching','Double Ace Pokemon','Weigh Ability Prediction','Prefer Highest Damage Move','Predict Switch','Predict Incoming Mon','PP Stall Prevention','Predict Move','Smart Tera','Assume STAB','Assume Status Moves'];
-const AI_PRESETS = ['Basic Trainer','Check Bad Move','Check Bad Move / Try To Faint','Check Bad Move / Try To Faint / Force Setup First Turn','Basic Trainer / Force Setup First Turn','Basic Trainer / Risky'];
+const AI_FLAG_OPTIONS = [
+    '__GROUP_CORE__',
+    'Check Bad Move', 'Try To Faint', 'Check Viability',
+    '__GROUP_BEHAVIOR__',
+    'Force Setup First Turn', 'Risky', 'Conservative', 'Stall',
+    'Will Suicide', 'Prefer Status Moves', 'Powerful Status',
+    'Prefer Baton Pass', 'Prefer Highest Damage Move',
+    'Hp Aware', 'Try To 2hko',
+    '__GROUP_KNOWLEDGE__',
+    'Omniscient', 'Assume Stab', 'Assume Status Moves',
+    'Negate Unaware', 'Know Opponent Party',
+    '__GROUP_SWITCHING__',
+    'Smart Switching', 'Smart Mon Choices', 'Sequence Switching',
+    'Randomize Switchin', 'Randomize Party Indices',
+    '__GROUP_PREDICTION__',
+    'Predict Switch', 'Predict Incoming Mon', 'Predict Move',
+    'Weigh Ability Prediction', 'Pp Stall Prevention',
+    '__GROUP_SPECIAL__',
+    'Ace Pokemon', 'Double Ace Pokemon', 'Smart Tera',
+    'Attacks Partner', 'Double Battle',
+];
+const AI_FLAG_GROUPS = {
+    '__GROUP_CORE__': 'Core',
+    '__GROUP_BEHAVIOR__': 'Behavior',
+    '__GROUP_KNOWLEDGE__': 'Knowledge',
+    '__GROUP_SWITCHING__': 'Switching',
+    '__GROUP_PREDICTION__': 'Prediction',
+    '__GROUP_SPECIAL__': 'Special',
+};
 const STARTING_STATUS_OPTIONS = [
     '__GROUP_WEATHER__',
     'Rain', 'Rain Temporary', 'Sun', 'Sun Temporary',
