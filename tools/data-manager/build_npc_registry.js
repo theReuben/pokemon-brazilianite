@@ -111,7 +111,7 @@ function parseScriptTrainerLinks(mapFolder) {
         }
 
         if (currentScript) {
-            const battleMatch = line.match(/trainerbattle_(?:single|double|rematch)\s+(TRAINER_\w+)/);
+            const battleMatch = line.match(/trainerbattle_(?:single|double|rematch|no_intro)\s+(TRAINER_\w+)/);
             if (battleMatch) {
                 if (!links[currentScript]) links[currentScript] = [];
                 if (!links[currentScript].includes(battleMatch[1])) {
