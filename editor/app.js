@@ -871,12 +871,12 @@ async function loadMapScript(dirName) {
 function getScriptTrainers(map, scriptText) {
     if (!scriptText) return [];
     const npcEvents = (map.object_events || []).filter(e => {
-        if (!e.script) return false;
+        if (!e.script || e.script === '0x0') return false;
         if (e.trainer_type && e.trainer_type !== 'TRAINER_TYPE_NONE') return false;
         if ((e.graphics_id || '').includes('ITEM_BALL')) return false;
         return true;
     });
-    return npcEvents.filter(evt => {
+    const scriptTrainers = npcEvents.filter(evt => {
         // Check if this NPC's script label contains a trainerbattle command
         const scriptLabel = evt.script + '::';
         const labelIdx = scriptText.indexOf(scriptLabel);
@@ -904,6 +904,24 @@ function getScriptTrainers(map, scriptText) {
         }
         return false;
     });
+
+    // Also detect trainers triggered from map frame scripts (e.g., Champions like Wallace)
+    // whose object events have no script ('0x0') but appear in trainerbattle_* calls in the map scripts
+    const allBattleNames = [...scriptText.matchAll(/trainerbattle\w*\s+TRAINER_(\w+)/g)]
+        .map(([, name]) => name.toUpperCase());
+    if (allBattleNames.length > 0) {
+        for (const evt of (map.object_events || [])) {
+            if (evt.script && evt.script !== '0x0') continue;
+            if (evt.trainer_type && evt.trainer_type !== 'TRAINER_TYPE_NONE') continue;
+            if ((evt.graphics_id || '').includes('ITEM_BALL')) continue;
+            const localId = (evt.local_id || '').toUpperCase();
+            if (allBattleNames.some(name => localId.endsWith('_' + name)) && !scriptTrainers.includes(evt)) {
+                scriptTrainers.push(evt);
+            }
+        }
+    }
+
+    return scriptTrainers;
 }
 
 // Parse dialogue text blocks from a script file for a given NPC script name
@@ -3755,14 +3773,14 @@ function addMapTrainer(dirName) {
 }
 
 // ── Edit Trainer Party from Map ──
-async function editTrainerPartyFromScript(dirName, scriptName) {
+async function editTrainerPartyFromScript(dirName, scriptName, graphicsId) {
     try { await loadTrainers(); } catch {
         toast('Could not load trainer data', true);
         return;
     }
 
     let matchedTrainer = null;
-    const scriptParts = scriptName.split('_EventScript_');
+    const scriptParts = (scriptName || '').split('_EventScript_');
     if (scriptParts.length >= 2) {
         const trainerSuffix = scriptParts[scriptParts.length - 1];
         matchedTrainer = state.trainers.find(t =>
@@ -3771,7 +3789,7 @@ async function editTrainerPartyFromScript(dirName, scriptName) {
     }
 
     // Also try looking in the script file for the TRAINER_ constant
-    if (!matchedTrainer) {
+    if (!matchedTrainer && scriptName && scriptName !== '0x0') {
         try {
             const scriptText = await loadMapScript(dirName);
             const trainerMatch = scriptText.match(new RegExp(scriptName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '[\\s\\S]*?trainerbattle\\w*\\s+(TRAINER_\\w+)'));
@@ -3779,6 +3797,13 @@ async function editTrainerPartyFromScript(dirName, scriptName) {
                 matchedTrainer = state.trainers.find(t => t.id === trainerMatch[1]);
             }
         } catch {}
+    }
+
+    // For map-frame script trainers with no object script (e.g., Champions like Wallace),
+    // match by graphics_id name
+    if (!matchedTrainer && graphicsId) {
+        const gfxName = graphicsId.replace('OBJ_EVENT_GFX_', '').toUpperCase();
+        matchedTrainer = state.trainers.find(t => (t.name || '').trim().toUpperCase() === gfxName);
     }
 
     if (matchedTrainer) {
@@ -4554,7 +4579,7 @@ function buildUnifiedNPCSection(map, allTrainers, scriptText) {
                         <div class="npc-card-actions">
                             <button class="btn btn-sm" onclick="editObjectEvent('${escAttr(dirName)}', ${realIdx})">Edit NPC</button>
                             ${evt.script && evt.script !== '0x0' ? `<button class="btn btn-sm" onclick="editNPCDialogue('${escAttr(dirName)}', '${escAttr(evt.script)}')" title="Edit dialogue for this NPC">Dialogue</button>` : ''}
-                            ${isTrainer ? `<button class="btn btn-sm" onclick="editTrainerPartyFromScript('${escAttr(dirName)}', '${escAttr(evt.script || '')}')" title="Edit trainer party">Party</button>` : ''}
+                            ${isTrainer ? `<button class="btn btn-sm" onclick="editTrainerPartyFromScript('${escAttr(dirName)}', '${escAttr(evt.script || '')}', '${escAttr(evt.graphics_id || '')}')" title="Edit trainer party">Party</button>` : ''}
                             <button class="btn btn-sm btn-danger" onclick="deleteObjectEvent('${escAttr(dirName)}', ${realIdx})">Delete</button>
                         </div>
                     </div>
@@ -5382,6 +5407,14 @@ async function renderNPCs() {
             (n._mapId || '').toLowerCase().includes(search);
     });
 
+    // Build set of graphics IDs that correspond to named trainers (e.g. OBJ_EVENT_GFX_STEVEN)
+    // so scripted trainers with TRAINER_TYPE_NONE still show as trainers in the UI
+    const trainerGfxIds = new Set(
+        (state.trainers || []).map(t => `OBJ_EVENT_GFX_${(t.name || '').trim().toUpperCase().replace(/\s+/g, '_')}`)
+            .filter(id => id !== 'OBJ_EVENT_GFX_')
+    );
+    const isNPCTrainer = n => (n.trainer_type && n.trainer_type !== 'TRAINER_TYPE_NONE') || trainerGfxIds.has(n.graphics_id);
+
     // Group by graphics_id
     const groups = {};
     for (const n of filtered) {
@@ -5390,7 +5423,7 @@ async function renderNPCs() {
         groups[key].count++;
         groups[key].maps.add(n._mapName);
         groups[key].npcs.push(n);
-        if (n.trainer_type && n.trainer_type !== 'TRAINER_TYPE_NONE') groups[key].hasTrainer = true;
+        if (isNPCTrainer(n)) groups[key].hasTrainer = true;
     }
 
     const sortedGroups = Object.values(groups).sort((a, b) => b.count - a.count);
@@ -5423,12 +5456,12 @@ async function renderNPCs() {
     let groupCards = groupsToShow.map(g => {
         const gfx = g.graphics_id.replace('OBJ_EVENT_GFX_', '').replace(/_/g, ' ');
         const mapList = [...g.maps].slice(0, 3).join(', ') + (g.maps.size > 3 ? ` +${g.maps.size - 3} more` : '');
-        const trainerCount = g.npcs.filter(n => n.trainer_type && n.trainer_type !== 'TRAINER_TYPE_NONE').length;
+        const trainerCount = g.npcs.filter(n => isNPCTrainer(n)).length;
 
         // If only 1 NPC, show inline with direct actions
         if (g.count === 1) {
             const n = g.npcs[0];
-            const isTrainer = n.trainer_type && n.trainer_type !== 'TRAINER_TYPE_NONE';
+            const isTrainer = isNPCTrainer(n);
             return `
                 <div class="npc-group-card npc-group-single">
                     <div class="npc-group-header">
@@ -5439,7 +5472,7 @@ async function renderNPCs() {
                         </div>
                         <div class="npc-group-actions">
                             <button class="btn btn-sm" onclick="editNPCFromList('${escAttr(n._mapDirName)}', '${escAttr(n.script || '')}', ${n.x}, ${n.y})">Edit</button>
-                            ${isTrainer ? `<button class="btn btn-sm" onclick="editNPCParty('${escAttr(n._mapDirName)}', '${escAttr(n.script || '')}')">Party</button>` : ''}
+                            ${isTrainer ? `<button class="btn btn-sm" onclick="editNPCParty('${escAttr(n._mapDirName)}', '${escAttr(n.script || '')}', '${escAttr(n.graphics_id || '')}')">Party</button>` : ''}
                             <button class="btn btn-sm" onclick="openMapDetail('${escAttr(n._mapDirName)}')" title="Go to map">Map</button>
                         </div>
                     </div>
@@ -5485,6 +5518,12 @@ async function renderNPCs() {
 
 // Detail view for a specific NPC graphics_id group
 async function renderNPCGroupDetail(graphicsId) {
+    const trainerGfxIds = new Set(
+        (state.trainers || []).map(t => `OBJ_EVENT_GFX_${(t.name || '').trim().toUpperCase().replace(/\s+/g, '_')}`)
+            .filter(id => id !== 'OBJ_EVENT_GFX_')
+    );
+    const isNPCTrainer = n => (n.trainer_type && n.trainer_type !== 'TRAINER_TYPE_NONE') || trainerGfxIds.has(n.graphics_id);
+
     const allNPCs = collectNPCs();
     const versionFilter = state.gameVersionFilter || 'all';
     const groupNPCs = allNPCs.filter(n => {
@@ -5529,7 +5568,7 @@ async function renderNPCGroupDetail(graphicsId) {
             </div>`;
 
         for (const n of mapGroup.npcs) {
-            const isTrainer = n.trainer_type && n.trainer_type !== 'TRAINER_TYPE_NONE';
+            const isTrainer = isNPCTrainer(n);
             let npcName = gfx;
             if (n.script && n.script !== '0x0') {
                 const parts = n.script.split('_EventScript_');
@@ -5546,7 +5585,7 @@ async function renderNPCGroupDetail(graphicsId) {
                     <div class="npc-row-coords">(${n.x}, ${n.y})</div>
                     <div class="npc-row-actions">
                         <button class="btn btn-sm" onclick="editNPCFromList('${escAttr(n._mapDirName)}', '${escAttr(n.script || '')}', ${n.x}, ${n.y})">Edit</button>
-                        ${isTrainer ? `<button class="btn btn-sm" onclick="editNPCParty('${escAttr(n._mapDirName)}', '${escAttr(n.script || '')}')">Party</button>` : ''}
+                        ${isTrainer ? `<button class="btn btn-sm" onclick="editNPCParty('${escAttr(n._mapDirName)}', '${escAttr(n.script || '')}', '${escAttr(n.graphics_id || '')}')">Party</button>` : ''}
                     </div>
                 </div>
             `;
@@ -5565,19 +5604,52 @@ function editNPCFromList(dirName, script, x, y) {
     if (idx >= 0) editObjectEvent(dirName, idx);
 }
 
-function editNPCParty(dirName, script) {
-    const scriptParts = script.split('_EventScript_');
+async function editNPCParty(dirName, script, graphicsId) {
+    try { await loadTrainers(); } catch {
+        toast('Could not load trainer data', true);
+        return;
+    }
+
+    let matchedTrainer = null;
+
+    // 1. Try script suffix match (works for most named trainers)
+    const scriptParts = (script || '').split('_EventScript_');
     if (scriptParts.length >= 2) {
         const trainerSuffix = scriptParts[scriptParts.length - 1];
-        const matched = (state.trainers || []).find(t =>
+        matchedTrainer = (state.trainers || []).find(t =>
             t.id.toUpperCase().includes(trainerSuffix.toUpperCase())
         );
-        if (matched) {
-            editTrainer(matched.id);
-            return;
-        }
     }
-    toast('Could not match NPC to a trainer party entry', true);
+
+    // 2. Fall back to parsing scripts.inc (handles grunts and other cases where
+    //    the script suffix doesn't directly match the trainer ID)
+    if (!matchedTrainer && script && script !== '0x0') {
+        try {
+            const scriptText = await loadMapScript(dirName);
+            const escapedScript = script.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const trainerMatch = scriptText.match(
+                new RegExp(escapedScript + '[\\s\\S]*?trainerbattle\\w*\\s+(TRAINER_\\w+)')
+            );
+            if (trainerMatch) {
+                matchedTrainer = (state.trainers || []).find(t => t.id === trainerMatch[1]);
+            }
+        } catch {}
+    }
+
+    // 3. For map-frame script trainers with no object script (e.g., Champions like Wallace),
+    //    match by graphics_id name
+    if (!matchedTrainer && graphicsId) {
+        const gfxName = graphicsId.replace('OBJ_EVENT_GFX_', '').toUpperCase();
+        matchedTrainer = (state.trainers || []).find(t =>
+            (t.name || '').trim().toUpperCase() === gfxName
+        );
+    }
+
+    if (matchedTrainer) {
+        editTrainer(matchedTrainer.id);
+    } else {
+        toast('Could not match NPC to a trainer party entry', true);
+    }
 }
 
 // ─── Pokemon Species Tab ────────────────────────────────────────────────────
