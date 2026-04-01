@@ -271,7 +271,7 @@ SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard:
 	.string "It's raining heavily?\p"
 	.string "Good… That should have happened.\n"
 	.string "That is why we awakened KYOGRE,\l"
-	.string "to realize TEAM AQUA's vision of\l"
+	.string "to realize TEAM ALGORITHM's vision of\l"
 	.string "expanding the sea.\p"
 	.string "What?!\p"
 	.string "It's raining far harder than we\n"
@@ -301,7 +301,7 @@ SeafloorCavern_Room9_Text_MaxieWhatHaveYouWrought:
 SeafloorCavern_Room9_Text_ArchieDontGetAllHighAndMighty:
 	.string "ARCHIE: W-what?!\n"
 	.string "Don't get all high and mighty with me!\p"
-	.string "Wasn't it you, TEAM MAGMA, that\n"
+	.string "Wasn't it you, TEAM BLOCKCHAIN, that\n"
 	.string "infuriated GROUDON?\p"
 	.string "So long as I have this RED ORB,\n"
 	.string "I should be able to control KYOGRE…\p"

@@ -1988,7 +1988,7 @@
     "team_aqua_grunt_m": {
       "id": "team_aqua_grunt_m",
       "name": "Grunt (M)",
-      "class": "Team Aqua",
+      "class": "Team Algorithm",
       "sprite_set": "aqua_member_m",
       "sprite_overrides": {},
       "notes": ""
@@ -2028,7 +2028,7 @@
     "team_aqua_grunt_f": {
       "id": "team_aqua_grunt_f",
       "name": "Grunt (F)",
-      "class": "Team Aqua",
+      "class": "Team Algorithm",
       "sprite_set": "aqua_member_f",
       "sprite_overrides": {},
       "notes": ""
@@ -2044,7 +2044,7 @@
     "team_magma_grunt_m": {
       "id": "team_magma_grunt_m",
       "name": "Grunt (M)",
-      "class": "Team Magma",
+      "class": "Team Blockchain",
       "sprite_set": "magma_member_m",
       "sprite_overrides": {},
       "notes": ""
@@ -2604,7 +2604,7 @@
     "team_magma_grunt_f": {
       "id": "team_magma_grunt_f",
       "name": "Grunt (F)",
-      "class": "Team Magma",
+      "class": "Team Blockchain",
       "sprite_set": "magma_member_f",
       "sprite_overrides": {},
       "notes": ""
