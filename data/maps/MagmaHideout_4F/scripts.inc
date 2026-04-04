@@ -149,7 +149,7 @@ MagmaHideout_4F_Text_Grunt12Defeat:
 	.string "I've come so far, but now this?$"
 
 MagmaHideout_4F_Text_Grunt12PostBattle:
-	.string "MAXIE, sir!\n"
+	.string "JULIAN, sir!\n"
 	.string "An intruder is headed your way!$"
 
 MagmaHideout_4F_Text_Grunt13Intro:
@@ -167,7 +167,7 @@ MagmaHideout_4F_Text_TabithaIntro:
 	.string "You made it this far, so I'll tell you!\p"
 	.string "That's right!\n"
 	.string "Up ahead, GROUDON is sleeping!\p"
-	.string "MAXIE went to GROUDON just seconds\n"
+	.string "JULIAN went to GROUDON just seconds\n"
 	.string "ago!\p"
 	.string "It's going to awaken real soon!\n"
 	.string "Hehe! Hehehe!$"
@@ -178,10 +178,10 @@ MagmaHideout_4F_Text_TabithaDefeat:
 
 MagmaHideout_4F_Text_TabithaPostBattle:
 	.string "…And while you wasted time with me,\n"
-	.string "MAXIE should have awakened GROUDON…$"
+	.string "JULIAN should have awakened GROUDON…$"
 
 MagmaHideout_4F_Text_MaxieAwakenGroudon:
-	.string "MAXIE: GROUDON…\p"
+	.string "JULIAN: GROUDON…\p"
 	.string "Nothing could awaken you from your\n"
 	.string "sleep bathed in magma…\p"
 	.string "This BLUE ORB is what you sought.\n"
@@ -192,14 +192,14 @@ MagmaHideout_4F_Text_MaxieAwakenGroudon:
 	.string "Show me the full extent of your power!$"
 
 MagmaHideout_4F_Text_MaxieGroudonWhatsWrong:
-	.string "MAXIE: GROUDON!\n"
+	.string "JULIAN: GROUDON!\n"
 	.string "What's wrong?\p"
 	.string "Wasn't the BLUE ORB the key?\p"
 	.string "GROUDON!\n"
 	.string "Where have you gone…$"
 
 MagmaHideout_4F_Text_MaxieOhItWasYou:
-	.string "MAXIE: Oh, so it was you?\p"
+	.string "JULIAN: Oh, so it was you?\p"
 	.string "I've seen you poking around uninvited\n"
 	.string "here and there…\p"
 	.string "I get it now!\n"
@@ -210,7 +210,7 @@ MagmaHideout_4F_Text_MaxieDefeat:
 	.string "POKéMON?$"
 
 MagmaHideout_4F_Text_MaxieImGoingAfterGroudon:
-	.string "MAXIE: There has to be some reason\n"
+	.string "JULIAN: There has to be some reason\n"
 	.string "why GROUDON fled…\p"
 	.string "That's what you're trying to say,\n"
 	.string "aren't you?\p"

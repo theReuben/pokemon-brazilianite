@@ -320,7 +320,7 @@ SlateportCity_OceanicMuseum_2F_Text_ArchieWarning:
 	.string "We are TEAM ALGORITHM,\n"
 	.string "and we love the sea!\p"
 	.string "And I am TEAM ALGORITHM's leader,\n"
-	.string "ARCHIE!\p"
+	.string "JULIAN!\p"
 	.string "What makes you interfere with us?\p"
 	.string "…No! You can't be!\n"
 	.string "You're not one of TEAM BLOCKCHAIN?\p"
