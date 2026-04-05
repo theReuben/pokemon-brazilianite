@@ -658,6 +658,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GALACTIC_COMMANDER_JUPITER] = &gObjectEventGraphicsInfo_GalacticCommanderJupiter,
     [OBJ_EVENT_GFX_GALACTIC_COMMANDER_SATURN] = &gObjectEventGraphicsInfo_GalacticCommanderSaturn,
     [OBJ_EVENT_GFX_GALACTIC_LEADER_CYRUS] =    &gObjectEventGraphicsInfo_GalacticLeaderCyrus,
+    [OBJ_EVENT_GFX_MAGMA_ADMIN] =              &gObjectEventGraphicsInfo_MagmaAdmin,
 #if IS_FRLG
     [OBJ_EVENT_GFX_RED_NORMAL] =               &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE] =                 &gObjectEventGraphicsInfo_RedBike,

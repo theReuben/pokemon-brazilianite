@@ -489,6 +489,10 @@ static const struct SpriteFrameImage sPicTable_MagmaMemberF[] = {
     overworld_ascending_frames(gObjectEventPic_MagmaMemberF, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_MagmaAdmin[] = {
+    overworld_ascending_frames(gObjectEventPic_MagmaAdmin, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_GalacticGruntM[] = {
     overworld_ascending_frames(gObjectEventPic_GalacticGruntM, 2, 4),
 };

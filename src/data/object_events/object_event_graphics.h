@@ -138,6 +138,7 @@ const u32 gObjectEventPic_AquaMemberM[] = INCBIN_U32("graphics/object_events/pic
 const u32 gObjectEventPic_AquaMemberF[] = INCBIN_U32("graphics/object_events/pics/people/team_aqua/aqua_member_f.4bpp");
 const u32 gObjectEventPic_MagmaMemberM[] = INCBIN_U32("graphics/object_events/pics/people/team_magma/magma_member_m.4bpp");
 const u32 gObjectEventPic_MagmaMemberF[] = INCBIN_U32("graphics/object_events/pics/people/team_magma/magma_member_f.4bpp");
+const u32 gObjectEventPic_MagmaAdmin[] = INCBIN_U32("graphics/object_events/pics/people/team_magma/magma_admin.4bpp");
 const u32 gObjectEventPic_GalacticGruntM[] = INCBIN_U32("graphics/object_events/pics/people/team_galactic/galactic_grunt_m.4bpp");
 const u32 gObjectEventPic_GalacticGruntF[] = INCBIN_U32("graphics/object_events/pics/people/team_galactic/galactic_grunt_f.4bpp");
 const u32 gObjectEventPic_GalacticCommanderMars[] = INCBIN_U32("graphics/object_events/pics/people/team_galactic/galactic_commander_mars.4bpp");
