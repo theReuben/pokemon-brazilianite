@@ -517,6 +517,42 @@ static const struct SpriteFrameImage sPicTable_GalacticLeaderCyrus[] = {
     overworld_ascending_frames(gObjectEventPic_GalacticLeaderCyrus, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_AlgorithmMemberM[] = {
+    overworld_ascending_frames(gObjectEventPic_AlgorithmMemberM, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_AlgorithmMemberF[] = {
+    overworld_ascending_frames(gObjectEventPic_AlgorithmMemberF, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_AlgorithmAdminM[] = {
+    overworld_ascending_frames(gObjectEventPic_AlgorithmAdminM, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_AlgorithmAdminF[] = {
+    overworld_ascending_frames(gObjectEventPic_AlgorithmAdminF, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_AlgorithmLeader[] = {
+    overworld_ascending_frames(gObjectEventPic_AlgorithmLeader, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_BlockchainMemberM[] = {
+    overworld_ascending_frames(gObjectEventPic_BlockchainMemberM, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_BlockchainMemberF[] = {
+    overworld_ascending_frames(gObjectEventPic_BlockchainMemberF, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_BlockchainAdmin[] = {
+    overworld_ascending_frames(gObjectEventPic_BlockchainAdmin, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_BlockchainLeader[] = {
+    overworld_ascending_frames(gObjectEventPic_BlockchainLeader, 2, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_Sidney[] = {
     overworld_frame(gObjectEventPic_Sidney, 2, 4, 0),
     overworld_frame(gObjectEventPic_Sidney, 2, 4, 1),
