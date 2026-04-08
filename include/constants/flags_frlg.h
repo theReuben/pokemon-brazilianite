@@ -1541,7 +1541,7 @@
 #define FLAG_SCOTT_CALL_BATTLE_FRONTIER      0 // Used in order to activate a phone call from Scott, inviting the player to the SS Tidal.
 #define FLAG_RECEIVED_METEORITE              0
 #define FLAG_ADVENTURE_STARTED               0 // RECEIVED Pokédex.
-#define FLAG_DEFEATED_MAGMA_SPACE_CENTER     0 // Set when Team Magma is defeated at Mossdeep's Space Center.
+#define FLAG_DEFEATED_MAGMA_SPACE_CENTER     0 // Set when Team Blockchain is defeated at Mossdeep's Space Center.
 #define FLAG_MET_HIDDEN_POWER_GIVER          0
 
 #define FLAG_CANCEL_BATTLE_ROOM_CHALLENGE    0

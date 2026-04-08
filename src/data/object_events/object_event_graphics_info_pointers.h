@@ -124,6 +124,15 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticCom
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticCommanderJupiter;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticCommanderSaturn;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticLeaderCyrus;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmLeader;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlockchainMemberM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlockchainMemberF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlockchainAdmin;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlockchainLeader;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sidney;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Phoebe;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Glacia;
@@ -658,6 +667,16 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GALACTIC_COMMANDER_JUPITER] = &gObjectEventGraphicsInfo_GalacticCommanderJupiter,
     [OBJ_EVENT_GFX_GALACTIC_COMMANDER_SATURN] = &gObjectEventGraphicsInfo_GalacticCommanderSaturn,
     [OBJ_EVENT_GFX_GALACTIC_LEADER_CYRUS] =    &gObjectEventGraphicsInfo_GalacticLeaderCyrus,
+    [OBJ_EVENT_GFX_MAGMA_ADMIN] =              &gObjectEventGraphicsInfo_MagmaAdmin,
+    [OBJ_EVENT_GFX_ALGORITHM_MEMBER_M] =      &gObjectEventGraphicsInfo_AlgorithmMemberM,
+    [OBJ_EVENT_GFX_ALGORITHM_MEMBER_F] =      &gObjectEventGraphicsInfo_AlgorithmMemberF,
+    [OBJ_EVENT_GFX_ALGORITHM_ADMIN_M] =       &gObjectEventGraphicsInfo_AlgorithmAdminM,
+    [OBJ_EVENT_GFX_ALGORITHM_ADMIN_F] =       &gObjectEventGraphicsInfo_AlgorithmAdminF,
+    [OBJ_EVENT_GFX_ALGORITHM_LEADER] =        &gObjectEventGraphicsInfo_AlgorithmLeader,
+    [OBJ_EVENT_GFX_BLOCKCHAIN_MEMBER_M] =     &gObjectEventGraphicsInfo_BlockchainMemberM,
+    [OBJ_EVENT_GFX_BLOCKCHAIN_MEMBER_F] =     &gObjectEventGraphicsInfo_BlockchainMemberF,
+    [OBJ_EVENT_GFX_BLOCKCHAIN_ADMIN] =        &gObjectEventGraphicsInfo_BlockchainAdmin,
+    [OBJ_EVENT_GFX_BLOCKCHAIN_LEADER] =       &gObjectEventGraphicsInfo_BlockchainLeader,
 #if IS_FRLG
     [OBJ_EVENT_GFX_RED_NORMAL] =               &gObjectEventGraphicsInfo_RedNormal,
     [OBJ_EVENT_GFX_RED_BIKE] =                 &gObjectEventGraphicsInfo_RedBike,

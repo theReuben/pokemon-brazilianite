@@ -208,7 +208,7 @@ static const struct MatchCallStructTrainer sNormanMatchCallHeader =
     .flag = FLAG_ENABLE_NORMAN_MATCH_CALL,
     .rematchTableIdx = REMATCH_NORMAN,
     .desc = COMPOUND_STRING("RELIABLE ONE"),
-    .name = COMPOUND_STRING("DAD"),
+    .name = COMPOUND_STRING("MAMABOSA"),
     .textData = sNormanTextScripts
 };
 

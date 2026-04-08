@@ -176,7 +176,7 @@ With this, the repo is ready again to receive new PRs.
 - We tend to post on the following Discord Servers:
     - [RH-Hideout](https://discord.gg/6CzjAG6GZk)
         - Requires role to post in #announcements channel.
-    - [Team Aqua's Hideout](https://discord.gg/team-aqua-s-hideout-976252009114140682)
+    - [Team Algorithm's Hideout](https://discord.gg/team-aqua-s-hideout-976252009114140682)
         - Requires role to post in #romhacking-updates channel.
     - [What a Hack!](https://discord.gg/whack-a-hack-292436944670162955)
         - Announcements are done in Spanish, but not the changelogs themselves.

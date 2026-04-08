@@ -96,8 +96,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_1 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -109,8 +109,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_2 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -126,8 +126,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_3 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -139,8 +139,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_4 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -152,8 +152,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_1 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -165,8 +165,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_2 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -178,8 +178,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_3 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -224,8 +224,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_PETALBURG_WOODS ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -289,8 +289,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_4 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+Class: Team Algorithm
+Pic: Algorithm Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -315,8 +315,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_RUSTURF_TUNNEL ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -328,8 +328,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_WEATHER_INST_1 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -345,8 +345,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_WEATHER_INST_2 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -362,8 +362,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_WEATHER_INST_3 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -383,8 +383,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MUSEUM_1 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -396,8 +396,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MUSEUM_2 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -413,8 +413,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_1 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -426,8 +426,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_PYRE_1 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -439,8 +439,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_PYRE_2 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -452,8 +452,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_PYRE_3 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -469,8 +469,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_WEATHER_INST_4 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+Class: Team Algorithm
+Pic: Algorithm Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -482,8 +482,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_5 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+Class: Team Algorithm
+Pic: Algorithm Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -495,8 +495,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_6 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+Class: Team Algorithm
+Pic: Algorithm Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -525,8 +525,8 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MATT ===
 Name: MATT
-Class: Aqua Admin
-Pic: Aqua Admin M
+Class: Algorithm Admin
+Pic: Algorithm Admin M
 Gender: Male
 Music: Aqua
 Items: Super Potion
@@ -556,8 +556,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHELLY_WEATHER_INSTITUTE ===
 Name: SHELLY
-Class: Aqua Admin
-Pic: Aqua Admin F
+Class: Algorithm Admin
+Pic: Algorithm Admin F
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -573,8 +573,8 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_SHELLY_SEAFLOOR_CAVERN ===
 Name: SHELLY
-Class: Aqua Admin
-Pic: Aqua Admin F
+Class: Algorithm Admin
+Pic: Algorithm Admin F
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -589,9 +589,9 @@ Level: 37
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_ARCHIE ===
-Name: ARCHIE
-Class: Aqua Leader
-Pic: Aqua Leader Archie
+Name: JULIAN
+Class: Algorithm Leader
+Pic: Algorithm Leader Julian
 Gender: Male
 Music: Aqua
 Items: Super Potion / Super Potion
@@ -2155,8 +2155,8 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_2 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -2667,8 +2667,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_CHIMNEY_1 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt F
+Class: Team Blockchain
+Pic: Blockchain Grunt F
 Gender: Female
 Music: Magma
 Double Battle: No
@@ -3380,8 +3380,8 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_7 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+Class: Team Algorithm
+Pic: Algorithm Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -3397,8 +3397,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_8 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -4941,11 +4941,11 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Attract
 
 === TRAINER_NORMAN_1 ===
-Name: NORMAN
+Name: MAMA BOSA
 Class: Leader
 Pic: Leader Norman
-Gender: Male
-Music: Male
+Gender: Female
+Music: Female
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
@@ -9364,8 +9364,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TABITHA_MOSSDEEP ===
 Name: TABITHA
-Class: Magma Admin
-Pic: Magma Admin
+Class: Blockchain Admin
+Pic: Blockchain Admin
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -10485,8 +10485,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SEAFLOOR_CAVERN_5 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Class: Team Algorithm
+Pic: Algorithm Grunt M
 Gender: Male
 Music: Aqua
 Double Battle: No
@@ -10502,8 +10502,8 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_GRUNT_UNUSED ===
 Name: GRUNT
-Class: Team Magma
-Pic: Aqua Grunt F
+Class: Team Blockchain
+Pic: Algorithm Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -10519,8 +10519,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_PYRE_4 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+Class: Team Algorithm
+Pic: Algorithm Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -10536,8 +10536,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_JAGGED_PASS ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -10671,8 +10671,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_CHIMNEY_2 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -10762,8 +10762,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_3 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt F
+Class: Team Blockchain
+Pic: Blockchain Grunt F
 Gender: Female
 Music: Magma
 Double Battle: No
@@ -10779,8 +10779,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_4 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -10792,8 +10792,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_5 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -10805,8 +10805,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_6 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -10818,8 +10818,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_7 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -10908,8 +10908,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_WEATHER_INST_5 ===
 Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+Class: Team Algorithm
+Pic: Algorithm Grunt F
 Gender: Female
 Music: Aqua
 Double Battle: No
@@ -10925,8 +10925,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TABITHA_MT_CHIMNEY ===
 Name: TABITHA
-Class: Magma Admin
-Pic: Magma Admin
+Class: Blockchain Admin
+Pic: Blockchain Admin
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -11001,9 +11001,9 @@ Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_MAXIE_MAGMA_HIDEOUT ===
-Name: MAXIE
-Class: Magma Leader
-Pic: Magma Leader Maxie
+Name: JULIAN
+Class: Blockchain Leader
+Pic: Blockchain Leader Julian
 Gender: Male
 Music: Magma
 Items: Super Potion / Super Potion
@@ -11023,9 +11023,9 @@ Level: 39
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_MAXIE_MT_CHIMNEY ===
-Name: MAXIE
-Class: Magma Leader
-Pic: Magma Leader Maxie
+Name: JULIAN
+Class: Blockchain Leader
+Pic: Blockchain Leader Julian
 Gender: Male
 Music: Magma
 Items: Super Potion / Super Potion
@@ -13269,8 +13269,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_1 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13282,8 +13282,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_2 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13295,8 +13295,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_3 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13308,8 +13308,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_4 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13325,8 +13325,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_5 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13342,8 +13342,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_6 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13355,8 +13355,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_7 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13368,8 +13368,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_8 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13381,8 +13381,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_9 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13394,8 +13394,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_10 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13407,8 +13407,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_11 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13420,8 +13420,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_12 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13433,8 +13433,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_13 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
+Class: Team Blockchain
+Pic: Blockchain Grunt M
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13446,8 +13446,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_14 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt F
+Class: Team Blockchain
+Pic: Blockchain Grunt F
 Gender: Female
 Music: Magma
 Double Battle: No
@@ -13459,8 +13459,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_15 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt F
+Class: Team Blockchain
+Pic: Blockchain Grunt F
 Gender: Female
 Music: Magma
 Double Battle: No
@@ -13472,8 +13472,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_16 ===
 Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt F
+Class: Team Blockchain
+Pic: Blockchain Grunt F
 Gender: Female
 Music: Magma
 Double Battle: No
@@ -13485,8 +13485,8 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TABITHA_MAGMA_HIDEOUT ===
 Name: TABITHA
-Class: Magma Admin
-Pic: Magma Admin
+Class: Blockchain Admin
+Pic: Blockchain Admin
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -13527,9 +13527,9 @@ Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAXIE_MOSSDEEP ===
-Name: MAXIE
-Class: Magma Leader
-Pic: Magma Leader Maxie
+Name: JULIAN
+Class: Blockchain Leader
+Pic: Blockchain Leader Julian
 Gender: Male
 Music: Magma
 Double Battle: No
@@ -14954,11 +14954,11 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Attract
 
 === TRAINER_NORMAN_2 ===
-Name: NORMAN
+Name: MAMA BOSA
 Class: Leader
 Pic: Leader Norman
-Gender: Male
-Music: Male
+Gender: Female
+Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
@@ -14996,11 +14996,11 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Shadow Ball
 
 === TRAINER_NORMAN_3 ===
-Name: NORMAN
+Name: MAMA BOSA
 Class: Leader
 Pic: Leader Norman
-Gender: Male
-Music: Male
+Gender: Female
+Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
@@ -15046,11 +15046,11 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Shadow Ball
 
 === TRAINER_NORMAN_4 ===
-Name: NORMAN
+Name: MAMA BOSA
 Class: Leader
 Pic: Leader Norman
-Gender: Male
-Music: Male
+Gender: Female
+Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
@@ -15096,11 +15096,11 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Shadow Ball
 
 === TRAINER_NORMAN_5 ===
-Name: NORMAN
+Name: MAMA BOSA
 Class: Leader
 Pic: Leader Norman
-Gender: Male
-Music: Male
+Gender: Female
+Music: Female
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer

@@ -1974,6 +1974,20 @@
       "overworld_graphics_id": "OBJ_EVENT_GFX_SPEAROW",
       "trainer_pic": null,
       "sprites": {}
+    },
+    "algorithm_leader": {
+      "id": "algorithm_leader",
+      "label": "Algorithm Leader (Julian)",
+      "overworld_graphics_id": "OBJ_EVENT_GFX_ALGORITHM_LEADER",
+      "trainer_pic": null,
+      "sprites": {}
+    },
+    "blockchain_leader": {
+      "id": "blockchain_leader",
+      "label": "Blockchain Leader (Julian)",
+      "overworld_graphics_id": "OBJ_EVENT_GFX_BLOCKCHAIN_LEADER",
+      "trainer_pic": null,
+      "sprites": {}
     }
   },
   "npcs": {
@@ -1988,7 +2002,7 @@
     "team_aqua_grunt_m": {
       "id": "team_aqua_grunt_m",
       "name": "Grunt (M)",
-      "class": "Team Aqua",
+      "class": "Team Algorithm",
       "sprite_set": "aqua_member_m",
       "sprite_overrides": {},
       "notes": ""
@@ -2028,7 +2042,7 @@
     "team_aqua_grunt_f": {
       "id": "team_aqua_grunt_f",
       "name": "Grunt (F)",
-      "class": "Team Aqua",
+      "class": "Team Algorithm",
       "sprite_set": "aqua_member_f",
       "sprite_overrides": {},
       "notes": ""
@@ -2044,7 +2058,7 @@
     "team_magma_grunt_m": {
       "id": "team_magma_grunt_m",
       "name": "Grunt (M)",
-      "class": "Team Magma",
+      "class": "Team Blockchain",
       "sprite_set": "magma_member_m",
       "sprite_overrides": {},
       "notes": ""
@@ -2060,7 +2074,7 @@
     "aqua_admin_matt": {
       "id": "aqua_admin_matt",
       "name": "Matt",
-      "class": "Aqua Admin",
+      "class": "Algorithm Admin",
       "sprite_set": "aqua_member_m",
       "sprite_overrides": {},
       "notes": ""
@@ -2076,15 +2090,15 @@
     "aqua_admin_shelly": {
       "id": "aqua_admin_shelly",
       "name": "Shelly",
-      "class": "Aqua Admin",
+      "class": "Algorithm Admin",
       "sprite_set": "aqua_member_f",
       "sprite_overrides": {},
       "notes": ""
     },
     "aqua_leader_archie": {
       "id": "aqua_leader_archie",
-      "name": "Archie",
-      "class": "Aqua Leader",
+      "name": "Julian",
+      "class": "Algorithm Leader",
       "sprite_set": null,
       "sprite_overrides": {},
       "notes": ""
@@ -2604,7 +2618,7 @@
     "team_magma_grunt_f": {
       "id": "team_magma_grunt_f",
       "name": "Grunt (F)",
-      "class": "Team Magma",
+      "class": "Team Blockchain",
       "sprite_set": "magma_member_f",
       "sprite_overrides": {},
       "notes": ""
@@ -4428,7 +4442,7 @@
     "magma_admin_tabitha": {
       "id": "magma_admin_tabitha",
       "name": "Tabitha",
-      "class": "Magma Admin",
+      "class": "Blockchain Admin",
       "sprite_set": "magma_member_m",
       "sprite_overrides": {},
       "notes": ""
@@ -4707,8 +4721,8 @@
     },
     "magma_leader_maxie": {
       "id": "magma_leader_maxie",
-      "name": "Maxie",
-      "class": "Magma Leader",
+      "name": "Julian",
+      "class": "Blockchain Leader",
       "sprite_set": null,
       "sprite_overrides": {},
       "notes": ""
@@ -14619,9 +14633,9 @@
     },
     "archie_anonymous_meteorfalls_1f_1r_6_20": {
       "id": "archie_anonymous_meteorfalls_1f_1r_6_20",
-      "name": "Archie",
-      "class": "Archie",
-      "sprite_set": "archie",
+      "name": "Julian",
+      "class": "Algorithm Leader",
+      "sprite_set": "algorithm_leader",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -14675,9 +14689,9 @@
     },
     "maxie_anonymous_mossdeepcity_45_25": {
       "id": "maxie_anonymous_mossdeepcity_45_25",
-      "name": "Maxie",
-      "class": "Maxie",
-      "sprite_set": "maxie",
+      "name": "Julian",
+      "class": "Blockchain Leader",
+      "sprite_set": "blockchain_leader",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -15451,9 +15465,9 @@
     },
     "archie_anonymous_mtpyre_summit_23_6": {
       "id": "archie_anonymous_mtpyre_summit_23_6",
-      "name": "Archie",
-      "class": "Archie",
-      "sprite_set": "archie",
+      "name": "Julian",
+      "class": "Algorithm Leader",
+      "sprite_set": "algorithm_leader",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -15467,9 +15481,9 @@
     },
     "maxie_anonymous_mtpyre_summit_23_6": {
       "id": "maxie_anonymous_mtpyre_summit_23_6",
-      "name": "Maxie",
-      "class": "Maxie",
-      "sprite_set": "maxie",
+      "name": "Julian",
+      "class": "Blockchain Leader",
+      "sprite_set": "blockchain_leader",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -17547,17 +17561,17 @@
     },
     "archie_anonymous_route128_37_22": {
       "id": "archie_anonymous_route128_37_22",
-      "name": "Archie",
-      "class": "Archie",
-      "sprite_set": "archie",
+      "name": "Julian",
+      "class": "Algorithm Leader",
+      "sprite_set": "algorithm_leader",
       "sprite_overrides": {},
       "notes": ""
     },
     "maxie_anonymous_route128_38_21": {
       "id": "maxie_anonymous_route128_38_21",
-      "name": "Maxie",
-      "class": "Maxie",
-      "sprite_set": "maxie",
+      "name": "Julian",
+      "class": "Blockchain Leader",
+      "sprite_set": "blockchain_leader",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -18923,17 +18937,17 @@
     },
     "archie_anonymous_seafloorcavern_room9_9_42": {
       "id": "archie_anonymous_seafloorcavern_room9_9_42",
-      "name": "Archie",
-      "class": "Archie",
-      "sprite_set": "archie",
+      "name": "Julian",
+      "class": "Algorithm Leader",
+      "sprite_set": "algorithm_leader",
       "sprite_overrides": {},
       "notes": ""
     },
     "maxie_anonymous_seafloorcavern_room9_9_42": {
       "id": "maxie_anonymous_seafloorcavern_room9_9_42",
-      "name": "Maxie",
-      "class": "Maxie",
-      "sprite_set": "maxie",
+      "name": "Julian",
+      "class": "Blockchain Leader",
+      "sprite_set": "blockchain_leader",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -22379,9 +22393,9 @@
     },
     "archie_anonymous_slateportcity_harbor_8_10": {
       "id": "archie_anonymous_slateportcity_harbor_8_10",
-      "name": "Archie",
-      "class": "Archie",
-      "sprite_set": "archie",
+      "name": "Julian",
+      "class": "Algorithm Leader",
+      "sprite_set": "algorithm_leader",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -22443,9 +22457,9 @@
     },
     "archie_anonymous_slateportcity_oceanicmuseum_2f_6_1": {
       "id": "archie_anonymous_slateportcity_oceanicmuseum_2f_6_1",
-      "name": "Archie",
-      "class": "Archie",
-      "sprite_set": "archie",
+      "name": "Julian",
+      "class": "Algorithm Leader",
+      "sprite_set": "algorithm_leader",
       "sprite_overrides": {},
       "notes": ""
     },

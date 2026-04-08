@@ -2446,6 +2446,8 @@ function rawFileUrl(filePath) {
 const FRONT_PIC_MAP = {
     'archie': 'aqua_leader_archie',
     'maxie': 'magma_leader_maxie',
+    'algorithm_leader': 'algorithm_leader_julian',
+    'blockchain_leader': 'blockchain_leader_julian',
     'aqua_member_m': 'aqua_grunt_m',
     'aqua_member_f': 'aqua_grunt_f',
     'magma_member_m': 'magma_grunt_m',
