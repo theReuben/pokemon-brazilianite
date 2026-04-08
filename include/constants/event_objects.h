@@ -420,6 +420,16 @@
 #define OBJ_EVENT_GFX_GALACTIC_COMMANDER_JUPITER 391
 #define OBJ_EVENT_GFX_GALACTIC_COMMANDER_SATURN  392
 #define OBJ_EVENT_GFX_GALACTIC_LEADER_CYRUS      393
+#define OBJ_EVENT_GFX_MAGMA_ADMIN                394
+#define OBJ_EVENT_GFX_ALGORITHM_MEMBER_M        395
+#define OBJ_EVENT_GFX_ALGORITHM_MEMBER_F        396
+#define OBJ_EVENT_GFX_ALGORITHM_ADMIN_M         397
+#define OBJ_EVENT_GFX_ALGORITHM_ADMIN_F         398
+#define OBJ_EVENT_GFX_ALGORITHM_LEADER          399
+#define OBJ_EVENT_GFX_BLOCKCHAIN_MEMBER_M       400
+#define OBJ_EVENT_GFX_BLOCKCHAIN_MEMBER_F       401
+#define OBJ_EVENT_GFX_BLOCKCHAIN_ADMIN          402
+#define OBJ_EVENT_GFX_BLOCKCHAIN_LEADER         403
 
 // FRLG equivalents
 
@@ -431,7 +441,7 @@
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        394
+#define NUM_OBJ_EVENT_GFX                        404
 
 
 // These are dynamic object gfx ids.

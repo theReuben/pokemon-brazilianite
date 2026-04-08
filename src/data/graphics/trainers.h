@@ -501,6 +501,35 @@ const u16 gTrainerPalette_GalacticCommanderSaturn[] = INCBIN_U16("graphics/train
 const u32 gTrainerFrontPic_GalacticLeaderCyrus[] = INCBIN_U32("graphics/trainers/front_pics/galactic_leader_cyrus.4bpp.smol");
 const u16 gTrainerPalette_GalacticLeaderCyrus[] = INCBIN_U16("graphics/trainers/front_pics/galactic_leader_cyrus.gbapal");
 
+// Team Algorithm
+const u32 gTrainerFrontPic_AlgorithmGruntM[] = INCBIN_U32("graphics/trainers/front_pics/algorithm_grunt_m.4bpp.smol");
+const u16 gTrainerPalette_AlgorithmGruntM[] = INCBIN_U16("graphics/trainers/front_pics/algorithm_grunt_m.gbapal");
+
+const u32 gTrainerFrontPic_AlgorithmGruntF[] = INCBIN_U32("graphics/trainers/front_pics/algorithm_grunt_f.4bpp.smol");
+const u16 gTrainerPalette_AlgorithmGruntF[] = INCBIN_U16("graphics/trainers/front_pics/algorithm_grunt_f.gbapal");
+
+const u32 gTrainerFrontPic_AlgorithmAdminM[] = INCBIN_U32("graphics/trainers/front_pics/algorithm_admin_m.4bpp.smol");
+const u16 gTrainerPalette_AlgorithmAdminM[] = INCBIN_U16("graphics/trainers/front_pics/algorithm_admin_m.gbapal");
+
+const u32 gTrainerFrontPic_AlgorithmAdminF[] = INCBIN_U32("graphics/trainers/front_pics/algorithm_admin_f.4bpp.smol");
+const u16 gTrainerPalette_AlgorithmAdminF[] = INCBIN_U16("graphics/trainers/front_pics/algorithm_admin_f.gbapal");
+
+const u32 gTrainerFrontPic_AlgorithmLeaderJulian[] = INCBIN_U32("graphics/trainers/front_pics/algorithm_leader_julian.4bpp.smol");
+const u16 gTrainerPalette_AlgorithmLeaderJulian[] = INCBIN_U16("graphics/trainers/front_pics/algorithm_leader_julian.gbapal");
+
+// Team Blockchain
+const u32 gTrainerFrontPic_BlockchainGruntM[] = INCBIN_U32("graphics/trainers/front_pics/blockchain_grunt_m.4bpp.smol");
+const u16 gTrainerPalette_BlockchainGruntM[] = INCBIN_U16("graphics/trainers/front_pics/blockchain_grunt_m.gbapal");
+
+const u32 gTrainerFrontPic_BlockchainGruntF[] = INCBIN_U32("graphics/trainers/front_pics/blockchain_grunt_f.4bpp.smol");
+const u16 gTrainerPalette_BlockchainGruntF[] = INCBIN_U16("graphics/trainers/front_pics/blockchain_grunt_f.gbapal");
+
+const u32 gTrainerFrontPic_BlockchainAdmin[] = INCBIN_U32("graphics/trainers/front_pics/blockchain_admin.4bpp.smol");
+const u16 gTrainerPalette_BlockchainAdmin[] = INCBIN_U16("graphics/trainers/front_pics/blockchain_admin.gbapal");
+
+const u32 gTrainerFrontPic_BlockchainLeaderJulian[] = INCBIN_U32("graphics/trainers/front_pics/blockchain_leader_julian.4bpp.smol");
+const u16 gTrainerPalette_BlockchainLeaderJulian[] = INCBIN_U16("graphics/trainers/front_pics/blockchain_leader_julian.gbapal");
+
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_FRONT_HIKER), and
 // gTrainerFrontPic/gTrainerPalette pointers, (e.g "gTrainerFrontPic_Hiker" and "gTrainerPalette_Hiker").
@@ -679,6 +708,17 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_FRONT_GALACTIC_COMMANDER_JUPITER, gTrainerFrontPic_GalacticCommanderJupiter, gTrainerPalette_GalacticCommanderJupiter),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_GALACTIC_COMMANDER_SATURN, gTrainerFrontPic_GalacticCommanderSaturn, gTrainerPalette_GalacticCommanderSaturn),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_GALACTIC_LEADER_CYRUS, gTrainerFrontPic_GalacticLeaderCyrus, gTrainerPalette_GalacticLeaderCyrus),
+    // Team Algorithm
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_ALGORITHM_GRUNT_M, gTrainerFrontPic_AlgorithmGruntM, gTrainerPalette_AlgorithmGruntM),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_ALGORITHM_GRUNT_F, gTrainerFrontPic_AlgorithmGruntF, gTrainerPalette_AlgorithmGruntF),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_ALGORITHM_ADMIN_M, gTrainerFrontPic_AlgorithmAdminM, gTrainerPalette_AlgorithmAdminM),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_ALGORITHM_ADMIN_F, gTrainerFrontPic_AlgorithmAdminF, gTrainerPalette_AlgorithmAdminF),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_ALGORITHM_LEADER_JULIAN, gTrainerFrontPic_AlgorithmLeaderJulian, gTrainerPalette_AlgorithmLeaderJulian),
+    // Team Blockchain
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_BLOCKCHAIN_GRUNT_M, gTrainerFrontPic_BlockchainGruntM, gTrainerPalette_BlockchainGruntM),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_BLOCKCHAIN_GRUNT_F, gTrainerFrontPic_BlockchainGruntF, gTrainerPalette_BlockchainGruntF),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_BLOCKCHAIN_ADMIN, gTrainerFrontPic_BlockchainAdmin, gTrainerPalette_BlockchainAdmin),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_BLOCKCHAIN_LEADER_JULIAN, gTrainerFrontPic_BlockchainLeaderJulian, gTrainerPalette_BlockchainLeaderJulian),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

@@ -1152,7 +1152,7 @@ static u32 GetActiveMatchCallTrainerId(u32 activeMatchCallId)
     - Every 10th step
     - Every 10 minutes
     - 1/3 of the time (or 2/3 of the time, if the lead party Pokémon has Lightning Rod)
-    - If in a valid outdoor map (not Safari Zone, not underwater, not Mt Chimney with Team Magma, not Sootopolis with legendaries)
+    - If in a valid outdoor map (not Safari Zone, not underwater, not Mt Chimney with Team Blockchain, not Sootopolis with legendaries)
     - If an eligible trainer to call the player is selected
 */
 bool32 TryStartMatchCall(void)

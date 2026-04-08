@@ -552,7 +552,7 @@ LilycoveCity_Text_MovedLootIntoHideoutToday:
 LilycoveCity_Text_ChanceToDoBigThings:
 	.string "I'm just a GRUNT, so I don't know what\n"
 	.string "the BOSS is thinking…\p"
-	.string "But being on TEAM AQUA, I know I'll get\n"
+	.string "But being on TEAM ALGORITHM, I know I'll get\n"
 	.string "the chance to do big things!\p"
 	.string "Wh-who are you?!\n"
 	.string "I was just talking to myself!$"
@@ -565,7 +565,7 @@ LilycoveCity_Text_DontGoNearCaveInCove:
 
 LilycoveCity_Text_IfWorldBecomesOurs:
 	.string "If this whole wide world becomes ours,\n"
-	.string "TEAM AQUA's, it will be a happier\l"
+	.string "TEAM ALGORITHM's, it will be a happier\l"
 	.string "place for POKéMON, too.$"
 
 LilycoveCity_Text_WailmerLeapOutOfWater:
@@ -603,14 +603,14 @@ LilycoveCity_Text_ImFromKanto:
 	.string "only in this area?$"
 
 LilycoveCity_Text_TeamAquaBeenTrainingWailmer:
-	.string "TEAM AQUA's been training their\n"
+	.string "TEAM ALGORITHM's been training their\n"
 	.string "WAILMER in the cove.\p"
 	.string "We SAILORS can't get our boats out\n"
 	.string "to sea with them in the way!$"
 
 LilycoveCity_Text_SomeonePuntedTeamAquaOut:
 	.string "Ahoy, did you know?\p"
-	.string "Someone punted TEAM AQUA out of\n"
+	.string "Someone punted TEAM ALGORITHM out of\n"
 	.string "the way for us!\p"
 	.string "That got the WAILMER out of the cove,\n"
 	.string "so we can get our boats out again.$"
@@ -620,7 +620,7 @@ LilycoveCity_Text_SomeoneStoleMyPokemon:
 	.string "seaside inn to the sound of waves…\p"
 	.string "When someone stole my POKéMON!\p"
 	.string "Who's the abductor?\n"
-	.string "TEAM AQUA? Is it TEAM AQUA?$"
+	.string "TEAM ALGORITHM? Is it TEAM ALGORITHM?$"
 
 LilycoveCity_Text_MissingPokemonCameBack:
 	.string "My missing POKéMON…\n"
@@ -649,10 +649,10 @@ LilycoveCity_Text_TeamAquaRenovatedCavern:
 	.string "Hm, you know of the peculiar cavern\n"
 	.string "in this cove?\p"
 	.string "That had been a natural formation,\n"
-	.string "but then that TEAM AQUA lot came\l"
+	.string "but then that TEAM ALGORITHM lot came\l"
 	.string "along and made their renovations.\p"
 	.string "They call themselves\n"
-	.string "the “nature-loving TEAM AQUA”!\p"
+	.string "the “nature-loving TEAM ALGORITHM”!\p"
 	.string "But what they do and what they say\n"
 	.string "don't match at all!$"
 
@@ -660,7 +660,7 @@ LilycoveCity_Text_TeamAquaLotGoneForGood:
 	.string "That cave in the cove…\p"
 	.string "I didn't notice it right away,\n"
 	.string "but it's completely empty now.\p"
-	.string "That TEAM AQUA lot, they must\n"
+	.string "That TEAM ALGORITHM lot, they must\n"
 	.string "have gone away for good.$"
 
 LilycoveCity_Text_CitySign:
