@@ -80,7 +80,7 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Grubbin   |Bug            |Grass    |6-9   |Common  |
 |Tarountula|Bug            |Grass    |6-9   |Common  |
 |Murkrow   |Dark/Flying    |Grass    |6-9   |Uncommon|
-|Spinarak  |Bug/Poison     |Grass    |7-9   |Uncommon|
+|Noibat    |Flying/Dragon  |Grass    |6-9   |Uncommon|
 |Toxel     |Electric/Poison|Grass    |7-9   |Rare    |
 
 -----
@@ -134,10 +134,11 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 |Pokemon|Type |Encounter|Levels|Rarity  |
 |-------|-----|---------|------|--------|
-|Pansage|Grass|Grass    |17-20 |Uncommon|
-|Pansear|Fire |Grass    |17-20 |Uncommon|
-|Panpour|Water|Grass    |17-20 |Uncommon|
-|Steenee|Grass|Grass    |17-20 |Common  |
+|Pansage|Grass      |Grass    |17-20 |Uncommon|
+|Pansear|Fire       |Grass    |17-20 |Uncommon|
+|Panpour|Water      |Grass    |17-20 |Uncommon|
+|Steenee|Grass      |Grass    |17-20 |Common  |
+|Dolliv |Grass/Normal|Grass   |17-20 |Uncommon|
 
 -----
 
@@ -176,7 +177,7 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 |Pokemon          |Type       |Encounter   |Levels|Rarity  |
 |-----------------|-----------|------------|------|--------|
-|Vanillite        |Ice        |Grass       |21-25 |Common  |
+|Espurr           |Psychic    |Grass       |21-25 |Common  |
 |Magmar           |Fire       |Grass       |22-25 |Uncommon|
 |Galarian Slowpoke|Psychic    |Grass       |21-25 |Uncommon|
 |Gimmighoul       |Ghost      |Grass/Hidden|23-25 |Rare    |
@@ -233,11 +234,12 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 |Pokemon   |Type           |Encounter|Levels|Rarity  |
 |----------|---------------|---------|------|--------|
-|Tropius   |Grass/Flying   |Grass    |30-34 |Rare    |
-|Ursaring  |Normal         |Grass    |30-34 |Uncommon|
-|Toxtricity|Electric/Poison|Grass    |31-34 |Rare    |
-|Lokix     |Bug/Dark       |Grass    |30-33 |Uncommon|
-|Vespiquen |Bug/Flying     |Grass    |31-34 |Rare    |
+|Tropius   |Grass/Flying   |Grass   |30-34 |Rare    |
+|Ursaring  |Normal         |Grass   |30-34 |Uncommon|
+|Toxtricity|Electric/Poison|Grass   |31-34 |Rare    |
+|Lokix     |Bug/Dark       |Grass   |30-33 |Uncommon|
+|Vespiquen |Bug/Flying     |Grass   |31-34 |Rare    |
+|Feebas    |Water          |Fishing |30-33 |Rare    |
 
 -----
 
@@ -299,10 +301,11 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 |Pokemon   |Type         |Encounter|Levels|Rarity  |
 |----------|-------------|---------|------|--------|
-|Alolan Muk|Poison/Dark  |Grass    |33-37 |Uncommon|
-|Sirfetch'd|Fighting     |Grass    |34-37 |Rare    |
-|Arboliva  |Grass/Normal |Grass    |33-37 |Uncommon|
-|Toucannon |Normal/Flying|Grass    |33-36 |Uncommon|
+|Alolan Muk      |Poison/Dark  |Grass    |33-37 |Uncommon|
+|Sirfetch'd      |Fighting     |Grass    |34-37 |Rare    |
+|Arboliva        |Grass/Normal |Grass    |33-37 |Uncommon|
+|Toucannon       |Normal/Flying|Grass    |33-36 |Uncommon|
+|Hisuian Basculin|Water        |Surf     |33-37 |Uncommon|
 
 -----
 
@@ -315,6 +318,7 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Poliwrath |Water/Fighting|Surf     |35-40 |Uncommon|
 |Barbaracle|Rock/Water    |Surf     |35-40 |Uncommon|
 |Araquanid |Water/Bug     |Surf     |35-39 |Rare    |
+|Milotic   |Water         |Surf     |35-40 |Rare    |
 
 -----
 
@@ -351,6 +355,7 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Overqwil    |Dark/Poison  |Surf          |36-41 |Rare  |
 |Alolan Golem|Rock/Electric|Grass (island)|37-41 |Rare  |
 |Conkeldurr  |Fighting     |Grass (island)|37-41 |Rare  |
+|Basculegion |Water/Ghost  |Surf          |37-41 |Rare  |
 
 -----
 
