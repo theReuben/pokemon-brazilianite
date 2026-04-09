@@ -315,7 +315,7 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 |Pokemon   |Type          |Encounter|Levels|Rate|
 |----------|--------------|---------|------|----|
-|Poliwrath |Water/Fighting|Surf     |35-40 |30% |
+|Poliwrath |Water/Fighting|Surf     |35-40 |60% |
 |Barbaracle|Rock/Water    |Surf     |35-40 |30% |
 |Araquanid |Water/Bug     |Surf     |35-39 |5%  |
 |Milotic   |Water         |Surf     |35-40 |5%  |
@@ -328,9 +328,9 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 |Pokemon          |Type          |Encounter|Levels|Rate|
 |-----------------|--------------|---------|------|----|
-|Galarian Slowking|Poison/Psychic|Surf     |35-40 |5%  |
-|Sealeo           |Ice/Water     |Surf     |35-40 |30% |
+|Sealeo           |Ice/Water     |Surf     |35-40 |60% |
 |Grapploct        |Fighting      |Surf     |35-39 |30% |
+|Galarian Slowking|Poison/Psychic|Surf     |35-40 |5%  |
 
 -----
 
@@ -338,11 +338,12 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 *Deep waters with underwater caverns — Access to Sootopolis City.*
 
-|Pokemon   |Type    |Encounter     |Levels|Rate|
-|----------|--------|--------------|------|----|
-|Reuniclus |Psychic |Surf/Dive     |36-41 |5%  |
-|Electivire|Electric|Grass (island)|37-41 |5%  |
-|Politoed  |Water   |Surf          |36-41 |5%  |
+|Pokemon         |Type    |Encounter     |Levels|Rate|
+|----------------|--------|--------------|------|----|
+|Hisuian Basculin|Water   |Surf          |36-41 |60% |
+|Politoed        |Water   |Surf          |36-41 |30% |
+|Reuniclus       |Psychic |Surf/Dive     |36-41 |5%  |
+|Electivire      |Electric|Grass (island)|37-41 |5%  |
 
 -----
 
@@ -350,12 +351,14 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 *Open ocean east of Mossdeep — Treacherous deep waters.*
 
-|Pokemon     |Type         |Encounter     |Levels|Rate|
-|------------|-------------|--------------|------|----|
-|Overqwil    |Dark/Poison  |Surf          |36-41 |5%  |
-|Alolan Golem|Rock/Electric|Grass (island)|37-41 |5%  |
-|Conkeldurr  |Fighting     |Grass (island)|37-41 |5%  |
-|Basculegion |Water/Ghost  |Surf          |37-41 |5%  |
+|Pokemon          |Type         |Encounter     |Levels|Rate|
+|-----------------|-------------|--------------|------|----|
+|Hisuian Qwilfish |Dark/Poison  |Surf          |36-41 |60% |
+|Hisuian Basculin |Water        |Surf          |36-41 |30% |
+|Overqwil         |Dark/Poison  |Surf          |36-41 |5%  |
+|Basculegion      |Water/Ghost  |Surf          |37-41 |5%  |
+|Alolan Golem     |Rock/Electric|Grass (island)|37-41 |5%  |
+|Conkeldurr       |Fighting     |Grass (island)|37-41 |5%  |
 
 -----
 
@@ -365,9 +368,10 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 |Pokemon  |Type       |Encounter     |Levels|Rate|
 |---------|-----------|--------------|------|----|
+|Poliwrath|Water/Fight|Surf          |37-42 |60% |
+|Walrein  |Ice/Water  |Surf          |37-42 |30% |
 |Glimmora |Rock/Poison|Surf/Dive     |37-42 |5%  |
 |Magmortar|Fire       |Grass (island)|38-42 |5%  |
-|Walrein  |Ice/Water  |Surf          |37-42 |5%  |
 
 -----
 
@@ -377,12 +381,14 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 *Open ocean routes — Vast stretches of deep water between Ever Grande and the mainland.*
 
-|Pokemon   |Type       |Encounter     |Levels|Rate|
-|----------|-----------|--------------|------|----|
-|Talonflame|Fire/Flying|Grass (island)|38-43 |5%  |
-|Yanmega   |Bug/Flying |Grass (island)|39-43 |5%  |
-|Vanilluxe |Ice        |Surf          |38-43 |5%  |
-|Orbeetle  |Bug/Psychic|Grass (island)|39-43 |5%  |
+|Pokemon          |Type       |Encounter     |Levels|Rate|
+|-----------------|-----------|--------------|------|----|
+|Hisuian Qwilfish |Dark/Poison|Surf          |38-43 |60% |
+|Walrein          |Ice/Water  |Surf          |38-43 |30% |
+|Vanilluxe        |Ice        |Surf          |38-43 |5%  |
+|Talonflame       |Fire/Flying|Grass (island)|38-43 |5%  |
+|Yanmega          |Bug/Flying |Grass (island)|39-43 |5%  |
+|Orbeetle         |Bug/Psychic|Grass (island)|39-43 |5%  |
 
 -----
 
@@ -390,11 +396,12 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 *Strong current routes — Unpredictable tidal waters west of Pacifidlog Town.*
 
-|Pokemon |Type          |Encounter     |Levels|Rate|
-|--------|--------------|--------------|------|----|
-|Noivern |Flying/Dragon |Grass (island)|39-44 |5%  |
-|Rotom   |Electric/Ghost|Grass (island)|39-44 |5%  |
-|Clodsire|Poison/Ground |Surf          |39-44 |30% |
+|Pokemon         |Type          |Encounter     |Levels|Rate|
+|----------------|--------------|--------------|------|----|
+|Hisuian Basculin|Water         |Surf          |39-44 |60% |
+|Clodsire        |Poison/Ground |Surf          |39-44 |30% |
+|Noivern         |Flying/Dragon |Grass (island)|39-44 |5%  |
+|Rotom           |Electric/Ghost|Grass (island)|39-44 |5%  |
 
 -----
 
