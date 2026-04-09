@@ -14434,8 +14434,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Blockchain Emblem"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A medal-like item in\n"
-            "the same shape as Team\n"
+            "A medal-like item\n"
+            "shaped like Team\n"
             "Blockchain's mark."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
