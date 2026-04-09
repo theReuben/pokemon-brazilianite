@@ -80,7 +80,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Combee   |Bug/Flying|Grass      |5-8   |3-6  |40%  |
 |Teddiursa|Normal    |Grass      |5-8   |7-10 |18%  |
 |Dewpider |Water/Bug |Grass      |5-8   |11-12|2%   |
-|Dewpider |Water/Bug |Surf       |5-8   |1-5  |100% |
+|Dewpider |Water/Bug |Surf       |5-8   |1,3-5|70%  |
+|Poliwag  |Water     |Surf       |5-8   |2    |30%  |
 
 -----
 
@@ -180,7 +181,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Alolan Grimer|Poison/Dark|Grass    |20-24 |1-2  |40%  |
 |Magby        |Fire       |Grass    |20-24 |3-8  |50%  |
 |Simisear     |Fire       |Grass    |22-24 |9-12 |10%  |
-|Glimmet      |Rock/Poison|Cave     |20-24 |1-12 |100% |
+|Glimmet        |Rock/Poison  |Cave     |20-24 |1-5  |70%  |
+|Alolan Geodude |Rock/Electric|Cave     |20-23 |6-12 |30%  |
 
 -----
 
@@ -224,7 +226,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Binacle         |Rock/Water |Surf       |27-30 |1, 4-5 |65%  |
 |Hisuian Qwilfish|Dark/Poison|Surf       |27-31 |2      |30%  |
 |Simipour        |Water      |Surf       |28-31 |3      |5%   |
-|Binacle         |Rock/Water |Rock Smash |27-30 |1-5    |100% |
+|Binacle         |Rock/Water |Rock Smash |27-30 |1,3-5  |70%  |
+|Nosepass        |Rock       |Rock Smash |27-30 |2      |30%  |
 
 -----
 
@@ -306,8 +309,11 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Alolan Persian  |Dark          |Grass (Mt. Pyre)|35-38 |1-4  |60%  |
 |Meowstic        |Psychic       |Grass (Mt. Pyre)|34-37 |5-8  |30%  |
 |Runerigus       |Ground/Ghost  |Grass (Mt. Pyre)|34-38 |9-12 |10%  |
-|Galarian Slowbro|Poison/Psychic|Surf            |34-38 |1-5  |100% |
-|Probopass       |Rock/Steel    |Cave            |35-38 |1-12 |100% |
+|Galarian Slowbro|Poison/Psychic|Surf            |34-38 |1,4-5|65%  |
+|Hisuian Qwilfish|Dark/Poison   |Surf            |34-38 |2    |30%  |
+|Poliwhirl       |Water         |Surf            |34-38 |3    |5%   |
+|Probopass       |Rock/Steel    |Cave (Mt. Pyre) |35-38 |1-5  |70%  |
+|Galarian Yamask |Ground/Ghost  |Cave (Mt. Pyre) |35-38 |6-12 |30%  |
 
 -----
 
@@ -321,7 +327,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Arboliva        |Grass/Normal |Grass    |33-37 |5-8  |30%  |
 |Toucannon       |Normal/Flying|Grass    |33-36 |9-10 |8%   |
 |Sirfetch'd      |Fighting     |Grass    |34-37 |11-12|2%   |
-|Hisuian Basculin|Water        |Surf     |33-37 |1-5  |100% |
+|Hisuian Basculin|Water        |Surf     |33-37 |1,3-5|70%  |
+|Poliwhirl       |Water        |Surf     |33-37 |2    |30%  |
 
 -----
 
@@ -359,7 +366,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Hisuian Basculin|Water   |Surf          |36-41 |1, 4-5 |65%  |
 |Politoed        |Water   |Surf          |36-41 |2      |30%  |
 |Reuniclus       |Psychic |Surf/Dive     |36-41 |3      |5%   |
-|Electivire      |Electric|Grass (island)|37-41 |1-12   |100% |
+|Electivire      |Electric     |Grass (island)|37-41 |1-8  |90%  |
+|Alolan Golem    |Rock/Electric|Grass (island)|37-41 |9-12 |10%  |
 
 -----
 
@@ -386,8 +394,9 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |---------|-----------|--------------|------|-------|-----|
 |Poliwrath|Water/Fight|Surf          |37-42 |1, 4-5 |65%  |
 |Walrein  |Ice/Water  |Surf          |37-42 |2      |30%  |
-|Glimmora |Rock/Poison|Surf/Dive     |37-42 |3      |5%   |
-|Magmortar|Fire       |Grass (island)|38-42 |1-12   |100% |
+|Barbaracle|Rock/Water |Surf          |37-42 |3      |5%   |
+|Magmortar|Fire       |Grass (island)|38-42 |1-8  |90%  |
+|Ursaring  |Normal     |Grass (island)|38-42 |9-12 |10%  |
 
 -----
 
@@ -427,10 +436,12 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 |Pokemon     |Type          |Encounter|Levels|Slots|Rate|
 |------------|--------------|---------|------|-----|----|
-|Ursaluna    |Ground/Normal |Cave     |42-50 |1-4  |60% |
+|Ursaluna    |Ground/Normal |Cave     |42-50 |1-2  |40% |
+|Conkeldurr  |Fighting      |Cave     |42-48 |3-4  |20% |
 |Roaring Moon|Dragon/Dark   |Cave     |45-50 |5-6  |20% |
-|Iron Valiant|Fairy/Fighting|Cave     |45-50 |7-8  |10% |
-|Gholdengo   |Steel/Ghost   |Cave     |42-48 |9-12 |10% |
+|Glimmora    |Rock/Poison   |Cave     |42-48 |7-8  |10% |
+|Iron Valiant|Fairy/Fighting|Cave     |45-50 |9-10 |8%  |
+|Gholdengo   |Steel/Ghost   |Cave     |42-48 |11-12|2%  |
 
 -----
 
