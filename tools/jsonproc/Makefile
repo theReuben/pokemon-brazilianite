@@ -1,9 +1,9 @@
 CXX ?= g++
+ifeq ($(shell uname),Darwin)
+CXX := xcrun $(CXX)
+endif
 
 CXXFLAGS := -Wall -std=c++17 -O2
-ifeq ($(shell uname),Darwin)
-CXXFLAGS += -isysroot $(shell xcrun --show-sdk-path)
-endif
 
 INCLUDES := -I .
 

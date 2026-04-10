@@ -1,9 +1,9 @@
 CXX ?= g++
+ifeq ($(shell uname),Darwin)
+CXX := xcrun $(CXX)
+endif
 
 CXXFLAGS = -Wall -Werror -std=c++11 -O2
-ifeq ($(shell uname),Darwin)
-CXXFLAGS += -isysroot $(shell xcrun --show-sdk-path)
-endif
 
 SRCS = scaninc.cpp c_file.cpp asm_file.cpp source_file.cpp
 

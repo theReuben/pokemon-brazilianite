@@ -1,9 +1,9 @@
 CXX ?= g++
+ifeq ($(shell uname),Darwin)
+CXX := xcrun $(CXX)
+endif
 
 CXXFLAGS := -std=c++11 -O2 -Wall -Wno-switch -Werror
-ifeq ($(shell uname),Darwin)
-CXXFLAGS += -isysroot $(shell xcrun --show-sdk-path)
-endif
 
 SRCS := asm_file.cpp c_file.cpp charmap.cpp preproc.cpp string_parser.cpp \
 	utf8.cpp io.cpp

@@ -16,6 +16,7 @@ The following tools are **all required** to build the ROM:
 > - `arm-none-eabi-gcc: command not found` → devkitARM is not installed or not in PATH
 > - `pkg-config: Command not found` → pkg-config is not installed
 > - `'png.h' file not found` → libpng is not installed
+> - `'cstdlib' file not found` → Xcode Command Line Tools are not installed (run `xcode-select --install`)
 
 ## Step-by-step Setup
 
