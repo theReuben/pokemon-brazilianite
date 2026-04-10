@@ -66,6 +66,19 @@ const u16 gObjectEventPal_Npc1Reflection[] = INCBIN_U16("graphics/object_events/
 const u16 gObjectEventPal_Npc2Reflection[] = INCBIN_U16("graphics/object_events/palettes/npc_2_reflection.gbapal");
 const u16 gObjectEventPal_Npc3Reflection[] = INCBIN_U16("graphics/object_events/palettes/npc_3_reflection.gbapal");
 const u16 gObjectEventPal_Npc4Reflection[] = INCBIN_U16("graphics/object_events/palettes/npc_4_reflection.gbapal");
+
+// Team Galactic overworld palettes
+const u16 gObjectEventPal_GalacticGrunt[] = INCBIN_U16("graphics/object_events/palettes/team_galactic_grunt.gbapal");
+const u16 gObjectEventPal_GalacticMars[] = INCBIN_U16("graphics/object_events/palettes/team_galactic_mars.gbapal");
+const u16 gObjectEventPal_GalacticJupiter[] = INCBIN_U16("graphics/object_events/palettes/team_galactic_jupiter.gbapal");
+const u16 gObjectEventPal_GalacticSaturn[] = INCBIN_U16("graphics/object_events/palettes/team_galactic_saturn.gbapal");
+const u16 gObjectEventPal_GalacticCyrus[] = INCBIN_U16("graphics/object_events/palettes/team_galactic_cyrus.gbapal");
+
+// Team Blockchain overworld palettes (golden)
+const u16 gObjectEventPal_BlockchainGrunt[] = INCBIN_U16("graphics/object_events/palettes/team_blockchain_grunt.gbapal");
+const u16 gObjectEventPal_BlockchainAdmin[] = INCBIN_U16("graphics/object_events/palettes/team_blockchain_admin.gbapal");
+const u16 gObjectEventPal_BlockchainLeader[] = INCBIN_U16("graphics/object_events/palettes/team_blockchain_leader.gbapal");
+
 const u32 gObjectEventPic_NinjaBoy[] = INCBIN_U32("graphics/object_events/pics/people/ninja_boy.4bpp");
 const u32 gObjectEventPic_Twin[] = INCBIN_U32("graphics/object_events/pics/people/twin.4bpp");
 const u32 gObjectEventPic_Boy1[] = INCBIN_U32("graphics/object_events/pics/people/boy_1.4bpp");
