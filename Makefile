@@ -166,7 +166,12 @@ ifeq ($(RELEASE),1)
 endif
 ARMCC := $(PREFIX)gcc
 PATH_ARMCC := PATH="$(PATH)" $(ARMCC)
+# Check if the ARM cross-compiler is available before invoking it
+ifneq ($(shell command -v $(ARMCC) 2>/dev/null),)
 CC1 := $(shell $(PATH_ARMCC) --print-prog-name=cc1) -quiet
+else
+CC1 :=
+endif
 
 override CFLAGS += -mthumb -mthumb-interwork -O$(O_LEVEL) -mabi=apcs-gnu -mtune=arm7tdmi -march=armv4t -Wno-pointer-to-int-cast -std=gnu17 -Werror -Wall -Wno-strict-aliasing -Wno-attribute-alias -Woverride-init -Wnonnull -Wenum-conversion
 
@@ -192,7 +197,11 @@ ifeq ($(DEPRECATED_ERROR),0)
   endif
 endif
 
+ifneq ($(shell command -v $(ARMCC) 2>/dev/null),)
 LIBPATH := -L "$(dir $(shell $(PATH_ARMCC) -mthumb -print-file-name=libgcc.a))" -L "$(dir $(shell $(PATH_ARMCC) -mthumb -print-file-name=libnosys.a))" -L "$(dir $(shell $(PATH_ARMCC) -mthumb -print-file-name=libc.a))"
+else
+LIBPATH :=
+endif
 LIB := $(LIBPATH) -lc -lnosys -lgcc -L../../libagbsyscall -lagbsyscall
 # Enable debug info if set
 ifeq ($(DINFO),1)
@@ -290,6 +299,10 @@ endif
 .SHELLSTATUS ?= 0
 
 ifeq ($(SETUP_PREREQS),1)
+  # Check for required tools before building
+  ifeq ($(shell command -v $(ARMCC) 2>/dev/null),)
+    $(error $(ARMCC) not found! Please install the ARM toolchain (devkitARM). See INSTALL.md for setup instructions)
+  endif
   # If set on: Default target or a rule requiring a scan
   # Forcibly execute `make tools` since we need them for what we are doing.
   $(foreach line, $(shell $(MAKE) -f make_tools.mk | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
