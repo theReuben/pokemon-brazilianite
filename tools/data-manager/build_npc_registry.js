@@ -249,7 +249,7 @@ function buildRegistry() {
 
     // ── Grunt detection helpers ────────────────────────────────────────────
     // Grunts are merged by team + gender into collective NPCs.
-    // Detection: Name == "/grunt" (Algorithm), "$GRNT" (Blockchain), or "GRUNT" (Rocket) with matching Class
+    // Detection: Name (case-insensitive) == "/grunt" (Algorithm), "$GRNT" (Blockchain), or "GRUNT" (Rocket) with matching Class
     // Gender determined from Pic field (e.g., "Aqua Grunt M" → M, "Magma Grunt F" → F)
 
     const GRUNT_GRAPHICS_TO_TEAM_GENDER = {
