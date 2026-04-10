@@ -249,7 +249,7 @@ function buildRegistry() {
 
     // ── Grunt detection helpers ────────────────────────────────────────────
     // Grunts are merged by team + gender into collective NPCs.
-    // Detection: Name == "GRUNT" with Class starting with "Team Algorithm"/"Team Blockchain"/"Team Rocket"
+    // Detection: Name == "/grunt" (Algorithm), "$GRNT" (Blockchain), or "GRUNT" (Rocket) with matching Class
     // Gender determined from Pic field (e.g., "Aqua Grunt M" → M, "Magma Grunt F" → F)
 
     const GRUNT_GRAPHICS_TO_TEAM_GENDER = {
@@ -270,11 +270,10 @@ function buildRegistry() {
     function isGruntTrainer(trainer) {
         const name = (trainer.name || '').trim().toUpperCase();
         const cls = (trainer.class || '').trim().toLowerCase();
-        return name === 'GRUNT' && (
-            cls.startsWith('team algorithm') ||
-            cls.startsWith('team blockchain') ||
-            cls.startsWith('team rocket')
-        );
+        if (cls.startsWith('team algorithm')) return name === '/GRUNT';
+        if (cls.startsWith('team blockchain')) return name === '$GRNT';
+        if (cls.startsWith('team rocket')) return name === 'GRUNT';
+        return false;
     }
 
     function gruntTeamKey(trainer) {
