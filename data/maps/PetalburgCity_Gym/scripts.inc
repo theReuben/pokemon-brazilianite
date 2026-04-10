@@ -1277,7 +1277,7 @@ PetalburgCity_Gym_Text_NormanDefeat:
 
 PetalburgCity_Gym_Text_ReceivedBalanceBadge:
 	.string "{PLAYER} received the BALANCE BADGE\n"
-	.string "from DAD!$"
+	.string "from MAMA BOSA!$"
 
 PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:
 	.string "MAMA BOSA: With that BADGE, the DEFENSE\n"

@@ -640,31 +640,31 @@ LilycoveCity_PokemonTrainerFanClub_Text_MyFavoriteTrainerIsBrawly:
 	.string "BRAWLY!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_YouveSurpassedYourFather:
-	.string "You've surpassed your own father in\n"
+	.string "You've surpassed your own mother in\n"
 	.string "every regard!\p"
 	.string "I'm telling you, so there's no question\n"
 	.string "about it at all!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_YourFatherNeverGaveUpSoKeepOnBattling:
 	.string "Even when things turned bleak,\n"
-	.string "your father never gave up.\p"
+	.string "your mother never gave up.\p"
 	.string "This I know to be true.\p"
 	.string "You never give up even if you lose!\n"
 	.string "So keep on battling!$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_LongWayToGoComparedToNorman:
-	.string "NORMAN battled with more power,\n"
+	.string "MAMA BOSA battled with more power,\n"
 	.string "charisma, and showmanship than you.\p"
 	.string "Even though people may say that\n"
 	.string "you're strong…\p"
 	.string "You've still got a long way to go\n"
-	.string "compared to your father.$"
+	.string "compared to your mother.$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_YouAndNormanAreDifferent:
 	.string "You're beginning to get the same\n"
-	.string "air of awe NORMAN exudes.\p"
+	.string "air of awe MAMA BOSA exudes.\p"
 	.string "But there's something conclusively\n"
-	.string "different between you and NORMAN.\p"
+	.string "different between you and MAMA BOSA.\p"
 	.string "I can't tell you what that is.\n"
 	.string "You'll have to find it yourself.$"
 

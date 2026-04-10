@@ -2015,7 +2015,7 @@ MatchCall_BattlePyramidText14::
 	.string "See you again!$"
 
 MatchCall_Text_Mom1::
-	.string "MOM: Your father and you…\n"
+	.string "DAD: Your mother and you…\n"
 	.string "Everyone is captivated by POKéMON.\p"
 	.string "What is the charm of POKéMON?\p"
 	.string "Me?\n"
@@ -2023,17 +2023,17 @@ MatchCall_Text_Mom1::
 	.string "my everyday chores.$"
 
 MatchCall_Text_Mom2::
-	.string "MOM: Hi, {PLAYER}!\n"
-	.string "Your father keeps himself locked\l"
+	.string "DAD: Hi, {PLAYER}!\n"
+	.string "Your mother keeps herself locked\l"
 	.string "away in the PETALBURG GYM.\p"
-	.string "He comes home every so often.\n"
-	.string "But he goes back to the GYM when\l"
-	.string "he's eaten everything he can.\p"
+	.string "She comes home every so often.\n"
+	.string "But she goes back to the GYM when\l"
+	.string "she's eaten everything she can.\p"
 	.string "I'm guessing that losing to you\n"
-	.string "was a big blow to his pride!$"
+	.string "was a big blow to her pride!$"
 
 MatchCall_Text_Mom3::
-	.string "MOM: {PLAYER}…\n"
+	.string "DAD: {PLAYER}…\n"
 	.string "Don't worry about me or the house.\p"
 	.string "Wear those RUNNING SHOES until\n"
 	.string "they fall apart, honey!$"
@@ -2721,7 +2721,7 @@ MatchCall_Text_Norman2::
 	.string "very surely, you're getting\l"
 	.string "tougher, {PLAYER}.\p"
 	.string "The stronger you get, the farther\n"
-	.string "and higher you soar from Mother\l"
+	.string "and higher you soar from Father\l"
 	.string "and me…\p"
 	.string "This feeling is hard to explain.$"
 
@@ -2735,7 +2735,7 @@ MatchCall_Text_Norman3::
 
 MatchCall_Text_Norman4::
 	.string "MAMA BOSA: {PLAYER}! You'd better go visit\n"
-	.string "Mother every so often.\p"
+	.string "Father every so often.\p"
 	.string "I'm going to remain here and\n"
 	.string "redouble my training.\p"
 	.string "The way of battling is deep\n"
@@ -2900,14 +2900,14 @@ MatchCall_Text_MrStone4::
 MatchCall_Text_MrStone5::
 	.string "MR. STONE: Hello, hello, {PLAYER}{KUN}!\p"
 	.string "I heard from someone in PETALBURG\n"
-	.string "that you're NORMAN's child!\p"
+	.string "that you're MAMA BOSA's child!\p"
 	.string "No wonder you're such a capable\n"
 	.string "being!$"
 
 MatchCall_Text_MrStone6::
 	.string "MR. STONE: What's that?\p"
-	.string "You battled your own father and\n"
-	.string "defeated him?\p"
+	.string "You battled your own mother and\n"
+	.string "defeated her?\p"
 	.string "That's astounding!\p"
 	.string "I had no idea that I befriended\n"
 	.string "someone so special! Wahaha!$"

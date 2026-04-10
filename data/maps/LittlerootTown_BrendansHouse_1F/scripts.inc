@@ -293,8 +293,8 @@ PlayersHouse_1F_Text_MoversPokemonGoSetClock:
 	.string "This is so convenient!\p"
 	.string "{PLAYER}, your room is upstairs.\n"
 	.string "Go check it out, dear!\p"
-	.string "DAD bought you a new clock to mark\n"
-	.string "our move here.\l"
+	.string "MAMA BOSA bought you a new clock to\n"
+	.string "mark our move here.\l"
 	.string "Don't forget to set it!$"
 
 PlayersHouse_1F_Text_ArentYouInterestedInRoom:
@@ -312,16 +312,18 @@ PlayersHouse_1F_Text_OhComeQuickly:
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn:
 	.string "DAD: Look! It's PETALBURG GYM!\n"
-	.string "Maybe MOM will be on!$"
+	.string "Maybe MAMA BOSA will be on!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
 	.string "DAD: Oh… It's over.\p"
-	.string "I think MOM was on, but we missed her.\n"
+	.string "I think MAMA BOSA was on,\n"
+	.string "but we missed her.\n"
 	.string "Too bad.$"
 
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
 	.string "Oh, yes.\n"
-	.string "One of DAD's friends lives in town.\p"
+	.string "One of MAMA BOSA's friends lives in\n"
+	.string "town.\p"
 	.string "PROF. BIRCH is his name.\p"
 	.string "He lives right next door, so you should\n"
 	.string "go over and introduce yourself.$"
@@ -407,7 +409,7 @@ PlayersHouse_1F_Text_BetterGetBackToGym:
 	.string "while I'm away.$"
 
 PlayersHouse_1F_Text_DadShouldStayLonger:
-	.string "DAD: That MOM of yours…\p"
+	.string "DAD: That MAMA BOSA…\p"
 	.string "She comes home for the first time in a\n"
 	.string "while, but all she talks about is POKéMON.\p"
 	.string "She should relax and stay a little longer.$"
