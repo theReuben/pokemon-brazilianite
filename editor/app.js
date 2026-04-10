@@ -105,7 +105,9 @@ async function ghFetch(path, opts = {}) {
     const res = await fetch(API_BASE + path, { ...opts, headers });
     if (!res.ok) {
         const body = await res.json().catch(() => ({}));
-        throw new Error(body.message || `GitHub API error: ${res.status}`);
+        const err = new Error(body.message || `GitHub API error: ${res.status}`);
+        err.status = res.status;
+        throw err;
     }
     return res.json();
 }
@@ -175,7 +177,18 @@ function formatCommitTime(iso) {
 
 // Ensure the editor branch exists; create it on first edit
 async function ensureEditorBranch() {
-    if (editorBranch) return editorBranch;
+    if (editorBranch) {
+        // Verify the branch still exists on GitHub (it may have been deleted)
+        try {
+            await ghFetch(`/repos/${REPO_OWNER}/${REPO_NAME}/git/refs/heads/${editorBranch}`);
+            return editorBranch;
+        } catch (e) {
+            // Only treat 404 (branch deleted/not found) as recoverable; re-throw other errors
+            if (e.status !== 404) throw e;
+            // Branch no longer exists — clear state and fall through to create a new one
+            clearEditorBranch();
+        }
+    }
     if (!ghUser) throw new Error('Sign in with GitHub before making changes.');
     return await createNewEditorBranch();
 }
