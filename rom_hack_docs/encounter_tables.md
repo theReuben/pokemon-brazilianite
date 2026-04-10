@@ -62,7 +62,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Araquanid|Water/Bug|Surf|3-8|3|5%|
 |Poliwhirl|Water|Surf|3-8|4|4%|
 |Bibarel|Normal/Water|Surf|3-8|5|1%|
-|Poliwag|Water|Good Rod/Old Rod|3-5|1-5|200%|
+|Poliwag|Water|Old Rod|3-5|1-2|100%|
+|Poliwag|Water|Good Rod|3-5|3-5|100%|
 |Poliwhirl|Water|Super Rod|5-10|6-7|80%|
 |Araquanid|Water/Bug|Super Rod|8-15|8|15%|
 |Dewpider|Water/Bug|Super Rod|5-10|9-10|5%|
@@ -105,8 +106,10 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Dewpider|Water/Bug|Surf|5-8|1|60%|
 |Poliwag|Water|Surf|5-8|2|30%|
 |Dewpider|Water/Bug|Surf|5-8|3-5|10%|
-|Poliwag|Water|Good Rod/Old Rod|5-8|1-4|180%|
-|Dewpider|Water/Bug|Good Rod/Super Rod|5-8|5-7|100%|
+|Poliwag|Water|Old Rod|5-8|1-2|100%|
+|Poliwag|Water|Good Rod|5-8|3-4|80%|
+|Dewpider|Water/Bug|Good Rod|5-8|5|20%|
+|Dewpider|Water/Bug|Super Rod|5-8|6-7|80%|
 |Araquanid|Water/Bug|Super Rod|8-15|8|15%|
 |Poliwhirl|Water|Super Rod|8-12|9-10|5%|
 
@@ -353,7 +356,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Poliwhirl|Water|Surf|23-27|2|30%|
 |Clobbopus|Fighting|Surf|22-25|3|5%|
 |Spheal|Ice/Water|Surf|22-27|4-5|5%|
-|Poliwag|Water|Good Rod/Old Rod|22-27|1-3|160%|
+|Poliwag|Water|Old Rod|22-27|1-2|100%|
+|Poliwag|Water|Good Rod|22-27|3|60%|
 |Poliwhirl|Water|Good Rod|23-27|4-5|40%|
 |Spheal|Ice/Water|Super Rod|22-27|6-7|80%|
 |Clobbopus|Fighting|Super Rod|22-25|8|15%|
@@ -461,7 +465,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Dewpider|Water/Bug|Surf|28-32|3|5%|
 |Araquanid|Water/Bug|Surf|28-32|4|4%|
 |Poliwhirl|Water|Surf|28-32|5|1%|
-|Poliwag|Water|Good Rod/Old Rod|28-32|1-3|160%|
+|Poliwag|Water|Old Rod|28-32|1-2|100%|
+|Poliwag|Water|Good Rod|28-32|3|60%|
 |Poliwhirl|Water|Good Rod|29-32|4-5|40%|
 |Hisuian Basculin|Water|Super Rod|28-32|6-7|80%|
 |Araquanid|Water/Bug|Super Rod|28-32|8|15%|
@@ -488,7 +493,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Feebas|Water|Surf|30-33|5|1%|
 |Poliwag|Water|Old Rod|30-33|1-2|100%|
 |Poliwhirl|Water|Good Rod|30-33|3-4|80%|
-|Feebas|Water|Good Rod/Super Rod|30-33|5-8|115%|
+|Feebas|Water|Good Rod|30-33|5|20%|
+|Feebas|Water|Super Rod|30-33|6-8|95%|
 |Milotic|Water|Super Rod|31-34|9-10|5%|
 
 -----
@@ -544,7 +550,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Dewpider|Water/Bug|Surf|33-37|5|1%|
 |Poliwag|Water|Old Rod|33-37|1-2|100%|
 |Poliwhirl|Water|Good Rod|33-37|3-4|80%|
-|Hisuian Qwilfish|Dark/Poison|Good Rod/Super Rod|33-37|5-7|100%|
+|Hisuian Qwilfish|Dark/Poison|Good Rod|33-37|5|20%|
+|Hisuian Qwilfish|Dark/Poison|Super Rod|33-37|6-7|80%|
 |Overqwil|Dark/Poison|Super Rod|33-37|8|15%|
 |Hisuian Basculin|Water|Super Rod|33-37|9|4%|
 |Araquanid|Water/Bug|Super Rod|33-37|10|1%|
@@ -563,8 +570,10 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Hisuian Qwilfish|Dark/Poison|Surf|34-38|2|30%|
 |Poliwhirl|Water|Surf|34-38|3|5%|
 |Galarian Slowbro|Poison/Psychic|Surf|34-38|4-5|5%|
-|Poliwhirl|Water|Good Rod/Old Rod|34-38|1-3|160%|
-|Hisuian Qwilfish|Dark/Poison|Good Rod/Super Rod|34-38|4-7|120%|
+|Poliwhirl|Water|Old Rod|34-38|1-2|100%|
+|Poliwhirl|Water|Good Rod|34-38|3|60%|
+|Hisuian Qwilfish|Dark/Poison|Good Rod|34-38|4-5|40%|
+|Hisuian Qwilfish|Dark/Poison|Super Rod|34-38|6-7|80%|
 |Overqwil|Dark/Poison|Super Rod|35-38|8|15%|
 |Poliwrath|Water/Fighting|Super Rod|35-38|9|4%|
 |Galarian Slowbro|Poison/Psychic|Super Rod|34-38|10|1%|
@@ -597,7 +606,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Hisuian Basculin|Water|Surf|33-37|3-5|10%|
 |Poliwag|Water|Old Rod|33-37|1-2|100%|
 |Poliwhirl|Water|Good Rod|33-37|3-4|80%|
-|Hisuian Basculin|Water|Good Rod/Super Rod|33-37|5-7|100%|
+|Hisuian Basculin|Water|Good Rod|33-37|5|20%|
+|Hisuian Basculin|Water|Super Rod|33-37|6-7|80%|
 |Politoed|Water|Super Rod|35-38|8|15%|
 |Basculegion|Water/Ghost|Super Rod|35-38|9|4%|
 |Araquanid|Water/Bug|Super Rod|35-38|10|1%|
@@ -736,7 +746,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Poliwrath|Water/Fighting|Surf|37-42|4-5|5%|
 |Poliwhirl|Water|Old Rod|37-42|1-2|100%|
 |Hisuian Basculin|Water|Good Rod|37-42|3-4|80%|
-|Hisuian Qwilfish|Dark/Poison|Good Rod/Super Rod|37-42|5-7|100%|
+|Hisuian Qwilfish|Dark/Poison|Good Rod|37-42|5|20%|
+|Hisuian Qwilfish|Dark/Poison|Super Rod|37-42|6-7|80%|
 |Overqwil|Dark/Poison|Super Rod|38-42|8|15%|
 |Grapploct|Fighting|Super Rod|38-42|9|4%|
 |Walrein|Ice/Water|Super Rod|38-42|10|1%|
@@ -817,7 +828,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Poliwhirl|Water|Surf|35-45|5|1%|
 |Poliwhirl|Water|Old Rod|35-45|1-2|100%|
 |Hisuian Basculin|Water|Good Rod|35-45|3-4|80%|
-|Milotic|Water|Good Rod/Super Rod|35-45|5-7|100%|
+|Milotic|Water|Good Rod|35-45|5|20%|
+|Milotic|Water|Super Rod|35-45|6-7|80%|
 |Politoed|Water|Super Rod|35-45|8|15%|
 |Grapploct|Fighting|Super Rod|35-45|9|4%|
 |Araquanid|Water/Bug|Super Rod|35-45|10|1%|
@@ -1230,7 +1242,8 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Poliwhirl|Water|Surf|25-35|5|1%|
 |Poliwag|Water|Old Rod|25-35|1-2|100%|
 |Dewpider|Water/Bug|Good Rod|25-35|3-4|80%|
-|Araquanid|Water/Bug|Good Rod/Super Rod|28-38|5-7|100%|
+|Araquanid|Water/Bug|Good Rod|28-38|5|20%|
+|Araquanid|Water/Bug|Super Rod|28-38|6-7|80%|
 |Grapploct|Fighting|Super Rod|30-40|8|15%|
 |Milotic|Water|Super Rod|30-40|9-10|5%|
 
