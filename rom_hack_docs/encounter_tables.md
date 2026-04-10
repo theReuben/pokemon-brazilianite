@@ -12,10 +12,15 @@ All encounter slots are fixed by the engine. Every slot must be assigned a Pokem
 |----------------|-------|------------|
 | Grass / Cave   | 12    | 1:20, 2:20, 3:10, 4:10, 5:10, 6:10, 7:5, 8:5, 9:4, 10:4, 11:1, 12:1 |
 | Surf           | 5     | 1:60, 2:30, 3:5, 4:4, 5:1 |
-| Old Rod        | 2     | 1:70, 2:30 |
-| Good Rod       | 3     | 1:60, 2:20, 3:20 |
-| Super Rod      | 5     | 1:40, 2:40, 3:15, 4:4, 5:1 |
 | Rock Smash     | 5     | 1:60, 2:30, 3:5, 4:4, 5:1 |
+
+Fishing uses a shared pool of **10 slots** split across three rods. Slot numbers in the area tables below use this global numbering:
+
+| Rod       | Slots | Slot Rates |
+|-----------|-------|------------|
+| Old Rod   | 1-2   | 1:70, 2:30 |
+| Good Rod  | 3-5   | 3:60, 4:20, 5:20 |
+| Super Rod | 6-10  | 6:40, 7:40, 8:15, 9:4, 10:1 |
 
 -----
 
