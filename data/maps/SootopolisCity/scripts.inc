@@ -1661,8 +1661,8 @@ SootopolisCity_Text_SoThatsRayquaza:
 	.string "POKéMON would flee from it in fear…$"
 
 SootopolisCity_Text_MaxieArchieLeft:
-	.string "STEVEN: It looks like both JULIAN and\n"
-	.string "JULIAN have gone away somewhere.\p"
+	.string "STEVEN: It looks like both team leaders\n"
+	.string "have gone away somewhere.\p"
 	.string "Perhaps they've gone to MT. PYRE to\n"
 	.string "return those ORBS…$"
 

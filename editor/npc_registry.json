@@ -106,17 +106,24 @@
       "trainer_pic": null,
       "sprites": {}
     },
-    "aqua_member_m": {
-      "id": "aqua_member_m",
-      "label": "Aqua Member M",
-      "overworld_graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+    "algorithm_member_m": {
+      "id": "algorithm_member_m",
+      "label": "Algorithm Member M",
+      "overworld_graphics_id": "OBJ_EVENT_GFX_ALGORITHM_MEMBER_M",
       "trainer_pic": null,
       "sprites": {}
     },
-    "aqua_member_f": {
-      "id": "aqua_member_f",
-      "label": "Aqua Member F",
-      "overworld_graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+    "algorithm_member_f": {
+      "id": "algorithm_member_f",
+      "label": "Algorithm Member F",
+      "overworld_graphics_id": "OBJ_EVENT_GFX_ALGORITHM_MEMBER_F",
+      "trainer_pic": null,
+      "sprites": {}
+    },
+    "galactic_commander_jupiter": {
+      "id": "galactic_commander_jupiter",
+      "label": "Galactic Commander Jupiter",
+      "overworld_graphics_id": "OBJ_EVENT_GFX_GALACTIC_COMMANDER_JUPITER",
       "trainer_pic": null,
       "sprites": {}
     },
@@ -1310,10 +1317,10 @@
       "trainer_pic": null,
       "sprites": {}
     },
-    "magma_member_m": {
-      "id": "magma_member_m",
-      "label": "Magma Member M",
-      "overworld_graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+    "blockchain_member_m": {
+      "id": "blockchain_member_m",
+      "label": "Blockchain Member M",
+      "overworld_graphics_id": "OBJ_EVENT_GFX_BLOCKCHAIN_MEMBER_M",
       "trainer_pic": null,
       "sprites": {}
     },
@@ -1387,6 +1394,13 @@
       "trainer_pic": null,
       "sprites": {}
     },
+    "norman": {
+      "id": "norman",
+      "label": "Norman",
+      "overworld_graphics_id": "OBJ_EVENT_GFX_NORMAN",
+      "trainer_pic": null,
+      "sprites": {}
+    },
     "vigoroth_carrying_box": {
       "id": "vigoroth_carrying_box",
       "label": "Vigoroth Carrying Box",
@@ -1398,13 +1412,6 @@
       "id": "vigoroth_facing_away",
       "label": "Vigoroth Facing Away",
       "overworld_graphics_id": "OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY",
-      "trainer_pic": null,
-      "sprites": {}
-    },
-    "norman": {
-      "id": "norman",
-      "label": "Norman",
-      "overworld_graphics_id": "OBJ_EVENT_GFX_NORMAN",
       "trainer_pic": null,
       "sprites": {}
     },
@@ -1436,10 +1443,10 @@
       "trainer_pic": null,
       "sprites": {}
     },
-    "magma_member_f": {
-      "id": "magma_member_f",
-      "label": "Magma Member F",
-      "overworld_graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+    "blockchain_member_f": {
+      "id": "blockchain_member_f",
+      "label": "Blockchain Member F",
+      "overworld_graphics_id": "OBJ_EVENT_GFX_BLOCKCHAIN_MEMBER_F",
       "trainer_pic": null,
       "sprites": {}
     },
@@ -1450,10 +1457,17 @@
       "trainer_pic": null,
       "sprites": {}
     },
-    "maxie": {
-      "id": "maxie",
-      "label": "Maxie",
-      "overworld_graphics_id": "OBJ_EVENT_GFX_MAXIE",
+    "blockchain_admin": {
+      "id": "blockchain_admin",
+      "label": "Blockchain Admin",
+      "overworld_graphics_id": "OBJ_EVENT_GFX_BLOCKCHAIN_ADMIN",
+      "trainer_pic": null,
+      "sprites": {}
+    },
+    "blockchain_leader": {
+      "id": "blockchain_leader",
+      "label": "Blockchain Leader",
+      "overworld_graphics_id": "OBJ_EVENT_GFX_BLOCKCHAIN_LEADER",
       "trainer_pic": null,
       "sprites": {}
     },
@@ -1485,10 +1499,10 @@
       "trainer_pic": null,
       "sprites": {}
     },
-    "archie": {
-      "id": "archie",
-      "label": "Archie",
-      "overworld_graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+    "algorithm_leader": {
+      "id": "algorithm_leader",
+      "label": "Algorithm Leader",
+      "overworld_graphics_id": "OBJ_EVENT_GFX_ALGORITHM_LEADER",
       "trainer_pic": null,
       "sprites": {}
     },
@@ -1744,6 +1758,13 @@
       "trainer_pic": null,
       "sprites": {}
     },
+    "galactic_commander_mars": {
+      "id": "galactic_commander_mars",
+      "label": "Galactic Commander Mars",
+      "overworld_graphics_id": "OBJ_EVENT_GFX_GALACTIC_COMMANDER_MARS",
+      "trainer_pic": null,
+      "sprites": {}
+    },
     "kecleon_bridge_shadow": {
       "id": "kecleon_bridge_shadow",
       "label": "Kecleon Bridge Shadow",
@@ -1974,20 +1995,6 @@
       "overworld_graphics_id": "OBJ_EVENT_GFX_SPEAROW",
       "trainer_pic": null,
       "sprites": {}
-    },
-    "algorithm_leader": {
-      "id": "algorithm_leader",
-      "label": "Algorithm Leader (Julian)",
-      "overworld_graphics_id": "OBJ_EVENT_GFX_ALGORITHM_LEADER",
-      "trainer_pic": null,
-      "sprites": {}
-    },
-    "blockchain_leader": {
-      "id": "blockchain_leader",
-      "label": "Blockchain Leader (Julian)",
-      "overworld_graphics_id": "OBJ_EVENT_GFX_BLOCKCHAIN_LEADER",
-      "trainer_pic": null,
-      "sprites": {}
     }
   },
   "npcs": {
@@ -2002,7 +2009,7 @@
     "team_aqua_grunt_m": {
       "id": "team_aqua_grunt_m",
       "name": "Grunt (M)",
-      "class": "Team Algorithm",
+      "class": "Team Aqua",
       "sprite_set": "aqua_member_m",
       "sprite_overrides": {},
       "notes": ""
@@ -2042,7 +2049,7 @@
     "team_aqua_grunt_f": {
       "id": "team_aqua_grunt_f",
       "name": "Grunt (F)",
-      "class": "Team Algorithm",
+      "class": "Team Aqua",
       "sprite_set": "aqua_member_f",
       "sprite_overrides": {},
       "notes": ""
@@ -2058,7 +2065,7 @@
     "team_magma_grunt_m": {
       "id": "team_magma_grunt_m",
       "name": "Grunt (M)",
-      "class": "Team Blockchain",
+      "class": "Team Magma",
       "sprite_set": "magma_member_m",
       "sprite_overrides": {},
       "notes": ""
@@ -2071,11 +2078,11 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "aqua_admin_matt": {
-      "id": "aqua_admin_matt",
+    "algorithm_admin_matt": {
+      "id": "algorithm_admin_matt",
       "name": "Matt",
       "class": "Algorithm Admin",
-      "sprite_set": "aqua_member_m",
+      "sprite_set": "galactic_commander_jupiter",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -2087,16 +2094,16 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "aqua_admin_shelly": {
-      "id": "aqua_admin_shelly",
+    "algorithm_admin_shelly": {
+      "id": "algorithm_admin_shelly",
       "name": "Shelly",
       "class": "Algorithm Admin",
-      "sprite_set": "aqua_member_f",
+      "sprite_set": "galactic_commander_mars",
       "sprite_overrides": {},
       "notes": ""
     },
-    "aqua_leader_archie": {
-      "id": "aqua_leader_archie",
+    "algorithm_leader_julian": {
+      "id": "algorithm_leader_julian",
       "name": "Julian",
       "class": "Algorithm Leader",
       "sprite_set": null,
@@ -2618,7 +2625,7 @@
     "team_magma_grunt_f": {
       "id": "team_magma_grunt_f",
       "name": "Grunt (F)",
-      "class": "Team Blockchain",
+      "class": "Team Magma",
       "sprite_set": "magma_member_f",
       "sprite_overrides": {},
       "notes": ""
@@ -3203,7 +3210,7 @@
       "id": "elite_four_sidney",
       "name": "Sidney",
       "class": "Elite Four",
-      "sprite_set": null,
+      "sprite_set": "sidney",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -3211,7 +3218,7 @@
       "id": "elite_four_phoebe",
       "name": "Phoebe",
       "class": "Elite Four",
-      "sprite_set": null,
+      "sprite_set": "phoebe",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -3219,7 +3226,7 @@
       "id": "elite_four_glacia",
       "name": "Glacia",
       "class": "Elite Four",
-      "sprite_set": null,
+      "sprite_set": "glacia",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -3227,7 +3234,7 @@
       "id": "elite_four_drake",
       "name": "Drake",
       "class": "Elite Four",
-      "sprite_set": null,
+      "sprite_set": "drake",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -3263,9 +3270,9 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "leader_norman": {
-      "id": "leader_norman",
-      "name": "Norman",
+    "leader_mama_bosa": {
+      "id": "leader_mama_bosa",
+      "name": "Mama Bosa",
       "class": "Leader",
       "sprite_set": null,
       "sprite_overrides": {},
@@ -4439,11 +4446,11 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "magma_admin_tabitha": {
-      "id": "magma_admin_tabitha",
+    "blockchain_admin_tabitha": {
+      "id": "blockchain_admin_tabitha",
       "name": "Tabitha",
       "class": "Blockchain Admin",
-      "sprite_set": "magma_member_m",
+      "sprite_set": "blockchain_admin",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -4719,11 +4726,11 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "magma_leader_maxie": {
-      "id": "magma_leader_maxie",
+    "blockchain_leader_julian": {
+      "id": "blockchain_leader_julian",
       "name": "Julian",
       "class": "Blockchain Leader",
-      "sprite_set": null,
+      "sprite_set": "blockchain_leader",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -5627,7 +5634,7 @@
       "id": "rival_steven",
       "name": "Steven",
       "class": "Rival",
-      "sprite_set": null,
+      "sprite_set": "steven",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -7659,7 +7666,7 @@
       "id": "boss_frlg_giovanni",
       "name": "Giovanni",
       "class": "Boss Frlg",
-      "sprite_set": null,
+      "sprite_set": "giovanni",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -9100,6 +9107,22 @@
       "name": "Registeel",
       "class": "Registeel",
       "sprite_set": "registeel",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_hideoutentrancegrunt1": {
+      "id": "algorithm_member_m_hideoutentrancegrunt1",
+      "name": "HideoutEntranceGrunt1",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_hideoutentrancegrunt2": {
+      "id": "algorithm_member_m_hideoutentrancegrunt2",
+      "name": "HideoutEntranceGrunt2",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -13415,6 +13438,46 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "algorithm_member_m_wailmertrainergrunt": {
+      "id": "algorithm_member_m_wailmertrainergrunt",
+      "name": "WailmerTrainerGrunt",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_aquagrunt4": {
+      "id": "algorithm_member_m_aquagrunt4",
+      "name": "AquaGrunt4",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_aquagrunt1": {
+      "id": "algorithm_member_m_aquagrunt1",
+      "name": "AquaGrunt1",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_aquagrunt2": {
+      "id": "algorithm_member_m_aquagrunt2",
+      "name": "AquaGrunt2",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_aquagrunt3": {
+      "id": "algorithm_member_m_aquagrunt3",
+      "name": "AquaGrunt3",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "gentleman_berrygentleman": {
       "id": "gentleman_berrygentleman",
       "name": "BerryGentleman",
@@ -14175,6 +14238,14 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "norman_mom": {
+      "id": "norman_mom",
+      "name": "Mom",
+      "class": "Norman",
+      "sprite_set": "norman",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "vigoroth_carrying_box_vigoroth2": {
       "id": "vigoroth_carrying_box_vigoroth2",
       "name": "Vigoroth2",
@@ -14631,11 +14702,43 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "archie_anonymous_meteorfalls_1f_1r_6_20": {
-      "id": "archie_anonymous_meteorfalls_1f_1r_6_20",
-      "name": "Julian",
+    "blockchain_member_m_anonymous_meteorfalls_1f_1r_12_20": {
+      "id": "blockchain_member_m_anonymous_meteorfalls_1f_1r_12_20",
+      "name": "Blockchain Member M",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_anonymous_meteorfalls_1f_1r_14_21": {
+      "id": "blockchain_member_m_anonymous_meteorfalls_1f_1r_14_21",
+      "name": "Blockchain Member M",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_leader_anonymous_meteorfalls_1f_1r_6_20": {
+      "id": "algorithm_leader_anonymous_meteorfalls_1f_1r_6_20",
+      "name": "Algorithm Leader",
       "class": "Algorithm Leader",
       "sprite_set": "algorithm_leader",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_anonymous_meteorfalls_1f_1r_6_20": {
+      "id": "algorithm_member_m_anonymous_meteorfalls_1f_1r_6_20",
+      "name": "Algorithm Member M",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_anonymous_meteorfalls_1f_1r_6_21": {
+      "id": "algorithm_member_m_anonymous_meteorfalls_1f_1r_6_21",
+      "name": "Algorithm Member M",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -14687,9 +14790,41 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "maxie_anonymous_mossdeepcity_45_25": {
-      "id": "maxie_anonymous_mossdeepcity_45_25",
-      "name": "Julian",
+    "blockchain_member_m_anonymous_mossdeepcity_44_23": {
+      "id": "blockchain_member_m_anonymous_mossdeepcity_44_23",
+      "name": "Blockchain Member M",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_anonymous_mossdeepcity_44_24": {
+      "id": "blockchain_member_m_anonymous_mossdeepcity_44_24",
+      "name": "Blockchain Member M",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_anonymous_mossdeepcity_44_25": {
+      "id": "blockchain_member_m_anonymous_mossdeepcity_44_25",
+      "name": "Blockchain Member M",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_anonymous_mossdeepcity_44_26": {
+      "id": "blockchain_member_m_anonymous_mossdeepcity_44_26",
+      "name": "Blockchain Member M",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_leader_anonymous_mossdeepcity_45_25": {
+      "id": "blockchain_leader_anonymous_mossdeepcity_45_25",
+      "name": "Blockchain Leader",
       "class": "Blockchain Leader",
       "sprite_set": "blockchain_leader",
       "sprite_overrides": {},
@@ -14943,6 +15078,38 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "blockchain_member_m_grunt6": {
+      "id": "blockchain_member_m_grunt6",
+      "name": "Grunt6",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_grunt5": {
+      "id": "blockchain_member_m_grunt5",
+      "name": "Grunt5",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_grunt7": {
+      "id": "blockchain_member_m_grunt7",
+      "name": "Grunt7",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_leader_maxie": {
+      "id": "blockchain_leader_maxie",
+      "name": "Maxie",
+      "class": "Blockchain Leader",
+      "sprite_set": "blockchain_leader",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "ninja_boy_letter": {
       "id": "ninja_boy_letter",
       "name": "Letter",
@@ -14951,11 +15118,67 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "algorithm_leader_archie": {
+      "id": "algorithm_leader_archie",
+      "name": "Archie",
+      "class": "Algorithm Leader",
+      "sprite_set": "algorithm_leader",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_busymagmagrunt5": {
+      "id": "blockchain_member_m_busymagmagrunt5",
+      "name": "BusyMagmaGrunt5",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_busymagmagrunt4": {
+      "id": "blockchain_member_m_busymagmagrunt4",
+      "name": "BusyMagmaGrunt4",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_busyaquagrunt2": {
+      "id": "algorithm_member_m_busyaquagrunt2",
+      "name": "BusyAquaGrunt2",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_busyaquagrunt1": {
+      "id": "algorithm_member_m_busyaquagrunt1",
+      "name": "BusyAquaGrunt1",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_busyaquagrunt3": {
+      "id": "algorithm_member_m_busyaquagrunt3",
+      "name": "BusyAquaGrunt3",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "old_woman_lavacookielady": {
       "id": "old_woman_lavacookielady",
       "name": "LavaCookieLady",
       "class": "Old Woman",
       "sprite_set": "old_woman",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_busymagmagrunt6": {
+      "id": "blockchain_member_m_busymagmagrunt6",
+      "name": "BusyMagmaGrunt6",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -14972,6 +15195,30 @@
       "name": "MagmaPoochyena",
       "class": "Poochyena",
       "sprite_set": "poochyena",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_busymagmagrunt2": {
+      "id": "blockchain_member_m_busymagmagrunt2",
+      "name": "BusyMagmaGrunt2",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_busymagmagrunt3": {
+      "id": "blockchain_member_m_busymagmagrunt3",
+      "name": "BusyMagmaGrunt3",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_busymagmagrunt1": {
+      "id": "blockchain_member_m_busymagmagrunt1",
+      "name": "BusyMagmaGrunt1",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -15463,9 +15710,9 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "archie_anonymous_mtpyre_summit_23_6": {
-      "id": "archie_anonymous_mtpyre_summit_23_6",
-      "name": "Julian",
+    "algorithm_leader_anonymous_mtpyre_summit_23_6": {
+      "id": "algorithm_leader_anonymous_mtpyre_summit_23_6",
+      "name": "Algorithm Leader",
       "class": "Algorithm Leader",
       "sprite_set": "algorithm_leader",
       "sprite_overrides": {},
@@ -15479,9 +15726,9 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "maxie_anonymous_mtpyre_summit_23_6": {
-      "id": "maxie_anonymous_mtpyre_summit_23_6",
-      "name": "Julian",
+    "blockchain_leader_anonymous_mtpyre_summit_23_6": {
+      "id": "blockchain_leader_anonymous_mtpyre_summit_23_6",
+      "name": "Blockchain Leader",
       "class": "Blockchain Leader",
       "sprite_set": "blockchain_leader",
       "sprite_overrides": {},
@@ -15903,6 +16150,14 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "mom_norman": {
+      "id": "mom_norman",
+      "name": "Norman",
+      "class": "Mom",
+      "sprite_set": "mom",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "wally_anonymous_petalburgcity_gym_4_111": {
       "id": "wally_anonymous_petalburgcity_gym_4_111",
       "name": "Wally",
@@ -15956,6 +16211,14 @@
       "name": "Cuttable Tree",
       "class": "Cuttable Tree",
       "sprite_set": "cuttable_tree",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_anonymous_petalburgwoods_26_17": {
+      "id": "algorithm_member_m_anonymous_petalburgwoods_26_17",
+      "name": "Algorithm Member M",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -16519,6 +16782,14 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "algorithm_member_m_anonymous_route110_8_82": {
+      "id": "algorithm_member_m_anonymous_route110_8_82",
+      "name": "Algorithm Member M",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "var_0_anonymous_route110_34_54": {
       "id": "var_0_anonymous_route110_34_54",
       "name": "Var 0",
@@ -16927,6 +17198,14 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "blockchain_member_m_magmagrunts": {
+      "id": "blockchain_member_m_magmagrunts",
+      "name": "MagmaGrunts",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "cable_car_anonymous_route112_cablecarstation_6_3": {
       "id": "cable_car_anonymous_route112_cablecarstation_6_3",
       "name": "Cable Car",
@@ -17247,6 +17526,22 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "algorithm_member_m_bridgeaquagrunt1": {
+      "id": "algorithm_member_m_bridgeaquagrunt1",
+      "name": "BridgeAquaGrunt1",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_bridgeaquagrunt2": {
+      "id": "algorithm_member_m_bridgeaquagrunt2",
+      "name": "BridgeAquaGrunt2",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "var_3_anonymous_route119_17_33": {
       "id": "var_3_anonymous_route119_17_33",
       "name": "Var 3",
@@ -17332,6 +17627,14 @@
       "name": "Man 4",
       "class": "Man 4",
       "sprite_set": "man_4",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_anonymous_route119_weatherinstitute_2f_16_6": {
+      "id": "algorithm_member_m_anonymous_route119_weatherinstitute_2f_16_6",
+      "name": "Algorithm Member M",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -17447,6 +17750,30 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "algorithm_member_m_anonymous_route121_30_8": {
+      "id": "algorithm_member_m_anonymous_route121_30_8",
+      "name": "Algorithm Member M",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_anonymous_route121_30_7": {
+      "id": "algorithm_member_m_anonymous_route121_30_7",
+      "name": "Algorithm Member M",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_anonymous_route121_31_7": {
+      "id": "algorithm_member_m_anonymous_route121_31_7",
+      "name": "Algorithm Member M",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "cuttable_tree_anonymous_route121_32_5": {
       "id": "cuttable_tree_anonymous_route121_32_5",
       "name": "Cuttable Tree",
@@ -17559,17 +17886,17 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "archie_anonymous_route128_37_22": {
-      "id": "archie_anonymous_route128_37_22",
-      "name": "Julian",
+    "algorithm_leader_anonymous_route128_37_22": {
+      "id": "algorithm_leader_anonymous_route128_37_22",
+      "name": "Algorithm Leader",
       "class": "Algorithm Leader",
       "sprite_set": "algorithm_leader",
       "sprite_overrides": {},
       "notes": ""
     },
-    "maxie_anonymous_route128_38_21": {
-      "id": "maxie_anonymous_route128_38_21",
-      "name": "Julian",
+    "blockchain_leader_anonymous_route128_38_21": {
+      "id": "blockchain_leader_anonymous_route128_38_21",
+      "name": "Blockchain Leader",
       "class": "Blockchain Leader",
       "sprite_set": "blockchain_leader",
       "sprite_overrides": {},
@@ -18028,6 +18355,14 @@
       "name": "DevonEmployee1",
       "class": "Man 2",
       "sprite_set": "man_2",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_anonymous_rustborocity_13_21": {
+      "id": "algorithm_member_m_anonymous_rustborocity_13_21",
+      "name": "Algorithm Member M",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -18639,6 +18974,14 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "algorithm_member_m_grunt": {
+      "id": "algorithm_member_m_grunt",
+      "name": "Grunt",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "pushable_boulder_anonymous_seafloorcavern_room1_5_11": {
       "id": "pushable_boulder_anonymous_seafloorcavern_room1_5_11",
       "name": "Pushable Boulder",
@@ -18935,19 +19278,35 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "archie_anonymous_seafloorcavern_room9_9_42": {
-      "id": "archie_anonymous_seafloorcavern_room9_9_42",
-      "name": "Julian",
+    "algorithm_leader_anonymous_seafloorcavern_room9_9_42": {
+      "id": "algorithm_leader_anonymous_seafloorcavern_room9_9_42",
+      "name": "Algorithm Leader",
       "class": "Algorithm Leader",
       "sprite_set": "algorithm_leader",
       "sprite_overrides": {},
       "notes": ""
     },
-    "maxie_anonymous_seafloorcavern_room9_9_42": {
-      "id": "maxie_anonymous_seafloorcavern_room9_9_42",
-      "name": "Julian",
+    "blockchain_leader_anonymous_seafloorcavern_room9_9_42": {
+      "id": "blockchain_leader_anonymous_seafloorcavern_room9_9_42",
+      "name": "Blockchain Leader",
       "class": "Blockchain Leader",
       "sprite_set": "blockchain_leader",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_m_anonymous_seafloorcavern_room9_8_41": {
+      "id": "blockchain_member_m_anonymous_seafloorcavern_room9_8_41",
+      "name": "Blockchain Member M",
+      "class": "Blockchain Member M",
+      "sprite_set": "blockchain_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "blockchain_member_f_anonymous_seafloorcavern_room9_8_42": {
+      "id": "blockchain_member_f_anonymous_seafloorcavern_room9_8_42",
+      "name": "Blockchain Member F",
+      "class": "Blockchain Member F",
+      "sprite_set": "blockchain_member_f",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -22239,6 +22598,14 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "algorithm_member_f_aquagrunt1": {
+      "id": "algorithm_member_f_aquagrunt1",
+      "name": "AquaGrunt1",
+      "class": "Algorithm Member F",
+      "sprite_set": "algorithm_member_f",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "cameraman_ty": {
       "id": "cameraman_ty",
       "name": "Ty",
@@ -22319,6 +22686,62 @@
       "sprite_overrides": {},
       "notes": ""
     },
+    "algorithm_member_m_aquagrunt5": {
+      "id": "algorithm_member_m_aquagrunt5",
+      "name": "AquaGrunt5",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_aquagrunt6": {
+      "id": "algorithm_member_m_aquagrunt6",
+      "name": "AquaGrunt6",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_aquagrunt7": {
+      "id": "algorithm_member_m_aquagrunt7",
+      "name": "AquaGrunt7",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_aquagrunt8": {
+      "id": "algorithm_member_m_aquagrunt8",
+      "name": "AquaGrunt8",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_aquagrunt9": {
+      "id": "algorithm_member_m_aquagrunt9",
+      "name": "AquaGrunt9",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_aquagrunt10": {
+      "id": "algorithm_member_m_aquagrunt10",
+      "name": "AquaGrunt10",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_aquagrunt11": {
+      "id": "algorithm_member_m_aquagrunt11",
+      "name": "AquaGrunt11",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
     "pokefan_f_berrypowderclerk": {
       "id": "pokefan_f_berrypowderclerk",
       "name": "BerryPowderClerk",
@@ -22391,9 +22814,17 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "archie_anonymous_slateportcity_harbor_8_10": {
-      "id": "archie_anonymous_slateportcity_harbor_8_10",
-      "name": "Julian",
+    "algorithm_member_m_anonymous_slateportcity_harbor_7_10": {
+      "id": "algorithm_member_m_anonymous_slateportcity_harbor_7_10",
+      "name": "Algorithm Member M",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_leader_anonymous_slateportcity_harbor_8_10": {
+      "id": "algorithm_leader_anonymous_slateportcity_harbor_8_10",
+      "name": "Algorithm Leader",
       "class": "Algorithm Leader",
       "sprite_set": "algorithm_leader",
       "sprite_overrides": {},
@@ -22420,6 +22851,54 @@
       "name": "EntranceAttendant",
       "class": "Beauty",
       "sprite_set": "beauty",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_museumgrunt3": {
+      "id": "algorithm_member_m_museumgrunt3",
+      "name": "MuseumGrunt3",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_museumgrunt4": {
+      "id": "algorithm_member_m_museumgrunt4",
+      "name": "MuseumGrunt4",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_museumgrunt2": {
+      "id": "algorithm_member_m_museumgrunt2",
+      "name": "MuseumGrunt2",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_f_museumgrunt1": {
+      "id": "algorithm_member_f_museumgrunt1",
+      "name": "MuseumGrunt1",
+      "class": "Algorithm Member F",
+      "sprite_set": "algorithm_member_f",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_museumgrunt5": {
+      "id": "algorithm_member_m_museumgrunt5",
+      "name": "MuseumGrunt5",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_museumgrunt6": {
+      "id": "algorithm_member_m_museumgrunt6",
+      "name": "MuseumGrunt6",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -22455,11 +22934,27 @@
       "sprite_overrides": {},
       "notes": ""
     },
-    "archie_anonymous_slateportcity_oceanicmuseum_2f_6_1": {
-      "id": "archie_anonymous_slateportcity_oceanicmuseum_2f_6_1",
-      "name": "Julian",
+    "algorithm_member_m_familiargrunt": {
+      "id": "algorithm_member_m_familiargrunt",
+      "name": "FamiliarGrunt",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_leader_anonymous_slateportcity_oceanicmuseum_2f_6_1": {
+      "id": "algorithm_leader_anonymous_slateportcity_oceanicmuseum_2f_6_1",
+      "name": "Algorithm Leader",
       "class": "Algorithm Leader",
       "sprite_set": "algorithm_leader",
+      "sprite_overrides": {},
+      "notes": ""
+    },
+    "algorithm_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1": {
+      "id": "algorithm_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1",
+      "name": "Algorithm Member M",
+      "class": "Algorithm Member M",
+      "sprite_set": "algorithm_member_m",
       "sprite_overrides": {},
       "notes": ""
     },
@@ -23885,9 +24380,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_REGISTEEL"
     },
-    "team_aqua_grunt_m_aquahideout_1f": {
-      "id": "team_aqua_grunt_m_aquahideout_1f",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_hideoutentrancegrunt1_aquahideout_1f": {
+      "id": "algorithm_member_m_hideoutentrancegrunt1_aquahideout_1f",
+      "npc_id": "algorithm_member_m_hideoutentrancegrunt1",
       "map": "AquaHideout_1F",
       "map_id": "MAP_AQUA_HIDEOUT_1F",
       "script": "AquaHideout_1F_EventScript_HideoutEntranceGrunt1",
@@ -23905,9 +24400,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_1F_GRUNT_1_BLOCKING_ENTRANCE"
     },
-    "team_aqua_grunt_m_aquahideout_1f_2": {
-      "id": "team_aqua_grunt_m_aquahideout_1f_2",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_hideoutentrancegrunt2_aquahideout_1f": {
+      "id": "algorithm_member_m_hideoutentrancegrunt2_aquahideout_1f",
+      "npc_id": "algorithm_member_m_hideoutentrancegrunt2",
       "map": "AquaHideout_1F",
       "map_id": "MAP_AQUA_HIDEOUT_1F",
       "script": "AquaHideout_1F_EventScript_HideoutEntranceGrunt2",
@@ -23925,8 +24420,8 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_1F_GRUNT_2_BLOCKING_ENTRANCE"
     },
-    "team_aqua_grunt_m_aquahideout_1f_3": {
-      "id": "team_aqua_grunt_m_aquahideout_1f_3",
+    "team_aqua_grunt_m_aquahideout_1f": {
+      "id": "team_aqua_grunt_m_aquahideout_1f",
       "npc_id": "team_aqua_grunt_m",
       "map": "AquaHideout_1F",
       "map_id": "MAP_AQUA_HIDEOUT_1F",
@@ -24025,9 +24520,9 @@
       "battle_id": "trainer_grunt_aqua_hideout_7",
       "flag": "FLAG_HIDE_AQUA_HIDEOUT_GRUNTS"
     },
-    "aqua_admin_matt_aquahideout_b2f": {
-      "id": "aqua_admin_matt_aquahideout_b2f",
-      "npc_id": "aqua_admin_matt",
+    "algorithm_admin_matt_aquahideout_b2f": {
+      "id": "algorithm_admin_matt_aquahideout_b2f",
+      "npc_id": "algorithm_admin_matt",
       "map": "AquaHideout_B2F",
       "map_id": "MAP_AQUA_HIDEOUT_B2F",
       "script": "AquaHideout_B2F_EventScript_Matt",
@@ -32981,7 +33476,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NONE",
-      "battle_id": null,
+      "battle_id": "trainer_team_rocket_grunt_5",
       "flag": "FLAG_HIDE_CERULEAN_ROCKET"
     },
     "little_boy_frlg_littleboy_ceruleancity_frlg": {
@@ -35500,7 +35995,7 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NONE",
-      "battle_id": null,
+      "battle_id": "trainer_drake",
       "flag": "0"
     },
     "elite_four_glacia_evergrandecity_glaciasroom": {
@@ -35520,7 +36015,7 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NONE",
-      "battle_id": null,
+      "battle_id": "trainer_glacia",
       "flag": "0"
     },
     "wallace_anonymous_evergrandecity_halloffame_6_16_evergrandecity_halloffame": {
@@ -35560,7 +36055,7 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NONE",
-      "battle_id": null,
+      "battle_id": "trainer_phoebe",
       "flag": "0"
     },
     "nurse_nurse_evergrandecity_pokemoncenter_1f": {
@@ -35900,7 +36395,7 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NONE",
-      "battle_id": null,
+      "battle_id": "trainer_sidney",
       "flag": "0"
     },
     "girl_1_girl_fallarbortown": {
@@ -40979,7 +41474,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NONE",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_jagged_pass",
       "flag": "FLAG_HIDE_JAGGED_PASS_MAGMA_GUARD"
     },
     "picnicker_autumn_jaggedpass": {
@@ -42422,9 +42917,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_aqua_grunt_m_lilycovecity": {
-      "id": "team_aqua_grunt_m_lilycovecity",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_wailmertrainergrunt_lilycovecity": {
+      "id": "algorithm_member_m_wailmertrainergrunt_lilycovecity",
+      "npc_id": "algorithm_member_m_wailmertrainergrunt",
       "map": "LilycoveCity",
       "map_id": "MAP_LILYCOVE_CITY",
       "script": "LilycoveCity_EventScript_WailmerTrainerGrunt",
@@ -42442,9 +42937,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_m_lilycovecity_2": {
-      "id": "team_aqua_grunt_m_lilycovecity_2",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt4_lilycovecity": {
+      "id": "algorithm_member_m_aquagrunt4_lilycovecity",
+      "npc_id": "algorithm_member_m_aquagrunt4",
       "map": "LilycoveCity",
       "map_id": "MAP_LILYCOVE_CITY",
       "script": "LilycoveCity_EventScript_AquaGrunt4",
@@ -42462,9 +42957,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_m_lilycovecity_3": {
-      "id": "team_aqua_grunt_m_lilycovecity_3",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt1_lilycovecity": {
+      "id": "algorithm_member_m_aquagrunt1_lilycovecity",
+      "npc_id": "algorithm_member_m_aquagrunt1",
       "map": "LilycoveCity",
       "map_id": "MAP_LILYCOVE_CITY",
       "script": "LilycoveCity_EventScript_AquaGrunt1",
@@ -42482,9 +42977,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_m_lilycovecity_4": {
-      "id": "team_aqua_grunt_m_lilycovecity_4",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt2_lilycovecity": {
+      "id": "algorithm_member_m_aquagrunt2_lilycovecity",
+      "npc_id": "algorithm_member_m_aquagrunt2",
       "map": "LilycoveCity",
       "map_id": "MAP_LILYCOVE_CITY",
       "script": "LilycoveCity_EventScript_AquaGrunt2",
@@ -42502,9 +42997,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_m_lilycovecity_5": {
-      "id": "team_aqua_grunt_m_lilycovecity_5",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt3_lilycovecity": {
+      "id": "algorithm_member_m_aquagrunt3_lilycovecity",
+      "npc_id": "algorithm_member_m_aquagrunt3",
       "map": "LilycoveCity",
       "map_id": "MAP_LILYCOVE_CITY",
       "script": "LilycoveCity_EventScript_AquaGrunt3",
@@ -45762,9 +46257,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCH"
     },
-    "mom_mom_littleroottown_brendanshouse_1f": {
-      "id": "mom_mom_littleroottown_brendanshouse_1f",
-      "npc_id": "mom_mom",
+    "norman_mom_littleroottown_brendanshouse_1f": {
+      "id": "norman_mom_littleroottown_brendanshouse_1f",
+      "npc_id": "norman_mom",
       "map": "LittlerootTown_BrendansHouse_1F",
       "map_id": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
       "script": "PlayersHouse_1F_EventScript_Mom",
@@ -46202,9 +46697,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_SWABLU_DOLL"
     },
-    "mom_mom_littleroottown_mayshouse_1f": {
-      "id": "mom_mom_littleroottown_mayshouse_1f",
-      "npc_id": "mom_mom",
+    "norman_mom_littleroottown_mayshouse_1f": {
+      "id": "norman_mom_littleroottown_mayshouse_1f",
+      "npc_id": "norman_mom",
       "map": "LittlerootTown_MaysHouse_1F",
       "map_id": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
       "script": "PlayersHouse_1F_EventScript_Mom",
@@ -47102,9 +47597,9 @@
       "battle_id": "trainer_grunt_magma_hideout_13",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "magma_admin_tabitha_magmahideout_4f": {
-      "id": "magma_admin_tabitha_magmahideout_4f",
-      "npc_id": "magma_admin_tabitha",
+    "blockchain_admin_tabitha_magmahideout_4f": {
+      "id": "blockchain_admin_tabitha_magmahideout_4f",
+      "npc_id": "blockchain_admin_tabitha",
       "map": "MagmaHideout_4F",
       "map_id": "MAP_MAGMA_HIDEOUT_4F",
       "script": "MagmaHideout_4F_EventScript_Tabitha",
@@ -47122,9 +47617,9 @@
       "battle_id": "trainer_tabitha_magma_hideout",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
-    "magma_leader_maxie_magmahideout_4f": {
-      "id": "magma_leader_maxie_magmahideout_4f",
-      "npc_id": "magma_leader_maxie",
+    "blockchain_leader_julian_magmahideout_4f": {
+      "id": "blockchain_leader_julian_magmahideout_4f",
+      "npc_id": "blockchain_leader_julian",
       "map": "MagmaHideout_4F",
       "map_id": "MAP_MAGMA_HIDEOUT_4F",
       "script": "MagmaHideout_4F_EventScript_Maxie",
@@ -47139,7 +47634,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NONE",
-      "battle_id": null,
+      "battle_id": "trainer_maxie_magma_hideout",
       "flag": "FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS"
     },
     "groudon_asleep_anonymous_magmahideout_4f_16_17_magmahideout_4f": {
@@ -48102,9 +48597,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_magma_grunt_m_meteorfalls_1f_1r": {
-      "id": "team_magma_grunt_m_meteorfalls_1f_1r",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_anonymous_meteorfalls_1f_1r_12_20_meteorfalls_1f_1r": {
+      "id": "blockchain_member_m_anonymous_meteorfalls_1f_1r_12_20_meteorfalls_1f_1r",
+      "npc_id": "blockchain_member_m_anonymous_meteorfalls_1f_1r_12_20",
       "map": "MeteorFalls_1F_1R",
       "map_id": "MAP_METEOR_FALLS_1F_1R",
       "script": "0x0",
@@ -48122,9 +48617,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_METEOR_FALLS_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_meteorfalls_1f_1r_2": {
-      "id": "team_magma_grunt_m_meteorfalls_1f_1r_2",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_anonymous_meteorfalls_1f_1r_14_21_meteorfalls_1f_1r": {
+      "id": "blockchain_member_m_anonymous_meteorfalls_1f_1r_14_21_meteorfalls_1f_1r",
+      "npc_id": "blockchain_member_m_anonymous_meteorfalls_1f_1r_14_21",
       "map": "MeteorFalls_1F_1R",
       "map_id": "MAP_METEOR_FALLS_1F_1R",
       "script": "0x0",
@@ -48142,9 +48637,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_METEOR_FALLS_TEAM_MAGMA"
     },
-    "archie_anonymous_meteorfalls_1f_1r_6_20_meteorfalls_1f_1r": {
-      "id": "archie_anonymous_meteorfalls_1f_1r_6_20_meteorfalls_1f_1r",
-      "npc_id": "archie_anonymous_meteorfalls_1f_1r_6_20",
+    "algorithm_leader_anonymous_meteorfalls_1f_1r_6_20_meteorfalls_1f_1r": {
+      "id": "algorithm_leader_anonymous_meteorfalls_1f_1r_6_20_meteorfalls_1f_1r",
+      "npc_id": "algorithm_leader_anonymous_meteorfalls_1f_1r_6_20",
       "map": "MeteorFalls_1F_1R",
       "map_id": "MAP_METEOR_FALLS_1F_1R",
       "script": "0x0",
@@ -48162,9 +48657,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_METEOR_FALLS_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_meteorfalls_1f_1r": {
-      "id": "team_aqua_grunt_m_meteorfalls_1f_1r",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_anonymous_meteorfalls_1f_1r_6_20_meteorfalls_1f_1r": {
+      "id": "algorithm_member_m_anonymous_meteorfalls_1f_1r_6_20_meteorfalls_1f_1r",
+      "npc_id": "algorithm_member_m_anonymous_meteorfalls_1f_1r_6_20",
       "map": "MeteorFalls_1F_1R",
       "map_id": "MAP_METEOR_FALLS_1F_1R",
       "script": "0x0",
@@ -48182,9 +48677,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_METEOR_FALLS_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_meteorfalls_1f_1r_2": {
-      "id": "team_aqua_grunt_m_meteorfalls_1f_1r_2",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_anonymous_meteorfalls_1f_1r_6_21_meteorfalls_1f_1r": {
+      "id": "algorithm_member_m_anonymous_meteorfalls_1f_1r_6_21_meteorfalls_1f_1r",
+      "npc_id": "algorithm_member_m_anonymous_meteorfalls_1f_1r_6_21",
       "map": "MeteorFalls_1F_1R",
       "map_id": "MAP_METEOR_FALLS_1F_1R",
       "script": "0x0",
@@ -48299,7 +48794,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NONE",
-      "battle_id": null,
+      "battle_id": "trainer_steven",
       "flag": "0"
     },
     "breakable_rock_anonymous_miragetower_3f_3_7_miragetower_3f": {
@@ -48562,9 +49057,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_magma_grunt_m_mossdeepcity": {
-      "id": "team_magma_grunt_m_mossdeepcity",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_anonymous_mossdeepcity_44_23_mossdeepcity": {
+      "id": "blockchain_member_m_anonymous_mossdeepcity_44_23_mossdeepcity",
+      "npc_id": "blockchain_member_m_anonymous_mossdeepcity_44_23",
       "map": "MossdeepCity",
       "map_id": "MAP_MOSSDEEP_CITY",
       "script": "0x0",
@@ -48582,9 +49077,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_mossdeepcity_2": {
-      "id": "team_magma_grunt_m_mossdeepcity_2",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_anonymous_mossdeepcity_44_24_mossdeepcity": {
+      "id": "blockchain_member_m_anonymous_mossdeepcity_44_24_mossdeepcity",
+      "npc_id": "blockchain_member_m_anonymous_mossdeepcity_44_24",
       "map": "MossdeepCity",
       "map_id": "MAP_MOSSDEEP_CITY",
       "script": "0x0",
@@ -48602,9 +49097,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_mossdeepcity_3": {
-      "id": "team_magma_grunt_m_mossdeepcity_3",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_anonymous_mossdeepcity_44_25_mossdeepcity": {
+      "id": "blockchain_member_m_anonymous_mossdeepcity_44_25_mossdeepcity",
+      "npc_id": "blockchain_member_m_anonymous_mossdeepcity_44_25",
       "map": "MossdeepCity",
       "map_id": "MAP_MOSSDEEP_CITY",
       "script": "0x0",
@@ -48622,9 +49117,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_mossdeepcity_4": {
-      "id": "team_magma_grunt_m_mossdeepcity_4",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_anonymous_mossdeepcity_44_26_mossdeepcity": {
+      "id": "blockchain_member_m_anonymous_mossdeepcity_44_26_mossdeepcity",
+      "npc_id": "blockchain_member_m_anonymous_mossdeepcity_44_26",
       "map": "MossdeepCity",
       "map_id": "MAP_MOSSDEEP_CITY",
       "script": "0x0",
@@ -48642,9 +49137,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA"
     },
-    "maxie_anonymous_mossdeepcity_45_25_mossdeepcity": {
-      "id": "maxie_anonymous_mossdeepcity_45_25_mossdeepcity",
-      "npc_id": "maxie_anonymous_mossdeepcity_45_25",
+    "blockchain_leader_anonymous_mossdeepcity_45_25_mossdeepcity": {
+      "id": "blockchain_leader_anonymous_mossdeepcity_45_25_mossdeepcity",
+      "npc_id": "blockchain_leader_anonymous_mossdeepcity_45_25",
       "map": "MossdeepCity",
       "map_id": "MAP_MOSSDEEP_CITY",
       "script": "0x0",
@@ -50099,7 +50594,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_space_center_2",
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_TEAM_MAGMA"
     },
     "ninja_boy_magmanote_mossdeepcity_spacecenter_1f": {
@@ -50222,9 +50717,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_STEVEN"
     },
-    "team_magma_grunt_m_mossdeepcity_spacecenter_2f": {
-      "id": "team_magma_grunt_m_mossdeepcity_spacecenter_2f",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_grunt6_mossdeepcity_spacecenter_2f": {
+      "id": "blockchain_member_m_grunt6_mossdeepcity_spacecenter_2f",
+      "npc_id": "blockchain_member_m_grunt6",
       "map": "MossdeepCity_SpaceCenter_2F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
       "script": "MossdeepCity_SpaceCenter_2F_EventScript_Grunt6",
@@ -50242,9 +50737,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_mossdeepcity_spacecenter_2f_2": {
-      "id": "team_magma_grunt_m_mossdeepcity_spacecenter_2f_2",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_grunt5_mossdeepcity_spacecenter_2f": {
+      "id": "blockchain_member_m_grunt5_mossdeepcity_spacecenter_2f",
+      "npc_id": "blockchain_member_m_grunt5",
       "map": "MossdeepCity_SpaceCenter_2F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
       "script": "MossdeepCity_SpaceCenter_2F_EventScript_Grunt5",
@@ -50262,9 +50757,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_mossdeepcity_spacecenter_2f_3": {
-      "id": "team_magma_grunt_m_mossdeepcity_spacecenter_2f_3",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_grunt7_mossdeepcity_spacecenter_2f": {
+      "id": "blockchain_member_m_grunt7_mossdeepcity_spacecenter_2f",
+      "npc_id": "blockchain_member_m_grunt7",
       "map": "MossdeepCity_SpaceCenter_2F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
       "script": "MossdeepCity_SpaceCenter_2F_EventScript_Grunt7",
@@ -50282,9 +50777,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_mossdeepcity_spacecenter_2f_4": {
-      "id": "team_magma_grunt_m_mossdeepcity_spacecenter_2f_4",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_admin_tabitha_mossdeepcity_spacecenter_2f": {
+      "id": "blockchain_admin_tabitha_mossdeepcity_spacecenter_2f",
+      "npc_id": "blockchain_admin_tabitha",
       "map": "MossdeepCity_SpaceCenter_2F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
       "script": "MossdeepCity_SpaceCenter_2F_EventScript_Tabitha",
@@ -50302,9 +50797,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_TEAM_MAGMA"
     },
-    "magma_leader_maxie_mossdeepcity_spacecenter_2f": {
-      "id": "magma_leader_maxie_mossdeepcity_spacecenter_2f",
-      "npc_id": "magma_leader_maxie",
+    "blockchain_leader_maxie_mossdeepcity_spacecenter_2f": {
+      "id": "blockchain_leader_maxie_mossdeepcity_spacecenter_2f",
+      "npc_id": "blockchain_leader_maxie",
       "map": "MossdeepCity_SpaceCenter_2F",
       "map_id": "MAP_MOSSDEEP_CITY_SPACE_CENTER_2F",
       "script": "MossdeepCity_SpaceCenter_2F_EventScript_Maxie",
@@ -50362,9 +50857,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY"
     },
-    "aqua_leader_archie_mtchimney": {
-      "id": "aqua_leader_archie_mtchimney",
-      "npc_id": "aqua_leader_archie",
+    "algorithm_leader_archie_mtchimney": {
+      "id": "algorithm_leader_archie_mtchimney",
+      "npc_id": "algorithm_leader_archie",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_Archie",
@@ -50382,9 +50877,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_AQUA"
     },
-    "magma_leader_maxie_mtchimney": {
-      "id": "magma_leader_maxie_mtchimney",
-      "npc_id": "magma_leader_maxie",
+    "blockchain_leader_julian_mtchimney": {
+      "id": "blockchain_leader_julian_mtchimney",
+      "npc_id": "blockchain_leader_julian",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_Maxie",
@@ -50399,12 +50894,12 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NONE",
-      "battle_id": null,
+      "battle_id": "trainer_maxie_mt_chimney",
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "magma_admin_tabitha_mtchimney": {
-      "id": "magma_admin_tabitha_mtchimney",
-      "npc_id": "magma_admin_tabitha",
+    "blockchain_admin_tabitha_mtchimney": {
+      "id": "blockchain_admin_tabitha_mtchimney",
+      "npc_id": "blockchain_admin_tabitha",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_Tabitha",
@@ -50422,9 +50917,9 @@
       "battle_id": "trainer_tabitha_mt_chimney",
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_mtchimney": {
-      "id": "team_magma_grunt_m_mtchimney",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_busymagmagrunt5_mtchimney": {
+      "id": "blockchain_member_m_busymagmagrunt5_mtchimney",
+      "npc_id": "blockchain_member_m_busymagmagrunt5",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyMagmaGrunt5",
@@ -50442,9 +50937,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_mtchimney_2": {
-      "id": "team_magma_grunt_m_mtchimney_2",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_busymagmagrunt4_mtchimney": {
+      "id": "blockchain_member_m_busymagmagrunt4_mtchimney",
+      "npc_id": "blockchain_member_m_busymagmagrunt4",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyMagmaGrunt4",
@@ -50462,9 +50957,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "team_aqua_grunt_m_mtchimney": {
-      "id": "team_aqua_grunt_m_mtchimney",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_busyaquagrunt2_mtchimney": {
+      "id": "algorithm_member_m_busyaquagrunt2_mtchimney",
+      "npc_id": "algorithm_member_m_busyaquagrunt2",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyAquaGrunt2",
@@ -50482,9 +50977,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_mtchimney_2": {
-      "id": "team_aqua_grunt_m_mtchimney_2",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_busyaquagrunt1_mtchimney": {
+      "id": "algorithm_member_m_busyaquagrunt1_mtchimney",
+      "npc_id": "algorithm_member_m_busyaquagrunt1",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyAquaGrunt1",
@@ -50502,9 +50997,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_mtchimney_3": {
-      "id": "team_aqua_grunt_m_mtchimney_3",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_busyaquagrunt3_mtchimney": {
+      "id": "algorithm_member_m_busyaquagrunt3_mtchimney",
+      "npc_id": "algorithm_member_m_busyaquagrunt3",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyAquaGrunt3",
@@ -50542,9 +51037,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_LAVA_COOKIE_LADY"
     },
-    "team_magma_grunt_m_mtchimney_3": {
-      "id": "team_magma_grunt_m_mtchimney_3",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_busymagmagrunt6_mtchimney": {
+      "id": "blockchain_member_m_busymagmagrunt6_mtchimney",
+      "npc_id": "blockchain_member_m_busymagmagrunt6",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyMagmaGrunt6",
@@ -50602,9 +51097,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_mtchimney_4": {
-      "id": "team_magma_grunt_m_mtchimney_4",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_busymagmagrunt2_mtchimney": {
+      "id": "blockchain_member_m_busymagmagrunt2_mtchimney",
+      "npc_id": "blockchain_member_m_busymagmagrunt2",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyMagmaGrunt2",
@@ -50662,9 +51157,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_mtchimney_5": {
-      "id": "team_magma_grunt_m_mtchimney_5",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_busymagmagrunt3_mtchimney": {
+      "id": "blockchain_member_m_busymagmagrunt3_mtchimney",
+      "npc_id": "blockchain_member_m_busymagmagrunt3",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyMagmaGrunt3",
@@ -50682,9 +51177,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_mtchimney_6": {
-      "id": "team_magma_grunt_m_mtchimney_6",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_busymagmagrunt1_mtchimney": {
+      "id": "blockchain_member_m_busymagmagrunt1_mtchimney",
+      "npc_id": "blockchain_member_m_busymagmagrunt1",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
       "script": "MtChimney_EventScript_BusyMagmaGrunt1",
@@ -50782,8 +51277,8 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_MT_CHIMNEY_TEAM_MAGMA"
     },
-    "team_magma_grunt_m_mtchimney_7": {
-      "id": "team_magma_grunt_m_mtchimney_7",
+    "team_magma_grunt_m_mtchimney": {
+      "id": "team_magma_grunt_m_mtchimney",
       "npc_id": "team_magma_grunt_m",
       "map": "MtChimney",
       "map_id": "MAP_MT_CHIMNEY",
@@ -52882,9 +53377,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "archie_anonymous_mtpyre_summit_23_6_mtpyre_summit": {
-      "id": "archie_anonymous_mtpyre_summit_23_6_mtpyre_summit",
-      "npc_id": "archie_anonymous_mtpyre_summit_23_6",
+    "algorithm_leader_anonymous_mtpyre_summit_23_6_mtpyre_summit": {
+      "id": "algorithm_leader_anonymous_mtpyre_summit_23_6_mtpyre_summit",
+      "npc_id": "algorithm_leader_anonymous_mtpyre_summit_23_6",
       "map": "MtPyre_Summit",
       "map_id": "MAP_MT_PYRE_SUMMIT",
       "script": "0x0",
@@ -53002,9 +53497,9 @@
       "battle_id": "trainer_grunt_mt_pyre_4",
       "flag": "FLAG_HIDE_MT_PYRE_SUMMIT_TEAM_AQUA"
     },
-    "maxie_anonymous_mtpyre_summit_23_6_mtpyre_summit": {
-      "id": "maxie_anonymous_mtpyre_summit_23_6_mtpyre_summit",
-      "npc_id": "maxie_anonymous_mtpyre_summit_23_6",
+    "blockchain_leader_anonymous_mtpyre_summit_23_6_mtpyre_summit": {
+      "id": "blockchain_leader_anonymous_mtpyre_summit_23_6_mtpyre_summit",
+      "npc_id": "blockchain_leader_anonymous_mtpyre_summit_23_6",
       "map": "MtPyre_Summit",
       "map_id": "MAP_MT_PYRE_SUMMIT",
       "script": "0x0",
@@ -55462,9 +55957,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_PETALBURG_CITY_SCOTT"
     },
-    "leader_norman_petalburgcity_gym": {
-      "id": "leader_norman_petalburgcity_gym",
-      "npc_id": "leader_norman",
+    "mom_norman_petalburgcity_gym": {
+      "id": "mom_norman_petalburgcity_gym",
+      "npc_id": "mom_norman",
       "map": "PetalburgCity_Gym",
       "map_id": "MAP_PETALBURG_CITY_GYM",
       "script": "PetalburgCity_Gym_EventScript_Norman",
@@ -56102,9 +56597,9 @@
       "battle_id": null,
       "flag": "FLAG_TEMP_12"
     },
-    "team_aqua_grunt_m_petalburgwoods": {
-      "id": "team_aqua_grunt_m_petalburgwoods",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_anonymous_petalburgwoods_26_17_petalburgwoods": {
+      "id": "algorithm_member_m_anonymous_petalburgwoods_26_17_petalburgwoods",
+      "npc_id": "algorithm_member_m_anonymous_petalburgwoods_26_17",
       "map": "PetalburgWoods",
       "map_id": "MAP_PETALBURG_WOODS",
       "script": "0x0",
@@ -58662,9 +59157,9 @@
       "battle_id": "trainer_team_rocket_grunt_14",
       "flag": "FLAG_HIDE_MISC_KANTO_ROCKETS"
     },
-    "leader_frlg_giovanni_rockethideout_b4f_frlg": {
-      "id": "leader_frlg_giovanni_rockethideout_b4f_frlg",
-      "npc_id": "leader_frlg_giovanni",
+    "boss_frlg_giovanni_rockethideout_b4f_frlg": {
+      "id": "boss_frlg_giovanni_rockethideout_b4f_frlg",
+      "npc_id": "boss_frlg_giovanni",
       "map": "RocketHideout_B4F_Frlg",
       "map_id": "MAP_ROCKET_HIDEOUT_B4F",
       "script": "RocketHideout_B4F_EventScript_Giovanni",
@@ -58679,7 +59174,7 @@
         "y": 1
       },
       "trainer_type": "TRAINER_TYPE_NONE",
-      "battle_id": null,
+      "battle_id": "trainer_boss_giovanni",
       "flag": "FLAG_HIDE_HIDEOUT_GIOVANNI"
     },
     "team_rocket_grunt_m_rockethideout_b4f_frlg": {
@@ -61482,9 +61977,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_aqua_grunt_m_route110": {
-      "id": "team_aqua_grunt_m_route110",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt1_route110": {
+      "id": "algorithm_member_m_aquagrunt1_route110",
+      "npc_id": "algorithm_member_m_aquagrunt1",
       "map": "Route110",
       "map_id": "MAP_ROUTE110",
       "script": "Route110_EventScript_AquaGrunt1",
@@ -61502,9 +61997,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_route110_2": {
-      "id": "team_aqua_grunt_m_route110_2",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt2_route110": {
+      "id": "algorithm_member_m_aquagrunt2_route110",
+      "npc_id": "algorithm_member_m_aquagrunt2",
       "map": "Route110",
       "map_id": "MAP_ROUTE110",
       "script": "Route110_EventScript_AquaGrunt2",
@@ -61522,9 +62017,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_route110_3": {
-      "id": "team_aqua_grunt_m_route110_3",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt3_route110": {
+      "id": "algorithm_member_m_aquagrunt3_route110",
+      "npc_id": "algorithm_member_m_aquagrunt3",
       "map": "Route110",
       "map_id": "MAP_ROUTE110",
       "script": "Route110_EventScript_AquaGrunt3",
@@ -61542,9 +62037,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_route110_4": {
-      "id": "team_aqua_grunt_m_route110_4",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt4_route110": {
+      "id": "algorithm_member_m_aquagrunt4_route110",
+      "npc_id": "algorithm_member_m_aquagrunt4",
       "map": "Route110",
       "map_id": "MAP_ROUTE110",
       "script": "Route110_EventScript_AquaGrunt4",
@@ -61562,9 +62057,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_route110_5": {
-      "id": "team_aqua_grunt_m_route110_5",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_anonymous_route110_8_82_route110": {
+      "id": "algorithm_member_m_anonymous_route110_8_82_route110",
+      "npc_id": "algorithm_member_m_anonymous_route110_8_82",
       "map": "Route110",
       "map_id": "MAP_ROUTE110",
       "script": "0x0",
@@ -63782,9 +64277,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_magma_grunt_m_route112": {
-      "id": "team_magma_grunt_m_route112",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_magmagrunts_route112": {
+      "id": "blockchain_member_m_magmagrunts_route112",
+      "npc_id": "blockchain_member_m_magmagrunts",
       "map": "Route112",
       "map_id": "MAP_ROUTE112",
       "script": "Route112_EventScript_MagmaGrunts",
@@ -63882,9 +64377,9 @@
       "battle_id": "trainer_trent_1",
       "flag": "0"
     },
-    "team_magma_grunt_m_route112_2": {
-      "id": "team_magma_grunt_m_route112_2",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_magmagrunts_route112_2": {
+      "id": "blockchain_member_m_magmagrunts_route112_2",
+      "npc_id": "blockchain_member_m_magmagrunts",
       "map": "Route112",
       "map_id": "MAP_ROUTE112",
       "script": "Route112_EventScript_MagmaGrunts",
@@ -66502,9 +66997,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_119_RIVAL"
     },
-    "team_aqua_grunt_m_route119": {
-      "id": "team_aqua_grunt_m_route119",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_bridgeaquagrunt1_route119": {
+      "id": "algorithm_member_m_bridgeaquagrunt1_route119",
+      "npc_id": "algorithm_member_m_bridgeaquagrunt1",
       "map": "Route119",
       "map_id": "MAP_ROUTE119",
       "script": "Route119_EventScript_BridgeAquaGrunt1",
@@ -66522,9 +67017,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_route119_2": {
-      "id": "team_aqua_grunt_m_route119_2",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_bridgeaquagrunt2_route119": {
+      "id": "algorithm_member_m_bridgeaquagrunt2_route119",
+      "npc_id": "algorithm_member_m_bridgeaquagrunt2",
       "map": "Route119",
       "map_id": "MAP_ROUTE119",
       "script": "Route119_EventScript_BridgeAquaGrunt2",
@@ -67062,9 +67557,9 @@
       "battle_id": "trainer_grunt_weather_inst_3",
       "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
     },
-    "aqua_admin_shelly_route119_weatherinstitute_2f": {
-      "id": "aqua_admin_shelly_route119_weatherinstitute_2f",
-      "npc_id": "aqua_admin_shelly",
+    "algorithm_admin_shelly_route119_weatherinstitute_2f": {
+      "id": "algorithm_admin_shelly_route119_weatherinstitute_2f",
+      "npc_id": "algorithm_admin_shelly",
       "map": "Route119_WeatherInstitute_2F",
       "map_id": "MAP_ROUTE119_WEATHER_INSTITUTE_2F",
       "script": "Route119_WeatherInstitute_2F_EventScript_Shelly",
@@ -67142,9 +67637,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_WEATHER_INSTITUTE_2F_WORKERS"
     },
-    "team_aqua_grunt_m_route119_weatherinstitute_2f_3": {
-      "id": "team_aqua_grunt_m_route119_weatherinstitute_2f_3",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_anonymous_route119_weatherinstitute_2f_16_6_route119_weatherinstitute_2f": {
+      "id": "algorithm_member_m_anonymous_route119_weatherinstitute_2f_16_6_route119_weatherinstitute_2f",
+      "npc_id": "algorithm_member_m_anonymous_route119_weatherinstitute_2f_16_6",
       "map": "Route119_WeatherInstitute_2F",
       "map_id": "MAP_ROUTE119_WEATHER_INSTITUTE_2F",
       "script": "0x0",
@@ -68102,9 +68597,9 @@
       "battle_id": "trainer_kate_and_joy",
       "flag": "0"
     },
-    "team_aqua_grunt_m_route121": {
-      "id": "team_aqua_grunt_m_route121",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_anonymous_route121_30_8_route121": {
+      "id": "algorithm_member_m_anonymous_route121_30_8_route121",
+      "npc_id": "algorithm_member_m_anonymous_route121_30_8",
       "map": "Route121",
       "map_id": "MAP_ROUTE121",
       "script": "0x0",
@@ -68122,9 +68617,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_121_TEAM_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_m_route121_2": {
-      "id": "team_aqua_grunt_m_route121_2",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_anonymous_route121_30_7_route121": {
+      "id": "algorithm_member_m_anonymous_route121_30_7_route121",
+      "npc_id": "algorithm_member_m_anonymous_route121_30_7",
       "map": "Route121",
       "map_id": "MAP_ROUTE121",
       "script": "0x0",
@@ -68142,9 +68637,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_121_TEAM_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_m_route121_3": {
-      "id": "team_aqua_grunt_m_route121_3",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_anonymous_route121_31_7_route121": {
+      "id": "algorithm_member_m_anonymous_route121_31_7_route121",
+      "npc_id": "algorithm_member_m_anonymous_route121_31_7",
       "map": "Route121",
       "map_id": "MAP_ROUTE121",
       "script": "0x0",
@@ -69662,9 +70157,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_128_STEVEN"
     },
-    "archie_anonymous_route128_37_22_route128": {
-      "id": "archie_anonymous_route128_37_22_route128",
-      "npc_id": "archie_anonymous_route128_37_22",
+    "algorithm_leader_anonymous_route128_37_22_route128": {
+      "id": "algorithm_leader_anonymous_route128_37_22_route128",
+      "npc_id": "algorithm_leader_anonymous_route128_37_22",
       "map": "Route128",
       "map_id": "MAP_ROUTE128",
       "script": "0x0",
@@ -69682,9 +70177,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_ROUTE_128_ARCHIE"
     },
-    "maxie_anonymous_route128_38_21_route128": {
-      "id": "maxie_anonymous_route128_38_21_route128",
-      "npc_id": "maxie_anonymous_route128_38_21",
+    "blockchain_leader_anonymous_route128_38_21_route128": {
+      "id": "blockchain_leader_anonymous_route128_38_21_route128",
+      "npc_id": "blockchain_leader_anonymous_route128_38_21",
       "map": "Route128",
       "map_id": "MAP_ROUTE128",
       "script": "0x0",
@@ -75377,9 +75872,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1"
     },
-    "team_aqua_grunt_m_rustborocity": {
-      "id": "team_aqua_grunt_m_rustborocity",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_anonymous_rustborocity_13_21_rustborocity": {
+      "id": "algorithm_member_m_anonymous_rustborocity_13_21_rustborocity",
+      "npc_id": "algorithm_member_m_anonymous_rustborocity_13_21",
       "map": "RustboroCity",
       "map_id": "MAP_RUSTBORO_CITY",
       "script": "0x0",
@@ -76794,7 +77289,7 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NONE",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_rusturf_tunnel",
       "flag": "FLAG_HIDE_RUSTURF_TUNNEL_AQUA_GRUNT"
     },
     "wingull_peeko_rusturftunnel": {
@@ -80317,9 +80812,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_POSTGAME_GOSSIPERS"
     },
-    "team_aqua_grunt_m_seafloorcavern_entrance": {
-      "id": "team_aqua_grunt_m_seafloorcavern_entrance",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_grunt_seafloorcavern_entrance": {
+      "id": "algorithm_member_m_grunt_seafloorcavern_entrance",
+      "npc_id": "algorithm_member_m_grunt",
       "map": "SeafloorCavern_Entrance",
       "map_id": "MAP_SEAFLOOR_CAVERN_ENTRANCE",
       "script": "SeafloorCavern_Entrance_EventScript_Grunt",
@@ -80737,9 +81232,9 @@
       "battle_id": null,
       "flag": "FLAG_TEMP_19"
     },
-    "aqua_admin_shelly_seafloorcavern_room3": {
-      "id": "aqua_admin_shelly_seafloorcavern_room3",
-      "npc_id": "aqua_admin_shelly",
+    "algorithm_admin_shelly_seafloorcavern_room3": {
+      "id": "algorithm_admin_shelly_seafloorcavern_room3",
+      "npc_id": "algorithm_admin_shelly",
       "map": "SeafloorCavern_Room3",
       "map_id": "MAP_SEAFLOOR_CAVERN_ROOM3",
       "script": "SeafloorCavern_Room3_EventScript_Shelly",
@@ -81197,9 +81692,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_KYOGRE"
     },
-    "archie_anonymous_seafloorcavern_room9_9_42_seafloorcavern_room9": {
-      "id": "archie_anonymous_seafloorcavern_room9_9_42_seafloorcavern_room9",
-      "npc_id": "archie_anonymous_seafloorcavern_room9_9_42",
+    "algorithm_leader_anonymous_seafloorcavern_room9_9_42_seafloorcavern_room9": {
+      "id": "algorithm_leader_anonymous_seafloorcavern_room9_9_42_seafloorcavern_room9",
+      "npc_id": "algorithm_leader_anonymous_seafloorcavern_room9_9_42",
       "map": "SeafloorCavern_Room9",
       "map_id": "MAP_SEAFLOOR_CAVERN_ROOM9",
       "script": "0x0",
@@ -81217,9 +81712,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_ARCHIE"
     },
-    "maxie_anonymous_seafloorcavern_room9_9_42_seafloorcavern_room9": {
-      "id": "maxie_anonymous_seafloorcavern_room9_9_42_seafloorcavern_room9",
-      "npc_id": "maxie_anonymous_seafloorcavern_room9_9_42",
+    "blockchain_leader_anonymous_seafloorcavern_room9_9_42_seafloorcavern_room9": {
+      "id": "blockchain_leader_anonymous_seafloorcavern_room9_9_42_seafloorcavern_room9",
+      "npc_id": "blockchain_leader_anonymous_seafloorcavern_room9_9_42",
       "map": "SeafloorCavern_Room9",
       "map_id": "MAP_SEAFLOOR_CAVERN_ROOM9",
       "script": "0x0",
@@ -81237,9 +81732,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAXIE"
     },
-    "team_magma_grunt_m_seafloorcavern_room9": {
-      "id": "team_magma_grunt_m_seafloorcavern_room9",
-      "npc_id": "team_magma_grunt_m",
+    "blockchain_member_m_anonymous_seafloorcavern_room9_8_41_seafloorcavern_room9": {
+      "id": "blockchain_member_m_anonymous_seafloorcavern_room9_8_41_seafloorcavern_room9",
+      "npc_id": "blockchain_member_m_anonymous_seafloorcavern_room9_8_41",
       "map": "SeafloorCavern_Room9",
       "map_id": "MAP_SEAFLOOR_CAVERN_ROOM9",
       "script": "0x0",
@@ -81257,9 +81752,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAGMA_GRUNTS"
     },
-    "team_magma_grunt_f_seafloorcavern_room9": {
-      "id": "team_magma_grunt_f_seafloorcavern_room9",
-      "npc_id": "team_magma_grunt_f",
+    "blockchain_member_f_anonymous_seafloorcavern_room9_8_42_seafloorcavern_room9": {
+      "id": "blockchain_member_f_anonymous_seafloorcavern_room9_8_42_seafloorcavern_room9",
+      "npc_id": "blockchain_member_f_anonymous_seafloorcavern_room9_8_42",
       "map": "SeafloorCavern_Room9",
       "map_id": "MAP_SEAFLOOR_CAVERN_ROOM9",
       "script": "0x0",
@@ -92456,9 +92951,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_aqua_grunt_f_slateportcity": {
-      "id": "team_aqua_grunt_f_slateportcity",
-      "npc_id": "team_aqua_grunt_f",
+    "algorithm_member_f_aquagrunt1_slateportcity": {
+      "id": "algorithm_member_f_aquagrunt1_slateportcity",
+      "npc_id": "algorithm_member_f_aquagrunt1",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt1",
@@ -92716,9 +93211,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_aqua_grunt_m_slateportcity": {
-      "id": "team_aqua_grunt_m_slateportcity",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt2_slateportcity": {
+      "id": "algorithm_member_m_aquagrunt2_slateportcity",
+      "npc_id": "algorithm_member_m_aquagrunt2",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt2",
@@ -92736,9 +93231,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_slateportcity_2": {
-      "id": "team_aqua_grunt_m_slateportcity_2",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt3_slateportcity": {
+      "id": "algorithm_member_m_aquagrunt3_slateportcity",
+      "npc_id": "algorithm_member_m_aquagrunt3",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt3",
@@ -92876,9 +93371,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_aqua_grunt_m_slateportcity_3": {
-      "id": "team_aqua_grunt_m_slateportcity_3",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt4_slateportcity": {
+      "id": "algorithm_member_m_aquagrunt4_slateportcity",
+      "npc_id": "algorithm_member_m_aquagrunt4",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt4",
@@ -92896,9 +93391,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_slateportcity_4": {
-      "id": "team_aqua_grunt_m_slateportcity_4",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt5_slateportcity": {
+      "id": "algorithm_member_m_aquagrunt5_slateportcity",
+      "npc_id": "algorithm_member_m_aquagrunt5",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt5",
@@ -92916,9 +93411,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_slateportcity_5": {
-      "id": "team_aqua_grunt_m_slateportcity_5",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt6_slateportcity": {
+      "id": "algorithm_member_m_aquagrunt6_slateportcity",
+      "npc_id": "algorithm_member_m_aquagrunt6",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt6",
@@ -92936,9 +93431,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_slateportcity_6": {
-      "id": "team_aqua_grunt_m_slateportcity_6",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt7_slateportcity": {
+      "id": "algorithm_member_m_aquagrunt7_slateportcity",
+      "npc_id": "algorithm_member_m_aquagrunt7",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt7",
@@ -92956,9 +93451,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_slateportcity_7": {
-      "id": "team_aqua_grunt_m_slateportcity_7",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt8_slateportcity": {
+      "id": "algorithm_member_m_aquagrunt8_slateportcity",
+      "npc_id": "algorithm_member_m_aquagrunt8",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt8",
@@ -92976,9 +93471,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_slateportcity_8": {
-      "id": "team_aqua_grunt_m_slateportcity_8",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt9_slateportcity": {
+      "id": "algorithm_member_m_aquagrunt9_slateportcity",
+      "npc_id": "algorithm_member_m_aquagrunt9",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt9",
@@ -92996,9 +93491,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_slateportcity_9": {
-      "id": "team_aqua_grunt_m_slateportcity_9",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt10_slateportcity": {
+      "id": "algorithm_member_m_aquagrunt10_slateportcity",
+      "npc_id": "algorithm_member_m_aquagrunt10",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt10",
@@ -93016,9 +93511,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA"
     },
-    "team_aqua_grunt_m_slateportcity_10": {
-      "id": "team_aqua_grunt_m_slateportcity_10",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_aquagrunt11_slateportcity": {
+      "id": "algorithm_member_m_aquagrunt11_slateportcity",
+      "npc_id": "algorithm_member_m_aquagrunt11",
       "map": "SlateportCity",
       "map_id": "MAP_SLATEPORT_CITY",
       "script": "SlateportCity_EventScript_AquaGrunt11",
@@ -93356,9 +93851,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_SS_TIDAL"
     },
-    "team_aqua_grunt_m_slateportcity_harbor": {
-      "id": "team_aqua_grunt_m_slateportcity_harbor",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_anonymous_slateportcity_harbor_7_10_slateportcity_harbor": {
+      "id": "algorithm_member_m_anonymous_slateportcity_harbor_7_10_slateportcity_harbor",
+      "npc_id": "algorithm_member_m_anonymous_slateportcity_harbor_7_10",
       "map": "SlateportCity_Harbor",
       "map_id": "MAP_SLATEPORT_CITY_HARBOR",
       "script": "0x0",
@@ -93376,9 +93871,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_AQUA_GRUNT"
     },
-    "archie_anonymous_slateportcity_harbor_8_10_slateportcity_harbor": {
-      "id": "archie_anonymous_slateportcity_harbor_8_10_slateportcity_harbor",
-      "npc_id": "archie_anonymous_slateportcity_harbor_8_10",
+    "algorithm_leader_anonymous_slateportcity_harbor_8_10_slateportcity_harbor": {
+      "id": "algorithm_leader_anonymous_slateportcity_harbor_8_10_slateportcity_harbor",
+      "npc_id": "algorithm_leader_anonymous_slateportcity_harbor_8_10",
       "map": "SlateportCity_Harbor",
       "map_id": "MAP_SLATEPORT_CITY_HARBOR",
       "script": "0x0",
@@ -93556,9 +94051,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f": {
-      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_museumgrunt3_slateportcity_oceanicmuseum_1f": {
+      "id": "algorithm_member_m_museumgrunt3_slateportcity_oceanicmuseum_1f",
+      "npc_id": "algorithm_member_m_museumgrunt3",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt3",
@@ -93576,9 +94071,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_2": {
-      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_2",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_museumgrunt4_slateportcity_oceanicmuseum_1f": {
+      "id": "algorithm_member_m_museumgrunt4_slateportcity_oceanicmuseum_1f",
+      "npc_id": "algorithm_member_m_museumgrunt4",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt4",
@@ -93596,9 +94091,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_3": {
-      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_3",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_museumgrunt2_slateportcity_oceanicmuseum_1f": {
+      "id": "algorithm_member_m_museumgrunt2_slateportcity_oceanicmuseum_1f",
+      "npc_id": "algorithm_member_m_museumgrunt2",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt2",
@@ -93616,9 +94111,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_f_slateportcity_oceanicmuseum_1f": {
-      "id": "team_aqua_grunt_f_slateportcity_oceanicmuseum_1f",
-      "npc_id": "team_aqua_grunt_f",
+    "algorithm_member_f_museumgrunt1_slateportcity_oceanicmuseum_1f": {
+      "id": "algorithm_member_f_museumgrunt1_slateportcity_oceanicmuseum_1f",
+      "npc_id": "algorithm_member_f_museumgrunt1",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt1",
@@ -93636,9 +94131,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS"
     },
-    "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_4": {
-      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_4",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_museumgrunt5_slateportcity_oceanicmuseum_1f": {
+      "id": "algorithm_member_m_museumgrunt5_slateportcity_oceanicmuseum_1f",
+      "npc_id": "algorithm_member_m_museumgrunt5",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt5",
@@ -93676,9 +94171,9 @@
       "battle_id": null,
       "flag": "0"
     },
-    "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_5": {
-      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_5",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_museumgrunt6_slateportcity_oceanicmuseum_1f": {
+      "id": "algorithm_member_m_museumgrunt6_slateportcity_oceanicmuseum_1f",
+      "npc_id": "algorithm_member_m_museumgrunt6",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_MuseumGrunt6",
@@ -93776,9 +94271,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_MUSEUM_POPULATION"
     },
-    "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_6": {
-      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_1f_6",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_familiargrunt_slateportcity_oceanicmuseum_1f": {
+      "id": "algorithm_member_m_familiargrunt_slateportcity_oceanicmuseum_1f",
+      "npc_id": "algorithm_member_m_familiargrunt",
       "map": "SlateportCity_OceanicMuseum_1F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "script": "SlateportCity_OceanicMuseum_1F_EventScript_FamiliarGrunt",
@@ -93816,9 +94311,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_MUSEUM_POPULATION"
     },
-    "scientist_1_captstern_slateportcity_oceanicmuseum_2f": {
-      "id": "scientist_1_captstern_slateportcity_oceanicmuseum_2f",
-      "npc_id": "scientist_1_captstern",
+    "team_aqua_grunt_m_slateportcity_oceanicmuseum_2f": {
+      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_2f",
+      "npc_id": "team_aqua_grunt_m",
       "map": "SlateportCity_OceanicMuseum_2F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_2F",
       "script": "SlateportCity_OceanicMuseum_2F_EventScript_CaptStern",
@@ -93833,12 +94328,12 @@
         "y": 0
       },
       "trainer_type": "TRAINER_TYPE_NONE",
-      "battle_id": null,
+      "battle_id": "trainer_grunt_museum_1",
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_CAPTAIN_STERN"
     },
-    "archie_anonymous_slateportcity_oceanicmuseum_2f_6_1_slateportcity_oceanicmuseum_2f": {
-      "id": "archie_anonymous_slateportcity_oceanicmuseum_2f_6_1_slateportcity_oceanicmuseum_2f",
-      "npc_id": "archie_anonymous_slateportcity_oceanicmuseum_2f_6_1",
+    "algorithm_leader_anonymous_slateportcity_oceanicmuseum_2f_6_1_slateportcity_oceanicmuseum_2f": {
+      "id": "algorithm_leader_anonymous_slateportcity_oceanicmuseum_2f_6_1_slateportcity_oceanicmuseum_2f",
+      "npc_id": "algorithm_leader_anonymous_slateportcity_oceanicmuseum_2f_6_1",
       "map": "SlateportCity_OceanicMuseum_2F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_2F",
       "script": "0x0",
@@ -93856,9 +94351,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_ARCHIE"
     },
-    "team_aqua_grunt_m_slateportcity_oceanicmuseum_2f": {
-      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_2f",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1_slateportcity_oceanicmuseum_2f": {
+      "id": "algorithm_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1_slateportcity_oceanicmuseum_2f",
+      "npc_id": "algorithm_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1",
       "map": "SlateportCity_OceanicMuseum_2F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_2F",
       "script": "0x0",
@@ -93876,9 +94371,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_AQUA_GRUNT_1"
     },
-    "team_aqua_grunt_m_slateportcity_oceanicmuseum_2f_2": {
-      "id": "team_aqua_grunt_m_slateportcity_oceanicmuseum_2f_2",
-      "npc_id": "team_aqua_grunt_m",
+    "algorithm_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1_slateportcity_oceanicmuseum_2f_2": {
+      "id": "algorithm_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1_slateportcity_oceanicmuseum_2f_2",
+      "npc_id": "algorithm_member_m_anonymous_slateportcity_oceanicmuseum_2f_6_1",
       "map": "SlateportCity_OceanicMuseum_2F",
       "map_id": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_2F",
       "script": "0x0",
@@ -94716,9 +95211,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS"
     },
-    "magma_leader_maxie_sootopoliscity": {
-      "id": "magma_leader_maxie_sootopoliscity",
-      "npc_id": "magma_leader_maxie",
+    "blockchain_leader_maxie_sootopoliscity": {
+      "id": "blockchain_leader_maxie_sootopoliscity",
+      "npc_id": "blockchain_leader_maxie",
       "map": "SootopolisCity",
       "map_id": "MAP_SOOTOPOLIS_CITY",
       "script": "SootopolisCity_EventScript_Maxie",
@@ -94736,9 +95231,9 @@
       "battle_id": null,
       "flag": "FLAG_HIDE_SOOTOPOLIS_CITY_MAXIE"
     },
-    "aqua_leader_archie_sootopoliscity": {
-      "id": "aqua_leader_archie_sootopoliscity",
-      "npc_id": "aqua_leader_archie",
+    "algorithm_leader_archie_sootopoliscity": {
+      "id": "algorithm_leader_archie_sootopoliscity",
+      "npc_id": "algorithm_leader_archie",
       "map": "SootopolisCity",
       "map_id": "MAP_SOOTOPOLIS_CITY",
       "script": "SootopolisCity_EventScript_Archie",
@@ -102782,7 +103277,7 @@
     },
     "trainer_matt": {
       "id": "trainer_matt",
-      "npc_id": "aqua_admin_matt",
+      "npc_id": "algorithm_admin_matt",
       "trainer_id": "TRAINER_MATT",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -102798,7 +103293,7 @@
     },
     "trainer_shelly_weather_institute": {
       "id": "trainer_shelly_weather_institute",
-      "npc_id": "aqua_admin_shelly",
+      "npc_id": "algorithm_admin_shelly",
       "trainer_id": "TRAINER_SHELLY_WEATHER_INSTITUTE",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -102806,7 +103301,7 @@
     },
     "trainer_shelly_seafloor_cavern": {
       "id": "trainer_shelly_seafloor_cavern",
-      "npc_id": "aqua_admin_shelly",
+      "npc_id": "algorithm_admin_shelly",
       "trainer_id": "TRAINER_SHELLY_SEAFLOOR_CAVERN",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -102814,7 +103309,7 @@
     },
     "trainer_archie": {
       "id": "trainer_archie",
-      "npc_id": "aqua_leader_archie",
+      "npc_id": "algorithm_leader_julian",
       "trainer_id": "TRAINER_ARCHIE",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -104159,7 +104654,7 @@
     },
     "trainer_norman_1": {
       "id": "trainer_norman_1",
-      "npc_id": "leader_norman",
+      "npc_id": "leader_mama_bosa",
       "trainer_id": "TRAINER_NORMAN_1",
       "rematch_trainer_ids": [
         "TRAINER_NORMAN_2",
@@ -105488,7 +105983,7 @@
     },
     "trainer_tabitha_mossdeep": {
       "id": "trainer_tabitha_mossdeep",
-      "npc_id": "magma_admin_tabitha",
+      "npc_id": "blockchain_admin_tabitha",
       "trainer_id": "TRAINER_TABITHA_MOSSDEEP",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -105496,7 +105991,7 @@
     },
     "trainer_tabitha_mt_chimney": {
       "id": "trainer_tabitha_mt_chimney",
-      "npc_id": "magma_admin_tabitha",
+      "npc_id": "blockchain_admin_tabitha",
       "trainer_id": "TRAINER_TABITHA_MT_CHIMNEY",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -105504,7 +105999,7 @@
     },
     "trainer_tabitha_magma_hideout": {
       "id": "trainer_tabitha_magma_hideout",
-      "npc_id": "magma_admin_tabitha",
+      "npc_id": "blockchain_admin_tabitha",
       "trainer_id": "TRAINER_TABITHA_MAGMA_HIDEOUT",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -106041,7 +106536,7 @@
     },
     "trainer_maxie_magma_hideout": {
       "id": "trainer_maxie_magma_hideout",
-      "npc_id": "magma_leader_maxie",
+      "npc_id": "blockchain_leader_julian",
       "trainer_id": "TRAINER_MAXIE_MAGMA_HIDEOUT",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -106049,7 +106544,7 @@
     },
     "trainer_maxie_mt_chimney": {
       "id": "trainer_maxie_mt_chimney",
-      "npc_id": "magma_leader_maxie",
+      "npc_id": "blockchain_leader_julian",
       "trainer_id": "TRAINER_MAXIE_MT_CHIMNEY",
       "rematch_trainer_ids": [],
       "double_battle": false,
@@ -106057,7 +106552,7 @@
     },
     "trainer_maxie_mossdeep": {
       "id": "trainer_maxie_mossdeep",
-      "npc_id": "magma_leader_maxie",
+      "npc_id": "blockchain_leader_julian",
       "trainer_id": "TRAINER_MAXIE_MOSSDEEP",
       "rematch_trainer_ids": [],
       "double_battle": false,
