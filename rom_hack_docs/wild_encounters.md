@@ -1,56 +1,23 @@
 # Wild Encounters
 
-## Encounter Table Format
-```
-Route/Area Name:
-  Land:
-    - Pokemon (Level Range) [Encounter Rate %]
-  Water (Surf):
-    - Pokemon (Level Range) [Encounter Rate %]
-  Fishing (Old Rod):
-    - Pokemon (Level Range) [Encounter Rate %]
-  Fishing (Good Rod):
-    - Pokemon (Level Range) [Encounter Rate %]
-  Fishing (Super Rod):
-    - Pokemon (Level Range) [Encounter Rate %]
-  Rock Smash:
-    - Pokemon (Level Range) [Encounter Rate %]
-  Hidden/Special:
-    - Pokemon (Level Range) [Conditions]
-```
+> **See [encounter_tables.md](encounter_tables.md) for the complete, up-to-date encounter data for all Hoenn routes and areas.**
+>
+> This file was originally a template. All detailed encounter data is now maintained in `encounter_tables.md`, which is auto-generated from `src/data/wild_encounters.json`.
 
-## Encounter Tables
-
-### Route 101
-```
-Land:
-  -
-Water:
-  -
-```
-
-<!-- Copy for each route/area -->
+## Gift Pokemon
+| Pokemon | Location | Given By | Level | Notes |
+|---------|----------|----------|-------|-------|
+| Turtwig | Littleroot Town | Prof. Birch | 5 | Starter |
+| Fuecoco | Littleroot Town | Prof. Birch | 5 | Starter |
+| Totodile | Littleroot Town | Prof. Birch | 5 | Starter |
+| Castform | Weather Institute | Researcher | 25 | After clearing Team Magma/Aqua |
 
 ## Legendary / Mythical Locations
 | Pokemon | Location | Level | Method |
 |---------|----------|-------|--------|
 | | | | |
 
-## Gift Pokemon
-| Pokemon | Location | Given By | Level | Notes |
-|---------|----------|----------|-------|-------|
-| Starter 1 | | | 5 | |
-| Starter 2 | | | 5 | |
-| Starter 3 | | | 5 | |
-
 ## Static Encounters
 | Pokemon | Location | Level | Conditions |
 |---------|----------|-------|------------|
 | | | | |
-
-## Starters
-| Slot | Pokemon | Type | Notes |
-|------|---------|------|-------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
