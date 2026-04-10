@@ -291,7 +291,7 @@ SeafloorCavern_Room9_Text_ArchieWhyDidKyogreDisappear:
 
 SeafloorCavern_Room9_Text_MaxieWhatHaveYouWrought:
 	.string "JULIAN: What have you wrought?\p"
-	.string "JULIAN… You've finally awoken KYOGRE,\n"
+	.string "You… You've finally awoken KYOGRE,\n"
 	.string "haven't you?\p"
 	.string "What will happen to the world if this\n"
 	.string "downpour continues for all eternity?\p"
