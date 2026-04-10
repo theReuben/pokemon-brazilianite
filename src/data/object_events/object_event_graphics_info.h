@@ -2196,7 +2196,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MagmaAdmin = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticGruntM = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2214,7 +2214,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticGruntM = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticGruntF = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2232,7 +2232,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticGruntF = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticCommanderMars = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_MARS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2250,7 +2250,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticCommanderM
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticCommanderJupiter = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_JUPITER,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2268,7 +2268,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticCommanderJ
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticCommanderSaturn = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_SATURN,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2286,7 +2286,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticCommanderS
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticLeaderCyrus = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_CYRUS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2304,12 +2304,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticLeaderCyru
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberM = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_3,
+    .paletteSlot = PALSLOT_NPC_4,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .compressed = FALSE,
@@ -2322,12 +2322,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberM =
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberF = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_3,
+    .paletteSlot = PALSLOT_NPC_4,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .compressed = FALSE,
@@ -2340,7 +2340,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberF =
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminM = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_JUPITER,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2358,7 +2358,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminM = 
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminF = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_MARS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2376,12 +2376,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminF = 
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmLeader = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_CYRUS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
     .height = 32,
-    .paletteSlot = PALSLOT_NPC_3,
+    .paletteSlot = PALSLOT_NPC_4,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .compressed = FALSE,
@@ -2394,7 +2394,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmLeader = 
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlockchainMemberM = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BLOCKCHAIN_GRUNT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2412,7 +2412,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlockchainMemberM 
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlockchainMemberF = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BLOCKCHAIN_GRUNT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2430,7 +2430,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlockchainMemberF 
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlockchainAdmin = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BLOCKCHAIN_ADMIN,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2448,7 +2448,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlockchainAdmin = 
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlockchainLeader = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BLOCKCHAIN_LEADER,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,

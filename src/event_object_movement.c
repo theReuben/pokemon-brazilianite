@@ -572,6 +572,16 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     #endif //ITEM_STRANGE_BALL
 #endif //OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_Substitute,            OBJ_EVENT_PAL_TAG_SUBSTITUTE},
+    // Team Galactic overworld palettes
+    {gObjectEventPal_GalacticGrunt,         OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT},
+    {gObjectEventPal_GalacticMars,          OBJ_EVENT_PAL_TAG_GALACTIC_MARS},
+    {gObjectEventPal_GalacticJupiter,       OBJ_EVENT_PAL_TAG_GALACTIC_JUPITER},
+    {gObjectEventPal_GalacticSaturn,        OBJ_EVENT_PAL_TAG_GALACTIC_SATURN},
+    {gObjectEventPal_GalacticCyrus,         OBJ_EVENT_PAL_TAG_GALACTIC_CYRUS},
+    // Team Blockchain overworld palettes (golden)
+    {gObjectEventPal_BlockchainGrunt,       OBJ_EVENT_PAL_TAG_BLOCKCHAIN_GRUNT},
+    {gObjectEventPal_BlockchainAdmin,       OBJ_EVENT_PAL_TAG_BLOCKCHAIN_ADMIN},
+    {gObjectEventPal_BlockchainLeader,      OBJ_EVENT_PAL_TAG_BLOCKCHAIN_LEADER},
     {gObjectEventPaletteLight,              OBJ_EVENT_PAL_TAG_LIGHT},
     {gObjectEventPaletteLight2,             OBJ_EVENT_PAL_TAG_LIGHT_2},
     {gObjectEventPaletteEmotes,             OBJ_EVENT_PAL_TAG_EMOTES},
