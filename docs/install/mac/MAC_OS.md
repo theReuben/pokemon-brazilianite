@@ -93,10 +93,12 @@ The following tools are **all required** to build the ROM:
 
     ```bash
     echo $DEVKITARM
-    arm-none-eabi-gcc --version
+    $DEVKITARM/bin/arm-none-eabi-gcc --version
     ```
 
     You should see `/opt/devkitpro/devkitARM` and a GCC version string. If you get `command not found`, see [Troubleshooting](#troubleshooting) below.
+
+    > **Note:** You do not need `arm-none-eabi-gcc` in your shell PATH. The Makefile finds it automatically via the `DEVKITARM` environment variable.
 
 ### Installing Python (macOS)
 1. Download the latest Python package from [here](https://www.python.org/downloads/).

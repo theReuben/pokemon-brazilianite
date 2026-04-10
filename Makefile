@@ -167,7 +167,7 @@ endif
 ARMCC := $(PREFIX)gcc
 PATH_ARMCC := PATH="$(PATH)" $(ARMCC)
 # Check if the ARM cross-compiler is available before invoking it
-ifneq ($(shell command -v $(ARMCC) 2>/dev/null),)
+ifneq ($(shell PATH="$(PATH)" command -v $(ARMCC) 2>/dev/null),)
 CC1 := $(shell $(PATH_ARMCC) --print-prog-name=cc1) -quiet
 else
 CC1 :=
@@ -197,7 +197,7 @@ ifeq ($(DEPRECATED_ERROR),0)
   endif
 endif
 
-ifneq ($(shell command -v $(ARMCC) 2>/dev/null),)
+ifneq ($(shell PATH="$(PATH)" command -v $(ARMCC) 2>/dev/null),)
 LIBPATH := -L "$(dir $(shell $(PATH_ARMCC) -mthumb -print-file-name=libgcc.a))" -L "$(dir $(shell $(PATH_ARMCC) -mthumb -print-file-name=libnosys.a))" -L "$(dir $(shell $(PATH_ARMCC) -mthumb -print-file-name=libc.a))"
 else
 LIBPATH :=
@@ -300,7 +300,7 @@ endif
 
 ifeq ($(SETUP_PREREQS),1)
   # Check for required tools before building
-  ifeq ($(shell command -v $(ARMCC) 2>/dev/null),)
+  ifeq ($(shell PATH="$(PATH)" command -v $(ARMCC) 2>/dev/null),)
     $(error $(ARMCC) not found! Please install the ARM toolchain (devkitARM). See INSTALL.md for setup instructions)
   endif
   # If set on: Default target or a rule requiring a scan
