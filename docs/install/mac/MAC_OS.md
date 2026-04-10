@@ -87,8 +87,50 @@ The following tools are **all required** to build the ROM:
     ```
     </details>
 
+5. **Close and reopen your terminal** (or run `source ~/.zshrc` / `source ~/.bashrc`) so the new environment variables take effect.
+
+6. Verify the installation by running:
+
+    ```bash
+    echo $DEVKITARM
+    arm-none-eabi-gcc --version
+    ```
+
+    You should see `/opt/devkitpro/devkitARM` and a GCC version string. If you get `command not found`, see [Troubleshooting](#troubleshooting) below.
+
 ### Installing Python (macOS)
 1. Download the latest Python package from [here](https://www.python.org/downloads/).
 2. Open the package to install Python.
 
 Python is now installed.
+
+## Troubleshooting
+
+### `arm-none-eabi-gcc not found` after installing devkitARM
+
+This means the `DEVKITARM` environment variable is not set or not pointing to the correct directory. Try these steps in order:
+
+1. **Make sure you restarted your terminal** after running the environment variable setup commands in step 4. The variables are only available in new terminal sessions.
+
+2. **Check that the environment variable is set:**
+
+    ```bash
+    echo $DEVKITARM
+    ```
+
+    This should print `/opt/devkitpro/devkitARM`. If it prints nothing, the variable is not set — re-run the commands from step 4 above and restart your terminal.
+
+3. **Check that the compiler binary exists:**
+
+    ```bash
+    ls /opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc
+    ```
+
+    If this file does not exist, devkitARM was not installed correctly — re-run step 3 (`sudo dkp-pacman -S gba-dev`).
+
+4. **As a quick workaround**, you can also run `make` with the path set explicitly:
+
+    ```bash
+    export DEVKITARM=/opt/devkitpro/devkitARM
+    make
+    ```
