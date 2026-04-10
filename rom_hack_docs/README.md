@@ -6,6 +6,7 @@ This folder contains all design documentation for the Pokemon Brazilianite ROM h
 
 | File | Purpose |
 |------|---------|
+| [regional_dex.md](regional_dex.md) | Definitive list of all Pokemon in the regional dex |
 | [overview.md](overview.md) | High-level vision, themes, and goals |
 | [story.md](story.md) | Plot, characters, and narrative beats |
 | [region_and_maps.md](region_and_maps.md) | Region design, new/modified maps, routes |
