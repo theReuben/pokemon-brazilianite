@@ -431,9 +431,30 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 -----
 
-### New Mauville
+### New Mauville (Entrance)
 
-*Decommissioned power plant beneath Mauville City — Electric-type habitat.*
+*Decommissioned power plant beneath Mauville City — Electric-type habitat (entrance area).*
+
+|Pokemon|Type|Encounter|Levels|Slots|Rate|
+|-------|----|---------|------|-----|----|
+|Hisuian Voltorb|Electric/Grass|Cave|24-24|1|20%|
+|Elekid|Electric|Cave|24-24|2|20%|
+|Hisuian Voltorb|Electric/Grass|Cave|25-25|3|10%|
+|Elekid|Electric|Cave|25-25|4|10%|
+|Hisuian Voltorb|Electric/Grass|Cave|23-23|5|10%|
+|Elekid|Electric|Cave|23-23|6|10%|
+|Hisuian Voltorb|Electric/Grass|Cave|26-26|7|5%|
+|Elekid|Electric|Cave|26-26|8|5%|
+|Hisuian Voltorb|Electric/Grass|Cave|22-22|9|4%|
+|Elekid|Electric|Cave|22-22|10|4%|
+|Hisuian Voltorb|Electric/Grass|Cave|22-22|11|1%|
+|Elekid|Electric|Cave|22-22|12|1%|
+
+-----
+
+### New Mauville (Inside)
+
+*Deeper interior of the power plant — Rare Electric-types prowl the generator rooms.*
 
 |Pokemon|Type|Encounter|Levels|Slots|Rate|
 |-------|----|---------|------|-----|----|
@@ -585,14 +606,26 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 -----
 
-### Mt. Pyre
+### Mt. Pyre (Interior)
 
-*Sacred mountain for departed Pokemon — Ghostly atmosphere.*
+*Sacred mountain for departed Pokemon — Ghostly atmosphere (Floors 1F–6F).*
 
 |Pokemon|Type|Encounter|Levels|Slots|Rate|
 |-------|----|---------|------|-----|----|
 |Probopass|Rock/Steel|Cave|35-38|1-5|70%|
 |Galarian Yamask|Ground/Ghost|Cave|35-38|6-12|30%|
+
+-----
+
+### Mt. Pyre (Exterior)
+
+*Outside grounds of Mt. Pyre — Grassy cliffs overlooking the sea.*
+
+|Pokemon|Type|Encounter|Levels|Slots|Rate|
+|-------|----|---------|------|-----|----|
+|Alolan Persian|Dark|Grass|35-38|1-4|60%|
+|Meowstic|Psychic|Grass|34-37|5-8|30%|
+|Runerigus|Ground/Ghost|Grass|34-38|9-12|10%|
 
 -----
 
@@ -778,9 +811,30 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 -----
 
-### Seafloor Cavern
+### Seafloor Cavern (Entrance)
 
-*Deep underwater cave — Where the ancient legendary rests.*
+*Entrance to the deep underwater cave — Surf and Fishing access.*
+
+|Pokemon|Type|Encounter|Levels|Slots|Rate|
+|-------|----|---------|------|-----|----|
+|Hisuian Qwilfish|Dark/Poison|Surf|30-40|1|60%|
+|Overqwil|Dark/Poison|Surf|30-40|2|30%|
+|White-Striped Basculin|Water|Surf|30-40|3|5%|
+|Poliwhirl|Water|Surf|30-40|4|4%|
+|Araquanid|Water/Bug|Surf|30-40|5|1%|
+|Poliwhirl|Water|Old Rod|30-40|1-2|100%|
+|Hisuian Qwilfish|Dark/Poison|Good Rod|30-40|3-4|80%|
+|White-Striped Basculin|Water|Good Rod|30-40|5|20%|
+|Overqwil|Dark/Poison|Super Rod|35-40|6-7|80%|
+|Basculegion (Male)|Water/Ghost|Super Rod|35-40|8|15%|
+|Grapploct|Fighting|Super Rod|35-40|9|4%|
+|Araquanid|Water/Bug|Super Rod|35-40|10|1%|
+
+-----
+
+### Seafloor Cavern (Rooms)
+
+*Deep underwater cave rooms — Where the ancient legendary rests.*
 
 |Pokemon|Type|Encounter|Levels|Slots|Rate|
 |-------|----|---------|------|-----|----|
@@ -799,9 +853,9 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 
 -----
 
-### Cave of Origin
+### Cave of Origin (Entrance)
 
-*Sacred cave in Sootopolis — Home of ancient power.*
+*Sacred cave in Sootopolis — Entrance hall.*
 
 |Pokemon|Type|Encounter|Levels|Slots|Rate|
 |-------|----|---------|------|-----|----|
@@ -813,6 +867,27 @@ The player chooses one of three starter Pokemon at the beginning of their journe
 |Noibat|Flying/Dragon|Cave|29-29|6|10%|
 |Noibat|Flying/Dragon|Cave|34-34|7|5%|
 |Noibat|Flying/Dragon|Cave|35-35|8|5%|
+|Noivern|Flying/Dragon|Cave|34-34|9|4%|
+|Noivern|Flying/Dragon|Cave|35-35|10|4%|
+|Noivern|Flying/Dragon|Cave|33-33|11|1%|
+|Noivern|Flying/Dragon|Cave|36-36|12|1%|
+
+-----
+
+### Cave of Origin (1F / Deeper Floors)
+
+*Deeper chambers of the Cave of Origin — Home of ancient power. Gimmighoul lurk among the rocks.*
+
+|Pokemon|Type|Encounter|Levels|Slots|Rate|
+|-------|----|---------|------|-----|----|
+|Noibat|Flying/Dragon|Cave|30-30|1|20%|
+|Noibat|Flying/Dragon|Cave|31-31|2|20%|
+|Noibat|Flying/Dragon|Cave|32-32|3|10%|
+|Gimmighoul (Chest)|Ghost|Cave|30-30|4|10%|
+|Gimmighoul (Chest)|Ghost|Cave|32-32|5|10%|
+|Gimmighoul (Chest)|Ghost|Cave|34-34|6|10%|
+|Noibat|Flying/Dragon|Cave|33-33|7|5%|
+|Noibat|Flying/Dragon|Cave|34-34|8|5%|
 |Noivern|Flying/Dragon|Cave|34-34|9|4%|
 |Noivern|Flying/Dragon|Cave|35-35|10|4%|
 |Noivern|Flying/Dragon|Cave|33-33|11|1%|
