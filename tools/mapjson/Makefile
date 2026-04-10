@@ -1,6 +1,9 @@
 CXX ?= g++
 
 CXXFLAGS := -Wall -std=c++17 -O2
+ifeq ($(shell uname),Darwin)
+CXXFLAGS += -isysroot $(shell xcrun --show-sdk-path)
+endif
 
 SRCS := json11.cpp mapjson.cpp
 
