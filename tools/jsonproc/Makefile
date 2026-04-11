@@ -1,6 +1,6 @@
 CXX ?= g++
 ifeq ($(shell uname),Darwin)
-CXX := xcrun $(CXX)
+CXX := xcrun clang++
 endif
 
 CXXFLAGS := -Wall -std=c++17 -O2
