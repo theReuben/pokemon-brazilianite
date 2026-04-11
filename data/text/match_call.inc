@@ -2717,9 +2717,9 @@ MatchCall_Text_Norman1::
 	.string "pay him a visit.$"
 
 MatchCall_Text_Norman2::
-	.string "MAMA BOSA: Hm… Little by little, but also\n"
-	.string "very surely, you're getting\l"
-	.string "tougher, {PLAYER}.\p"
+	.string "MAMA BOSA: Hm… Little by little,\n"
+	.string "but also very surely, you're\l"
+	.string "getting tougher, {PLAYER}.\p"
 	.string "The stronger you get, the farther\n"
 	.string "and higher you soar from Father\l"
 	.string "and me…\p"
@@ -2734,8 +2734,9 @@ MatchCall_Text_Norman3::
 	.string "We'll all be waiting for you!$"
 
 MatchCall_Text_Norman4::
-	.string "MAMA BOSA: {PLAYER}! You'd better go visit\n"
-	.string "Father every so often.\p"
+	.string "MAMA BOSA: {PLAYER}!\n"
+	.string "You'd better go visit Father\l"
+	.string "every so often.\p"
 	.string "I'm going to remain here and\n"
 	.string "redouble my training.\p"
 	.string "The way of battling is deep\n"
