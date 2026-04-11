@@ -1,9 +1,10 @@
 CXX ?= g++
-ifeq ($(shell uname),Darwin)
-CXX := xcrun clang++
-endif
-
 CXXFLAGS = -Wall -Werror -std=c++11 -O2
+
+ifeq ($(shell uname),Darwin)
+CXX := xcrun --sdk macosx clang++
+CXXFLAGS += -isysroot $(shell xcrun --sdk macosx --show-sdk-path)
+endif
 
 SRCS = scaninc.cpp c_file.cpp asm_file.cpp source_file.cpp
 

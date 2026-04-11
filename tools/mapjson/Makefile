@@ -1,9 +1,10 @@
 CXX ?= g++
-ifeq ($(shell uname),Darwin)
-CXX := xcrun clang++
-endif
-
 CXXFLAGS := -Wall -std=c++17 -O2
+
+ifeq ($(shell uname),Darwin)
+CXX := xcrun --sdk macosx clang++
+CXXFLAGS += -isysroot $(shell xcrun --sdk macosx --show-sdk-path)
+endif
 
 SRCS := json11.cpp mapjson.cpp
 
