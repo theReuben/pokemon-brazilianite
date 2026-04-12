@@ -2317,7 +2317,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberM =
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_AlgorithmMemberM,
+    .images = sPicTable_GalacticGruntM,
 };
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberF = {
@@ -2335,7 +2335,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberF =
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_AlgorithmMemberF,
+    .images = sPicTable_GalacticGruntF,
 };
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminM = {
@@ -2353,7 +2353,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminM = 
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_AlgorithmAdminM,
+    .images = sPicTable_GalacticCommanderJupiter,
 };
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminF = {
@@ -2371,7 +2371,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminF = 
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_AlgorithmAdminF,
+    .images = sPicTable_GalacticCommanderMars,
 };
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmLeader = {
@@ -2389,7 +2389,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmLeader = 
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
-    .images = sPicTable_AlgorithmLeader,
+    .images = sPicTable_GalacticLeaderCyrus,
 };
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlockchainMemberM = {
