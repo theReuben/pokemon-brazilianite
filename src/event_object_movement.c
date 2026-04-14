@@ -582,6 +582,11 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_BlockchainGrunt,       OBJ_EVENT_PAL_TAG_BLOCKCHAIN_GRUNT},
     {gObjectEventPal_BlockchainAdmin,       OBJ_EVENT_PAL_TAG_BLOCKCHAIN_ADMIN},
     {gObjectEventPal_BlockchainLeader,      OBJ_EVENT_PAL_TAG_BLOCKCHAIN_LEADER},
+    // Team Algorithm overworld palettes
+    {gObjectEventPal_AlgorithmGrunt,        OBJ_EVENT_PAL_TAG_ALGORITHM_GRUNT},
+    {gObjectEventPal_AlgorithmAdminM,       OBJ_EVENT_PAL_TAG_ALGORITHM_ADMIN_M},
+    {gObjectEventPal_AlgorithmAdminF,       OBJ_EVENT_PAL_TAG_ALGORITHM_ADMIN_F},
+    {gObjectEventPal_AlgorithmLeader,       OBJ_EVENT_PAL_TAG_ALGORITHM_LEADER},
     {gObjectEventPaletteLight,              OBJ_EVENT_PAL_TAG_LIGHT},
     {gObjectEventPaletteLight2,             OBJ_EVENT_PAL_TAG_LIGHT_2},
     {gObjectEventPaletteEmotes,             OBJ_EVENT_PAL_TAG_EMOTES},

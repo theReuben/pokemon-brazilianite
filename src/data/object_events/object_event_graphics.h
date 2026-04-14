@@ -79,6 +79,12 @@ const u16 gObjectEventPal_BlockchainGrunt[] = INCBIN_U16("graphics/object_events
 const u16 gObjectEventPal_BlockchainAdmin[] = INCBIN_U16("graphics/object_events/palettes/team_blockchain_admin.gbapal");
 const u16 gObjectEventPal_BlockchainLeader[] = INCBIN_U16("graphics/object_events/palettes/team_blockchain_leader.gbapal");
 
+// Team Algorithm overworld palettes
+const u16 gObjectEventPal_AlgorithmGrunt[] = INCBIN_U16("graphics/object_events/palettes/team_algorithm_grunt.gbapal");
+const u16 gObjectEventPal_AlgorithmAdminM[] = INCBIN_U16("graphics/object_events/palettes/team_algorithm_admin_m.gbapal");
+const u16 gObjectEventPal_AlgorithmAdminF[] = INCBIN_U16("graphics/object_events/palettes/team_algorithm_admin_f.gbapal");
+const u16 gObjectEventPal_AlgorithmLeader[] = INCBIN_U16("graphics/object_events/palettes/team_algorithm_leader.gbapal");
+
 const u32 gObjectEventPic_NinjaBoy[] = INCBIN_U32("graphics/object_events/pics/people/ninja_boy.4bpp");
 const u32 gObjectEventPic_Twin[] = INCBIN_U32("graphics/object_events/pics/people/twin.4bpp");
 const u32 gObjectEventPic_Boy1[] = INCBIN_U32("graphics/object_events/pics/people/boy_1.4bpp");

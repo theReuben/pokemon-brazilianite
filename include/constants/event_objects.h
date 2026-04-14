@@ -635,6 +635,12 @@
 #define OBJ_EVENT_PAL_TAG_BLOCKCHAIN_ADMIN        0x1171
 #define OBJ_EVENT_PAL_TAG_BLOCKCHAIN_LEADER       0x1172
 
+// Team Algorithm overworld palettes
+#define OBJ_EVENT_PAL_TAG_ALGORITHM_GRUNT         0x1173
+#define OBJ_EVENT_PAL_TAG_ALGORITHM_ADMIN_M       0x1174
+#define OBJ_EVENT_PAL_TAG_ALGORITHM_ADMIN_F       0x1175
+#define OBJ_EVENT_PAL_TAG_ALGORITHM_LEADER        0x1176
+
 // Used as a placeholder follower graphic
 #define OBJ_EVENT_PAL_TAG_SUBSTITUTE              0x7611
 #define OBJ_EVENT_PAL_TAG_LIGHT                   0x8001

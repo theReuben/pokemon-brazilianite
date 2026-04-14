@@ -2304,7 +2304,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GalacticLeaderCyru
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberM = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ALGORITHM_GRUNT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2322,7 +2322,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberM =
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberF = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ALGORITHM_GRUNT,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2340,7 +2340,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmMemberF =
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminM = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_JUPITER,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ALGORITHM_ADMIN_M,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2358,7 +2358,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminM = 
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminF = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_MARS,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ALGORITHM_ADMIN_F,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -2376,7 +2376,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmAdminF = 
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AlgorithmLeader = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_GALACTIC_CYRUS,
+    .paletteTag = OBJ_EVENT_PAL_TAG_ALGORITHM_LEADER,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
