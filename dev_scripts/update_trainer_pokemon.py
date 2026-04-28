@@ -344,6 +344,8 @@ def process_file(filepath):
     """Parse filepath and return (output_lines, list_of_changes).
 
     Each change is (trainer_id, line_number_1based, old_species, new_species).
+    When a species is swapped, its move lines are dropped so the engine fills
+    in the last 4 level-up moves at that Pokemon's level automatically.
     """
     with open(filepath, "r", encoding="utf-8") as f:
         lines = f.readlines()
@@ -353,6 +355,7 @@ def process_file(filepath):
 
     in_trainer_block = False
     expect_species = False
+    clear_moves = False   # True for the remainder of a block whose species was swapped
     current_trainer = "?"
 
     for lineno, line in enumerate(lines, start=1):
@@ -362,6 +365,7 @@ def process_file(filepath):
         if stripped.startswith("==="):
             in_trainer_block = True
             expect_species = False
+            clear_moves = False
             m = re.search(r"===\s*(\w+)\s*===", stripped)
             current_trainer = m.group(1) if m else "?"
             output_lines.append(line)
@@ -371,15 +375,20 @@ def process_file(filepath):
             output_lines.append(line)
             continue
 
-        # Comment lines — pass through without changing expect_species state
+        # Comment lines — pass through without changing state
         if stripped.startswith("/*") or stripped.startswith("*") or stripped.endswith("*/"):
             output_lines.append(line)
             continue
 
-        # Blank line → the next non-blank line is a species line
+        # Blank line → next non-blank is a species line; reset move-clearing for new block
         if not stripped:
             expect_species = True
+            clear_moves = False
             output_lines.append(line)
+            continue
+
+        # Drop move lines for a block whose species was just swapped
+        if clear_moves and stripped.startswith("- "):
             continue
 
         # Known field prefix → not a species line
@@ -397,6 +406,7 @@ def process_file(filepath):
                 new_line = replace_species_in_line(line, species, new_species)
                 changes.append((current_trainer, lineno, species, new_species))
                 output_lines.append(new_line)
+                clear_moves = True
                 continue
 
         output_lines.append(line)
@@ -445,7 +455,9 @@ def main():
         print(f"Written: {filepath}")
 
     print("\nDone. Review the changes, then delete the .backup files when satisfied.")
-    print("Remember to manually review Ability, move, and held item fields on changed Pokemon.")
+    print("Moves on swapped Pokemon have been cleared — the engine will assign the last 4")
+    print("level-up moves at that Pokemon's level automatically.")
+    print("Ability and held item fields on changed Pokemon may still need manual review.")
 
 
 if __name__ == "__main__":
