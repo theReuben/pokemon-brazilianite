@@ -282,6 +282,7 @@ SPECIES_MAP = {
     "Shelgon":   "Noivern",
     "Salamence": "Noivern",
     "Beldum":    "Gimmighoul",
+    "Metang":    "Gholdengo",
     "Metagross": "Gholdengo",
 
     # ------------------------------------------------------------------
