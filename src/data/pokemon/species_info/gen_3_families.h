@@ -9389,15 +9389,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         SHADOW(1, 10, SHADOW_SIZE_S)
         FOOTPRINT(Castform)
         .isMegaEvolution = TRUE,
-        OVERWORLD(
-            sPicTable_CastformMega,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_NONE,
-            sAnimTable_Following,
-            gOverworldPalette_CastformMega,
-            gShinyOverworldPalette_CastformMega
-        )
         .formChangeTable = sCastformMegaFormChangeTable,
         .levelUpLearnset = sCastformLevelUpLearnset,
         .teachableLearnset = sCastformTeachableLearnset,
@@ -9453,15 +9444,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         SHADOW(1, 10, SHADOW_SIZE_S)
         FOOTPRINT(Castform)
         .isMegaEvolution = TRUE,
-        OVERWORLD(
-            sPicTable_CastformMegaElectric,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_NONE,
-            sAnimTable_Following,
-            gOverworldPalette_CastformMegaElectric,
-            gShinyOverworldPalette_CastformMegaElectric
-        )
         .formChangeTable = sCastformMegaFormChangeTable,
         .levelUpLearnset = sCastformLevelUpLearnset,
         .teachableLearnset = sCastformTeachableLearnset,
@@ -9517,15 +9499,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         SHADOW(1, 10, SHADOW_SIZE_S)
         FOOTPRINT(Castform)
         .isMegaEvolution = TRUE,
-        OVERWORLD(
-            sPicTable_CastformMegaGrassy,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_NONE,
-            sAnimTable_Following,
-            gOverworldPalette_CastformMegaGrassy,
-            gShinyOverworldPalette_CastformMegaGrassy
-        )
         .formChangeTable = sCastformMegaFormChangeTable,
         .levelUpLearnset = sCastformLevelUpLearnset,
         .teachableLearnset = sCastformTeachableLearnset,
@@ -9581,15 +9554,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         SHADOW(1, 10, SHADOW_SIZE_S)
         FOOTPRINT(Castform)
         .isMegaEvolution = TRUE,
-        OVERWORLD(
-            sPicTable_CastformMegaMisty,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_NONE,
-            sAnimTable_Following,
-            gOverworldPalette_CastformMegaMisty,
-            gShinyOverworldPalette_CastformMegaMisty
-        )
         .formChangeTable = sCastformMegaFormChangeTable,
         .levelUpLearnset = sCastformLevelUpLearnset,
         .teachableLearnset = sCastformTeachableLearnset,
@@ -9645,15 +9609,6 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         SHADOW(1, 10, SHADOW_SIZE_S)
         FOOTPRINT(Castform)
         .isMegaEvolution = TRUE,
-        OVERWORLD(
-            sPicTable_CastformMegaPsychic,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_NONE,
-            sAnimTable_Following,
-            gOverworldPalette_CastformMegaPsychic,
-            gShinyOverworldPalette_CastformMegaPsychic
-        )
         .formChangeTable = sCastformMegaFormChangeTable,
         .levelUpLearnset = sCastformLevelUpLearnset,
         .teachableLearnset = sCastformTeachableLearnset,
