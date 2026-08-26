@@ -20416,11 +20416,11 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_POKEMON_OBJECT_EVENTS
 
 #if P_GEN_9_MEGA_EVOLUTIONS
-//    const u32 gMonFrontPic_MeowsticMega[] = INCBIN_U32("graphics/pokemon/meowstic/mega/front.4bpp.smol");
-//    const u16 gMonPalette_MeowsticMega[] = INCBIN_U16("graphics/pokemon/meowstic/mega/normal.gbapal");
-//    const u32 gMonBackPic_MeowsticMega[] = INCBIN_U32("graphics/pokemon/meowstic/mega/back.4bpp.smol");
-//    const u16 gMonShinyPalette_MeowsticMega[] = INCBIN_U16("graphics/pokemon/meowstic/mega/shiny.gbapal");
-//    const u8 gMonIcon_MeowsticMega[] = INCBIN_U8("graphics/pokemon/meowstic/mega/icon.4bpp");
+    const u32 gMonFrontPic_MeowsticMega[] = INCBIN_U32("graphics/pokemon/meowstic/mega/front.4bpp.smol");
+    const u16 gMonPalette_MeowsticMega[] = INCBIN_U16("graphics/pokemon/meowstic/mega/normal.gbapal");
+    const u32 gMonBackPic_MeowsticMega[] = INCBIN_U32("graphics/pokemon/meowstic/mega/back.4bpp.smol");
+    const u16 gMonShinyPalette_MeowsticMega[] = INCBIN_U16("graphics/pokemon/meowstic/mega/shiny.gbapal");
+    const u8 gMonIcon_MeowsticMega[] = INCBIN_U8("graphics/pokemon/meowstic/mega/icon.4bpp");
 #if OW_POKEMON_OBJECT_EVENTS && OW_BATTLE_ONLY_FORMS
 //    const u32 gObjectEventPic_MeowsticMega[] = INCBIN_COMP("graphics/pokemon/meowstic/mega/overworld.4bpp");
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
