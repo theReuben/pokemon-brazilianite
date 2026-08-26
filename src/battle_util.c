@@ -1801,6 +1801,12 @@ void TryToRevertMimicryAndFlags(void)
         ResetParadoxTerrainStat(battler);
         if (IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_MIMICRY))
             RESTORE_BATTLER_TYPE(battler);
+        // Geocast has to hear about terrain ENDING too, not just being
+        // set. ABILITYEFFECT_ON_TERRAIN only fires when a terrain comes
+        // in, so without this the form stays on the terrain it last saw
+        // and never returns to the plain Mega.
+        if (IsAbilityAndRecord(battler, GetBattlerAbility(battler), ABILITY_GEOCAST))
+            TryBattleFormChange(battler, FORM_CHANGE_BATTLE_TERRAIN, ABILITY_GEOCAST);
     }
 }
 
