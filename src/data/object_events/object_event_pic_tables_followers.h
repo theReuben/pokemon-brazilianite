@@ -2788,6 +2788,21 @@ static const struct SpriteFrameImage sPicTable_MiloticF[] = {
 #endif //P_FAMILY_FEEBAS
 
 #if P_FAMILY_CASTFORM
+static const struct SpriteFrameImage sPicTable_CastformMega[] = {
+    overworld_ascending_frames(gObjectEventPic_CastformMega, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_CastformMegaElectric[] = {
+    overworld_ascending_frames(gObjectEventPic_CastformMegaElectric, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_CastformMegaGrassy[] = {
+    overworld_ascending_frames(gObjectEventPic_CastformMegaGrassy, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_CastformMegaMisty[] = {
+    overworld_ascending_frames(gObjectEventPic_CastformMegaMisty, 4, 4),
+};
+static const struct SpriteFrameImage sPicTable_CastformMegaPsychic[] = {
+    overworld_ascending_frames(gObjectEventPic_CastformMegaPsychic, 4, 4),
+};
 static const struct SpriteFrameImage sPicTable_CastformNormal[] = {
     overworld_ascending_frames(gObjectEventPic_CastformNormal, 4, 4),
 };
