@@ -12277,6 +12277,14 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u32 gMonBackPic_Flygon[] = INCBIN_U32("graphics/pokemon/flygon/back_gba.4bpp.smol");
     const u16 gMonShinyPalette_Flygon[] = INCBIN_U16("graphics/pokemon/flygon/shiny_gba.gbapal");
 #endif //P_GBA_STYLE_SPECIES_GFX
+#if P_MEGA_EVOLUTIONS
+    // Flygon's own artwork under a recoloured palette; there is no Mega
+    // Flygon sprite to import, so only the palette differs.
+    const u32 gMonFrontPic_FlygonMega[] = INCBIN_U32("graphics/pokemon/flygon/mega/front.4bpp.smol");
+    const u16 gMonPalette_FlygonMega[] = INCBIN_U16("graphics/pokemon/flygon/mega/normal.gbapal");
+    const u32 gMonBackPic_FlygonMega[] = INCBIN_U32("graphics/pokemon/flygon/mega/back.4bpp.smol");
+    const u16 gMonShinyPalette_FlygonMega[] = INCBIN_U16("graphics/pokemon/flygon/mega/shiny.gbapal");
+#endif //P_MEGA_EVOLUTIONS
 #if !P_GBA_STYLE_SPECIES_ICONS
     const u8 gMonIcon_Flygon[] = INCBIN_U8("graphics/pokemon/flygon/icon.4bpp");
 #else

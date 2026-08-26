@@ -1687,8 +1687,11 @@
 #define SPECIES_TATSUGIRI_DROOPY_MEGA                   1570
 #define SPECIES_TATSUGIRI_STRETCHY_MEGA                 1571
 #define SPECIES_GLIMMORA_MEGA                           1572
+// Appended so nothing above is renumbered: every table indexed by
+// species id, and every save file, depends on these staying put.
+#define SPECIES_FLYGON_MEGA                             1573
 
-#define SPECIES_EGG                                     (SPECIES_GLIMMORA_MEGA + 1)
+#define SPECIES_EGG                                     (SPECIES_FLYGON_MEGA + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

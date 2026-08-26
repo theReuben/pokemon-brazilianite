@@ -1,4 +1,11 @@
 #if P_FAMILY_BULBASAUR
+static const struct FormChange sFlygonFormChangeTable[] = {
+#if P_MEGA_EVOLUTIONS
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_FLYGON_MEGA, ITEM_FLYGONITE},
+#endif
+    {FORM_CHANGE_TERMINATOR},
+};
+
 static const struct FormChange sVenusaurFormChangeTable[] =
 {
 #if P_MEGA_EVOLUTIONS

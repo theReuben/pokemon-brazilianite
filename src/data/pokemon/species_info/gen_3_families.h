@@ -7547,6 +7547,68 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gOverworldPalette_Flygon,
             gShinyOverworldPalette_Flygon
         )
+        .formChangeTable = sFlygonFormChangeTable,
+        .levelUpLearnset = sFlygonLevelUpLearnset,
+        .teachableLearnset = sFlygonTeachableLearnset,
+    },
+
+    [SPECIES_FLYGON_MEGA] =
+    {
+        // +100 BST over Flygon, the usual Mega budget, weighted to
+        // Attack and Speed to match how the line already plays.
+        .baseHP        = 80,
+        .baseAttack    = 145,
+        .baseDefense   = 100,
+        .baseSpeed     = 130,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 95,
+        .types = MON_TYPES(TYPE_GROUND, TYPE_DRAGON),
+        .catchRate = 45,
+        .expYield = 260,
+        .evYield_Attack = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = TRAPINCH_FAMILY_EGG_GROUPS,
+        .abilities = { ABILITY_LEVITATE, ABILITY_LEVITATE, ABILITY_LEVITATE },
+        .bodyColor = BODY_COLOR_BROWN,
+        .cryId = CRY_FLYGON,
+        .natDexNum = NATIONAL_DEX_FLYGON,
+        // Form species share the base form's name; the Mega flag is what
+        // tells them apart.
+        .speciesName = _("Flygon"),
+        .categoryName = _("Mystic"),
+        .height = 22,
+        .weight = 900,
+        .description = COMPOUND_STRING(
+            "The sandstorm it stirs up glows with\n"
+            "the desert sun. The song of its wings\n"
+            "is said to draw travellers off course."),
+        // Flygon's own artwork under a hotter palette: there is no Mega
+        // Flygon sprite anywhere to import, and drawing one is not
+        // something this can do honestly.
+        .frontPic = gMonFrontPic_FlygonMega,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 1,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(1, 20),
+            ANIMCMD_FRAME(0, 20),
+        ),
+        .frontAnimId = ANIM_ZIGZAG_SLOW,
+        .backPic = gMonBackPic_FlygonMega,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 2 : 3,
+        .backAnimId = BACK_ANIM_TRIANGLE_DOWN,
+        .palette = gMonPalette_FlygonMega,
+        .shinyPalette = gMonShinyPalette_FlygonMega,
+        .iconSprite = gMonIcon_Flygon,
+        .iconPalIndex = 1,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(0, 17, SHADOW_SIZE_M)
+        FOOTPRINT(Flygon)
+        .isMegaEvolution = TRUE,
+        .formChangeTable = sFlygonFormChangeTable,
         .levelUpLearnset = sFlygonLevelUpLearnset,
         .teachableLearnset = sFlygonTeachableLearnset,
     },
