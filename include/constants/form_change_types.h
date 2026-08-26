@@ -163,6 +163,13 @@ enum FormChanges
     FORM_CHANGE_DEPOSIT,
     // Form change for Minior, which appears unchanged when encountered in the wild
     FORM_CHANGE_BEGIN_WILD_ENCOUNTER,
+    // Form change that activates when a terrain is set during battle.
+    // The weather equivalent of this is FORM_CHANGE_BATTLE_WEATHER;
+    // terrain had no counterpart until now.
+    // param1: terrain to check, as a STATUS_FIELD_* flag. 0 means "no
+    // terrain", which is how a form returns to its base.
+    // param2: ability to require, optional.
+    FORM_CHANGE_BATTLE_TERRAIN,
 };
 
 #endif // GUARD_CONSTANTS_FORM_CHANGE_TYPES_H

@@ -691,8 +691,35 @@ static const struct FormChange sCastformFormChangeTable[] =
     {FORM_CHANGE_BATTLE_SWITCH_OUT, SPECIES_CASTFORM_NORMAL},
     {FORM_CHANGE_FAINT,             SPECIES_CASTFORM_NORMAL},
     {FORM_CHANGE_END_BATTLE,        SPECIES_CASTFORM_NORMAL},
+#if P_MEGA_EVOLUTIONS
+    {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, SPECIES_CASTFORM_MEGA, ITEM_CASTFORMITE},
+#endif
     {FORM_CHANGE_TERMINATOR},
 };
+
+#if P_MEGA_EVOLUTIONS
+/*
+ * Mega Castform gets its OWN table rather than sharing Castform's.
+ * Sharing would hand it the weather entries above, and the first turn of
+ * sun or rain would form-change it straight back out of Mega. All it
+ * needs is the way back to Castform.
+ */
+static const struct FormChange sCastformMegaFormChangeTable[] =
+{
+    // Geocast: the terrain counterpart of Forecast. A param1 of 0 means
+    // "no terrain", which is how the form comes back to the plain Mega.
+    {FORM_CHANGE_BATTLE_TERRAIN,    SPECIES_CASTFORM_MEGA_ELECTRIC, STATUS_FIELD_ELECTRIC_TERRAIN, ABILITY_GEOCAST},
+    {FORM_CHANGE_BATTLE_TERRAIN,    SPECIES_CASTFORM_MEGA_GRASSY,   STATUS_FIELD_GRASSY_TERRAIN,   ABILITY_GEOCAST},
+    {FORM_CHANGE_BATTLE_TERRAIN,    SPECIES_CASTFORM_MEGA_MISTY,    STATUS_FIELD_MISTY_TERRAIN,    ABILITY_GEOCAST},
+    {FORM_CHANGE_BATTLE_TERRAIN,    SPECIES_CASTFORM_MEGA_PSYCHIC,  STATUS_FIELD_PSYCHIC_TERRAIN,  ABILITY_GEOCAST},
+    {FORM_CHANGE_BATTLE_TERRAIN,    SPECIES_CASTFORM_MEGA,          0,                             ABILITY_GEOCAST},
+    // Every terrain form needs the way back out of Mega as well, since
+    // they share this table.
+    {FORM_CHANGE_FAINT,             SPECIES_CASTFORM_NORMAL},
+    {FORM_CHANGE_END_BATTLE,        SPECIES_CASTFORM_NORMAL},
+    {FORM_CHANGE_TERMINATOR},
+};
+#endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_CASTFORM
 
 #if P_FAMILY_BAGON

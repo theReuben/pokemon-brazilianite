@@ -9337,6 +9337,284 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .formChangeTable = sCastformFormChangeTable,
     },
 
+#if P_MEGA_EVOLUTIONS
+    [SPECIES_CASTFORM_MEGA] =
+    {
+        // +100 BST over Castform's flat 70s, pushed into Sp. Attack and
+        // Speed so the weather it summons actually threatens something.
+        .baseHP        = 70,
+        .baseAttack    = 70,
+        .baseDefense   = 90,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 90,
+        .types = MON_TYPES(TYPE_NORMAL),
+        .catchRate = 45,
+        .expYield = 147,
+        .evYield_SpAttack = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY, EGG_GROUP_AMORPHOUS),
+        // Forecast is Castform's identity, but it works by form-changing
+        // into the weather forms - which this deliberately cannot do, or
+        // the first turn of sun would undo the Mega. Drought gives the
+        // Mega a weather identity of its own instead.
+        .abilities = { ABILITY_GEOCAST, ABILITY_GEOCAST, ABILITY_GEOCAST },
+        .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Castform"),
+        .cryId = CRY_CASTFORM,
+        .natDexNum = NATIONAL_DEX_CASTFORM,
+        .categoryName = _("Weather"),
+        .height = 4,
+        .weight = 12,
+        .description = COMPOUND_STRING(
+            "The storm it carried inside has\n"
+            "broken loose. Whole valleys are said\n"
+            "to lie under its shadow at noon."),
+        .frontPic = gMonFrontPic_CastformMega,
+        .frontPicSize = MON_COORDS_SIZE(32, 40),
+        .frontPicYOffset = 12,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimId = ANIM_H_SLIDE_WOBBLE,
+        .backPic = gMonBackPic_CastformMega,
+        .backPicSize = MON_COORDS_SIZE(32, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
+        .palette = gMonPalette_CastformMega,
+        .shinyPalette = gMonShinyPalette_CastformMega,
+        .iconSprite = gMonIcon_CastformNormal,
+        .iconPalIndex = 0,
+        SHADOW(1, 10, SHADOW_SIZE_S)
+        FOOTPRINT(Castform)
+        .isMegaEvolution = TRUE,
+        .formChangeTable = sCastformMegaFormChangeTable,
+        .levelUpLearnset = sCastformLevelUpLearnset,
+        .teachableLearnset = sCastformTeachableLearnset,
+    },
+
+    [SPECIES_CASTFORM_MEGA_ELECTRIC] =
+    {
+        // The Electric Terrain form: same Mega statline, Electric typed.
+        .baseHP        = 70,
+        .baseAttack    = 70,
+        .baseDefense   = 90,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 90,
+        .types = MON_TYPES(TYPE_ELECTRIC),
+        .catchRate = 45,
+        .expYield = 147,
+        .evYield_SpAttack = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY, EGG_GROUP_AMORPHOUS),
+        // Forecast is Castform's identity, but it works by form-changing
+        // into the weather forms - which this deliberately cannot do, or
+        // the first turn of sun would undo the Mega. Drought gives the
+        // Mega a weather identity of its own instead.
+        .abilities = { ABILITY_GEOCAST, ABILITY_GEOCAST, ABILITY_GEOCAST },
+        .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Castform"),
+        .cryId = CRY_CASTFORM,
+        .natDexNum = NATIONAL_DEX_CASTFORM,
+        .categoryName = _("Weather"),
+        .height = 4,
+        .weight = 12,
+        .description = COMPOUND_STRING(
+            "The storm it carried inside has\n"
+            "broken loose. Whole valleys are said\n"
+            "to lie under its shadow at noon."),
+        .frontPic = gMonFrontPic_CastformMegaElectric,
+        .frontPicSize = MON_COORDS_SIZE(32, 40),
+        .frontPicYOffset = 12,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimId = ANIM_H_SLIDE_WOBBLE,
+        .backPic = gMonBackPic_CastformMegaElectric,
+        .backPicSize = MON_COORDS_SIZE(32, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
+        .palette = gMonPalette_CastformMegaElectric,
+        .shinyPalette = gMonShinyPalette_CastformMegaElectric,
+        .iconSprite = gMonIcon_CastformNormal,
+        .iconPalIndex = 0,
+        SHADOW(1, 10, SHADOW_SIZE_S)
+        FOOTPRINT(Castform)
+        .isMegaEvolution = TRUE,
+        .formChangeTable = sCastformMegaFormChangeTable,
+        .levelUpLearnset = sCastformLevelUpLearnset,
+        .teachableLearnset = sCastformTeachableLearnset,
+    },
+
+    [SPECIES_CASTFORM_MEGA_GRASSY] =
+    {
+        // The Grassy Terrain form: same Mega statline, Grass typed.
+        .baseHP        = 70,
+        .baseAttack    = 70,
+        .baseDefense   = 90,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 90,
+        .types = MON_TYPES(TYPE_GRASS),
+        .catchRate = 45,
+        .expYield = 147,
+        .evYield_SpAttack = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY, EGG_GROUP_AMORPHOUS),
+        // Forecast is Castform's identity, but it works by form-changing
+        // into the weather forms - which this deliberately cannot do, or
+        // the first turn of sun would undo the Mega. Drought gives the
+        // Mega a weather identity of its own instead.
+        .abilities = { ABILITY_GEOCAST, ABILITY_GEOCAST, ABILITY_GEOCAST },
+        .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Castform"),
+        .cryId = CRY_CASTFORM,
+        .natDexNum = NATIONAL_DEX_CASTFORM,
+        .categoryName = _("Weather"),
+        .height = 4,
+        .weight = 12,
+        .description = COMPOUND_STRING(
+            "The storm it carried inside has\n"
+            "broken loose. Whole valleys are said\n"
+            "to lie under its shadow at noon."),
+        .frontPic = gMonFrontPic_CastformMegaGrassy,
+        .frontPicSize = MON_COORDS_SIZE(32, 40),
+        .frontPicYOffset = 12,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimId = ANIM_H_SLIDE_WOBBLE,
+        .backPic = gMonBackPic_CastformMegaGrassy,
+        .backPicSize = MON_COORDS_SIZE(32, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
+        .palette = gMonPalette_CastformMegaGrassy,
+        .shinyPalette = gMonShinyPalette_CastformMegaGrassy,
+        .iconSprite = gMonIcon_CastformNormal,
+        .iconPalIndex = 0,
+        SHADOW(1, 10, SHADOW_SIZE_S)
+        FOOTPRINT(Castform)
+        .isMegaEvolution = TRUE,
+        .formChangeTable = sCastformMegaFormChangeTable,
+        .levelUpLearnset = sCastformLevelUpLearnset,
+        .teachableLearnset = sCastformTeachableLearnset,
+    },
+
+    [SPECIES_CASTFORM_MEGA_MISTY] =
+    {
+        // The Misty Terrain form: same Mega statline, Fairy typed.
+        .baseHP        = 70,
+        .baseAttack    = 70,
+        .baseDefense   = 90,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 90,
+        .types = MON_TYPES(TYPE_FAIRY),
+        .catchRate = 45,
+        .expYield = 147,
+        .evYield_SpAttack = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY, EGG_GROUP_AMORPHOUS),
+        // Forecast is Castform's identity, but it works by form-changing
+        // into the weather forms - which this deliberately cannot do, or
+        // the first turn of sun would undo the Mega. Drought gives the
+        // Mega a weather identity of its own instead.
+        .abilities = { ABILITY_GEOCAST, ABILITY_GEOCAST, ABILITY_GEOCAST },
+        .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Castform"),
+        .cryId = CRY_CASTFORM,
+        .natDexNum = NATIONAL_DEX_CASTFORM,
+        .categoryName = _("Weather"),
+        .height = 4,
+        .weight = 12,
+        .description = COMPOUND_STRING(
+            "The storm it carried inside has\n"
+            "broken loose. Whole valleys are said\n"
+            "to lie under its shadow at noon."),
+        .frontPic = gMonFrontPic_CastformMegaMisty,
+        .frontPicSize = MON_COORDS_SIZE(32, 40),
+        .frontPicYOffset = 12,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimId = ANIM_H_SLIDE_WOBBLE,
+        .backPic = gMonBackPic_CastformMegaMisty,
+        .backPicSize = MON_COORDS_SIZE(32, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
+        .palette = gMonPalette_CastformMegaMisty,
+        .shinyPalette = gMonShinyPalette_CastformMegaMisty,
+        .iconSprite = gMonIcon_CastformNormal,
+        .iconPalIndex = 0,
+        SHADOW(1, 10, SHADOW_SIZE_S)
+        FOOTPRINT(Castform)
+        .isMegaEvolution = TRUE,
+        .formChangeTable = sCastformMegaFormChangeTable,
+        .levelUpLearnset = sCastformLevelUpLearnset,
+        .teachableLearnset = sCastformTeachableLearnset,
+    },
+
+    [SPECIES_CASTFORM_MEGA_PSYCHIC] =
+    {
+        // The Psychic Terrain form: same Mega statline, Psychic typed.
+        .baseHP        = 70,
+        .baseAttack    = 70,
+        .baseDefense   = 90,
+        .baseSpeed     = 100,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 90,
+        .types = MON_TYPES(TYPE_PSYCHIC),
+        .catchRate = 45,
+        .expYield = 147,
+        .evYield_SpAttack = 3,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 25,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FAIRY, EGG_GROUP_AMORPHOUS),
+        // Forecast is Castform's identity, but it works by form-changing
+        // into the weather forms - which this deliberately cannot do, or
+        // the first turn of sun would undo the Mega. Drought gives the
+        // Mega a weather identity of its own instead.
+        .abilities = { ABILITY_GEOCAST, ABILITY_GEOCAST, ABILITY_GEOCAST },
+        .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Castform"),
+        .cryId = CRY_CASTFORM,
+        .natDexNum = NATIONAL_DEX_CASTFORM,
+        .categoryName = _("Weather"),
+        .height = 4,
+        .weight = 12,
+        .description = COMPOUND_STRING(
+            "The storm it carried inside has\n"
+            "broken loose. Whole valleys are said\n"
+            "to lie under its shadow at noon."),
+        .frontPic = gMonFrontPic_CastformMegaPsychic,
+        .frontPicSize = MON_COORDS_SIZE(32, 40),
+        .frontPicYOffset = 12,
+        .frontAnimFrames = sAnims_SingleFramePlaceHolder,
+        .frontAnimId = ANIM_H_SLIDE_WOBBLE,
+        .backPic = gMonBackPic_CastformMegaPsychic,
+        .backPicSize = MON_COORDS_SIZE(32, 64),
+        .backPicYOffset = 0,
+        .backAnimId = BACK_ANIM_CONVEX_DOUBLE_ARC,
+        .palette = gMonPalette_CastformMegaPsychic,
+        .shinyPalette = gMonShinyPalette_CastformMegaPsychic,
+        .iconSprite = gMonIcon_CastformNormal,
+        .iconPalIndex = 0,
+        SHADOW(1, 10, SHADOW_SIZE_S)
+        FOOTPRINT(Castform)
+        .isMegaEvolution = TRUE,
+        .formChangeTable = sCastformMegaFormChangeTable,
+        .levelUpLearnset = sCastformLevelUpLearnset,
+        .teachableLearnset = sCastformTeachableLearnset,
+    },
+#endif //P_MEGA_EVOLUTIONS
+
     [SPECIES_CASTFORM_SUNNY] =
     {
         .baseHP        = 70,

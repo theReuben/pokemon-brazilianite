@@ -12902,6 +12902,30 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonPalette_CastformNormal[] = INCBIN_U16("graphics/pokemon/castform/normal.gbapal");
     const u32 gMonBackPic_CastformNormal[] = INCBIN_U32("graphics/pokemon/castform/back.4bpp.smol");
     const u16 gMonShinyPalette_CastformNormal[] = INCBIN_U16("graphics/pokemon/castform/shiny.gbapal");
+#if P_MEGA_EVOLUTIONS
+    // Castform's own artwork under a storm-grey palette; there is no
+    // Mega Castform sprite to import.
+    const u32 gMonFrontPic_CastformMega[] = INCBIN_U32("graphics/pokemon/castform/mega/front.4bpp.smol");
+    const u16 gMonPalette_CastformMega[] = INCBIN_U16("graphics/pokemon/castform/mega/normal.gbapal");
+    const u32 gMonBackPic_CastformMega[] = INCBIN_U32("graphics/pokemon/castform/mega/back.4bpp.smol");
+    const u16 gMonShinyPalette_CastformMega[] = INCBIN_U16("graphics/pokemon/castform/mega/shiny.gbapal");
+    const u32 gMonFrontPic_CastformMegaElectric[] = INCBIN_U32("graphics/pokemon/castform/mega_electric/front.4bpp.smol");
+    const u16 gMonPalette_CastformMegaElectric[] = INCBIN_U16("graphics/pokemon/castform/mega_electric/normal.gbapal");
+    const u32 gMonBackPic_CastformMegaElectric[] = INCBIN_U32("graphics/pokemon/castform/mega_electric/back.4bpp.smol");
+    const u16 gMonShinyPalette_CastformMegaElectric[] = INCBIN_U16("graphics/pokemon/castform/mega_electric/shiny.gbapal");
+    const u32 gMonFrontPic_CastformMegaGrassy[] = INCBIN_U32("graphics/pokemon/castform/mega_grassy/front.4bpp.smol");
+    const u16 gMonPalette_CastformMegaGrassy[] = INCBIN_U16("graphics/pokemon/castform/mega_grassy/normal.gbapal");
+    const u32 gMonBackPic_CastformMegaGrassy[] = INCBIN_U32("graphics/pokemon/castform/mega_grassy/back.4bpp.smol");
+    const u16 gMonShinyPalette_CastformMegaGrassy[] = INCBIN_U16("graphics/pokemon/castform/mega_grassy/shiny.gbapal");
+    const u32 gMonFrontPic_CastformMegaMisty[] = INCBIN_U32("graphics/pokemon/castform/mega_misty/front.4bpp.smol");
+    const u16 gMonPalette_CastformMegaMisty[] = INCBIN_U16("graphics/pokemon/castform/mega_misty/normal.gbapal");
+    const u32 gMonBackPic_CastformMegaMisty[] = INCBIN_U32("graphics/pokemon/castform/mega_misty/back.4bpp.smol");
+    const u16 gMonShinyPalette_CastformMegaMisty[] = INCBIN_U16("graphics/pokemon/castform/mega_misty/shiny.gbapal");
+    const u32 gMonFrontPic_CastformMegaPsychic[] = INCBIN_U32("graphics/pokemon/castform/mega_psychic/front.4bpp.smol");
+    const u16 gMonPalette_CastformMegaPsychic[] = INCBIN_U16("graphics/pokemon/castform/mega_psychic/normal.gbapal");
+    const u32 gMonBackPic_CastformMegaPsychic[] = INCBIN_U32("graphics/pokemon/castform/mega_psychic/back.4bpp.smol");
+    const u16 gMonShinyPalette_CastformMegaPsychic[] = INCBIN_U16("graphics/pokemon/castform/mega_psychic/shiny.gbapal");
+#endif //P_MEGA_EVOLUTIONS
 
     const u32 gMonFrontPic_CastformSunny[] = INCBIN_U32("graphics/pokemon/castform/sunny/anim_front.4bpp.smol");
     const u16 gMonPalette_CastformSunny[] = INCBIN_U16("graphics/pokemon/castform/sunny/normal.gbapal");

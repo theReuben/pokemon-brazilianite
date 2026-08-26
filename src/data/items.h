@@ -7241,6 +7241,24 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_Glimmoranite,
     },
 
+    [ITEM_CASTFORMITE] =
+    {
+        .name = ITEM_NAME("Castformite"),
+        .price = 0,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = COMPOUND_STRING(
+            "This stone enables\n"
+            "CASTFORM to Mega\n"
+            "Evolve in battle."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_MEGA_STONE,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 80,
+        .iconPic = gItemIcon_Glimmoranite,
+        .iconPalette = gItemIconPalette_Glimmoranite,
+    },
+
     [ITEM_FLYGONITE] =
     {
         .name = ITEM_NAME("Flygonite"),

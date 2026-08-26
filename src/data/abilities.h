@@ -455,6 +455,15 @@ const struct AbilityInfo gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeTraced = TRUE,
     },
 
+    [ABILITY_GEOCAST] =
+    {
+        .name = _("Geocast"),
+        .description = COMPOUND_STRING("Changes with the terrain."),
+        .aiRating = 6,
+        .cantBeCopied = TRUE,
+        .cantBeTraced = TRUE,
+    },
+
     [ABILITY_STICKY_HOLD] =
     {
         .name = _("Sticky Hold"),

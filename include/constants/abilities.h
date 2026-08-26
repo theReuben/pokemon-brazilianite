@@ -333,7 +333,9 @@ enum __attribute__((packed)) Ability
     ABILITY_TERAFORM_ZERO = 309,
     ABILITY_POISON_PUPPETEER = 310,
     ABILITIES_COUNT_GEN9,
-    ABILITIES_COUNT = ABILITIES_COUNT_GEN9,
+    // Appended after the official list so no existing ability id moves.
+    ABILITY_GEOCAST = ABILITIES_COUNT_GEN9,
+    ABILITIES_COUNT,
 };
 
 #endif  // GUARD_CONSTANTS_ABILITIES_H

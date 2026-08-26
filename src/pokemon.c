@@ -6772,6 +6772,22 @@ u32 GetFormChangeTargetSpecies_Internal(struct FormChangeContext ctx)
             if (ctx.gmaxFactor)
                 targetSpecies = formChanges[i].targetSpecies;
             break;
+        case FORM_CHANGE_BATTLE_TERRAIN:
+            // Mirrors FORM_CHANGE_BATTLE_WEATHER, but keyed on the field
+            // terrain. param1 is a STATUS_FIELD_*_TERRAIN flag, or 0 for
+            // "no terrain", which is how the form returns to its base.
+            if (formChanges[i].param2 && ctx.ability != formChanges[i].param2)
+                break;
+            if (formChanges[i].param1 == 0)
+            {
+                if (!(gFieldStatuses & STATUS_FIELD_TERRAIN_ANY))
+                    targetSpecies = formChanges[i].targetSpecies;
+            }
+            else if (gFieldStatuses & formChanges[i].param1)
+            {
+                targetSpecies = formChanges[i].targetSpecies;
+            }
+            break;
         case FORM_CHANGE_BATTLE_WEATHER:
             // Check if there is a required ability and if the battler's ability does not match it
             // or is suppressed. If so, revert to the no weather form.

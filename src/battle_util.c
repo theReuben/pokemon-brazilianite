@@ -4937,6 +4937,20 @@ u32 AbilityBattleEffects(enum AbilityEffect caseID, enum BattlerId battler, enum
         gLastUsedAbility = GetBattlerAbility(battler);
         switch (gLastUsedAbility)
         {
+        case ABILITY_GEOCAST:
+            // The terrain counterpart of Forecast. Gated on
+            // terrainAbilityDone the same way the other terrain
+            // abilities are, so it fires once per terrain change rather
+            // than every time the effect is polled.
+            if (!gBattleMons[battler].volatiles.terrainAbilityDone
+             && TryBattleFormChange(battler, FORM_CHANGE_BATTLE_TERRAIN, gLastUsedAbility))
+            {
+                gBattleMons[battler].volatiles.terrainAbilityDone = TRUE;
+                gBattlerAbility = gBattleScripting.battler = battler;
+                BattleScriptCall(BattleScript_BattlerFormChangeWithString);
+                effect++;
+            }
+            break;
         case ABILITY_MIMICRY:
             if (!gBattleMons[battler].volatiles.terrainAbilityDone && ChangeTypeBasedOnTerrain(battler))
             {
