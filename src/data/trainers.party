@@ -412,7 +412,7 @@ Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_1 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -2029,7 +2029,7 @@ Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_2 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -2480,7 +2480,7 @@ Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_CHIMNEY_1 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt F
 Gender: Female
@@ -9773,7 +9773,7 @@ Level: 35
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_GRUNT_UNUSED ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Algorithm Grunt F
 Gender: Female
@@ -9807,7 +9807,7 @@ Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_JAGGED_PASS ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -9937,7 +9937,7 @@ Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MT_CHIMNEY_2 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -10028,7 +10028,7 @@ Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_3 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt F
 Gender: Female
@@ -10045,7 +10045,7 @@ Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_4 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -10058,7 +10058,7 @@ Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_5 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -10071,7 +10071,7 @@ Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_6 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -10084,7 +10084,7 @@ Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_7 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12345,7 +12345,7 @@ Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_1 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12358,7 +12358,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_2 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12371,7 +12371,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_3 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12384,7 +12384,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_4 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12401,7 +12401,7 @@ Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_5 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12418,7 +12418,7 @@ Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_6 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12431,7 +12431,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_7 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12444,7 +12444,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_8 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12457,7 +12457,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_9 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12470,7 +12470,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_10 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12483,7 +12483,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_11 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12496,7 +12496,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_12 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12509,7 +12509,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_13 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt M
 Gender: Male
@@ -12522,7 +12522,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_14 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt F
 Gender: Female
@@ -12535,7 +12535,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_15 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt F
 Gender: Female
@@ -12548,7 +12548,7 @@ Level: 29
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_MAGMA_HIDEOUT_16 ===
-Name: $GRNT
+Name: ¥GRNT
 Class: Team Blockchain
 Pic: Blockchain Grunt F
 Gender: Female
