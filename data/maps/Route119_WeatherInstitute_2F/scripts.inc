@@ -120,6 +120,8 @@ Route119_WeatherInstitute_2F_EventScript_ReceivedCastformFanfare::
 
 Route119_WeatherInstitute_2F_EventScript_ExplainCastform::
 	msgbox Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather, MSGBOX_DEFAULT
+	msgbox Route119_WeatherInstitute_2F_Text_FoundThisDoingAScience, MSGBOX_DEFAULT
+	giveitem ITEM_CASTFORMITE
 	setflag FLAG_RECEIVED_CASTFORM
 	release
 	end
@@ -296,6 +298,10 @@ Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather:
 	.string "to the weather conditions.\p"
 	.string "There're plenty of them in the\n"
 	.string "INSTITUTE--go ahead and take it.$"
+
+Route119_WeatherInstitute_2F_Text_FoundThisDoingAScience:
+	.string "Oh, and we found this while we were\n"
+	.string "doing a science.$"
 
 Route119_WeatherInstitute_2F_Text_ChangingWeatherRidiculous:
 	.string "I've been researching rain for many\n"
