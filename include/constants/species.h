@@ -1689,14 +1689,13 @@
 #define SPECIES_GLIMMORA_MEGA                           1572
 // Appended so nothing above is renumbered: every table indexed by
 // species id, and every save file, depends on these staying put.
-#define SPECIES_FLYGON_MEGA                             1573
-#define SPECIES_CASTFORM_MEGA                           1574
+#define SPECIES_CASTFORM_MEGA                           1573
 // Mega Castform's terrain forms, the terrain counterpart of Castform's
 // own weather forms.
-#define SPECIES_CASTFORM_MEGA_ELECTRIC                  1575
-#define SPECIES_CASTFORM_MEGA_GRASSY                    1576
-#define SPECIES_CASTFORM_MEGA_MISTY                     1577
-#define SPECIES_CASTFORM_MEGA_PSYCHIC                   1578
+#define SPECIES_CASTFORM_MEGA_ELECTRIC                  1574
+#define SPECIES_CASTFORM_MEGA_GRASSY                    1575
+#define SPECIES_CASTFORM_MEGA_MISTY                     1576
+#define SPECIES_CASTFORM_MEGA_PSYCHIC                   1577
 
 #define SPECIES_EGG                                     (SPECIES_CASTFORM_MEGA_PSYCHIC + 1)
 

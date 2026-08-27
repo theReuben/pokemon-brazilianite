@@ -1051,8 +1051,7 @@ enum __attribute__((packed)) Item
     ITEM_TATSUGIRINITE = 872,
     ITEM_GLIMMORANITE = 873,
     // Appended, so no existing item id shifts.
-    ITEM_FLYGONITE = 874,
-    ITEM_CASTFORMITE = 875,
+    ITEM_CASTFORMITE = 874,
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

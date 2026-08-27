@@ -11,6 +11,9 @@ GraniteCave_StevensRoom_EventScript_Steven::
 	msgbox GraniteCave_StevensRoom_Text_ThankYouTakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_TM_STEEL_WING
 	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	msgbox GraniteCave_StevensRoom_Text_AndTakeThisRing, MSGBOX_DEFAULT
+	giveitem ITEM_MEGA_RING
+	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
 	msgbox GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister, MSGBOX_DEFAULT
 	closemessage
 	delay 30
@@ -94,6 +97,13 @@ GraniteCave_StevensRoom_Text_ThankYouTakeThis:
 	.string "I'll give you this TM.\p"
 	.string "It contains my favorite move,\n"
 	.string "STEEL WING.$"
+
+GraniteCave_StevensRoom_Text_AndTakeThisRing:
+	.string "STEVEN: And… take this, too.\p"
+	.string "There are stones that let certain\n"
+	.string "POKéMON change shape in battle.\p"
+	.string "This ring is what awakens them.\n"
+	.string "Find the right stone, and you'll see.$"
 
 GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
 	.string "STEVEN: Your POKéMON appear quite\n"
