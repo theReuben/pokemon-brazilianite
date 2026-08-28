@@ -3935,43 +3935,49 @@ Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PRESTON ===
-Name: PRESTON
+Name: Azzy
 Class: Psychic
 Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
 AI: Check Bad Move
+Starting Status: Sun
 
-Meowstic
+Okidogi
 Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
 
 === TRAINER_VIRGIL ===
-Name: VIRGIL
+Name: Perseus
 Class: Psychic
 Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
 AI: Check Bad Move
+Starting Status: Sun
 
-Espurr
+Dusclops
 Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
 
 === TRAINER_BLAKE ===
-Name: BLAKE
+Name: DuccQuacc
 Class: Psychic
 Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
 AI: Check Bad Move
+Starting Status: Sun
 
-Meowstic
+Sirfetch'd
 Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
 
 === TRAINER_WILLIAM ===
 Name: WILLIAM
@@ -4106,43 +4112,49 @@ Level: 16
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HANNAH ===
-Name: HANNAH
+Name: Ybarra
 Class: Psychic
 Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
 AI: Check Bad Move
+Starting Status: Sun
 
-Meowstic
+Tsareena
 Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
 
 === TRAINER_SAMANTHA ===
-Name: SAMANTHA
+Name: akita
 Class: Psychic
 Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
 AI: Check Bad Move
+Starting Status: Sun
 
-Meowstic
+Drifloon
 Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
 
 === TRAINER_MAURA ===
-Name: MAURA
+Name: cmak
 Class: Psychic
 Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
 AI: Check Bad Move
+Starting Status: Sun
 
-Duosion
+Empoleon
 Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
 
 === TRAINER_KAYLA ===
 Name: KAYLA
@@ -4676,7 +4688,7 @@ Level: 33
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_TATE_AND_LIZA_1 ===
-Name: TATE&LIZA
+Name: Mr&Mrs P
 Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
@@ -4684,22 +4696,24 @@ Music: Female
 Items: Hyper Potion / Hyper Potion / Hyper Potion / Hyper Potion
 Double Battle: Yes
 AI: Basic Trainer
+Starting Status: Sun
 
-Runerigus
+Malamar
 Level: 41
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 
-Meowstic
+Skeledirge
 Level: 41
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 
-Slowpoke-Galar @ Sitrus Berry
+Espathra
 Level: 42
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 
-Slowpoke-Galar @ Sitrus Berry
+Buzzwole @ Sitrus Berry
 Level: 42
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
 
 === TRAINER_JUAN_1 ===
 Name: JUAN
@@ -9914,17 +9928,19 @@ Level: 13
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_SYLVIA ===
-Name: SYLVIA
+Name: Bee
 Class: Hex Maniac
 Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
+Starting Status: Sun
 
-Clobbopus
+Rapidash-Galar
 Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
 
 === TRAINER_LEONARDO ===
 Name: LEONARDO
@@ -10010,56 +10026,64 @@ Level: 37
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_NATE ===
-Name: NATE
+Name: heta
 Class: Gentleman
 Pic: Gentleman
 Gender: Male
 Music: Rich
 Double Battle: No
 AI: Check Bad Move
+Starting Status: Sun
 
-Solosis
+Purugly
 Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
 
 === TRAINER_KATHLEEN ===
-Name: KATHLEEN
+Name: GuessBot
 Class: Hex Maniac
 Pic: Hex Maniac
 Gender: Female
 Music: Suspicious
 Double Battle: No
 AI: Check Bad Move
+Starting Status: Sun
 
-Duosion
+Genesect
 Level: 36
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
 
 === TRAINER_CLIFFORD ===
-Name: CLIFFORD
+Name: SSG
 Class: Gentleman
 Pic: Gentleman
 Gender: Male
 Music: Rich
 Double Battle: No
 AI: Check Bad Move
+Starting Status: Sun
 
-Meowstic
+Dragonair
 Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
 
 === TRAINER_NICHOLAS ===
-Name: NICHOLAS
+Name: SLJP
 Class: Psychic
 Pic: Psychic M
 Gender: Male
 Music: Intense
 Double Battle: No
 AI: Check Bad Move
+Starting Status: Sun
 
-Reuniclus
+Jigglypuff
 Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
 
 === TRAINER_GRUNT_SPACE_CENTER_3 ===
 Name: ¥GRNT
@@ -10131,17 +10155,19 @@ Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MACEY ===
-Name: MACEY
+Name: DJD
 Class: Psychic
 Pic: Psychic F
 Gender: Female
 Music: Intense
 Double Battle: No
 AI: Check Bad Move
+Starting Status: Sun
 
-Espurr
+Exploud
 Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+IVs: 20 HP / 20 Atk / 20 Def / 20 SpA / 20 SpD / 20 Spe
+
 
 === TRAINER_BRENDAN_RUSTBORO_TREECKO ===
 Name: BRENDAN
