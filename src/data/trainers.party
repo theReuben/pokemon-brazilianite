@@ -1197,16 +1197,14 @@ Class: Cooltrainer
 Pic: Cooltrainer M
 Gender: Male
 Music: Cool
-Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
+Starting Status: Electric Terrain
 
-Regieleki
+Regieleki @ Choice Scarf
 Level: 26
-IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
-- Electric Terrain
-- Thunderbolt
-- Volt Switch
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe / 4 HP
 - Rising Voltage
 
 === TRAINER_PARKER ===
