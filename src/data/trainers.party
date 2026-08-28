@@ -2050,9 +2050,9 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Hatterene
+Latias @ Sitrus Berry
 Level: 40
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+IVs: 28 HP / 28 Atk / 28 Def / 28 SpA / 28 SpD / 28 Spe
 
 
 === TRAINER_GRUNT_SPACE_CENTER_2 ===
@@ -2100,7 +2100,7 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Ninetales-Alola
+Braixen
 Level: 39
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -2240,7 +2240,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Froslass
+Wigglytuff
 Level: 39
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -2254,11 +2254,11 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Roserade
+Gothitelle
 Level: 38
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Sylveon
+Mienshao
 Level: 39
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -2272,7 +2272,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Primarina
+Zoroark
 Level: 40
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -2286,7 +2286,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Mismagius
+Zoroark-Hisui
 Level: 39
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -5224,11 +5224,7 @@ Music: Twins
 Double Battle: No
 AI: Check Bad Move
 
-Medicham
-Level: 38
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-
-Delphox
+Lurantis
 Level: 39
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -8516,7 +8512,7 @@ Music: Twins
 Double Battle: No
 AI: Check Bad Move
 
-Meowstic
+Sneasler
 Level: 39
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -10538,7 +10534,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Milotic
+Cinccino
 Level: 39
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -10552,11 +10548,11 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Lilligant
+Kirlia
 Level: 38
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Bellossom
+Jynx
 Level: 38
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
