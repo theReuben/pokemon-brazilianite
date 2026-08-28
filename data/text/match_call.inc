@@ -2101,35 +2101,35 @@ MatchCall_Text_Brawly4::
 	.string "I'll ever get bored of battling you!$"
 
 MatchCall_Text_Wattson1::
-	.string "WATTSON: Oh, it's you!\p"
-	.string "After you left, I've been redoing\n"
-	.string "my training from scratch.\p"
-	.string "I'd say I could use a wee bit more\n"
-	.string "time to reopen my GYM.\p"
-	.string "You'll have to wait till then!\n"
-	.string "Wahahahaha!$"
+	.string "LUFFY: Oh, it's you!\p"
+	.string "After you left I started my training\n"
+	.string "again from the beginning.\p"
+	.string "I need a bit more time before I open\n"
+	.string "the GYM up again.\p"
+	.string "Wait for me, okay?\n"
+	.string "Shishishi!$"
 
 MatchCall_Text_Wattson2::
-	.string "WATTSON: Wahahahaha!\p"
+	.string "LUFFY: Shishishi!\p"
 	.string "You've really done it, haven't you?\n"
-	.string "I've been getting word about you!\p"
-	.string "It seems I need to retrain some\n"
+	.string "Everyone's talking about you!\p"
+	.string "Looks like I need to train some\n"
 	.string "more still.\p"
-	.string "I'd say I could use a wee bit more\n"
-	.string "time to reopen my GYM.\p"
-	.string "You'll have to wait till then!\n"
-	.string "Wahahahaha!$"
+	.string "I need a bit more time before I open\n"
+	.string "the GYM up again.\p"
+	.string "Wait for me, okay?\n"
+	.string "Shishishi!$"
 
 MatchCall_Text_Wattson3::
-	.string "WATTSON: Oh, it's you!\n"
+	.string "LUFFY: Oh, it's you!\n"
 	.string "My GYM's ready!\p"
-	.string "Visit MAUVILLE anytime!\n"
-	.string "Wahahahaha!$"
+	.string "Come to MAUVILLE any time!\n"
+	.string "Shishishi!$"
 
 MatchCall_Text_Wattson4::
-	.string "WATTSON: Wahahaha!\p"
-	.string "A battle with you is always charged\n"
-	.string "with shocking power!$"
+	.string "LUFFY: Shishishi!\p"
+	.string "Fighting you is always fun!\n"
+	.string "Let's do it again soon!$"
 
 MatchCall_Text_Flannery1::
 	.string "FLANNERY: {PLAYER}…\p"

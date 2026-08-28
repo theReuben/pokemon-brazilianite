@@ -574,40 +574,37 @@ MauvilleCity_Text_ScottYouDidntHoldBack:
 	.string "I'll be cheering for you!$"
 
 MauvilleCity_Text_WattsonNeedFavorTakeKey:
-	.string "WATTSON: Oh, {PLAYER}{KUN}!\n"
-	.string "You look like you have a lot of zip!\l"
-	.string "That's a good thing, wahahahaha!\p"
-	.string "Fine! I've decided!\n"
-	.string "I need a favor, {PLAYER}{KUN}!\p"
-	.string "MAUVILLE CITY has an underground\n"
-	.string "sector called NEW MAUVILLE.\p"
-	.string "{PLAYER}{KUN}, I'd like you to go there and\n"
-	.string "switch off the GENERATOR.\p"
-	.string "The GENERATOR has been running a bit\n"
-	.string "haywire. It's getting unsafe.\p"
-	.string "Here, this is the KEY to get into\n"
-	.string "NEW MAUVILLE.$"
+	.string "LUFFY: Hey, {PLAYER}{KUN}!\n"
+	.string "You look strong. I like that.\l"
+	.string "Shishishi!\p"
+	.string "Listen, do me a favour!\p"
+	.string "There's a place under MAUVILLE\n"
+	.string "called NEW MAUVILLE.\p"
+	.string "The GENERATOR down there has gone\n"
+	.string "haywire. Someone's going to get hurt.\p"
+	.string "I'd go myself, but I got lost in\n"
+	.string "there three times already.\p"
+	.string "Here. This is the KEY.$"
 
 MauvilleCity_Text_WattsonWontBeChallenge:
-	.string "WATTSON: Don't you worry about it.\n"
-	.string "It won't be a challenge to you.\p"
-	.string "The entrance to NEW MAUVILLE is just\n"
-	.string "a short SURF away from ROUTE 110.\p"
-	.string "That's it, then, you have my trust!\n"
-	.string "Wahahahaha!$"
+	.string "LUFFY: Don't worry, it's easy!\p"
+	.string "The way in is a short SURF from\n"
+	.string "ROUTE 110.\p"
+	.string "I'm counting on you!\n"
+	.string "Shishishi!$"
 
 MauvilleCity_Text_WattsonThanksTakeTM:
-	.string "WATTSON: Wahahahaha!\p"
-	.string "I knew it, {PLAYER}{KUN}! I knew I'd made\n"
-	.string "the right choice asking you!\p"
-	.string "This is my thanks--a TM containing\n"
-	.string "THUNDERBOLT!\p"
-	.string "Go on, you've earned it!$"
+	.string "LUFFY: Shishishi!\p"
+	.string "I knew it, {PLAYER}{KUN}! I knew I was\n"
+	.string "right to ask you!\p"
+	.string "Here, this is for you--a TM with\n"
+	.string "THUNDERBOLT in it!\p"
+	.string "Go on, you earned it!$"
 
 MauvilleCity_Text_WattsonYoungTakeCharge:
-	.string "WATTSON: Wahahahaha!\p"
-	.string "It pleases me to no end to see\n"
-	.string "the young step up and take charge!$"
+	.string "LUFFY: Shishishi!\p"
+	.string "You did it! I knew you would!\n"
+	.string "Come and fight me when you're ready!$"
 
 MauvilleCity_Text_NurseHurtMonBackToHealth:
 	.string "You know, it's cool to have POKéMON\n"
@@ -636,8 +633,8 @@ MauvilleCity_Text_CitySign:
 
 MauvilleCity_Text_GymSign:
 	.string "MAUVILLE CITY POKéMON GYM\n"
-	.string "LEADER: WATTSON\l"
-	.string "“The cheerfully electrifying man!”$"
+	.string "LEADER: LUFFY\l"
+	.string "“The man who eats and never loses!”$"
 
 MauvilleCity_Text_BikeShopSign:
 	.string "“Ride in gravel and shake up your\n"

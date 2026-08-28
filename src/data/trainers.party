@@ -4531,7 +4531,7 @@ Level: 19
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_WATTSON_1 ===
-Name: WATTSON
+Name: LUFFY
 Class: Leader
 Pic: Leader Wattson
 Gender: Male
@@ -13480,7 +13480,7 @@ Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_WATTSON_2 ===
-Name: WATTSON
+Name: LUFFY
 Class: Leader
 Pic: Leader Wattson
 Gender: Male
@@ -13506,7 +13506,7 @@ Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_WATTSON_3 ===
-Name: WATTSON
+Name: LUFFY
 Class: Leader
 Pic: Leader Wattson
 Gender: Male
@@ -13536,7 +13536,7 @@ Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_WATTSON_4 ===
-Name: WATTSON
+Name: LUFFY
 Class: Leader
 Pic: Leader Wattson
 Gender: Male
@@ -13566,7 +13566,7 @@ Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_WATTSON_5 ===
-Name: WATTSON
+Name: LUFFY
 Class: Leader
 Pic: Leader Wattson
 Gender: Male
