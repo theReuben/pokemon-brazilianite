@@ -1201,9 +1201,13 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Talonflame
+Regieleki
 Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Electric Terrain
+- Thunderbolt
+- Volt Switch
+- Rising Voltage
 
 === TRAINER_PARKER ===
 Name: PARKER
@@ -1215,9 +1219,14 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Castform
+Machamp
 Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: No Guard
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Dynamic Punch
+- Bulk Up
+- Knock Off
+- Rock Slide
 
 === TRAINER_GEORGE ===
 Name: GEORGE
@@ -1229,9 +1238,14 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Teddiursa @ Sitrus Berry
+Gliscor @ Toxic Orb
 Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: Poison Heal
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Protect
+- Earthquake
+- Toxic
+- Swords Dance
 
 === TRAINER_BERKE ===
 Name: BERKE
@@ -1243,9 +1257,13 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Ursaring
+Smeargle
 Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Mind Reader
+- Sheer Cold
+- Spore
+- Substitute
 
 === TRAINER_BRAXTON ===
 Name: BRAXTON
@@ -1561,9 +1579,13 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Persian
+Drifblim
 Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Minimize
+- Will-O-Wisp
+- Hex
+- Baton Pass
 
 === TRAINER_ALEXIA ===
 Name: ALEXIA
@@ -1575,9 +1597,13 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Granbull
+Stakataka @ Assault Vest
 Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Gyro Ball
+- Rock Slide
+- Body Press
+- Bulldoze
 
 === TRAINER_JODY ===
 Name: JODY
@@ -1589,9 +1615,13 @@ Items: Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
 
-Persian
+Deoxys-Attack
 Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+- Psycho Boost
+- Zen Headbutt
+- Superpower
+- Extreme Speed
 
 === TRAINER_WENDY ===
 Name: WENDY
@@ -4595,19 +4625,19 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Castform
+Furfrou
 Level: 27
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Ursaring
+Kangaskhan
 Level: 27
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Bibarel
+Marowak
 Level: 29
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Ursaluna @ Sitrus Berry
+Revavroom @ Sitrus Berry
 Level: 31
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 
