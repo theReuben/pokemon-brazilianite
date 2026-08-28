@@ -3391,9 +3391,14 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Magby
-Level: 23
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Fidough
+Level: 22
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Milcery
+Level: 22
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
 
 === TRAINER_JEFF ===
 Name: JEFF
@@ -3404,13 +3409,14 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Pansear
+Exeggcute
 Level: 22
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-Pansear
-Level: 22
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Miltank
+Level: 23
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
 
 === TRAINER_AXLE ===
 Name: AXLE
@@ -3421,9 +3427,10 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Magby
+Toedscool
 Level: 23
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
 
 === TRAINER_JACE ===
 Name: JACE
@@ -3434,9 +3441,10 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Pansear
+Gulpin
 Level: 23
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
 
 === TRAINER_KEEGAN ===
 Name: KEEGAN
@@ -3447,9 +3455,14 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Pansear
-Level: 23
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Sinistea
+Level: 22
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Swirlix
+Level: 22
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
 
 === TRAINER_BERNIE_1 ===
 Name: BERNIE
@@ -4611,21 +4624,22 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Magby
+Rotom-Heat
 Level: 24
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Pansear
+Applin
 Level: 24
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Magmortar
+Alcremie
 Level: 26
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 
-Magmortar @ White Herb
+Vanilluxe @ White Herb
 Level: 29
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
 
 === TRAINER_NORMAN_1 ===
 Name: MAMA BOSA
@@ -8508,9 +8522,10 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Magby
-Level: 23
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Munchlax
+Level: 24
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
 
 === TRAINER_ANNIKA ===
 Name: ANNIKA
@@ -11190,9 +11205,14 @@ Items: Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Castform
+Smoliv
 Level: 23
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Bounsweet
+Level: 22
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
 
 === TRAINER_VIVIAN ===
 Name: DENJI
@@ -11221,9 +11241,14 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Clobbopus
+Combee
+Level: 22
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+Cherubi
 Level: 23
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
 
 === TRAINER_HIDEO ===
 Name: HIDEO
