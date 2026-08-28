@@ -112,7 +112,7 @@ MauvilleCity_Gym_EventScript_WattsonDefeated::
 	end
 
 MauvilleCity_Gym_EventScript_GiveShockWave2::
-	giveitem ITEM_TM_SHOCK_WAVE
+	giveitem ITEM_TM_FOCUS_PUNCH
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox MauvilleCity_Gym_Text_ExplainShockWave, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_SHOCK_WAVE
@@ -120,7 +120,7 @@ MauvilleCity_Gym_EventScript_GiveShockWave2::
 	end
 
 MauvilleCity_Gym_EventScript_GiveShockWave::
-	giveitem ITEM_TM_SHOCK_WAVE
+	giveitem ITEM_TM_FOCUS_PUNCH
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	msgbox MauvilleCity_Gym_Text_ExplainShockWave, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_SHOCK_WAVE
@@ -259,13 +259,13 @@ MauvilleCity_Gym_EventScript_GymStatue::
 MauvilleCity_Gym_Text_GymGuideAdvice:
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
-	.string "LUFFY, the LEADER of MAUVILLE\n"
-	.string "GYM, uses ELECTRIC-type POKéMON.\p"
-	.string "If you challenge him with WATER-type\n"
-	.string "POKéMON, he'll zap them! Bzzt!\p"
-	.string "And there are switch-controlled doors\n"
-	.string "all over his GYM! He never uses them!\p"
-	.string "Hey, go for it!$"
+	.string "They call this the WEEB GYM.\n"
+	.string "Nobody here can agree what type\l"
+	.string "they use. They just pick favourites.\p"
+	.string "LUFFY's the same. He brings whatever\n"
+	.string "he feels like that morning.\p"
+	.string "My advice? Go outside. Touch grass.\n"
+	.string "Then come back and beat him!$"
 
 MauvilleCity_Gym_Text_GymGuidePostVictory:
 	.string "Whoa, you're electrifying!\n"
@@ -347,11 +347,12 @@ MauvilleCity_Gym_Text_WattsonDefeat:
 	.string "Take the BADGE!$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
-	.string "{PLAYER} received the DYNAMO BADGE\n"
+	.string "{PLAYER} received THE ONE PIECE\n"
 	.string "from LUFFY.$"
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
-	.string "With the DYNAMO BADGE, POKéMON can\n"
+	.string "It was here the whole time.\p"
+	.string "With THE ONE PIECE, POKéMON can\n"
 	.string "use ROCK SMASH out of battle.\p"
 	.string "And it makes your POKéMON a little\n"
 	.string "bit faster, too.\p"
@@ -359,9 +360,9 @@ MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
 	.string "I don't need it!$"
 
 MauvilleCity_Gym_Text_ExplainShockWave:
-	.string "That TM34 there contains SHOCK WAVE.\p"
-	.string "It never misses. Not once, ever!\n"
-	.string "That's the best kind of attack!\p"
+	.string "That TM01 there is FOCUS PUNCH.\p"
+	.string "You wind up, you take the hit, and\n"
+	.string "then you hit back twice as hard!\p"
 	.string "… … … … … …$"
 
 MauvilleCity_Gym_Text_RegisteredWattson:
@@ -377,7 +378,8 @@ MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor:
 	.string "Go on! Go and get stronger!$"
 
 MauvilleCity_Gym_Text_GymStatue:
-	.string "MAUVILLE CITY POKéMON GYM$"
+	.string "MAUVILLE CITY POKéMON GYM\n"
+	.string "“THE WEEB GYM”$"
 
 MauvilleCity_Gym_Text_GymStatueCertified:
 	.string "MAUVILLE CITY POKéMON GYM\p"

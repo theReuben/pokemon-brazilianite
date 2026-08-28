@@ -634,7 +634,7 @@ MauvilleCity_Text_CitySign:
 MauvilleCity_Text_GymSign:
 	.string "MAUVILLE CITY POKéMON GYM\n"
 	.string "LEADER: LUFFY\l"
-	.string "“The man who eats and never loses!”$"
+	.string "“The WEEB GYM--touch grass to win!”$"
 
 MauvilleCity_Text_BikeShopSign:
 	.string "“Ride in gravel and shake up your\n"
