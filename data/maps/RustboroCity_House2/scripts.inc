@@ -15,7 +15,7 @@ RustboroCity_House2_Text_TrainerSchoolExcellent:
 	.string "become a GYM LEADER.$"
 
 RustboroCity_House2_Text_RoxanneKnowsALot:
-	.string "ROXANNE, the GYM LEADER, really knows\n"
-	.string "a lot about POKéMON.\p"
-	.string "She's really strong, too!$"
+	.string "LIL WAYNE, the GYM LEADER, really\n"
+	.string "knows a lot about POKéMON.\p"
+	.string "He's really loud, too!$"
 

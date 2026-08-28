@@ -904,10 +904,10 @@ MatchCall_PersonalizedText24::
 MatchCall_PersonalizedText25::
 	.string "Snivel… It's… {STR_VAR_1}…\n"
 	.string "…Sob…\p"
-	.string "ROXANNE chewed me out in class\n"
-	.string "today.\p"
-	.string "But I don't dislike her or anything.\p"
-	.string "ROXANNE tells me exactly what\n"
+	.string "LIL WAYNE told me my timing was\n"
+	.string "off today.\p"
+	.string "But I don't dislike him or anything.\p"
+	.string "He tells me exactly what\n"
 	.string "I did wrong so I can learn from it.\p"
 	.string "You bet I'll be going to\n"
 	.string "the TRAINER'S SCHOOL tomorrow!\p"
@@ -915,14 +915,14 @@ MatchCall_PersonalizedText25::
 
 MatchCall_PersonalizedText26::
 	.string "It's {STR_VAR_1}!\p"
-	.string "ROXANNE let me battle with her\n"
+	.string "LIL WAYNE let me battle him\n"
 	.string "yesterday.\p"
 	.string "The results…\n"
 	.string "Terrible, like you needed to ask.\p"
-	.string "But I was delighted that ROXANNE\n"
-	.string "would even let me challenge her!\p"
+	.string "But I was delighted that WAYNE\n"
+	.string "would even let me challenge him!\p"
 	.string "You wouldn't believe how much\n"
-	.string "more I admire her!\p"
+	.string "more I admire him!\p"
 	.string "I'm going to really focus and work!\n"
 	.string "I'd better go!$"
 
@@ -2039,31 +2039,31 @@ MatchCall_Text_Mom3::
 	.string "they fall apart, honey!$"
 
 MatchCall_Text_Roxanne1::
-	.string "ROXANNE: Oh, hello, {PLAYER}!\p"
-	.string "I've been hard at work retraining\n"
-	.string "since we met.\p"
-	.string "I will still need some more time\n"
-	.string "before I can reopen the GYM.\p"
-	.string "But when I do, please visit my GYM\n"
-	.string "for a rematch!$"
+	.string "LIL WAYNE: Ay, {PLAYER}!\p"
+	.string "I've been in the studio since\n"
+	.string "we battled.\p"
+	.string "Need a little more time before\n"
+	.string "I can open the GYM back up.\p"
+	.string "When I do, come through for\n"
+	.string "a rematch!$"
 
 MatchCall_Text_Roxanne2::
-	.string "ROXANNE: Is this {PLAYER}?\n"
+	.string "LIL WAYNE: That {PLAYER}?\n"
 	.string "Congratulations!\l"
-	.string "I've been hearing about you!\p"
-	.string "As for me, I need some more time\n"
-	.string "before I can reopen the GYM.\p"
-	.string "But when I do, please visit my GYM\n"
-	.string "for a rematch!$"
+	.string "Your name keeps coming up!\p"
+	.string "Me, I need a little more time\n"
+	.string "before I open the GYM back up.\p"
+	.string "When I do, come through for\n"
+	.string "a rematch!$"
 
 MatchCall_Text_Roxanne3::
-	.string "ROXANNE: {PLAYER}!\n"
-	.string "My GYM is ready!\p"
-	.string "Please visit RUSTBORO whenever\n"
+	.string "LIL WAYNE: {PLAYER}!\n"
+	.string "The GYM is ready!\p"
+	.string "Pull up on RUSTBORO whenever\n"
 	.string "you can!$"
 
 MatchCall_Text_Roxanne4::
-	.string "ROXANNE: At the RUSTBORO GYM,\n"
+	.string "LIL WAYNE: At the RUSTBORO GYM,\n"
 	.string "the fact that we battled, {PLAYER},\l"
 	.string "is a matter of pride.$"
 
