@@ -167,3 +167,142 @@ def check_palette(s):
     """What a sprite actually uses, and whether it still fits the GBA."""
     used = {s.px[x, y] for x in range(W) for y in range(H)}
     return sorted(used), len(used) <= 16
+
+
+# ---------------------------------------------------------------- checks
+
+
+def components(s):
+    """Every separate blob of drawn pixels, largest first.
+
+    A finished trainer is one blob. Anything else is a leftover: the
+    bandana knot that survived a colour sweep, a scrap of net beside the
+    hand, straw specks above the brim. They are obvious once counted and
+    almost invisible at 1:1.
+    """
+    seen, out = set(), []
+    for sy in range(H):
+        for sx in range(W):
+            if s.px[sx, sy] == 0 or (sx, sy) in seen:
+                continue
+            blob, stack = set(), [(sx, sy)]
+            while stack:
+                x, y = stack.pop()
+                if (x, y) in seen or not (0 <= x < W and 0 <= y < H) or s.px[x, y] == 0:
+                    continue
+                seen.add((x, y))
+                blob.add((x, y))
+                stack += [(x + dx, y + dy) for dx in (-1, 0, 1) for dy in (-1, 0, 1)]
+            out.append(blob)
+    return sorted(out, key=len, reverse=True)
+
+
+def audit(s, name='sprite'):
+    """Everything worth knowing before an import. Prints, returns clean."""
+    blobs = components(s)
+    gaps = holes(s)
+    used, fits = check_palette(s)
+    x0, y0, x1, y1 = bbox({(x, y) for x in range(W) for y in range(H) if s.px[x, y]})
+    print(f'{name}: {x1 - x0 + 1}x{y1 - y0 + 1} at ({x0},{y0}), {len(used)} colours, fits={fits}')
+    if len(blobs) > 1:
+        print(f'  {len(blobs) - 1} detached piece(s): ' +
+              ', '.join(f'{len(b)}px at {bbox(b)[:2]}' for b in blobs[1:][:5]))
+    if gaps:
+        print(f'  {len(gaps)} enclosed background pixel(s): {sorted(gaps)[:6]}')
+    return not gaps and len(blobs) == 1 and fits
+
+
+def plan_palette(s, need):
+    """Which indices are free for new colour ramps, and what they cost.
+
+    A 16-colour sprite has no spare room, so a transplant means taking
+    indices from the base. Taking the wrong one is invisible until it is
+    rendered: index 4 on the Aqua Admin looks like a rounding error at
+    55 pixels, until those 55 turn out to be the shading on both
+    shoulders. This ranks candidates by what they would cost and says
+    where the losses are.
+    """
+    counts = {i: 0 for i in range(16)}
+    where = {i: [] for i in range(16)}
+    for y in range(H):
+        for x in range(W):
+            i = s.px[x, y]
+            counts[i] += 1
+            if len(where[i]) < 4:
+                where[i].append((x, y))
+    # 0 is the background and 15 the outline; neither is ever spare.
+    spare = sorted((i for i in range(1, 15)), key=lambda i: counts[i])
+    print(f'need {need} slot(s); cheapest to take:')
+    for i in spare[:need + 3]:
+        print(f'  index {i:2}  {counts[i]:5} px  e.g. {where[i]}')
+    return spare[:need]
+
+
+class Trace:
+    """Snapshots each step so a bad one can be seen rather than deduced.
+
+    Used as `t = Trace(sprite)` then `t.step('cut the bag')` after each
+    edit; `t.save(path)` writes them as one strip, in order.
+    """
+
+    def __init__(self, sprite):
+        self.sprite = sprite
+        self.frames = [('start', sprite.im.copy())]
+
+    def step(self, label):
+        self.frames.append((label, self.sprite.im.copy()))
+
+    def save(self, path, scale=3):
+        from PIL import ImageDraw
+        cw = W * scale + 10
+        out = Image.new('RGB', (len(self.frames) * cw + 8, H * scale + 26), (24, 28, 36))
+        d = ImageDraw.Draw(out)
+        for i, (label, im) in enumerate(self.frames):
+            out.paste(im.convert('RGB').resize((W * scale, H * scale), Image.NEAREST), (8 + i * cw, 8))
+            d.text((8 + i * cw, H * scale + 12), label[:18], fill=(220, 225, 235))
+        out.save(path)
+
+
+def diff(before, after, path, scale=6):
+    """Red for what went, green for what arrived, blue for recoloured.
+
+    The erased thigh would have shown up here the moment it happened.
+    """
+    from PIL import ImageDraw
+    out = Image.new('RGB', (W * scale, H * scale), (18, 20, 26))
+    d = ImageDraw.Draw(out)
+    for y in range(H):
+        for x in range(W):
+            a, b = before.px[x, y], after.px[x, y]
+            if a == b:
+                c = (60, 64, 74) if b else (18, 20, 26)
+            elif b == 0:
+                c = (220, 60, 60)
+            elif a == 0:
+                c = (60, 210, 110)
+            else:
+                c = (70, 140, 240)
+            d.rectangle([x * scale, y * scale, x * scale + scale - 1, y * scale + scale - 1], fill=c)
+    out.save(path)
+
+
+def fill_holes(s):
+    """Close background sealed inside the figure.
+
+    On the GBA these are not empty, they are the background colour
+    showing through the middle of a trainer - single pixels of green,
+    invisible while working at 10x and obvious in the battle screen.
+    Each takes the colour most of its neighbours have.
+    """
+    filled = 0
+    for x, y in holes(s):
+        near = [
+            s.px[x + dx, y + dy]
+            for dx in (-1, 0, 1)
+            for dy in (-1, 0, 1)
+            if (dx or dy) and 0 <= x + dx < W and 0 <= y + dy < H and s.px[x + dx, y + dy] not in (0,)
+        ]
+        if near:
+            s.px[x, y] = max(set(near), key=near.count)
+            filled += 1
+    return filled
