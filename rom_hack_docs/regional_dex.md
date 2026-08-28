@@ -137,11 +137,16 @@ This is the definitive list of Pokemon available in Pokemon Brazilianite. All wi
 | 129 | Milotic            | Water             |                                 |
 | 130 | Hisuian Basculin   | Water             |                                 |
 | 131 | Basculegion        | Water/Ghost       |                                 |
+| 132 | Tirtouga           | Water/Rock        | Cover Fossil, Devon Corp        |
+| 133 | Carracosta         | Water/Rock        | Cover Fossil line               |
+| 134 | Archen             | Rock/Flying       | Plume Fossil, Devon Corp        |
+| 135 | Archeops           | Rock/Flying       | Plume Fossil line               |
 
 ## Summary
 
-- **Total**: 131 Pokemon
+- **Total**: 135 Pokemon
 - **Starters**: 3 lines (Turtwig, Fuecoco, Totodile)
 - **Regional forms**: Alolan (Grimer, Muk, Meowth, Persian, Geodude, Graveler, Golem), Galarian (Slowpoke, Slowbro, Slowking, Meowth, Perrserker, Farfetch'd, Yamask), Hisuian (Qwilfish, Voltorb, Electrode, Basculin), Paldean (Wooper)
 - **Paradox Pokemon**: Roaring Moon, Iron Valiant
 - **Gift Pokemon**: Castform (Weather Institute)
+- **Fossils**: Cover Fossil (Tirtouga) and Plume Fossil (Archen), revived at Devon Corp
