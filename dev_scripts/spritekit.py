@@ -286,23 +286,104 @@ def diff(before, after, path, scale=6):
     out.save(path)
 
 
-def fill_holes(s):
-    """Close background sealed inside the figure.
+def hole_regions(s):
+    """Enclosed background, grouped into connected regions."""
+    gaps = holes(s)
+    out, seen = [], set()
+    for start in gaps:
+        if start in seen:
+            continue
+        blob, stack = set(), [start]
+        while stack:
+            p = stack.pop()
+            if p in seen or p not in gaps:
+                continue
+            seen.add(p)
+            blob.add(p)
+            x, y = p
+            stack += [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]
+        out.append(blob)
+    return sorted(out, key=len, reverse=True)
 
-    On the GBA these are not empty, they are the background colour
-    showing through the middle of a trainer - single pixels of green,
-    invisible while working at 10x and obvious in the battle screen.
-    Each takes the colour most of its neighbours have.
+
+def fill_holes(s, biggest=2):
+    """Close background sealed inside the figure - but only the small ones.
+
+    On the GBA an enclosed background pixel is not empty, it is the
+    background colour showing through the middle of a trainer. Single
+    pixels like that are always mistakes.
+
+    Large ones are not. The gap between an arm and the body, the space
+    between the legs, the inside of a raised elbow: all are enclosed
+    background, and all are there on purpose. Filling one fuses the limb
+    to the torso and the figure loses its depth - which is exactly what
+    happened to Hisoka's right arm before this limit existed.
+
+    Regions bigger than `biggest` are left alone and returned, so the
+    caller can see what was deliberately skipped.
     """
-    filled = 0
-    for x, y in holes(s):
-        near = [
-            s.px[x + dx, y + dy]
-            for dx in (-1, 0, 1)
-            for dy in (-1, 0, 1)
-            if (dx or dy) and 0 <= x + dx < W and 0 <= y + dy < H and s.px[x + dx, y + dy] not in (0,)
-        ]
-        if near:
-            s.px[x, y] = max(set(near), key=near.count)
-            filled += 1
-    return filled
+    filled, kept = 0, []
+    for region in hole_regions(s):
+        if len(region) > biggest:
+            kept.append(region)
+            continue
+        for x, y in region:
+            near = [
+                s.px[x + dx, y + dy]
+                for dx in (-1, 0, 1)
+                for dy in (-1, 0, 1)
+                if (dx or dy) and 0 <= x + dx < W and 0 <= y + dy < H and s.px[x + dx, y + dy] != 0
+            ]
+            if near:
+                s.px[x, y] = max(set(near), key=near.count)
+                filled += 1
+    return filled, kept
+
+
+def outline_gaps(s):
+    """Edge pixels that are not the outline colour.
+
+    Gen 3 trainer sprites are drawn with a black line all the way round.
+    Edits break it in two ways: recolouring a region can overwrite the
+    line, and cutting a part away can expose an interior colour to the
+    background. Both look like a soft or bleeding edge in the battle
+    screen.
+
+    Compare the count against the donor's rather than expecting zero -
+    the official sprites leave a few edges open on purpose, usually
+    where two limbs meet.
+    """
+    out = set()
+    for y in range(H):
+        for x in range(W):
+            v = s.px[x, y]
+            if v in (0, 15):
+                continue
+            if any(
+                0 <= x + dx < W and 0 <= y + dy < H and s.px[x + dx, y + dy] == 0
+                for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))
+            ):
+                out.add((x, y))
+    return out
+
+
+def close_outline(s, gaps=None):
+    """Put the missing line back, outside the figure where there is room.
+
+    Writing the outline onto the exposed pixel itself would eat the
+    figure a pixel at a time; the line belongs in the background next to
+    it. Where the frame edge leaves no room, the pixel itself is used.
+    """
+    added = 0
+    for x, y in sorted(gaps if gaps is not None else outline_gaps(s)):
+        placed = False
+        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            nx, ny = x + dx, y + dy
+            if 0 <= nx < W and 0 <= ny < H and s.px[nx, ny] == 0:
+                s.px[nx, ny] = 15
+                added += 1
+                placed = True
+        if not placed:
+            s.px[x, y] = 15
+            added += 1
+    return added

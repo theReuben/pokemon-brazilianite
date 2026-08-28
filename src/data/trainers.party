@@ -3169,7 +3169,7 @@ Level: 32
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_KIRK ===
-Name: KIRK
+Name: HISOKA
 Class: Guitarist
 Pic: Guitarist
 Gender: Male
@@ -3177,13 +3177,14 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Elekid
+Spidops
 Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Voltorb-Hisui
+Blacephalon
 Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_7 ===
 Name: /grunt
@@ -3216,21 +3217,22 @@ Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHAWN ===
-Name: SHAWN
-Class: Guitarist
-Pic: Guitarist
-Gender: Male
-Music: Intense
+Name: FRIEREN
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
+Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Voltorb-Hisui
+Gimmighoul
 Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Voltorb-Hisui
+Hatterene
 Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
 
 === TRAINER_FERNANDO_1 ===
 Name: FERNANDO
@@ -4540,21 +4542,22 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Voltorb-Hisui
+Aipom
 Level: 20
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Elekid
+Swalot
 Level: 20
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Electrode-Hisui
+Eelektrik
 Level: 22
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
 
-Electivire @ Sitrus Berry
+Tatsugiri-Stretchy @ Sitrus Berry
 Level: 24
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
 
 === TRAINER_FLANNERY_1 ===
 Name: FLANNERY
@@ -5505,7 +5508,7 @@ Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BEN ===
-Name: BEN
+Name: YUJI
 Class: Youngster
 Pic: Youngster
 Gender: Male
@@ -5513,13 +5516,14 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Bidoof
+Cursola
 Level: 17
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Wooper-Paldea
+Runerigus
 Level: 17
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
 
 === TRAINER_QUINCY ===
 Name: QUINCY
@@ -11135,21 +11139,22 @@ Level: 23
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_VIVIAN ===
-Name: VIVIAN
-Class: Battle Girl
-Pic: Battle Girl
-Gender: Female
-Music: Intense
+Name: DENJI
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Clobbopus
+Houndoom
 Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Clobbopus
+Excadrill
 Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
 
 === TRAINER_DANIELLE ===
 Name: DANIELLE
@@ -14288,7 +14293,7 @@ Level: 66
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_ANGELO ===
-Name: ANGELO
+Name: SLIME
 Class: Bug Maniac
 Pic: Bug Maniac
 Gender: Male
@@ -14296,13 +14301,14 @@ Music: Suspicious
 Double Battle: No
 AI: Basic Trainer
 
-Ledian
+Grimer
 Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Ledyba
+Slugma
 Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
 
 === TRAINER_DARIUS ===
 Name: DARIUS
