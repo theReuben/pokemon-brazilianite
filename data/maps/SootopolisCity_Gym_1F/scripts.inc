@@ -178,12 +178,12 @@ SootopolisCity_Gym_1F_EventScript_GymStatue::
 SootopolisCity_Gym_1F_Text_GymGuideAdvice:
 	.string "Yo! How's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
-	.string "SOOTOPOLIS's GYM LEADER JUAN is\n"
-	.string "a master of WATER-type POKéMON.\p"
+	.string "This GYM has ten TRAINERS and every\n"
+	.string "one of them picked their favourite.\p"
+	.string "Expect PSYCHIC and FAIRY, and expect\n"
+	.string "them to be faster than you.\p"
 	.string "And, to get to JUAN, an icy floor\n"
 	.string "will hamper your progress…\p"
-	.string "Listen, I'm sorry, but that's all the\n"
-	.string "advice that I have for you.\p"
 	.string "The rest of the way, you have to\n"
 	.string "go for it yourself!$"
 

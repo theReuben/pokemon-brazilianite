@@ -137,13 +137,13 @@ FortreeCity_Gym_EventScript_GymStatue::
 FortreeCity_Gym_Text_GymGuideAdvice:
 	.string "Yo, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
-	.string "FORTREE GYM LEADER WINONA is\n"
-	.string "a master of FLYING-type POKéMON.\p"
-	.string "She's waiting at the back of this GYM,\n"
-	.string "behind the rotating doors.\p"
-	.string "She's waiting for new challengers\n"
-	.string "who are trying to take wing!\p"
-	.string "Okay, go for it!$"
+	.string "FORTREE GYM is the snake GYM.\p"
+	.string "There are only six snakes. That's it.\n"
+	.string "That's all of them.\p"
+	.string "You'll meet every one on the way in,\n"
+	.string "then WINONA brings all six at once.\p"
+	.string "Bring something that isn't scared of\n"
+	.string "the ground. Go for it!$"
 
 FortreeCity_Gym_Text_GymGuidePostVictory:
 	.string "You did it!\n"
@@ -221,8 +221,8 @@ FortreeCity_Gym_Text_HumbertoPostBattle:
 
 FortreeCity_Gym_Text_DariusIntro:
 	.string "You'd better know that there are all\n"
-	.string "sorts of FLYING-type POKéMON.\p"
-	.string "You do know that, right?$"
+	.string "sorts of snakes.\p"
+	.string "Six. There are six sorts.$"
 
 FortreeCity_Gym_Text_DariusDefeat:
 	.string "You seem to know your stuff!$"
