@@ -2050,13 +2050,10 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Feebas @ Nugget
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Hatterene
+Level: 40
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Feebas @ Nugget
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_GRUNT_SPACE_CENTER_2 ===
 Name: ¥GRNT
@@ -2103,9 +2100,10 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Simipour @ Nugget
-Level: 40
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Ninetales-Alola
+Level: 39
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
 
 === TRAINER_NAOMI ===
 Name: NAOMI
@@ -2242,9 +2240,10 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Panpour
-Level: 40
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Froslass
+Level: 39
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
 
 === TRAINER_BRIDGET ===
 Name: BRIDGET
@@ -2255,9 +2254,14 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Simipour
-Level: 40
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+Roserade
+Level: 38
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+Sylveon
+Level: 39
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
 
 === TRAINER_OLIVIA ===
 Name: OLIVIA
@@ -2268,17 +2272,10 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Feebas
-Level: 35
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Primarina
+Level: 40
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Totodile
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Simisage
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_TIFFANY ===
 Name: TIFFANY
@@ -2289,13 +2286,10 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Basculin-White-Striped
+Mismagius
 Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Basculegion
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_JESSICA_2 ===
 Name: JESSICA
@@ -4740,29 +4734,26 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Feebas
+Lopunny
 Level: 41
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-
-Clodsire
-Level: 41
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-
-Sealeo
-Level: 43
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Encore
-- Body Slam
-- Aurora Beam
-- Water Pulse
-
-Feraligatr
-Level: 43
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-
-Basculegion @ Chesto Berry
-Level: 46
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+Salazzle
+Level: 41
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+Vaporeon
+Level: 43
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+Tsareena
+Level: 43
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+Gardevoir @ Sitrus Berry
+Level: 46
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
 
 === TRAINER_JERRY_1 ===
 Name: JERRY
@@ -5233,17 +5224,14 @@ Music: Twins
 Double Battle: No
 AI: Check Bad Move
 
-Snubbull @ Oran Berry
-Level: 35
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Medicham
+Level: 38
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Panpour @ Oran Berry
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Simipour @ Oran Berry
+Delphox
 Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
 
 === TRAINER_ISABEL_1 ===
 Name: ISABEL
@@ -8528,21 +8516,10 @@ Music: Twins
 Double Battle: No
 AI: Check Bad Move
 
-Feebas @ Oran Berry
+Meowstic
 Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Flail
-- Water Pulse
-- Return
-- Attract
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Feebas @ Oran Berry
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Flail
-- Water Pulse
-- Return
-- Attract
 
 === TRAINER_JAZMYN ===
 Name: JAZMYN
@@ -10561,9 +10538,10 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Feebas
-Level: 40
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Milotic
+Level: 39
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
 
 === TRAINER_CRISSY ===
 Name: CRISSY
@@ -10574,13 +10552,14 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Panpour
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Lilligant
+Level: 38
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-Spheal
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Bellossom
+Level: 38
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
 
 === TRAINER_RICK ===
 Name: RICK
