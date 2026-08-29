@@ -18,6 +18,7 @@
 'Ú'         = 12
 'Û'         = 13
 'Ñ'         = 14
+'Ã'         = 1F @ Added: capital A with tilde, for Portuguese
 'ß'         = 15
 'à'         = 16
 'á'         = 17
@@ -37,6 +38,7 @@
 'ú'         = 27
 'û'         = 28
 'ñ'         = 29
+'ã'         = 18 @ Added: lowercase a with tilde, for Portuguese
 'º'         = 2A
 'ª'         = 2B
 SUPER_ER    = 2C
