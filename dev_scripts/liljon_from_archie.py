@@ -31,13 +31,31 @@ px[36,28]=9                      # the stroke, above
 px[36,34]=9                      # and below
 for y in (29,31,33): px[35,y]=14 # a highlight down the left edge
 
+
+# --- dreadlocks: one mass on his left, not separate ropes. Individual locks
+#     at this size read as sticks; the eye wants a silhouette. ------------
+import math
+TOP, BOT = 8, 21
+for y in range(TOP, BOT+1):
+    t=(y-TOP)/float(BOT-TOP)
+    w=max(1,int(round(1+3.2*math.sin(min(1.0,t*1.5)*math.pi))))
+    for k in range(w):
+        x=40+k
+        if 0<=x<64 and px[x,y]==0: px[x,y]=10
+for p_ in [(x,y) for y in range(TOP-1,BOT+3) for x in range(18,50)
+           if px[x,y]==0 and any(px[x+dx,y+dy]==10 for dx in(-1,0,1) for dy in(-1,0,1)
+                                 if 0<=x+dx<64 and 0<=y+dy<64)]:
+    px[p_]=15
+for y in range(TOP+2, BOT-1):
+    if px[40,y]==10 and px[40,y-1]==10: px[40,y]=5
+
 PAL=[(115,197,164),
      (197,140, 98),(164,107, 74),(123, 74, 49),      # 1-3 skin
      ( 82, 49, 33),                                  # 4   skin shadow
-     (205,164, 90),                                  # 5   (spare)
+     ( 74, 66, 82),                                  # 5   lit edge of the hair
      ( 90, 90, 98),( 66, 66, 74),( 41, 41, 49),      # 6-8 the jacket, black
      (238,197, 90),                                  # 9   the chain and pendant, gold
-     (140, 98, 49),                                  # 10  (spare)
+     ( 33, 28, 38),                                  # 10  the hair, L30
      ( 24, 24, 28),                                  # 11  the shades
      (123, 74,197),( 74, 41,123),                    # 12-13 the cap
      (255,222,131),                                  # 14  gold highlight
