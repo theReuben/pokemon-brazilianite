@@ -40,3 +40,20 @@ EventScript_SetupRivalGfxIdMale2::
 EventScript_SetupRivalGfxIdFemale2::
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 	return
+
+@ JAKE's shiny PSYDUCK, which stands beside him wherever he turns up.
+Common_EventScript_JakesPsyduck::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_PSYDUCK, CRY_MODE_NORMAL
+	msgbox Common_Text_JakesPsyduck, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+Common_Text_JakesPsyduck:
+	.string "JAKE's PSYDUCK stares straight\n"
+	.string "through you.\p"
+	.string "It is a strange colour, and it does\n"
+	.string "not appear to be holding its head.$"
