@@ -41,9 +41,9 @@ Line length: about 36 characters per line before it overflows the text box.
     "And before you ask, no, not that\n"
     "kind of rock. Everybody asks.\p"
     "LIL WAYNE runs the place, and every\n"
-    "POKéMON in here makes NOISE.\p"
+    "POKéMON in here gets TURNT.\p"
     "Bring something that doesn't mind\n"
-    "getting SHOUTED at!\p"
+    "getting LIT!\p"
     "Come see me afterwards, if you beat\n"
     "the GYM LEADER.\p"
     "Well, go for it!$"
@@ -58,8 +58,8 @@ Line length: about 36 characters per line before it overflows the text box.
     "SHOTS! SHOTS! SHOTS! should be\n"
     "properly recorded on it.\p"
     "In other words…\p"
-    "You've climbed the first step on\n"
-    "the stairs to the CHAMPIONSHIP!\p"
+    "You've licked the salt and\n"
+    "sucked the lime!\p"
     "That's got to feel awesome!$"
 
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_JoshIntro
@@ -67,33 +67,33 @@ Line length: about 36 characters per line before it overflows the text box.
     "I've been practising my bars!$"
 
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_JoshPostBattle
-    "My POKéMON can hold a note for\n"
-    "eleven seconds. I timed it.$"
+    "Get it? It's a pun. Cos\n"
+    "we like music and drinking.$"
 
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_TommyPostBattle
-    "LIL WAYNE is louder than me by\n"
-    "several times.\p"
-    "You'd better be on your guard!$"
+    "LIL WAYNE is tougher than\n"
+    "Nigerian hair.\p"
+    "Young Money millionaire!$"
 
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_MarcIntro
-    "We might be in the middle of town,\n"
-    "but so what?\p"
-    "I carried every one of these speakers\n"
-    "in here myself. Let's use them.$"
+    "Did you know LIL Wayne was\n"
+    "also on Down?\p"
+    "You know, Jay Sean\n"
+    "even if the sky is falling down.$"
 
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_MarcPostBattle
-    "I have to hand it to our LEADER.\p"
-    "Anyone can be loud. He's loud and\n"
-    "he's on the beat.$"
+    "It's a really underrated track\p"
+    "Well, maybe not underrated\n"
+    "but people forget it.$"
 
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_RoxanneIntro
     "LIL WAYNE: Ay. Welcome to the ROCK\n"
     "GYM. You look confused already.\p"
     "Everybody walks in here expecting\n"
     "boulders. I don't do boulders.\p"
-    "I do VOLUME.\p"
-    "Let's see if your POKéMON can hear\n"
-    "themselves think.$"
+    "I do SHOTS!.\p"
+    "Let's see if your POKéMON can keep\n"
+    "up, let the henny flow!.$"
 
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_RoxanneDefeat
     "Man…\n"
@@ -102,8 +102,9 @@ Line length: about 36 characters per line before it overflows the text box.
     "The POKéMON LEAGUE's rules state\n"
     "that TRAINERS are to be given this\l"
     "if they defeat a GYM LEADER.\p"
-    "SHOTS! SHOTS! SHOTS! You earned\n"
-    "every decibel of it.$"
+    "SHOTS! SHOTS! SHOTS!\n"
+    "Aight, I gotta go record more of\n"
+    "the spiderverse soundtrack.$
 
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_ReceivedStoneBadge
     "{PLAYER} received SHOTS! SHOTS!\n"
@@ -129,7 +130,7 @@ Line length: about 36 characters per line before it overflows the text box.
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_RoxannePostBattle
     "Since you are so strong, you should\n"
     "challenge other GYM LEADERS.\p"
-    "Word travels. Loud travels faster.$"
+    "Word travels. Music travels faster.$"
 
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_RoxanneRegisterCall
     "… … … … … …\n"
@@ -250,7 +251,7 @@ Line length: about 36 characters per line before it overflows the text box.
     "Here we are quieter. Here we consider\n"
     "what a thing is like, and then we say\l"
     "so, at length.\p"
-    "Let us see what you are like.$"
+    "Let us see if you have legs.$"
 
 >>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_BrawlyDefeat
     "Ah.\p"
@@ -363,18 +364,15 @@ Line length: about 36 characters per line before it overflows the text box.
 >>> data/maps/MauvilleCity/scripts.inc :: MauvilleCity_Text_GymSign
     "MAUVILLE CITY POKéMON GYM\n"
     "LEADER: LUFFY\l"
-    "“The WEEB GYM--touch grass to win!”$"
+    "“The WEEB GYM--no spoilers!”$"
 
 >>> data/maps/MauvilleCity_Gym/scripts.inc :: MauvilleCity_Gym_Text_GymGuideAdvice
     "Hey, how's it going, CHAMPION-\n"
     "bound {PLAYER}?\p"
     "They call this the WEEB GYM.\n"
-    "Nobody here can agree what type\l"
-    "they use. They just pick favourites.\p"
-    "LUFFY's the same. He brings whatever\n"
-    "he feels like that morning.\p"
-    "My advice? Go outside. Touch grass.\n"
-    "Then come back and beat him!$"
+    "Inside are some crazy anime\n"
+    "characters.\p"
+    "Mons are themed to the trainer.$"
 
 >>> data/maps/MauvilleCity_Gym/scripts.inc :: MauvilleCity_Gym_Text_ShawnPostBattle
     "LUFFY, our GYM LEADER, turned up\n"
@@ -409,7 +407,7 @@ Line length: about 36 characters per line before it overflows the text box.
     "Shishishi!\n"
     "You beat me! You're strong!\p"
     "This is yours now.\n"
-    "Take the BADGE!$"
+    "Take it!$"
 
 >>> data/maps/MauvilleCity_Gym/scripts.inc :: MauvilleCity_Gym_Text_ReceivedDynamoBadge
     "{PLAYER} received THE ONE PIECE\n"
@@ -482,10 +480,9 @@ Line length: about 36 characters per line before it overflows the text box.
     "are exclusively desert-dwellers.\l"
     "You might look around for those.\p"
     "As for me…\n"
-    "I'm considering challenging MAMA BOSA,\l"
-    "the GYM LEADER of PETALBURG.\p"
-    "Unlike you, {PLAYER}, your mom looks like\n"
-    "she really is tough.\p"
+    "I'm gonna hang out with MAMA BOSA.\n"
+    "Unlike you, {PLAYER}, your mom\n"
+    "really is tough.\p"
     "See you around!$"
 
 >>> data/maps/LavaridgeTown/scripts.inc :: LavaridgeTown_Text_GymSign
@@ -537,8 +534,8 @@ Line length: about 36 characters per line before it overflows the text box.
     "understood?\p"
     "Of course, I'm a GYM LEADER, too.\n"
     "We'll battle one day, {PLAYER}.\p"
-    "But that's only after you become\n"
-    "stronger.$"
+    "But that's only after improve/l"
+    "your portuguese."$"
 
 >>> data/maps/PetalburgCity_Gym/scripts.inc :: PetalburgCity_Gym_Text_ReceivedBalanceBadge
     "{PLAYER} received A MOTHER'S LOVE\n"
@@ -629,7 +626,7 @@ Line length: about 36 characters per line before it overflows the text box.
 >>> data/maps/MossdeepCity/scripts.inc :: MossdeepCity_Text_GymSign
     "MOSSDEEP CITY POKéMON GYM\n"
     "LEADERS: MR & MRS P\p"
-    "“The sun never sets in here!”$"
+    "“Full of australian lighting!”$"
 
 >>> data/maps/MossdeepCity_Gym/scripts.inc :: MossdeepCity_Gym_Text_GymGuideAdvice
     "Yo, how's it going, CHAMPION-bound\n"
@@ -638,10 +635,8 @@ Line length: about 36 characters per line before it overflows the text box.
     "goes down. Not once. Not for anyone.\p"
     "Water moves come off weak and FIRE\n"
     "moves come off twice as hard.\p"
-    "As for the TRAINERS, they all argued\n"
-    "about a theme and settled on none.\p"
-    "Nobody agrees on anything here.\n"
-    "Go for it!$"
+    "As for the TRAINERS, they're all\n"
+    "members of chat!$"
 
 >>> data/maps/MossdeepCity_Gym/scripts.inc :: MossdeepCity_Gym_Text_ReceivedMindBadge
     "{PLAYER} received A PRIME SUB\n"
@@ -650,9 +645,9 @@ Line length: about 36 characters per line before it overflows the text box.
 >>> data/maps/MossdeepCity_Gym/scripts.inc :: MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis
     "MR P: A PRIME SUB enhances the\n"
     "SP. ATK and SP. DEF of POKéMON.\p"
-    "LIZA: It also lets you use the HM move\n"
+    "MRS P: It also lets you use the HM move\n"
     "DIVE outside of battle.\p"
-    "TATE: You should also take this, too.$"
+    "MR P: You should also take this, too.$"
 
 >>> data/maps/MossdeepCity_Gym/scripts.inc :: MossdeepCity_Gym_Text_ExplainSunnyDay
     "MR P: That TM11 contains…\n"
@@ -673,12 +668,9 @@ Line length: about 36 characters per line before it overflows the text box.
     "bound {PLAYER}?\p"
     "This GYM has ten TRAINERS and every\n"
     "one of them picked their favourite.\p"
-    "Expect PSYCHIC and FAIRY, and expect\n"
-    "them to be faster than you.\p"
-    "And, to get to JUAN, an icy floor\n"
-    "will hamper your progress…\p"
-    "The rest of the way, you have to\n"
-    "go for it yourself!$"
+    "Don't ask why it's their favourite.\n"
+    "Standard ice puzzle, hopefully\n"
+    "you know how to do it by now!$"
 
 >>> data/maps/SootopolisCity_Gym_1F/scripts.inc :: SootopolisCity_Gym_1F_Text_JuanIntro
     "Let me ask you.\n"
@@ -747,11 +739,11 @@ Line length: about 36 characters per line before it overflows the text box.
     "Of course it's you. Of course it is.\p"
     "I got the call about SOOTOPOLIS and\n"
     "came straight from EVER GRANDE.\p"
-    "Being the CHAMPION turns out to mean\n"
+    "Being the resident treat boy means\n"
     "you get the bad news first.\p"
     "… … … … … …\n"
     "… … … … … …\p"
-    "GROUDON and KYOGRE, the two POKéMON\n"
+    "GROUDON and KYOGRE, the two brown POKéMON\n"
     "wreaking havoc here, are considered\l"
     "to be super-ancient POKéMON.\p"
     "Dad's been on about them for years.\p"
@@ -763,12 +755,18 @@ Line length: about 36 characters per line before it overflows the text box.
     "becalmed the two combatants in\l"
     "the distant past.\p"
     "But I've no idea where it is. I've\n"
-    "read everything Dad has. Nothing.$"
+    "read everything Dad has.\n"
+    "Even those Sarah J Maas books/l" 
+    "with the sexy elf.\n"
+    "Nothing.$"
 
 >>> data/maps/CaveOfOrigin_B1F/scripts.inc :: CaveOfOrigin_B1F_Text_WhereIsRayquaza
     "JAKE: {PLAYER}{KUN}, do you know where\n"
     "RAYQUAZA is?\p"
-    "You've been everywhere. Think.$"
+    "You've been everywhere. Think.\n"
+    "Ireland, Italy, Mexico...\n"
+    "It could be in any one of those\n"
+    "places with the same flag.$"
 
 >>> data/maps/CaveOfOrigin_B1F/scripts.inc :: CaveOfOrigin_B1F_Text_ButWereInCaveOfOrigin
     "JAKE: The CAVE OF ORIGIN?\p"
@@ -782,7 +780,8 @@ Line length: about 36 characters per line before it overflows the text box.
     "I went up there myself and the old\n"
     "lady never said a word about it.\p"
     "I don't think she'd hide something\n"
-    "like that from me…\p"
+    "like that from me after\l" 
+    "the time we shared in Guam.\p"
     "{PLAYER}{KUN}, have another think.$"
 
 >>> data/maps/CaveOfOrigin_B1F/scripts.inc :: CaveOfOrigin_B1F_Text_WellHeadToSkyPillar
@@ -864,7 +863,7 @@ Line length: about 36 characters per line before it overflows the text box.
     "from here.\p"
     "I'm worried about SOOTOPOLIS.\n"
     "I'm going back.\p"
-    "I know. I'm the CHAMPION and I'm\n"
+    "I know. I'm the nature boy and I'm\n"
     "handing you the hard part.\p"
     "You're better at this bit than me.\n"
     "Go on.$"
@@ -885,7 +884,7 @@ Line length: about 36 characters per line before it overflows the text box.
 
 >>> data/maps/SootopolisCity/scripts.inc :: SootopolisCity_Text_HereWereAreHelpWallace
     "STEVEN: Okay, here we are!\p"
-    "The CHAMPION got here before us.\n"
+    "The treat boy got here before us.\n"
     "Of course he did.\p"
     "I think you have what's needed to\n"
     "help him…$"
@@ -948,7 +947,7 @@ Line length: about 36 characters per line before it overflows the text box.
     "I challenged someone else after\n"
     "we battled.\p"
     "I came close, but I ended up\n"
-    "losing. Oh, well!$"
+    "losing. Spank me!$"
 
 >>> data/text/match_call.inc :: MatchCall_PersonalizedText25
     "Snivel… It's… {STR_VAR_1}…\n"
@@ -959,7 +958,7 @@ Line length: about 36 characters per line before it overflows the text box.
     "He tells me exactly what\n"
     "I did wrong so I can learn from it.\p"
     "You bet I'll be going to\n"
-    "the TRAINER'S SCHOOL tomorrow!\p"
+    "the DISCOTHEQUE tomorrow!\p"
     "See you later!$"
 
 >>> data/text/match_call.inc :: MatchCall_PersonalizedText26
@@ -1126,22 +1125,22 @@ Line length: about 36 characters per line before it overflows the text box.
     "Go for it!$"
 
 >>> data/maps/MirageTower_4F/scripts.inc :: MirageTower_4F_Text_TakeRootFossil
-    "You found the COVER FOSSIL.\p"
+    "You found the UNDERRATED FOSSIL.\p"
     "If this FOSSIL is taken, the ground\n"
     "around it will likely crumble away…\p"
-    "Take the COVER FOSSIL anyway?$"
+    "Take the FOSSIL anyway?$"
 
 >>> data/maps/MirageTower_4F/scripts.inc :: MirageTower_4F_Text_LeftRootFossilAlone
-    "{PLAYER} left the COVER FOSSIL alone.$"
+    "{PLAYER} left the FOSSIL alone.$"
 
 >>> data/maps/MirageTower_4F/scripts.inc :: MirageTower_4F_Text_TakeClawFossil
-    "You found the PLUME FOSSIL.\p"
+    "You found the PRETTY COOL FOSSIL.\p"
     "If this FOSSIL is taken, the ground\n"
     "around it will likely crumble away…\p"
-    "Take the PLUME FOSSIL anyway?$"
+    "Take the FOSSIL anyway?$"
 
 >>> data/maps/MirageTower_4F/scripts.inc :: MirageTower_4F_Text_LeaveClawFossilAlone
-    "{PLAYER} left the PLUME FOSSIL alone.$"
+    "{PLAYER} left the FOSSIL alone.$"
 
 >>> data/maps/Route111/scripts.inc :: Route111_Text_ClawFossilDisappeared
     "The PLUME FOSSIL disappeared into\n"

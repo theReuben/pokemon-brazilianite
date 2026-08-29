@@ -167,7 +167,7 @@ SkyPillar_Outside_Text_GotToGoBackForSootopolis:
 	.string "from here.\p"
 	.string "I'm worried about SOOTOPOLIS.\n"
 	.string "I'm going back.\p"
-	.string "I know. I'm the CHAMPION and I'm\n"
+	.string "I know. I'm the nature boy and I'm\n"
 	.string "handing you the hard part.\p"
 	.string "You're better at this bit than me.\n"
 	.string "Go on.$"

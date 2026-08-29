@@ -144,7 +144,7 @@ MatchCall_NegativeBattleText2::
 	.string "I challenged someone else after\n"
 	.string "we battled.\p"
 	.string "I came close, but I ended up\n"
-	.string "losing. Oh, well!$"
+	.string "losing. Spank me!$"
 
 MatchCall_NegativeBattleText3::
 	.string "Hey there, {PLAYER}!\n"
@@ -910,7 +910,7 @@ MatchCall_PersonalizedText25::
 	.string "He tells me exactly what\n"
 	.string "I did wrong so I can learn from it.\p"
 	.string "You bet I'll be going to\n"
-	.string "the TRAINER'S SCHOOL tomorrow!\p"
+	.string "the DISCOTHEQUE tomorrow!\p"
 	.string "See you later!$"
 
 MatchCall_PersonalizedText26::

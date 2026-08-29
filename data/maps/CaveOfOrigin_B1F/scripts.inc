@@ -65,11 +65,11 @@ CaveOfOrigin_B1F_Text_WallaceStory:
 	.string "Of course it's you. Of course it is.\p"
 	.string "I got the call about SOOTOPOLIS and\n"
 	.string "came straight from EVER GRANDE.\p"
-	.string "Being the CHAMPION turns out to mean\n"
+	.string "Being the resident treat boy means\n"
 	.string "you get the bad news first.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "GROUDON and KYOGRE, the two POKéMON\n"
+	.string "GROUDON and KYOGRE, the two brown POKéMON\n"
 	.string "wreaking havoc here, are considered\l"
 	.string "to be super-ancient POKéMON.\p"
 	.string "Dad's been on about them for years.\p"
@@ -81,12 +81,18 @@ CaveOfOrigin_B1F_Text_WallaceStory:
 	.string "becalmed the two combatants in\l"
 	.string "the distant past.\p"
 	.string "But I've no idea where it is. I've\n"
-	.string "read everything Dad has. Nothing.$"
+	.string "read everything Dad has.\l"
+	.string "Even those Sarah J Maas books\l"
+	.string "with the sexy elf.\l"
+	.string "Nothing.$"
 
 CaveOfOrigin_B1F_Text_WhereIsRayquaza:
 	.string "JAKE: {PLAYER}{KUN}, do you know where\n"
 	.string "RAYQUAZA is?\p"
-	.string "You've been everywhere. Think.$"
+	.string "You've been everywhere. Think.\n"
+	.string "Ireland, Italy, Mexico...\l"
+	.string "It could be in any one of those\l"
+	.string "places with the same flag.$"
 
 CaveOfOrigin_B1F_Text_ButWereInCaveOfOrigin:
 	.string "JAKE: The CAVE OF ORIGIN?\p"
@@ -100,7 +106,8 @@ CaveOfOrigin_B1F_Text_OldLadyDidntMentionThat:
 	.string "I went up there myself and the old\n"
 	.string "lady never said a word about it.\p"
 	.string "I don't think she'd hide something\n"
-	.string "like that from me…\p"
+	.string "like that from me after\l"
+	.string "the time we shared in Guam.\p"
 	.string "{PLAYER}{KUN}, have another think.$"
 
 CaveOfOrigin_B1F_Text_CantYouRememberSomehow:

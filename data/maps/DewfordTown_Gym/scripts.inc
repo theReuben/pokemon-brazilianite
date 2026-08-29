@@ -401,7 +401,7 @@ DewfordTown_Gym_Text_BrawlyIntro:
 	.string "Here we are quieter. Here we consider\n"
 	.string "what a thing is like, and then we say\l"
 	.string "so, at length.\p"
-	.string "Let us see what you are like.$"
+	.string "Let us see if you have legs.$"
 
 DewfordTown_Gym_Text_BrawlyDefeat:
 	.string "Ah.\p"

@@ -1640,7 +1640,7 @@ SootopolisCity_Text_DoesThisMakeYourFearPokemon:
 
 SootopolisCity_Text_HereWereAreHelpWallace:
 	.string "STEVEN: Okay, here we are!\p"
-	.string "The CHAMPION got here before us.\n"
+	.string "The treat boy got here before us.\n"
 	.string "Of course he did.\p"
 	.string "I think you have what's needed to\n"
 	.string "help him…$"

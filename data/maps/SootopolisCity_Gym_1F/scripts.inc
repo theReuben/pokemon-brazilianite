@@ -180,12 +180,9 @@ SootopolisCity_Gym_1F_Text_GymGuideAdvice:
 	.string "bound {PLAYER}?\p"
 	.string "This GYM has ten TRAINERS and every\n"
 	.string "one of them picked their favourite.\p"
-	.string "Expect PSYCHIC and FAIRY, and expect\n"
-	.string "them to be faster than you.\p"
-	.string "And, to get to JUAN, an icy floor\n"
-	.string "will hamper your progress…\p"
-	.string "The rest of the way, you have to\n"
-	.string "go for it yourself!$"
+	.string "Don't ask why it's their favourite.\n"
+	.string "Standard ice puzzle, hopefully\l"
+	.string "you know how to do it by now!$"
 
 SootopolisCity_Gym_1F_Text_GymGuidePostVictory:
 	.string "Yow! You've beaten even JUAN, who\n"

@@ -311,10 +311,9 @@ LavaridgeTown_Text_BrendanExplainGoGogglesChallengeDad:
 	.string "are exclusively desert-dwellers.\l"
 	.string "You might look around for those.\p"
 	.string "As for me…\n"
-	.string "I'm considering challenging MAMA BOSA,\l"
-	.string "the GYM LEADER of PETALBURG.\p"
-	.string "Unlike you, {PLAYER}, your mom looks like\n"
-	.string "she really is tough.\p"
+	.string "I'm gonna hang out with MAMA BOSA.\l"
+	.string "Unlike you, {PLAYER}, your mom\l"
+	.string "really is tough.\p"
 	.string "See you around!$"
 
 LavaridgeTown_Text_HaveEggWillYouTakeIt:

@@ -60,20 +60,20 @@ MirageTower_4F_EventScript_CollapseMirageTower::
 	end
 
 MirageTower_4F_Text_TakeRootFossil:
-	.string "You found the COVER FOSSIL.\p"
+	.string "You found the UNDERRATED FOSSIL.\p"
 	.string "If this FOSSIL is taken, the ground\n"
 	.string "around it will likely crumble away…\p"
-	.string "Take the COVER FOSSIL anyway?$"
+	.string "Take the FOSSIL anyway?$"
 
 MirageTower_4F_Text_LeftRootFossilAlone:
-	.string "{PLAYER} left the COVER FOSSIL alone.$"
+	.string "{PLAYER} left the FOSSIL alone.$"
 
 MirageTower_4F_Text_TakeClawFossil:
-	.string "You found the PLUME FOSSIL.\p"
+	.string "You found the PRETTY COOL FOSSIL.\p"
 	.string "If this FOSSIL is taken, the ground\n"
 	.string "around it will likely crumble away…\p"
-	.string "Take the PLUME FOSSIL anyway?$"
+	.string "Take the FOSSIL anyway?$"
 
 MirageTower_4F_Text_LeaveClawFossilAlone:
-	.string "{PLAYER} left the PLUME FOSSIL alone.$"
+	.string "{PLAYER} left the FOSSIL alone.$"
 

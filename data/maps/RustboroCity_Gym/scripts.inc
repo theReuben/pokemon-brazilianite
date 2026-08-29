@@ -113,9 +113,9 @@ RustboroCity_Gym_Text_GymGuideAdvice:
 	.string "And before you ask, no, not that\n"
 	.string "kind of rock. Everybody asks.\p"
 	.string "LIL WAYNE runs the place, and every\n"
-	.string "POKéMON in here makes NOISE.\p"
+	.string "POKéMON in here gets TURNT.\p"
 	.string "Bring something that doesn't mind\n"
-	.string "getting SHOUTED at!\p"
+	.string "getting LIT!\p"
 	.string "Come see me afterwards, if you beat\n"
 	.string "the GYM LEADER.\p"
 	.string "Well, go for it!$"
@@ -130,8 +130,8 @@ RustboroCity_Gym_Text_GymGuidePostVictory:
 	.string "SHOTS! SHOTS! SHOTS! should be\n"
 	.string "properly recorded on it.\p"
 	.string "In other words…\p"
-	.string "You've climbed the first step on\n"
-	.string "the stairs to the CHAMPIONSHIP!\p"
+	.string "You've licked the salt and\n"
+	.string "sucked the lime!\p"
 	.string "That's got to feel awesome!$"
 
 RustboroCity_Gym_Text_JoshIntro:
@@ -142,8 +142,8 @@ RustboroCity_Gym_Text_JoshDefeat:
 	.string "You were too good for me…$"
 
 RustboroCity_Gym_Text_JoshPostBattle:
-	.string "My POKéMON can hold a note for\n"
-	.string "eleven seconds. I timed it.$"
+	.string "Get it? It's a pun. Cos\n"
+	.string "we like music and drinking.$"
 
 RustboroCity_Gym_Text_TommyIntro:
 	.string "If you can't beat me, you won't stand\n"
@@ -153,33 +153,33 @@ RustboroCity_Gym_Text_TommyDefeat:
 	.string "Wow! You've got some potential!$"
 
 RustboroCity_Gym_Text_TommyPostBattle:
-	.string "LIL WAYNE is louder than me by\n"
-	.string "several times.\p"
-	.string "You'd better be on your guard!$"
+	.string "LIL WAYNE is tougher than\n"
+	.string "Nigerian hair.\p"
+	.string "Young Money millionaire!$"
 
 RustboroCity_Gym_Text_MarcIntro:
-	.string "We might be in the middle of town,\n"
-	.string "but so what?\p"
-	.string "I carried every one of these speakers\n"
-	.string "in here myself. Let's use them.$"
+	.string "Did you know LIL Wayne was\n"
+	.string "also on Down?\p"
+	.string "You know, Jay Sean\n"
+	.string "even if the sky is falling down.$"
 
 RustboroCity_Gym_Text_MarcDefeat:
 	.string "Oh, man oh man!\n"
 	.string "Our challenger is one feisty customer!$"
 
 RustboroCity_Gym_Text_MarcPostBattle:
-	.string "I have to hand it to our LEADER.\p"
-	.string "Anyone can be loud. He's loud and\n"
-	.string "he's on the beat.$"
+	.string "It's a really underrated track\p"
+	.string "Well, maybe not underrated\n"
+	.string "but people forget it.$"
 
 RustboroCity_Gym_Text_RoxanneIntro:
 	.string "LIL WAYNE: Ay. Welcome to the ROCK\n"
 	.string "GYM. You look confused already.\p"
 	.string "Everybody walks in here expecting\n"
 	.string "boulders. I don't do boulders.\p"
-	.string "I do VOLUME.\p"
-	.string "Let's see if your POKéMON can hear\n"
-	.string "themselves think.$"
+	.string "I do SHOTS!.\p"
+	.string "Let's see if your POKéMON can keep\n"
+	.string "up, let the henny flow!.$"
 
 RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "Man…\n"
@@ -188,8 +188,9 @@ RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "The POKéMON LEAGUE's rules state\n"
 	.string "that TRAINERS are to be given this\l"
 	.string "if they defeat a GYM LEADER.\p"
-	.string "SHOTS! SHOTS! SHOTS! You earned\n"
-	.string "every decibel of it.$"
+	.string "SHOTS! SHOTS! SHOTS!\n"
+	.string "Aight, I gotta go record more of\l"
+	.string "the spiderverse soundtrack.$"
 
 RustboroCity_Gym_Text_ReceivedStoneBadge:
 	.string "{PLAYER} received SHOTS! SHOTS!\n"
@@ -215,7 +216,7 @@ RustboroCity_Gym_Text_ExplainShockWave:
 RustboroCity_Gym_Text_RoxannePostBattle:
 	.string "Since you are so strong, you should\n"
 	.string "challenge other GYM LEADERS.\p"
-	.string "Word travels. Loud travels faster.$"
+	.string "Word travels. Music travels faster.$"
 
 RustboroCity_Gym_Text_GymStatue:
 	.string "RUSTBORO CITY POKéMON GYM$"

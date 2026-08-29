@@ -376,10 +376,8 @@ MossdeepCity_Gym_Text_GymGuideAdvice:
 	.string "goes down. Not once. Not for anyone.\p"
 	.string "Water moves come off weak and FIRE\n"
 	.string "moves come off twice as hard.\p"
-	.string "As for the TRAINERS, they all argued\n"
-	.string "about a theme and settled on none.\p"
-	.string "Nobody agrees on anything here.\n"
-	.string "Go for it!$"
+	.string "As for the TRAINERS, they're all\n"
+	.string "members of chat!$"
 
 MossdeepCity_Gym_Text_GymGuidePostVictory:
 	.string "Wow, you're astounding!\n"
@@ -575,9 +573,9 @@ MossdeepCity_Gym_Text_ReceivedMindBadge:
 MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis:
 	.string "MR P: A PRIME SUB enhances the\n"
 	.string "SP. ATK and SP. DEF of POKéMON.\p"
-	.string "LIZA: It also lets you use the HM move\n"
+	.string "MRS P: It also lets you use the HM move\n"
 	.string "DIVE outside of battle.\p"
-	.string "TATE: You should also take this, too.$"
+	.string "MR P: You should also take this, too.$"
 
 MossdeepCity_Gym_Text_ExplainSunnyDay:
 	.string "MR P: That TM11 contains…\n"

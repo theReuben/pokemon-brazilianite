@@ -260,12 +260,9 @@ MauvilleCity_Gym_Text_GymGuideAdvice:
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
 	.string "They call this the WEEB GYM.\n"
-	.string "Nobody here can agree what type\l"
-	.string "they use. They just pick favourites.\p"
-	.string "LUFFY's the same. He brings whatever\n"
-	.string "he feels like that morning.\p"
-	.string "My advice? Go outside. Touch grass.\n"
-	.string "Then come back and beat him!$"
+	.string "Inside are some crazy anime\l"
+	.string "characters.\p"
+	.string "Mons are themed to the trainer.$"
 
 MauvilleCity_Gym_Text_GymGuidePostVictory:
 	.string "Whoa, you're electrifying!\n"
@@ -344,7 +341,7 @@ MauvilleCity_Gym_Text_WattsonDefeat:
 	.string "Shishishi!\n"
 	.string "You beat me! You're strong!\p"
 	.string "This is yours now.\n"
-	.string "Take the BADGE!$"
+	.string "Take it!$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
 	.string "{PLAYER} received THE ONE PIECE\n"
