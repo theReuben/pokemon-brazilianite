@@ -158,7 +158,7 @@ RustboroCity_Gym_Text_TommyPostBattle:
 	.string "Young Money millionaire!$"
 
 RustboroCity_Gym_Text_MarcIntro:
-	.string "Did you know LIL Wayne was\n"
+	.string "Did you know LIL WAYNE was\n"
 	.string "also on Down?\p"
 	.string "You know, Jay Sean\n"
 	.string "even if the sky is falling down.$"
@@ -177,9 +177,9 @@ RustboroCity_Gym_Text_RoxanneIntro:
 	.string "GYM. You look confused already.\p"
 	.string "Everybody walks in here expecting\n"
 	.string "boulders. I don't do boulders.\p"
-	.string "I do SHOTS!.\p"
+	.string "I do SHOTS!\p"
 	.string "Let's see if your POKéMON can keep\n"
-	.string "up, let the henny flow!.$"
+	.string "up, let the henny flow!$"
 
 RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "Man…\n"

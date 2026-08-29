@@ -1225,8 +1225,8 @@ PetalburgCity_Gym_Text_DadGoCollectBadges:
 	.string "understood?\p"
 	.string "Of course, I'm a GYM LEADER, too.\n"
 	.string "We'll battle one day, {PLAYER}.\p"
-	.string "But that's only after improve\l"
-	.string "your portuguese.$"
+	.string "But that's only after you improve\l"
+	.string "your PORTUGUESE.$"
 
 PetalburgCity_Gym_Text_NormanGoToRustboro:
 	.string "MAMA BOSA: Hm? Aren't you going to the\n"

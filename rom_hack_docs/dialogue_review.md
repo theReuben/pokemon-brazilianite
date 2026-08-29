@@ -76,7 +76,7 @@ Line length: about 36 characters per line before it overflows the text box.
     "Young Money millionaire!$"
 
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_MarcIntro
-    "Did you know LIL Wayne was\n"
+    "Did you know LIL WAYNE was\n"
     "also on Down?\p"
     "You know, Jay Sean\n"
     "even if the sky is falling down.$"
@@ -91,9 +91,9 @@ Line length: about 36 characters per line before it overflows the text box.
     "GYM. You look confused already.\p"
     "Everybody walks in here expecting\n"
     "boulders. I don't do boulders.\p"
-    "I do SHOTS!.\p"
+    "I do SHOTS!\p"
     "Let's see if your POKéMON can keep\n"
-    "up, let the henny flow!.$"
+    "up, let the henny flow!$"
 
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_RoxanneDefeat
     "Man…\n"
@@ -103,8 +103,8 @@ Line length: about 36 characters per line before it overflows the text box.
     "that TRAINERS are to be given this\l"
     "if they defeat a GYM LEADER.\p"
     "SHOTS! SHOTS! SHOTS!\n"
-    "Aight, I gotta go record more of\n"
-    "the spiderverse soundtrack.$
+    "Aight, I gotta go record more of\l"
+    "the spiderverse soundtrack.$"
 
 >>> data/maps/RustboroCity_Gym/scripts.inc :: RustboroCity_Gym_Text_ReceivedStoneBadge
     "{PLAYER} received SHOTS! SHOTS!\n"
@@ -241,6 +241,90 @@ Line length: about 36 characters per line before it overflows the text box.
     "recorded on it.\p"
     "That's got to feel awesome!$"
 
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_TakaoIntro
+    "Cherry! I'm getting cherry!\p"
+    "I always get cherry. Every time.\n"
+    "It's my thing!$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_TakaoDefeat
+    "Aww, and I was so sure…$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_TakaoPostBattle
+    "Everyone says cherry is the easy one.\p"
+    "But somebody has to say it, and I say\n"
+    "it loudest, and that counts for\l"
+    "something!$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_JocelynIntro
+    "Oh, don't look at it like that.\p"
+    "I know it's a mushroom. I know.\p"
+    "Just let me explain, and then we can\n"
+    "battle, and then I'll explain again.$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_JocelynDefeat
+    "Wait, I hadn't finished explaining!$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_JocelynPostBattle
+    "Noble rot! It's called noble rot!\p"
+    "The mould gets into the grapes and\n"
+    "that's how you get the sweet ones.\p"
+    "It's my favourite fact. I have told\n"
+    "everybody in this GYM about it.$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_LauraIntro
+    "You can taste the hillside a wine\n"
+    "came from. You really can.\p"
+    "It's called terroir.$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_LauraDefeat
+    "Oh! Oh, that was quite good.$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_LauraPostBattle
+    "I do go on about the hillside.\p"
+    "My family had a grove. That's all.\n"
+    "I just like talking about it.$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_LilithIntro
+    "Before you say anything: yes, mead.\p"
+    "Yes, it's honey. Yes, I know what GYM\n"
+    "I'm standing in.$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_LilithDefeat
+    "Oh, that's just typical!$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_LilithPostBattle
+    "MERLOT lets me stay because I'm good\n"
+    "at the battling part.\p"
+    "He introduces me as “our guest.”\n"
+    "I've been here four years.$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_BrendenIntro
+    "Right, so, nobody told me.\p"
+    "I brought a crate up from the boat\n"
+    "and it turns out cider isn't wine.\p"
+    "Bit late now!$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_BrendenDefeat
+    "Ha! Fair enough, mate!$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_BrendenPostBattle
+    "They've been very nice about it.\p"
+    "Too nice, if anything. Nobody's\n"
+    "actually drunk any.$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_CristianIntro
+    "I detect oak. I detect leather.\p"
+    "I detect, faintly, the sea.\p"
+    "We are on an island, so that one\n"
+    "may not count.$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_CristianDefeat
+    "Unbalanced. That was my problem.$"
+
+>>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_CristianPostBattle
+    "I only drink things older than I am.\p"
+    "This was easier when I was younger.$"
+
 >>> data/maps/DewfordTown_Gym/scripts.inc :: DewfordTown_Gym_Text_BrawlyIntro
     "MERLOT: Mind the step. And the dark.\p"
     "I am MERLOT, and this is a cellar\n"
@@ -370,7 +454,7 @@ Line length: about 36 characters per line before it overflows the text box.
     "Hey, how's it going, CHAMPION-\n"
     "bound {PLAYER}?\p"
     "They call this the WEEB GYM.\n"
-    "Inside are some crazy anime\n"
+    "Inside are some crazy anime\l"
     "characters.\p"
     "Mons are themed to the trainer.$"
 
@@ -480,8 +564,8 @@ Line length: about 36 characters per line before it overflows the text box.
     "are exclusively desert-dwellers.\l"
     "You might look around for those.\p"
     "As for me…\n"
-    "I'm gonna hang out with MAMA BOSA.\n"
-    "Unlike you, {PLAYER}, your mom\n"
+    "I'm gonna hang out with MAMA BOSA.\l"
+    "Unlike you, {PLAYER}, your mom\l"
     "really is tough.\p"
     "See you around!$"
 
@@ -534,8 +618,8 @@ Line length: about 36 characters per line before it overflows the text box.
     "understood?\p"
     "Of course, I'm a GYM LEADER, too.\n"
     "We'll battle one day, {PLAYER}.\p"
-    "But that's only after improve/l"
-    "your portuguese."$"
+    "But that's only after you improve\l"
+    "your PORTUGUESE.$"
 
 >>> data/maps/PetalburgCity_Gym/scripts.inc :: PetalburgCity_Gym_Text_ReceivedBalanceBadge
     "{PLAYER} received A MOTHER'S LOVE\n"
@@ -626,7 +710,7 @@ Line length: about 36 characters per line before it overflows the text box.
 >>> data/maps/MossdeepCity/scripts.inc :: MossdeepCity_Text_GymSign
     "MOSSDEEP CITY POKéMON GYM\n"
     "LEADERS: MR & MRS P\p"
-    "“Full of australian lighting!”$"
+    "“Full of AUSTRALIAN lighting!”$"
 
 >>> data/maps/MossdeepCity_Gym/scripts.inc :: MossdeepCity_Gym_Text_GymGuideAdvice
     "Yo, how's it going, CHAMPION-bound\n"
@@ -669,7 +753,7 @@ Line length: about 36 characters per line before it overflows the text box.
     "This GYM has ten TRAINERS and every\n"
     "one of them picked their favourite.\p"
     "Don't ask why it's their favourite.\n"
-    "Standard ice puzzle, hopefully\n"
+    "Standard ice puzzle, hopefully\l"
     "you know how to do it by now!$"
 
 >>> data/maps/SootopolisCity_Gym_1F/scripts.inc :: SootopolisCity_Gym_1F_Text_JuanIntro
@@ -731,6 +815,15 @@ Line length: about 36 characters per line before it overflows the text box.
 
 ---
 
+## JAKE — the rival
+
+
+>>> data/scripts/rival_graphics.inc :: Common_Text_JakesPsyduck
+    "JAKE's PSYDUCK is a funny colour.\p"
+    "It stares at you until you look away.$"
+
+---
+
 ## JAKE — CHAMPION and the RAYQUAZA plot
 
 
@@ -755,17 +848,17 @@ Line length: about 36 characters per line before it overflows the text box.
     "becalmed the two combatants in\l"
     "the distant past.\p"
     "But I've no idea where it is. I've\n"
-    "read everything Dad has.\n"
-    "Even those Sarah J Maas books/l" 
-    "with the sexy elf.\n"
+    "read everything Dad has.\l"
+    "Even those Sarah J Maas books\l"
+    "with the sexy elf.\l"
     "Nothing.$"
 
 >>> data/maps/CaveOfOrigin_B1F/scripts.inc :: CaveOfOrigin_B1F_Text_WhereIsRayquaza
     "JAKE: {PLAYER}{KUN}, do you know where\n"
     "RAYQUAZA is?\p"
     "You've been everywhere. Think.\n"
-    "Ireland, Italy, Mexico...\n"
-    "It could be in any one of those\n"
+    "Ireland, Italy, Mexico...\l"
+    "It could be in any one of those\l"
     "places with the same flag.$"
 
 >>> data/maps/CaveOfOrigin_B1F/scripts.inc :: CaveOfOrigin_B1F_Text_ButWereInCaveOfOrigin
@@ -780,7 +873,7 @@ Line length: about 36 characters per line before it overflows the text box.
     "I went up there myself and the old\n"
     "lady never said a word about it.\p"
     "I don't think she'd hide something\n"
-    "like that from me after\l" 
+    "like that from me after\l"
     "the time we shared in Guam.\p"
     "{PLAYER}{KUN}, have another think.$"
 
@@ -804,6 +897,11 @@ Line length: about 36 characters per line before it overflows the text box.
     "And here you are.\p"
     "So come on then.\n"
     "Last one. Let's see it.$"
+
+>>> data/maps/EverGrandeCity_ChampionsRoom/scripts.inc :: EverGrandeCity_ChampionsRoom_Text_Defeat
+    "I, the CHAMPION, fall in defeat…\p"
+    "Ha! I've been practising that one.\p"
+    "Bit of a waste now.$"
 
 >>> data/maps/EverGrandeCity_ChampionsRoom/scripts.inc :: EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech
     "JAKE: Okay. Okay.\p"
@@ -853,6 +951,10 @@ Line length: about 36 characters per line before it overflows the text box.
     "JAKE: That's an earthquake!\p"
     "There's not a moment to waste!\n"
     "We've got to hurry!$"
+
+>>> data/maps/SkyPillar_Outside/scripts.inc :: SkyPillar_Outside_Text_SituationGettingWorse
+    "JAKE: It's getting worse.\n"
+    "It's definitely getting worse.$"
 
 >>> data/maps/SkyPillar_Outside/scripts.inc :: SkyPillar_Outside_Text_GotToGoBackForSootopolis
     "JAKE: This isn't good…\p"
@@ -1114,15 +1216,6 @@ Line length: about 36 characters per line before it overflows the text box.
     "POKéMON change shape in battle.\p"
     "This ring is what awakens them.\n"
     "Find the right stone, and you'll see.$"
-
->>> data/maps/LilycoveCity_PokemonTrainerFanClub/scripts.inc :: LilycoveCity_PokemonTrainerFanClub_Text_BrawlyNoImYourFan
-    "Sigh…\n"
-    "MERLOT…\p"
-    "Oh, no! Wait!\n"
-    "That's not right! No, no, no!\p"
-    "I'm your fan through and through!\p"
-    "So make me proud!\n"
-    "Go for it!$"
 
 >>> data/maps/MirageTower_4F/scripts.inc :: MirageTower_4F_Text_TakeRootFossil
     "You found the UNDERRATED FOSSIL.\p"

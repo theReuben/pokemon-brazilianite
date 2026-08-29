@@ -393,7 +393,7 @@ MossdeepCity_Text_ItsAWhiteRock:
 MossdeepCity_Text_GymSign:
 	.string "MOSSDEEP CITY POKéMON GYM\n"
 	.string "LEADERS: MR & MRS P\p"
-	.string "“Full of australian lighting!”$"
+	.string "“Full of AUSTRALIAN lighting!”$"
 
 MossdeepCity_Text_CitySign:
 	.string "MOSSDEEP CITY\n"
