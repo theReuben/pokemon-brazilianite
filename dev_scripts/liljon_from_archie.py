@@ -14,6 +14,23 @@ for y in (9,10,11):
 for x in (32,33): put(x,9)               # the bridge, one row
 for x in (27,38): put(x,9); put(x,10)    # temples
 
+# The Team Aqua badge sits mid-chest where the pendant hangs. It is a 4x4
+# diamond on plain jacket, so there is room to clear it and draw a dollar
+# sign - three wide, five deep, with the stroke running a row past each end.
+for y in range(27,35):
+    for x in range(33,40): px[x,y]=8
+DOLLAR = ["###",
+          "##.",
+          "###",
+          ".##",
+          "###"]
+for dy,row in enumerate(DOLLAR):
+    for dx,ch in enumerate(row):
+        if ch=='#': px[35+dx, 29+dy]=9
+px[36,28]=9                      # the stroke, above
+px[36,34]=9                      # and below
+for y in (29,31,33): px[35,y]=14 # a highlight down the left edge
+
 PAL=[(115,197,164),
      (197,140, 98),(164,107, 74),(123, 74, 49),      # 1-3 skin
      ( 82, 49, 33),                                  # 4   skin shadow
