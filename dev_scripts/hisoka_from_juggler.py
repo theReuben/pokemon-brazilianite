@@ -66,12 +66,8 @@ SKIN={12,13,14,1,2,3}
 for y in (34,35,36):                    # the sash
     for x in range(64):
         if px[x,y]==5: px[x,y]=4
-for y in (21,22):                       # armbands
-    for x in range(14,22):
-        if px[x,y] in SKIN: px[x,y]=4
-for y in (30,31):
-    for x in range(38,47):
-        if px[x,y] in SKIN: px[x,y]=4
+# No armbands. They were mine, not his, and at this size two pink rows
+# across a bare forearm read as a stripe painted on the arm.
 
 PAL=[(213,222,238),
      (255,228,214),(238,190,164),(222,156,140),
@@ -85,6 +81,6 @@ PAL=[(213,222,238),
 flat=[]
 for c in PAL: flat+=list(c)
 im.putpalette(flat+[0]*(768-len(flat)))
-im.save(SP+'/hisoka.png')
+im.save('graphics/trainers/front_pics/hisoka.png')
 im.convert('RGB').resize((64*7,64*7),Image.NEAREST).save(SP+'/hisoka_big.png')
 print('built')
