@@ -5754,9 +5754,9 @@ Level: 13
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_WALLACE ===
-Name: WALLACE
+Name: JAKE
 Class: Champion
-Pic: Champion Wallace
+Pic: Camper
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
@@ -5764,33 +5764,33 @@ Double Battle: No
 AI: Basic Trainer
 Mugshot: Yellow
 
-Walrein
+Talonflame
 Level: 57
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Overqwil
+Basculegion
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Simisage
+Noivern
 Level: 56
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Clodsire
+Glimmora
 Level: 56
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Milotic
+Ursaluna
 Level: 56
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Milotic @ Sitrus Berry
+Gholdengo @ Sitrus Berry
 Level: 58
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Make It Rain
+- Shadow Ball
 - Recover
-- Surf
-- Ice Beam
-- Toxic
+- Power Gem
 
 === TRAINER_ANDREW ===
 Name: ANDREW
