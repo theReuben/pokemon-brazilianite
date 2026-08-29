@@ -53,7 +53,5 @@ Common_EventScript_JakesPsyduck::
 	end
 
 Common_Text_JakesPsyduck:
-	.string "JAKE's PSYDUCK stares straight\n"
-	.string "through you.\p"
-	.string "It is a strange colour, and it does\n"
-	.string "not appear to be holding its head.$"
+	.string "JAKE's PSYDUCK is a funny colour.\p"
+	.string "It stares at you until you look away.$"

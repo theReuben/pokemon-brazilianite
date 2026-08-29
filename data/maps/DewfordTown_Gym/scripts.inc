@@ -283,97 +283,113 @@ DewfordTown_Gym_EventScript_GymStatue::
 	end
 
 DewfordTown_Gym_Text_GymGuideAdvice:
-	.string "Yo! How's it going, CHAMPION-\n"
-	.string "in-the-making?\p"
-	.string "Fair warning: this GYM is dark on\n"
-	.string "purpose. It's a cellar.\p"
-	.string "MERLOT keeps the lights off because\n"
-	.string "he says brightness bruises the fruit.\p"
-	.string "Beat a TRAINER and one comes on\n"
-	.string "anyway. They're all quietly relieved.\p"
-	.string "One more thing. Whatever you did\n"
-	.string "in RUSTBORO?\p"
-	.string "Don't do it in here.\p"
+	.string "Yo! How's it going?\p"
+	.string "Whoa, careful, it's dark in here!\p"
+	.string "This GYM's a wine cellar. A real one!\n"
+	.string "MERLOT says light spoils the stuff,\l"
+	.string "so he keeps it black as pitch.\p"
+	.string "Beat a TRAINER, though, and a light\n"
+	.string "comes on. That's the trick!\p"
+	.string "Oh, and one more thing.\p"
+	.string "You know how they carry on in\n"
+	.string "RUSTBORO? All the shouting?\p"
+	.string "Don't do that in here. Trust me.\p"
 	.string "Come see me afterwards, if you beat\n"
 	.string "the GYM LEADER.\p"
 	.string "Well, go for it!$"
 
 DewfordTown_Gym_Text_GymGuidePostVictory:
-	.string "Whoa! You really did it!\p"
-	.string "And you didn't once say a wine was\n"
-	.string "“nice.” That's the hard part.\p"
+	.string "Whoa! What a victory!\n"
+	.string "My cheering must've worked!\p"
+	.string "Great!\n"
 	.string "Check your TRAINER CARD.\p"
-	.string "NOTES OF OAK should be recorded\n"
-	.string "on it.$"
+	.string "NOTES OF OAK should be properly\n"
+	.string "recorded on it.\p"
+	.string "That's got to feel awesome!$"
 
 DewfordTown_Gym_Text_TakaoIntro:
-	.string "I get cherry. Definitely cherry.\p"
-	.string "Everyone gets cherry. I got there\n"
-	.string "first.$"
+	.string "Cherry! I'm getting cherry!\p"
+	.string "I always get cherry. Every time.\n"
+	.string "It's my thing!$"
 
 DewfordTown_Gym_Text_TakaoDefeat:
-	.string "Hm. Overripe.$"
+	.string "Aww, and I was so sure…$"
 
 DewfordTown_Gym_Text_TakaoPostBattle:
-	.string "Cherry, and a long finish, and\n"
-	.string "I am never wrong about the finish.$"
+	.string "Everyone says cherry is the easy one.\p"
+	.string "But somebody has to say it, and I say\n"
+	.string "it loudest, and that counts for\l"
+	.string "something!$"
 
 DewfordTown_Gym_Text_JocelynIntro:
-	.string "Some people hear “rot” and back away.\p"
-	.string "Rot is the whole point.$"
+	.string "Oh, don't look at it like that.\p"
+	.string "I know it's a mushroom. I know.\p"
+	.string "Just let me explain, and then we can\n"
+	.string "battle, and then I'll explain again.$"
 
 DewfordTown_Gym_Text_JocelynDefeat:
-	.string "Corked. Utterly corked.$"
+	.string "Wait, I hadn't finished explaining!$"
 
 DewfordTown_Gym_Text_JocelynPostBattle:
-	.string "Noble rot is how the sweet ones are\n"
-	.string "made. Look it up. I'll wait.$"
+	.string "Noble rot! It's called noble rot!\p"
+	.string "The mould gets into the grapes and\n"
+	.string "that's how you get the sweet ones.\p"
+	.string "It's my favourite fact. I have told\n"
+	.string "everybody in this GYM about it.$"
 
 DewfordTown_Gym_Text_LauraIntro:
-	.string "The grove matters more than the\n"
-	.string "bottle.\p"
-	.string "Terroir. Say it properly.$"
+	.string "You can taste the hillside a wine\n"
+	.string "came from. You really can.\p"
+	.string "It's called terroir.$"
 
 DewfordTown_Gym_Text_LauraDefeat:
-	.string "Oh, that's a poor showing.$"
+	.string "Oh! Oh, that was quite good.$"
 
 DewfordTown_Gym_Text_LauraPostBattle:
-	.string "You can taste the hillside. You can.\n"
-	.string "You're simply not trying.$"
+	.string "I do go on about the hillside.\p"
+	.string "My family had a grove. That's all.\n"
+	.string "I just like talking about it.$"
 
 DewfordTown_Gym_Text_LilithIntro:
-	.string "Mine's mead. I'm aware it isn't wine.\p"
-	.string "I've been told. Repeatedly.$"
+	.string "Before you say anything: yes, mead.\p"
+	.string "Yes, it's honey. Yes, I know what GYM\n"
+	.string "I'm standing in.$"
 
 DewfordTown_Gym_Text_LilithDefeat:
-	.string "Fine. FINE.$"
+	.string "Oh, that's just typical!$"
 
 DewfordTown_Gym_Text_LilithPostBattle:
-	.string "It's fermented and it's in a glass.\n"
-	.string "That's most of the way there.$"
+	.string "MERLOT lets me stay because I'm good\n"
+	.string "at the battling part.\p"
+	.string "He introduces me as “our guest.”\n"
+	.string "I've been here four years.$"
 
 DewfordTown_Gym_Text_BrendenIntro:
-	.string "I brought cider.\p"
-	.string "Nobody warned me.$"
+	.string "Right, so, nobody told me.\p"
+	.string "I brought a crate up from the boat\n"
+	.string "and it turns out cider isn't wine.\p"
+	.string "Bit late now!$"
 
 DewfordTown_Gym_Text_BrendenDefeat:
-	.string "Should've stayed on the boat.$"
+	.string "Ha! Fair enough, mate!$"
 
 DewfordTown_Gym_Text_BrendenPostBattle:
-	.string "MERLOT let me stay, at least.\n"
-	.string "He put me nearest the door.$"
+	.string "They've been very nice about it.\p"
+	.string "Too nice, if anything. Nobody's\n"
+	.string "actually drunk any.$"
 
 DewfordTown_Gym_Text_CristianIntro:
-	.string "Notes of oak. Notes of leather.\p"
-	.string "Notes of a cellar in which someone\n"
-	.string "has recently wept.$"
+	.string "I detect oak. I detect leather.\p"
+	.string "I detect, faintly, the sea.\p"
+	.string "We are on an island, so that one\n"
+	.string "may not count.$"
 
 DewfordTown_Gym_Text_CristianDefeat:
-	.string "Unbalanced. Like me.$"
+	.string "Unbalanced. That was my problem.$"
 
 DewfordTown_Gym_Text_CristianPostBattle:
-	.string "I only drink things older than I am.\n"
-	.string "It's getting difficult.$"
+	.string "I only drink things older than I am.\p"
+	.string "This was easier when I was younger.$"
 
 DewfordTown_Gym_Text_BrawlyIntro:
 	.string "MERLOT: Mind the step. And the dark.\p"

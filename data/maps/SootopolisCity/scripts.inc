@@ -1705,5 +1705,6 @@ SootopolisCity_Text_ExplainWaterfallGoToGym:
 
 SootopolisCity_Text_DazzledByMentor:
 	.string "JAKE: The LEADER in there is JUAN.\p"
-	.string "I've watched him battle. You'll enjoy\n"
-	.string "it, right up until you don't.$"
+	.string "He's been doing this since before\n"
+	.string "either of us were born.\p"
+	.string "Good luck.$"

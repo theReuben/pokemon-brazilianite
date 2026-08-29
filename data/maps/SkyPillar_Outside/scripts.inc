@@ -155,8 +155,8 @@ SkyPillar_Outside_Text_EarthquakeNotMomentToWaste:
 	.string "We've got to hurry!$"
 
 SkyPillar_Outside_Text_SituationGettingWorse:
-	.string "JAKE: This is getting worse…\n"
-	.string "Much worse.$"
+	.string "JAKE: It's getting worse.\n"
+	.string "It's definitely getting worse.$"
 
 SkyPillar_Outside_Text_GotToGoBackForSootopolis:
 	.string "JAKE: This isn't good…\p"

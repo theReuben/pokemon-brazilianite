@@ -143,20 +143,18 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 
 EverGrandeCity_ChampionsRoom_Text_Defeat:
 	.string "I, the CHAMPION, fall in defeat…\p"
-	.string "Ha!\n"
-	.string "I've always wanted to say that.\p"
-	.string "And now I don't get to say it again,\n"
-	.string "do I. Not with you around.$"
+	.string "Ha! I've been practising that one.\p"
+	.string "Bit of a waste now.$"
 
 EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
-	.string "JAKE: Right.\p"
-	.string "The POKéMON you brought in here…\n"
-	.string "I've been watching you raise them.\p"
+	.string "JAKE: Okay. Okay.\p"
+	.string "The POKéMON you brought in here…\p"
+	.string "I've watched you raise every one of\n"
+	.string "them, you know that?\p"
 	.string "ROUTE 103. RUSTBORO. All of it.\p"
-	.string "Every single time I turned up with\n"
-	.string "something new I'd caught, and every\l"
-	.string "single time you beat it.\p"
-	.string "I thought I'd catch up eventually.\p"
+	.string "Every time I turned up with something\n"
+	.string "new, you'd already got better.\p"
+	.string "I really thought I'd catch up.\p"
 	.string "I now proclaim you to be the new\n"
 	.string "HOENN region…$"
 
