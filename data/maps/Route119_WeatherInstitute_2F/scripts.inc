@@ -230,8 +230,10 @@ Route119_WeatherInstitute_2F_Text_Grunt3Defeat:
 
 Route119_WeatherInstitute_2F_Text_Grunt3PostBattle:
 	.string "You don't have any idea what we of\n"
-	.string "TEAM ALGORITHM are working towards!\l"
-	.string "You stay out of our way!$"
+	.string "TEAM ALGORITHM are working towards!\p"
+	.string "Rain. Cold rain, falling on hot\n"
+	.string "machines, forever.\l"
+	.string "You'd never understand!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt5Intro:
 	.string "Hold it. Look at these three.\p"

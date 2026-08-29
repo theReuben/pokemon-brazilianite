@@ -455,7 +455,8 @@ MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly:
 
 MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand:
 	.string "All I want…\n"
-	.string "I just want to expand the land mass…$"
+	.string "I just wanted the hashes to come\l"
+	.string "faster…$"
 
 MossdeepCity_SpaceCenter_Text_TabithaDefeat:
 	.string "I'm with our leader…$"
@@ -465,15 +466,16 @@ MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided:
 	.string "erupt…\p"
 	.string "We failed to control GROUDON after\n"
 	.string "we had awoken it…\p"
-	.string "Is our goal to expand the land\n"
-	.string "misguided?\p"
+	.string "Was there ever anything worth\n"
+	.string "mining here?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "If…\n"
 	.string "If we, TEAM BLOCKCHAIN, are wrong…\l"
 	.string "… … … … … …\p"
-	.string "Then might TEAM ALGORITHM's goal to expand\n"
-	.string "the sea also be equally misguided?$"
+	.string "Then might TEAM ALGORITHM's plan to\n"
+	.string "drown the world for the sake of\l"
+	.string "their machines be wrong as well?$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp:
 	.string "JULIAN: All right…\n"

@@ -562,16 +562,18 @@ MtChimney_Text_MaxieIntro:
 	.string "Humph! So you're thinking of\n"
 	.string "interfering with us, TEAM BLOCKCHAIN?\p"
 	.string "Now you listen.\n"
-	.string "Long ago, living things used the\l"
-	.string "land to live and grow.\p"
-	.string "That is why land is all important!\n"
-	.string "It is the cradle of all!\p"
-	.string "That is why TEAM BLOCKCHAIN is dedicated\n"
-	.string "to the expansion of the land mass.\p"
-	.string "It is for further advancement of\n"
-	.string "humankind and POKéMON!\p"
-	.string "And for that, we need the power of\n"
-	.string "what sleeps within this mountain…\p"
+	.string "Every coin in this world has to be\l"
+	.string "mined.\p"
+	.string "Mining takes power, and power is\n"
+	.string "the one thing we lack.\p"
+	.string "Our rig is the finest ever built.\n"
+	.string "It is also desperately slow.\p"
+	.string "That is why TEAM BLOCKCHAIN needs\n"
+	.string "what sleeps within this mountain.\p"
+	.string "GROUDON.\n"
+	.string "A GROUDON PROCESSING UNIT.\p"
+	.string "Slot that into our rig and every\n"
+	.string "block in HOENN is ours by morning!\p"
 	.string "Oh! There was no need for you to\n"
 	.string "learn that much.\p"
 	.string "But, no matter!\n"
@@ -611,8 +613,9 @@ MtChimney_Text_TabithaPostBattle:
 MtChimney_Text_Grunt2Intro:
 	.string "We of TEAM BLOCKCHAIN are working hard for\n"
 	.string "everyone's sake.\p"
-	.string "Like, if that thing's power made more\n"
-	.string "land, there'd be more places to live.\p"
+	.string "Like, if that thing crunches numbers\n"
+	.string "as fast as the BOSS says, we'd all\l"
+	.string "be rich.\p"
 	.string "Everyone'd be happy!$"
 
 MtChimney_Text_Grunt2Defeat:
@@ -626,9 +629,9 @@ MtChimney_Text_Grunt2PostBattle:
 	.string "in our way?$"
 
 MtChimney_Text_Grunt1Intro:
-	.string "If there were more land, I'd be able\n"
-	.string "to get a big house of my own!\p"
-	.string "I'm going to build it on hardened lava!$"
+	.string "Once the rig is running, I'm buying\n"
+	.string "a big house of my own!\p"
+	.string "I'm going to pay for it in coins!$"
 
 MtChimney_Text_Grunt1Defeat:
 	.string "My dream of a big house…$"
@@ -660,7 +663,7 @@ MtChimney_Text_DouseThemInFire:
 	.string "Douse them in fire!$"
 
 MtChimney_Text_KeepMakingMoreLand:
-	.string "We're going to keep making more land!$"
+	.string "We're going to mine day and night!$"
 
 MtChimney_Text_Bufoh:
 	.string "Bufoh!$"
@@ -699,8 +702,8 @@ MtChimney_Text_MagmaOutnumbersUs:
 	.string "We can't keep up with them!$"
 
 MtChimney_Text_LessHabitatForWaterPokemon:
-	.string "If they expand the land, there'll be\n"
-	.string "less habitats for WATER POKéMON!$"
+	.string "If they fire that rig up, the sea\n"
+	.string "will be as warm as bathwater!$"
 
 MtChimney_Text_MagmasNameSimilar:
 	.string "We're TEAM ALGORITHM!\p"

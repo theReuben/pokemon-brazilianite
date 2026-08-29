@@ -189,7 +189,7 @@ MagmaHideout_4F_Text_MaxieAwakenGroudon:
 	.string "I have brought you the BLUE ORB.\n"
 	.string "Let its shine awaken you!\p"
 	.string "And show me…\n"
-	.string "Show me the full extent of your power!$"
+	.string "Show me your clock speed!$"
 
 MagmaHideout_4F_Text_MaxieGroudonWhatsWrong:
 	.string "JULIAN: GROUDON!\n"
