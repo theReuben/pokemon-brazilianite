@@ -5,10 +5,11 @@ Same three groups as the battle sprite, and just as tidy:
 
     8,  9, 10   hair, which is most of the sprite in the back-facing frames
     11, 12, 13  the tracksuit, torso and legs together
-    5,  6,  7   unused by this sprite, so the red collar costs nothing
 
-The collar is the garment on rows 22-23, the two rows below the chin.
-Everything below that is the uniform.
+No red here. At 16x32 there is no row that reads as a collar: the top of
+the torso IS the shoulder line, and the neck itself is hidden behind the
+chin in every frame, so red on those rows comes out as shoulder pads.
+The collar stays on the battle sprite, where there are pixels for it.
 """
 import sys
 from PIL import Image
@@ -23,9 +24,9 @@ PAL = {
     2:  (246, 189, 148),
     3:  (222, 148, 115),
     4:  (123,  65,  65),
-    5:  (255, 123, 115),        # collar, lit    (was unused)
-    6:  (197,  49,  57),        # collar, mid    (was unused)
-    7:  (140,  32,  40),        # collar, shadow (was unused)
+    5:  (255, 222,  74),        # unused by this sprite, as in the base
+    6:  (213, 172,  32),
+    7:  (131,  98,   0),
     8:  (255, 180, 176),        # 157 -> 200  hair, highlight
     9:  (222, 106, 115),        # 101 -> 136  hair, mid
     10: (156,  57,  74),        #  64 ->  84  hair, shadow
@@ -35,17 +36,9 @@ PAL = {
     14: (255, 255, 255),
     15: (  0,   0,   0),
 }
-COLLAR = {11: 5, 12: 6, 13: 7}
-
 im = Image.open(BASE)
 W, H = im.size
 assert (W, H) == (160, 32) and im.mode == 'P'
-px = im.load()
-for y in (22, 23):
-    for x in range(W):
-        if px[x, y] in COLLAR:
-            px[x, y] = COLLAR[px[x, y]]
-
 flat = []
 for i in range(16):
     flat += list(PAL[i])
