@@ -592,6 +592,26 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Camper = {
     .images = sPicTable_Camper,
 };
 
+// JAKE: the CAMPER's tiles under a palette whose green ramp is the RSE
+// POKeMON RANGER's red, so his cap and shirt match the pic he battles in.
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jake = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_JAKE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Camper,
+};
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Picnicker = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,

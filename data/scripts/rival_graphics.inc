@@ -5,11 +5,11 @@ Common_EventScript_SetupRivalGfxId::
 	end
 
 EventScript_SetupRivalGfxIdFemale::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_CAMPER
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_JAKE
 	return
 
 EventScript_SetupRivalGfxIdMale::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_CAMPER
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_JAKE
 	return
 
 Common_EventScript_SetupRivalOnBikeGfxId::
@@ -19,11 +19,11 @@ Common_EventScript_SetupRivalOnBikeGfxId::
 	end
 
 EventScript_SetupRivalOnBikeGfxIdFemale::
-	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_CAMPER
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_JAKE
 	return
 
 EventScript_SetupRivalOnBikeGfxIdMale::
-	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_CAMPER
+	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_JAKE
 	return
 
 @ Unused
@@ -34,11 +34,11 @@ Common_EventScript_SetupRivalGfxIdSameGender::
 	end
 
 EventScript_SetupRivalGfxIdMale2::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_CAMPER
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_JAKE
 	return
 
 EventScript_SetupRivalGfxIdFemale2::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_CAMPER
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_JAKE
 	return
 
 @ JAKE's shiny PSYDUCK, which stands beside him wherever he turns up.
