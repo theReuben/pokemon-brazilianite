@@ -574,6 +574,27 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldWoman = {
     .images = sPicTable_OldWoman,
 };
 
+// HISOKA: the FRLG juggler's own overworld sprite - they use the ROCKER -
+// recoloured to the Heaven's Arena outfit.
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hisoka = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_HISOKA,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Hisoka,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Camper = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
@@ -5954,6 +5975,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Man = {
     .images = sPicTable_Man,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
+
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rocker = {
     .tileTag = TAG_NONE,

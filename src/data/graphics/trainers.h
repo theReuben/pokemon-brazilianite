@@ -342,6 +342,8 @@ const u16 gTrainerPalette_RockerFrlg[] = INCBIN_U16("graphics/trainers/palettes/
 
 const u32 gTrainerFrontPic_JugglerFrlg[] = INCBIN_U32("graphics/trainers/front_pics/juggler_frlg.4bpp.smol");
 const u16 gTrainerPalette_JugglerFrlg[] = INCBIN_U16("graphics/trainers/palettes/juggler_frlg.gbapal");
+const u32 gTrainerFrontPic_Hisoka[] = INCBIN_U32("graphics/trainers/front_pics/hisoka.4bpp.smol");
+const u16 gTrainerPalette_Hisoka[] = INCBIN_U16("graphics/trainers/palettes/hisoka.gbapal");
 
 const u32 gTrainerFrontPic_TamerFrlg[] = INCBIN_U32("graphics/trainers/front_pics/tamer_frlg.4bpp.smol");
 const u16 gTrainerPalette_TamerFrlg[] = INCBIN_U16("graphics/trainers/palettes/tamer_frlg.gbapal");
@@ -660,6 +662,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_FRONT_PSYCHIC_M_FRLG, gTrainerFrontPic_PsychicMFrlg, gTrainerPalette_PsychicMFrlg),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_ROCKER_FRLG, gTrainerFrontPic_RockerFrlg, gTrainerPalette_RockerFrlg),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_JUGGLER_FRLG, gTrainerFrontPic_JugglerFrlg, gTrainerPalette_JugglerFrlg),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_HISOKA, gTrainerFrontPic_Hisoka, gTrainerPalette_Hisoka),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_TAMER_FRLG, gTrainerFrontPic_TamerFrlg, gTrainerPalette_TamerFrlg),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_BIRD_KEEPER_FRLG, gTrainerFrontPic_BirdKeeperFrlg, gTrainerPalette_BirdKeeperFrlg),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_BLACK_BELT_FRLG, gTrainerFrontPic_BlackBeltFrlg, gTrainerPalette_BlackBeltFrlg),

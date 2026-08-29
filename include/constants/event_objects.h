@@ -442,8 +442,9 @@
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
 #define OBJ_EVENT_GFX_JAKE                       404
+#define OBJ_EVENT_GFX_HISOKA                     405
 
-#define NUM_OBJ_EVENT_GFX                        405
+#define NUM_OBJ_EVENT_GFX                        406
 
 
 // These are dynamic object gfx ids.
@@ -589,6 +590,7 @@
 #define OBJ_EVENT_PAL_TAG_SEAGALLOP               0x1132
 #define OBJ_EVENT_PAL_TAG_SS_ANNE                 0x1133
 #define OBJ_EVENT_PAL_TAG_JAKE                    0x1134
+#define OBJ_EVENT_PAL_TAG_HISOKA                  0x1135
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
