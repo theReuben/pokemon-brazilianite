@@ -68,13 +68,13 @@ for y in range(64):
         elif px[x, y] == 13:
             px[x, y] = 7
 
-# ...and the red goes where it belongs: the collar. Rows 19-22 are the
-# garment between his jaw and his chest, which wraps the neck and runs
-# out along both shoulders - a high collar, not a bow tie. Lit pixels
+# ...and the red goes where it belongs: the collar, the garment on the
+# two rows under his jaw. Kept tight at two rows by choice - deeper rows
+# run the red out along the shoulders, which reads heavier. Lit pixels
 # take the bright red and shaded ones the dark, so the collar keeps the
 # roundness already drawn.
 UNIFORM_LIT, UNIFORM_DARK = (5, 6), (7, 8)
-for y in (19, 20, 21, 22):
+for y in (19, 20):
     for x in range(64):
         if px[x, y] in UNIFORM_LIT:
             px[x, y] = 12
