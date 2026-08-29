@@ -241,7 +241,7 @@ Route119_WeatherInstitute_2F_Text_Grunt5Intro:
 	.string "worth?\p"
 	.string "And do not call them boring.\n"
 	.string "There is nothing boring about\l"
-	.string "these three apes!$"
+	.string "these three!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt5Defeat:
 	.string "That is not how value works!$"
