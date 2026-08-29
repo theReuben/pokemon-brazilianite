@@ -3002,14 +3002,14 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_TAKAO ===
 Name: TAKAO
-Class: Black Belt
-Pic: Black Belt
+Class: Gentleman
+Pic: Gentleman
 Gender: Male
-Music: Intense
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Timburr
+Cherubi
 Level: 13
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
@@ -4560,24 +4560,24 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Screech
 
 === TRAINER_BRAWLY_1 ===
-Name: BRAWLY
+Name: MERLOT
 Class: Leader
-Pic: Leader Brawly
+Pic: Gentleman
 Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Timburr
+Roselia
 Level: 16
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Clobbopus
+Applin
 Level: 16
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Timburr @ Sitrus Berry
+Roserade @ Sitrus Berry
 Level: 19
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -7247,27 +7247,27 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_JOCELYN ===
 Name: JOCELYN
-Class: Battle Girl
-Pic: Battle Girl
+Class: Aroma Lady
+Pic: Aroma Lady
 Gender: Female
-Music: Intense
+Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Clobbopus
+Foongus
 Level: 13
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_LAURA ===
 Name: LAURA
-Class: Battle Girl
-Pic: Battle Girl
+Class: Lady
+Pic: Lady
 Gender: Female
-Music: Intense
+Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Clobbopus
+Dolliv
 Level: 13
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
@@ -9877,33 +9877,33 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Timburr
+Applin
 Level: 13
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_LILITH ===
 Name: LILITH
-Class: Battle Girl
-Pic: Battle Girl
+Class: Beauty
+Pic: Beauty
 Gender: Female
-Music: Intense
+Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Clobbopus
+Combee
 Level: 13
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_CRISTIAN ===
 Name: CRISTIAN
-Class: Black Belt
-Pic: Black Belt
+Class: Gentleman
+Pic: Gentleman
 Gender: Male
-Music: Intense
+Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Timburr
+Sinistea
 Level: 13
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
@@ -13411,118 +13411,126 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Volt Switch
 
 === TRAINER_BRAWLY_2 ===
-Name: BRAWLY
+Name: MERLOT
 Class: Leader
-Pic: Leader Brawly
+Pic: Gentleman
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Conkeldurr @ Sitrus Berry
+Cherrim
 Level: 33
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Clobbopus
+Applin
 Level: 33
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Grapploct
+Arboliva
 Level: 35
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Conkeldurr @ Sitrus Berry
+Roserade @ Sitrus Berry
 Level: 37
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BRAWLY_3 ===
-Name: BRAWLY
+Name: MERLOT
 Class: Leader
-Pic: Leader Brawly
+Pic: Gentleman
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Conkeldurr @ Sitrus Berry
+Cherrim
 Level: 38
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Grapploct
+Amoonguss
 Level: 38
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Grapploct
+Appletun
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Conkeldurr @ Sitrus Berry
+Arboliva
+Level: 40
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Roserade @ Sitrus Berry
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BRAWLY_4 ===
-Name: BRAWLY
+Name: MERLOT
 Class: Leader
-Pic: Leader Brawly
+Pic: Gentleman
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Conkeldurr
+Cherrim
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Conkeldurr @ Sitrus Berry
+Amoonguss
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Grapploct
+Polteageist
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Grapploct
+Appletun
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Conkeldurr @ Sitrus Berry
+Arboliva
+Level: 45
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Roserade @ Sitrus Berry
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BRAWLY_5 ===
-Name: BRAWLY
+Name: MERLOT
 Class: Leader
-Pic: Leader Brawly
+Pic: Gentleman
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: Yes
 AI: Basic Trainer
 
-Conkeldurr
+Cherrim
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Conkeldurr
+Amoonguss
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Conkeldurr @ Sitrus Berry
+Polteageist
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Grapploct
+Appletun
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Grapploct
+Arboliva
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-Conkeldurr @ Sitrus Berry
+Roserade @ Sitrus Berry
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 

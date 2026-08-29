@@ -136,7 +136,7 @@ DewfordTown_Gym_EventScript_Brawly::
 	trainerbattle_single TRAINER_BRAWLY_1, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_BrawlyRematch
-	goto_if_unset FLAG_RECEIVED_TM_BULK_UP, DewfordTown_Gym_EventScript_GiveBulkUp2
+	goto_if_unset FLAG_RECEIVED_TM_BULK_UP, DewfordTown_Gym_EventScript_GiveGymTM2
 	msgbox DewfordTown_Gym_Text_BrawlyPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -153,7 +153,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 2
 	call Common_EventScript_SetGymTrainers
-	call DewfordTown_Gym_EventScript_GiveBulkUp
+	call DewfordTown_Gym_EventScript_GiveGymTM
 	closemessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
@@ -167,17 +167,17 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	release
 	end
 
-DewfordTown_Gym_EventScript_GiveBulkUp::
-	giveitem ITEM_TM_BULK_UP
+DewfordTown_Gym_EventScript_GiveGymTM::
+	giveitem ITEM_TM_MEGA_DRAIN
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_BagIsFull
-	msgbox DewfordTown_Gym_Text_ExplainBulkUp, MSGBOX_DEFAULT
+	msgbox DewfordTown_Gym_Text_ExplainMegaDrain, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_BULK_UP
 	return
 
-DewfordTown_Gym_EventScript_GiveBulkUp2:
-	giveitem ITEM_TM_BULK_UP
+DewfordTown_Gym_EventScript_GiveGymTM2:
+	giveitem ITEM_TM_MEGA_DRAIN
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
-	msgbox DewfordTown_Gym_Text_ExplainBulkUp, MSGBOX_DEFAULT
+	msgbox DewfordTown_Gym_Text_ExplainMegaDrain, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_BULK_UP
 	release
 	end
@@ -283,177 +283,180 @@ DewfordTown_Gym_EventScript_GymStatue::
 	end
 
 DewfordTown_Gym_Text_GymGuideAdvice:
-	.string "Hey, how's it going, CHAMPION-\n"
-	.string "bound {PLAYER}?\p"
-	.string "DEWFORD's GYM LEADER BRAWLY commands\n"
-	.string "FIGHTING-type POKéMON.\p"
-	.string "Going against him with NORMAL-type\n"
-	.string "POKéMON is asking for trouble.\p"
-	.string "FIGHTING POKéMON will lay a serious\n"
-	.string "smack down on NORMAL POKéMON,\l"
-	.string "so be careful!\p"
-	.string "What's worse, the GYM is as dark as\n"
-	.string "the ocean floor.\p"
-	.string "But it will get brighter after defeating\n"
-	.string "the TRAINERS in your way.\p"
-	.string "Hey, okay, go for it!$"
+	.string "Yo! How's it going, CHAMPION-\n"
+	.string "in-the-making?\p"
+	.string "Fair warning: this GYM is dark on\n"
+	.string "purpose. It's a cellar.\p"
+	.string "MERLOT keeps the lights off because\n"
+	.string "he says brightness bruises the fruit.\p"
+	.string "Beat a TRAINER and one comes on\n"
+	.string "anyway. They're all quietly relieved.\p"
+	.string "One more thing. Whatever you did\n"
+	.string "in RUSTBORO?\p"
+	.string "Don't do it in here.\p"
+	.string "Come see me afterwards, if you beat\n"
+	.string "the GYM LEADER.\p"
+	.string "Well, go for it!$"
 
 DewfordTown_Gym_Text_GymGuidePostVictory:
-	.string "Whoah! It's turned too bright in here!\p"
-	.string "Your future is bright, too!$"
+	.string "Whoa! You really did it!\p"
+	.string "And you didn't once say a wine was\n"
+	.string "“nice.” That's the hard part.\p"
+	.string "Check your TRAINER CARD.\p"
+	.string "NOTES OF OAK should be recorded\n"
+	.string "on it.$"
 
 DewfordTown_Gym_Text_TakaoIntro:
-	.string "Might is right!\n"
-	.string "Come on!$"
+	.string "I get cherry. Definitely cherry.\p"
+	.string "Everyone gets cherry. I got there\n"
+	.string "first.$"
 
 DewfordTown_Gym_Text_TakaoDefeat:
-	.string "Not enough power…$"
+	.string "Hm. Overripe.$"
 
 DewfordTown_Gym_Text_TakaoPostBattle:
-	.string "Your skill overcame my strength!\n"
-	.string "Your technique is commendable!$"
+	.string "Cherry, and a long finish, and\n"
+	.string "I am never wrong about the finish.$"
 
 DewfordTown_Gym_Text_JocelynIntro:
-	.string "There's no need for BRAWLY to be\n"
-	.string "involved!\p"
-	.string "I'll crush you!$"
+	.string "Some people hear “rot” and back away.\p"
+	.string "Rot is the whole point.$"
 
 DewfordTown_Gym_Text_JocelynDefeat:
-	.string "But… How?\n"
-	.string "How could I lose so easily?$"
+	.string "Corked. Utterly corked.$"
 
 DewfordTown_Gym_Text_JocelynPostBattle:
-	.string "I'm not going to waste this loss.\n"
-	.string "I'll use it to motivate me to train!\p"
-	.string "One day I'll become a GYM LEADER…\p"
-	.string "No, I'll become the POKéMON LEAGUE\n"
-	.string "CHAMPION!$"
+	.string "Noble rot is how the sweet ones are\n"
+	.string "made. Look it up. I'll wait.$"
 
 DewfordTown_Gym_Text_LauraIntro:
-	.string "Don't you dare brush me off!\n"
-	.string "It's not my fault if you cry!$"
+	.string "The grove matters more than the\n"
+	.string "bottle.\p"
+	.string "Terroir. Say it properly.$"
 
 DewfordTown_Gym_Text_LauraDefeat:
-	.string "Waaaaaaah!\n"
-	.string "I lost!$"
+	.string "Oh, that's a poor showing.$"
 
 DewfordTown_Gym_Text_LauraPostBattle:
-	.string "I battle in the dark to make my heart\n"
-	.string "stronger.\p"
-	.string "But because it's so dark, I can never\n"
-	.string "see BRAWLY's face…$"
+	.string "You can taste the hillside. You can.\n"
+	.string "You're simply not trying.$"
 
 DewfordTown_Gym_Text_LilithIntro:
-	.string "Ufufu…\n"
-	.string "Are you stumbling around in the dark?$"
+	.string "Mine's mead. I'm aware it isn't wine.\p"
+	.string "I've been told. Repeatedly.$"
 
 DewfordTown_Gym_Text_LilithDefeat:
-	.string "Oh, you…\n"
-	.string "I don't want to know you!$"
+	.string "Fine. FINE.$"
 
 DewfordTown_Gym_Text_LilithPostBattle:
-	.string "You deserve to stay lost and end up\n"
-	.string "back at the entrance again!$"
+	.string "It's fermented and it's in a glass.\n"
+	.string "That's most of the way there.$"
 
 DewfordTown_Gym_Text_BrendenIntro:
-	.string "I'll show you the gumption of\n"
-	.string "a sailing man!$"
+	.string "I brought cider.\p"
+	.string "Nobody warned me.$"
 
 DewfordTown_Gym_Text_BrendenDefeat:
-	.string "How'd this happen?\n"
-	.string "It's not like me to lose this way!$"
+	.string "Should've stayed on the boat.$"
 
 DewfordTown_Gym_Text_BrendenPostBattle:
-	.string "Oh, aye! You're worthy of seeing\n"
-	.string "our GYM LEADER.$"
+	.string "MERLOT let me stay, at least.\n"
+	.string "He put me nearest the door.$"
 
 DewfordTown_Gym_Text_CristianIntro:
-	.string "If you mean to pass, it has to be\n"
-	.string "through me!$"
+	.string "Notes of oak. Notes of leather.\p"
+	.string "Notes of a cellar in which someone\n"
+	.string "has recently wept.$"
 
 DewfordTown_Gym_Text_CristianDefeat:
-	.string "Grrrrr!\n"
-	.string "Vastly overpowered!$"
+	.string "Unbalanced. Like me.$"
 
 DewfordTown_Gym_Text_CristianPostBattle:
-	.string "You win!\n"
-	.string "Go after that BADGE!$"
+	.string "I only drink things older than I am.\n"
+	.string "It's getting difficult.$"
 
 DewfordTown_Gym_Text_BrawlyIntro:
-	.string "I'm BRAWLY!\n"
-	.string "DEWFORD's GYM LEADER!\p"
-	.string "I've been churned in the rough waves\n"
-	.string "of these parts, and I've grown tough\l"
-	.string "in the pitch-black cave!\p"
-	.string "So you wanted to challenge me?\n"
-	.string "Let me see what you're made of!$"
+	.string "MERLOT: Mind the step. And the dark.\p"
+	.string "I am MERLOT, and this is a cellar\n"
+	.string "that the LEAGUE insists on calling\l"
+	.string "a GYM.\p"
+	.string "Most challengers arrive from RUSTBORO\n"
+	.string "still slightly shouting.\p"
+	.string "Here we are quieter. Here we consider\n"
+	.string "what a thing is like, and then we say\l"
+	.string "so, at length.\p"
+	.string "Let us see what you are like.$"
 
 DewfordTown_Gym_Text_BrawlyDefeat:
-	.string "Whoah, wow! You made a much bigger\n"
-	.string "splash than I expected!\p"
-	.string "You swamped me!\p"
-	.string "Okay, you've got me.\n"
-	.string "Take this GYM BADGE!$"
+	.string "Ah.\p"
+	.string "Firm. Structured. Rather more tannin\n"
+	.string "than I was expecting.\p"
+	.string "I shall be thinking about that one\n"
+	.string "for some time.$"
 
 DewfordTown_Gym_Text_ReceivedKnuckleBadge:
-	.string "{PLAYER} received the KNUCKLE BADGE\n"
-	.string "from BRAWLY.$"
+	.string "{PLAYER} received NOTES OF OAK\n"
+	.string "from MERLOT.$"
 
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
-	.string "The KNUCKLE BADGE makes all POKéMON\n"
-	.string "up to Level 30, even those you get in\l"
-	.string "trades, obey without question.\p"
-	.string "And, you'll be able to use the HM move\n"
-	.string "FLASH outside of battle.\p"
-	.string "If you'd like, use this TECHNICAL\n"
-	.string "MACHINE, too.$"
+	.string "NOTES OF OAK makes all POKéMON\n"
+	.string "up to Lv. 30, even those you get in\l"
+	.string "trades, obey you.\p"
+	.string "It also lets you use the HM move FLASH\n"
+	.string "outside of battle.\p"
+	.string "You will want FLASH. The cave next\n"
+	.string "door is darker than this one, and\l"
+	.string "nothing in it has been decanted.\p"
+	.string "And take this as well.$"
 
-DewfordTown_Gym_Text_ExplainBulkUp:
-	.string "That TM08 contains BULK UP.\p"
-	.string "It's a move that raises both ATTACK\n"
-	.string "and DEFENSE stats.\p"
-	.string "… … … … … …$"
+DewfordTown_Gym_Text_ExplainMegaDrain:
+	.string "That TECHNICAL MACHINE is TM52,\n"
+	.string "MEGA DRAIN.\p"
+	.string "It draws the substance out of\n"
+	.string "the other thing and keeps it.\p"
+	.string "Pressing, essentially.\p"
+	.string "A TM can be used only once, so do\n"
+	.string "think before you use it.$"
 
 DewfordTown_Gym_Text_RegisteredBrawly:
-	.string "Registered GYM LEADER BRAWLY\n"
+	.string "Registered GYM LEADER MERLOT\n"
 	.string "in the POKéNAV.$"
 
 DewfordTown_Gym_Text_BrawlyPostBattle:
-	.string "I can see your talent becoming a giant\n"
-	.string "wave to cause a storm of astonishment\l"
-	.string "among TRAINERS one day!$"
+	.string "MERLOT: Go on to the other GYMS.\p"
+	.string "You will meet a young man in MAUVILLE\n"
+	.string "who does not sit down.\p"
+	.string "Give him my regards. He will not\n"
+	.string "remember me.$"
 
 DewfordTown_Gym_Text_GymStatue:
 	.string "DEWFORD TOWN POKéMON GYM$"
 
 DewfordTown_Gym_Text_GymStatueCertified:
 	.string "DEWFORD TOWN POKéMON GYM\p"
-	.string "BRAWLY'S CERTIFIED TRAINERS:\n"
+	.string "MERLOT'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 DewfordTown_Gym_Text_BrawlyPreRematch:
-	.string "BRAWLY: A wave may draw back, but it\n"
-	.string "always returns to the shore.\p"
-	.string "A giant wave of a talent like you…\n"
-	.string "I knew you would return!\p"
-	.string "Show me how much higher\n"
-	.string "you've gone!$"
+	.string "MERLOT: You again. Good.\p"
+	.string "The cellar has moved on since you\n"
+	.string "were last down here.\p"
+	.string "So, I suspect, have you.$"
 
 DewfordTown_Gym_Text_BrawlyRematchDefeat:
-	.string "Wow!\n"
-	.string "Swamped again!$"
+	.string "Still firm. Still structured.\p"
+	.string "Still, apparently, better than mine.$"
 
 DewfordTown_Gym_Text_BrawlyPostRematch:
-	.string "BRAWLY: Battling is vast and it's deep.\n"
-	.string "You can't see the bottom.\l"
-	.string "It's just like the sea of HOENN!$"
+	.string "MERLOT: One learns more from being\n"
+	.string "beaten than from being poured.\p"
+	.string "I have no idea what I meant by that.$"
 
 DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons:
-	.string "BRAWLY: A wave may draw back, but it\n"
-	.string "always returns to the shore.\p"
-	.string "A giant wave of a talent like you…\n"
-	.string "I knew you would return!\p"
-	.string "Oh? You only have one POKéMON\n"
-	.string "that can battle.\p"
-	.string "I'm sorry, but I'd like you to come back\n"
-	.string "with at least two POKéMON.$"
+	.string "MERLOT: You again. Good.\p"
+	.string "The cellar has moved on since you\n"
+	.string "were last down here.\p"
+	.string "So, I suspect…\p"
+	.string "Ah. You have brought one POKéMON.\p"
+	.string "One does not taste a single wine.\n"
+	.string "Fetch another.$"

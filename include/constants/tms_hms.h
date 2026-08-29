@@ -52,7 +52,8 @@
     F(SKILL_SWAP) \
     F(SNATCH) \
     F(OVERHEAT) \
-    F(POISON_FANG)
+    F(POISON_FANG) \
+    F(MEGA_DRAIN)
 
 #define FOREACH_HM(F) \
     F(CUT) \

@@ -229,7 +229,7 @@ RustboroCity_Gym_Text_RoxanneRegisterCall:
 	.string "… … … … … Beep!\p"
 	.string "LIL WAYNE: Ay, that {PLAYER}?\n"
 	.string "It's WAYNE, RUSTBORO CITY.\p"
-	.string "I heard from BRAWLY you been moving\n"
+	.string "I heard from MERLOT you been moving\n"
 	.string "up the ranks at a crazy pace.\p"
 	.string "I'd rather not sit here thinking\n"
 	.string "I can't beat you.\p"
