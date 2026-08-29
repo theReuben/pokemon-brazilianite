@@ -59,14 +59,28 @@ for y in range(36, 52):
         if px[x, y] == 3:
             px[x, y] = 5
 
-# The trim runs shoulder to ankle as one stripe. Red belongs at his
-# collar, so below the waist it joins the uniform.
-for y in range(36, 64):
+# The base's trim is one stripe from shoulder to ankle. YUJI's uniform is
+# plain black, so the whole stripe joins the uniform...
+for y in range(64):
     for x in range(64):
         if px[x, y] == 12:
             px[x, y] = 6
         elif px[x, y] == 13:
             px[x, y] = 7
+
+# ...and the red goes where it belongs: the collar. Rows 19-22 are the
+# garment between his jaw and his chest, which wraps the neck and runs
+# out along both shoulders - a high collar, not a bow tie. Lit pixels
+# take the bright red and shaded ones the dark, so the collar keeps the
+# roundness already drawn.
+UNIFORM_LIT, UNIFORM_DARK = (5, 6), (7, 8)
+for y in (19, 20, 21, 22):
+    for x in range(64):
+        if px[x, y] in UNIFORM_LIT:
+            px[x, y] = 12
+        elif px[x, y] in UNIFORM_DARK:
+            px[x, y] = 13
+
 flat = []
 for i in range(16):
     flat += list(PAL[i])
