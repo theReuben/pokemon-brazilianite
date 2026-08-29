@@ -475,7 +475,7 @@ MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided:
 	.string "… … … … … …\p"
 	.string "Then might TEAM ALGORITHM's plan to\n"
 	.string "drown the world for the sake of\l"
-	.string "their machines be wrong as well?$"
+	.string "their DATA CENTERS be wrong as well?$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeWillGiveUp:
 	.string "JULIAN: All right…\n"

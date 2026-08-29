@@ -272,7 +272,7 @@ SeafloorCavern_Room9_Text_ArchieWhatRainingTooHard:
 	.string "Good… That should have happened.\n"
 	.string "That is why we awakened KYOGRE.\p"
 	.string "A sea deep enough and cold enough\n"
-	.string "to swallow every hall we own.\p"
+	.string "to swallow every DATA CENTER we own.\p"
 	.string "What?!\p"
 	.string "It's raining far harder than we\n"
 	.string "envisioned? You're in danger?\p"
