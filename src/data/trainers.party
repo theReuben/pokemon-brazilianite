@@ -5845,33 +5845,75 @@ Double Battle: No
 AI: Basic Trainer
 Mugshot: Yellow
 
-Talonflame
+Poliwrath (M) @ King's Rock
+Ability: Water Absorb
+Level: 56
+Nature: Adamant
+Tera Type: Water
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Def
+- Drain Punch
+- Liquidation
+- Ice Punch
+- Bulk Up
+
+Lanturn (F) @ Air Balloon
+Ability: Volt Absorb
+Level: 56
+Nature: Modest
+Tera Type: Water
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+- Thunderbolt
+- Scald
+- Dazzling Gleam
+- Ice Beam
+
+Dracovish @ Assault Vest
+Ability: Strong Jaw
+Level: 56
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+- Fishious Rend
+- Ice Fang
+- Psychic Fangs
+- Crunch
+
+Jellicent (M) @ Leftovers
+Ability: Cursed Body
 Level: 57
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-
-Basculegion
-Level: 55
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-
-Noivern
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-
-Glimmora
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-
-Ursaluna
-Level: 56
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-
-Gholdengo @ Sitrus Berry
-Level: 58
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Make It Rain
-- Shadow Ball
+Nature: Bold
+Tera Type: Water
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 220 SpA / 36 Spe
+- Scald
+- Energy Ball
+- Hex
 - Recover
-- Power Gem
+
+Slowbro (M) @ Slowbronite
+Ability: Regenerator
+Level: 57
+Nature: Bold
+Tera Type: Water
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 SpA
+- Slack Off
+- Calm Mind
+- Flamethrower
+- Psychic
+
+Tauros-Paldea-Aqua (M) @ Shell Bell
+Ability: Intimidate
+Level: 58
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+- Raging Bull
+- Earthquake
+- Close Combat
+- Trailblaze
 
 === TRAINER_ANDREW ===
 Name: ANDREW
