@@ -269,53 +269,73 @@ MauvilleCity_Gym_Text_GymGuidePostVictory:
 	.string "You've powered the door open!$"
 
 MauvilleCity_Gym_Text_KirkIntro:
-	.string "My electric soul, it'll shatter your\n"
-	.string "dreams whole, whoa-yeahah!$"
+	.string "Mm… Let me look at you properly.\p"
+	.string "Not ripe. Not yet.\n"
+	.string "But something is growing in there.\p"
+	.string "Show me. I'll try to be gentle.$"
 
 MauvilleCity_Gym_Text_KirkDefeat:
-	.string "That was plugged in, amped up,\n"
-	.string "over-driven electric, man!$"
+	.string "Ahh…\n"
+	.string "Do that again.$"
 
 MauvilleCity_Gym_Text_KirkPostBattle:
-	.string "POKéMON and rock, it's all about heart,\n"
-	.string "whoa-yeah!$"
+	.string "I came here for the LEADER.\p"
+	.string "He eats, he laughs, and he breaks\n"
+	.string "stronger men than you without\l"
+	.string "changing his face.\p"
+	.string "I'll wait as long as it takes.$"
 
 MauvilleCity_Gym_Text_ShawnIntro:
-	.string "I trained under LUFFY!\n"
-	.string "There ain't no way I'll lose easily!$"
+	.string "You're in a hurry, aren't you.\p"
+	.string "Everyone here is. I think it comes\n"
+	.string "of being short-lived.\p"
+	.string "Fine. This won't take long.$"
 
 MauvilleCity_Gym_Text_ShawnDefeat:
-	.string "Unplugged and turned off…$"
+	.string "Hm. Stronger than you look.\p"
+	.string "I'll remember that for a few\n"
+	.string "decades.$"
 
 MauvilleCity_Gym_Text_ShawnPostBattle:
-	.string "LUFFY, our GYM LEADER, turned up\n"
-	.string "here one day out of nowhere.\p"
-	.string "He ate everything in the GYM, then\n"
-	.string "asked who the strongest one was.$"
+	.string "I stayed in this town eleven years\n"
+	.string "to learn a spell that makes tea\l"
+	.string "slightly warmer.\p"
+	.string "Worth it.\p"
+	.string "The LEADER once waited three days\n"
+	.string "for his lunch.\l"
+	.string "He calls that patience.$"
 
 MauvilleCity_Gym_Text_BenIntro:
-	.string "This GYM's got puzzles!\n"
-	.string "Isn't it fun?$"
+	.string "Hey! You got through the doors!\p"
+	.string "I'm not going easy on you, sorry.\n"
+	.string "That'd be rude.$"
 
 MauvilleCity_Gym_Text_BenDefeat:
-	.string "It's no fun to lose…$"
+	.string "Yeah!\n"
+	.string "That's what I'm talking about!$"
 
 MauvilleCity_Gym_Text_BenPostBattle:
-	.string "LUFFY says the switches are too\n"
-	.string "complicated to remember.$"
+	.string "Sometimes a voice in my head tells\n"
+	.string "me to stop holding back.\p"
+	.string "I ignore it. Mostly.\p"
+	.string "Go see the LEADER. He never holds\n"
+	.string "back at all.$"
 
 MauvilleCity_Gym_Text_VivianIntro:
-	.string "With my charm and my POKéMON's moves,\n"
-	.string "you'll be shocked!$"
+	.string "You got any money?\p"
+	.string "Sorry. Habit.\n"
+	.string "Let's just battle.$"
 
 MauvilleCity_Gym_Text_VivianDefeat:
-	.string "I'm shocked by your power!$"
+	.string "Ah, whatever.\n"
+	.string "I've had worse days.$"
 
 MauvilleCity_Gym_Text_VivianPostBattle:
-	.string "They say LUFFY has been all over\n"
-	.string "the sea.\p"
-	.string "He talks about it like it's nothing.\l"
-	.string "I don't think he's making it up!$"
+	.string "I've got a bed now, and bread with\n"
+	.string "jam on it whenever I want.\p"
+	.string "People keep asking what my dream is.\p"
+	.string "That's it.\n"
+	.string "That's the dream.$"
 
 MauvilleCity_Gym_Text_AngeloIntro:
 	.string "Slime!$"
