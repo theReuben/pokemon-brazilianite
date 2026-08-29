@@ -352,11 +352,15 @@ Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Murkrow
+Simisage
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Basculin-White-Striped
+Simisear
+Level: 27
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Simipour
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10339,17 +10343,21 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_GRUNT_WEATHER_INST_5 ===
 Name: /grunt
 Class: Team Algorithm
-Pic: Algorithm Grunt F
-Gender: Female
+Pic: Algorithm Grunt M
+Gender: Male
 Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Noibat
+Simisage
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Murkrow
+Simisear
+Level: 27
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Simipour
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 

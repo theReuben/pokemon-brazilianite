@@ -206,17 +206,18 @@ Route119_WeatherInstitute_2F_EventScript_WeatherScientist::
 	end
 
 Route119_WeatherInstitute_2F_Text_Grunt2Intro:
-	.string "The INSTITUTE created a type of\n"
-	.string "POKéMON that has something to do with\l"
-	.string "the weather. We're here to take them!$"
+	.string "The guy back there wouldn't shut up\n"
+	.string "about his three monkeys.\p"
+	.string "They looked cool, so I went and got\n"
+	.string "my own. Same three!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt2Defeat:
-	.string "Our plan's being spoiled by a kid?$"
+	.string "Same monkeys, same result…$"
 
 Route119_WeatherInstitute_2F_Text_Grunt2PostBattle:
-	.string "If the POKéMON they made here can\n"
-	.string "control the weather freely, then we of\l"
-	.string "TEAM ALGORITHM definitely need it!$"
+	.string "He says mine don't count because\n"
+	.string "he had his first.\p"
+	.string "They look identical to me!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt3Intro:
 	.string "We're TEAM ALGORITHM!\n"
@@ -232,19 +233,20 @@ Route119_WeatherInstitute_2F_Text_Grunt3PostBattle:
 	.string "You stay out of our way!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt5Intro:
-	.string "Don't tell me you're looking for that\n"
-	.string "weather POKéMON, too?\p"
-	.string "That's a no-no!\n"
-	.string "We were here to get it first!$"
+	.string "Hold it. Look at these three.\p"
+	.string "Nobody else has them. Not one\n"
+	.string "other person in the world. Just me.\p"
+	.string "Do you even know what they're\n"
+	.string "worth?$"
 
 Route119_WeatherInstitute_2F_Text_Grunt5Defeat:
-	.string "Oh, will you look at my POKéMON?$"
+	.string "That is not how value works!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt5PostBattle:
-	.string "Humph, so what?\n"
-	.string "What we want…\p"
-	.string "What we really want isn't here…\n"
-	.string "Ihihihihi…$"
+	.string "Fine. You beat them.\p"
+	.string "They're still worth more than your\n"
+	.string "whole team put together.\l"
+	.string "I have papers that say so.$"
 
 Route119_WeatherInstitute_2F_Text_ShellyIntro:
 	.string "Ahahahaha!\p"
