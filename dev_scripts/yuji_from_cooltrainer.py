@@ -26,7 +26,9 @@ PAL = {
     2:  (246, 205, 156),
     3:  (205, 156, 115),
     4:  (115,  82,  65),
-    5:  (238, 156, 115),
+    5:  (124, 128, 142),        # 175 -> 128  uniform, highlight: this is
+                                #              the lit edge of his arm and
+                                #              leg, not skin
     6:  ( 96,  99, 112),        # 135 -> 100  uniform, lit
     7:  ( 66,  68,  80),        # 115 ->  69  uniform, mid
     8:  ( 40,  42,  52),        #  71 ->  42  uniform, shadow
@@ -49,6 +51,13 @@ px = im.load()
 for y in range(16, 22):
     for x in range(35, 43):
         px[x, y] = 0
+
+# Two stray skin-tone pixels sit on his hip, where the base used them as
+# a highlight on the tracksuit. They are the last orange on the outfit.
+for y in range(36, 52):
+    for x in range(64):
+        if px[x, y] == 3:
+            px[x, y] = 5
 
 # The trim runs shoulder to ankle as one stripe. Red belongs at his
 # collar, so below the waist it joins the uniform.
