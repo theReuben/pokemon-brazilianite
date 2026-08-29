@@ -4506,47 +4506,82 @@ Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_GLACIA ===
-Name: GLACIA
+Name: HUSH
 Class: Elite Four
-Pic: Elite Four Glacia
+Pic: Hex Maniac
 Gender: Female
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Force Setup First Turn
 Mugshot: Pink
 
-Sealeo
+Bisharp @ Eviolite
+Ability: Defiant
 Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Encore
-- Body Slam
-- Hail
-- Ice Ball
-
-Vanilluxe
-Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Sealeo
-Level: 52
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Attract
-- Double Edge
-- Hail
-- Blizzard
-
-Vanilluxe
-Level: 52
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Walrein @ Sitrus Berry
-Level: 53
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Surf
-- Body Slam
+EVs: 252 HP / 252 Atk / 4 SpD
+- Swords Dance
+- Thunder Wave
+- Iron Head
+- Sucker Punch
+
+Scrafty @ Assault Vest
+Ability: Moxie
+Level: 50
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+- Close Combat
+- Drain Punch
+- Fake Out
+- Throat Chop
+
+Honchkrow @ Scope Lens
+Ability: Super Luck
+Level: 51
+Nature: Lonely
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 252 Atk / 8 SpA
+- Night Slash
+- Air Cutter
+- Sucker Punch
+- U-turn
+
+Urshifu @ Focus Sash
+Ability: Unseen Fist
+Level: 52
+Nature: Jolly
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+- Close Combat
+- Iron Head
+- Wicked Blow
+- Swords Dance
+
+Moltres-Galar @ Sitrus Berry
+Ability: Berserk
+Level: 52
+Nature: Modest
+Tera Type: Ghost
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Def / 164 SpA / 44 SpD / 44 Spe
+- Nasty Plot
+- Fiery Wrath
+- Hurricane
+- Agility
+
+Greninja-Bond (M) @ Life Orb
+Ability: Battle Bond
+Level: 54
+Nature: Timid
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+- Hydro Pump
+- Dark Pulse
 - Ice Beam
-- Sheer Cold
+- Spikes
 
 === TRAINER_DRAKE ===
 Name: DRAKE

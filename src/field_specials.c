@@ -183,10 +183,10 @@ static const u8 sText_SpaceTimes[] = _(" time(s)");
 
 static const u8 sText_Wallace[] = _("WALLACE");
 static const u8 sText_Steven[] = _("STEVEN");
-static const u8 sText_Brawly[] = _("BRAWLY");
+static const u8 sText_Merlot[] = _("MERLOT");
 static const u8 sText_Winona[] = _("WINONA");
 static const u8 sText_Phoebe[] = _("PHOEBE");
-static const u8 sText_Glacia[] = _("GLACIA");
+static const u8 sText_Hush[] = _("HUSH");
 
 void Special_ShowDiploma(void)
 {
@@ -4293,7 +4293,7 @@ static void BufferFanClubTrainerName_(struct LinkBattleRecords *linkRecords, u8 
             StringCopy(gStringVar1, sText_Steven);
             break;
         case 2:
-            StringCopy(gStringVar1, sText_Brawly);
+            StringCopy(gStringVar1, sText_Merlot);
             break;
         case 3:
             StringCopy(gStringVar1, sText_Winona);
@@ -4302,7 +4302,7 @@ static void BufferFanClubTrainerName_(struct LinkBattleRecords *linkRecords, u8 
             StringCopy(gStringVar1, sText_Phoebe);
             break;
         case 5:
-            StringCopy(gStringVar1, sText_Glacia);
+            StringCopy(gStringVar1, sText_Hush);
             break;
         default:
             StringCopy(gStringVar1, sText_Wallace);
@@ -4328,7 +4328,7 @@ static void BufferFanClubTrainerName_(u8 whichLinkTrainer, u8 whichNPCTrainer)
         StringCopy(gStringVar1, sText_Steven);
         break;
     case 2:
-        StringCopy(gStringVar1, sText_Brawly);
+        StringCopy(gStringVar1, sText_Merlot);
         break;
     case 3:
         StringCopy(gStringVar1, sText_Winona);
@@ -4337,7 +4337,7 @@ static void BufferFanClubTrainerName_(u8 whichLinkTrainer, u8 whichNPCTrainer)
         StringCopy(gStringVar1, sText_Phoebe);
         break;
     case 5:
-        StringCopy(gStringVar1, sText_Glacia);
+        StringCopy(gStringVar1, sText_Hush);
         break;
     default:
         StringCopy(gStringVar1, sText_Wallace);

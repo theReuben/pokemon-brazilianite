@@ -59,25 +59,23 @@ EverGrandeCity_GlaciasRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_GlaciasRoom_Text_IntroSpeech:
-	.string "Welcome, my name is GLACIA\n"
+	.string "Welcome. My name is HUSH,\n"
 	.string "of the ELITE FOUR.\p"
-	.string "I've traveled from afar to HOENN\n"
-	.string "so that I may hone my ice skills.\p"
-	.string "But all I have seen are challenges by\n"
-	.string "weak TRAINERS and their POKéMON.\p"
-	.string "What about you?\p"
-	.string "It would please me to no end if I could\n"
-	.string "go all out against you!$"
+	.string "It's me. ijiji.\p"
+	.string "You've fought me before, though not\n"
+	.string "in a room like this one.\p"
+	.string "Everything I use is a little unkind.\n"
+	.string "I want you to know that going in.\p"
+	.string "Whenever you're ready.$"
 
 EverGrandeCity_GlaciasRoom_Text_Defeat:
-	.string "You and your POKéMON…\n"
-	.string "How hot your spirits burn!\p"
-	.string "The all-consuming heat overwhelms.\p"
-	.string "It's no surprise that my icy skills\n"
-	.string "failed to harm you.$"
+	.string "Ah.\p"
+	.string "That's the thing about going second,\n"
+	.string "isn't it. You have to be right.\p"
+	.string "You were. Well done.$"
 
 EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech:
-	.string "Advance to the next room.\p"
-	.string "And there, confirm the truly fearsome\n"
-	.string "side of the POKéMON LEAGUE.$"
+	.string "Go through to the next room.\p"
+	.string "He's been waiting longer than any of\n"
+	.string "us, and he doesn't play fair either.$"
 
