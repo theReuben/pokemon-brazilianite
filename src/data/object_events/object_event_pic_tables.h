@@ -201,6 +201,18 @@ static const struct SpriteFrameImage sPicTable_Luffy[] = {
     overworld_frame(gObjectEventPic_Luffy, 2, 4, 8),
 };
 
+static const struct SpriteFrameImage sPicTable_Praesta[] = {
+    overworld_frame(gObjectEventPic_Praesta, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Praesta, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Praesta, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Praesta, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Praesta, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Praesta, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Praesta, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Praesta, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Praesta, 2, 4, 2),
+};
+
 static const struct SpriteFrameImage sPicTable_Denji[] = {
     overworld_frame(gObjectEventPic_Denji, 2, 4, 0),
     overworld_frame(gObjectEventPic_Denji, 2, 4, 1),
