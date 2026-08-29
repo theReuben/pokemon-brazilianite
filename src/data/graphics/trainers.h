@@ -354,6 +354,8 @@ const u32 gTrainerFrontPic_Grimer[] = INCBIN_U32("graphics/trainers/front_pics/g
 const u16 gTrainerPalette_Grimer[] = INCBIN_U16("graphics/trainers/palettes/grimer.gbapal");
 const u32 gTrainerFrontPic_Yuji[] = INCBIN_U32("graphics/trainers/front_pics/yuji.4bpp.smol");
 const u16 gTrainerPalette_Yuji[] = INCBIN_U16("graphics/trainers/palettes/yuji.gbapal");
+const u32 gTrainerFrontPic_Denji[] = INCBIN_U32("graphics/trainers/front_pics/denji.4bpp.smol");
+const u16 gTrainerPalette_Denji[] = INCBIN_U16("graphics/trainers/palettes/denji.gbapal");
 
 const u32 gTrainerFrontPic_TamerFrlg[] = INCBIN_U32("graphics/trainers/front_pics/tamer_frlg.4bpp.smol");
 const u16 gTrainerPalette_TamerFrlg[] = INCBIN_U16("graphics/trainers/palettes/tamer_frlg.gbapal");
@@ -678,6 +680,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_FRONT_LIL_JON, gTrainerFrontPic_LilJon, gTrainerPalette_LilJon),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_GRIMER, gTrainerFrontPic_Grimer, gTrainerPalette_Grimer),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_YUJI, gTrainerFrontPic_Yuji, gTrainerPalette_Yuji),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_DENJI, gTrainerFrontPic_Denji, gTrainerPalette_Denji),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_TAMER_FRLG, gTrainerFrontPic_TamerFrlg, gTrainerPalette_TamerFrlg),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_BIRD_KEEPER_FRLG, gTrainerFrontPic_BirdKeeperFrlg, gTrainerPalette_BirdKeeperFrlg),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_BLACK_BELT_FRLG, gTrainerFrontPic_BlackBeltFrlg, gTrainerPalette_BlackBeltFrlg),
