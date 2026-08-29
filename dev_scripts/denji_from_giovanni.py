@@ -33,7 +33,7 @@ PAL = {
     3:  (172, 131,  98),
     4:  (123,  90,  82),
     5:  (222, 176,  74),        # hair, mid    (was the ball's pink)
-    6:  (164,  82, 115),        # now unused
+    6:  (216,  64,  56),        # the POKe BALL's red (was the emblem's)
     7:  (176, 126,  45),        # hair, shadow (was the ball's yellow)
     8:  (213, 213, 222),        # shirt, untouched
     9:  ( 41,  45,  49),        #  54 ->  44  suit, shadow
@@ -49,10 +49,15 @@ im = Image.open(BASE)
 assert im.size == (64, 64) and im.mode == 'P'
 px = im.load()
 
-# The POKe BALL, tossed clear of his hand in rows 12-18.
+# The POKe BALL he tosses, in rows 12-18. Its red and its sparkle were
+# drawn in 5 and 7, which his hair now owns, so those pixels move onto
+# index 6 - the one the ROCKET emblem freed - which is the ball's red.
+# The sparkle keeps 7 and comes out gold, which suits it.
+BALL = {5: 6, 4: 6}
 for y in range(12, 19):
     for x in range(14, 22):
-        px[x, y] = 0
+        if px[x, y] in BALL:
+            px[x, y] = BALL[px[x, y]]
 
 # The ROCKET pocket emblem. Everything in the patch becomes suit, so no
 # pale outline is left ghosting where the pocket was.

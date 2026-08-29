@@ -45,12 +45,15 @@ im = Image.open(BASE)
 assert im.size == (64, 64) and im.mode == 'P'
 px = im.load()
 
-# The POKe BALL he tosses sits alone in rows 16-21, x36-41, with a clear
-# row between it and his hand - and it is drawn in the tracksuit's own
-# reds, so it would come out as a dark lump. YUJI throws punches.
-for y in range(16, 22):
-    for x in range(35, 43):
-        px[x, y] = 0
+# The POKe BALL he tosses is drawn in the tracksuit's own reds, so every
+# step below would recolour it along with the clothes. Its pixels are
+# taken now and painted back at the end, out of the palette he ends up
+# with: the collar's two reds for the top half, white and a grey for the
+# bottom.
+BALL_BOX = (35, 43, 16, 22)
+BALL = {6: 12, 8: 13, 12: 14, 13: 5}
+ball = {(x, y): px[x, y] for x in range(BALL_BOX[0], BALL_BOX[1])
+        for y in range(BALL_BOX[2], BALL_BOX[3])}
 
 # Two stray skin-tone pixels sit on his hip, where the base used them as
 # a highlight on the tracksuit. They are the last orange on the outfit.
@@ -80,6 +83,9 @@ for y in (19, 20):
             px[x, y] = 12
         elif px[x, y] in UNIFORM_DARK:
             px[x, y] = 13
+
+for (x, y), v in ball.items():
+    px[x, y] = BALL.get(v, v)
 
 flat = []
 for i in range(16):
