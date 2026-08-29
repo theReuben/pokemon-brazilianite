@@ -427,8 +427,8 @@ MtPyre_Summit_Text_Grunt1Intro:
 	.string "We can't fall behind!$"
 
 MtPyre_Summit_Text_Grunt1Defeat:
-	.string "I thought you were one of the BLOCKCHAINS\n"
-	.string "who happened to come back…$"
+	.string "I thought you were one of the\n"
+	.string "BLOCKCHAIN lot coming back…$"
 
 MtPyre_Summit_Text_Grunt1PostBattle:
 	.string "Yeah, so you are strong…\n"
@@ -437,8 +437,8 @@ MtPyre_Summit_Text_Grunt1PostBattle:
 MtPyre_Summit_Text_Grunt2Intro:
 	.string "Hah!\n"
 	.string "Too bad for you!\p"
-	.string "If you came earlier, you only would've\n"
-	.string "had to battle the wimpy TEAM BLOCKCHAIN.\p"
+	.string "Come earlier and you'd only have had\n"
+	.string "to battle the wimpy BLOCKCHAINS.\p"
 	.string "But since you arrived now, you have\n"
 	.string "to take on us toughies!$"
 
@@ -482,12 +482,13 @@ MtPyre_Summit_Text_Grunt4PostBattle:
 	.string "with us members and our leader.$"
 
 MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo:
-	.string "JULIAN: TEAM BLOCKCHAIN's leader got ahead\n"
-	.string "of us, but we also got what we wanted.\p"
+	.string "JULIAN: TEAM BLOCKCHAIN's leader\n"
+	.string "got ahead of us, but we also got\l"
+	.string "what we wanted.\p"
 	.string "The RED ORB preserved at MT. PYRE…\n"
 	.string "I now have it in my possession!\p"
-	.string "Fufufu… Now we can bring our ultimate\n"
-	.string "objective to fruition!\p"
+	.string "Fufufu… At last, the cooling can\n"
+	.string "begin!\p"
 	.string "Okay, TEAM!\n"
 	.string "We're pulling out!$"
 

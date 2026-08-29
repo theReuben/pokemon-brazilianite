@@ -1591,6 +1591,7 @@ SootopolisCity_Text_AfterAllOurScheming:
 	.string "frantic efforts, that one POKéMON's\l"
 	.string "simple action puts everything right\l"
 	.string "again as if nothing had happened…\p"
+	.string "And my rig sits idle in the dark.\p"
 	.string "Fu…\n"
 	.string "Fuhahaha…$"
 
@@ -1610,6 +1611,10 @@ SootopolisCity_Text_TryingMeaninglessToPokemon:
 	.string "to its normal state…\p"
 	.string "Haha…\n"
 	.string "Hahaha…\p"
+	.string "That POKéMON can lift the sea\n"
+	.string "itself…\p"
+	.string "And I wanted it to cool my\n"
+	.string "machines.\p"
 	.string "Maybe what we were trying to do was\n"
 	.string "something small, even meaningless,\l"
 	.string "to POKéMON…$"
@@ -1675,7 +1680,8 @@ SootopolisCity_Text_HaventYouScaledSkyPillar:
 
 SootopolisCity_Text_AquaMagmaDidntMeanHarm:
 	.string "JAKE: {PLAYER}{KUN}…\p"
-	.string "The leaders of TEAM BLOCKCHAIN and ALGORITHM,\n"
+	.string "The leaders of TEAM BLOCKCHAIN and\n"
+	.string "TEAM ALGORITHM…\p"
 	.string "I don't think they meant harm.\p"
 	.string "It wouldn't hurt to hear what they\n"
 	.string "have to say for themselves.$"
