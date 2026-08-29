@@ -1276,12 +1276,12 @@ PetalburgCity_Gym_Text_NormanDefeat:
 	.string "Here, take this.$"
 
 PetalburgCity_Gym_Text_ReceivedBalanceBadge:
-	.string "{PLAYER} received the BALANCE BADGE\n"
+	.string "{PLAYER} received A MOTHER'S LOVE\n"
 	.string "from MAMA BOSA!$"
 
 PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:
-	.string "MAMA BOSA: With that BADGE, the DEFENSE\n"
-	.string "of all your POKéMON will increase.\p"
+	.string "MAMA BOSA: With a mother's love, the\n"
+	.string "DEFENSE of all your POKéMON goes up.\p"
 	.string "POKéMON that know the HM move SURF\n"
 	.string "will be able to travel over water.\p"
 	.string "This is my gift to you. {PLAYER}, I'm\n"

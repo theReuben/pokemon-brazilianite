@@ -230,17 +230,17 @@ SootopolisCity_Gym_1F_Text_JuanDefeat:
 	.string "… … … … … …\p"
 	.string "Hahaha, I merely jest!\p"
 	.string "Rather than my clothes, I shall reward\n"
-	.string "you with this, the RAIN BADGE!$"
+	.string "you with A HORSEGIRL BODY PILLOW!$"
 
 SootopolisCity_Gym_1F_Text_ReceivedRainBadge:
-	.string "{PLAYER} received the RAIN BADGE\n"
-	.string "from JUAN.$"
+	.string "{PLAYER} received A HORSEGIRL BODY\n"
+	.string "PILLOW from JUAN.$"
 
 SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis:
-	.string "Having the RAIN BADGE shall assure you\n"
+	.string "That body pillow shall assure you\n"
 	.string "the full obedience of all your POKéMON\l"
 	.string "to your every command.\p"
-	.string "The RAIN BADGE also allows the use\n"
+	.string "It also allows you to make use\n"
 	.string "of the HM move WATERFALL to scale\l"
 	.string "walls of cascading water.\p"
 	.string "And, so that you never forget the\n"

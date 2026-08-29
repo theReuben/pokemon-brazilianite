@@ -569,11 +569,11 @@ MossdeepCity_Gym_Text_TateAndLizaDefeat:
 	.string "LIZA: So, in recognition, take this.$"
 
 MossdeepCity_Gym_Text_ReceivedMindBadge:
-	.string "{PLAYER} received the MIND BADGE\n"
-	.string "from TATE and LIZA.$"
+	.string "{PLAYER} received A PRIME SUB\n"
+	.string "from MR and MRS P.$"
 
 MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis:
-	.string "TATE: The MIND BADGE enhances the\n"
+	.string "MR P: A PRIME SUB enhances the\n"
 	.string "SP. ATK and SP. DEF of POKéMON.\p"
 	.string "LIZA: It also lets you use the HM move\n"
 	.string "DIVE outside of battle.\p"

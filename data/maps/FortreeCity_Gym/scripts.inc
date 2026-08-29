@@ -250,11 +250,11 @@ FortreeCity_Gym_Text_WinonaDefeat:
 	.string "I present to you this GYM BADGE.$"
 
 FortreeCity_Gym_Text_ReceivedFeatherBadge:
-	.string "{PLAYER} received the FEATHER BADGE\n"
+	.string "{PLAYER} received THE SEVENTH SNAKE\n"
 	.string "from WINONA.$"
 
 FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis:
-	.string "With the FEATHER BADGE, all POKéMON up\n"
+	.string "With THE SEVENTH SNAKE, POKéMON up\n"
 	.string "to LV 70, even those received through\l"
 	.string "trades, will obey your every command.\p"
 	.string "You will also be able to use\n"

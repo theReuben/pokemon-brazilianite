@@ -126,7 +126,7 @@ RustboroCity_Gym_Text_GymGuidePostVictory:
 	.string "amplifiers behind me.\p"
 	.string "Great!\n"
 	.string "Check your TRAINER CARD.\p"
-	.string "THA CARTER you got should be\n"
+	.string "SHOTS! SHOTS! SHOTS! should be\n"
 	.string "properly recorded on it.\p"
 	.string "In other words…\p"
 	.string "You've climbed the first step on\n"
@@ -187,16 +187,16 @@ RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "The POKéMON LEAGUE's rules state\n"
 	.string "that TRAINERS are to be given this\l"
 	.string "if they defeat a GYM LEADER.\p"
-	.string "Take THA CARTER. You earned every\n"
-	.string "decibel of it.$"
+	.string "SHOTS! SHOTS! SHOTS! You earned\n"
+	.string "every decibel of it.$"
 
 RustboroCity_Gym_Text_ReceivedStoneBadge:
-	.string "{PLAYER} received THA CARTER\n"
-	.string "from LIL WAYNE.$"
+	.string "{PLAYER} received SHOTS! SHOTS!\n"
+	.string "SHOTS! from LIL WAYNE.$"
 
 RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
-	.string "THA CARTER heightens the ATTACK\n"
-	.string "power of your POKéMON.\p"
+	.string "SHOTS! SHOTS! SHOTS! heightens the\n"
+	.string "ATTACK power of your POKéMON.\p"
 	.string "It also enables them to use the HM move\n"
 	.string "CUT outside of battle.\p"
 	.string "Please take this with you, too.$"
