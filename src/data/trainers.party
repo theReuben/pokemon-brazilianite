@@ -4479,10 +4479,10 @@ EVs: 252 HP / 252 Def / 4 SpA
 - Roost
 
 === TRAINER_PHOEBE ===
-Name: PHOEBE
+Name: PRAESTA
 Class: Elite Four
-Pic: Elite Four Phoebe
-Gender: Female
+Pic: Praesta
+Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No

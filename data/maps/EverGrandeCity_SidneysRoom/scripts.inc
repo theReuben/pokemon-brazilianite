@@ -87,5 +87,5 @@ EverGrandeCity_SidneysRoom_Text_PostBattleSpeech:
 	.string "I could see it before you opened\l"
 	.string "the door.\p"
 	.string "On you go. The next one's nastier\n"
-	.string "than me, and she knows it.$"
+	.string "than me, and he knows it.$"
 
