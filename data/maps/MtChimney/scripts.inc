@@ -610,8 +610,8 @@ MtChimney_Text_TabithaPostBattle:
 	.string "Hehehe…$"
 
 MtChimney_Text_Grunt2Intro:
-	.string "We of TEAM BLOCKCHAIN are working hard for\n"
-	.string "everyone's sake.\p"
+	.string "We of TEAM BLOCKCHAIN are working\n"
+	.string "hard for everyone's sake.\p"
 	.string "Like, if that thing crunches numbers\n"
 	.string "as fast as the BOSS says, we're all\l"
 	.string "getting rich.\p"

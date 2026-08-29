@@ -150,7 +150,8 @@ AquaHideout_B1F_Text_Grunt7Intro:
 	.string "Hey!\n"
 	.string "You there!\p"
 	.string "Which do you think is cooler?\n"
-	.string "TEAM ALGORITHM's uniform or TEAM BLOCKCHAIN's?$"
+	.string "TEAM ALGORITHM's uniform, or\n"
+	.string "TEAM BLOCKCHAIN's?$"
 
 AquaHideout_B1F_Text_Grunt7Defeat:
 	.string "I lost in a cool way…$"

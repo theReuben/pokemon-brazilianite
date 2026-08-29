@@ -552,8 +552,8 @@ LilycoveCity_Text_MovedLootIntoHideoutToday:
 LilycoveCity_Text_ChanceToDoBigThings:
 	.string "I'm just a GRUNT, so I don't know what\n"
 	.string "the BOSS is thinking…\p"
-	.string "But being on TEAM ALGORITHM, I know I'll get\n"
-	.string "the chance to do big things!\p"
+	.string "But being on TEAM ALGORITHM, I know\n"
+	.string "I'll get the chance to do big things!\p"
 	.string "Wh-who are you?!\n"
 	.string "I was just talking to myself!$"
 

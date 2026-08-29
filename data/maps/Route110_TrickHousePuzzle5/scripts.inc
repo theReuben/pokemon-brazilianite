@@ -957,8 +957,8 @@ Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz2:
 
 Route110_TrickHousePuzzle5_Text_Mechadoll2Quiz3:
 	.string "MECHADOLL 2 QUIZ.\p"
-	.string "Which of these POKéMON did TEAM ALGORITHM\n"
-	.string "use in PETALBURG FOREST?$"
+	.string "Which of these POKéMON did TEAM\n"
+	.string "ALGORITHM use in PETALBURG FOREST?$"
 
 Route110_TrickHousePuzzle5_Text_Mechadoll3Intro:
 	.string "CLICKETY-CLACK…\n"

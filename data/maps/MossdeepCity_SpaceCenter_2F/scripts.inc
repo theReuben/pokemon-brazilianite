@@ -358,8 +358,8 @@ MossdeepCity_SpaceCenter_2F_Text_WouldveLikedToBeAstronaut:
 	.string "I can and will try!$"
 
 MossdeepCity_SpaceCenter_2F_Text_MagmaCantGetAwayWithThis:
-	.string "If TEAM BLOCKCHAIN takes the rocket fuel,\n"
-	.string "I won't be able to go to space!\p"
+	.string "If TEAM BLOCKCHAIN takes the rocket\n"
+	.string "fuel, I won't be able to go to space!\p"
 	.string "They can't be allowed to get away\n"
 	.string "with such an outrage!$"
 

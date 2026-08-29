@@ -23,9 +23,9 @@ MagmaHideout_2F_1R_EventScript_Grunt5::
 
 MagmaHideout_2F_1R_Text_Grunt14Intro:
 	.string "What, what, what?\p"
-	.string "Only TEAM BLOCKCHAIN members are supposed\n"
-	.string "to be in here!\p"
-	.string "But you're not dressed in TEAM BLOCKCHAIN's\n"
+	.string "Only TEAM BLOCKCHAIN members are\n"
+	.string "supposed to be in here!\p"
+	.string "But you're not dressed in our\n"
 	.string "uniform…\p"
 	.string "You rouse my suspicion!\n"
 	.string "Battle with me!$"

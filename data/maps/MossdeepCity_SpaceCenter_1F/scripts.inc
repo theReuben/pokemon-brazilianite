@@ -302,8 +302,8 @@ MossdeepCity_SpaceCenter_1F_Text_RocketLaunchDemandsPerfection:
 	.string "Why? It's a dream that never ends.$"
 
 MossdeepCity_SpaceCenter_1F_Text_MagmaHaveSightsOnSpaceCenter:
-	.string "Those BLOCKCHAIN thugs have their sights\n"
-	.string "set on our SPACE CENTER.\p"
+	.string "Those BLOCKCHAIN thugs have their\n"
+	.string "sights set on our SPACE CENTER.\p"
 	.string "But we can't allow anything that minor\n"
 	.string "to interfere with our rocket launch!$"
 
@@ -318,8 +318,8 @@ MossdeepCity_SpaceCenter_1F_Text_HoennFamousForMeteorShowers:
 	.string "its meteor showers for a long time.$"
 
 MossdeepCity_SpaceCenter_1F_Text_MagmaCantStealFuelTakeThis:
-	.string "TEAM BLOCKCHAIN can't be allowed to steal\n"
-	.string "the rocket fuel.\p"
+	.string "TEAM BLOCKCHAIN can't be allowed\n"
+	.string "to steal the rocket fuel.\p"
 	.string "Oh, by the way, you can have this stone\n"
 	.string "I found on the beach.$"
 
@@ -352,8 +352,8 @@ MossdeepCity_SpaceCenter_1F_Text_MagmaWantsToSpoilMyDream:
 MossdeepCity_SpaceCenter_1F_Text_StevenMagmaCantBeAllowedToTakeFuel:
 	.string "STEVEN: {PLAYER}{KUN}, have you read that\n"
 	.string "proclamation already?\p"
-	.string "TEAM BLOCKCHAIN is coming after the rocket\n"
-	.string "fuel on this island.\p"
+	.string "TEAM BLOCKCHAIN is coming after the\n"
+	.string "rocket fuel on this island.\p"
 	.string "I don't know what they'd need it for,\n"
 	.string "but they can't be allowed to take it.\p"
 	.string "I'll keep an eye on things for\n"
@@ -421,4 +421,4 @@ MossdeepCity_SpaceCenter_1F_Text_MagmaIntentToStealNotice:
 	.string "“Please don't try to stop us.\n"
 	.string "We will take the fuel no matter what.\p"
 	.string "“Long may the chain grow!\n"
-	.string "                                          TEAM BLOCKCHAIN”$"
+	.string "                                    TEAM BLOCKCHAIN”$"

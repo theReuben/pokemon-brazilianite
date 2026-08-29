@@ -26,8 +26,9 @@ MagmaHideout_3F_1R_Text_Grunt9PostBattle:
 MagmaHideout_3F_1R_Text_Grunt16Intro:
 	.string "We joined so we can help our leader\n"
 	.string "achieve his fantastic vision.\p"
-	.string "I don't care if you're with TEAM ALGORITHM\n"
-	.string "or if you're just some kid passing by.\p"
+	.string "I don't care if you're with TEAM\n"
+	.string "ALGORITHM or if you're just some kid\l"
+	.string "passing by.\p"
 	.string "No one interferes with us and gets\n"
 	.string "away with it!$"
 

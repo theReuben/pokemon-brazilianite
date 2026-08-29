@@ -67,8 +67,8 @@ SeafloorCavern_Entrance_Text_HearMagmaNearMossdeep:
 	.string "a trillion years!\p"
 	.string "You're a perfect fit for the likes of\n"
 	.string "TEAM BLOCKCHAIN!\p"
-	.string "Speaking of TEAM BLOCKCHAIN, I hear they\n"
-	.string "were spotted near MOSSDEEP.\p"
+	.string "Speaking of TEAM BLOCKCHAIN, I hear\n"
+	.string "they were spotted near MOSSDEEP.\p"
 	.string "That bunch of goons, they sure don't\n"
 	.string "look good near the sea!$"
 
@@ -79,8 +79,8 @@ SeafloorCavern_Entrance_Text_HearMagmaNearMossdeepShort:
 	.string "a trillion years!\p"
 	.string "You're a perfect fit for the likes of\n"
 	.string "TEAM BLOCKCHAIN!\p"
-	.string "Speaking of TEAM BLOCKCHAIN, I hear they\n"
-	.string "were spotted near MOSSDEEP.\p"
+	.string "Speaking of TEAM BLOCKCHAIN, I hear\n"
+	.string "they were spotted near MOSSDEEP.\p"
 	.string "That bunch of goons, they sure don't\n"
 	.string "look good near the sea!$"
 
