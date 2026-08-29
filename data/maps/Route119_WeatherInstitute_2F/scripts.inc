@@ -216,7 +216,8 @@ Route119_WeatherInstitute_2F_Text_Grunt2Defeat:
 
 Route119_WeatherInstitute_2F_Text_Grunt2PostBattle:
 	.string "He says mine don't count because\n"
-	.string "he had his first.\p"
+	.string "he has some non fungible thing,\l"
+	.string "whatever that means.\p"
 	.string "They look identical to me!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt3Intro:
