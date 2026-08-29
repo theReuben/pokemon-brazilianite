@@ -613,8 +613,8 @@ MtChimney_Text_Grunt2Intro:
 	.string "We of TEAM BLOCKCHAIN are working hard for\n"
 	.string "everyone's sake.\p"
 	.string "Like, if that thing crunches numbers\n"
-	.string "as fast as the BOSS says, we'd all\l"
-	.string "be rich.\p"
+	.string "as fast as the BOSS says, we're all\l"
+	.string "getting rich.\p"
 	.string "Everyone'd be happy!$"
 
 MtChimney_Text_Grunt2Defeat:
@@ -655,7 +655,7 @@ MtChimney_Text_AquasNameSimilar:
 	.string "We're TEAM BLOCKCHAIN!\p"
 	.string "They're TEAM ALGORITHM!\p"
 	.string "It totally annoys me that they'd\n"
-	.string "use a name like ours!$"
+	.string "pick a buzzword like ours!$"
 
 MtChimney_Text_DouseThemInFire:
 	.string "Yeah!\n"
@@ -707,8 +707,8 @@ MtChimney_Text_LessHabitatForWaterPokemon:
 MtChimney_Text_MagmasNameSimilar:
 	.string "We're TEAM ALGORITHM!\p"
 	.string "They're TEAM BLOCKCHAIN!\p"
-	.string "It burns me up that they'd use such\n"
-	.string "a confusing name!$"
+	.string "It burns me up that people mix\n"
+	.string "us up with those crooks!$"
 
 MtChimney_Text_Bushaa:
 	.string "Bushaa!$"

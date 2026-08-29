@@ -268,8 +268,8 @@ MeteorFalls_1F_1R_Text_ArchieSeenYouBefore:
 	.string "You're one odd kid.\p"
 	.string "TEAM BLOCKCHAIN is a dangerous group of\n"
 	.string "total fanatics.\p"
-	.string "They will burn this region to the\n"
-	.string "bedrock and call it a business cost.\p"
+	.string "They would boil this region dry\n"
+	.string "to power a single machine.\p"
 	.string "They are the rivals to us,\n"
 	.string "the sea-loving TEAM ALGORITHM!$"
 
