@@ -78,7 +78,8 @@ EverGrandeCity_SidneysRoom_Text_IntroSpeech:
 EverGrandeCity_SidneysRoom_Text_Defeat:
 	.string "Well, how do you like that?\n"
 	.string "Beaten by a child.\p"
-	.string "Not for the first time, mind.$"
+	.string "Not for the first time, mind.\p"
+	.string "Guess I need to quapt more peppy mac.$"
 
 EverGrandeCity_SidneysRoom_Text_PostBattleSpeech:
 	.string "Listen to an old man for a moment.\p"
