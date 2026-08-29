@@ -444,8 +444,9 @@
 #define OBJ_EVENT_GFX_JAKE                       404
 #define OBJ_EVENT_GFX_HISOKA                     405
 #define OBJ_EVENT_GFX_LUFFY                      406
+#define OBJ_EVENT_GFX_FRIEREN                    407
 
-#define NUM_OBJ_EVENT_GFX                        407
+#define NUM_OBJ_EVENT_GFX                        408
 
 
 // These are dynamic object gfx ids.
@@ -593,6 +594,7 @@
 #define OBJ_EVENT_PAL_TAG_JAKE                    0x1134
 #define OBJ_EVENT_PAL_TAG_HISOKA                  0x1135
 #define OBJ_EVENT_PAL_TAG_LUFFY                   0x1136
+#define OBJ_EVENT_PAL_TAG_FRIEREN                 0x1137
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

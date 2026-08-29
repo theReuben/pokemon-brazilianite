@@ -574,6 +574,27 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldWoman = {
     .images = sPicTable_OldWoman,
 };
 
+// FRIEREN: ROXANNE's own gym-leader sprite. Her buns keep their ties and
+// her hair goes silver; the black woven through it becomes a hair shade
+// rather than staying as outline.
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frieren = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_FRIEREN,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Frieren,
+};
+
 // LUFFY: the BUG CATCHER, who already wears a straw hat. The band, the
 // shirt and the shorts change colour; the hat and the sandals were already
 // the right ones.

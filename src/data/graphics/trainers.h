@@ -346,6 +346,8 @@ const u32 gTrainerFrontPic_Hisoka[] = INCBIN_U32("graphics/trainers/front_pics/h
 const u16 gTrainerPalette_Hisoka[] = INCBIN_U16("graphics/trainers/palettes/hisoka.gbapal");
 const u32 gTrainerFrontPic_Luffy[] = INCBIN_U32("graphics/trainers/front_pics/luffy.4bpp.smol");
 const u16 gTrainerPalette_Luffy[] = INCBIN_U16("graphics/trainers/palettes/luffy.gbapal");
+const u32 gTrainerFrontPic_Frieren[] = INCBIN_U32("graphics/trainers/front_pics/frieren.4bpp.smol");
+const u16 gTrainerPalette_Frieren[] = INCBIN_U16("graphics/trainers/palettes/frieren.gbapal");
 
 const u32 gTrainerFrontPic_TamerFrlg[] = INCBIN_U32("graphics/trainers/front_pics/tamer_frlg.4bpp.smol");
 const u16 gTrainerPalette_TamerFrlg[] = INCBIN_U16("graphics/trainers/palettes/tamer_frlg.gbapal");
@@ -666,6 +668,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_FRONT_JUGGLER_FRLG, gTrainerFrontPic_JugglerFrlg, gTrainerPalette_JugglerFrlg),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_HISOKA, gTrainerFrontPic_Hisoka, gTrainerPalette_Hisoka),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_LUFFY, gTrainerFrontPic_Luffy, gTrainerPalette_Luffy),
+    TRAINER_SPRITE(TRAINER_PIC_FRONT_FRIEREN, gTrainerFrontPic_Frieren, gTrainerPalette_Frieren),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_TAMER_FRLG, gTrainerFrontPic_TamerFrlg, gTrainerPalette_TamerFrlg),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_BIRD_KEEPER_FRLG, gTrainerFrontPic_BirdKeeperFrlg, gTrainerPalette_BirdKeeperFrlg),
     TRAINER_SPRITE(TRAINER_PIC_FRONT_BLACK_BELT_FRLG, gTrainerFrontPic_BlackBeltFrlg, gTrainerPalette_BlackBeltFrlg),
