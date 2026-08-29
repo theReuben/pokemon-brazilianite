@@ -574,11 +574,15 @@ static const match_call_text_data_t sWallaceTextScripts[] = {
     MATCH_CALL_TEXT_END
 };
 
+// JAKE is both the rival and the CHAMPION, so this entry would list him a
+// second time once beating the CHAMPION registers him in the rematch table.
+// It is gated on a flag nothing ever sets; his rival entry is the one that
+// shows, and it already runs from Route 103 through to post-game.
 static const struct MatchCallStructTrainer sWallaceMatchCallHeader =
 {
     .type = MC_TYPE_LEADER,
     .mapSec = MAPSEC_EVER_GRANDE_CITY,
-    .flag = FLAG_REGISTERED_WALLACE,
+    .flag = FLAG_UNUSED_0x020,
     .rematchTableIdx = REMATCH_WALLACE,
     .desc = COMPOUND_STRING("CHAMPION"),
     .name = NULL,
