@@ -318,15 +318,13 @@ MauvilleCity_Gym_Text_VivianPostBattle:
 	.string "I don't think he's making it up!$"
 
 MauvilleCity_Gym_Text_AngeloIntro:
-	.string "I love shiny things!$"
+	.string "Slime!$"
 
 MauvilleCity_Gym_Text_AngeloDefeat:
-	.string "Oh…\n"
-	.string "My eyes are frazzled…$"
+	.string "Slime…$"
 
 MauvilleCity_Gym_Text_AngeloPostBattle:
-	.string "MAUVILLE GYM's LUFFY has a straw hat\n"
-	.string "he never takes off. I like it!$"
+	.string "Slime.$"
 
 MauvilleCity_Gym_Text_WattsonIntro:
 	.string "So you got past all the doors!\p"
