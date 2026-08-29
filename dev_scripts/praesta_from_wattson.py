@@ -10,8 +10,8 @@ a shine on white hair but as a bald patch on brown.
 BROCK's exact browns, (197,148,115) and (123,90,82), do not survive the
 move: his hair sits above pale skin with an outline between, while this
 beard covers the face, and at those values it read as flesh. The browns
-are darkened to (150,104,74) and (96,64,50) - the same hue, dropped
-clear of the skin ramp.
+are darkened to (128,88,62) and (78,52,40) - the same hue, dropped
+well clear of the skin ramp.
 """
 import sys
 from PIL import Image
@@ -28,9 +28,9 @@ PAL = {
     4:  (123,  90,  82),
     5:  (164, 139,  90),        # coat and trousers, untouched
     6:  (131, 106,  74),
-    7:  ( 96,  64,  50),        # 130 ->  71  hair, shadow
+    7:  ( 78,  52,  40),        # 130 ->  57  hair, shadow
     8:  ( 82,  65,  74),
-    9:  (150, 104,  74),        # 214 -> 113  hair, mass
+    9:  (128,  88,  62),        # 214 ->  96  hair, mass
     10: (255, 197,  90),
     11: (189, 156,  90),
     12: ( 57,  41,  49),
