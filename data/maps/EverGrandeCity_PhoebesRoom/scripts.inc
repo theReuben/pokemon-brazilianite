@@ -59,26 +59,22 @@ EverGrandeCity_PhoebesRoom_EventScript_Defeated::
 	end
 
 EverGrandeCity_PhoebesRoom_Text_IntroSpeech:
-	.string "Ahahaha!\p"
-	.string "I'm PRAESTA of the ELITE FOUR.\n"
-	.string "I did my training on MT. PYRE.\p"
-	.string "While I trained, I gained the ability\n"
-	.string "to commune with GHOST-type POKéMON.\p"
-	.string "Yes, the bond I developed with POKéMON\n"
-	.string "is extremely tight.\p"
-	.string "So, come on, just try and see if you can\n"
-	.string "even inflict damage on my POKéMON!$"
+	.string "I'm PRAESTA of the ELITE FOUR.\p"
+	.string "You got past the old man, then.\p"
+	.string "So you'll have heard about the peppy\n"
+	.string "mac.\p"
+	.string "Eleven cans a day, that man. Says it\n"
+	.string "sharpens him up.\p"
+	.string "Beat me and I'll stand you one.$"
 
 EverGrandeCity_PhoebesRoom_Text_Defeat:
-	.string "Oh, darn.\n"
-	.string "I've gone and lost.$"
+	.string "Hah!\n"
+	.string "Consider my peppy mac quapt.$"
 
 EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
-	.string "There's a definite bond between you\n"
-	.string "and your POKéMON, too.\p"
-	.string "I didn't recognize it, so it's only\n"
-	.string "natural that I lost.\p"
-	.string "Yup, I'd like to see how far your bond\n"
-	.string "will carry you.\p"
-	.string "Go ahead, move on to the next room.$"
+	.string "A can, as promised.\p"
+	.string "No sugar in it. All the taste, they\n"
+	.string "reckon. Maximum taste.\p"
+	.string "Drink it before the next room.\n"
+	.string "You'll want to be awake for that one.$"
 

@@ -86,6 +86,7 @@ EverGrandeCity_SidneysRoom_Text_PostBattleSpeech:
 	.string "You've got what it takes to go far.\n"
 	.string "I could see it before you opened\l"
 	.string "the door.\p"
-	.string "On you go. The next one's nastier\n"
-	.string "than me, and he knows it.$"
+	.string "On you go.\p"
+	.string "Get ready to have your peppy mac\n"
+	.string "quapt.$"
 
