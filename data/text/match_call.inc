@@ -2253,12 +2253,12 @@ MatchCall_Text_Juan4::
 	.string "of you soaring with the melody…$"
 
 MatchCall_Text_Sidney::
-	.string "SIDNEY: Yo, {PLAYER}!\p"
-	.string "If you want to battle with me\n"
-	.string "again, you come on back whenever\l"
-	.string "you like to the POKéMON LEAGUE.\p"
-	.string "I'll always be here!\n"
-	.string "I'll be waiting!$"
+	.string "JUMBLES: Ah, {PLAYER}.\p"
+	.string "If you'd like to battle me again,\n"
+	.string "come back to the POKéMON LEAGUE\l"
+	.string "whenever suits you.\p"
+	.string "I'll be here. I'm always here.\n"
+	.string "That's rather the point of me.$"
 
 MatchCall_Text_Phoebe::
 	.string "PHOEBE: Hi, {PLAYER}!\p"

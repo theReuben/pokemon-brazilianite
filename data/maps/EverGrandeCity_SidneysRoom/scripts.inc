@@ -66,22 +66,25 @@ EverGrandeCity_SidneysRoom_EventScript_Defeated::
 
 EverGrandeCity_SidneysRoom_Text_IntroSpeech:
 	.string "Welcome, challenger!\n"
-	.string "I'm SIDNEY of the ELITE FOUR.\p"
-	.string "I like that look you're giving me.\n"
-	.string "I guess you'll give me a good match.\l"
-	.string "That's good! Looking real good!\p"
-	.string "All right! You and me, let's enjoy\n"
-	.string "a battle that can only be staged\l"
-	.string "here in the POKéMON LEAGUE!$"
+	.string "I'm JUMBLES of the ELITE FOUR.\p"
+	.string "Been sat in this room a long while,\n"
+	.string "me. Long enough that the young ones\l"
+	.string "have stopped asking how long.\p"
+	.string "You'll want to know what I use.\p"
+	.string "Everyone wants to know first. Nobody\n"
+	.string "wants to find out.\p"
+	.string "Go on, then. Let's see.$"
 
 EverGrandeCity_SidneysRoom_Text_Defeat:
-	.string "Well, how do you like that? I lost!\n"
-	.string "Eh, it was fun, so it doesn't matter.$"
+	.string "Well, how do you like that?\n"
+	.string "Beaten by a child.\p"
+	.string "Not for the first time, mind.$"
 
 EverGrandeCity_SidneysRoom_Text_PostBattleSpeech:
-	.string "Well, listen to what this loser has\n"
-	.string "to say.\p"
+	.string "Listen to an old man for a moment.\p"
 	.string "You've got what it takes to go far.\n"
-	.string "Now, go on to the next room and enjoy\l"
-	.string "your next battle!$"
+	.string "I could see it before you opened\l"
+	.string "the door.\p"
+	.string "On you go. The next one's nastier\n"
+	.string "than me, and she knows it.$"
 

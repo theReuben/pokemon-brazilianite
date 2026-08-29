@@ -4398,9 +4398,9 @@ Level: 41
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_SIDNEY ===
-Name: SIDNEY
+Name: JUMBLES
 Class: Elite Four
-Pic: Elite Four Sidney
+Pic: Palace Maven Spenser
 Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
@@ -4408,25 +4408,71 @@ Double Battle: No
 AI: Basic Trainer / Force Setup First Turn
 Mugshot: Purple
 
-Honchkrow
+Bronzong @ Leftovers
+Ability: Levitate
 Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+Nature: Sassy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 84 Atk / 172 SpD
+- Trick Room
+- Stealth Rock
+- Gyro Ball
+- Body Press
 
-Exploud
-Level: 48
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Lokix
+Medicham @ Focus Sash
+Ability: Pure Power
 Level: 46
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Feraligatr
-Level: 48
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Honchkrow @ Sitrus Berry
-Level: 49
+Nature: Jolly
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+- Close Combat
+- Zen Headbutt
+- Ice Punch
+- Fake Out
+
+Braviary-Hisui @ Life Orb
+Ability: Sheer Force
+Level: 47
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 252 SpA / 8 SpD
+- Esper Wing
+- Hurricane
+- Calm Mind
+- Roost
+
+Armarouge @ Weakness Policy
+Ability: Flash Fire
+Level: 47
+Nature: Quiet
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 252 SpA / 4 SpD
+- Armor Cannon
+- Psychic
+- Trick Room
+- Energy Ball
+
+Latios @ Life Orb
+Ability: Levitate
+Level: 48
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Calm Mind
+- Dragon Pulse
+- Psychic
+- Recover
+
+Espathra @ Leftovers
+Ability: Speed Boost
+Level: 50
+Nature: Bold
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Def / 4 SpA
+- Protect
+- Calm Mind
+- Stored Power
+- Roost
 
 === TRAINER_PHOEBE ===
 Name: PHOEBE
