@@ -238,7 +238,10 @@ Route119_WeatherInstitute_2F_Text_Grunt5Intro:
 	.string "Nobody else has them. Not one\n"
 	.string "other person in the world. Just me.\p"
 	.string "Do you even know what they're\n"
-	.string "worth?$"
+	.string "worth?\p"
+	.string "And do not call them boring.\n"
+	.string "There is nothing boring about\l"
+	.string "these three apes!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt5Defeat:
 	.string "That is not how value works!$"
