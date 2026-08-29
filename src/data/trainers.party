@@ -3198,7 +3198,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_KIRK ===
 Name: HISOKA
-Class: Guitarist
+Class: Weirdo
 Pic: Hisoka
 Gender: Male
 Music: Intense
@@ -3246,7 +3246,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_SHAWN ===
 Name: FRIEREN
-Class: Hex Maniac
+Class: Mage
 Pic: Frieren
 Gender: Female
 Music: Female
@@ -5637,7 +5637,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BEN ===
 Name: YUJI
-Class: Youngster
+Class: JJK
 Pic: Yuji
 Gender: Male
 Music: Male
@@ -11314,7 +11314,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
 === TRAINER_VIVIAN ===
 Name: DENJI
-Class: Youngster
+Class: Chainsaw Man
 Pic: Denji
 Gender: Male
 Music: Male
@@ -14475,7 +14475,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_ANGELO ===
 Name: SLIME
-Class: Bug Maniac
+Class: Slime
 Pic: Grimer
 Gender: Male
 Music: Suspicious
