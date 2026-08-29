@@ -82,6 +82,7 @@ SkyPillar_Outside_EventScript_WallaceScene::
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	setvar VAR_SOOTOPOLIS_CITY_STATE, 4
 	removeobject LOCALID_SKY_PILLAR_WALLACE
+	removeobject LOCALID_SKY_PILLAR_JAKES_PSYDUCK
 	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE
 	fadescreenswapbuffers FADE_FROM_BLACK
 	releaseall
@@ -141,30 +142,32 @@ SkyPillar_Outside_Text_DoorIsClosed:
 	.string "The door is closed.$"
 
 SkyPillar_Outside_Text_OpenedDoorToSkyPillar:
-	.string "WALLACE: Oh, my, I'm terribly sorry!\p"
-	.string "In my haste, I didn't notice that\n"
-	.string "I'd left you behind!\p"
-	.string "I've opened the locked door of\n"
-	.string "the SKY PILLAR.\p"
-	.string "{PLAYER}{KUN}, let's be on our way!$"
+	.string "JAKE: Ah! Sorry. Sorry.\p"
+	.string "I ran on ahead and completely forgot\n"
+	.string "you were behind me.\p"
+	.string "I've got the door of the SKY PILLAR\n"
+	.string "open.\p"
+	.string "{PLAYER}{KUN}, let's go!$"
 
 SkyPillar_Outside_Text_EarthquakeNotMomentToWaste:
-	.string "WALLACE: It's an earthquake!\p"
+	.string "JAKE: That's an earthquake!\p"
 	.string "There's not a moment to waste!\n"
 	.string "We've got to hurry!$"
 
 SkyPillar_Outside_Text_SituationGettingWorse:
-	.string "WALLACE: Hmm…\n"
-	.string "The situation is getting worse…$"
+	.string "JAKE: This is getting worse…\n"
+	.string "Much worse.$"
 
 SkyPillar_Outside_Text_GotToGoBackForSootopolis:
-	.string "WALLACE: This isn't good…\p"
+	.string "JAKE: This isn't good…\p"
 	.string "The weather distortion is spreading\n"
-	.string "even here…\p"
+	.string "even out here…\p"
 	.string "{PLAYER}{KUN}.\p"
 	.string "RAYQUAZA should be farther up\n"
 	.string "from here.\p"
 	.string "I'm worried about SOOTOPOLIS.\n"
-	.string "I've got to go back.\p"
-	.string "Everything is in your hands now.\n"
-	.string "Don't fail us!$"
+	.string "I'm going back.\p"
+	.string "I know. I'm the CHAMPION and I'm\n"
+	.string "handing you the hard part.\p"
+	.string "You're better at this bit than me.\n"
+	.string "Go on.$"

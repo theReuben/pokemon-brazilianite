@@ -1521,8 +1521,8 @@ SootopolisCity_Text_LeadSuperiorTrainerToCave:
 	.string "A TRAINER who has knowledge and\n"
 	.string "experience of many kinds of POKéMON…\p"
 	.string "If such a person were to appear, I was\n"
-	.string "instructed by WALLACE to lead that\l"
-	.string "TRAINER to this CAVE.$"
+	.string "instructed by the CHAMPION to lead\l"
+	.string "that TRAINER to this CAVE.$"
 
 SootopolisCity_Text_AwakenedPokemonClash:
 	.string "Oh, my…\p"
@@ -1640,8 +1640,8 @@ SootopolisCity_Text_DoesThisMakeYourFearPokemon:
 
 SootopolisCity_Text_HereWereAreHelpWallace:
 	.string "STEVEN: Okay, here we are!\p"
-	.string "Inside here you'll find someone named\n"
-	.string "WALLACE.\p"
+	.string "The CHAMPION got here before us.\n"
+	.string "Of course he did.\p"
 	.string "I think you have what's needed to\n"
 	.string "help him…$"
 
@@ -1666,28 +1666,29 @@ SootopolisCity_Text_MaxieArchieLeft:
 	.string "return those ORBS…$"
 
 SootopolisCity_Text_HaventYouScaledSkyPillar:
-	.string "WALLACE: Oh?\n"
+	.string "JAKE: Oh?\n"
 	.string "{PLAYER}{KUN}?\p"
-	.string "Haven't you scaled the SKY PILLAR\n"
+	.string "You haven't scaled the SKY PILLAR\n"
 	.string "yet?\p"
-	.string "I'm sure that you can make it to\n"
-	.string "the top of the SKY PILLAR…$"
+	.string "You can make it to the top. I know\n"
+	.string "you can.$"
 
 SootopolisCity_Text_AquaMagmaDidntMeanHarm:
-	.string "WALLACE: {PLAYER}{KUN}…\p"
+	.string "JAKE: {PLAYER}{KUN}…\p"
 	.string "The leaders of TEAM BLOCKCHAIN and ALGORITHM,\n"
 	.string "I don't think they meant harm.\p"
 	.string "It wouldn't hurt to hear what they\n"
 	.string "have to say for themselves.$"
 
 SootopolisCity_Text_ThankYouForHelpAcceptThis:
-	.string "WALLACE: {PLAYER}{KUN}…\n"
-	.string "My eyes didn't deceive me.\p"
-	.string "Thanks to your help, SOOTOPOLIS…\n"
+	.string "JAKE: {PLAYER}{KUN}…\p"
+	.string "I've been telling everyone for months\n"
+	.string "that you'd be the one.\p"
+	.string "Thanks to you, SOOTOPOLIS…\n"
 	.string "No, all of HOENN was saved.\p"
-	.string "On behalf of the people, I thank you.\p"
-	.string "This is a gift from me.\n"
-	.string "Please accept it.$"
+	.string "On behalf of everyone here, thank you.\p"
+	.string "This is from me.\n"
+	.string "Take it.$"
 
 SootopolisCity_Text_ExplainWaterfallGoToGym:
 	.string "That HIDDEN MACHINE contains\n"
@@ -1703,6 +1704,6 @@ SootopolisCity_Text_ExplainWaterfallGoToGym:
 	.string "that door.$"
 
 SootopolisCity_Text_DazzledByMentor:
-	.string "WALLACE: I'm sure that you will be\n"
-	.string "dazzled by my mentor's breathtakingly\l"
-	.string "elegant battle style.$"
+	.string "JAKE: The LEADER in there is JUAN.\p"
+	.string "I've watched him battle. You'll enjoy\n"
+	.string "it, right up until you don't.$"
