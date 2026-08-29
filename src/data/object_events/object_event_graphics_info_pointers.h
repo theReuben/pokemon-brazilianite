@@ -34,6 +34,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jake;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hisoka;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Luffy;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Frieren;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LilJon;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Picnicker;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Man3;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman5;
@@ -832,6 +833,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_HISOKA]                   = &gObjectEventGraphicsInfo_Hisoka,
     [OBJ_EVENT_GFX_LUFFY]                    = &gObjectEventGraphicsInfo_Luffy,
     [OBJ_EVENT_GFX_FRIEREN]                  = &gObjectEventGraphicsInfo_Frieren,
+    [OBJ_EVENT_GFX_LIL_JON]                  = &gObjectEventGraphicsInfo_LilJon,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
