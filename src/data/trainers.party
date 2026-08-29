@@ -4489,25 +4489,71 @@ Double Battle: No
 AI: Basic Trainer
 Mugshot: Green
 
-Yamask-Galar
-Level: 48
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Drifblim
-Level: 49
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Gimmighoul
+Porygon-Z @ Focus Sash
+Ability: Adaptability
 Level: 50
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 4 SpD / 252 Spe
+- Tri Attack
+- Hyper Beam
+- Ice Beam
+- Dark Pulse
 
-Drifblim
-Level: 49
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Yamask-Galar @ Sitrus Berry
-Level: 51
+Snorlax @ Chesto Berry
+Ability: Immunity
+Level: 50
+Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+- Body Slam
+- Giga Impact
+- Earthquake
+- Rest
+
+Toucannon @ Sitrus Berry
+Ability: Keen Eye
+Level: 50
+Nature: Impish
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Def / 4 Spe
+- Beak Blast
+- Roost
+- U-turn
+- Encore
+
+Wyrdeer @ Leftovers
+Ability: Intimidate
+Level: 51
+Nature: Modest
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Def / 252 SpA / 4 Spe
+- Thunderbolt
+- Earth Power
+- Energy Ball
+- Psychic
+
+Castform
+Ability: Forecast
+Level: 51
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 8 SpA / 252 Spe
+- Terrain Pulse
+- Grassy Terrain
+- Misty Terrain
+- Psychic Terrain
+
+Bewear @ Weakness Policy
+Ability: Fluffy
+Level: 52
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 252 Atk / 4 SpD
+- Facade
+- Drain Punch
+- Iron Head
+- Darkest Lariat
 
 === TRAINER_GLACIA ===
 Name: HUSH
