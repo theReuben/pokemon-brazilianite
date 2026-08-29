@@ -4665,7 +4665,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 === TRAINER_WATTSON_1 ===
 Name: LUFFY
 Class: Leader
-Pic: Leader Wattson
+Pic: Luffy
 Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
@@ -13618,7 +13618,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 === TRAINER_WATTSON_2 ===
 Name: LUFFY
 Class: Leader
-Pic: Leader Wattson
+Pic: Luffy
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
@@ -13644,7 +13644,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 === TRAINER_WATTSON_3 ===
 Name: LUFFY
 Class: Leader
-Pic: Leader Wattson
+Pic: Luffy
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
@@ -13674,7 +13674,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 === TRAINER_WATTSON_4 ===
 Name: LUFFY
 Class: Leader
-Pic: Leader Wattson
+Pic: Luffy
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
@@ -13704,7 +13704,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 === TRAINER_WATTSON_5 ===
 Name: LUFFY
 Class: Leader
-Pic: Leader Wattson
+Pic: Luffy
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore

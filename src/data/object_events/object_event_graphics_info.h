@@ -574,6 +574,27 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldWoman = {
     .images = sPicTable_OldWoman,
 };
 
+// LUFFY: the BUG CATCHER, who already wears a straw hat. The band, the
+// shirt and the shorts change colour; the hat and the sandals were already
+// the right ones.
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Luffy = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LUFFY,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_Standard,
+    .images = sPicTable_Luffy,
+};
+
 // HISOKA: the FRLG juggler's own overworld sprite - they use the ROCKER -
 // recoloured to the Heaven's Arena outfit.
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hisoka = {

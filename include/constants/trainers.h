@@ -188,6 +188,7 @@ enum __attribute__((packed)) TrainerPicID
     TRAINER_PIC_FRONT_BLOCKCHAIN_ADMIN,
     TRAINER_PIC_FRONT_BLOCKCHAIN_LEADER_JULIAN,
     TRAINER_PIC_FRONT_HISOKA,
+    TRAINER_PIC_FRONT_LUFFY,
     TRAINER_PIC_FRONT_COUNT,
     TRAINER_PIC_BACK_BRENDAN = TRAINER_PIC_FRONT_COUNT, // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
     TRAINER_PIC_BACK_MAY,

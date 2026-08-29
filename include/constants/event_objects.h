@@ -443,8 +443,9 @@
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
 #define OBJ_EVENT_GFX_JAKE                       404
 #define OBJ_EVENT_GFX_HISOKA                     405
+#define OBJ_EVENT_GFX_LUFFY                      406
 
-#define NUM_OBJ_EVENT_GFX                        406
+#define NUM_OBJ_EVENT_GFX                        407
 
 
 // These are dynamic object gfx ids.
@@ -591,6 +592,7 @@
 #define OBJ_EVENT_PAL_TAG_SS_ANNE                 0x1133
 #define OBJ_EVENT_PAL_TAG_JAKE                    0x1134
 #define OBJ_EVENT_PAL_TAG_HISOKA                  0x1135
+#define OBJ_EVENT_PAL_TAG_LUFFY                   0x1136
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

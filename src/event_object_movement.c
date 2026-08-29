@@ -492,6 +492,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Npc3,                  OBJ_EVENT_PAL_TAG_NPC_3},
     {gObjectEventPal_Jake,                  OBJ_EVENT_PAL_TAG_JAKE},
     {gObjectEventPal_Hisoka,                OBJ_EVENT_PAL_TAG_HISOKA},
+    {gObjectEventPal_Luffy,                 OBJ_EVENT_PAL_TAG_LUFFY},
     {gObjectEventPal_Npc4,                  OBJ_EVENT_PAL_TAG_NPC_4},
     {gObjectEventPal_Npc1Reflection,        OBJ_EVENT_PAL_TAG_NPC_1_REFLECTION},
     {gObjectEventPal_Npc2Reflection,        OBJ_EVENT_PAL_TAG_NPC_2_REFLECTION},
