@@ -1234,7 +1234,7 @@ RustboroCity_Text_DevonCorpSign:
 
 RustboroCity_Text_GymSign:
 	.string "RUSTBORO CITY POKéMON GYM\n"
-	.string "LEADER: LIL WAYNE\p"
+	.string "LEADER: LIL JON\p"
 	.string "“It is a ROCK GYM. Just not that\n"
 	.string "kind of rock.”$"
 

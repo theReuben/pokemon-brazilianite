@@ -112,7 +112,7 @@ RustboroCity_Gym_Text_GymGuideAdvice:
 	.string "So! This is the ROCK GYM.\p"
 	.string "And before you ask, no, not that\n"
 	.string "kind of rock. Everybody asks.\p"
-	.string "LIL WAYNE runs the place, and every\n"
+	.string "LIL JON runs the place, and every\n"
 	.string "POKéMON in here gets TURNT.\p"
 	.string "Bring something that doesn't mind\n"
 	.string "getting LIT!\p"
@@ -147,39 +147,40 @@ RustboroCity_Gym_Text_JoshPostBattle:
 
 RustboroCity_Gym_Text_TommyIntro:
 	.string "If you can't beat me, you won't stand\n"
-	.string "a chance against LIL WAYNE!$"
+	.string "a chance against LIL JON!$"
 
 RustboroCity_Gym_Text_TommyDefeat:
 	.string "Wow! You've got some potential!$"
 
 RustboroCity_Gym_Text_TommyPostBattle:
-	.string "LIL WAYNE is tougher than\n"
-	.string "Nigerian hair.\p"
-	.string "Young Money millionaire!$"
+	.string "LIL JON doesn't talk much.\p"
+	.string "Three words, mostly. You'll know\n"
+	.string "which three.$"
 
 RustboroCity_Gym_Text_MarcIntro:
-	.string "Did you know LIL WAYNE was\n"
-	.string "also on Down?\p"
-	.string "You know, Jay Sean\n"
-	.string "even if the sky is falling down.$"
+	.string "Did you know LIL JON was on\n"
+	.string "Shots?\p"
+	.string "The LMFAO one. That's him doing\n"
+	.string "the shouting.$"
 
 RustboroCity_Gym_Text_MarcDefeat:
 	.string "Oh, man oh man!\n"
 	.string "Our challenger is one feisty customer!$"
 
 RustboroCity_Gym_Text_MarcPostBattle:
-	.string "It's a really underrated track\p"
-	.string "Well, maybe not underrated\n"
-	.string "but people forget it.$"
+	.string "Everyone thinks that song is\n"
+	.string "about a party.\p"
+	.string "It's about a GYM BADGE. Ours.$"
 
 RustboroCity_Gym_Text_RoxanneIntro:
-	.string "LIL WAYNE: Ay. Welcome to the ROCK\n"
-	.string "GYM. You look confused already.\p"
+	.string "LIL JON: WHAT?!\p"
+	.string "Welcome to the ROCK GYM. You look\n"
+	.string "confused already.\p"
 	.string "Everybody walks in here expecting\n"
 	.string "boulders. I don't do boulders.\p"
 	.string "I do SHOTS!\p"
 	.string "Let's see if your POKéMON can keep\n"
-	.string "up, let the henny flow!$"
+	.string "up. TURN DOWN FOR WHAT!$"
 
 RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "Man…\n"
@@ -189,12 +190,12 @@ RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "that TRAINERS are to be given this\l"
 	.string "if they defeat a GYM LEADER.\p"
 	.string "SHOTS! SHOTS! SHOTS!\n"
-	.string "Aight, I gotta go record more of\l"
-	.string "the spiderverse soundtrack.$"
+	.string "Aight, I gotta go and get low\l"
+	.string "somewhere. YEAH!$"
 
 RustboroCity_Gym_Text_ReceivedStoneBadge:
 	.string "{PLAYER} received SHOTS! SHOTS!\n"
-	.string "SHOTS! from LIL WAYNE.$"
+	.string "SHOTS! from LIL JON.$"
 
 RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
 	.string "SHOTS! SHOTS! SHOTS! heightens the\n"
@@ -216,21 +217,21 @@ RustboroCity_Gym_Text_ExplainShockWave:
 RustboroCity_Gym_Text_RoxannePostBattle:
 	.string "Since you are so strong, you should\n"
 	.string "challenge other GYM LEADERS.\p"
-	.string "Word travels. Music travels faster.$"
+	.string "Word travels. YEAH! travels faster.$"
 
 RustboroCity_Gym_Text_GymStatue:
 	.string "RUSTBORO CITY POKéMON GYM$"
 
 RustboroCity_Gym_Text_GymStatueCertified:
 	.string "RUSTBORO CITY POKéMON GYM\p"
-	.string "LIL WAYNE'S CERTIFIED TRAINERS:\n"
+	.string "LIL JON'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 RustboroCity_Gym_Text_RoxanneRegisterCall:
 	.string "… … … … … …\n"
 	.string "… … … … … Beep!\p"
-	.string "LIL WAYNE: Ay, that {PLAYER}?\n"
-	.string "It's WAYNE, RUSTBORO CITY.\p"
+	.string "LIL JON: Ay, that {PLAYER}?\n"
+	.string "It's JON, RUSTBORO CITY.\p"
 	.string "I heard from MERLOT you been moving\n"
 	.string "up the ranks at a crazy pace.\p"
 	.string "I'd rather not sit here thinking\n"
@@ -241,11 +242,11 @@ RustboroCity_Gym_Text_RoxanneRegisterCall:
 	.string "… … … … … Click!$"
 
 RustboroCity_Gym_Text_RegisteredRoxanne:
-	.string "Registered GYM LEADER LIL WAYNE\n"
+	.string "Registered GYM LEADER LIL JON\n"
 	.string "in the POKéNAV.$"
 
 RustboroCity_Gym_Text_RoxannePreRematch:
-	.string "LIL WAYNE: Ay, look who's back.\n"
+	.string "LIL JON: Ay, look who's back.\n"
 	.string "New set. Same GYM.\p"
 	.string "We both been through a lot of battles\n"
 	.string "since you were last in here.\p"
@@ -256,13 +257,13 @@ RustboroCity_Gym_Text_RoxanneRematchDefeat:
 	.string "Beat again, in my own house…$"
 
 RustboroCity_Gym_Text_RoxannePostRematch:
-	.string "LIL WAYNE: I still got things to learn\n"
+	.string "LIL JON: I still got things to learn\n"
 	.string "about battling POKéMON.\p"
 	.string "That's the part I like, though.\n"
 	.string "You're never finished.$"
 
 RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons:
-	.string "LIL WAYNE: Ay, look who's back.\n"
+	.string "LIL JON: Ay, look who's back.\n"
 	.string "New set. Same GYM.\p"
 	.string "We both been through a lot of battles\n"
 	.string "since you were last in here.\p"

@@ -1218,7 +1218,7 @@ PetalburgCity_Gym_Text_DadGoCollectBadges:
 	.string "Head for RUSTBORO CITY beyond this\n"
 	.string "town.\p"
 	.string "There, you should challenge\n"
-	.string "the GYM LEADER, LIL WAYNE.\p"
+	.string "the GYM LEADER, LIL JON.\p"
 	.string "After him, go on to other POKéMON\n"
 	.string "GYMS and defeat their LEADERS.\p"
 	.string "Collect BADGES from them,\n"

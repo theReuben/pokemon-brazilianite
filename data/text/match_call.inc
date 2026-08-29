@@ -904,7 +904,7 @@ MatchCall_PersonalizedText24::
 MatchCall_PersonalizedText25::
 	.string "Snivel… It's… {STR_VAR_1}…\n"
 	.string "…Sob…\p"
-	.string "LIL WAYNE told me my timing was\n"
+	.string "LIL JON told me my timing was\n"
 	.string "off today.\p"
 	.string "But I don't dislike him or anything.\p"
 	.string "He tells me exactly what\n"
@@ -915,11 +915,11 @@ MatchCall_PersonalizedText25::
 
 MatchCall_PersonalizedText26::
 	.string "It's {STR_VAR_1}!\p"
-	.string "LIL WAYNE let me battle him\n"
+	.string "LIL JON let me battle him\n"
 	.string "yesterday.\p"
 	.string "The results…\n"
 	.string "Terrible, like you needed to ask.\p"
-	.string "But I was delighted that WAYNE\n"
+	.string "But I was delighted that JON\n"
 	.string "would even let me challenge him!\p"
 	.string "You wouldn't believe how much\n"
 	.string "more I admire him!\p"
@@ -2037,7 +2037,7 @@ MatchCall_Text_Mom3::
 	.string "they fall apart, honey!$"
 
 MatchCall_Text_Roxanne1::
-	.string "LIL WAYNE: Ay, {PLAYER}!\p"
+	.string "LIL JON: Ay, {PLAYER}!\p"
 	.string "I've been in the studio since\n"
 	.string "we battled.\p"
 	.string "Need a little more time before\n"
@@ -2046,7 +2046,7 @@ MatchCall_Text_Roxanne1::
 	.string "a rematch!$"
 
 MatchCall_Text_Roxanne2::
-	.string "LIL WAYNE: That {PLAYER}?\n"
+	.string "LIL JON: That {PLAYER}?\n"
 	.string "Congratulations!\l"
 	.string "Your name keeps coming up!\p"
 	.string "Me, I need a little more time\n"
@@ -2055,13 +2055,13 @@ MatchCall_Text_Roxanne2::
 	.string "a rematch!$"
 
 MatchCall_Text_Roxanne3::
-	.string "LIL WAYNE: {PLAYER}!\n"
+	.string "LIL JON: {PLAYER}!\n"
 	.string "The GYM is ready!\p"
 	.string "Pull up on RUSTBORO whenever\n"
 	.string "you can!$"
 
 MatchCall_Text_Roxanne4::
-	.string "LIL WAYNE: At the RUSTBORO GYM,\n"
+	.string "LIL JON: At the RUSTBORO GYM,\n"
 	.string "the fact that we battled, {PLAYER},\l"
 	.string "is a matter of pride.$"
 

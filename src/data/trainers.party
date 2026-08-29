@@ -4615,7 +4615,7 @@ Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_ROXANNE_1 ===
-Name: LIL WAYNE
+Name: LIL JON
 Class: Leader
 Pic: Leader Roxanne
 Gender: Male
@@ -13352,7 +13352,7 @@ Level: 15
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_ROXANNE_2 ===
-Name: LIL WAYNE
+Name: LIL JON
 Class: Leader
 Pic: Leader Roxanne
 Gender: Male
@@ -13382,7 +13382,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Volt Switch
 
 === TRAINER_ROXANNE_3 ===
-Name: LIL WAYNE
+Name: LIL JON
 Class: Leader
 Pic: Leader Roxanne
 Gender: Male
@@ -13416,7 +13416,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Volt Switch
 
 === TRAINER_ROXANNE_4 ===
-Name: LIL WAYNE
+Name: LIL JON
 Class: Leader
 Pic: Leader Roxanne
 Gender: Male
@@ -13454,7 +13454,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Volt Switch
 
 === TRAINER_ROXANNE_5 ===
-Name: LIL WAYNE
+Name: LIL JON
 Class: Leader
 Pic: Leader Roxanne
 Gender: Male
