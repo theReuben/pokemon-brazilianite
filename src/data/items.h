@@ -2050,6 +2050,46 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_RareCandy,
     },
 
+    [ITEM_INFINITE_CANDY] =
+    {
+        .name = ITEM_NAME("Endless Candy"),
+        .pluralName = ITEM_PLURAL_NAME("Endless Candies"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Raises a level.\n"
+            "Never runs out.\n"
+            "Cheating, really."),
+        .pocket = POCKET_KEY_ITEMS,
+        .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
+        .effect = gItemEffect_RareCandy,
+        .importance = 1,
+        .notConsumed = TRUE,
+        .iconPic = gItemIcon_RareCandy,
+        .iconPalette = gItemIconPalette_RareCandy,
+    },
+
+    [ITEM_CAP_CANDY] =
+    {
+        .name = ITEM_NAME("Cap Candy"),
+        .pluralName = ITEM_PLURAL_NAME("Cap Candies"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Raises a POKéMON\n"
+            "to the current\n"
+            "level cap."),
+        .pocket = POCKET_KEY_ITEMS,
+        .sortType = ITEM_TYPE_LEVEL_UP_ITEM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
+        .effect = gItemEffect_RareCandy,
+        .importance = 1,
+        .notConsumed = TRUE,
+        .iconPic = gItemIcon_RareCandy,
+        .iconPalette = gItemIconPalette_RareCandy,
+    },
+
     [ITEM_EXP_CANDY_XS] =
     {
         .name = ITEM_NAME("Exp. Candy XS"),
