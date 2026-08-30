@@ -4693,7 +4693,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 === TRAINER_BRAWLY_1 ===
 Name: MERLOT
 Class: Leader
-Pic: Gentleman
+Pic: Gentleman Frlg
 Gender: Male
 Music: Male
 Items: Super Potion / Super Potion
@@ -13590,7 +13590,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 === TRAINER_BRAWLY_2 ===
 Name: MERLOT
 Class: Leader
-Pic: Gentleman
+Pic: Gentleman Frlg
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
@@ -13616,7 +13616,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 === TRAINER_BRAWLY_3 ===
 Name: MERLOT
 Class: Leader
-Pic: Gentleman
+Pic: Gentleman Frlg
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
@@ -13646,7 +13646,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 === TRAINER_BRAWLY_4 ===
 Name: MERLOT
 Class: Leader
-Pic: Gentleman
+Pic: Gentleman Frlg
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
@@ -13680,7 +13680,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 === TRAINER_BRAWLY_5 ===
 Name: MERLOT
 Class: Leader
-Pic: Gentleman
+Pic: Gentleman Frlg
 Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore
