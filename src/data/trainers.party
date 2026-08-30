@@ -5949,9 +5949,88 @@ Double Battle: No
 AI: Basic Trainer
 Mugshot: Yellow
 
+Politoed (F) @ Damp Rock
+Ability: Drizzle
+Level: 56
+Nature: Timid
+Tera Type: Water
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 SpA / 252 Spe
+- Ice Beam
+- Weather Ball
+- Energy Ball
+- Earth Power
+
+Tauros-Paldea-Aqua (M) @ Shell Bell
+Ability: Intimidate
+Level: 57
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 200 Def / 56 Spe
+- Raging Bull
+- Close Combat
+- Trailblaze
+- Earthquake
+
+Gyarados @ Gyaradosite
+Ability: Intimidate
+Level: 58
+Nature: Adamant
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 Spe
+- Dragon Dance
+- Waterfall
+- Crunch
+- Earthquake
+
+Phione @ Damp Rock
+Ability: Hydration
+Level: 57
+Nature: Relaxed
+Tera Type: Water
+IVs: 30 HP / 0 Atk / 31 Def / 30 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 224 Def / 32 Spe
+- Heal Bell
+- Ice Beam
+- Rain Dance
+- Hidden Power
+
+Tapu Fini
+Ability: Misty Surge
+Level: 58
+Nature: Calm
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 140 Def / 116 SpA
+- Surf
+- Moonblast
+- Nature's Madness
+- Knock Off
+
+Walking Wake @ Choice Specs
+Ability: Protosynthesis
+Level: 59
+Nature: Timid
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 SpA / 252 Spe
+- Hurricane
+- Hydro Steam
+- Flamethrower
+- Dragon Pulse
+
+=== TRAINER_JAKE_PRE_LEAGUE ===
+Name: JAKE
+Class: Champion
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Basic Trainer
+Mugshot: Yellow
+
 Poliwrath (M) @ King's Rock
 Ability: Water Absorb
-Level: 56
+Level: 52
 Nature: Adamant
 Tera Type: Water
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -5963,7 +6042,7 @@ EVs: 252 Atk / 252 Def
 
 Lanturn (F) @ Air Balloon
 Ability: Volt Absorb
-Level: 56
+Level: 52
 Nature: Modest
 Tera Type: Water
 IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -5975,7 +6054,7 @@ EVs: 252 HP / 252 SpA
 
 Dracovish @ Assault Vest
 Ability: Strong Jaw
-Level: 56
+Level: 52
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe
@@ -5986,7 +6065,7 @@ EVs: 252 Atk / 252 Spe
 
 Jellicent (M) @ Leftovers
 Ability: Cursed Body
-Level: 57
+Level: 53
 Nature: Bold
 Tera Type: Water
 IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -5998,7 +6077,7 @@ EVs: 252 HP / 220 SpA / 36 Spe
 
 Slowbro (M) @ Slowbronite
 Ability: Regenerator
-Level: 57
+Level: 53
 Nature: Bold
 Tera Type: Water
 IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -6010,7 +6089,7 @@ EVs: 252 HP / 252 SpA
 
 Tauros-Paldea-Aqua (M) @ Shell Bell
 Ability: Intimidate
-Level: 58
+Level: 54
 Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Spe

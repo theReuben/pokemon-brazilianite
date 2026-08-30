@@ -14,6 +14,11 @@ EverGrandeCity_PokemonLeague_1F_EventScript_GuardsBlockDoor::
 	setobjectxyperm LOCALID_LEAGUE_GUARD_2, 10, 2
 	return
 
+EverGrandeCity_PokemonLeague_1F_EventScript_Jake::
+	trainerbattle_single TRAINER_JAKE_PRE_LEAGUE, EverGrandeCity_PokemonLeague_1F_Text_JakeIntro, EverGrandeCity_PokemonLeague_1F_Text_JakeDefeat
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_JakePostBattle, MSGBOX_AUTOCLOSE
+	end
+
 EverGrandeCity_PokemonLeague_1F_EventScript_Nurse::
 	setvar VAR_0x800B, LOCALID_LEAGUE_NURSE
 	call Common_EventScript_PkmnCenterNurse
@@ -135,3 +140,18 @@ EverGrandeCity_PokemonLeague_1F_Text_GoForth:
 	.string "TRAINER! Believe in yourself and your\n"
 	.string "POKéMON, and go forth!$"
 
+EverGrandeCity_PokemonLeague_1F_Text_JakeIntro:
+	.string "JAKE: There you are.\p"
+	.string "They said you'd got all eight. I made\n"
+	.string "them tell me the moment you did.\p"
+	.string "Before you go through that door…\p"
+	.string "Do you want a go at my real team?$"
+
+EverGrandeCity_PokemonLeague_1F_Text_JakeDefeat:
+	.string "Ha!\n"
+	.string "Right. Right, then.$"
+
+EverGrandeCity_PokemonLeague_1F_Text_JakePostBattle:
+	.string "Go on through. They're waiting.\p"
+	.string "I'll be at the end of it.\n"
+	.string "Where else would I be?$"

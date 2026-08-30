@@ -138,6 +138,11 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "Every time I beat this place I kept\n"
 	.string "thinking, he'll be along in a minute.\p"
 	.string "And here you are.\p"
+	.string "Oh - that team I showed you at the\n"
+	.string "door?\p"
+	.string "Just kidding.\p"
+	.string "You made it this far.\n"
+	.string "Here's my REAL team.\p"
 	.string "So come on then.\n"
 	.string "Last one. Let's see it.$"
 
