@@ -2090,6 +2090,25 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_RareCandy,
     },
 
+    [ITEM_FRIENDSHIP_BRACELET] =
+    {
+        .name = ITEM_NAME("Friend Band"),
+        .pluralName = ITEM_PLURAL_NAME("Friend Bands"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A POKéMON that\n"
+            "wears it adores\n"
+            "you at once."),
+        .pocket = POCKET_KEY_ITEMS,
+        .sortType = ITEM_TYPE_HELD_ITEM,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_FriendshipBracelet,
+        .importance = 1,
+        .notConsumed = TRUE,
+        .iconPic = gItemIcon_SootheBell,
+        .iconPalette = gItemIconPalette_SootheBell,
+    },
+
     [ITEM_EXP_CANDY_XS] =
     {
         .name = ITEM_NAME("Exp. Candy XS"),

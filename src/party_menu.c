@@ -511,6 +511,7 @@ static void Task_FirstBattleEnterParty_WaitFadeNormal(u8 taskId);
 
 static const u8 sText_askText[] = _("Would you like to change {STR_VAR_1}'s\nability to {STR_VAR_2}?");
 static const u8 sText_doneText[] = _("{STR_VAR_1}'s ability became\n{STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_AdoresYou[] = _("{STR_VAR_1} adores you!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_BasePointsResetToZero[] = _("{STR_VAR_1}'s base points\nwere all reset to zero!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_CannotSendMonToBoxHM[] = _("Cannot send that mon to the box,\nbecause it knows a HM move.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_CannotSendMonToBoxPartner[] = _("Cannot send a mon that doesn't\nbelong to you to the box.{PAUSE_UNTIL_PRESS}");
@@ -5166,6 +5167,33 @@ static void Task_ClosePartyMenuAfterText(u8 taskId)
             sPartyMenuInternal->exitCallback = NULL;
         Task_ClosePartyMenu(taskId);
     }
+}
+
+void ItemUseCB_FriendshipBracelet(u8 taskId, TaskFunc task)
+{
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u32 friendship = MAX_FRIENDSHIP;
+
+    PlaySE(SE_SELECT);
+    if (GetMonData(mon, MON_DATA_FRIENDSHIP) == MAX_FRIENDSHIP)
+    {
+        gPartyMenuUseExitCallback = FALSE;
+        DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        gTasks[taskId].func = task;
+        return;
+    }
+
+    SetMonData(mon, MON_DATA_FRIENDSHIP, &friendship);
+    gPartyMenuUseExitCallback = TRUE;
+    PlaySE(SE_USE_ITEM);
+    if (GetItemConsumability(gSpecialVar_ItemId))
+        RemoveBagItem(gSpecialVar_ItemId, 1);
+    GetMonNickname(mon, gStringVar1);
+    StringExpandPlaceholders(gStringVar4, sText_AdoresYou);
+    DisplayPartyMenuMessage(gStringVar4, TRUE);
+    ScheduleBgCopyTilemapToVram(2);
+    gTasks[taskId].func = task;
 }
 
 void ItemUseCB_ResetEVs(u8 taskId, TaskFunc task)
