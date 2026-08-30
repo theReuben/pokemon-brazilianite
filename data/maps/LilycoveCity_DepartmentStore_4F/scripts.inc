@@ -42,10 +42,16 @@ LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs:
 LilycoveCity_DepartmentStore_4F_EventScript_ClerkRight::
 	lock
 	faceplayer
+	goto_if_unset FLAG_BADGE08_GET, LilycoveCity_DepartmentStore_4F_EventScript_ClerkRightNoBadge
 	message gText_HowMayIServeYou
 	waitmessage
 	pokemart LilycoveCity_DepartmentStore_4F_Pokemart_DefenseTMs
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_DepartmentStore_4F_EventScript_ClerkRightNoBadge::
+	msgbox LilycoveCity_DepartmentStore_4F_Text_EightBadgesOnly, MSGBOX_DEFAULT
 	release
 	end
 
@@ -76,11 +82,11 @@ LilycoveCity_DepartmentStore_4F_Pokemart_DefenseTMs:
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_4F_Text_AttackOrDefenseTM:
-	.string "Hmm…\p"
-	.string "A TM on the left counter…\n"
-	.string "Or something to hold on the right…\p"
-	.string "It's no easy matter to decide what\n"
-	.string "a POKéMON should carry.$"
+	.string "The left counter sells TMs to anyone.\p"
+	.string "The right one wants all eight BADGES\n"
+	.string "before it will serve you.\p"
+	.string "I've got seven. I've been staring at\n"
+	.string "it for an hour.$"
 
 LilycoveCity_DepartmentStore_4F_Text_FiftyDifferentTMs:
 	.string "The TMs here can be used over and\n"
@@ -92,3 +98,12 @@ LilycoveCity_DepartmentStore_4F_Text_PokemonOnlyHaveFourMoves:
 	.string "I'd like to get all the different TMs,\n"
 	.string "but a POKéMON learns only four moves.$"
 
+LilycoveCity_DepartmentStore_4F_Text_EightBadgesOnly:
+	.string "I'm sorry. This counter serves\n"
+	.string "TRAINERS with all eight BADGES.\p"
+	.string "Held items decide battles, and the\n"
+	.string "LEAGUE would rather they decided\l"
+	.string "battles between people who can use\l"
+	.string "them.\p"
+	.string "Come back with the eighth BADGE and\n"
+	.string "the counter is yours.$"
