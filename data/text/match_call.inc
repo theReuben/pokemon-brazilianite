@@ -2275,16 +2275,12 @@ MatchCall_Text_Glacia::
 	.string "Come back whenever you fancy it.$"
 
 MatchCall_Text_Drake::
-	.string "DRAKE: That voice… {PLAYER}, is it?\n"
-	.string "You sound well…\p"
-	.string "I understand that there is now\n"
-	.string "a facility called the BATTLE\l"
-	.string "FRONTIER that tests the skills of\l"
-	.string "TRAINERS.\p"
-	.string "However, if you wish to have real\n"
-	.string "battles, there is no substitute for\l"
-	.string "the POKéMON LEAGUE!\p"
-	.string "Don't you agree, {PLAYER}?$"
+	.string "VARGNA: {PLAYER}. Everything all\n"
+	.string "right?\p"
+	.string "The room's quiet. I've got a brush\n"
+	.string "in my hand for once.\p"
+	.string "Come back and ruin it whenever you\n"
+	.string "like.$"
 
 MatchCall_Text_Wallace::
 	.string "JAKE: {PLAYER}{KUN}, it's me.\p"
