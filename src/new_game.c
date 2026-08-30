@@ -201,6 +201,9 @@ void NewGameInitData(void)
     DeactivateAllRoamers();
     gSaveBlock1Ptr->registeredItem = ITEM_NONE;
     ClearBag();
+    // The candies are KEY ITEMS and never run out, so one of each, in the bag.
+    AddBagItem(ITEM_INFINITE_CANDY, 1);
+    AddBagItem(ITEM_CAP_CANDY, 1);
     NewGameInitPCItems();
     ClearPokeblocks();
     ClearDecorationInventories();
