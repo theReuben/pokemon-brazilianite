@@ -3,7 +3,7 @@
 
 BILL's overworld sprite draws his hair AND his trousers in the same two
 golds, 6 and 7 - the trousers are khaki in the battle sprite too. Since
-the trousers now go black and the hair only darkens, the two have to be
+the trousers go black and the hair goes dark brown, the two have to be
 split by row first: rows 26 down are legs and shoes, everything above
 is hair. The legs move onto 11 and 12, which this sprite never uses.
 
@@ -17,8 +17,8 @@ OUT_PNG = 'graphics/object_events/pics/people/hush.png'
 OUT_PAL = 'graphics/object_events/palettes/hush.pal'
 
 PAL = {
-    6:  (182, 143,  26),        # hair, lit    (was 213,172, 32)
-    7:  (104,  76,   4),        # hair, shade  (was 131, 98,  0)
+    6:  ( 72,  54,  44),        # hair, lit    (was 213,172, 32)
+    7:  ( 44,  32,  26),        # hair, shade  (was 131, 98,  0)
     8:  ( 74,  94, 164),        # shirt, lit   (was 164,139,238)
     9:  ( 38,  52, 116),        # shirt, mid   (was 106, 82,189)
     10: ( 20,  28,  72),        # shirt, shade (was  65, 57, 98)

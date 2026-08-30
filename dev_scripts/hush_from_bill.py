@@ -6,8 +6,8 @@ trainer ever battles as him - so the source here is the Gen III sprite
 itself, kept beside this script as _bill_source.png. It arrives as
 RGBA with exactly 15 colours plus transparency, which is already a
 legal GBA palette; all this does is index it, put the standard trainer
-background in slot 0, darken the three hair tones by about an
-eighth, and repaint the shirt deep navy and the trousers black.
+background in slot 0, take the three hair tones down to a
+nearly-black brown, and repaint the shirt deep navy and the trousers black.
 
 The darkest hair tone is also used on his shoes and a few outline
 pixels, so those darken with it. At this size that reads as shadow
@@ -22,10 +22,10 @@ OUT_PNG = 'graphics/trainers/front_pics/hush.png'
 OUT_PAL = 'graphics/trainers/palettes/hush.pal'
 BG = (115, 197, 164)
 RECOLOUR = {                  # was            -> now
-    # hair, a shade darker
-    (176, 136, 112): (154, 118,  96),
-    (152, 104,  80): (132,  90,  68),
-    (104,  72,  56): ( 90,  62,  48),
+    # hair, dark brown - nearly black, but still brown at the highlights
+    (176, 136, 112): ( 84,  62,  50),
+    (152, 104,  80): ( 56,  42,  34),
+    (104,  72,  56): ( 32,  24,  20),
     # shirt, deep navy instead of BILL's purple
     (176, 136, 208): ( 74,  94, 164),
     (136,  96, 168): ( 38,  52, 116),
