@@ -4636,7 +4636,7 @@ EVs: 252 SpA / 4 SpD / 252 Spe
 === TRAINER_DRAKE ===
 Name: VARGNA
 Class: Elite Four
-Pic: Elite Four Drake
+Pic: Steven
 Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
@@ -4644,25 +4644,79 @@ Double Battle: No
 AI: Basic Trainer
 Mugshot: Blue
 
-Noivern
-Level: 52
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Noivern
+mutiny (Hippowdon) (M) @ Smooth Rock
+Ability: Sand Stream
 Level: 54
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Basculegion
-Level: 53
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Aegislash
-Level: 53
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Noivern @ Sitrus Berry
-Level: 55
+Nature: Impish
+Tera Type: Rock
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 112 Def / 148 SpD
+- Stealth Rock
+- Earthquake
+- Slack Off
+- Whirlwind
+
+ShadowTheHH (Great Tusk) @ Heavy-Duty Boots
+Ability: Protosynthesis
+Level: 55
+Nature: Jolly
+Tera Type: Steel
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 252 Spe
+- Headlong Rush
+- Ice Spinner
+- Rapid Spin
+- Close Combat
+
+Dodecagon (Flygon) @ Choice Scarf
+Ability: Levitate
+Level: 55
+Nature: Jolly
+Shiny: Yes
+Tera Type: Steel
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+- Earthquake
+- Dragon Claw
+- Throat Chop
+- U-turn
+
+Joe (Mamoswine) @ Leftovers
+Ability: Thick Fat
+Level: 55
+Nature: Adamant
+Tera Type: Grass
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 4 SpD / 252 Spe
+- Earthquake
+- Substitute
+- Trailblaze
+- Icicle Crash
+
+Purple Bias (Gliscor) @ Toxic Orb
+Ability: Poison Heal
+Level: 56
+Nature: Careful
+Tera Type: Water
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 36 Def / 228 SpD
+- Knock Off
+- Swords Dance
+- Earthquake
+- Facade
+
+jaffa cake (Ursaluna-Bloodmoon) @ Assault Vest
+Ability: Mind's Eye
+Level: 57
+Nature: Modest
+Shiny: Yes
+Tera Type: Normal
+IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 36 HP / 228 SpA / 244 SpD
+- Vacuum Wave
+- Hyper Voice
+- Earth Power
+- Blood Moon
 
 === TRAINER_ROXANNE_1 ===
 Name: LIL JON
