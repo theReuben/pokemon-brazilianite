@@ -71,7 +71,10 @@ EverGrandeCity_DrakesRoom_Text_IntroSpeech:
 	.string "One rule before we start.\n"
 	.string "No complaining about the sand.\p"
 	.string "There will be sand.\n"
-	.string "There is always sand.$"
+	.string "There is always sand.\p"
+	.string "Some of it is the weather.\p"
+	.string "Some of it comes out of my pocket.\p"
+	.string "Sh-sha.$"
 
 EverGrandeCity_DrakesRoom_Text_Defeat:
 	.string "Fair. Clean.\n"
