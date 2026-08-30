@@ -3,9 +3,10 @@
 
 WATTSON's overworld sprite draws his hair, beard and moustache as one
 flat white (index 14), and uses it for nothing else, so the recolour is
-a single palette entry. Not the battle sprite's (128,88,62), though:
-his overworld coat is a mid brown of its own, and at that value the
-beard sank into the coat. The hair goes darker than both, (74,54,40).
+a single palette entry, kept the same as the battle sprite's
+(128,88,62) so the two read as one character. His overworld coat is a
+mid brown of its own, so the beard sits close to it - (74,54,40)
+separates them better if that ever matters more than matching.
 
 One catch worth recording: WATTSON's sprite runs on the SHARED npc_2
 palette, so it cannot simply be recoloured in place - every NPC on that
@@ -18,7 +19,7 @@ from PIL import Image
 BASE = 'graphics/object_events/pics/people/gym_leaders/wattson.png'
 OUT_PNG = 'graphics/object_events/pics/people/praesta.png'
 OUT_PAL = 'graphics/object_events/palettes/praesta.pal'
-HAIR = (74, 54, 40)
+HAIR = (128, 88, 62)
 
 im = Image.open(BASE)
 W, H = im.size
