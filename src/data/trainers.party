@@ -4443,7 +4443,7 @@ EVs: 248 HP / 252 SpA / 8 SpD
 - Esper Wing
 - Hurricane
 - Calm Mind
-- Roost
+- Heat Wave
 
 Armarouge @ Weakness Policy
 Ability: Flash Fire
@@ -4584,7 +4584,7 @@ Nature: Adamant
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 252 Atk / 4 SpD
 - Close Combat
-- Drain Punch
+- Poison Jab
 - Fake Out
 - Throat Chop
 
@@ -4595,7 +4595,7 @@ Nature: Lonely
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 248 HP / 252 Atk / 8 SpA
 - Night Slash
-- Air Cutter
+- Brave Bird
 - Sucker Punch
 - U-turn
 
