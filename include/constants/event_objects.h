@@ -449,8 +449,9 @@
 #define OBJ_EVENT_GFX_YUJI                       409
 #define OBJ_EVENT_GFX_DENJI                      410
 #define OBJ_EVENT_GFX_PRAESTA                    411
+#define OBJ_EVENT_GFX_HUSH                       412
 
-#define NUM_OBJ_EVENT_GFX                        412
+#define NUM_OBJ_EVENT_GFX                        413
 
 
 // These are dynamic object gfx ids.
@@ -603,6 +604,7 @@
 #define OBJ_EVENT_PAL_TAG_YUJI                    0x1139
 #define OBJ_EVENT_PAL_TAG_DENJI                   0x113A
 #define OBJ_EVENT_PAL_TAG_PRAESTA                 0x113B
+#define OBJ_EVENT_PAL_TAG_HUSH                    0x113C
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
