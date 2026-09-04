@@ -85,3 +85,18 @@ SINGLE_BATTLE_TEST("Forecast does not transform Mega Castform")
         EXPECT_EQ(player->species, SPECIES_CASTFORM_MEGA);
     }
 }
+
+SINGLE_BATTLE_TEST("Mega Castform stays Mega after switching out and back in")
+{
+    GIVEN {
+        PLAYER(SPECIES_CASTFORM) { Item(ITEM_CASTFORMITE); }
+        PLAYER(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_WOBBUFFET);
+    } WHEN {
+        TURN { MOVE(player, MOVE_TACKLE, gimmick: GIMMICK_MEGA); }
+        TURN { SWITCH(player, 1); }
+        TURN { SWITCH(player, 0); }
+    } THEN {
+        EXPECT_EQ(player->species, SPECIES_CASTFORM_MEGA);
+    }
+}
