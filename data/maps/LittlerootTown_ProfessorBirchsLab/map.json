@@ -99,6 +99,7 @@
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_POKEBALL_CHIKORITA"
     },
     {
+      "local_id": "LOCALID_BIRCHS_LAB_JAKES_PSYDUCK",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES_SHINY(PSYDUCK)",
       "x": 7,
       "y": 3,

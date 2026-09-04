@@ -226,6 +226,7 @@ LittlerootTown_OnWarp:
 LittlerootTown_EventScript_SetRivalBirchPosForDexUpgrade::
 	addobject LOCALID_LITTLEROOT_BIRCH
 	addobject LOCALID_LITTLEROOT_RIVAL
+	addobject LOCALID_LITTLEROOT_JAKES_PSYDUCK
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeMale
 	goto LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeFemale
@@ -234,11 +235,13 @@ LittlerootTown_EventScript_SetRivalBirchPosForDexUpgrade::
 LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeMale::
 	setobjectxy LOCALID_LITTLEROOT_RIVAL, 6, 10
 	setobjectxy LOCALID_LITTLEROOT_BIRCH, 5, 10
+	setobjectxy LOCALID_LITTLEROOT_JAKES_PSYDUCK, 6, 11
 	end
 
 LittlerootTown_EventScript_SetRivalBirchPosForDexUpgradeFemale::
 	setobjectxy LOCALID_LITTLEROOT_RIVAL, 13, 10
 	setobjectxy LOCALID_LITTLEROOT_BIRCH, 14, 10
+	setobjectxy LOCALID_LITTLEROOT_JAKES_PSYDUCK, 13, 11
 	end
 
 LittlerootTown_EventScript_FatMan::

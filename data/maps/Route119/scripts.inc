@@ -39,6 +39,7 @@ Route119_EventScript_RivalTrigger2::
 Route119_EventScript_RivalEncounter::
 	lockall
 	addobject LOCALID_ROUTE119_RIVAL_ON_BIKE
+	addobject LOCALID_ROUTE119_BIKE_PSYDUCK
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route119_EventScript_PlayMayMusic
 	call_if_eq VAR_RESULT, FEMALE, Route119_EventScript_PlayBrendanMusic
@@ -51,7 +52,9 @@ Route119_EventScript_RivalEncounter::
 	call_if_eq VAR_TEMP_1, 1, Route119_EventScript_SetRivalPos1
 	call_if_eq VAR_TEMP_1, 2, Route119_EventScript_SetRivalPos2
 	removeobject LOCALID_ROUTE119_RIVAL_ON_BIKE
+	removeobject LOCALID_ROUTE119_BIKE_PSYDUCK
 	addobject LOCALID_ROUTE119_RIVAL
+	addobject LOCALID_ROUTE119_JAKES_PSYDUCK
 	delay 30
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, Route119_EventScript_BattleMay
@@ -137,11 +140,14 @@ Route119_EventScript_RivalExitScottArrive::
 	call_if_eq VAR_TEMP_1, 1, Route119_EventScript_SetRivalPos1
 	call_if_eq VAR_TEMP_1, 2, Route119_EventScript_SetRivalPos2
 	removeobject LOCALID_ROUTE119_RIVAL
+	removeobject LOCALID_ROUTE119_JAKES_PSYDUCK
 	addobject LOCALID_ROUTE119_RIVAL_ON_BIKE
+	addobject LOCALID_ROUTE119_BIKE_PSYDUCK
 	delay 30
 	call_if_eq VAR_TEMP_1, 1, Route119_EventScript_RivalExit1
 	call_if_eq VAR_TEMP_1, 2, Route119_EventScript_RivalExit2
 	removeobject LOCALID_ROUTE119_RIVAL_ON_BIKE
+	removeobject LOCALID_ROUTE119_BIKE_PSYDUCK
 	setvar VAR_ROUTE119_STATE, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
@@ -180,34 +186,44 @@ Route119_EventScript_ScottExit2::
 
 Route119_EventScript_RivalEnter1::
 	applymovement LOCALID_ROUTE119_RIVAL_ON_BIKE, Route119_Movement_RivalEnter1
+	applymovement LOCALID_ROUTE119_BIKE_PSYDUCK, Route119_Movement_PsyduckEnter1
 	waitmovement 0
 	return
 
 Route119_EventScript_RivalEnter2::
 	applymovement LOCALID_ROUTE119_RIVAL_ON_BIKE, Route119_Movement_RivalEnter2
+	applymovement LOCALID_ROUTE119_BIKE_PSYDUCK, Route119_Movement_PsyduckEnter2
 	waitmovement 0
 	return
 
 Route119_EventScript_RivalExit1::
 	applymovement LOCALID_PLAYER, Route119_Movement_PlayerWatchRivalExit1
 	applymovement LOCALID_ROUTE119_RIVAL_ON_BIKE, Route119_Movement_RivalExit1
+	applymovement LOCALID_ROUTE119_BIKE_PSYDUCK, Route119_Movement_PsyduckExit1
 	waitmovement 0
 	return
 
 Route119_EventScript_RivalExit2::
 	applymovement LOCALID_PLAYER, Route119_Movement_PlayerWatchRivalExit2
 	applymovement LOCALID_ROUTE119_RIVAL_ON_BIKE, Route119_Movement_RivalExit2
+	applymovement LOCALID_ROUTE119_BIKE_PSYDUCK, Route119_Movement_PsyduckExit2
 	waitmovement 0
 	return
 
 Route119_EventScript_SetRivalPos1::
 	setobjectxyperm LOCALID_ROUTE119_RIVAL, 25, 32
 	setobjectxyperm LOCALID_ROUTE119_RIVAL_ON_BIKE, 25, 32
+	@ Both PSYDUCK stand-ins wait a tile behind JAKE
+	setobjectxyperm LOCALID_ROUTE119_JAKES_PSYDUCK, 25, 33
+	setobjectxyperm LOCALID_ROUTE119_BIKE_PSYDUCK, 25, 33
 	return
 
 Route119_EventScript_SetRivalPos2::
 	setobjectxyperm LOCALID_ROUTE119_RIVAL, 26, 32
 	setobjectxyperm LOCALID_ROUTE119_RIVAL_ON_BIKE, 26, 32
+	@ Both PSYDUCK stand-ins wait a tile behind JAKE
+	setobjectxyperm LOCALID_ROUTE119_JAKES_PSYDUCK, 26, 33
+	setobjectxyperm LOCALID_ROUTE119_BIKE_PSYDUCK, 26, 33
 	return
 
 Route119_Movement_PlayerWatchRivalExit1:
@@ -222,6 +238,58 @@ Route119_Movement_PlayerWatchRivalExit2:
 	walk_in_place_faster_left
 	delay_8
 	walk_in_place_faster_up
+	step_end
+
+@ Each PSYDUCK movement below retraces JAKE's, one tile behind him: it opens
+@ with the step he last took, and stops one step short of his.
+Route119_Movement_PsyduckEnter1:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+Route119_Movement_PsyduckEnter2:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+Route119_Movement_PsyduckExit1:
+	walk_fast_up
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+Route119_Movement_PsyduckExit2:
+	walk_fast_up
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	step_end
 
 Route119_Movement_RivalEnter1:

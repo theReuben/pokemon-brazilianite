@@ -469,12 +469,16 @@ Route110_EventScript_RivalExit::
 	setobjectmovementtype LOCALID_ROUTE110_RIVAL, MOVEMENT_TYPE_FACE_RIGHT
 	setobjectmovementtype LOCALID_ROUTE110_RIVAL_ON_BIKE, MOVEMENT_TYPE_FACE_RIGHT
 	removeobject LOCALID_ROUTE110_RIVAL
+	removeobject LOCALID_ROUTE110_JAKES_PSYDUCK
 	addobject LOCALID_ROUTE110_RIVAL_ON_BIKE
+	addobject LOCALID_ROUTE110_BIKE_PSYDUCK
 	delay 45
 	call_if_eq VAR_0x8008, 1, Route110_EventScript_RivalExit1
 	call_if_eq VAR_0x8008, 2, Route110_EventScript_RivalExit2
 	call_if_eq VAR_0x8008, 3, Route110_EventScript_RivalExit3
 	removeobject LOCALID_ROUTE110_RIVAL_ON_BIKE
+	removeobject LOCALID_ROUTE110_BIKE_PSYDUCK
+	setflag FLAG_HIDE_ROUTE_110_RIVAL
 	setvar VAR_ROUTE110_STATE, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
@@ -483,45 +487,103 @@ Route110_EventScript_RivalExit::
 
 Route110_EventScript_RivalApproachPlayer1::
 	applymovement LOCALID_ROUTE110_RIVAL, Route110_Movement_RivalApproachPlayer1
+	applymovement LOCALID_ROUTE110_JAKES_PSYDUCK, Route110_Movement_PsyduckApproachPlayer1
 	waitmovement 0
 	return
 
 Route110_EventScript_RivalApproachPlayer2::
 	applymovement LOCALID_ROUTE110_RIVAL, Route110_Movement_RivalApproachPlayer2
+	applymovement LOCALID_ROUTE110_JAKES_PSYDUCK, Route110_Movement_PsyduckApproachPlayer2
 	waitmovement 0
 	return
 
 Route110_EventScript_RivalApproachPlayer3::
 	applymovement LOCALID_ROUTE110_RIVAL, Route110_Movement_RivalApproachPlayer3
+	applymovement LOCALID_ROUTE110_JAKES_PSYDUCK, Route110_Movement_PsyduckApproachPlayer3
 	waitmovement 0
 	return
 
 Route110_EventScript_RivalExit1::
 	applymovement LOCALID_ROUTE110_RIVAL_ON_BIKE, Route110_Movement_RivalExit1
+	applymovement LOCALID_ROUTE110_BIKE_PSYDUCK, Route110_Movement_PsyduckExit1
 	waitmovement 0
 	return
 
 Route110_EventScript_RivalExit2::
 	applymovement LOCALID_ROUTE110_RIVAL_ON_BIKE, Route110_Movement_RivalExit2
+	applymovement LOCALID_ROUTE110_BIKE_PSYDUCK, Route110_Movement_PsyduckExit2
 	waitmovement 0
 	return
 
 Route110_EventScript_RivalExit3::
 	applymovement LOCALID_ROUTE110_RIVAL_ON_BIKE, Route110_Movement_RivalExit3
+	applymovement LOCALID_ROUTE110_BIKE_PSYDUCK, Route110_Movement_PsyduckExit3
 	waitmovement 0
 	return
 
 Route110_EventScript_MoveRival1::
+	setobjectxyperm LOCALID_ROUTE110_BIKE_PSYDUCK, 34, 55
 	setobjectxyperm LOCALID_ROUTE110_RIVAL_ON_BIKE, 33, 55
 	return
 
 Route110_EventScript_MoveRival2::
+	setobjectxyperm LOCALID_ROUTE110_BIKE_PSYDUCK, 34, 54
 	setobjectxyperm LOCALID_ROUTE110_RIVAL_ON_BIKE, 34, 55
 	return
 
 Route110_EventScript_MoveRival3::
+	setobjectxyperm LOCALID_ROUTE110_BIKE_PSYDUCK, 34, 55
 	setobjectxyperm LOCALID_ROUTE110_RIVAL_ON_BIKE, 35, 55
 	return
+
+@ Each PSYDUCK movement below retraces JAKE's, one tile behind him: it opens
+@ with the step he last took, and stops one step short of his.
+Route110_Movement_PsyduckApproachPlayer1:
+	walk_down
+	walk_down
+	walk_in_place_faster_down
+	step_end
+
+Route110_Movement_PsyduckApproachPlayer2:
+	walk_down
+	step_end
+
+Route110_Movement_PsyduckApproachPlayer3:
+	walk_down
+	walk_down
+	walk_in_place_faster_down
+	step_end
+
+Route110_Movement_PsyduckExit1:
+	walk_fast_left
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+Route110_Movement_PsyduckExit2:
+	walk_fast_down
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
+Route110_Movement_PsyduckExit3:
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
 
 Route110_Movement_RivalApproachPlayer1:
 	walk_down

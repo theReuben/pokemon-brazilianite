@@ -226,6 +226,7 @@ OldaleTown_EventScript_Rival::
 OldaleTown_EventScript_RivalTrigger1::
 	lockall
 	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalApproachPlayer1
+	applymovement LOCALID_OLDALE_JAKES_PSYDUCK, OldaleTown_Movement_RivalApproachPlayer1
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -236,6 +237,7 @@ OldaleTown_EventScript_RivalTrigger1::
 OldaleTown_EventScript_RivalTrigger2::
 	lockall
 	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalApproachPlayer2
+	applymovement LOCALID_OLDALE_JAKES_PSYDUCK, OldaleTown_Movement_RivalApproachPlayer2
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -246,6 +248,7 @@ OldaleTown_EventScript_RivalTrigger2::
 OldaleTown_EventScript_RivalTrigger3::
 	lockall
 	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalApproachPlayer3
+	applymovement LOCALID_OLDALE_JAKES_PSYDUCK, OldaleTown_Movement_RivalApproachPlayer3
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -274,8 +277,10 @@ OldaleTown_EventScript_RivalFinish::
 	call_if_eq VAR_0x8009, 0, OldaleTown_EventScript_DoExitMovement1
 	call_if_eq VAR_0x8009, 1, OldaleTown_EventScript_DoExitMovement2
 	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalExit
+	applymovement LOCALID_OLDALE_JAKES_PSYDUCK, OldaleTown_Movement_RivalExit
 	waitmovement 0
 	removeobject LOCALID_OLDALE_RIVAL
+	removeobject LOCALID_OLDALE_JAKES_PSYDUCK
 	setvar VAR_OLDALE_RIVAL_STATE, 2
 	setflag FLAG_HIDE_OLDALE_TOWN_RIVAL
 	releaseall
@@ -284,12 +289,14 @@ OldaleTown_EventScript_RivalFinish::
 OldaleTown_EventScript_DoExitMovement1::
 	goto_if_ne VAR_FACING, DIR_SOUTH, OldaleTown_EventScript_DoExitMovement2
 	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalExit
+	applymovement LOCALID_OLDALE_JAKES_PSYDUCK, OldaleTown_Movement_PsyduckExit
 	waitmovement 0
 	return
 
 OldaleTown_EventScript_DoExitMovement2::
 	applymovement LOCALID_PLAYER, OldaleTown_Movement_WatchRivalExit
 	applymovement LOCALID_OLDALE_RIVAL, OldaleTown_Movement_RivalExit
+	applymovement LOCALID_OLDALE_JAKES_PSYDUCK, OldaleTown_Movement_PsyduckExit
 	waitmovement 0
 	return
 
@@ -304,6 +311,16 @@ OldaleTown_Movement_RivalApproachPlayer2:
 
 OldaleTown_Movement_RivalApproachPlayer3:
 	face_left
+	step_end
+
+@ Seeds the follow: one step onto the tile JAKE just left, then in his footsteps
+OldaleTown_Movement_PsyduckExit:
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 OldaleTown_Movement_RivalExit:

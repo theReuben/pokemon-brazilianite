@@ -588,6 +588,7 @@
       "flag": "FLAG_HIDE_ROUTE_119_SCOTT"
     },
     {
+      "local_id": "LOCALID_ROUTE119_JAKES_PSYDUCK",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES_SHINY(PSYDUCK)",
       "x": 25,
       "y": 33,
@@ -601,9 +602,10 @@
       "flag": "FLAG_HIDE_ROUTE_119_RIVAL"
     },
     {
+      "local_id": "LOCALID_ROUTE119_BIKE_PSYDUCK",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES_SHINY(PSYDUCK)",
-      "x": 17,
-      "y": 34,
+      "x": 16,
+      "y": 33,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,

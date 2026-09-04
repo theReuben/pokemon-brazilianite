@@ -2186,38 +2186,38 @@ MatchCall_Text_Winona4::
 	.string "you never lost sight of your dream.$"
 
 MatchCall_Text_TateLiza1::
-	.string "TATE: Oh! You're…\n"
-	.string "LIZA: {PLAYER}!\p"
-	.string "TATE: We're in training again…\n"
-	.string "LIZA: So we can reopen our GYM!\p"
-	.string "TATE: When our GYM is ready…\n"
-	.string "LIZA: When our GYM is ready…\p"
-	.string "TATE: A mark'll appear by our name…\n"
-	.string "LIZA: On the MATCH CALL list.$"
+	.string "MR. P: Oh! You're…\n"
+	.string "MRS. P: {PLAYER}!\p"
+	.string "MR. P: We're in training again…\n"
+	.string "MRS. P: So we can reopen our GYM!\p"
+	.string "MR. P: When our GYM is ready…\n"
+	.string "MRS. P: When our GYM is ready…\p"
+	.string "MR. P: A mark'll appear by our name…\n"
+	.string "MRS. P: On the MATCH CALL list.$"
 
 MatchCall_Text_TateLiza2::
-	.string "TATE: {PLAYER}, congratulations!\n"
-	.string "LIZA: {PLAYER}, congratulations!\p"
-	.string "TATE: The two of us are…\n"
-	.string "LIZA: Still in training!\p"
-	.string "TATE: We need some more time, but…\n"
-	.string "LIZA: When our GYM is ready…\p"
-	.string "TATE: A mark'll appear by our name…\n"
-	.string "LIZA: On the MATCH CALL list.$"
+	.string "MR. P: {PLAYER}, congratulations!\n"
+	.string "MRS. P: {PLAYER}, congratulations!\p"
+	.string "MR. P: The two of us are…\n"
+	.string "MRS. P: Still in training!\p"
+	.string "MR. P: We need some more time, but…\n"
+	.string "MRS. P: When our GYM is ready…\p"
+	.string "MR. P: A mark'll appear by our name…\n"
+	.string "MRS. P: On the MATCH CALL list.$"
 
 MatchCall_Text_TateLiza3::
-	.string "TATE: {PLAYER}!\n"
-	.string "LIZA: {PLAYER}!\p"
-	.string "TATE: Our GYM is ready!\n"
-	.string "LIZA: Our GYM is ready!\p"
-	.string "TATE: Please come visit…\n"
-	.string "LIZA: MOSSDEEP anytime!$"
+	.string "MR. P: {PLAYER}!\n"
+	.string "MRS. P: {PLAYER}!\p"
+	.string "MR. P: Our GYM is ready!\n"
+	.string "MRS. P: Our GYM is ready!\p"
+	.string "MR. P: Please come visit…\n"
+	.string "MRS. P: MOSSDEEP anytime!$"
 
 MatchCall_Text_TateLiza4::
-	.string "TATE: {PLAYER}, the battle we had…\n"
-	.string "LIZA: Is an invaluable experience.\p"
-	.string "TATE: It would be nice if…\n"
-	.string "LIZA: We could all battle again!$"
+	.string "MR. P: {PLAYER}, the battle we had…\n"
+	.string "MRS. P: Is an invaluable experience.\p"
+	.string "MR. P: It would be nice if…\n"
+	.string "MRS. P: We could all battle again!$"
 
 MatchCall_Text_Juan1::
 	.string "JUAN: Hmm…\n"
@@ -2261,7 +2261,7 @@ MatchCall_Text_Sidney::
 	.string "That's rather the point of me.$"
 
 MatchCall_Text_Phoebe::
-	.string "PHOEBE: Hi, {PLAYER}!\p"
+	.string "PRAESTA: Hi, {PLAYER}!\p"
 	.string "How about coming back here again\n"
 	.string "sometime?\p"
 	.string "I'd like to see how much tighter\n"

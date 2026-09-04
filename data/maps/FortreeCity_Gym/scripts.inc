@@ -147,42 +147,45 @@ FortreeCity_Gym_Text_GymGuideAdvice:
 
 FortreeCity_Gym_Text_GymGuidePostVictory:
 	.string "You did it!\n"
-	.string "You've achieved liftoff!$"
+	.string "And you still have all your ankles!$"
 
 FortreeCity_Gym_Text_JaredIntro:
-	.string "Behold the elegant battle style of\n"
-	.string "BIRD POKéMON!$"
+	.string "Six weeks I've been camped in here.\p"
+	.string "You get used to the sound.\n"
+	.string "You never get used to the sound.$"
 
 FortreeCity_Gym_Text_JaredDefeat:
 	.string "You…\n"
 	.string "You're strong…$"
 
 FortreeCity_Gym_Text_JaredPostBattle:
-	.string "A TRAINER has to be smart to keep\n"
-	.string "up with unexpected turns of events.\p"
-	.string "Do you have the smarts to get to\n"
-	.string "our LEADER?$"
+	.string "Rule one of camping in the FORTREE\n"
+	.string "GYM: check the sleeping bag.\p"
+	.string "Rule two: check it again.\p"
+	.string "There is no rule three. Rule two\n"
+	.string "covers it.$"
 
 FortreeCity_Gym_Text_EdwardoIntro:
-	.string "The lovers of BIRD POKéMON aspire\n"
-	.string "to join this GYM.\p"
-	.string "As a member of the FORTREE GYM,\n"
-	.string "I'm not allowed to lose!$"
+	.string "People ask why we pitch tents in\n"
+	.string "a GYM.\p"
+	.string "Nobody wants to sleep on the floor\n"
+	.string "in here. Nobody.$"
 
 FortreeCity_Gym_Text_EdwardoDefeat:
-	.string "It was too much of a load for me\n"
-	.string "to bear…$"
+	.string "Constricted…\n"
+	.string "Comprehensively…$"
 
 FortreeCity_Gym_Text_EdwardoPostBattle:
 	.string "The world is huge, and there are\n"
 	.string "countless tough TRAINERS.\p"
-	.string "I'm going to keep training and make\n"
-	.string "myself even stronger.$"
+	.string "Most of them sleep indoors, though.\n"
+	.string "Cowards, all of them.$"
 
 FortreeCity_Gym_Text_FlintIntro:
 	.string "There's no need for WINONA, our GYM\n"
 	.string "LEADER, to deal with you!\p"
-	.string "I'm plenty good enough for you!$"
+	.string "I've got a tent and a snake.\n"
+	.string "That's plenty good enough for you!$"
 
 FortreeCity_Gym_Text_FlintDefeat:
 	.string "WINONA, I…\n"
@@ -191,24 +194,29 @@ FortreeCity_Gym_Text_FlintDefeat:
 FortreeCity_Gym_Text_FlintPostBattle:
 	.string "WINONA is cute and she's strong.\n"
 	.string "She's the ultimate LEADER!\p"
+	.string "She sleeps with all six of them.\n"
 	.string "Blush…$"
 
 FortreeCity_Gym_Text_AshleyIntro:
-	.string "WINONA taught me personally!\n"
-	.string "You can't beat me easily!$"
+	.string "WINONA taught me personally!\p"
+	.string "First lesson was where to put your\n"
+	.string "hands. Second lesson was the same.$"
 
 FortreeCity_Gym_Text_AshleyDefeat:
 	.string "I was beaten…$"
 
 FortreeCity_Gym_Text_AshleyPostBattle:
 	.string "Thanks to WINONA, the people of\n"
-	.string "FORTREE can live without fear.$"
+	.string "FORTREE can live without fear.\p"
+	.string "They live in the trees, mind you.\n"
+	.string "But without fear.$"
 
 FortreeCity_Gym_Text_HumbertoIntro:
 	.string "When WINONA takes to battle, her face\n"
 	.string "shines with beautiful determination…\p"
-	.string "I'm not letting you witness that\n"
-	.string "lovely sight!$"
+	.string "So does the ZYGARDE. Different\n"
+	.string "reasons.\p"
+	.string "I'm not letting you witness either!$"
 
 FortreeCity_Gym_Text_HumbertoDefeat:
 	.string "Urk!\n"
@@ -217,7 +225,8 @@ FortreeCity_Gym_Text_HumbertoDefeat:
 FortreeCity_Gym_Text_HumbertoPostBattle:
 	.string "You'd better watch it!\n"
 	.string "Don't get distracted staring at WINONA\l"
-	.string "or you'll go crashing down in a heap!$"
+	.string "or you'll stand on something.\p"
+	.string "Everything in here is something.$"
 
 FortreeCity_Gym_Text_DariusIntro:
 	.string "You'd better know that there are all\n"
@@ -235,17 +244,19 @@ FortreeCity_Gym_Text_DariusPostBattle:
 FortreeCity_Gym_Text_WinonaIntro:
 	.string "I am WINONA. I am the LEADER of\n"
 	.string "the FORTREE POKéMON GYM.\p"
-	.string "I have become one with BIRD POKéMON\n"
-	.string "and have soared the skies…\p"
+	.string "I have become one with the six.\n"
+	.string "There are only six. I have all six.\p"
 	.string "However grueling the battle, we have\n"
-	.string "triumphed with grace…\p"
+	.string "triumphed without limbs…\p"
 	.string "Witness the elegant choreography\n"
-	.string "of BIRD POKéMON and I!$"
+	.string "of a thing with no shoulders!$"
 
 FortreeCity_Gym_Text_WinonaDefeat:
 	.string "Never before have I seen a TRAINER\n"
 	.string "command POKéMON with more grace\l"
 	.string "than I…\p"
+	.string "And I did not have to be told twice\n"
+	.string "where the head was.\p"
 	.string "In recognition of your prowess,\n"
 	.string "I present to you this GYM BADGE.$"
 
@@ -275,7 +286,8 @@ FortreeCity_Gym_Text_RegisteredWinona:
 
 FortreeCity_Gym_Text_WinonaPostBattle:
 	.string "Though I fell to you, I will remain\n"
-	.string "devoted to BIRD POKéMON.$"
+	.string "devoted to all six of them.\p"
+	.string "Seven, counting the BADGE.$"
 
 FortreeCity_Gym_Text_GymStatue:
 	.string "FORTREE CITY POKéMON GYM$"

@@ -22,6 +22,8 @@ LittlerootTown_MaysHouse_2F_EventScript_TryUpdateMayPos::
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_Ret
 	setobjectxyperm LOCALID_RIVALS_HOUSE_2F_RIVAL, 8, 2
 	setobjectmovementtype LOCALID_RIVALS_HOUSE_2F_RIVAL, MOVEMENT_TYPE_FACE_UP
+	@ Keep the PSYDUCK parked beside JAKE, where it followed him to
+	setobjectxyperm LOCALID_RIVALS_HOUSE_2F_PSYDUCK, 7, 2
 	return
 
 LittlerootTown_MaysHouse_2F_EventScript_Ret::
@@ -55,7 +57,12 @@ LittlerootTown_MaysHouse_2F_EventScript_RivalsPokeBall::
 LittlerootTown_MaysHouse_2F_EventScript_MeetMay::
 	delay 10
 	addobject LOCALID_RIVALS_HOUSE_2F_RIVAL
+	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayThroughDoor
+	waitmovement 0
+	@ The PSYDUCK trots in a step behind him, and trails him from here on
+	addobject LOCALID_RIVALS_HOUSE_2F_PSYDUCK
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayEnters
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_MaysHouse_2F_Movement_PsyduckEnters
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, Common_Movement_ExclamationMark
@@ -79,6 +86,7 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMay::
 
 LittlerootTown_MaysHouse_2F_EventScript_MeetMayNorth::
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayApproachPlayerNorth
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_MaysHouse_2F_Movement_PsyduckApproachPlayerNorth
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
@@ -86,11 +94,13 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMayNorth::
 	closemessage
 	applymovement LOCALID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMayNorth
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCNorth
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_MaysHouse_2F_Movement_PsyduckWalkToPCNorth
 	waitmovement 0
 	return
 
 LittlerootTown_MaysHouse_2F_EventScript_MeetMaySouth::
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayApproachPlayerSouth
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_MaysHouse_2F_Movement_PsyduckApproachPlayerSouth
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
@@ -98,22 +108,26 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMaySouth::
 	closemessage
 	applymovement LOCALID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMaySouth
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCSouth
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_MaysHouse_2F_Movement_PsyduckWalkToPCSouth
 	waitmovement 0
 	return
 
 LittlerootTown_MaysHouse_2F_EventScript_MeetMayWest::
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayApproachPlayerWest
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_MaysHouse_2F_Movement_PsyduckApproachPlayerWest
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_MayWhoAreYou, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCWest
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_MaysHouse_2F_Movement_PsyduckWalkToPCWest
 	waitmovement 0
 	return
 
 LittlerootTown_MaysHouse_2F_EventScript_MeetMayEast::
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayApproachPlayerEast
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_MaysHouse_2F_Movement_PsyduckApproachPlayerEast
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
@@ -121,13 +135,31 @@ LittlerootTown_MaysHouse_2F_EventScript_MeetMayEast::
 	closemessage
 	applymovement LOCALID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMayEast
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCEast
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_MaysHouse_2F_Movement_PsyduckWalkToPCEast
 	waitmovement 0
 	return
 
+LittlerootTown_MaysHouse_2F_Movement_MayThroughDoor:
+	walk_down
+	step_end
+
 LittlerootTown_MaysHouse_2F_Movement_MayEnters:
 	walk_down
-	walk_down
 	walk_in_place_faster_right
+	step_end
+
+@ Each PSYDUCK movement below retraces JAKE's, one tile behind him:
+@ it opens with the step he last took, and stops one step short of his.
+LittlerootTown_MaysHouse_2F_Movement_PsyduckEnters:
+	walk_down
+	step_end
+
+LittlerootTown_MaysHouse_2F_Movement_PsyduckApproachPlayerNorth:
+	walk_down
+	walk_right
+	walk_right
+	walk_down
+	walk_down
 	step_end
 
 LittlerootTown_MaysHouse_2F_Movement_MayApproachPlayerNorth:
@@ -135,6 +167,17 @@ LittlerootTown_MaysHouse_2F_Movement_MayApproachPlayerNorth:
 	walk_right
 	walk_down
 	walk_down
+	walk_right
+	step_end
+
+LittlerootTown_MaysHouse_2F_Movement_PsyduckWalkToPCNorth:
+	walk_right
+	walk_up
+	walk_up
+	walk_in_place_faster_right
+	walk_up
+	walk_right
+	walk_right
 	walk_right
 	step_end
 
@@ -160,7 +203,22 @@ LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMayNorth:
 	walk_in_place_faster_right
 	step_end
 
+LittlerootTown_MaysHouse_2F_Movement_PsyduckApproachPlayerSouth:
+	walk_down
+	walk_right
+	walk_right
+	step_end
+
 LittlerootTown_MaysHouse_2F_Movement_MayApproachPlayerSouth:
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+LittlerootTown_MaysHouse_2F_Movement_PsyduckWalkToPCSouth:
+	walk_right
+	walk_in_place_faster_right
+	walk_up
 	walk_right
 	walk_right
 	walk_right
@@ -184,6 +242,14 @@ LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMaySouth:
 	walk_in_place_faster_right
 	step_end
 
+LittlerootTown_MaysHouse_2F_Movement_PsyduckApproachPlayerWest:
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
 LittlerootTown_MaysHouse_2F_Movement_MayApproachPlayerWest:
 	walk_right
 	walk_right
@@ -191,6 +257,12 @@ LittlerootTown_MaysHouse_2F_Movement_MayApproachPlayerWest:
 	walk_right
 	walk_right
 	walk_in_place_faster_down
+	step_end
+
+LittlerootTown_MaysHouse_2F_Movement_PsyduckWalkToPCWest:
+	walk_right
+	walk_up
+	walk_right
 	step_end
 
 LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCWest:
@@ -207,11 +279,27 @@ LittlerootTown_MaysHouse_2F_Movement_PlayerWatchMayWest:
 	walk_in_place_faster_right
 	step_end
 
+LittlerootTown_MaysHouse_2F_Movement_PsyduckApproachPlayerEast:
+	walk_down
+	walk_right
+	walk_right
+	step_end
+
 LittlerootTown_MaysHouse_2F_Movement_MayApproachPlayerEast:
 	walk_right
 	walk_right
 	walk_down
 	walk_in_place_faster_right
+	step_end
+
+LittlerootTown_MaysHouse_2F_Movement_PsyduckWalkToPCEast:
+	walk_down
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 LittlerootTown_MaysHouse_2F_Movement_MayWalkToPCEast:

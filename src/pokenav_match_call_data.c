@@ -403,7 +403,7 @@ static const struct MatchCallStructTrainer sBrawlyMatchCallHeader =
     .mapSec = MAPSEC_DEWFORD_TOWN,
     .flag = FLAG_ENABLE_BRAWLY_MATCH_CALL,
     .rematchTableIdx = REMATCH_BRAWLY,
-    .desc = COMPOUND_STRING("THE BIG HIT"),
+    .desc = COMPOUND_STRING("FINE VINTAGE"),
     .name = NULL,
     .textData = sBrawlyTextScripts
 };
@@ -422,7 +422,7 @@ static const struct MatchCallStructTrainer sWattsonMatchCallHeader =
     .mapSec = MAPSEC_MAUVILLE_CITY,
     .flag = FLAG_ENABLE_WATTSON_MATCH_CALL,
     .rematchTableIdx = REMATCH_WATTSON,
-    .desc = COMPOUND_STRING("SWELL SHOCK"),
+    .desc = COMPOUND_STRING("GUM-GUM MAN"),
     .name = NULL,
     .textData = sWattsonTextScripts
 };
@@ -460,7 +460,7 @@ static const struct MatchCallStructTrainer sWinonaMatchCallHeader =
     .mapSec = MAPSEC_FORTREE_CITY,
     .flag = FLAG_ENABLE_WINONA_MATCH_CALL,
     .rematchTableIdx = REMATCH_WINONA,
-    .desc = COMPOUND_STRING("SKY TAMER"),
+    .desc = COMPOUND_STRING("SNAKE TAMER"),
     .name = NULL,
     .textData = sWinonaTextScripts
 };
@@ -479,7 +479,7 @@ static const struct MatchCallStructTrainer sTateLizaMatchCallHeader =
     .mapSec = MAPSEC_MOSSDEEP_CITY,
     .flag = FLAG_ENABLE_TATE_AND_LIZA_MATCH_CALL,
     .rematchTableIdx = REMATCH_TATE_AND_LIZA,
-    .desc = COMPOUND_STRING("MYSTIC DUO"),
+    .desc = COMPOUND_STRING("AUSSIE DUO"),
     .name = NULL,
     .textData = sTateLizaTextScripts
 };

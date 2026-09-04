@@ -110,9 +110,11 @@ Route103_EventScript_RivalExit::
 Route103_EventScript_RivalExitFacingNorth::
 	applymovement LOCALID_PLAYER, Route103_Movement_WatchRivalExitFacingNorth
 	applymovement LOCALID_ROUTE103_RIVAL, Route103_Movement_RivalExitFacingNorth1
+	applymovement LOCALID_ROUTE103_JAKES_PSYDUCK, Route103_Movement_RivalExitFacingNorth1
 	waitmovement 0
 	playse SE_LEDGE
 	applymovement LOCALID_ROUTE103_RIVAL, Route103_Movement_RivalExitFacingNorth2
+	applymovement LOCALID_ROUTE103_JAKES_PSYDUCK, Route103_Movement_RivalExitFacingNorth2
 	waitmovement 0
 	goto Route103_EventScript_RivalEnd
 	end
@@ -120,24 +122,29 @@ Route103_EventScript_RivalExitFacingNorth::
 Route103_EventScript_RivalExitFacingEastOrWest::
 	applymovement LOCALID_PLAYER, Route103_Movement_WatchRivalExitFacingEastOrWest
 	applymovement LOCALID_ROUTE103_RIVAL, Route103_Movement_RivalExit1
+	applymovement LOCALID_ROUTE103_JAKES_PSYDUCK, Route103_Movement_RivalExit1
 	waitmovement 0
 	playse SE_LEDGE
 	applymovement LOCALID_ROUTE103_RIVAL, Route103_Movement_RivalExit2
+	applymovement LOCALID_ROUTE103_JAKES_PSYDUCK, Route103_Movement_RivalExit2
 	waitmovement 0
 	goto Route103_EventScript_RivalEnd
 	end
 
 Route103_EventScript_RivalExitFacingSouth::
 	applymovement LOCALID_ROUTE103_RIVAL, Route103_Movement_RivalExit1
+	applymovement LOCALID_ROUTE103_JAKES_PSYDUCK, Route103_Movement_RivalExit1
 	waitmovement 0
 	playse SE_LEDGE
 	applymovement LOCALID_ROUTE103_RIVAL, Route103_Movement_RivalExit2
+	applymovement LOCALID_ROUTE103_JAKES_PSYDUCK, Route103_Movement_RivalExit2
 	waitmovement 0
 	goto Route103_EventScript_RivalEnd
 	end
 
 Route103_EventScript_RivalEnd::
 	removeobject LOCALID_ROUTE103_RIVAL
+	removeobject LOCALID_ROUTE103_JAKES_PSYDUCK
 	setvar VAR_BIRCH_LAB_STATE, 4
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
 	setflag FLAG_DEFEATED_RIVAL_ROUTE103

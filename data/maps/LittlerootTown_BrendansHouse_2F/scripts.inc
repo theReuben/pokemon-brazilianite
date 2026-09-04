@@ -23,6 +23,8 @@ LittlerootTown_BrendansHouse_2F_EventScript_TryUpdateBrendanPos::
 	goto_if_ge VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_Ret
 	setobjectxyperm LOCALID_RIVALS_HOUSE_2F_RIVAL, 0, 2
 	setobjectmovementtype LOCALID_RIVALS_HOUSE_2F_RIVAL, MOVEMENT_TYPE_FACE_UP
+	@ Keep the PSYDUCK parked beside JAKE, where it followed him to
+	setobjectxyperm LOCALID_RIVALS_HOUSE_2F_PSYDUCK, 1, 2
 	return
 
 LittlerootTown_BrendansHouse_2F_EventScript_Ret::
@@ -56,7 +58,12 @@ LittlerootTown_BrendansHouse_2F_EventScript_RivalsPokeBall::
 LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendan::
 	delay 10
 	addobject LOCALID_RIVALS_HOUSE_2F_RIVAL
+	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanThroughDoor
+	waitmovement 0
+	@ The PSYDUCK trots in a step behind him, and trails him from here on
+	addobject LOCALID_RIVALS_HOUSE_2F_PSYDUCK
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanEnters
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_BrendansHouse_2F_Movement_PsyduckEnters
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, Common_Movement_ExclamationMark
@@ -80,6 +87,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendan::
 
 LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanNorth::
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerNorth
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_BrendansHouse_2F_Movement_PsyduckApproachPlayerNorth
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -87,11 +95,13 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanNorth::
 	closemessage
 	applymovement LOCALID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanNorth
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCNorth
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_BrendansHouse_2F_Movement_PsyduckWalkToPCNorth
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanSouth::
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerSouth
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_BrendansHouse_2F_Movement_PsyduckApproachPlayerSouth
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -99,11 +109,13 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanSouth::
 	closemessage
 	applymovement LOCALID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanSouth
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCSouth
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_BrendansHouse_2F_Movement_PsyduckWalkToPCSouth
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanWest::
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerWest
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_BrendansHouse_2F_Movement_PsyduckApproachPlayerWest
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -111,24 +123,44 @@ LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanWest::
 	closemessage
 	applymovement LOCALID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanWest
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCWest
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_BrendansHouse_2F_Movement_PsyduckWalkToPCWest
 	waitmovement 0
 	return
 
 LittlerootTown_BrendansHouse_2F_EventScript_MeetBrendanEast::
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerEast
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_BrendansHouse_2F_Movement_PsyduckApproachPlayerEast
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox RivalsHouse_2F_Text_BrendanWhoAreYou, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_RIVALS_HOUSE_2F_RIVAL, LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCEast
+	applymovement LOCALID_RIVALS_HOUSE_2F_PSYDUCK, LittlerootTown_BrendansHouse_2F_Movement_PsyduckWalkToPCEast
 	waitmovement 0
 	return
 
+LittlerootTown_BrendansHouse_2F_Movement_BrendanThroughDoor:
+	walk_down
+	step_end
+
 LittlerootTown_BrendansHouse_2F_Movement_BrendanEnters:
 	walk_down
-	walk_down
 	walk_in_place_faster_left
+	step_end
+
+@ Each PSYDUCK movement below retraces JAKE's, one tile behind him:
+@ it opens with the step he last took, and stops one step short of his.
+LittlerootTown_BrendansHouse_2F_Movement_PsyduckEnters:
+	walk_down
+	step_end
+
+LittlerootTown_BrendansHouse_2F_Movement_PsyduckApproachPlayerNorth:
+	walk_down
+	walk_left
+	walk_left
+	walk_down
+	walk_down
 	step_end
 
 LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerNorth:
@@ -136,6 +168,16 @@ LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerNorth:
 	walk_left
 	walk_down
 	walk_down
+	walk_left
+	step_end
+
+LittlerootTown_BrendansHouse_2F_Movement_PsyduckWalkToPCNorth:
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
 	walk_left
 	step_end
 
@@ -160,7 +202,21 @@ LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanNorth:
 	walk_in_place_faster_left
 	step_end
 
+LittlerootTown_BrendansHouse_2F_Movement_PsyduckApproachPlayerSouth:
+	walk_down
+	walk_left
+	walk_left
+	step_end
+
 LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerSouth:
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+LittlerootTown_BrendansHouse_2F_Movement_PsyduckWalkToPCSouth:
+	walk_left
+	walk_up
 	walk_left
 	walk_left
 	walk_left
@@ -183,11 +239,27 @@ LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanSouth:
 	walk_in_place_faster_left
 	step_end
 
+LittlerootTown_BrendansHouse_2F_Movement_PsyduckApproachPlayerWest:
+	walk_down
+	walk_left
+	walk_left
+	step_end
+
 LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerWest:
 	walk_left
 	walk_left
 	walk_down
 	walk_in_place_faster_left
+	step_end
+
+LittlerootTown_BrendansHouse_2F_Movement_PsyduckWalkToPCWest:
+	walk_down
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCWest:
@@ -210,6 +282,14 @@ LittlerootTown_BrendansHouse_2F_Movement_PlayerWatchBrendanWest:
 	walk_in_place_faster_left
 	step_end
 
+LittlerootTown_BrendansHouse_2F_Movement_PsyduckApproachPlayerEast:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerEast:
 	walk_left
 	walk_left
@@ -217,6 +297,12 @@ LittlerootTown_BrendansHouse_2F_Movement_BrendanApproachPlayerEast:
 	walk_left
 	walk_left
 	walk_in_place_faster_down
+	step_end
+
+LittlerootTown_BrendansHouse_2F_Movement_PsyduckWalkToPCEast:
+	walk_left
+	walk_up
+	walk_left
 	step_end
 
 LittlerootTown_BrendansHouse_2F_Movement_BrendanWalkToPCEast:

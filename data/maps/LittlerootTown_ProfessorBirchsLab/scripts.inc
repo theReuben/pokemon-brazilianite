@@ -68,6 +68,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForDexUpgrade::
 	addobject LOCALID_BIRCHS_LAB_RIVAL
 	turnobject LOCALID_BIRCHS_LAB_RIVAL, DIR_NORTH
 	setobjectxy LOCALID_BIRCHS_LAB_RIVAL, 5, 5
+	addobject LOCALID_BIRCHS_LAB_JAKES_PSYDUCK
+	turnobject LOCALID_BIRCHS_LAB_JAKES_PSYDUCK, DIR_NORTH
+	setobjectxy LOCALID_BIRCHS_LAB_JAKES_PSYDUCK, 4, 5
 	turnobject LOCALID_BIRCHS_LAB_BIRCH, DIR_SOUTH
 	setobjectxy LOCALID_BIRCHS_LAB_BIRCH, 6, 4
 	turnobject LOCALID_BIRCHS_LAB_AIDE, DIR_EAST
@@ -76,6 +79,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForDexUpgrade::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject::
 	addobject LOCALID_BIRCHS_LAB_RIVAL
+	addobject LOCALID_BIRCHS_LAB_JAKES_PSYDUCK
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters::
@@ -93,6 +97,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForJohtoStarters::
 	setobjectxy LOCALID_BIRCHS_LAB_BIRCH, 6, 4
 	turnobject LOCALID_BIRCHS_LAB_RIVAL, DIR_EAST
 	setobjectxy LOCALID_BIRCHS_LAB_RIVAL, 5, 5
+	addobject LOCALID_BIRCHS_LAB_JAKES_PSYDUCK
+	turnobject LOCALID_BIRCHS_LAB_JAKES_PSYDUCK, DIR_EAST
+	setobjectxy LOCALID_BIRCHS_LAB_JAKES_PSYDUCK, 4, 5
 	end
 
 LittlerootTown_ProfessorBirchsLab_OnFrame:
@@ -509,6 +516,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_BIRCHS_LAB_RIVAL, LittlerootTown_ProfessorBirchsLab_Movement_RivalApproachPlayer
+	applymovement LOCALID_BIRCHS_LAB_JAKES_PSYDUCK, LittlerootTown_ProfessorBirchsLab_Movement_PsyduckApproachPlayer
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -563,6 +571,13 @@ LittlerootTown_ProfessorBirchsLab_EventScript_BrendanNoRoomForPokeBalls::
 	return
 
 LittlerootTown_ProfessorBirchsLab_Movement_RivalApproachPlayer:
+	walk_down
+	walk_in_place_faster_left
+	step_end
+
+@ Retraces JAKE's path one tile behind him: it steps into the tile he is
+@ leaving, so it ends up directly behind him.
+LittlerootTown_ProfessorBirchsLab_Movement_PsyduckApproachPlayer:
 	walk_down
 	walk_in_place_faster_left
 	step_end

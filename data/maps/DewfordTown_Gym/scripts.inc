@@ -431,8 +431,8 @@ DewfordTown_Gym_Text_ExplainMegaDrain:
 	.string "It draws the substance out of\n"
 	.string "the other thing and keeps it.\p"
 	.string "Pressing, essentially.\p"
-	.string "A TM can be used only once, so do\n"
-	.string "think before you use it.$"
+	.string "A TM keeps. It does not run dry, so\n"
+	.string "do pour it as often as you like.$"
 
 DewfordTown_Gym_Text_RegisteredBrawly:
 	.string "Registered GYM LEADER MERLOT\n"

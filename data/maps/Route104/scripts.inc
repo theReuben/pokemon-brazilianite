@@ -33,6 +33,7 @@ Route104_EventScript_TrySetRivalPos::
 	goto_if_set FLAG_MET_RIVAL_RUSTBORO, Route104_EventScript_DontSetRivalPos
 	goto_if_unset FLAG_REGISTER_RIVAL_POKENAV, Route104_EventScript_DontSetRivalPos
 	setobjectxyperm LOCALID_ROUTE104_RIVAL, 17, 52
+	setobjectxyperm LOCALID_ROUTE104_JAKES_PSYDUCK, 17, 51
 	return
 
 Route104_EventScript_DontSetRivalPos::
@@ -59,6 +60,7 @@ Route104_EventScript_RivalTrigger::
 	waitmovement 0
 	applymovement LOCALID_ROUTE104_RIVAL, Route104_Movement_RivalExitBrineysCottage
 	waitmovement 0
+	addobject LOCALID_ROUTE104_JAKES_PSYDUCK
 	delay 20
 	setvar VAR_0x8008, 0
 	call RustboroCity_EventScript_PlayRivalMusic
@@ -105,12 +107,15 @@ Route104_EventScript_MayEncounter::
 	setflag FLAG_ENABLE_RIVAL_MATCH_CALL
 	applymovement LOCALID_PLAYER, Route104_Movement_PlayerFaceRival
 	applymovement LOCALID_ROUTE104_RIVAL, Route104_Movement_RivalWalkSlowLeft
+	applymovement LOCALID_ROUTE104_JAKES_PSYDUCK, Route104_Movement_PsyduckWalkSlowDown
 	msgbox Route104_Text_MayHowsYourPokedex, MSGBOX_DEFAULT
 	closemessage
 	waitmovement 0
 	applymovement LOCALID_ROUTE104_RIVAL, Route104_Movement_RivalApproachPlayer
+	applymovement LOCALID_ROUTE104_JAKES_PSYDUCK, Route104_Movement_PsyduckApproachPlayer
 	waitmovement 0
 	copyobjectxytoperm LOCALID_ROUTE104_RIVAL
+	copyobjectxytoperm LOCALID_ROUTE104_JAKES_PSYDUCK
 	msgbox Route104_Text_MayMinesDecentLetsBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route104_EventScript_BattleMay
 	msgbox Route104_Text_MayHaventRaisedPokemon, MSGBOX_DEFAULT
@@ -124,6 +129,17 @@ Route104_Movement_RivalWalkSlowLeft:
 
 Route104_Movement_RivalApproachPlayer:
 	walk_down
+	face_right
+	step_end
+
+@ Each PSYDUCK movement below retraces JAKE's, one tile behind him: it opens
+@ with the step he last took, and stops one step short of his.
+Route104_Movement_PsyduckWalkSlowDown:
+	walk_slow_down
+	step_end
+
+Route104_Movement_PsyduckApproachPlayer:
+	walk_left
 	face_right
 	step_end
 
@@ -191,12 +207,15 @@ Route104_EventScript_BrendanEncounter::
 	setflag FLAG_ENABLE_RIVAL_MATCH_CALL
 	applymovement LOCALID_PLAYER, Route104_Movement_PlayerFaceRival
 	applymovement LOCALID_ROUTE104_RIVAL, Route104_Movement_RivalWalkSlowLeft
+	applymovement LOCALID_ROUTE104_JAKES_PSYDUCK, Route104_Movement_PsyduckWalkSlowDown
 	msgbox Route104_Text_BrendanHowsYourPokedex, MSGBOX_DEFAULT
 	closemessage
 	waitmovement 0
 	applymovement LOCALID_ROUTE104_RIVAL, Route104_Movement_RivalApproachPlayer
+	applymovement LOCALID_ROUTE104_JAKES_PSYDUCK, Route104_Movement_PsyduckApproachPlayer
 	waitmovement 0
 	copyobjectxytoperm LOCALID_ROUTE104_RIVAL
+	copyobjectxytoperm LOCALID_ROUTE104_JAKES_PSYDUCK
 	msgbox Route104_Text_BrendanDoingGreatLetsBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route104_EventScript_BattleBrendan
 	msgbox Route104_Text_BrendanNoConfidence, MSGBOX_DEFAULT

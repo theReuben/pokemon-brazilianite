@@ -26,6 +26,9 @@ LavaridgeTown_EventScript_SetRivalPos::
 	setobjectxyperm LOCALID_LAVARIDGE_RIVAL, 11, 9
 	setobjectxyperm LOCALID_LAVARIDGE_RIVAL_ON_BIKE, 9, 8
 	setobjectmovementtype LOCALID_LAVARIDGE_RIVAL_ON_BIKE, MOVEMENT_TYPE_FACE_UP
+	@ The PSYDUCK waits a tile behind JAKE, ready to trail him
+	setobjectxyperm LOCALID_LAVARIDGE_JAKES_PSYDUCK, 12, 9
+	setobjectxyperm LOCALID_LAVARIDGE_BIKE_PSYDUCK, 9, 9
 	clearflag FLAG_HIDE_LAVARIDGE_TOWN_RIVAL
 	return
 
@@ -76,11 +79,15 @@ LavaridgeTown_EventScript_BrendanGiveGoGoggles::
 LavaridgeTown_EventScript_RivalExit::
 	closemessage
 	removeobject LOCALID_LAVARIDGE_RIVAL
+	removeobject LOCALID_LAVARIDGE_JAKES_PSYDUCK
 	addobject LOCALID_LAVARIDGE_RIVAL_ON_BIKE
+	addobject LOCALID_LAVARIDGE_BIKE_PSYDUCK
 	delay 30
 	call_if_eq VAR_0x8008, 9, LavaridgeTown_EventScript_RivalExit1
 	call_if_ne VAR_0x8008, 9, LavaridgeTown_EventScript_RivalExit2
 	removeobject LOCALID_LAVARIDGE_RIVAL_ON_BIKE
+	removeobject LOCALID_LAVARIDGE_BIKE_PSYDUCK
+	setflag FLAG_HIDE_LAVARIDGE_TOWN_RIVAL
 	setvar VAR_LAVARIDGE_TOWN_STATE, 2
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	savebgm MUS_DUMMY
@@ -127,22 +134,28 @@ LavaridgeTown_EventScript_RivalExitHerbShop::
 
 LavaridgeTown_EventScript_RivalApproachPlayer1::
 	applymovement LOCALID_LAVARIDGE_RIVAL, LavaridgeTown_Movement_RivalApproachPlayer1
+	applymovement LOCALID_LAVARIDGE_JAKES_PSYDUCK, LavaridgeTown_Movement_PsyduckApproachPlayer1
 	waitmovement 0
 	return
 
 LavaridgeTown_EventScript_RivalApproachPlayer2::
+	@ The PSYDUCK is still in the shop doorway; it trots out as JAKE sets off
+	addobject LOCALID_LAVARIDGE_JAKES_PSYDUCK
 	applymovement LOCALID_LAVARIDGE_RIVAL, LavaridgeTown_Movement_RivalApproachPlayer2
+	applymovement LOCALID_LAVARIDGE_JAKES_PSYDUCK, LavaridgeTown_Movement_PsyduckApproachPlayer2
 	waitmovement 0
 	return
 
 LavaridgeTown_EventScript_RivalExit1::
 	applymovement LOCALID_PLAYER, LavaridgeTown_Movement_PlayerWatchRivalExit
 	applymovement LOCALID_LAVARIDGE_RIVAL_ON_BIKE, LavaridgeTown_Movement_RivalExit1
+	applymovement LOCALID_LAVARIDGE_BIKE_PSYDUCK, LavaridgeTown_Movement_PsyduckExit1
 	waitmovement 0
 	return
 
 LavaridgeTown_EventScript_RivalExit2::
 	applymovement LOCALID_LAVARIDGE_RIVAL_ON_BIKE, LavaridgeTown_Movement_RivalExit2
+	applymovement LOCALID_LAVARIDGE_BIKE_PSYDUCK, LavaridgeTown_Movement_PsyduckExit2
 	waitmovement 0
 	return
 
@@ -196,6 +209,48 @@ LavaridgeTown_Movement_RivalExitHerbShop:
 	walk_down
 	step_end
 
+@ Each PSYDUCK movement below retraces JAKE's, one tile behind him: it opens
+@ with the step he last took, and stops one step short of his.
+LavaridgeTown_Movement_PsyduckApproachPlayer1:
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+LavaridgeTown_Movement_PsyduckApproachPlayer2:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+LavaridgeTown_Movement_PsyduckExit1:
+	walk_fast_up
+	walk_fast_down
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	step_end
+
+LavaridgeTown_Movement_PsyduckExit2:
+	walk_fast_left
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end
+
 LavaridgeTown_EventScript_HotSpringsTrigger::
 	specialvar VAR_RESULT, GetPlayerFacingDirection
 	goto_if_eq VAR_RESULT, DIR_SOUTH, LavaridgeTown_EventScript_EnteredHotSprings
@@ -242,7 +297,7 @@ LavaridgeTown_EventScript_EggWoman::
 	playfanfare MUS_OBTAIN_ITEM
 	message LavaridgeTown_Text_ReceivedTheEgg
 	waitfanfare
-	giveegg SPECIES_WYNAUT
+	giveegg SPECIES_TOXEL
 	release
 	end
 
@@ -324,6 +379,8 @@ LavaridgeTown_Text_HaveEggWillYouTakeIt:
 	.string "I've heard it would be best if it were\n"
 	.string "kept together with POKéMON and\l"
 	.string "carried about.\p"
+	.string "I should say: it bites. Through the\n"
+	.string "shell. I don't know how either.\p"
 	.string "You are a TRAINER, yes?\n"
 	.string "And your POKéMON radiate vitality.\p"
 	.string "So, what say you?\n"
@@ -331,7 +388,8 @@ LavaridgeTown_Text_HaveEggWillYouTakeIt:
 
 LavaridgeTown_Text_HopeYoullWalkPlentyWithEgg:
 	.string "Good! I hope you'll walk plenty with\n"
-	.string "this here EGG!$"
+	.string "this here EGG!\p"
+	.string "Don't hold it near your face.$"
 
 LavaridgeTown_Text_ReceivedTheEgg:
 	.string "{PLAYER} received the EGG.$"

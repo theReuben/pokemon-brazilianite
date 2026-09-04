@@ -129,6 +129,7 @@
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCH"
     },
     {
+      "local_id": "LOCALID_LITTLEROOT_JAKES_PSYDUCK",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES_SHINY(PSYDUCK)",
       "x": 13,
       "y": 11,

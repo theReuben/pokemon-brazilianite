@@ -1682,9 +1682,11 @@ SootopolisCity_Text_AquaMagmaDidntMeanHarm:
 	.string "JAKE: {PLAYER}{KUN}…\p"
 	.string "The leaders of TEAM BLOCKCHAIN and\n"
 	.string "TEAM ALGORITHM…\p"
-	.string "I don't think they meant harm.\p"
-	.string "It wouldn't hurt to hear what they\n"
-	.string "have to say for themselves.$"
+	.string "I think they're both idiots.\p"
+	.string "Two grown men who nearly ended the\n"
+	.string "world, arguing about the weather.\p"
+	.string "Still. Might be worth hearing what\n"
+	.string "they have to say for themselves.$"
 
 SootopolisCity_Text_ThankYouForHelpAcceptThis:
 	.string "JAKE: {PLAYER}{KUN}…\p"

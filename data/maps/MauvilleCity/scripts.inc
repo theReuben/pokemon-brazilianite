@@ -479,8 +479,9 @@ MauvilleCity_Text_UncleYourePushingIt:
 
 MauvilleCity_Text_WallyWeCanBeatAnyone:
 	.string "WALLY: I'm not pushing it.\p"
-	.string "If I combine forces with RALTS,\n"
-	.string "we can beat anyone!$"
+	.string "If I combine forces with ESPURR,\n"
+	.string "we can beat anyone!\p"
+	.string "It does what I ask. Immediately.$"
 
 MauvilleCity_Text_WallyWillYouBattleMe:
 	.string "WALLY: Oh! Hi, {PLAYER}!\p"

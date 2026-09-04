@@ -702,6 +702,7 @@ RustboroCity_EventScript_RivalTrigger0::
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_RUSTBORO_RIVAL, RustboroCity_Movement_RivalApproachPlayer0
+	applymovement LOCALID_RUSTBORO_JAKES_PSYDUCK, RustboroCity_Movement_PsyduckFollow0
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -718,6 +719,7 @@ RustboroCity_EventScript_RivalTrigger1::
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_RUSTBORO_RIVAL, RustboroCity_Movement_RivalApproachPlayer1
+	applymovement LOCALID_RUSTBORO_JAKES_PSYDUCK, RustboroCity_Movement_PsyduckFollow1
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -734,6 +736,7 @@ RustboroCity_EventScript_RivalTrigger2::
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_RUSTBORO_RIVAL, RustboroCity_Movement_RivalApproachPlayer2
+	applymovement LOCALID_RUSTBORO_JAKES_PSYDUCK, RustboroCity_Movement_PsyduckFollow2
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -750,6 +753,7 @@ RustboroCity_EventScript_RivalTrigger3::
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_RUSTBORO_RIVAL, RustboroCity_Movement_RivalApproachPlayer3
+	applymovement LOCALID_RUSTBORO_JAKES_PSYDUCK, RustboroCity_Movement_PsyduckFollow3
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -766,6 +770,7 @@ RustboroCity_EventScript_RivalTrigger4::
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_RUSTBORO_RIVAL, RustboroCity_Movement_RivalApproachPlayer4
+	applymovement LOCALID_RUSTBORO_JAKES_PSYDUCK, RustboroCity_Movement_PsyduckFollow4
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -782,6 +787,7 @@ RustboroCity_EventScript_RivalTrigger5::
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_RUSTBORO_RIVAL, RustboroCity_Movement_RivalApproachPlayer5
+	applymovement LOCALID_RUSTBORO_JAKES_PSYDUCK, RustboroCity_Movement_PsyduckFollow5
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -798,6 +804,7 @@ RustboroCity_EventScript_RivalTrigger6::
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_RUSTBORO_RIVAL, RustboroCity_Movement_RivalApproachPlayer6
+	applymovement LOCALID_RUSTBORO_JAKES_PSYDUCK, RustboroCity_Movement_PsyduckFollow6
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -814,6 +821,7 @@ RustboroCity_EventScript_RivalTrigger7::
 	applymovement LOCALID_RUSTBORO_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_RUSTBORO_RIVAL, RustboroCity_Movement_RivalApproachPlayer7
+	applymovement LOCALID_RUSTBORO_JAKES_PSYDUCK, RustboroCity_Movement_PsyduckFollow7
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -954,6 +962,17 @@ RustboroCity_EventScript_BattleBrendanMudkip::
 	goto RustboroCity_EventScript_BrendanBrineyHint
 	end
 
+@ The PSYDUCK trails JAKE by a tile: it opens with the step he just took,
+@ then repeats his, stopping one step short.
+RustboroCity_Movement_PsyduckFollow0:
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 RustboroCity_Movement_RivalApproachPlayer0:
 	walk_down
 	walk_left
@@ -961,6 +980,14 @@ RustboroCity_Movement_RivalApproachPlayer0:
 	walk_left
 	walk_left
 	walk_down
+	step_end
+
+RustboroCity_Movement_PsyduckFollow1:
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 RustboroCity_Movement_RivalApproachPlayer1:
@@ -971,6 +998,13 @@ RustboroCity_Movement_RivalApproachPlayer1:
 	walk_down
 	step_end
 
+RustboroCity_Movement_PsyduckFollow2:
+	walk_left
+	walk_down
+	walk_left
+	walk_left
+	step_end
+
 RustboroCity_Movement_RivalApproachPlayer2:
 	walk_down
 	walk_left
@@ -978,8 +1012,19 @@ RustboroCity_Movement_RivalApproachPlayer2:
 	walk_down
 	step_end
 
+RustboroCity_Movement_PsyduckFollow3:
+	walk_left
+	walk_down
+	walk_left
+	step_end
+
 RustboroCity_Movement_RivalApproachPlayer3:
 	walk_down
+	walk_left
+	walk_down
+	step_end
+
+RustboroCity_Movement_PsyduckFollow4:
 	walk_left
 	walk_down
 	step_end
@@ -989,10 +1034,23 @@ RustboroCity_Movement_RivalApproachPlayer4:
 	walk_down
 	step_end
 
+RustboroCity_Movement_PsyduckFollow5:
+	walk_left
+	walk_down
+	walk_right
+	step_end
+
 RustboroCity_Movement_RivalApproachPlayer5:
 	walk_down
 	walk_right
 	walk_down
+	step_end
+
+RustboroCity_Movement_PsyduckFollow6:
+	walk_left
+	walk_down
+	walk_right
+	walk_right
 	step_end
 
 RustboroCity_Movement_RivalApproachPlayer6:
@@ -1000,6 +1058,14 @@ RustboroCity_Movement_RivalApproachPlayer6:
 	walk_right
 	walk_right
 	walk_down
+	step_end
+
+RustboroCity_Movement_PsyduckFollow7:
+	walk_left
+	walk_down
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 RustboroCity_Movement_RivalApproachPlayer7:

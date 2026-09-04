@@ -503,9 +503,10 @@
       "flag": "FLAG_HIDE_ROUTE_110_BIRCH"
     },
     {
+      "local_id": "LOCALID_ROUTE110_JAKES_PSYDUCK",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES_SHINY(PSYDUCK)",
       "x": 34,
-      "y": 55,
+      "y": 53,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -516,9 +517,10 @@
       "flag": "FLAG_HIDE_ROUTE_110_RIVAL"
     },
     {
+      "local_id": "LOCALID_ROUTE110_BIKE_PSYDUCK",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES_SHINY(PSYDUCK)",
       "x": 34,
-      "y": 53,
+      "y": 55,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,

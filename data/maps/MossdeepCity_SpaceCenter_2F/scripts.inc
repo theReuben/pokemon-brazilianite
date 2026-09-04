@@ -435,12 +435,17 @@ MossdeepCity_SpaceCenter_2F_Text_StevenWhyStealRocketFuel:
 MossdeepCity_SpaceCenter_2F_Text_MaxieUseFuelToEruptVolcano:
 	.string "JULIAN: Fufufu… Since you're so\n"
 	.string "curious, you deserve an explanation.\p"
-	.string "We're going to jettison the entire\n"
-	.string "load into MT. CHIMNEY!\p"
-	.string "With GROUDON gone, we have no need\n"
-	.string "for that slag heap of a mountain!\p"
-	.string "So we'll use the fuel's power to make\n"
-	.string "the volcano erupt!\p"
+	.string "The rig is running. The rig has been\n"
+	.string "running for eleven months.\p"
+	.string "Do you know what a rig that size\n"
+	.string "draws from a regional grid?\p"
+	.string "HOENN POWER has written to us.\n"
+	.string "Twice. The second letter was firm.\p"
+	.string "So we will no longer be on the grid.\n"
+	.string "We will be on our own generator.\p"
+	.string "And a generator wants fuel!\p"
+	.string "This is fuel. It is right here.\n"
+	.string "It is going in a lorry.\p"
 	.string "It will be savage!$"
 
 MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle:
@@ -462,8 +467,8 @@ MossdeepCity_SpaceCenter_Text_TabithaDefeat:
 	.string "I'm with our leader…$"
 
 MossdeepCity_SpaceCenter_2F_Text_MaxieWeFailedIsAquaAlsoMisguided:
-	.string "JULIAN: We failed to make the volcano\n"
-	.string "erupt…\p"
+	.string "JULIAN: We failed to fuel\n"
+	.string "the generator…\p"
 	.string "We failed to control GROUDON after\n"
 	.string "we had awoken it…\p"
 	.string "Was the rig ever going to pay for\n"

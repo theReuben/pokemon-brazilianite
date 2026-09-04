@@ -211,8 +211,8 @@ RustboroCity_Gym_Text_ExplainShockWave:
 	.string "No misses. That's the whole point.\p"
 	.string "If you use a TM, it instantly teaches\n"
 	.string "the move to a POKéMON.\p"
-	.string "Remember, a TM can be used only once,\n"
-	.string "so think before you use it.$"
+	.string "And it stays in your BAG. Use it\n"
+	.string "again. And again. YEAH!$"
 
 RustboroCity_Gym_Text_RoxannePostBattle:
 	.string "Since you are so strong, you should\n"

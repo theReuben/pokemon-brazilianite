@@ -287,6 +287,7 @@
       "flag": "FLAG_ITEM_ROUTE_103_PP_UP"
     },
     {
+      "local_id": "LOCALID_ROUTE103_JAKES_PSYDUCK",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES_SHINY(PSYDUCK)",
       "x": 9,
       "y": 3,

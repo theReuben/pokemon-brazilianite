@@ -935,7 +935,11 @@ static void UpdateFlashLevelEffect(u8 taskId)
         SetFlashScanlineEffectWindowBoundaries(gScanlineEffectRegBuffers[gScanlineEffect.srcBuffer], tFlashCenterX, tFlashCenterY, tCurFlashRadius);
         tState = 0;
         tCurFlashRadius += tFlashRadiusDelta;
-        if (tCurFlashRadius > tDestFlashRadius)
+        // The radius can be animated in either direction, so the effect is
+        // finished once it has passed the destination whichever way it moved.
+        // (Shrinking used to run forever, freezing the script that waits on it.)
+        if ((tFlashRadiusDelta > 0 && tCurFlashRadius > tDestFlashRadius)
+         || (tFlashRadiusDelta <= 0 && tCurFlashRadius <= tDestFlashRadius))
         {
             if (tClearScanlineEffect == 1)
             {
@@ -969,7 +973,11 @@ static void UpdateOrbFlashEffect(u8 taskId)
         SetOrbFlashScanlineEffectWindowBoundaries(gScanlineEffectRegBuffers[gScanlineEffect.srcBuffer], tFlashCenterX, tFlashCenterY, tCurFlashRadius);
         tState = 0;
         tCurFlashRadius += tFlashRadiusDelta;
-        if (tCurFlashRadius > tDestFlashRadius)
+        // The radius can be animated in either direction, so the effect is
+        // finished once it has passed the destination whichever way it moved.
+        // (Shrinking used to run forever, freezing the script that waits on it.)
+        if ((tFlashRadiusDelta > 0 && tCurFlashRadius > tDestFlashRadius)
+         || (tFlashRadiusDelta <= 0 && tCurFlashRadius <= tDestFlashRadius))
         {
             if (tClearScanlineEffect == 1)
             {

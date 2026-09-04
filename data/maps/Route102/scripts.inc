@@ -82,10 +82,14 @@ Route102_Text_WatchMeCatchPokemon:
 	.string "…Whoa!$"
 
 Route102_Text_WallyIDidIt:
-	.string "WALLY: I did it… It's my…\n"
-	.string "My POKéMON!$"
+	.string "WALLY: …\p"
+	.string "It's stopped.\p"
+	.string "WALLY: I don't think that's how the\n"
+	.string "BALL is meant to work.$"
 
 Route102_Text_LetsGoBack:
+	.string "WALLY: We should probably not\n"
+	.string "mention the RALTS.\p"
 	.string "{PLAYER}, thank you!\n"
 	.string "Let's go back to the GYM!$"
 
