@@ -46,6 +46,7 @@ Route111_OnTransition:
 	call Route111_EventScript_CheckSetSandstorm
 	call GabbyAndTy_EventScript_UpdateLocation
 	goto_if_not_defeated TRAINER_VICKY, Route111_EventScript_SetWinstratesNotDefeated
+	call_if_set FLAG_BADGE08_GET, Route111_EventScript_MoveStormRoostGuardAside
 	end
 
 Route111_EventScript_SetFallingPlayerGfx::
@@ -719,3 +720,57 @@ Route111_Text_TrainerHillSign:
 	.string "“Scale the heights, you hot-blooded\n"
 	.string "TRAINERS!”$"
 
+
+
+@ ---------------------------------------------------------------------------
+@ StormRoost: badge-8 gate in front of the cave mouth, plus the NPC who explains it.
+@ ---------------------------------------------------------------------------
+
+Route111_EventScript_StormRoostGate::
+	lockall
+	goto_if_set FLAG_BADGE08_GET, Route111_EventScript_StormRoostGate_Open
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	msgbox Route111_Text_StormRoostBlocked, MSGBOX_DEFAULT
+	releaseall
+	end
+
+Route111_EventScript_StormRoostGate_Open::
+	releaseall
+	end
+
+Route111_EventScript_StormRoostGuard::
+	lock
+	faceplayer
+	goto_if_unset FLAG_BADGE08_GET, Route111_EventScript_StormRoostGuard_Blocked
+	msgbox Route111_Text_StormRoostAllowed, MSGBOX_DEFAULT
+	release
+	end
+
+Route111_EventScript_StormRoostGuard_Blocked::
+	msgbox Route111_Text_StormRoostBlocked, MSGBOX_DEFAULT
+	release
+	end
+
+Route111_Text_StormRoostBlocked:
+	.string "Hold it! You don't want to go down\n"
+	.string "there, not as you are now.\p"
+	.string "There are some very strong POKéMON\n"
+	.string "inside that cave.\p"
+	.string "Come back when you've collected all\n"
+	.string "eight BADGES. Then we'll talk.$"
+
+Route111_Text_StormRoostAllowed:
+	.string "All eight BADGES! Then I won't be\n"
+	.string "the one to stop you.\p"
+	.string "But be careful in there.\n"
+	.string "If you pick a fight with one of them,\l"
+	.string "I suspect the others will run off.\p"
+	.string "So make sure you choose carefully\n"
+	.string "which one you want to face!$"
+
+@ Once the eighth BADGE is in hand the guard steps out of the doorway.
+Route111_EventScript_MoveStormRoostGuardAside::
+	setobjectxyperm LOCALID_ROUTE111_STORM_ROOST_GUARD, 15, 132
+	setobjectmovementtype LOCALID_ROUTE111_STORM_ROOST_GUARD, MOVEMENT_TYPE_FACE_LEFT
+	return

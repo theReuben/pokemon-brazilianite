@@ -53,16 +53,16 @@
 
 #define FLAG_UNUSED_0x020    0x20 // Unused Flag
 #define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_HIDE_BEAST_DEN_RAIKOU               0x022
+#define FLAG_HIDE_BEAST_DEN_ENTEI                0x023
+#define FLAG_HIDE_BEAST_DEN_SUICUNE              0x024
+#define FLAG_HIDE_STORM_ROOST_ARTICUNO           0x025
+#define FLAG_HIDE_STORM_ROOST_ZAPDOS             0x026
+#define FLAG_HIDE_STORM_ROOST_MOLTRES            0x027
+#define FLAG_HIDE_TAPU_GROTTO_KOKO               0x028
+#define FLAG_HIDE_TAPU_GROTTO_LELE               0x029
+#define FLAG_HIDE_TAPU_GROTTO_BULU               0x02A
+#define FLAG_HIDE_TAPU_GROTTO_FINI               0x02B
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag

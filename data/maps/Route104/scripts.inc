@@ -16,6 +16,7 @@ Route104_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
 	call Route104_EventScript_TrySetRivalPos
 	call Route104_EventScript_ShowOrHideWhiteHerbFlorist
+	call_if_set FLAG_BADGE08_GET, Route104_EventScript_MoveBeastDenGuardAside
 	end
 
 Route104_EventScript_ShowOrHideWhiteHerbFlorist::
@@ -1185,3 +1186,57 @@ Route104_Text_BrendanPostBattle:
 	.string "making POKéMON battle.\p"
 	.string "Like MR. BRINEY, it's important to\n"
 	.string "become friends with your POKéMON.$"
+
+
+@ ---------------------------------------------------------------------------
+@ BeastDen: badge-8 gate in front of the cave mouth, plus the NPC who explains it.
+@ ---------------------------------------------------------------------------
+
+Route104_EventScript_BeastDenGate::
+	lockall
+	goto_if_set FLAG_BADGE08_GET, Route104_EventScript_BeastDenGate_Open
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	msgbox Route104_Text_BeastDenBlocked, MSGBOX_DEFAULT
+	releaseall
+	end
+
+Route104_EventScript_BeastDenGate_Open::
+	releaseall
+	end
+
+Route104_EventScript_BeastDenGuard::
+	lock
+	faceplayer
+	goto_if_unset FLAG_BADGE08_GET, Route104_EventScript_BeastDenGuard_Blocked
+	msgbox Route104_Text_BeastDenAllowed, MSGBOX_DEFAULT
+	release
+	end
+
+Route104_EventScript_BeastDenGuard_Blocked::
+	msgbox Route104_Text_BeastDenBlocked, MSGBOX_DEFAULT
+	release
+	end
+
+Route104_Text_BeastDenBlocked:
+	.string "Hold it! You don't want to go down\n"
+	.string "there, not as you are now.\p"
+	.string "There are some very strong POKéMON\n"
+	.string "inside that cave.\p"
+	.string "Come back when you've collected all\n"
+	.string "eight BADGES. Then we'll talk.$"
+
+Route104_Text_BeastDenAllowed:
+	.string "All eight BADGES! Then I won't be\n"
+	.string "the one to stop you.\p"
+	.string "But be careful in there.\n"
+	.string "If you pick a fight with one of them,\l"
+	.string "I suspect the others will run off.\p"
+	.string "So make sure you choose carefully\n"
+	.string "which one you want to face!$"
+
+@ Once the eighth BADGE is in hand the guard steps out of the doorway.
+Route104_EventScript_MoveBeastDenGuardAside::
+	setobjectxyperm LOCALID_ROUTE104_BEAST_DEN_GUARD, 33, 58
+	setobjectmovementtype LOCALID_ROUTE104_BEAST_DEN_GUARD, MOVEMENT_TYPE_FACE_LEFT
+	return

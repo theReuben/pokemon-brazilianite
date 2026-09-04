@@ -488,6 +488,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Common_EventScript_JakesPsyduck",
       "flag": "FLAG_HIDE_ROUTE_104_RIVAL"
+    },
+    {
+      "local_id": "LOCALID_ROUTE104_BEAST_DEN_GUARD",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 32,
+      "y": 58,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route104_EventScript_BeastDenGuard",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -546,6 +560,13 @@
       "elevation": 3,
       "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "5"
+    },
+    {
+      "x": 32,
+      "y": 57,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE104_BEAST_DEN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -557,6 +578,15 @@
       "var": "VAR_ROUTE104_STATE",
       "var_value": "1",
       "script": "Route104_EventScript_RivalTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 58,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route104_EventScript_BeastDenGate"
     }
   ],
   "bg_events": [

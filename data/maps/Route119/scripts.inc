@@ -18,6 +18,7 @@ Route119_OnTransition:
 	call Common_EventScript_SetupRivalOnBikeGfxId
 	call_if_eq VAR_WEATHER_INSTITUTE_STATE, 1, Route119_EventScript_MoveInstituteWorkersDownstairs
 	special SetRoute119Weather
+	call_if_set FLAG_BADGE08_GET, Route119_EventScript_MoveTapuGrottoGuardAside
 	end
 
 Route119_EventScript_MoveInstituteWorkersDownstairs::
@@ -676,3 +677,57 @@ Route119_Text_TrainerTipsDecoration:
 	.string "Pick your favorite items and create\n"
 	.string "your very own SECRET BASE exactly the\l"
 	.string "way you want.$"
+
+
+@ ---------------------------------------------------------------------------
+@ TapuGrotto: badge-8 gate in front of the cave mouth, plus the NPC who explains it.
+@ ---------------------------------------------------------------------------
+
+Route119_EventScript_TapuGrottoGate::
+	lockall
+	goto_if_set FLAG_BADGE08_GET, Route119_EventScript_TapuGrottoGate_Open
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	msgbox Route119_Text_TapuGrottoBlocked, MSGBOX_DEFAULT
+	releaseall
+	end
+
+Route119_EventScript_TapuGrottoGate_Open::
+	releaseall
+	end
+
+Route119_EventScript_TapuGrottoGuard::
+	lock
+	faceplayer
+	goto_if_unset FLAG_BADGE08_GET, Route119_EventScript_TapuGrottoGuard_Blocked
+	msgbox Route119_Text_TapuGrottoAllowed, MSGBOX_DEFAULT
+	release
+	end
+
+Route119_EventScript_TapuGrottoGuard_Blocked::
+	msgbox Route119_Text_TapuGrottoBlocked, MSGBOX_DEFAULT
+	release
+	end
+
+Route119_Text_TapuGrottoBlocked:
+	.string "Hold it! You don't want to go down\n"
+	.string "there, not as you are now.\p"
+	.string "There are some very strong POKéMON\n"
+	.string "inside that cave.\p"
+	.string "Come back when you've collected all\n"
+	.string "eight BADGES. Then we'll talk.$"
+
+Route119_Text_TapuGrottoAllowed:
+	.string "All eight BADGES! Then I won't be\n"
+	.string "the one to stop you.\p"
+	.string "But be careful in there.\n"
+	.string "If you pick a fight with one of them,\l"
+	.string "I suspect the others will run off.\p"
+	.string "So make sure you choose carefully\n"
+	.string "which one you want to face!$"
+
+@ Once the eighth BADGE is in hand the guard steps out of the doorway.
+Route119_EventScript_MoveTapuGrottoGuardAside::
+	setobjectxyperm LOCALID_ROUTE119_TAPU_GROTTO_GUARD, 14, 82
+	setobjectmovementtype LOCALID_ROUTE119_TAPU_GROTTO_GUARD, MOVEMENT_TYPE_FACE_LEFT
+	return

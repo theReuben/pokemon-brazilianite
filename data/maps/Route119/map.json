@@ -614,6 +614,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Common_EventScript_JakesPsyduck",
       "flag": "FLAG_HIDE_ROUTE_119_RIVAL_ON_BIKE"
+    },
+    {
+      "local_id": "LOCALID_ROUTE119_TAPU_GROTTO_GUARD",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 13,
+      "y": 82,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route119_EventScript_TapuGrottoGuard",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -629,6 +643,13 @@
       "y": 109,
       "elevation": 0,
       "dest_map": "MAP_ROUTE119_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 81,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE119_TAPU_GROTTO",
       "dest_warp_id": "0"
     }
   ],
@@ -797,6 +818,15 @@
       "y": 13,
       "elevation": 3,
       "weather": "COORD_EVENT_WEATHER_ROUTE119_CYCLE"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 82,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route119_EventScript_TapuGrottoGate"
     }
   ],
   "bg_events": [
