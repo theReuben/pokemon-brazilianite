@@ -915,7 +915,34 @@ void process_layouts(string layouts_filepath, string output_asm, string output_c
     write_text_file(output_c + "layouts.h", layouts_constants_text);
 }
 
+// Expands "@file" arguments into the whitespace-separated paths listed in that
+// file. Needed on Windows, where the full list of map.json paths exceeds the
+// 32KB command line limit.
+static vector<string> expand_response_files(int argc, char *argv[]) {
+    vector<string> args;
+    for (int i = 0; i < argc; i++) {
+        if (argv[i][0] != '@') {
+            args.push_back(argv[i]);
+            continue;
+        }
+        ifstream response(argv[i] + 1);
+        if (!response.is_open())
+            FATAL_ERROR("ERROR: Could not open response file '%s'.\n", argv[i] + 1);
+        string arg;
+        while (response >> arg)
+            args.push_back(arg);
+    }
+    return args;
+}
+
 int main(int argc, char *argv[]) {
+    vector<string> args = expand_response_files(argc, argv);
+    vector<char *> argv_storage;
+    for (string &arg : args)
+        argv_storage.push_back(&arg[0]);
+    argc = (int)argv_storage.size();
+    argv = argv_storage.data();
+
     if (argc < 3)
         FATAL_ERROR("USAGE: mapjson <mode> <game-version> [options]\n");
 

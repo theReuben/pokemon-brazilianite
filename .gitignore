@@ -68,3 +68,22 @@ tools/aif2pcm/aif2pcm
 __pycache__
 .map_version
 editor/previews/
+
+# Local scratch: build/test logs, shard output, symbol dumps, helper scripts
+*.orig
+*.bak
+build.err
+check.err
+*.log
+tests.err
+test_results.txt
+shard[0-9].txt
+syms*.sh
+syms*.txt
+species.txt
+gravity.txt
+run_tests.sh
+run_all_tests.sh
+run_filter.sh
+build_rom.sh
+.mapjson_*.rsp
