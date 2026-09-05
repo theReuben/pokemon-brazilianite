@@ -1644,6 +1644,7 @@ static const struct LevelUpMove sPoliwrathLevelUpLearnset[] = {
 #if P_GEN_2_CROSS_EVOS
 static const struct LevelUpMove sPolitoedLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 0, MOVE_BOUNCE),
+    LEVEL_UP_MOVE( 0, MOVE_MOONBLAST),
     LEVEL_UP_MOVE( 1, MOVE_BODY_SLAM),
     LEVEL_UP_MOVE( 1, MOVE_DOUBLE_EDGE),
     LEVEL_UP_MOVE( 1, MOVE_WATER_GUN),
@@ -12211,7 +12212,9 @@ static const struct LevelUpMove sTimburrLevelUpLearnset[] = {
     LEVEL_UP_MOVE(12, MOVE_FOCUS_ENERGY),
     LEVEL_UP_MOVE(16, MOVE_BULK_UP),
     LEVEL_UP_MOVE(20, MOVE_ROCK_SLIDE),
+    LEVEL_UP_MOVE(22, MOVE_LEAF_BLADE),
     LEVEL_UP_MOVE(24, MOVE_SLAM),
+    LEVEL_UP_MOVE(24, MOVE_WOOD_HAMMER),
     LEVEL_UP_MOVE(28, MOVE_SCARY_FACE),
     LEVEL_UP_MOVE(32, MOVE_DYNAMIC_PUNCH),
     LEVEL_UP_MOVE(36, MOVE_HAMMER_ARM),
@@ -12222,6 +12225,7 @@ static const struct LevelUpMove sTimburrLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sGurdurrLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 0, MOVE_BULLET_PUNCH),
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_LOW_KICK),
@@ -12240,6 +12244,7 @@ static const struct LevelUpMove sGurdurrLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sConkeldurrLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 0, MOVE_EARTHQUAKE),
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_LOW_KICK),

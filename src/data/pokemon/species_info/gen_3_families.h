@@ -10362,10 +10362,10 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     {
         .baseHP        = 99,
         .baseAttack    = 68,
-        .baseDefense   = 83,
+        .baseDefense   = 103,
         .baseSpeed     = 51,
         .baseSpAttack  = 72,
-        .baseSpDefense = 87,
+        .baseSpDefense = 107,
         .types = MON_TYPES(TYPE_GRASS, TYPE_FLYING),
         .catchRate = 200,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 161 : 169,

@@ -4486,10 +4486,10 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #if P_FAMILY_ORTHWORM
     [SPECIES_ORTHWORM] =
     {
-        .baseHP        = 70,
+        .baseHP        = 100,
         .baseAttack    = 85,
         .baseDefense   = 145,
-        .baseSpeed     = 65,
+        .baseSpeed     = 95,
         .baseSpAttack  = 60,
         .baseSpDefense = 55,
         .types = MON_TYPES(TYPE_STEEL),

@@ -26,6 +26,13 @@ gText_Birch_MainSpeech::
 	.string "To unravel POKéMON mysteries,\n"
 	.string "I've been undertaking research.\l"
 	.string "That's what I do.\p"
+	.string "New POKéMON have come to this\n"
+	.string "region, too.\p"
+	.string "And after doing some science, we've\n"
+	.string "discovered that some POKéMON are\l"
+	.string "stronger than we thought…\p"
+	.string "Some of them even have different\n"
+	.string "TYPINGS than we expected!\p"
 	.string "$"
 
 gText_Birch_AndYouAre::
