@@ -660,3 +660,108 @@ MauvilleCity_Text_ExplainTV:
 
 MauvilleCity_Text_BeenCheckingOutTV:
 	.string "Hi, have you been checking out TVs?$"
+
+@ ---------------------------------------------------------------------------
+@ Spins on the pavement north of the ROUTE 110 gate. The first time the player
+@ comes through he steps across to meet them, says his piece, and goes back to
+@ spinning. One script per gate tile so he lines up whichever way they enter.
+@ ---------------------------------------------------------------------------
+
+MauvilleCity_EventScript_GameCornerWinnerFromX15::
+	goto_if_set FLAG_MET_GAME_CORNER_WINNER, MauvilleCity_EventScript_GameCornerWinnerAlreadyMet
+	lockall
+	call MauvilleCity_EventScript_GameCornerWinnerNotice
+	applymovement LOCALID_MAUVILLE_GAME_CORNER_WINNER, Common_Movement_WalkLeft
+	waitmovement 0
+	call MauvilleCity_EventScript_GameCornerWinnerSpeak
+	applymovement LOCALID_MAUVILLE_GAME_CORNER_WINNER, Common_Movement_WalkRight
+	waitmovement 0
+	releaseall
+	end
+
+MauvilleCity_EventScript_GameCornerWinnerFromX16::
+	goto_if_set FLAG_MET_GAME_CORNER_WINNER, MauvilleCity_EventScript_GameCornerWinnerAlreadyMet
+	lockall
+	call MauvilleCity_EventScript_GameCornerWinnerNotice
+	call MauvilleCity_EventScript_GameCornerWinnerSpeak
+	releaseall
+	end
+
+MauvilleCity_EventScript_GameCornerWinnerFromX17::
+	goto_if_set FLAG_MET_GAME_CORNER_WINNER, MauvilleCity_EventScript_GameCornerWinnerAlreadyMet
+	lockall
+	call MauvilleCity_EventScript_GameCornerWinnerNotice
+	applymovement LOCALID_MAUVILLE_GAME_CORNER_WINNER, Common_Movement_WalkRight
+	waitmovement 0
+	call MauvilleCity_EventScript_GameCornerWinnerSpeak
+	applymovement LOCALID_MAUVILLE_GAME_CORNER_WINNER, Common_Movement_WalkLeft
+	waitmovement 0
+	releaseall
+	end
+
+MauvilleCity_EventScript_GameCornerWinnerFromX18::
+	goto_if_set FLAG_MET_GAME_CORNER_WINNER, MauvilleCity_EventScript_GameCornerWinnerAlreadyMet
+	lockall
+	call MauvilleCity_EventScript_GameCornerWinnerNotice
+	applymovement LOCALID_MAUVILLE_GAME_CORNER_WINNER, MauvilleCity_Movement_GameCornerWinnerWalkRight2
+	waitmovement 0
+	call MauvilleCity_EventScript_GameCornerWinnerSpeak
+	applymovement LOCALID_MAUVILLE_GAME_CORNER_WINNER, MauvilleCity_Movement_GameCornerWinnerWalkLeft2
+	waitmovement 0
+	releaseall
+	end
+
+MauvilleCity_EventScript_GameCornerWinnerNotice::
+	applymovement LOCALID_MAUVILLE_GAME_CORNER_WINNER, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 20
+	return
+
+MauvilleCity_EventScript_GameCornerWinnerSpeak::
+	turnobject LOCALID_MAUVILLE_GAME_CORNER_WINNER, DIR_SOUTH
+	msgbox MauvilleCity_Text_GameCornerWinner, MSGBOX_DEFAULT
+	setflag FLAG_MET_GAME_CORNER_WINNER
+	return
+
+MauvilleCity_EventScript_GameCornerWinnerAlreadyMet::
+	end
+
+MauvilleCity_Movement_GameCornerWinnerWalkRight2:
+	walk_right
+	walk_right
+	step_end
+
+MauvilleCity_Movement_GameCornerWinnerWalkLeft2:
+	walk_left
+	walk_left
+	step_end
+
+MauvilleCity_EventScript_GameCornerWinner::
+	lock
+	faceplayer
+	goto_if_unset FLAG_MET_GAME_CORNER_WINNER, MauvilleCity_EventScript_GameCornerWinnerFirstTalk
+	msgbox MauvilleCity_Text_GameCornerWinnerAgain, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_EventScript_GameCornerWinnerFirstTalk::
+	msgbox MauvilleCity_Text_GameCornerWinner, MSGBOX_DEFAULT
+	setflag FLAG_MET_GAME_CORNER_WINNER
+	release
+	end
+
+MauvilleCity_Text_GameCornerWinner:
+	.string "Hey! Hey, you there!\p"
+	.string "These new slot machines must be\n"
+	.string "broken…\p"
+	.string "I just made a FORTUNE in the\n"
+	.string "GAME CORNER!\p"
+	.string "I'm gonna go buy a boat load of\n"
+	.string "CHOICE items at the DEPARTMENT\l"
+	.string "STORE to make my POKéMON stronger!$"
+
+MauvilleCity_Text_GameCornerWinnerAgain:
+	.string "Still spinning! I can't stop!\p"
+	.string "Cash your COINS in at the desk by\n"
+	.string "the door, then hit the DEPARTMENT\l"
+	.string "STORE. That's the secret!$"

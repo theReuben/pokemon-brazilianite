@@ -9,8 +9,8 @@ MauvilleCity_GameCorner_MapScripts::
 	.set TM_ICE_BEAM_COINS, 4000
 	.set DOLL_COINS, 1000
 
-	.set COINS_PRICE_50,  1000
-	.set COINS_PRICE_500, 10000
+	.set COINS_PRICE_50,  5000
+	.set COINS_PRICE_500, 50000
 
 MauvilleCity_GameCorner_EventScript_CoinsClerk::
 	lock
@@ -637,7 +637,7 @@ MauvilleCity_GameCorner_Text_NeedCoinCaseForCoins:
 
 MauvilleCity_GameCorner_Text_WereYouLookingForCoins:
 	.string "Were you looking for COINS?\p"
-	.string "It's ¥1000 for 50 COINS.\n"
+	.string "It's ¥5000 for 50 COINS.\n"
 	.string "Would you like some?$"
 
 MauvilleCity_GameCorner_Text_ThankYouHereAreYourCoins:
@@ -776,3 +776,60 @@ MauvilleCity_GameCorner_Text_CantPlayWithNoCoinCase:
 	.string "You can't play if you don't have\n"
 	.string "a COIN CASE.$"
 
+@ ---------------------------------------------------------------------------
+@ Cashes COINS back in for money at the same rate the clerk sells them, so the
+@ winnings come from the machines rather than from the exchange.
+@ ---------------------------------------------------------------------------
+
+MauvilleCity_GameCorner_EventScript_CashOutClerk::
+	lock
+	faceplayer
+	msgbox MauvilleCity_GameCorner_Text_CashOutOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MauvilleCity_GameCorner_EventScript_CashOutDeclined
+	special CashOutGameCornerCoins
+	goto_if_eq VAR_RESULT, 0, MauvilleCity_GameCorner_EventScript_CashOutNoCoins
+	goto_if_eq VAR_RESULT, 2, MauvilleCity_GameCorner_EventScript_CashOutWalletFull
+	playse SE_SHOP
+	msgbox MauvilleCity_GameCorner_Text_CashedOut, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_CashOutDeclined::
+	msgbox MauvilleCity_GameCorner_Text_CashOutDeclined, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_CashOutNoCoins::
+	msgbox MauvilleCity_GameCorner_Text_CashOutNoCoins, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_GameCorner_EventScript_CashOutWalletFull::
+	msgbox MauvilleCity_GameCorner_Text_CashOutWalletFull, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_GameCorner_Text_CashOutOffer:
+	.string "Welcome to the cash desk!\p"
+	.string "I'll buy your COINS back at the same\n"
+	.string "price the counter sells them for.\p"
+	.string "Shall I cash in what you're holding?$"
+
+MauvilleCity_GameCorner_Text_CashedOut:
+	.string "{STR_VAR_1} COINS…\p"
+	.string "That comes to ¥{STR_VAR_2}!\p"
+	.string "Do come back when luck's with you!$"
+
+MauvilleCity_GameCorner_Text_CashOutDeclined:
+	.string "Hanging on to them? Very wise.\n"
+	.string "The machines do pay out well here.$"
+
+MauvilleCity_GameCorner_Text_CashOutNoCoins:
+	.string "You haven't got a single COIN!\p"
+	.string "The clerk beside me will sell you\n"
+	.string "some to get started.$"
+
+MauvilleCity_GameCorner_Text_CashOutWalletFull:
+	.string "Goodness, your wallet is already\n"
+	.string "full to bursting!\p"
+	.string "Go and spend some, then come back.$"

@@ -47,6 +47,8 @@
 #include "script_menu.h"
 #include "sound.h"
 #include "starter_choose.h"
+#include "coins.h"
+#include "money.h"
 #include "string_util.h"
 #include "strings.h"
 #include "task.h"
@@ -5776,4 +5778,42 @@ bool8 CheckAddCoins(void)
         return FALSE;
     else
         return TRUE;
+}
+
+// Brazilianite: the GAME CORNER cashier buys coins back at exactly the rate the
+// clerk sells them for, so converting is neutral and any profit has to come
+// from actually playing the machines.
+#define GAME_CORNER_COIN_VALUE 100
+
+// gSpecialVar_Result: 0 = no coins to cash in, 1 = cashed in, 2 = wallet full.
+// gStringVar1 = coins spent, gStringVar2 = money paid out.
+void CashOutGameCornerCoins(void)
+{
+    u32 coins = GetCoins();
+    u32 room, payout;
+
+    if (coins == 0)
+    {
+        gSpecialVar_Result = 0;
+        return;
+    }
+
+    // Never swallow coins the player has no room to be paid for.
+    room = MAX_MONEY - GetMoney(&gSaveBlock1Ptr->money);
+    if (coins > room / GAME_CORNER_COIN_VALUE)
+        coins = room / GAME_CORNER_COIN_VALUE;
+
+    if (coins == 0)
+    {
+        gSpecialVar_Result = 2;
+        return;
+    }
+
+    payout = coins * GAME_CORNER_COIN_VALUE;
+    SetCoins(GetCoins() - coins);
+    AddMoney(&gSaveBlock1Ptr->money, payout);
+
+    ConvertIntToDecimalStringN(gStringVar1, coins, STR_CONV_MODE_LEFT_ALIGN, 4);
+    ConvertIntToDecimalStringN(gStringVar2, payout, STR_CONV_MODE_LEFT_ALIGN, 6);
+    gSpecialVar_Result = 1;
 }

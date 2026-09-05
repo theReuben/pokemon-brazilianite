@@ -63,7 +63,7 @@
 #define FLAG_HIDE_TAPU_GROTTO_LELE               0x029
 #define FLAG_HIDE_TAPU_GROTTO_BULU               0x02A
 #define FLAG_HIDE_TAPU_GROTTO_FINI               0x02B
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
+#define FLAG_MET_GAME_CORNER_WINNER              0x2C
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag

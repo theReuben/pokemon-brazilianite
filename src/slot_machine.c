@@ -5313,24 +5313,27 @@ static const s16 sInitialReelPositions[NUM_REELS][2] = {
     [RIGHT_REEL]  = {0,  2}
 };
 
+// Brazilianite: the GAME CORNER is meant to be a way to fund a team, not a
+// grind, so the odds of drawing for a Special are far kinder than vanilla's
+// ~5%. Betting three coins is still clearly the best play.
 static const u8 sSpecialDrawOdds[NUM_SLOT_MACHINE_IDS][MAX_BET] = {
-    [SLOT_MACHINE_UNLUCKIEST] = {1, 1, 12},
-    [SLOT_MACHINE_UNLUCKIER]  = {1, 1, 14},
-    [SLOT_MACHINE_UNLUCKY]    = {2, 2, 14},
-    [SLOT_MACHINE_LUCKY]      = {2, 2, 14},
-    [SLOT_MACHINE_LUCKIER]    = {2, 3, 16},
-    [SLOT_MACHINE_LUCKIEST]   = {3, 3, 16}
+    [SLOT_MACHINE_UNLUCKIEST] = {10, 20, 40},
+    [SLOT_MACHINE_UNLUCKIER]  = {10, 20, 42},
+    [SLOT_MACHINE_UNLUCKY]    = {12, 22, 44},
+    [SLOT_MACHINE_LUCKY]      = {12, 22, 44},
+    [SLOT_MACHINE_LUCKIER]    = {12, 24, 46},
+    [SLOT_MACHINE_LUCKIEST]   = {14, 24, 48}
 };
 
 static const u8 sBiasProbabilities_Special[][NUM_SLOT_MACHINE_IDS] = {
     {
         // Probabilities for BIAS_STRAIGHT_7
-        [SLOT_MACHINE_UNLUCKIEST] = 25,
-        [SLOT_MACHINE_UNLUCKIER]  = 25,
-        [SLOT_MACHINE_UNLUCKY]    = 30,
-        [SLOT_MACHINE_LUCKY]      = 40,
-        [SLOT_MACHINE_LUCKIER]    = 40,
-        [SLOT_MACHINE_LUCKIEST]   = 50
+        [SLOT_MACHINE_UNLUCKIEST] = 100,
+        [SLOT_MACHINE_UNLUCKIER]  = 105,
+        [SLOT_MACHINE_UNLUCKY]    = 110,
+        [SLOT_MACHINE_LUCKY]      = 115,
+        [SLOT_MACHINE_LUCKIER]    = 118,
+        [SLOT_MACHINE_LUCKIEST]   = 125
     },
     {
         // Probabilities for BIAS_REELTIME
@@ -5343,12 +5346,12 @@ static const u8 sBiasProbabilities_Special[][NUM_SLOT_MACHINE_IDS] = {
     },
     {
         // Probabilities for BIAS_MIXED_7
-        [SLOT_MACHINE_UNLUCKIEST] = 25,
-        [SLOT_MACHINE_UNLUCKIER]  = 25,
-        [SLOT_MACHINE_UNLUCKY]    = 30,
-        [SLOT_MACHINE_LUCKY]      = 25,
-        [SLOT_MACHINE_LUCKIER]    = 25,
-        [SLOT_MACHINE_LUCKIEST]   = 30
+        [SLOT_MACHINE_UNLUCKIEST] = 80,
+        [SLOT_MACHINE_UNLUCKIER]  = 80,
+        [SLOT_MACHINE_UNLUCKY]    = 85,
+        [SLOT_MACHINE_LUCKY]      = 85,
+        [SLOT_MACHINE_LUCKIER]    = 90,
+        [SLOT_MACHINE_LUCKIEST]   = 95
     }
 };
 
@@ -5364,21 +5367,21 @@ static const u8 sBiasProbabilities_Regular[][NUM_SLOT_MACHINE_IDS] = {
     },
     {
         // Probabilities for BIAS_AZURILL
-        [SLOT_MACHINE_UNLUCKIEST] = 12,
-        [SLOT_MACHINE_UNLUCKIER]  = 15,
-        [SLOT_MACHINE_UNLUCKY]    = 15,
-        [SLOT_MACHINE_LUCKY]      = 18,
-        [SLOT_MACHINE_LUCKIER]    = 19,
-        [SLOT_MACHINE_LUCKIEST]   = 22
+        [SLOT_MACHINE_UNLUCKIEST] = 60,
+        [SLOT_MACHINE_UNLUCKIER]  = 64,
+        [SLOT_MACHINE_UNLUCKY]    = 66,
+        [SLOT_MACHINE_LUCKY]      = 70,
+        [SLOT_MACHINE_LUCKIER]    = 72,
+        [SLOT_MACHINE_LUCKIEST]   = 78
     },
     {
         // Probabilities for BIAS_LOTAD
-        [SLOT_MACHINE_UNLUCKIEST] = 25,
-        [SLOT_MACHINE_UNLUCKIER]  = 25,
-        [SLOT_MACHINE_UNLUCKY]    = 25,
-        [SLOT_MACHINE_LUCKY]      = 30,
-        [SLOT_MACHINE_LUCKIER]    = 30,
-        [SLOT_MACHINE_LUCKIEST]   = 40
+        [SLOT_MACHINE_UNLUCKIEST] = 85,
+        [SLOT_MACHINE_UNLUCKIER]  = 85,
+        [SLOT_MACHINE_UNLUCKY]    = 88,
+        [SLOT_MACHINE_LUCKY]      = 92,
+        [SLOT_MACHINE_LUCKIER]    = 92,
+        [SLOT_MACHINE_LUCKIEST]   = 100
     },
     {
         // Probabilities for BIAS_CHERRY

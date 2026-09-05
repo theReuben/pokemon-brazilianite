@@ -63,7 +63,9 @@
 #define ITEM6_HEAL_PP_FULL   0x7F
 
 // Amount of EV modified by ITEM4_EV_HP, ITEM4_EV_ATK, ITEM5_EV_DEF, ITEM5_EV_SPEED, ITEM5_EV_SPDEF and ITEM5_EV_SPATK
-#define ITEM6_ADD_EV       10
+// Brazilianite: raised from 10 so buying a spread takes 13 vitamins per mon
+// rather than 53. The EV code still clamps to the per-stat and total caps.
+#define ITEM6_ADD_EV       50
 #define ITEM6_SUBTRACT_EV -10
 #define ITEM6_ADD_ONE_EV    1
 #define ITEM6_RESET_EV      0
