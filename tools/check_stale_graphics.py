@@ -23,6 +23,13 @@ def rules():
         yield m.group(1), m.group(2).split()
 
 
+def is_used(target):
+    """True if some source INCBINs this sheet. Unused sheets are never built,
+    so a missing one is expected rather than a problem."""
+    return subprocess.run(['grep', '-rqF', target, os.path.join(ROOT, 'src')],
+                          capture_output=True).returncode == 0
+
+
 def main():
     fix = '--fix' in sys.argv
     gfx = os.path.join(ROOT, 'tools/gbagfx/gbagfx')
@@ -35,8 +42,9 @@ def main():
             dest = os.path.join(ROOT, target)
             out = dest if fix else os.path.join(tmp, 'out.4bpp')
             if not os.path.exists(dest):
-                missing.append(target)
-                if not fix:
+                if is_used(target):
+                    missing.append(target)
+                elif not fix:
                     continue
             subprocess.run([gfx, os.path.join(ROOT, png), out] + flags,
                            check=False, capture_output=True)
