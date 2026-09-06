@@ -60,6 +60,9 @@ EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard::
 	waitmessage
 	delay 120
 	goto_if_unset FLAG_BADGE06_GET, EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges
+	@ JAKE no longer spots the player himself, so the guards hold them here
+	@ until he has had his match.
+	goto_if_not_defeated TRAINER_JAKE_PRE_LEAGUE, EverGrandeCity_PokemonLeague_1F_EventScript_JakeWantsAWord
 	closemessage
 	applymovement LOCALID_LEAGUE_GUARD_1, EverGrandeCity_PokemonLeague_1F_Movement_LeftGuardOutOfWay
 	applymovement LOCALID_LEAGUE_GUARD_2, EverGrandeCity_PokemonLeague_1F_Movement_RightGuardOutOfWay
@@ -89,6 +92,12 @@ EverGrandeCity_PokemonLeague_1F_EventScript_PlayerMoveToFrontFromLeft::
 EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges::
 	playse SE_FAILURE
 	msgbox EverGrandeCity_PokemonLeague_1F_Text_HaventObtainedAllBadges, MSGBOX_DEFAULT
+	releaseall
+	end
+
+EverGrandeCity_PokemonLeague_1F_EventScript_JakeWantsAWord::
+	playse SE_FAILURE
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_JakeWantsAWord, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -130,6 +139,14 @@ EverGrandeCity_PokemonLeague_1F_Text_MustHaveAllGymBadges:
 	.string "are permitted to enter.\p"
 	.string "TRAINER, let us confirm that you have\n"
 	.string "all the GYM BADGES.$"
+
+EverGrandeCity_PokemonLeague_1F_Text_JakeWantsAWord:
+	.string "Hold on there!\p"
+	.string "That trainer JAKE asked us not to let\n"
+	.string "anyone through until he's had a word\l"
+	.string "with you.\p"
+	.string "He's been waiting all day, so you'd\n"
+	.string "best go and talk to him first!$"
 
 EverGrandeCity_PokemonLeague_1F_Text_HaventObtainedAllBadges:
 	.string "You haven't obtained all the BADGES.\p"

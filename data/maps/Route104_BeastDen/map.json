@@ -3,7 +3,7 @@
   "name": "Route104_BeastDen",
   "layout": "LAYOUT_BEAST_DEN",
   "music": "MUS_MT_PYRE_EXTERIOR",
-  "region_map_section": "MAPSEC_ROUTE_104",
+  "region_map_section": "MAPSEC_BEAST_DEN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -15,11 +15,12 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_BEAST_DEN_RAIKOU",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(RAIKOU)",
       "x": 5,
       "y": 7,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -28,11 +29,12 @@
       "flag": "FLAG_HIDE_BEAST_DEN_RAIKOU"
     },
     {
+      "local_id": "LOCALID_BEAST_DEN_ENTEI",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ENTEI)",
       "x": 7,
       "y": 7,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -41,11 +43,12 @@
       "flag": "FLAG_HIDE_BEAST_DEN_ENTEI"
     },
     {
+      "local_id": "LOCALID_BEAST_DEN_SUICUNE",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SUICUNE)",
       "x": 9,
       "y": 7,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",

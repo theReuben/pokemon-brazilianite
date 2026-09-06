@@ -45,8 +45,10 @@ Route111_OnTransition:
 	call_if_eq VAR_MIRAGE_TOWER_STATE, 2, Route111_EventScript_SetMirageTowerGone
 	call Route111_EventScript_CheckSetSandstorm
 	call GabbyAndTy_EventScript_UpdateLocation
-	goto_if_not_defeated TRAINER_VICKY, Route111_EventScript_SetWinstratesNotDefeated
+	@ Must precede the goto below - goto_if_not_defeated jumps away and never
+	@ returns, so anything after it only runs once VICKY has been beaten.
 	call_if_set FLAG_BADGE08_GET, Route111_EventScript_MoveStormRoostGuardAside
+	goto_if_not_defeated TRAINER_VICKY, Route111_EventScript_SetWinstratesNotDefeated
 	end
 
 Route111_EventScript_SetFallingPlayerGfx::

@@ -21,6 +21,9 @@ Route111_StormRoost_EventScript_ArticunoGalar::
 	setvar VAR_STORM_ROOST_CHOICE, 1
 	setflag FLAG_HIDE_STORM_ROOST_ZAPDOS
 	setflag FLAG_HIDE_STORM_ROOST_MOLTRES
+	@ Hide flags only apply on respawn, so clear them from the map now too.
+	removeobject LOCALID_STORM_ROOST_ZAPDOS
+	removeobject LOCALID_STORM_ROOST_MOLTRES
 Route111_StormRoost_EventScript_ArticunoGalar_Battle::
 	waitse
 	playmoncry SPECIES_ARTICUNO_GALAR, CRY_MODE_ENCOUNTER
@@ -44,6 +47,9 @@ Route111_StormRoost_EventScript_ZapdosGalar::
 	setvar VAR_STORM_ROOST_CHOICE, 2
 	setflag FLAG_HIDE_STORM_ROOST_ARTICUNO
 	setflag FLAG_HIDE_STORM_ROOST_MOLTRES
+	@ Hide flags only apply on respawn, so clear them from the map now too.
+	removeobject LOCALID_STORM_ROOST_ARTICUNO
+	removeobject LOCALID_STORM_ROOST_MOLTRES
 Route111_StormRoost_EventScript_ZapdosGalar_Battle::
 	waitse
 	playmoncry SPECIES_ZAPDOS_GALAR, CRY_MODE_ENCOUNTER
@@ -67,6 +73,9 @@ Route111_StormRoost_EventScript_MoltresGalar::
 	setvar VAR_STORM_ROOST_CHOICE, 3
 	setflag FLAG_HIDE_STORM_ROOST_ARTICUNO
 	setflag FLAG_HIDE_STORM_ROOST_ZAPDOS
+	@ Hide flags only apply on respawn, so clear them from the map now too.
+	removeobject LOCALID_STORM_ROOST_ARTICUNO
+	removeobject LOCALID_STORM_ROOST_ZAPDOS
 Route111_StormRoost_EventScript_MoltresGalar_Battle::
 	waitse
 	playmoncry SPECIES_MOLTRES_GALAR, CRY_MODE_ENCOUNTER

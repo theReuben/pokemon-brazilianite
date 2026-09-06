@@ -21,6 +21,9 @@ Route104_BeastDen_EventScript_Raikou::
 	setvar VAR_BEAST_DEN_CHOICE, 1
 	setflag FLAG_HIDE_BEAST_DEN_ENTEI
 	setflag FLAG_HIDE_BEAST_DEN_SUICUNE
+	@ Hide flags only apply on respawn, so clear them from the map now too.
+	removeobject LOCALID_BEAST_DEN_ENTEI
+	removeobject LOCALID_BEAST_DEN_SUICUNE
 Route104_BeastDen_EventScript_Raikou_Battle::
 	waitse
 	playmoncry SPECIES_RAIKOU, CRY_MODE_ENCOUNTER
@@ -44,6 +47,9 @@ Route104_BeastDen_EventScript_Entei::
 	setvar VAR_BEAST_DEN_CHOICE, 2
 	setflag FLAG_HIDE_BEAST_DEN_RAIKOU
 	setflag FLAG_HIDE_BEAST_DEN_SUICUNE
+	@ Hide flags only apply on respawn, so clear them from the map now too.
+	removeobject LOCALID_BEAST_DEN_RAIKOU
+	removeobject LOCALID_BEAST_DEN_SUICUNE
 Route104_BeastDen_EventScript_Entei_Battle::
 	waitse
 	playmoncry SPECIES_ENTEI, CRY_MODE_ENCOUNTER
@@ -67,6 +73,9 @@ Route104_BeastDen_EventScript_Suicune::
 	setvar VAR_BEAST_DEN_CHOICE, 3
 	setflag FLAG_HIDE_BEAST_DEN_RAIKOU
 	setflag FLAG_HIDE_BEAST_DEN_ENTEI
+	@ Hide flags only apply on respawn, so clear them from the map now too.
+	removeobject LOCALID_BEAST_DEN_RAIKOU
+	removeobject LOCALID_BEAST_DEN_ENTEI
 Route104_BeastDen_EventScript_Suicune_Battle::
 	waitse
 	playmoncry SPECIES_SUICUNE, CRY_MODE_ENCOUNTER

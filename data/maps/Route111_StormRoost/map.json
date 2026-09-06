@@ -3,7 +3,7 @@
   "name": "Route111_StormRoost",
   "layout": "LAYOUT_STORM_ROOST",
   "music": "MUS_MT_PYRE_EXTERIOR",
-  "region_map_section": "MAPSEC_ROUTE_111",
+  "region_map_section": "MAPSEC_STORM_ROOST",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -15,11 +15,12 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_STORM_ROOST_ARTICUNO",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ARTICUNO_GALAR)",
       "x": 6,
       "y": 3,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -28,11 +29,12 @@
       "flag": "FLAG_HIDE_STORM_ROOST_ARTICUNO"
     },
     {
+      "local_id": "LOCALID_STORM_ROOST_ZAPDOS",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ZAPDOS_GALAR)",
       "x": 10,
       "y": 3,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -41,11 +43,12 @@
       "flag": "FLAG_HIDE_STORM_ROOST_ZAPDOS"
     },
     {
+      "local_id": "LOCALID_STORM_ROOST_MOLTRES",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MOLTRES_GALAR)",
       "x": 13,
       "y": 3,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
