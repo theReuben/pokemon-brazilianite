@@ -21,9 +21,6 @@ Route111_StormRoost_EventScript_ArticunoGalar::
 	setvar VAR_STORM_ROOST_CHOICE, 1
 	setflag FLAG_HIDE_STORM_ROOST_ZAPDOS
 	setflag FLAG_HIDE_STORM_ROOST_MOLTRES
-	@ Hide flags only apply on respawn, so clear them from the map now too.
-	removeobject LOCALID_STORM_ROOST_ZAPDOS
-	removeobject LOCALID_STORM_ROOST_MOLTRES
 Route111_StormRoost_EventScript_ArticunoGalar_Battle::
 	waitse
 	playmoncry SPECIES_ARTICUNO_GALAR, CRY_MODE_ENCOUNTER
@@ -35,6 +32,10 @@ Route111_StormRoost_EventScript_ArticunoGalar_Battle::
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	@ The others slip away only once the battle is over, so they are not
+	@ seen vanishing before it starts.
+	removeobject LOCALID_STORM_ROOST_ZAPDOS
+	removeobject LOCALID_STORM_ROOST_MOLTRES
 	releaseall
 	end
 
@@ -47,9 +48,6 @@ Route111_StormRoost_EventScript_ZapdosGalar::
 	setvar VAR_STORM_ROOST_CHOICE, 2
 	setflag FLAG_HIDE_STORM_ROOST_ARTICUNO
 	setflag FLAG_HIDE_STORM_ROOST_MOLTRES
-	@ Hide flags only apply on respawn, so clear them from the map now too.
-	removeobject LOCALID_STORM_ROOST_ARTICUNO
-	removeobject LOCALID_STORM_ROOST_MOLTRES
 Route111_StormRoost_EventScript_ZapdosGalar_Battle::
 	waitse
 	playmoncry SPECIES_ZAPDOS_GALAR, CRY_MODE_ENCOUNTER
@@ -61,6 +59,10 @@ Route111_StormRoost_EventScript_ZapdosGalar_Battle::
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	@ The others slip away only once the battle is over, so they are not
+	@ seen vanishing before it starts.
+	removeobject LOCALID_STORM_ROOST_ARTICUNO
+	removeobject LOCALID_STORM_ROOST_MOLTRES
 	releaseall
 	end
 
@@ -73,9 +75,6 @@ Route111_StormRoost_EventScript_MoltresGalar::
 	setvar VAR_STORM_ROOST_CHOICE, 3
 	setflag FLAG_HIDE_STORM_ROOST_ARTICUNO
 	setflag FLAG_HIDE_STORM_ROOST_ZAPDOS
-	@ Hide flags only apply on respawn, so clear them from the map now too.
-	removeobject LOCALID_STORM_ROOST_ARTICUNO
-	removeobject LOCALID_STORM_ROOST_ZAPDOS
 Route111_StormRoost_EventScript_MoltresGalar_Battle::
 	waitse
 	playmoncry SPECIES_MOLTRES_GALAR, CRY_MODE_ENCOUNTER
@@ -87,6 +86,10 @@ Route111_StormRoost_EventScript_MoltresGalar_Battle::
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	@ The others slip away only once the battle is over, so they are not
+	@ seen vanishing before it starts.
+	removeobject LOCALID_STORM_ROOST_ARTICUNO
+	removeobject LOCALID_STORM_ROOST_ZAPDOS
 	releaseall
 	end
 

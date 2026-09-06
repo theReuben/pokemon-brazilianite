@@ -22,10 +22,6 @@ Route119_TapuGrotto_EventScript_TapuKoko::
 	setflag FLAG_HIDE_TAPU_GROTTO_LELE
 	setflag FLAG_HIDE_TAPU_GROTTO_BULU
 	setflag FLAG_HIDE_TAPU_GROTTO_FINI
-	@ Hide flags only apply on respawn, so clear them from the map now too.
-	removeobject LOCALID_TAPU_GROTTO_LELE
-	removeobject LOCALID_TAPU_GROTTO_BULU
-	removeobject LOCALID_TAPU_GROTTO_FINI
 Route119_TapuGrotto_EventScript_TapuKoko_Battle::
 	waitse
 	playmoncry SPECIES_TAPU_KOKO, CRY_MODE_ENCOUNTER
@@ -37,6 +33,11 @@ Route119_TapuGrotto_EventScript_TapuKoko_Battle::
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	@ The others slip away only once the battle is over, so they are not
+	@ seen vanishing before it starts.
+	removeobject LOCALID_TAPU_GROTTO_LELE
+	removeobject LOCALID_TAPU_GROTTO_BULU
+	removeobject LOCALID_TAPU_GROTTO_FINI
 	releaseall
 	end
 
@@ -50,10 +51,6 @@ Route119_TapuGrotto_EventScript_TapuLele::
 	setflag FLAG_HIDE_TAPU_GROTTO_KOKO
 	setflag FLAG_HIDE_TAPU_GROTTO_BULU
 	setflag FLAG_HIDE_TAPU_GROTTO_FINI
-	@ Hide flags only apply on respawn, so clear them from the map now too.
-	removeobject LOCALID_TAPU_GROTTO_KOKO
-	removeobject LOCALID_TAPU_GROTTO_BULU
-	removeobject LOCALID_TAPU_GROTTO_FINI
 Route119_TapuGrotto_EventScript_TapuLele_Battle::
 	waitse
 	playmoncry SPECIES_TAPU_LELE, CRY_MODE_ENCOUNTER
@@ -65,6 +62,11 @@ Route119_TapuGrotto_EventScript_TapuLele_Battle::
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	@ The others slip away only once the battle is over, so they are not
+	@ seen vanishing before it starts.
+	removeobject LOCALID_TAPU_GROTTO_KOKO
+	removeobject LOCALID_TAPU_GROTTO_BULU
+	removeobject LOCALID_TAPU_GROTTO_FINI
 	releaseall
 	end
 
@@ -78,10 +80,6 @@ Route119_TapuGrotto_EventScript_TapuBulu::
 	setflag FLAG_HIDE_TAPU_GROTTO_KOKO
 	setflag FLAG_HIDE_TAPU_GROTTO_LELE
 	setflag FLAG_HIDE_TAPU_GROTTO_FINI
-	@ Hide flags only apply on respawn, so clear them from the map now too.
-	removeobject LOCALID_TAPU_GROTTO_KOKO
-	removeobject LOCALID_TAPU_GROTTO_LELE
-	removeobject LOCALID_TAPU_GROTTO_FINI
 Route119_TapuGrotto_EventScript_TapuBulu_Battle::
 	waitse
 	playmoncry SPECIES_TAPU_BULU, CRY_MODE_ENCOUNTER
@@ -93,6 +91,11 @@ Route119_TapuGrotto_EventScript_TapuBulu_Battle::
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	@ The others slip away only once the battle is over, so they are not
+	@ seen vanishing before it starts.
+	removeobject LOCALID_TAPU_GROTTO_KOKO
+	removeobject LOCALID_TAPU_GROTTO_LELE
+	removeobject LOCALID_TAPU_GROTTO_FINI
 	releaseall
 	end
 
@@ -106,10 +109,6 @@ Route119_TapuGrotto_EventScript_TapuFini::
 	setflag FLAG_HIDE_TAPU_GROTTO_KOKO
 	setflag FLAG_HIDE_TAPU_GROTTO_LELE
 	setflag FLAG_HIDE_TAPU_GROTTO_BULU
-	@ Hide flags only apply on respawn, so clear them from the map now too.
-	removeobject LOCALID_TAPU_GROTTO_KOKO
-	removeobject LOCALID_TAPU_GROTTO_LELE
-	removeobject LOCALID_TAPU_GROTTO_BULU
 Route119_TapuGrotto_EventScript_TapuFini_Battle::
 	waitse
 	playmoncry SPECIES_TAPU_FINI, CRY_MODE_ENCOUNTER
@@ -121,6 +120,11 @@ Route119_TapuGrotto_EventScript_TapuFini_Battle::
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	@ The others slip away only once the battle is over, so they are not
+	@ seen vanishing before it starts.
+	removeobject LOCALID_TAPU_GROTTO_KOKO
+	removeobject LOCALID_TAPU_GROTTO_LELE
+	removeobject LOCALID_TAPU_GROTTO_BULU
 	releaseall
 	end
 
