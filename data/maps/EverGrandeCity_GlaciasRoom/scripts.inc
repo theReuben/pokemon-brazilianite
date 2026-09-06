@@ -87,8 +87,11 @@ EverGrandeCity_GlaciasRoom_Text_Defeat:
 
 EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech:
 	.string "Go on through when you're ready.\p"
-	.string "I wrote him, too. He got away from\n"
-	.string "me somewhat.\p"
-	.string "Don't mention the sand. He's quite\n"
-	.string "certain it was his own idea.$"
+	.string "He's the last door, and he's head of\n"
+	.string "the four of us.\p"
+	.string "Head MOD, as well. If you've ever\n"
+	.string "been quietly told to behave, that\l"
+	.string "was him.\p"
+	.string "I built the place.\n"
+	.string "He's the one who keeps it civil.$"
 
