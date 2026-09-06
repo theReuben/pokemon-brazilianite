@@ -426,3 +426,66 @@ MossdeepCity_Text_SootopolisNewGymLeader:
 	.string "People tell me the new LEADER once\n"
 	.string "mentored WALLACE.$"
 
+@ ---------------------------------------------------------------------------
+@ The SUPER ROD fisherman used to sit indoors in HOUSE3. He now waits by the
+@ GYM door, on the one tile every challenger has to stand on.
+@ ---------------------------------------------------------------------------
+
+MossdeepCity_EventScript_SuperRodTrigger::
+	goto_if_set FLAG_RECEIVED_SUPER_ROD, MossdeepCity_EventScript_SuperRodDone
+	lockall
+	applymovement LOCALID_MOSSDEEP_SUPER_ROD_FISHERMAN, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 20
+	applymovement LOCALID_MOSSDEEP_SUPER_ROD_FISHERMAN, MossdeepCity_Movement_SuperRodStepRight
+	waitmovement 0
+	turnobject LOCALID_MOSSDEEP_SUPER_ROD_FISHERMAN, DIR_EAST
+	call MossdeepCity_EventScript_SuperRodHandOver
+	applymovement LOCALID_MOSSDEEP_SUPER_ROD_FISHERMAN, MossdeepCity_Movement_SuperRodStepLeft
+	waitmovement 0
+	releaseall
+	end
+
+MossdeepCity_EventScript_SuperRodFisherman::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_SUPER_ROD, MossdeepCity_EventScript_SuperRodAlreadyGiven
+	call MossdeepCity_EventScript_SuperRodHandOver
+	release
+	end
+
+MossdeepCity_EventScript_SuperRodHandOver::
+	msgbox MossdeepCity_Text_SuperRodNewFish, MSGBOX_DEFAULT
+	giveitem ITEM_SUPER_ROD
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_SUPER_ROD
+	msgbox MossdeepCity_Text_SuperRodDeepWater, MSGBOX_DEFAULT
+	return
+
+MossdeepCity_EventScript_SuperRodAlreadyGiven::
+	msgbox MossdeepCity_Text_SuperRodDeepWater, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_EventScript_SuperRodDone::
+	end
+
+MossdeepCity_Movement_SuperRodStepRight:
+	walk_right
+	step_end
+
+MossdeepCity_Movement_SuperRodStepLeft:
+	walk_left
+	step_end
+
+MossdeepCity_Text_SuperRodNewFish:
+	.string "Off to the GYM? Hold on a second!\p"
+	.string "I've been hauling things out of the\n"
+	.string "sea here that aren't in any book.\p"
+	.string "Whole species nobody's written down!\p"
+	.string "You need a SUPER ROD to reach them.\n"
+	.string "Go on, take mine.$"
+
+MossdeepCity_Text_SuperRodDeepWater:
+	.string "The deep water's where the strange\n"
+	.string "ones are. Don't take my word for it!$"

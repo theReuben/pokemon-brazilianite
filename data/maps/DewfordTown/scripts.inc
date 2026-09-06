@@ -789,3 +789,90 @@ DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "Yeah, absolutely right!\p"
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"
+
+@ ---------------------------------------------------------------------------
+@ The OLD ROD fisherman waits beside the dock corridor - the three tiles every
+@ player crosses coming off MR BRINEY's boat - and steps up to hand it over.
+@ ---------------------------------------------------------------------------
+
+DewfordTown_EventScript_OldRodTriggerX9::
+	goto_if_set FLAG_RECEIVED_OLD_ROD, DewfordTown_EventScript_OldRodDone
+	lockall
+	call DewfordTown_EventScript_OldRodNotice
+	turnobject LOCALID_DEWFORD_OLD_ROD_FISHERMAN, DIR_NORTH
+	call DewfordTown_EventScript_OldRodHandOver
+	releaseall
+	end
+
+DewfordTown_EventScript_OldRodTriggerX10::
+	goto_if_set FLAG_RECEIVED_OLD_ROD, DewfordTown_EventScript_OldRodDone
+	lockall
+	call DewfordTown_EventScript_OldRodNotice
+	applymovement LOCALID_DEWFORD_OLD_ROD_FISHERMAN, DewfordTown_Movement_OldRodStepUp
+	waitmovement 0
+	turnobject LOCALID_DEWFORD_OLD_ROD_FISHERMAN, DIR_EAST
+	call DewfordTown_EventScript_OldRodHandOver
+	applymovement LOCALID_DEWFORD_OLD_ROD_FISHERMAN, DewfordTown_Movement_OldRodStepDown
+	waitmovement 0
+	releaseall
+	end
+
+DewfordTown_EventScript_OldRodTriggerX11::
+	goto_if_set FLAG_RECEIVED_OLD_ROD, DewfordTown_EventScript_OldRodDone
+	lockall
+	call DewfordTown_EventScript_OldRodNotice
+	applymovement LOCALID_DEWFORD_OLD_ROD_FISHERMAN, DewfordTown_Movement_OldRodStepUpRight
+	waitmovement 0
+	turnobject LOCALID_DEWFORD_OLD_ROD_FISHERMAN, DIR_EAST
+	call DewfordTown_EventScript_OldRodHandOver
+	applymovement LOCALID_DEWFORD_OLD_ROD_FISHERMAN, DewfordTown_Movement_OldRodStepLeftDown
+	waitmovement 0
+	releaseall
+	end
+
+DewfordTown_EventScript_OldRodNotice::
+	applymovement LOCALID_DEWFORD_OLD_ROD_FISHERMAN, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 20
+	return
+
+DewfordTown_EventScript_OldRodHandOver::
+	msgbox DewfordTown_Text_OldRodNewFish, MSGBOX_DEFAULT
+	giveitem ITEM_OLD_ROD
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_OLD_ROD
+	msgbox DewfordTown_Text_OldRodGoSeeForYourself, MSGBOX_DEFAULT
+	return
+
+DewfordTown_EventScript_OldRodDone::
+	end
+
+DewfordTown_Movement_OldRodStepUp:
+	walk_up
+	step_end
+
+DewfordTown_Movement_OldRodStepDown:
+	walk_down
+	step_end
+
+DewfordTown_Movement_OldRodStepUpRight:
+	walk_up
+	walk_right
+	step_end
+
+DewfordTown_Movement_OldRodStepLeftDown:
+	walk_left
+	walk_down
+	step_end
+
+DewfordTown_Text_OldRodNewFish:
+	.string "Hey! You off the boat!\p"
+	.string "I've fished these waters my whole\n"
+	.string "life, and I'm telling you…\p"
+	.string "…lately I'm pulling up POKéMON I've\n"
+	.string "never seen before in my life!\p"
+	.string "Here. Take my OLD ROD.$"
+
+DewfordTown_Text_OldRodGoSeeForYourself:
+	.string "Go on, drop a line somewhere and\n"
+	.string "see for yourself!$"

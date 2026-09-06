@@ -298,3 +298,115 @@ Route118_Text_RouteSign119:
 	.string "ROUTE 118\n"
 	.string "{UP_ARROW} ROUTE 119$"
 
+@ ---------------------------------------------------------------------------
+@ The GOOD ROD fisherman stands just inside the MAUVILLE entrance and walks
+@ down the column to meet whoever comes through.
+@ ---------------------------------------------------------------------------
+
+Route118_EventScript_GoodRodTriggerY7::
+	goto_if_set FLAG_RECEIVED_GOOD_ROD, Route118_EventScript_GoodRodDone
+	lockall
+	call Route118_EventScript_GoodRodNotice
+	turnobject LOCALID_ROUTE118_GOOD_ROD_FISHERMAN, DIR_SOUTH
+	call Route118_EventScript_GoodRodHandOver
+	releaseall
+	end
+
+Route118_EventScript_GoodRodTriggerY8::
+	goto_if_set FLAG_RECEIVED_GOOD_ROD, Route118_EventScript_GoodRodDone
+	lockall
+	call Route118_EventScript_GoodRodNotice
+	applymovement LOCALID_ROUTE118_GOOD_ROD_FISHERMAN, Route118_Movement_GoodRodDown1
+	waitmovement 0
+	turnobject LOCALID_ROUTE118_GOOD_ROD_FISHERMAN, DIR_SOUTH
+	call Route118_EventScript_GoodRodHandOver
+	applymovement LOCALID_ROUTE118_GOOD_ROD_FISHERMAN, Route118_Movement_GoodRodUp1
+	waitmovement 0
+	releaseall
+	end
+
+Route118_EventScript_GoodRodTriggerY9::
+	goto_if_set FLAG_RECEIVED_GOOD_ROD, Route118_EventScript_GoodRodDone
+	lockall
+	call Route118_EventScript_GoodRodNotice
+	applymovement LOCALID_ROUTE118_GOOD_ROD_FISHERMAN, Route118_Movement_GoodRodDown2
+	waitmovement 0
+	turnobject LOCALID_ROUTE118_GOOD_ROD_FISHERMAN, DIR_SOUTH
+	call Route118_EventScript_GoodRodHandOver
+	applymovement LOCALID_ROUTE118_GOOD_ROD_FISHERMAN, Route118_Movement_GoodRodUp2
+	waitmovement 0
+	releaseall
+	end
+
+Route118_EventScript_GoodRodTriggerY10::
+	goto_if_set FLAG_RECEIVED_GOOD_ROD, Route118_EventScript_GoodRodDone
+	lockall
+	call Route118_EventScript_GoodRodNotice
+	applymovement LOCALID_ROUTE118_GOOD_ROD_FISHERMAN, Route118_Movement_GoodRodDown3
+	waitmovement 0
+	turnobject LOCALID_ROUTE118_GOOD_ROD_FISHERMAN, DIR_SOUTH
+	call Route118_EventScript_GoodRodHandOver
+	applymovement LOCALID_ROUTE118_GOOD_ROD_FISHERMAN, Route118_Movement_GoodRodUp3
+	waitmovement 0
+	releaseall
+	end
+
+Route118_EventScript_GoodRodNotice::
+	applymovement LOCALID_ROUTE118_GOOD_ROD_FISHERMAN, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 20
+	return
+
+Route118_EventScript_GoodRodHandOver::
+	msgbox Route118_Text_GoodRodNewFish, MSGBOX_DEFAULT
+	giveitem ITEM_GOOD_ROD
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_GOOD_ROD
+	msgbox Route118_Text_GoodRodTryTheRiver, MSGBOX_DEFAULT
+	return
+
+Route118_EventScript_GoodRodDone::
+	end
+
+Route118_Movement_GoodRodDown1:
+	walk_down
+	step_end
+
+Route118_Movement_GoodRodUp1:
+	walk_up
+	step_end
+
+Route118_Movement_GoodRodDown2:
+	walk_down
+	walk_down
+	step_end
+
+Route118_Movement_GoodRodUp2:
+	walk_up
+	walk_up
+	step_end
+
+Route118_Movement_GoodRodDown3:
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Route118_Movement_GoodRodUp3:
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+Route118_Text_GoodRodNewFish:
+	.string "You! Come and see this!\p"
+	.string "I've cast into this river a thousand\n"
+	.string "times, and this week?\p"
+	.string "Nothing but POKéMON I can't name.\n"
+	.string "Not one I recognise!\p"
+	.string "You'll want a proper rod for that.\n"
+	.string "Take my GOOD ROD.$"
+
+Route118_Text_GoodRodTryTheRiver:
+	.string "Try the river here, then try the sea.\n"
+	.string "They're not the same at all!$"
