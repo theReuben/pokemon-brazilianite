@@ -268,8 +268,11 @@ FortreeCity_Gym_Text_ExplainFeatherBadgeTakeThis:
 	.string "With THE SEVENTH SNAKE, POKéMON up\n"
 	.string "to LV 70, even those received through\l"
 	.string "trades, will obey your every command.\p"
-	.string "You will also be able to use\n"
-	.string "the HM move FLY outside of battle.\p"
+	.string "You will also be able to fly.\p"
+	.string "No POKéMON need carry you now.\n"
+	.string "Open your MAP, rest the cursor on a\l"
+	.string "town, and press the R Button.\p"
+	.string "Something always comes.\p"
 	.string "And this…\n"
 	.string "This is a gift from me.$"
 
