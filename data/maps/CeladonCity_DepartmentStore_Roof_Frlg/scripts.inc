@@ -305,7 +305,7 @@ CeladonCity_DepartmentStore_Roof_Text_ExplainTM16::
 
 CeladonCity_DepartmentStore_Roof_Text_YaySodaPopHaveThis::
 	.string "Yay!\p"
-	.string "SODA POP!\p"
+	.string "DR PEPPER!\p"
 	.string "Thank you!\n"
 	.string "You can have this from me!$"
 

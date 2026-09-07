@@ -154,6 +154,7 @@ DewfordTown_Gym_EventScript_BrawlyDefeated::
 	setvar VAR_0x8008, 2
 	call Common_EventScript_SetGymTrainers
 	call DewfordTown_Gym_EventScript_GiveGymTM
+	call DewfordTown_Gym_EventScript_GiveTorch
 	closemessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
@@ -172,6 +173,12 @@ DewfordTown_Gym_EventScript_GiveGymTM::
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_BagIsFull
 	msgbox DewfordTown_Gym_Text_ExplainMegaDrain, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_BULK_UP
+	return
+
+DewfordTown_Gym_EventScript_GiveTorch::
+	giveitem ITEM_TORCH
+	goto_if_eq VAR_RESULT, 0, Common_EventScript_BagIsFull
+	msgbox DewfordTown_Gym_Text_ExplainTorch, MSGBOX_DEFAULT
 	return
 
 DewfordTown_Gym_EventScript_GiveGymTM2:
@@ -433,6 +440,13 @@ DewfordTown_Gym_Text_ExplainMegaDrain:
 	.string "Pressing, essentially.\p"
 	.string "A TM keeps. It does not run dry, so\n"
 	.string "do pour it as often as you like.$"
+
+DewfordTown_Gym_Text_ExplainTorch:
+	.string "Take this TORCH as well.\p"
+	.string "A cellar is dark. One brings a\n"
+	.string "light, or one stumbles.\p"
+	.string "Raise it in any cave and the dark\n"
+	.string "keeps its distance.$"
 
 DewfordTown_Gym_Text_RegisteredBrawly:
 	.string "Registered GYM LEADER MERLOT\n"

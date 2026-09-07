@@ -2331,6 +2331,30 @@ bool8 ScrCmd_checkfieldmove(struct ScriptContext *ctx)
         }
     }
 
+    // Once the badge is earned, an HM no longer needs a party member that knows
+    // it. Only HMs are relaxed - Dig, Teleport and Sweet Scent share this command
+    // but are always "unlocked", so they must still be known to be used.
+    // Falls back to the first non-egg mon so the "used CUT!" message has a name.
+    // Checks IsFieldMoveUnlocked directly rather than trusting doUnlockedCheck:
+    // Surf, Waterfall and Dive pass FALSE for it because their badge check has
+    // already happened in C, so keying off it would skip exactly those three.
+    if (OW_HM_WITHOUT_MON && gSpecialVar_Result == PARTY_SIZE
+     && IsMoveHM(move) && IsFieldMoveUnlocked(fieldMove))
+    {
+        for (u32 i = 0; i < PARTY_SIZE; i++)
+        {
+            u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+            if (!species)
+                break;
+            if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
+            {
+                gSpecialVar_Result = i;
+                gSpecialVar_0x8004 = species;
+                break;
+            }
+        }
+    }
+
     return FALSE;
 }
 
