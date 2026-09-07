@@ -367,8 +367,9 @@ MauvilleCity_Gym_Text_ReceivedDynamoBadge:
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
 	.string "It was here the whole time.\p"
-	.string "With THE ONE PIECE, POKéMON can\n"
-	.string "use ROCK SMASH out of battle.\p"
+	.string "With THE ONE PIECE, rocks break.\n"
+	.string "No POKéMON has to learn ROCK SMASH.\p"
+	.string "The badge was the real treasure.\p"
 	.string "And it makes your POKéMON a little\n"
 	.string "bit faster, too.\p"
 	.string "Oh! And take this!\n"

@@ -1285,8 +1285,9 @@ PetalburgCity_Gym_Text_ReceivedBalanceBadge:
 PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:
 	.string "MAMA BOSA: With a mother's love, the\n"
 	.string "DEFENSE of all your POKéMON goes up.\p"
-	.string "POKéMON that know the HM move SURF\n"
-	.string "will be able to travel over water.\p"
+	.string "You'll travel over water now, too.\n"
+	.string "No POKéMON of yours needs to know\l"
+	.string "SURF. Just go to the water's edge.\p"
 	.string "This is my gift to you. {PLAYER}, I'm\n"
 	.string "sure you can use it correctly.$"
 
