@@ -14258,9 +14258,8 @@ const struct ItemInfo gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_Torch,
-        // PLACEHOLDER ART: reuses the HM disc icon. Needs a 24x24 torch icon.
-        .iconPic = gItemIcon_HM,
-        .iconPalette = gItemIconPalette_NormalTMHM,
+        .iconPic = gItemIcon_Torch,
+        .iconPalette = gItemIconPalette_Torch,
     },
 
     [ITEM_SS_TICKET] =

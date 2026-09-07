@@ -1622,6 +1622,8 @@ extern const u16 gItemIconPalette_DevonParts[];
 extern const u32 gItemIcon_GoGoggles[];
 extern const u16 gItemIconPalette_GoGoggles[];
 extern const u32 gItemIcon_DevonScope[];
+extern const u32 gItemIcon_Torch[];
+extern const u16 gItemIconPalette_Torch[];
 extern const u16 gItemIconPalette_DevonScope[];
 extern const u32 gItemIcon_BasementKey[];
 extern const u16 gItemIconPalette_OldKey[];
