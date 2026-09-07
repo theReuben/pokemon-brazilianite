@@ -797,7 +797,7 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_SODA_POP] =
     {
-        .name = ITEM_NAME("Soda Pop"),
+        .name = ITEM_NAME("Dr Pepper"),
         .price = 300,
         .holdEffectParam = 50,
         .description = COMPOUND_STRING(

@@ -121,14 +121,14 @@ Route109_SeashoreHouse_Text_TakeTheseSodaPopBottles:
 	.string "I'm more than just satisfied!\p"
 	.string "As thanks for showing me your hot\n"
 	.string "streak, I want you to take these.\p"
-	.string "It's half a dozen bottles of SODA POP!$"
+	.string "It's half a dozen bottles of DR PEPPER!$"
 
 Route109_SeashoreHouse_Text_BagFull:
 	.string "Oh, but hey, your BAG's jammed full.\n"
 	.string "I'll hang on to these for you.$"
 
 Route109_SeashoreHouse_Text_WantToBuySodaPop:
-	.string "Want to buy some SODA POP?\n"
+	.string "Want to buy some DR PEPPER?\n"
 	.string "POKéMON love it!\p"
 	.string "Just ¥300 a bottle!\n"
 	.string "Buy some!$"
@@ -154,7 +154,7 @@ Route109_SeashoreHouse_Text_DwayneDefeated:
 
 Route109_SeashoreHouse_Text_DwaynePostBattle:
 	.string "Whenever I'm in SLATEPORT, I enjoy\n"
-	.string "hot battles and ice-cold SODA POP!$"
+	.string "hot battles and ice-cold DR PEPPER!$"
 
 Route109_SeashoreHouse_Text_JohannaIntro:
 	.string "Boring battles aren't worth the effort.\p"
@@ -166,7 +166,7 @@ Route109_SeashoreHouse_Text_JohannaDefeated:
 
 Route109_SeashoreHouse_Text_JohannaPostBattle:
 	.string "Whew, I'm all thirsty.\n"
-	.string "Maybe I'll have a SODA POP.$"
+	.string "Maybe I'll have a DR PEPPER.$"
 
 Route109_SeashoreHouse_Text_SimonIntro:
 	.string "I'm going to show you how great\n"
