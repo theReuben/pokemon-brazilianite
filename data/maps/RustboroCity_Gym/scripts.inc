@@ -200,8 +200,8 @@ RustboroCity_Gym_Text_ReceivedStoneBadge:
 RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
 	.string "SHOTS! SHOTS! SHOTS! heightens the\n"
 	.string "ATTACK power of your POKéMON.\p"
-	.string "It also enables them to use the HM move\n"
-	.string "CUT outside of battle.\p"
+	.string "It also means trees get CUT.\n"
+	.string "No HM. No teaching. Just CUT.\p"
 	.string "Please take this with you, too.$"
 
 RustboroCity_Gym_Text_ExplainShockWave:

@@ -237,9 +237,9 @@ SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis:
 	.string "That body pillow shall assure you\n"
 	.string "the full obedience of all your POKéMON\l"
 	.string "to your every command.\p"
-	.string "It also allows you to make use\n"
-	.string "of the HM move WATERFALL to scale\l"
-	.string "walls of cascading water.\p"
+	.string "It also grants you the walls of\n"
+	.string "cascading water. You need teach\l"
+	.string "WATERFALL to no one; simply ascend.\p"
 	.string "And, so that you never forget the\n"
 	.string "battle we shared, take this…$"
 
