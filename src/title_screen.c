@@ -22,6 +22,7 @@
 #include "graphics.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "random.h"
 
 enum {
     TAG_VERSION = 1000,
@@ -60,8 +61,53 @@ static void SpriteCB_PokemonLogoShine(struct Sprite *sprite);
 // const rom data
 static const u16 sUnusedUnknownPal[] = INCBIN_U16("graphics/title_screen/unused.gbapal");
 
-static const u32 sTitleScreenRayquazaGfx[] = INCBIN_U32("graphics/title_screen/rayquaza.4bpp.smol");
-static const u32 sTitleScreenRayquazaTilemap[] = INCBIN_U32("graphics/title_screen/rayquaza.bin.smolTM");
+static const u32 sTitleScreenTorterraGfx[] = INCBIN_U32("graphics/title_screen/torterra.4bpp.smol");
+static const u32 sTitleScreenTorterraTilemap[] = INCBIN_U32("graphics/title_screen/torterra.bin.smolTM");
+static const u16 sTitleScreenTorterraPal[] = INCBIN_U16("graphics/title_screen/torterra_and_clouds.gbapal");
+static const u32 sTitleScreenFeraligatrGfx[] = INCBIN_U32("graphics/title_screen/feraligatr.4bpp.smol");
+static const u32 sTitleScreenFeraligatrTilemap[] = INCBIN_U32("graphics/title_screen/feraligatr.bin.smolTM");
+static const u16 sTitleScreenFeraligatrPal[] = INCBIN_U16("graphics/title_screen/feraligatr_and_clouds.gbapal");
+static const u32 sTitleScreenSkeledirgeGfx[] = INCBIN_U32("graphics/title_screen/skeledirge.4bpp.smol");
+static const u32 sTitleScreenSkeledirgeTilemap[] = INCBIN_U32("graphics/title_screen/skeledirge.bin.smolTM");
+static const u16 sTitleScreenSkeledirgePal[] = INCBIN_U16("graphics/title_screen/skeledirge_and_clouds.gbapal");
+
+// One title screen per starter, picked at random once per boot. Each is a flat
+// silhouette in palette 14 index 11, with its glow accents in index 15 - the
+// entry UpdateLegendaryMarkingColor pulses. glowBright/glowDark are the ends of
+// that pulse, so each variant fades its accents down into its own silhouette.
+struct TitleScreenVariant
+{
+    const u32 *gfx;
+    const u32 *tilemap;
+    const u16 *palette;
+    u8 glowBright[3];
+    u8 glowDark[3];
+};
+
+static const struct TitleScreenVariant sTitleScreenVariants[] =
+{
+    { sTitleScreenTorterraGfx,   sTitleScreenTorterraTilemap,   sTitleScreenTorterraPal,   {31, 17,  3}, { 2,  5,  3} },
+    { sTitleScreenFeraligatrGfx, sTitleScreenFeraligatrTilemap, sTitleScreenFeraligatrPal, {30, 10, 11}, { 0,  4,  9} },
+    { sTitleScreenSkeledirgeGfx, sTitleScreenSkeledirgeTilemap, sTitleScreenSkeledirgePal, {31, 10,  2}, { 6,  1,  4} },
+};
+
+// Rolled on the first title screen of a boot and kept for the rest of it, so
+// the screen stays put if the intro loops back around.
+static u8 sTitleScreenVariantId = 0;
+static bool8 sTitleScreenVariantChosen = FALSE;
+
+static const struct TitleScreenVariant *GetTitleScreenVariant(void)
+{
+    if (!sTitleScreenVariantChosen)
+    {
+        // SeedRngWithRtc() has already run in AgbMain, but mix in the frame
+        // counter too: the RTC reads as a constant on hardware that stubs it
+        // out, which would otherwise pick the same starter every boot.
+        sTitleScreenVariantId = (Random() ^ gMain.vblankCounter1) % ARRAY_COUNT(sTitleScreenVariants);
+        sTitleScreenVariantChosen = TRUE;
+    }
+    return &sTitleScreenVariants[sTitleScreenVariantId];
+}
 static const u32 sTitleScreenLogoShineGfx[] = INCBIN_U32("graphics/title_screen/logo_shine.4bpp.smol");
 static const u32 sTitleScreenCloudsGfx[] = INCBIN_U32("graphics/title_screen/clouds.4bpp.smol");
 
@@ -597,8 +643,14 @@ void CB2_InitTitleScreen(void)
         DecompressDataWithHeaderVram(gTitleScreenPokemonLogoTilemap, (void *)(BG_SCREEN_ADDR(9)));
         LoadPalette(gTitleScreenBgPalettes, BG_PLTT_ID(0), 15 * PLTT_SIZE_4BPP);
         // bg3
-        DecompressDataWithHeaderVram(sTitleScreenRayquazaGfx, (void *)(BG_CHAR_ADDR(2)));
-        DecompressDataWithHeaderVram(sTitleScreenRayquazaTilemap, (void *)(BG_SCREEN_ADDR(26)));
+        {
+            const struct TitleScreenVariant *variant = GetTitleScreenVariant();
+            // Overrides palette 14 from gTitleScreenBgPalettes, recolouring the
+            // clouds along with the silhouette - both share this palette.
+            LoadPalette(variant->palette, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
+            DecompressDataWithHeaderVram(variant->gfx, (void *)(BG_CHAR_ADDR(2)));
+            DecompressDataWithHeaderVram(variant->tilemap, (void *)(BG_SCREEN_ADDR(26)));
+        }
         // bg1
         DecompressDataWithHeaderVram(sTitleScreenCloudsGfx, (void *)(BG_CHAR_ADDR(3)));
         DecompressDataWithHeaderVram(gTitleScreenCloudsTilemap, (void *)(BG_SCREEN_ADDR(27)));
@@ -855,10 +907,11 @@ static void UpdateLegendaryMarkingColor(u8 frameNum)
 {
     if ((frameNum % 4) == 0) // Change color every 4th frame
     {
+        const struct TitleScreenVariant *variant = GetTitleScreenVariant();
         s32 intensity = Cos(frameNum, Q_8_8(0.5)) + Q_8_8(0.5);
-        u32 r = 31 - Q_8_8_TO_INT(intensity * 31);
-        u32 g = 31 - Q_8_8_TO_INT(intensity * 22);
-        u32 b = 12;
+        s32 r = variant->glowBright[0] - Q_8_8_TO_INT(intensity * (variant->glowBright[0] - variant->glowDark[0]));
+        s32 g = variant->glowBright[1] - Q_8_8_TO_INT(intensity * (variant->glowBright[1] - variant->glowDark[1]));
+        s32 b = variant->glowBright[2] - Q_8_8_TO_INT(intensity * (variant->glowBright[2] - variant->glowDark[2]));
 
         u16 color = RGB(r, g, b);
         LoadPalette(&color, BG_PLTT_ID(14) + 15, sizeof(color));
