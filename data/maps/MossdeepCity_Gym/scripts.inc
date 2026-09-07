@@ -573,8 +573,13 @@ MossdeepCity_Gym_Text_ReceivedMindBadge:
 MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis:
 	.string "MR P: A PRIME SUB enhances the\n"
 	.string "SP. ATK and SP. DEF of POKéMON.\p"
-	.string "MRS P: It also lets you use the HM move\n"
-	.string "DIVE outside of battle.\p"
+	.string "MRS P: It also lets you dive.\p"
+	.string "MR P: No POKéMON need know how…\n"
+	.string "MRS P: Just find the dark water!\p"
+	.string "MR P: Press A to go down…\n"
+	.string "MRS P: And B to come back up!\p"
+	.string "MR P: Do remember the B…\n"
+	.string "MRS P: Or you'll stay down there!\p"
 	.string "MR P: You should also take this, too.$"
 
 MossdeepCity_Gym_Text_ExplainSunnyDay:

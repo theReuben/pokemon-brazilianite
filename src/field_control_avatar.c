@@ -635,7 +635,15 @@ static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metati
 {
     if (MetatileBehavior_IsFastWater(metatileBehavior) == TRUE && !TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
         return EventScript_CurrentTooFast;
-    if (IsFieldMoveUnlocked(FIELD_MOVE_SURF) && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE
+    // Surf is gated here in C, before EventScript_UseSurf ever runs, so relaxing
+    // the script's own lookup is not enough on its own. PartyHasMonWithSurf also
+    // carries a "not already surfing" test - keep that half, drop only the half
+    // that demands someone knows the move.
+    bool32 canStartSurfing = OW_HM_WITHOUT_MON
+                           ? !TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING)
+                           : PartyHasMonWithSurf() == TRUE;
+
+    if (IsFieldMoveUnlocked(FIELD_MOVE_SURF) && canStartSurfing && IsPlayerFacingSurfableFishableWater() == TRUE
      && CheckFollowerNPCFlag(FOLLOWER_NPC_FLAG_CAN_SURF)
      )
         return EventScript_UseSurf;
