@@ -14246,6 +14246,23 @@ const struct ItemInfo gItemsInfo[] =
 
 // Story Key Items
 
+    [ITEM_TORCH] =
+    {
+        .name = ITEM_NAME("Torch"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Lights up a dark\n"
+            "cave, just as the\n"
+            "move Flash does."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Torch,
+        // PLACEHOLDER ART: reuses the HM disc icon. Needs a 24x24 torch icon.
+        .iconPic = gItemIcon_HM,
+        .iconPalette = gItemIconPalette_NormalTMHM,
+    },
+
     [ITEM_SS_TICKET] =
     {
         .name = ITEM_NAME("S.S. Ticket"),

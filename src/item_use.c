@@ -79,8 +79,10 @@ static void Task_CloseCantUseKeyItemMessage(u8);
 static void SetDistanceOfClosestHiddenItem(u8, s16, s16);
 static void CB2_OpenPokeblockFromBag(void);
 static void ItemUseOnFieldCB_Honey(u8 taskId);
+static void ItemUseOnFieldCB_Torch(u8 taskId);
 static bool32 IsValidLocationForVsSeeker(void);
 
+static const u8 sText_TorchNoUse[] = _("There is nothing to light up here.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_CantDismountBike[] = _("You can't dismount your BIKE here.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_ItemFinderNearby[] = _("Huh?\nThe ITEMFINDER's responding!\pThere's an item buried around here!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_ItemFinderOnTop[] = _("Oh!\nThe ITEMFINDER's shaking wildly!{PAUSE_UNTIL_PRESS}");
@@ -268,6 +270,29 @@ void ItemUseOutOfBattle_ExpShare(u8 taskId)
 #else
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 #endif
+}
+
+// Stands in for HM Flash once the second badge is earned. Same conditions the
+// move checks in SetUpFieldMove_Flash: a cave that is not already lit.
+void ItemUseOutOfBattle_Torch(u8 taskId)
+{
+    if (gMapHeader.cave == TRUE && !FlagGet(FLAG_SYS_USE_FLASH))
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_Torch;
+        SetUpItemUseOnFieldCallback(taskId);
+    }
+    else
+    {
+        DisplayCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem, sText_TorchNoUse);
+    }
+}
+
+static void ItemUseOnFieldCB_Torch(u8 taskId)
+{
+    PlaySE(SE_M_REFLECT);
+    FlagSet(FLAG_SYS_USE_FLASH);
+    ScriptContext_SetupScript(EventScript_UseFlash);
+    DestroyTask(taskId);
 }
 
 void ItemUseOutOfBattle_Bike(u8 taskId)
