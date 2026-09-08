@@ -253,6 +253,32 @@ Route111_EventScript_SunTrigger::
 	setvar VAR_TEMP_3, 0
 	end
 
+@ Galarian Yamask evolves into Runerigus here, on the sands south of Mirage Tower,
+@ provided it has taken at least 49 damage in a single hit and not fainted.
+Route111_EventScript_RunerigusHiker::
+	lock
+	faceplayer
+	goto_if_eq VAR_MIRAGE_TOWER_STATE, 3, Route111_EventScript_RunerigusHikerTowerGone
+	goto_if_eq VAR_MIRAGE_TOWER_STATE, 2, Route111_EventScript_RunerigusHikerTowerGone
+	goto_if_set FLAG_MIRAGE_TOWER_VISIBLE, Route111_EventScript_RunerigusHikerTowerVisible
+	msgbox Route111_Text_RunerigusHikerTowerHidden, MSGBOX_DEFAULT
+	release
+	end
+
+Route111_EventScript_RunerigusHikerTowerVisible::
+	msgbox Route111_Text_RunerigusHikerTowerVisible, MSGBOX_DEFAULT
+	release
+	end
+
+Route111_EventScript_RunerigusHikerTowerGone::
+	msgbox Route111_Text_RunerigusHikerTowerGone, MSGBOX_DEFAULT
+	release
+	end
+
+Route111_EventScript_RunerigusTrigger::
+	tryspecialevo EVO_SCRIPT_TRIGGER, TRUE, TRUE
+	end
+
 Route111_EventScript_SandstormTrigger::
 	setweather WEATHER_SANDSTORM
 	fadenewbgm MUS_DESERT
@@ -776,3 +802,31 @@ Route111_EventScript_MoveStormRoostGuardAside::
 	setobjectxyperm LOCALID_ROUTE111_STORM_ROOST_GUARD, 15, 132
 	setobjectmovementtype LOCALID_ROUTE111_STORM_ROOST_GUARD, MOVEMENT_TYPE_FACE_LEFT
 	return
+
+Route111_Text_RunerigusHikerTowerVisible:
+	.string "My YAMASK came out of a battle in a\n"
+	.string "bad way. Barely standing, it was.\p"
+	.string "I carried it right up under the shadow\n"
+	.string "of that tower, and something in the\l"
+	.string "sand took an interest in it.\p"
+	.string "It doesn't look like a YAMASK now.\n"
+	.string "It looks like something a lot older,\l"
+	.string "and a lot stronger.$"
+
+Route111_Text_RunerigusHikerTowerHidden:
+	.string "The tower's not showing itself today.\n"
+	.string "Doesn't matter. It never was the\l"
+	.string "important part.\p"
+	.string "I brought my YAMASK here half-fainted\n"
+	.string "and something under this sand woke up\l"
+	.string "and took it.\p"
+	.string "Stand right there, where I'm looking.\n"
+	.string "That's the spot.$"
+
+Route111_Text_RunerigusHikerTowerGone:
+	.string "Tower came down. Whole thing, into\n"
+	.string "sand, right in front of me.\p"
+	.string "But I'm still standing here, and so is\n"
+	.string "whatever's underneath.\p"
+	.string "Bring a YAMASK that's taken a beating\n"
+	.string "and can still stand. It'll know.$"

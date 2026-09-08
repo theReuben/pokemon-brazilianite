@@ -25,6 +25,11 @@ LilycoveCity_DepartmentStore_3F_Pokemart_Vitamins:
 	.2byte ITEM_ABILITY_PATCH
 	.2byte ITEM_BOTTLE_CAP
 	.2byte ITEM_GOLD_BOTTLE_CAP
+	.2byte ITEM_DUSK_STONE
+	.2byte ITEM_GALARICA_CUFF
+	.2byte ITEM_GALARICA_WREATH
+	.2byte ITEM_LINKING_CORD
+	.2byte ITEM_PEAT_BLOCK
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_3F_EventScript_ClerkRight::

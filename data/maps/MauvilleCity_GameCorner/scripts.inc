@@ -833,3 +833,16 @@ MauvilleCity_GameCorner_Text_CashOutWalletFull:
 	.string "Goodness, your wallet is already\n"
 	.string "full to bursting!\p"
 	.string "Go and spend some, then come back.$"
+
+MauvilleCity_GameCorner_EventScript_PromoAttendant::
+	msgbox MauvilleCity_GameCorner_Text_PromotionalCoin, MSGBOX_NPC
+	end
+
+MauvilleCity_GameCorner_Text_PromotionalCoin:
+	.string "Welcome to our promotion!\p"
+	.string "Every spin comes with a free\n"
+	.string "GIMMIGHOUL COIN. No purchase\l"
+	.string "necessary beyond the spin itself.\p"
+	.string "They're not worth a thing, mind.\n"
+	.string "We can't give them away!\p"
+	.string "Well. We can. That's the promotion.$"
