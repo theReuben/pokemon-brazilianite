@@ -23,7 +23,9 @@
 #include "main_menu.h"
 #include "bg.h"
 #include "window.h"
+#include "item.h"
 #include "constants/coins.h"
+#include "constants/items.h"
 #include "constants/rgb.h"
 #include "constants/slot_machine.h"
 #include "constants/songs.h"
@@ -1512,6 +1514,9 @@ static bool8 SlotTask_WaitAllReelsStop(struct Task *task)
 static bool8 SlotTask_CheckMatches(struct Task *task)
 {
     sSlotMachine->machineBias &= (BIAS_STRAIGHT_7 | BIAS_MIXED_7);
+    // Every spin comes with a promotional Gimmighoul Coin. Silently skipped
+    // once the player is holding the bag's maximum stack.
+    AddBagItem(ITEM_GIMMIGHOUL_COIN, 1);
     CheckMatch();
     if (sSlotMachine->reelTimeSpinsLeft)
     {
