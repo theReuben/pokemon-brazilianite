@@ -30,7 +30,7 @@ LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs:
 	.2byte ITEM_TM_BLIZZARD
 	.2byte ITEM_TM_HYPER_BEAM
 	.2byte ITEM_TM_EARTHQUAKE
-	.2byte ITEM_TM_SHADOW_BALL
+	.2byte ITEM_TM_WATER_PULSE
 	.2byte ITEM_TM_SLUDGE_BOMB
 	.2byte ITEM_TM_BRICK_BREAK
 	.2byte ITEM_TM_AERIAL_ACE
