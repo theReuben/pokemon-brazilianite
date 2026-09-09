@@ -29,14 +29,9 @@ LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs:
 	.2byte ITEM_TM_THUNDER
 	.2byte ITEM_TM_BLIZZARD
 	.2byte ITEM_TM_HYPER_BEAM
-	.2byte ITEM_TM_EARTHQUAKE
 	.2byte ITEM_TM_WATER_PULSE
-	.2byte ITEM_TM_SLUDGE_BOMB
-	.2byte ITEM_TM_BRICK_BREAK
 	.2byte ITEM_TM_AERIAL_ACE
 	.2byte ITEM_TM_ROCK_TOMB
-	.2byte ITEM_TM_FACADE
-	.2byte ITEM_TM_SHOCK_WAVE
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_4F_EventScript_ClerkRight::
@@ -57,6 +52,10 @@ LilycoveCity_DepartmentStore_4F_EventScript_ClerkRightNoBadge::
 
 	.align 2
 LilycoveCity_DepartmentStore_4F_Pokemart_DefenseTMs:
+	.2byte ITEM_TM_LIGHT_SCREEN
+	.2byte ITEM_TM_REFLECT
+	.2byte ITEM_TM_PROTECT
+	.2byte ITEM_TM_SAFEGUARD
 	.2byte ITEM_LEFTOVERS
 	.2byte ITEM_FOCUS_SASH
 	.2byte ITEM_CHOICE_BAND

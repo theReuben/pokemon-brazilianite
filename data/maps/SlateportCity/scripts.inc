@@ -537,8 +537,8 @@ SlateportCity_EventScript_PowerTMClerk::
 
 	.align 2
 SlateportCity_Pokemart_PowerTMs:
-	.2byte ITEM_TM_HIDDEN_POWER
-	.2byte ITEM_TM_SECRET_POWER
+	.2byte ITEM_TM_BULK_UP
+	.2byte ITEM_TM_CALM_MIND
 	pokemartlistend
 
 @ Scene with Capt Sterns interview and Team Algorithm announcing plans to steal Submarine
