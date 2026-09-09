@@ -173,7 +173,7 @@ rebuilds the middle from encounter levels, moving each family as a block.
 | 147 | Tapu Lele          | Psychic/Fairy     | Tapu Grotto, one of four        |
 | 148 | Tapu Bulu          | Grass/Fairy       | Tapu Grotto, one of four        |
 | 149 | Tapu Fini          | Water/Fairy       | Tapu Grotto, one of four        |
-| 150 | Rayquaza           | Dragon/Flying     | Sky Pillar                      |
+| 150 | Shuckle            | Bug/Rock          | Scam Pillar summit              |
 
 ## Summary
 
@@ -182,5 +182,5 @@ rebuilds the middle from encounter levels, moving each family as a block.
 - **Regional forms**: Alolan (Grimer, Muk, Meowth, Persian, Geodude, Graveler, Golem), Galarian (Slowpoke, Slowbro, Slowking, Meowth, Perrserker, Farfetch'd, Yamask), Hisuian (Qwilfish, Voltorb, Electrode, Basculin), Paldean (Wooper)
 - **Paradox Pokemon**: Roaring Moon, Iron Valiant
 - **Gift Pokemon**: Castform (Weather Institute), Tirtouga, Archen
-- **Legendaries**: one of Raikou/Entei/Suicune, one of the Galarian birds, one of the tapus, plus Rayquaza
+- **Legendaries**: one of Raikou/Entei/Suicune, one of the Galarian birds, one of the tapus, plus whatever is at the top of the Scam Pillar
 - **Fossils**: Cover Fossil (Tirtouga) and Plume Fossil (Archen), revived at Devon Corp

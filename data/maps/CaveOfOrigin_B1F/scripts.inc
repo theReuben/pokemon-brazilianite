@@ -117,9 +117,9 @@ CaveOfOrigin_B1F_Text_CantYouRememberSomehow:
 	.string "Can't you remember somehow?$"
 
 CaveOfOrigin_B1F_Text_WellHeadToSkyPillar:
-	.string "JAKE: The SKY PILLAR?\p"
+	.string "JAKE: The SCAM PILLAR?\p"
 	.string "That's it!\n"
-	.string "It has to be the SKY PILLAR!\p"
+	.string "It has to be the SCAM PILLAR!\p"
 	.string "{PLAYER}{KUN}, there's not a moment to lose!\n"
 	.string "We're going. Right now!$"
 
