@@ -116,6 +116,12 @@ enum {
     MENU_CATALOG_MOWER,
     MENU_CHANGE_FORM,
     MENU_CHANGE_ABILITY,
+    MENU_BOTTLE_CAP_HP,
+    MENU_BOTTLE_CAP_ATK,
+    MENU_BOTTLE_CAP_DEF,
+    MENU_BOTTLE_CAP_SPEED,
+    MENU_BOTTLE_CAP_SPATK,
+    MENU_BOTTLE_CAP_SPDEF,
     MENU_FIELD_MOVES
 };
 
@@ -138,6 +144,7 @@ enum {
     ACTIONS_TAKEITEM_TOSS,
     ACTIONS_ROTOM_CATALOG,
     ACTIONS_ZYGARDE_CUBE,
+    ACTIONS_BOTTLE_CAP,
 };
 
 enum {
@@ -485,6 +492,12 @@ static void CursorCb_ChangeEggMoves(u8);
 static void CursorCb_ChangeTMMoves(u8);
 static void CursorCb_ChangeTutorMoves(u8);
 static void CursorCb_LearnMovesSubMenu(u8);
+static void CursorCb_BottleCapHP(u8);
+static void CursorCb_BottleCapAtk(u8);
+static void CursorCb_BottleCapDef(u8);
+static void CursorCb_BottleCapSpeed(u8);
+static void CursorCb_BottleCapSpAtk(u8);
+static void CursorCb_BottleCapSpDef(u8);
 static void CursorCb_CatalogBulb(u8);
 static void CursorCb_CatalogOven(u8);
 static void CursorCb_CatalogWashing(u8);
@@ -2779,6 +2792,9 @@ static u8 DisplaySelectionWindow(u8 windowType)
         break;
     case SELECTWINDOW_ZYGARDECUBE:
         window = sZygardeCubeSelectWindowTemplate;
+        break;
+    case SELECTWINDOW_BOTTLECAP:
+        window = sBottleCapSelectWindowTemplate;
         break;
     default: // SELECTWINDOW_MOVES
         window = sMoveSelectWindowTemplate;
@@ -5170,22 +5186,6 @@ static bool32 CanHyperTrainStat(struct Pokemon *mon, u32 stat)
         && !GetMonData(mon, MON_DATA_HYPER_TRAINED_HP + stat);
 }
 
-// A silver cap takes the worst stat worth training, so six of them cover a
-// whole Pokemon; a gold cap takes every stat at once.
-static s32 GetWeakestTrainableStat(struct Pokemon *mon)
-{
-    u32 stat;
-    s32 weakest = -1;
-
-    for (stat = 0; stat < NUM_STATS; stat++)
-    {
-        if (CanHyperTrainStat(mon, stat)
-         && (weakest < 0 || GetMonData(mon, sIvFields[stat]) < GetMonData(mon, sIvFields[weakest])))
-            weakest = stat;
-    }
-    return weakest;
-}
-
 static void HyperTrainStat(struct Pokemon *mon, u32 stat)
 {
     u8 trained = TRUE;
@@ -5195,7 +5195,6 @@ static void HyperTrainStat(struct Pokemon *mon, u32 stat)
 
 void Task_BottleCap(u8 taskId)
 {
-    static const u8 sText_askOneText[] = _("Bring out the best in {STR_VAR_1}'s\n{STR_VAR_2}?");
     static const u8 sText_askAllText[] = _("Bring out the best in every one of\n{STR_VAR_1}'s stats?");
     static const u8 sText_doneOneText[] = _("{STR_VAR_1}'s {STR_VAR_2} was trained to\nits full potential!{PAUSE_UNTIL_PRESS}");
     static const u8 sText_doneAllText[] = _("{STR_VAR_1}'s stats were all trained to\ntheir full potential!{PAUSE_UNTIL_PRESS}");
@@ -5219,7 +5218,13 @@ void Task_BottleCap(u8 taskId)
         gPartyMenuUseExitCallback = TRUE;
         GetMonNickname(mon, gStringVar1);
         StringCopy(gStringVar2, gStatNamesTable[tStat]);
-        StringExpandPlaceholders(gStringVar4, tAllStats ? sText_askAllText : sText_askOneText);
+        if (!tAllStats)
+        {
+            // Picking the stat off the list was the confirmation.
+            tState = 3;
+            return;
+        }
+        StringExpandPlaceholders(gStringVar4, sText_askAllText);
         PlaySE(SE_SELECT);
         DisplayPartyMenuMessage(gStringVar4, 1);
         ScheduleBgCopyTilemapToVram(2);
@@ -5284,16 +5289,82 @@ void Task_BottleCap(u8 taskId)
     }
 }
 
+// A gold cap does every stat at once and asks first. A silver cap asks which
+// stat to train instead, and picking from that list is confirmation enough.
 void ItemUseCB_BottleCap(u8 taskId, TaskFunc task)
 {
     s16 *data = gTasks[taskId].data;
 
+    if (gSpecialVar_ItemId != ITEM_GOLD_BOTTLE_CAP)
+    {
+        PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
+        PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
+        SetPartyMonSelectionActions(gPlayerParty, gPartyMenu.slotId, ACTIONS_BOTTLE_CAP);
+        DisplaySelectionWindow(SELECTWINDOW_BOTTLECAP);
+        DisplayPartyMenuStdMessage(PARTY_MSG_TRAIN_WHICH_STAT);
+        gTasks[taskId].data[0] = 0xFF;
+        gTasks[taskId].func = Task_HandleSelectionMenuInput;
+        return;
+    }
+
     tState = 0;
     tMonId = gPartyMenu.slotId;
-    tAllStats = (gSpecialVar_ItemId == ITEM_GOLD_BOTTLE_CAP);
-    tStat = GetWeakestTrainableStat(&gPlayerParty[tMonId]);
+    tAllStats = TRUE;
+    tStat = -1;
+    for (u32 stat = 0; stat < NUM_STATS; stat++)
+    {
+        if (CanHyperTrainStat(&gPlayerParty[tMonId], stat))
+        {
+            tStat = stat;
+            break;
+        }
+    }
     SetWordTaskArg(taskId, tOldFunc, (uintptr_t)(gTasks[taskId].func));
     gTasks[taskId].func = Task_BottleCap;
+}
+
+static void StartBottleCapTraining(u8 taskId, u32 stat)
+{
+    s16 *data = gTasks[taskId].data;
+
+    PlaySE(SE_SELECT);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
+    tState = 0;
+    tMonId = gPartyMenu.slotId;
+    tAllStats = FALSE;
+    tStat = CanHyperTrainStat(&gPlayerParty[tMonId], stat) ? (s16)stat : -1;
+    gTasks[taskId].func = Task_BottleCap;
+}
+
+static void CursorCb_BottleCapHP(u8 taskId)
+{
+    StartBottleCapTraining(taskId, STAT_HP);
+}
+
+static void CursorCb_BottleCapAtk(u8 taskId)
+{
+    StartBottleCapTraining(taskId, STAT_ATK);
+}
+
+static void CursorCb_BottleCapDef(u8 taskId)
+{
+    StartBottleCapTraining(taskId, STAT_DEF);
+}
+
+static void CursorCb_BottleCapSpeed(u8 taskId)
+{
+    StartBottleCapTraining(taskId, STAT_SPEED);
+}
+
+static void CursorCb_BottleCapSpAtk(u8 taskId)
+{
+    StartBottleCapTraining(taskId, STAT_SPATK);
+}
+
+static void CursorCb_BottleCapSpDef(u8 taskId)
+{
+    StartBottleCapTraining(taskId, STAT_SPDEF);
 }
 
 #undef tState

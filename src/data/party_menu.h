@@ -549,6 +549,17 @@ static const struct WindowTemplate sZygardeCubeSelectWindowTemplate =
     .baseBlock = 0x2E9,
 };
 
+static const struct WindowTemplate sBottleCapSelectWindowTemplate =
+{
+    .bg = 2,
+    .tilemapLeft = 19,
+    .tilemapTop = 5,
+    .width = 10,
+    .height = 14,
+    .paletteNum = 14,
+    .baseBlock = 0x2E9,
+};
+
 static const struct WindowTemplate sPartyMenuYesNoWindowTemplate =
 {
     .bg = 2,
@@ -659,6 +670,7 @@ static const u8 *const sActionStringTable[] =
     [PARTY_MSG_DO_WHAT_WITH_MAIL]      = gText_DoWhatWithMail,
     [PARTY_MSG_ALREADY_HOLDING_ONE]    = gText_AlreadyHoldingOne,
     [PARTY_MSG_WHICH_APPLIANCE]        = gText_WhichAppliance,
+    [PARTY_MSG_TRAIN_WHICH_STAT]       = COMPOUND_STRING("Train which stat?"),
     [PARTY_MSG_CHOOSE_SECOND_FUSION]   = gText_NextFusionMon,
     [PARTY_MSG_NO_POKEMON]             = COMPOUND_STRING("You have no POKéMON."),
     [PARTY_MSG_CHOOSE_MON_FOR_BOX]     = gText_SendWhichMonToPC,
@@ -731,6 +743,12 @@ struct
     [MENU_CATALOG_MOWER]   = {COMPOUND_STRING("Lawn mower"),      CursorCb_CatalogMower},
     [MENU_CHANGE_FORM]     = {COMPOUND_STRING("Change form"),     CursorCb_ChangeForm},
     [MENU_CHANGE_ABILITY]  = {COMPOUND_STRING("Change Ability"),  CursorCb_ChangeAbility},
+    [MENU_BOTTLE_CAP_HP]    = {COMPOUND_STRING("HP"),             CursorCb_BottleCapHP},
+    [MENU_BOTTLE_CAP_ATK]   = {COMPOUND_STRING("Attack"),         CursorCb_BottleCapAtk},
+    [MENU_BOTTLE_CAP_DEF]   = {COMPOUND_STRING("Defense"),        CursorCb_BottleCapDef},
+    [MENU_BOTTLE_CAP_SPEED] = {COMPOUND_STRING("Speed"),          CursorCb_BottleCapSpeed},
+    [MENU_BOTTLE_CAP_SPATK] = {COMPOUND_STRING("Sp. Atk"),        CursorCb_BottleCapSpAtk},
+    [MENU_BOTTLE_CAP_SPDEF] = {COMPOUND_STRING("Sp. Def"),        CursorCb_BottleCapSpDef},
 };
 
 static const u8 sPartyMenuAction_SummarySwitchCancel[] = {MENU_SUMMARY, MENU_SWITCH, MENU_CANCEL1};
@@ -747,6 +765,7 @@ static const u8 sPartyMenuAction_TradeSummaryCancel1[] = {MENU_TRADE1, MENU_SUMM
 static const u8 sPartyMenuAction_TradeSummaryCancel2[] = {MENU_TRADE2, MENU_SUMMARY, MENU_CANCEL1};
 static const u8 sPartyMenuAction_TakeItemTossCancel[] = {MENU_TAKE_ITEM, MENU_TOSS, MENU_CANCEL1};
 static const u8 sPartyMenuAction_RotomCatalog[] = {MENU_CATALOG_BULB, MENU_CATALOG_OVEN, MENU_CATALOG_WASHING, MENU_CATALOG_FRIDGE, MENU_CATALOG_FAN, MENU_CATALOG_MOWER, MENU_CANCEL1};
+static const u8 sPartyMenuAction_BottleCap[] = {MENU_BOTTLE_CAP_HP, MENU_BOTTLE_CAP_ATK, MENU_BOTTLE_CAP_DEF, MENU_BOTTLE_CAP_SPEED, MENU_BOTTLE_CAP_SPATK, MENU_BOTTLE_CAP_SPDEF, MENU_CANCEL1};
 static const u8 sPartyMenuAction_ZygardeCube[] = {MENU_CHANGE_FORM, MENU_CHANGE_ABILITY, MENU_CANCEL1};
 
 
@@ -769,6 +788,7 @@ static const u8 *const sPartyMenuActions[] =
     [ACTIONS_TAKEITEM_TOSS] = sPartyMenuAction_TakeItemTossCancel,
     [ACTIONS_ROTOM_CATALOG] = sPartyMenuAction_RotomCatalog,
     [ACTIONS_ZYGARDE_CUBE]  = sPartyMenuAction_ZygardeCube,
+    [ACTIONS_BOTTLE_CAP]    = sPartyMenuAction_BottleCap,
 };
 
 static const u8 sPartyMenuActionCounts[] =
@@ -789,6 +809,7 @@ static const u8 sPartyMenuActionCounts[] =
     [ACTIONS_TAKEITEM_TOSS] = ARRAY_COUNT(sPartyMenuAction_TakeItemTossCancel),
     [ACTIONS_ROTOM_CATALOG] = ARRAY_COUNT(sPartyMenuAction_RotomCatalog),
     [ACTIONS_ZYGARDE_CUBE]  = ARRAY_COUNT(sPartyMenuAction_ZygardeCube),
+    [ACTIONS_BOTTLE_CAP]    = ARRAY_COUNT(sPartyMenuAction_BottleCap),
 };
 
 static const u8 *const sUnionRoomTradeMessages[] =

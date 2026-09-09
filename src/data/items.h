@@ -2739,9 +2739,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Bottle Cap"),
         .price = (I_PRICE >= GEN_9) ? 20000 : 5000,
         .description = COMPOUND_STRING(
-            "Trains a Pokémon's\n"
-            "weakest stat to its\n"
-            "full potential."),
+            "Trains one chosen\n"
+            "stat to its full\n"
+            "potential."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_FIELD_USE,
         .type = ITEM_USE_PARTY_MENU,
