@@ -5,6 +5,7 @@
 #include "battle_controllers.h"
 #include "battle_gfx_sfx_util.h"
 #include "battle_interface.h"
+#include "battle_message.h"
 #include "battle_pike.h"
 #include "battle_pyramid.h"
 #include "battle_pyramid_bag.h"
@@ -5144,6 +5145,161 @@ void ItemUseCB_Mint(u8 taskId, TaskFunc task)
 #undef tMonId
 #undef tOldNature
 #undef tNewNature
+#undef tOldFunc
+
+#define tState      data[0]
+#define tMonId      data[1]
+#define tStat       data[2]
+#define tAllStats   data[3]
+#define tOldFunc    4
+
+static const u8 sIvFields[NUM_STATS] =
+{
+    [STAT_HP]    = MON_DATA_HP_IV,
+    [STAT_ATK]   = MON_DATA_ATK_IV,
+    [STAT_DEF]   = MON_DATA_DEF_IV,
+    [STAT_SPEED] = MON_DATA_SPEED_IV,
+    [STAT_SPATK] = MON_DATA_SPATK_IV,
+    [STAT_SPDEF] = MON_DATA_SPDEF_IV,
+};
+
+// Training a stat that is already perfect, or already trained, does nothing.
+static bool32 CanHyperTrainStat(struct Pokemon *mon, u32 stat)
+{
+    return GetMonData(mon, sIvFields[stat]) < MAX_PER_STAT_IVS
+        && !GetMonData(mon, MON_DATA_HYPER_TRAINED_HP + stat);
+}
+
+// A silver cap takes the worst stat worth training, so six of them cover a
+// whole Pokemon; a gold cap takes every stat at once.
+static s32 GetWeakestTrainableStat(struct Pokemon *mon)
+{
+    u32 stat;
+    s32 weakest = -1;
+
+    for (stat = 0; stat < NUM_STATS; stat++)
+    {
+        if (CanHyperTrainStat(mon, stat)
+         && (weakest < 0 || GetMonData(mon, sIvFields[stat]) < GetMonData(mon, sIvFields[weakest])))
+            weakest = stat;
+    }
+    return weakest;
+}
+
+static void HyperTrainStat(struct Pokemon *mon, u32 stat)
+{
+    u8 trained = TRUE;
+
+    SetMonData(mon, MON_DATA_HYPER_TRAINED_HP + stat, &trained);
+}
+
+void Task_BottleCap(u8 taskId)
+{
+    static const u8 sText_askOneText[] = _("Bring out the best in {STR_VAR_1}'s\n{STR_VAR_2}?");
+    static const u8 sText_askAllText[] = _("Bring out the best in every one of\n{STR_VAR_1}'s stats?");
+    static const u8 sText_doneOneText[] = _("{STR_VAR_1}'s {STR_VAR_2} was trained to\nits full potential!{PAUSE_UNTIL_PRESS}");
+    static const u8 sText_doneAllText[] = _("{STR_VAR_1}'s stats were all trained to\ntheir full potential!{PAUSE_UNTIL_PRESS}");
+
+    s16 *data = gTasks[taskId].data;
+    struct Pokemon *mon = &gPlayerParty[tMonId];
+
+    switch (tState)
+    {
+    case 0:
+        // Nothing left worth training.
+        if (tStat < 0)
+        {
+            gPartyMenuUseExitCallback = FALSE;
+            PlaySE(SE_SELECT);
+            DisplayPartyMenuMessage(gText_WontHaveEffect, 1);
+            ScheduleBgCopyTilemapToVram(2);
+            gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+            return;
+        }
+        gPartyMenuUseExitCallback = TRUE;
+        GetMonNickname(mon, gStringVar1);
+        StringCopy(gStringVar2, gStatNamesTable[tStat]);
+        StringExpandPlaceholders(gStringVar4, tAllStats ? sText_askAllText : sText_askOneText);
+        PlaySE(SE_SELECT);
+        DisplayPartyMenuMessage(gStringVar4, 1);
+        ScheduleBgCopyTilemapToVram(2);
+        tState++;
+        break;
+    case 1:
+        if (!IsPartyMenuTextPrinterActive())
+        {
+            PartyMenuDisplayYesNoMenu();
+            tState++;
+        }
+        break;
+    case 2:
+        switch (Menu_ProcessInputNoWrapClearOnChoose())
+        {
+        case 0:
+            tState++;
+            break;
+        case 1:
+        case MENU_B_PRESSED:
+            gPartyMenuUseExitCallback = FALSE;
+            PlaySE(SE_SELECT);
+            ScheduleBgCopyTilemapToVram(2);
+            // Don't exit party selections screen, return to choosing a mon.
+            ClearStdWindowAndFrameToTransparent(6, 0);
+            ClearWindowTilemap(6);
+            DisplayPartyMenuStdMessage(5);
+            gTasks[taskId].func = (void *)GetWordTaskArg(taskId, tOldFunc);
+            return;
+        }
+        break;
+    case 3:
+        PlaySE(SE_USE_ITEM);
+        StringExpandPlaceholders(gStringVar4, tAllStats ? sText_doneAllText : sText_doneOneText);
+        DisplayPartyMenuMessage(gStringVar4, 1);
+        ScheduleBgCopyTilemapToVram(2);
+        tState++;
+        break;
+    case 4:
+        if (!IsPartyMenuTextPrinterActive())
+            tState++;
+        break;
+    case 5:
+        if (tAllStats)
+        {
+            u32 stat;
+
+            for (stat = 0; stat < NUM_STATS; stat++)
+            {
+                if (CanHyperTrainStat(mon, stat))
+                    HyperTrainStat(mon, stat);
+            }
+        }
+        else
+        {
+            HyperTrainStat(mon, tStat);
+        }
+        CalculateMonStats(mon);
+        RemoveBagItem(gSpecialVar_ItemId, 1);
+        gTasks[taskId].func = Task_ClosePartyMenu;
+        break;
+    }
+}
+
+void ItemUseCB_BottleCap(u8 taskId, TaskFunc task)
+{
+    s16 *data = gTasks[taskId].data;
+
+    tState = 0;
+    tMonId = gPartyMenu.slotId;
+    tAllStats = (gSpecialVar_ItemId == ITEM_GOLD_BOTTLE_CAP);
+    tStat = GetWeakestTrainableStat(&gPlayerParty[tMonId]);
+    SetWordTaskArg(taskId, tOldFunc, (uintptr_t)(gTasks[taskId].func));
+    gTasks[taskId].func = Task_BottleCap;
+}
+
+#undef tState
+#undef tMonId
+#undef tStat
+#undef tAllStats
 #undef tOldFunc
 
 static void Task_DisplayHPRestoredMessage(u8 taskId)
