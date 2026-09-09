@@ -319,8 +319,10 @@ C_ASM_OBJS := $(patsubst $(C_SUBDIR)/%.s,$(C_BUILDDIR)/%.o,$(C_ASM_SRCS))
 ASM_SRCS := $(wildcard $(ASM_SUBDIR)/*.s)
 ASM_OBJS := $(patsubst $(ASM_SUBDIR)/%.s,$(ASM_BUILDDIR)/%.o,$(ASM_SRCS))
 
-# get all the data/*.s files EXCEPT the ones with specific rules
-REGULAR_DATA_ASM_SRCS := $(filter-out $(DATA_ASM_SUBDIR)/maps.s $(DATA_ASM_SUBDIR)/map_events.s, $(wildcard $(DATA_ASM_SUBDIR)/*.s))
+# maps.s and map_events.s were excluded here upstream, which left them with no
+# dependency file: editing a map.bin, a layout or a map script did not rebuild
+# them, and the change silently missed the ROM. They scan fine, so include them.
+REGULAR_DATA_ASM_SRCS := $(wildcard $(DATA_ASM_SUBDIR)/*.s)
 
 DATA_ASM_SRCS := $(wildcard $(DATA_ASM_SUBDIR)/*.s)
 DATA_ASM_OBJS := $(patsubst $(DATA_ASM_SUBDIR)/%.s,$(DATA_ASM_BUILDDIR)/%.o,$(DATA_ASM_SRCS))

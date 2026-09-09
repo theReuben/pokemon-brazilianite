@@ -31,7 +31,9 @@ Route104_BeastDen_EventScript_Raikou_Battle::
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, Route104_BeastDen_EventScript_Raikou_Battle_Caught
+	@ Only a successful catch retires it; a failed catch or a KO lets it respawn.
 	@ The others slip away only once the battle is over, so they are not
 	@ seen vanishing before it starts.
 	removeobject LOCALID_BEAST_DEN_ENTEI
@@ -58,7 +60,9 @@ Route104_BeastDen_EventScript_Entei_Battle::
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, Route104_BeastDen_EventScript_Entei_Battle_Caught
+	@ Only a successful catch retires it; a failed catch or a KO lets it respawn.
 	@ The others slip away only once the battle is over, so they are not
 	@ seen vanishing before it starts.
 	removeobject LOCALID_BEAST_DEN_RAIKOU
@@ -85,7 +89,9 @@ Route104_BeastDen_EventScript_Suicune_Battle::
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, Route104_BeastDen_EventScript_Suicune_Battle_Caught
+	@ Only a successful catch retires it; a failed catch or a KO lets it respawn.
 	@ The others slip away only once the battle is over, so they are not
 	@ seen vanishing before it starts.
 	removeobject LOCALID_BEAST_DEN_RAIKOU
@@ -103,3 +109,15 @@ Route104_BeastDen_Text_ChooseWarning:
 	.string "If you raise a hand against this one,\n"
 	.string "the rest will surely flee for good.\p"
 	.string "Challenge it?$"
+
+Route104_BeastDen_EventScript_Raikou_Battle_Caught::
+	setflag FLAG_HIDE_BEAST_DEN_RAIKOU
+	return
+
+Route104_BeastDen_EventScript_Entei_Battle_Caught::
+	setflag FLAG_HIDE_BEAST_DEN_ENTEI
+	return
+
+Route104_BeastDen_EventScript_Suicune_Battle_Caught::
+	setflag FLAG_HIDE_BEAST_DEN_SUICUNE
+	return

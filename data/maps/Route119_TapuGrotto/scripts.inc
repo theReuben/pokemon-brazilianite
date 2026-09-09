@@ -32,7 +32,9 @@ Route119_TapuGrotto_EventScript_TapuKoko_Battle::
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, Route119_TapuGrotto_EventScript_TapuKoko_Battle_Caught
+	@ Only a successful catch retires it; a failed catch or a KO lets it respawn.
 	@ The others slip away only once the battle is over, so they are not
 	@ seen vanishing before it starts.
 	removeobject LOCALID_TAPU_GROTTO_LELE
@@ -61,7 +63,9 @@ Route119_TapuGrotto_EventScript_TapuLele_Battle::
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, Route119_TapuGrotto_EventScript_TapuLele_Battle_Caught
+	@ Only a successful catch retires it; a failed catch or a KO lets it respawn.
 	@ The others slip away only once the battle is over, so they are not
 	@ seen vanishing before it starts.
 	removeobject LOCALID_TAPU_GROTTO_KOKO
@@ -90,7 +94,9 @@ Route119_TapuGrotto_EventScript_TapuBulu_Battle::
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, Route119_TapuGrotto_EventScript_TapuBulu_Battle_Caught
+	@ Only a successful catch retires it; a failed catch or a KO lets it respawn.
 	@ The others slip away only once the battle is over, so they are not
 	@ seen vanishing before it starts.
 	removeobject LOCALID_TAPU_GROTTO_KOKO
@@ -119,7 +125,9 @@ Route119_TapuGrotto_EventScript_TapuFini_Battle::
 	special BattleSetup_StartLegendaryBattle
 	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	@ Deliberately no FLAG_DEFEATED_* here: a failed catch or a KO lets it respawn.
+	specialvar VAR_RESULT, GetBattleOutcome
+	call_if_eq VAR_RESULT, B_OUTCOME_CAUGHT, Route119_TapuGrotto_EventScript_TapuFini_Battle_Caught
+	@ Only a successful catch retires it; a failed catch or a KO lets it respawn.
 	@ The others slip away only once the battle is over, so they are not
 	@ seen vanishing before it starts.
 	removeobject LOCALID_TAPU_GROTTO_KOKO
@@ -138,3 +146,19 @@ Route119_TapuGrotto_Text_ChooseWarning:
 	.string "If you raise a hand against this one,\n"
 	.string "the rest will surely flee for good.\p"
 	.string "Challenge it?$"
+
+Route119_TapuGrotto_EventScript_TapuKoko_Battle_Caught::
+	setflag FLAG_HIDE_TAPU_GROTTO_KOKO
+	return
+
+Route119_TapuGrotto_EventScript_TapuLele_Battle_Caught::
+	setflag FLAG_HIDE_TAPU_GROTTO_LELE
+	return
+
+Route119_TapuGrotto_EventScript_TapuBulu_Battle_Caught::
+	setflag FLAG_HIDE_TAPU_GROTTO_BULU
+	return
+
+Route119_TapuGrotto_EventScript_TapuFini_Battle_Caught::
+	setflag FLAG_HIDE_TAPU_GROTTO_FINI
+	return
