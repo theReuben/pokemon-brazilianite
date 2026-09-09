@@ -384,167 +384,121 @@ MossdeepCity_Gym_Text_GymGuidePostVictory:
 	.string "You're one great TRAINER!$"
 
 MossdeepCity_Gym_Text_PrestonIntro:
-	.string "Battles hinge on the strength of your\n"
-	.string "spirit! The weak-spirited will never win!$"
+	.string "I like the big weirdos.$"
 
 MossdeepCity_Gym_Text_PrestonDefeat:
-	.string "I lost!\n"
-	.string "I must temper my spirit again!$"
+	.string "A big weirdo went down.$"
 
 MossdeepCity_Gym_Text_PrestonPostBattle:
-	.string "The indecisive lose.\n"
-	.string "That's my warning to you.$"
+	.string "The weirder they are, the harder\n"
+	.string "they hit. Usually.$"
 
 MossdeepCity_Gym_Text_VirgilIntro:
-	.string "Let me see your talent!$"
+	.string "There's no LEON KENNEDY POKéMON.$"
 
 MossdeepCity_Gym_Text_VirgilDefeat:
-	.string "You possess spectacular talent!$"
+	.string "Still no LEON.$"
 
 MossdeepCity_Gym_Text_VirgilPostBattle:
-	.string "If there are prodigies in the world,\n"
-	.string "then our GYM LEADERS are them!\p"
-	.string "However, you may be even more talented\n"
-	.string "than them…$"
+	.string "One of them with a knife. That's all\n"
+	.string "I'm asking for.$"
 
 MossdeepCity_Gym_Text_BlakeIntro:
-	.string "Fufufufu… Watch me levitate a POKé\n"
-	.string "BALL telekinetically!\p"
-	.string "Wrooooooooaaaar!\n"
-	.string "… … … … … … …\p"
-	.string "Sometimes, I'm out of sync…$"
+	.string "Quack.$"
 
 MossdeepCity_Gym_Text_BlakeDefeat:
-	.string "My POKéMON battling skills are out\n"
-	.string "of sync, too!$"
+	.string "…Quack.$"
 
 MossdeepCity_Gym_Text_BlakePostBattle:
-	.string "A POKé BALL was too heavy to lift\n"
-	.string "psychically. But this dust bunny…\p"
-	.string "Whoooooooooooooooh!\n"
-	.string "… … … … … …\p"
-	.string "No, I'm not cheating!\n"
-	.string "I didn't blow on it! Honestly!$"
+	.string "Quack quack.$"
 
 MossdeepCity_Gym_Text_HannahIntro:
-	.string "When you lose to me, don't be too hard\n"
-	.string "on yourself.\p"
-	.string "It's not that you're weak--I'm just\n"
-	.string "too strong!$"
+	.string "Slayyy.$"
 
 MossdeepCity_Gym_Text_HannahDefeat:
-	.string "You're just too strong!$"
+	.string "Not slayyy.$"
 
 MossdeepCity_Gym_Text_HannahPostBattle:
-	.string "I'm not going to get down on myself for\n"
-	.string "losing. I just need to train harder.\p"
-	.string "Positive thinking--that's my strong\n"
-	.string "point!$"
+	.string "No, you slayed. I'll allow it.$"
 
 MossdeepCity_Gym_Text_SamanthaIntro:
-	.string "I see it…\n"
-	.string "I see your future…\p"
-	.string "If you can beat me, I will tell you\n"
-	.string "your future!$"
+	.string "Have you played TWEWY?$"
 
 MossdeepCity_Gym_Text_SamanthaDefeat:
-	.string "I surrender!$"
+	.string "You haven't played it, have you.$"
 
 MossdeepCity_Gym_Text_SamanthaPostBattle:
-	.string "You will wage a terrifically intense\n"
-	.string "battle with our GYM LEADERS…\p"
-	.string "The result…\n"
-	.string "You won't hear it from me!$"
+	.string "Seven days. That's all it takes.\n"
+	.string "Play it.$"
 
 MossdeepCity_Gym_Text_MauraIntro:
-	.string "The roads you have traveled…\n"
-	.string "What you have experienced…\p"
-	.string "Come at me with everything you've\n"
-	.string "learned!$"
+	.string "Come play BOSACRAFT.$"
 
 MossdeepCity_Gym_Text_MauraDefeat:
-	.string "You've traveled a path of greatness!$"
+	.string "Fine. BOSACRAFT, then.$"
 
 MossdeepCity_Gym_Text_MauraPostBattle:
-	.string "A bright future awaits those who have\n"
-	.string "worked diligently.\p"
-	.string "For those who lazed idly, there is\n"
-	.string "only despair at the end.\p"
-	.string "What goes around comes around…$"
+	.string "The server is up. The server is\n"
+	.string "always up.$"
 
 MossdeepCity_Gym_Text_SylviaIntro:
-	.string "Even at the risk of life, I will win\n"
-	.string "this battle!$"
+	.string "Giving that horsegirl energy.$"
 
 MossdeepCity_Gym_Text_SylviaDefeat:
-	.string "What you do…\n"
-	.string "It horrifies me…$"
+	.string "Off the horse.$"
 
 MossdeepCity_Gym_Text_SylviaPostBattle:
-	.string "How dare you beat me…\p"
-	.string "It won't be my fault if something\n"
-	.string "horrible befalls you…$"
+	.string "You can have the horse.\n"
+	.string "I'll get another horse.$"
 
 MossdeepCity_Gym_Text_NateIntro:
-	.string "Hohoho.\p"
-	.string "You need me to show you how tenacious\n"
-	.string "the PSYCHIC type can be.$"
+	.string "Heta, must be a cat.$"
 
 MossdeepCity_Gym_Text_NateDefeat:
-	.string "Oh! My, my!\n"
-	.string "Your battle style is fantastic!$"
+	.string "Cat down.$"
 
 MossdeepCity_Gym_Text_NatePostBattle:
-	.string "I… I don't let defeat rattle m-me,\n"
-	.string "however b-badly.$"
+	.string "Must cat. Always must cat.$"
 
 MossdeepCity_Gym_Text_KathleenIntro:
-	.string "Let me show you a perfectly awful,\n"
-	.string "horrifying time!$"
+	.string "!guesschat$"
 
 MossdeepCity_Gym_Text_KathleenDefeat:
-	.string "N-nooooo!$"
+	.string "!lose$"
 
 MossdeepCity_Gym_Text_KathleenPostBattle:
-	.string "Your vitality is contagious!\n"
-	.string "Get away from me quickly!$"
+	.string "!rematch\n"
+	.string "Cooldown: 30 seconds.$"
 
 MossdeepCity_Gym_Text_CliffordIntro:
-	.string "I may be past my prime, but I suggest\n"
-	.string "you not patronize me.$"
+	.string "Isn't she cuuuute?$"
 
 MossdeepCity_Gym_Text_CliffordDefeat:
-	.string "Ah, you overflow with the power\n"
-	.string "of youth!$"
+	.string "She's still cuuuute.$"
 
 MossdeepCity_Gym_Text_CliffordPostBattle:
-	.string "It seems that I could not overcome\n"
-	.string "your youthful energy.$"
+	.string "Look at her.\n"
+	.string "No, look at her.$"
 
 MossdeepCity_Gym_Text_MaceyIntro:
-	.string "You're not getting through to the end!\n"
-	.string "Not if I can help it!$"
+	.string "Check out my SPOTIFY!$"
 
 MossdeepCity_Gym_Text_MaceyDefeat:
-	.string "How could you be so ludicrously\n"
-	.string "strong?$"
+	.string "Too loud?$"
 
 MossdeepCity_Gym_Text_MaceyPostBattle:
-	.string "Humph! You may be strong, but you're\n"
-	.string "not suitable for the PSYCHIC type!\p"
-	.string "The way you battle is somehow brutal!$"
+	.string "The link is in my bio.\n"
+	.string "There is a link in my bio.$"
 
 MossdeepCity_Gym_Text_NicholasIntro:
-	.string "Wroooar! Have a taste of my super\n"
-	.string "POKéMON hard-battling power!$"
+	.string "SENTUCKY LIED JEPICKEN.$"
 
 MossdeepCity_Gym_Text_NicholasDefeat:
-	.string "Oh!\n"
-	.string "Done in!$"
+	.string "Lentucky Sied Fepicken.$"
 
 MossdeepCity_Gym_Text_NicholasPostBattle:
-	.string "All right! I think I'll develop a special\n"
-	.string "invincible POKéMON power next.$"
+	.string "…Kentucky Fried Chicken.\n"
+	.string "I had it. I had it just then.$"
 
 MossdeepCity_Gym_Text_TateAndLizaIntro:
 	.string "MR P: Oh! A challenger, love.\p"
