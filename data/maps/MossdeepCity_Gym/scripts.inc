@@ -547,24 +547,22 @@ MossdeepCity_Gym_Text_NicholasPostBattle:
 	.string "invincible POKéMON power next.$"
 
 MossdeepCity_Gym_Text_TateAndLizaIntro:
-	.string "TATE: Hehehe… Were you surprised?\p"
-	.string "LIZA: Fufufu… Were you surprised?\p"
-	.string "TATE: That there are two GYM LEADERS?\n"
-	.string "LIZA: That there are two GYM LEADERS?\p"
-	.string "TATE: We're twins!\n"
-	.string "LIZA: We're twins!\p"
-	.string "TATE: We don't need to talk because…\n"
-	.string "LIZA: We can each determine what…\p"
-	.string "TATE: The other is thinking…\n"
-	.string "LIZA: All in our minds!\p"
-	.string "TATE: This combination of ours…\n"
-	.string "LIZA: Can you beat it?$"
+	.string "MR P: Oh! A challenger, love.\p"
+	.string "MRS P: I can see that, dear.\p"
+	.string "MR P: Two LEADERS in one GYM…\n"
+	.string "MRS P: Forty years in one house.\p"
+	.string "MR P: We don't need to talk…\n"
+	.string "MRS P: He talks quite enough.\p"
+	.string "MR P: We know what the other'll do…\n"
+	.string "MRS P: Before he's done deciding.\p"
+	.string "MR P: Mind the sun in here…\n"
+	.string "MRS P: We keep it on for the plants.$"
 
 MossdeepCity_Gym_Text_TateAndLizaDefeat:
-	.string "TATE: What?! Our combination…\n"
-	.string "LIZA: Was shattered!\p"
-	.string "TATE: It can't be helped. You've won…\n"
-	.string "LIZA: So, in recognition, take this.$"
+	.string "MR P: Oh! Our combination…\n"
+	.string "MRS P: Went out like a light.\p"
+	.string "MR P: Fair's fair, love.\n"
+	.string "MRS P: Give the dear this.$"
 
 MossdeepCity_Gym_Text_ReceivedMindBadge:
 	.string "{PLAYER} received A PRIME SUB\n"
@@ -592,63 +590,52 @@ MossdeepCity_Gym_Text_ExplainSunnyDay:
 	.string "… … … … … …$"
 
 MossdeepCity_Gym_Text_RegisteredTateAndLiza:
-	.string "Registered GYM LEADERS TATE & LIZA\n"
+	.string "Registered GYM LEADERS MR & MRS P\n"
 	.string "in the POKéNAV.$"
 
 MossdeepCity_Gym_Text_TateAndLizaPostBattle:
-	.string "TATE: Looks like the bond between you\n"
-	.string "and your POKéMON is far stronger than\l"
-	.string "the bond that we share as twins.\p"
-	.string "LIZA: You will become even stronger!\n"
-	.string "We've battled you, so we know.$"
+	.string "MR P: You and your POKéMON have\n"
+	.string "something it took us years to learn.\p"
+	.string "MRS P: Forty of them, dear.\p"
+	.string "MR P: You'll be quicker about it\n"
+	.string "than we were. We can tell.$"
 
 MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons:
-	.string "TATE: Hehehe… Were you surprised?\p"
-	.string "LIZA: That there are two GYM LEADERS?\p"
-	.string "TATE: Oops, you have only one…\n"
-	.string "LIZA: POKéMON that can battle.\p"
-	.string "TATE: We can't battle that way!\p"
-	.string "LIZA: If you want to challenge us,\n"
-	.string "bring some more POKéMON.$"
+	.string "MR P: Oh! A challenger, love.\p"
+	.string "MRS P: With one POKéMON standing.\p"
+	.string "MR P: There's two of us, you see…\n"
+	.string "MRS P: So bring two of yours.$"
 
 MossdeepCity_Gym_Text_GymStatue:
 	.string "MOSSDEEP CITY POKéMON GYM$"
 
 MossdeepCity_Gym_Text_GymStatueCertified:
 	.string "MOSSDEEP CITY POKéMON GYM\p"
-	.string "LIZA AND TATE'S CERTIFIED TRAINERS:\n"
+	.string "MR & MRS P'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 MossdeepCity_Gym_Text_TateAndLizaPreRematch:
-	.string "TATE: POKéMON…\n"
-	.string "LIZA: POKéMON…\p"
-	.string "TATE: By changing the party's mix…\n"
-	.string "LIZA: The battle style changes.\p"
-	.string "TATE: But me…\n"
-	.string "LIZA: But me…\p"
-	.string "TATE: I'll always be with LIZA!\n"
-	.string "LIZA: I'll always be with TATE!\p"
-	.string "TATE: Our combination…\n"
-	.string "LIZA: We'll show you again and again!$"
+	.string "MR P: We've been practising, love.\n"
+	.string "MRS P: In the garden. In the sun.\p"
+	.string "MR P: Same as we have every morning…\n"
+	.string "MRS P: Since before you were born.\p"
+	.string "MR P: Shall we show the dear again?\n"
+	.string "MRS P: Let's, dear.$"
 
 MossdeepCity_Gym_Text_TateAndLizaRematchDefeat:
-	.string "TATE: You and your POKéMON…\n"
-	.string "LIZA: It's as if you were siblings!$"
+	.string "MR P: Beaten again…\n"
+	.string "MRS P: And in front of the plants.$"
 
 MossdeepCity_Gym_Text_TateAndLizaPostRematch:
-	.string "TATE: You can knock us down,\n"
-	.string "but we'll never stay down!\p"
-	.string "LIZA: Because the two of us,\n"
-	.string "we always support each other!$"
+	.string "MR P: We'll be here tomorrow.\n"
+	.string "MRS P: And the day after that.\p"
+	.string "MR P: The sun comes up either way,\n"
+	.string "love. Might as well be in here.$"
 
 MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons:
-	.string "TATE: You're back again…\n"
-	.string "LIZA: You're back again…\p"
-	.string "TATE: To give us a rematch.\n"
-	.string "LIZA: To give us a rematch.\p"
-	.string "TATE: But…\n"
-	.string "LIZA: For our match…\p"
-	.string "TATE: You brought just one POKéMON!\n"
-	.string "LIZA: You brought just one POKéMON!\p"
-	.string "TATE: We need you to bring at least…\n"
-	.string "LIZA: Two POKéMON when you come back.$"
+	.string "MR P: Back again, love.\p"
+	.string "MRS P: Back again, he is.\p"
+	.string "MR P: With one POKéMON, mind.\n"
+	.string "MRS P: He never listens, dear.\p"
+	.string "MR P: Two of them next time…\n"
+	.string "MRS P: And we'll be right here.$"
