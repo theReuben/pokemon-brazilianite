@@ -145,7 +145,7 @@ SkyPillar_Outside_Text_OpenedDoorToSkyPillar:
 	.string "JAKE: Ah! Sorry. Sorry.\p"
 	.string "I ran on ahead and completely forgot\n"
 	.string "you were behind me.\p"
-	.string "I've got the door of the SKY PILLAR\n"
+	.string "I've got the door of the SCAM PILLAR\n"
 	.string "open.\p"
 	.string "{PLAYER}{KUN}, let's go!$"
 

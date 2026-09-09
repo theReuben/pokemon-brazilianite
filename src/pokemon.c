@@ -538,7 +538,7 @@ static const enum NationalDexOrder sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
     HOENN_TO_NATIONAL(TAPU_LELE),
     HOENN_TO_NATIONAL(TAPU_BULU),
     HOENN_TO_NATIONAL(TAPU_FINI),
-    HOENN_TO_NATIONAL(RAYQUAZA),
+    HOENN_TO_NATIONAL(SHUCKLE),
 };
 
 const struct SpindaSpot gSpindaSpotGraphics[] =

@@ -156,13 +156,13 @@ share their base species' slot. "Row" is the number in `regional_dex.md`.
 | 144 | 147 | Tapu Lele | Psychic/Fairy | 570 | legendary | static: Route119_TapuGrotto |
 | 145 | 148 | Tapu Bulu | Grass/Fairy | 570 | legendary | static: Route119_TapuGrotto |
 | 146 | 149 | Tapu Fini | Water/Fairy | 570 | legendary | static: Route119_TapuGrotto |
-| 147 | 150 | Rayquaza | Dragon/Flying | 680 | legendary | static: SkyPillar_Top |
+| 147 | 150 | Shuckle | Bug/Rock | 505 | - | static: SkyPillar_Top |
 
 ## Review
 
 Automatic flags - each is a prompt to look, not proof of a problem.
 
-- Raikou (legendary) is end of the dex
+- Raikou (legendary) is mid-list (slot 137 of 147)
 - Entei (legendary) is end of the dex
 - Suicune (legendary) is end of the dex
 - Galarian Articuno (legendary) is end of the dex
@@ -172,11 +172,10 @@ Automatic flags - each is a prompt to look, not proof of a problem.
 - Tapu Lele (legendary) is end of the dex
 - Tapu Bulu (legendary) is end of the dex
 - Tapu Fini (legendary) is end of the dex
-- Rayquaza (legendary) is end of the dex
 
 ## Order at a glance
 
 - Slots 1-9: starters (Turtwig, Grotle, Torterra, Fuecoco, Crocalor, Skeledirge, Totodile, Croconaw, Feraligatr)
-- Slot 147 is the last entry: Rayquaza
-- Legendary/mythical/paradox entries: Raikou (slot 137), Entei (slot 138), Suicune (slot 139), Galarian Articuno (slot 140), Galarian Zapdos (slot 141), Galarian Moltres (slot 142), Tapu Koko (slot 143), Tapu Lele (slot 144), Tapu Bulu (slot 145), Tapu Fini (slot 146), Rayquaza (slot 147)
+- Slot 147 is the last entry: Shuckle
+- Legendary/mythical/paradox entries: Raikou (slot 137), Entei (slot 138), Suicune (slot 139), Galarian Articuno (slot 140), Galarian Zapdos (slot 141), Galarian Moltres (slot 142), Tapu Koko (slot 143), Tapu Lele (slot 144), Tapu Bulu (slot 145), Tapu Fini (slot 146)
 

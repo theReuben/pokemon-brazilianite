@@ -110,7 +110,7 @@ def main():
 
     # Starters keep the front, the special block keeps the back, in place.
     is_starter = lambda note: note.startswith('Starter')
-    special = ('Paradox', 'Beast Den', 'Storm Roost', 'Tapu Grotto', 'Sky Pillar')
+    special = ('Paradox', 'Beast Den', 'Storm Roost', 'Tapu Grotto', 'Scam Pillar')
     head = [r for r in rows if is_starter(r[2])]
     tail = [r for r in rows if r not in head and r[2].startswith(special)]
     middle = [r for r in rows if r not in head and r not in tail]

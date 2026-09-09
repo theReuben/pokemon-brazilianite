@@ -311,7 +311,12 @@ LavaridgeTown_Gym_1F_Text_FlanneryIntro:
 	.string "I have been LEADER only a short time!\p"
 	.string "With skills inherited from my grand-\n"
 	.string "father, I shall, uh…demonstrate the\l"
-	.string "hot moves we have honed on this land!$"
+	.string "hot moves we have honed on this land!\p"
+	.string "I only just inherited this GYM, but\n"
+	.string "there's one thing I can't figure out:\p"
+	.string "Why do they call it oven when you of\n"
+	.string "in the cold food of out hot eat the\l"
+	.string "food?$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryDefeat:
 	.string "Oh…\n"

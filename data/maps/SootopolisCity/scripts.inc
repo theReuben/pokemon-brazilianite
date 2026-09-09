@@ -1655,7 +1655,7 @@ SootopolisCity_Text_KnowWhatsNeededToHelpHim:
 	.string "needed to help him…$"
 
 SootopolisCity_Text_NeverBeenToSkyPillar:
-	.string "STEVEN: The SKY PILLAR…\p"
+	.string "STEVEN: The SCAM PILLAR…\p"
 	.string "I've never been there.\n"
 	.string "I wonder where it could be?$"
 
@@ -1673,7 +1673,7 @@ SootopolisCity_Text_MaxieArchieLeft:
 SootopolisCity_Text_HaventYouScaledSkyPillar:
 	.string "JAKE: Oh?\n"
 	.string "{PLAYER}{KUN}?\p"
-	.string "You haven't scaled the SKY PILLAR\n"
+	.string "You haven't scaled the SCAM PILLAR\n"
 	.string "yet?\p"
 	.string "You can make it to the top. I know\n"
 	.string "you can.$"

@@ -46,7 +46,8 @@ SkyPillar_Top_EventScript_Rayquaza::
 	playmoncry SPECIES_RAYQUAZA, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_RAYQUAZA, 70
+	@ The sprite and the cry are RAYQUAZA's; what you actually fight is not.
+	setwildbattle SPECIES_SHUCKLE, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate
