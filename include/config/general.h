@@ -12,6 +12,15 @@
 #define NDEBUG
 #endif
 
+// Every build we hand to players is a release build. The printf handlers below
+// talk to emulator-specific debug registers that do not exist on a real GBA;
+// mGBA tolerates them, VBA freezes. Fishing hit this - the bite roll logs its
+// odds, so the game died the moment the dots finished. Build with
+// `make DEBUG_LOGGING=1` if you want the logs back.
+#ifndef DEBUG_LOGGING
+#define NDEBUG
+#endif
+
 // printf debugging is now enabled by default. This allows
 // the various AGBPrint functions to be used. (See include/gba/isagbprint.h).
 // See below for enabling different pretty printing versions.

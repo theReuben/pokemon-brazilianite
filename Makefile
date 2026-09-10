@@ -158,6 +158,11 @@ else
 O_LEVEL ?= 2
 endif
 CPPFLAGS := $(INCLUDE_CPP_ARGS) -Wno-trigraphs -DMODERN=1 -DTESTING=$(TEST) -D$(GAME_VERSION) -std=gnu17
+# Emulator debug logging is off unless asked for; see include/config/general.h.
+DEBUG_LOGGING ?= 0
+ifeq ($(DEBUG_LOGGING),1)
+	override CPPFLAGS += -DDEBUG_LOGGING
+endif
 ifeq ($(RELEASE),1)
 	override CPPFLAGS += -DRELEASE
 	ifeq ($(USE_LTO_ON_RELEASE),1)
