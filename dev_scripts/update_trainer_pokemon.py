@@ -299,6 +299,17 @@ PARTY_FILES = [
     "src/data/battle_partners.party",
 ]
 
+# Trainers whose parties are the joke, not filler. A themed sweep over the file
+# would read these as off-theme and "fix" them, which breaks the dialogue that
+# names the species out loud. Leave them alone.
+#   GRUNT_WEATHER_INST_2 / _5: the two Weather Institute 2F grunts field the same
+#   Simisage / Simisear / Simipour trio. One brags nobody else in the world has
+#   these three and not to call them boring; the other bought an identical set.
+SKIP_TRAINERS = {
+    "TRAINER_GRUNT_WEATHER_INST_2",
+    "TRAINER_GRUNT_WEATHER_INST_5",
+}
+
 # Field prefixes that can never be a species line.
 FIELD_PREFIXES = (
     "Name:", "Class:", "Pic:", "Gender:", "Music:", "Items:", "Item:",
@@ -345,6 +356,7 @@ def process_file(filepath):
     """Parse filepath and return (output_lines, list_of_changes).
 
     Each change is (trainer_id, line_number_1based, old_species, new_species).
+    Trainers in SKIP_TRAINERS are passed through untouched.
     When a species is swapped, its move lines are dropped so the engine fills
     in the last 4 level-up moves at that Pokemon's level automatically.
     """
@@ -353,6 +365,7 @@ def process_file(filepath):
 
     output_lines = []
     changes = []
+    skipped = set()
 
     in_trainer_block = False
     expect_species = False
@@ -402,7 +415,9 @@ def process_file(filepath):
         if expect_species:
             expect_species = False
             species = extract_species(line)
-            if species and species in SPECIES_MAP:
+            if current_trainer in SKIP_TRAINERS:
+                skipped.add(current_trainer)
+            elif species and species in SPECIES_MAP:
                 new_species = SPECIES_MAP[species]
                 new_line = replace_species_in_line(line, species, new_species)
                 changes.append((current_trainer, lineno, species, new_species))
@@ -412,7 +427,7 @@ def process_file(filepath):
 
         output_lines.append(line)
 
-    return output_lines, changes
+    return output_lines, changes, skipped
 
 
 def main():
@@ -428,7 +443,7 @@ def main():
     for filepath in PARTY_FILES:
         if not os.path.exists(filepath):
             continue
-        output_lines, changes = process_file(filepath)
+        output_lines, changes, skipped = process_file(filepath)
         results[filepath] = (output_lines, changes)
         total += len(changes)
 
@@ -437,6 +452,8 @@ def main():
         print(f"{'='*60}")
         for trainer, lineno, old, new in changes:
             print(f"  {lineno:5d}  [{trainer}]  {old} → {new}")
+        for trainer in sorted(skipped):
+            print(f"  skipped  [{trainer}]  party left as-is (SKIP_TRAINERS)")
 
     print(f"\nTotal replacements: {total}")
 
