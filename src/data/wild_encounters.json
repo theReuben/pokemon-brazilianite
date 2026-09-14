@@ -3408,12 +3408,12 @@
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_VOLTORB_HISUI"
+                "species": "SPECIES_TINKATINK"
               },
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_ELEKID"
+                "species": "SPECIES_KLINK"
               },
               {
                 "min_level": 23,
@@ -3426,24 +3426,14 @@
                 "species": "SPECIES_ELEKID"
               },
               {
-                "min_level": 26,
-                "max_level": 26,
-                "species": "SPECIES_VOLTORB_HISUI"
-              },
-              {
-                "min_level": 26,
-                "max_level": 26,
-                "species": "SPECIES_ELEKID"
+                "min_level": 22,
+                "max_level": 22,
+                "species": "SPECIES_TINKATINK"
               },
               {
                 "min_level": 22,
                 "max_level": 22,
-                "species": "SPECIES_VOLTORB_HISUI"
-              },
-              {
-                "min_level": 22,
-                "max_level": 22,
-                "species": "SPECIES_ELEKID"
+                "species": "SPECIES_KLINK"
               },
               {
                 "min_level": 26,
@@ -3454,6 +3444,16 @@
                 "min_level": 26,
                 "max_level": 26,
                 "species": "SPECIES_ELECTABUZZ"
+              },
+              {
+                "min_level": 26,
+                "max_level": 26,
+                "species": "SPECIES_KLANG"
+              },
+              {
+                "min_level": 26,
+                "max_level": 26,
+                "species": "SPECIES_ROTOM"
               }
             ]
           }
@@ -7442,14 +7442,44 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 24,
-                "max_level": 24,
+                "min_level": 23,
+                "max_level": 23,
                 "species": "SPECIES_VOLTORB_HISUI"
+              },
+              {
+                "min_level": 23,
+                "max_level": 23,
+                "species": "SPECIES_ELEKID"
               },
               {
                 "min_level": 24,
                 "max_level": 24,
+                "species": "SPECIES_TINKATINK"
+              },
+              {
+                "min_level": 24,
+                "max_level": 24,
+                "species": "SPECIES_KLINK"
+              },
+              {
+                "min_level": 22,
+                "max_level": 22,
+                "species": "SPECIES_VOLTORB_HISUI"
+              },
+              {
+                "min_level": 22,
+                "max_level": 22,
                 "species": "SPECIES_ELEKID"
+              },
+              {
+                "min_level": 22,
+                "max_level": 22,
+                "species": "SPECIES_TINKATINK"
+              },
+              {
+                "min_level": 22,
+                "max_level": 22,
+                "species": "SPECIES_KLINK"
               },
               {
                 "min_level": 25,
@@ -7462,44 +7492,14 @@
                 "species": "SPECIES_ELEKID"
               },
               {
-                "min_level": 23,
-                "max_level": 23,
-                "species": "SPECIES_VOLTORB_HISUI"
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_TINKATINK"
               },
               {
-                "min_level": 23,
-                "max_level": 23,
-                "species": "SPECIES_ELEKID"
-              },
-              {
-                "min_level": 26,
-                "max_level": 26,
-                "species": "SPECIES_VOLTORB_HISUI"
-              },
-              {
-                "min_level": 26,
-                "max_level": 26,
-                "species": "SPECIES_ELEKID"
-              },
-              {
-                "min_level": 22,
-                "max_level": 22,
-                "species": "SPECIES_VOLTORB_HISUI"
-              },
-              {
-                "min_level": 22,
-                "max_level": 22,
-                "species": "SPECIES_ELEKID"
-              },
-              {
-                "min_level": 22,
-                "max_level": 22,
-                "species": "SPECIES_VOLTORB_HISUI"
-              },
-              {
-                "min_level": 22,
-                "max_level": 22,
-                "species": "SPECIES_ELEKID"
+                "min_level": 25,
+                "max_level": 25,
+                "species": "SPECIES_KLINK"
               }
             ]
           }
