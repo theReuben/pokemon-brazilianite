@@ -1156,6 +1156,14 @@ static const u16 sLopunnyFormSpeciesIdTable[] = {
 };
 #endif //P_FAMILY_BUNEARY
 
+#if P_FAMILY_HIPPOPOTAS
+static const u16 sHippowdonFormSpeciesIdTable[] = {
+    SPECIES_HIPPOWDON,
+    SPECIES_HIPPOWDON_F,
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_HIPPOPOTAS
+
 #if P_FAMILY_GIBLE
 static const u16 sGarchompFormSpeciesIdTable[] = {
     SPECIES_GARCHOMP,

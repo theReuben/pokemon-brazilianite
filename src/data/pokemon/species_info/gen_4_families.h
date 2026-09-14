@@ -4945,7 +4945,8 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .levelUpLearnset = sHippopotasLevelUpLearnset,
         .teachableLearnset = sHippopotasTeachableLearnset,
         .eggMoveLearnset = sHippopotasEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_HIPPOWDON}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 34, SPECIES_HIPPOWDON, CONDITIONS({IF_GENDER, MON_MALE})},
+                                {EVO_LEVEL, 34, SPECIES_HIPPOWDON_F, CONDITIONS({IF_GENDER, MON_FEMALE})}),
     },
 
     [SPECIES_HIPPOWDON] =
@@ -4960,7 +4961,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .catchRate = 60,
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 198,
         .evYield_Defense = 2,
-        .genderRatio = PERCENT_FEMALE(50),
+        .genderRatio = MON_MALE,
         .eggCycles = 30,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
@@ -4998,14 +4999,6 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .shinyPalette = gMonShinyPalette_Hippowdon,
         .iconSprite = gMonIcon_Hippowdon,
         .iconPalIndex = 1,
-#if P_GENDER_DIFFERENCES
-        .paletteFemale = gMonPalette_HippowdonF,
-        .shinyPaletteFemale = gMonShinyPalette_HippowdonF,
-    #if P_CUSTOM_GENDER_DIFF_ICONS == TRUE
-        .iconSpriteFemale = gMonIcon_HippowdonF,
-        .iconPalIndexFemale = 1,
-    #endif
-#endif //P_GENDER_DIFFERENCES
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         NO_SHADOW
         FOOTPRINT(Hippowdon)
@@ -5024,6 +5017,73 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         )
         .levelUpLearnset = sHippowdonLevelUpLearnset,
         .teachableLearnset = sHippowdonTeachableLearnset,
+        .formSpeciesIdTable = sHippowdonFormSpeciesIdTable,
+    },
+    [SPECIES_HIPPOWDON_F] =
+    {
+        .baseHP        = 108,
+        .baseAttack    = 112,
+        .baseDefense   = 118,
+        .baseSpeed     = 47,
+        .baseSpAttack  = 68,
+        .baseSpDefense = 72,
+        .types = MON_TYPES(TYPE_GROUND, TYPE_STEEL),
+        .catchRate = 60,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 184 : 198,
+        .evYield_Defense = 2,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 30,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_SAND_STREAM, ABILITY_NONE, ABILITY_SAND_FORCE },
+        .bodyColor = BODY_COLOR_GRAY,
+        .speciesName = _("Hippowdon"),
+        .cryId = CRY_HIPPOWDON,
+        .natDexNum = NATIONAL_DEX_HIPPOWDON,
+        .categoryName = _("Heavyweight"),
+        .height = 20,
+        .weight = 3000,
+        .description = COMPOUND_STRING(
+            "The female's hide hardens into a dull\n"
+            "iron-gray armor as she matures. She\n"
+            "headbutts intruders with a skull as\n"
+            "unyielding as tempered steel."),
+        .pokemonScale = 261,
+        .pokemonOffset = 2,
+        .trainerScale = 334,
+        .trainerOffset = 4,
+        .frontPic = gMonFrontPic_Hippowdon,
+        .frontPicSize = MON_COORDS_SIZE(64, 56),
+        .frontPicYOffset = 6,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(1, 40),
+            ANIMCMD_FRAME(0, 5),
+        ),
+        .frontAnimId = ANIM_V_SHAKE_TWICE,
+        .backPic = gMonBackPic_Hippowdon,
+        .backPicSize = MON_COORDS_SIZE(64, 56),
+        .backPicYOffset = 6,
+        .backAnimId = BACK_ANIM_V_SHAKE_LOW,
+        .palette = gMonPalette_HippowdonF,
+        .shinyPalette = gMonShinyPalette_HippowdonF,
+        .iconSprite = gMonIcon_HippowdonF,
+        .iconPalIndex = 1,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        NO_SHADOW
+        FOOTPRINT(Hippowdon)
+        OVERWORLD(
+            sPicTable_Hippowdon,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_HippowdonF,
+            gShinyOverworldPalette_HippowdonF
+        )
+        .levelUpLearnset = sHippowdonFLevelUpLearnset,
+        .teachableLearnset = sHippowdonTeachableLearnset,
+        .formSpeciesIdTable = sHippowdonFormSpeciesIdTable,
     },
 #endif //P_FAMILY_HIPPOPOTAS
 

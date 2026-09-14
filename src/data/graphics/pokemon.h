@@ -15461,19 +15461,17 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
 
-#if P_GENDER_DIFFERENCES
+    // Female Hippowdon is its own species, so its graphics aren't gated
+    // behind the gender-difference config.
     const u16 gMonPalette_HippowdonF[] = INCBIN_U16("graphics/pokemon/hippowdon/normalf.gbapal");
     const u16 gMonShinyPalette_HippowdonF[] = INCBIN_U16("graphics/pokemon/hippowdon/shinyf.gbapal");
-#if P_CUSTOM_GENDER_DIFF_ICONS
     const u8 gMonIcon_HippowdonF[] = INCBIN_U8("graphics/pokemon/hippowdon/iconf.4bpp");
-#endif
 #if OW_POKEMON_OBJECT_EVENTS
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
     const u16 gOverworldPalette_HippowdonF[] = INCBIN_U16("graphics/pokemon/hippowdon/overworld_normalf.gbapal");
     const u16 gShinyOverworldPalette_HippowdonF[] = INCBIN_U16("graphics/pokemon/hippowdon/overworld_shinyf.gbapal");
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
-#endif //P_GENDER_DIFFERENCES
 #endif //P_FAMILY_HIPPOPOTAS
 
 #if P_FAMILY_SKORUPI
