@@ -1696,8 +1696,10 @@
 #define SPECIES_CASTFORM_MEGA_GRASSY                    1575
 #define SPECIES_CASTFORM_MEGA_MISTY                     1576
 #define SPECIES_CASTFORM_MEGA_PSYCHIC                   1577
+// Female Hippowdon is its own form: Ground/Steel, after its iron-gray hide.
+#define SPECIES_HIPPOWDON_F                             1578
 
-#define SPECIES_EGG                                     (SPECIES_CASTFORM_MEGA_PSYCHIC + 1)
+#define SPECIES_EGG                                     (SPECIES_HIPPOWDON_F + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

@@ -113,37 +113,40 @@ SafariZone_Text_PokeblockWasPlaced:
 	.string "on the {POKEBLOCK} FEEDER.$"
 
 Route121_SafariZoneEntrance_Text_WelcomeToSafariZone:
-	.string "Welcome to the SAFARI ZONE!\p"
+	.string "Welcome to the HOENN WILDLIFE\n"
+	.string "RESERVE!\p"
 	.string "Here, you may witness many kinds of\n"
-	.string "POKéMON rarely seen in HOENN.\p"
+	.string "POKéMON found nowhere else in HOENN.\p"
+	.string "I know how that sounds. I promise you\n"
+	.string "it is the literal truth.\p"
 	.string "And, you'll see them in their wild,\n"
 	.string "untamed state in natural habitats.\p"
 	.string "What's more, we've thrown open the\n"
 	.string "gates to POKéMON TRAINERS.\p"
 	.string "You're encouraged to catch POKéMON\n"
 	.string "for keeps!\p"
-	.string "Come in and enjoy the SAFARI ZONE!$"
+	.string "Come in and enjoy the RESERVE!$"
 
 Route121_SafariZoneEntrance_Text_WelcomeFirstTime:
-	.string "Welcome to the SAFARI ZONE!\n"
+	.string "Welcome to the WILDLIFE RESERVE!\n"
 	.string "Is it your first time here?$"
 
 Route121_SafariZoneEntrance_Text_ComeInAndEnjoy:
-	.string "Come in and enjoy the SAFARI ZONE!$"
+	.string "Come in and enjoy the RESERVE!$"
 
 Route121_SafariZoneEntrance_Text_FirstTimeInfo:
-	.string "When you enter the SAFARI ZONE, you\n"
+	.string "When you enter the RESERVE, you\n"
 	.string "start with 30 SAFARI BALLS for\l"
 	.string "catching POKéMON.\p"
-	.string "The SAFARI Game is over when you run\n"
+	.string "Your visit is over when you run\n"
 	.string "out of SAFARI BALLS, or when you've\l"
 	.string "walked 500 steps.\p"
-	.string "Come in and enjoy the SAFARI ZONE!$"
+	.string "Come in and enjoy the RESERVE!$"
 
 Route121_SafariZoneEntrance_Text_WouldYouLikeToPlay:
-	.string "Welcome to the SAFARI ZONE!\p"
+	.string "Welcome to the WILDLIFE RESERVE!\p"
 	.string "All you can catch for just ¥500!\n"
-	.string "Would you like to play a SAFARI Game?$"
+	.string "Would you like to pay us a visit?$"
 
 Route121_SafariZoneEntrance_Text_PlayAnotherTime:
 	.string "Okay.\n"
@@ -175,7 +178,7 @@ Route121_SafariZoneEntrance_Text_PCIsFull:
 Route121_SafariZoneEntrance_Text_YouNeedPokeblockCase:
 	.string "Excuse me!\n"
 	.string "You seem to be without a {POKEBLOCK} CASE.\p"
-	.string "Your SAFARI Game will be much more\n"
+	.string "Your visit will be much more\n"
 	.string "fruitful if you use {POKEBLOCK}S.\p"
 	.string "Please come back with a {POKEBLOCK} CASE.\p"
 	.string "You may obtain a {POKEBLOCK} CASE from\n"
@@ -183,7 +186,7 @@ Route121_SafariZoneEntrance_Text_YouNeedPokeblockCase:
 
 SafariZone_South_Text_StillHaveTimeExit:
 	.string "You still have time left. Would you like\n"
-	.string "to exit the SAFARI ZONE now?$"
+	.string "to exit the RESERVE now?$"
 
 SafariZone_South_Text_EnjoyTheRestOfYourAdventure:
 	.string "Please enjoy the rest of your wild\n"
@@ -240,13 +243,19 @@ SafariZone_South_Text_Youngster:
 	.string "without me noticing.$"
 
 Route121_SafariZoneEntrance_Text_TrainerTip:
-	.string "SAFARI ZONE TRAINER TIP!\p"
+	.string "WILDLIFE RESERVE TRAINER TIP!\p"
 	.string "Throw {POKEBLOCK}S at wild POKéMON to make\n"
-	.string "them less likely to flee.$"
+	.string "them less likely to flee.\p"
+	.string "The front paddocks are stocked with\n"
+	.string "our common local species.\p"
+	.string "Please do not laugh at them.\n"
+	.string "They are all we have left.$"
 
 SafariZone_Southwest_Text_RestHouseSign:
 	.string "“Relieve your tired feet.”\n"
-	.string "REST HOUSE$"
+	.string "REST HOUSE\p"
+	.string "Someone has scrawled underneath:\n"
+	.string "“KEEP WALKING. IT GETS BETTER.”$"
 
 SafariZone_RestHouse_Text_Youngster:
 	.string "I don't have any {POKEBLOCK}S, but I caught\n"
@@ -272,7 +281,7 @@ SafariZone_South_Text_AreaOffLimits1:
 	.string "It's off-limits, sorry!$"
 
 SafariZone_Southeast_Text_ExpansionIsFinished:
-	.string "The SAFARI ZONE's expansion project\n"
+	.string "The RESERVE's expansion project\n"
 	.string "is finished now.\p"
 	.string "We hope you will enjoy the new area.$"
 
@@ -291,8 +300,10 @@ SafariZone_Southeast_Text_FatMan:
 	.string "POKéMON! Too cool!$"
 
 SafariZone_Southeast_Text_RichBoy:
-	.string "The POKéMON around here seem to be\n"
-	.string "from somewhere other than HOENN.$"
+	.string "Every POKéMON back here is a HOENN\n"
+	.string "native. Imagine that.\p"
+	.string "You can't see them anywhere else\n"
+	.string "in HOENN any more.$"
 
 SafariZone_Northeast_Text_Boy:
 	.string "I only have a couple SAFARI BALLS left.\p"
@@ -300,7 +311,7 @@ SafariZone_Northeast_Text_Boy:
 	.string "decide what I should catch.$"
 
 SafariZone_Northeast_Text_Woman:
-	.string "I heard that you can see PIKACHU here.\n"
+	.string "I heard you can see a SALAMENCE here.\n"
 	.string "Where might one be?$"
 
 SafariZone_Northeast_Text_Girl:

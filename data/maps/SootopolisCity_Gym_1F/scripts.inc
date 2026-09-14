@@ -180,8 +180,11 @@ SootopolisCity_Gym_1F_Text_GymGuideAdvice:
 	.string "bound {PLAYER}?\p"
 	.string "This GYM has ten TRAINERS and every\n"
 	.string "one of them picked their favourite.\p"
-	.string "Don't ask why it's their favourite.\n"
-	.string "Standard ice puzzle, hopefully\l"
+	.string "Don't ask why it's their favourite.\p"
+	.string "Between you and me, there have been\n"
+	.string "a lot of HR complaints about this GYM\l"
+	.string "lately...\p"
+	.string "Anyway! Standard ice puzzle, hopefully\n"
 	.string "you know how to do it by now!$"
 
 SootopolisCity_Gym_1F_Text_GymGuidePostVictory:
@@ -192,23 +195,17 @@ SootopolisCity_Gym_1F_Text_GymGuidePostVictory:
 	.string "set for the POKéMON LEAGUE challenge!$"
 
 SootopolisCity_Gym_1F_Text_JuanIntro:
-	.string "Let me ask you.\n"
-	.string "Did you know?\l"
-	.string "Ah, I should not be so coy.\p"
-	.string "It was I who taught WALLACE everything\n"
-	.string "there is to know about POKéMON.\p"
-	.string "Once, I had given up my position as\n"
-	.string "the GYM LEADER.\p"
-	.string "In my place, I had entrusted WALLACE\n"
-	.string "with the GYM.\p"
-	.string "However, a compelling reason arose for\n"
-	.string "me to make a comeback.\p"
-	.string "Ah, but enough chatter.\n"
-	.string "Let us begin our match, shall we?\p"
-	.string "Please, you shall bear witness to\n"
-	.string "our artistry.\p"
-	.string "A grand illusion of water sculpted\n"
-	.string "by POKéMON and myself!$"
+	.string "The TRAINERS downstairs all use their\n"
+	.string "favourite POKéMON...\l"
+	.string "Of a kind.\p"
+	.string "The LEAGUE requires me to tell you,\n"
+	.string "they are not stuck down there, either.\p"
+	.string "They can leave anytime.\n"
+	.string "But they stay.\p"
+	.string "Because of the implication.\p"
+	.string "Anyway! These are my favourite\n"
+	.string "beauties!\p"
+	.string "Just don't search them up!$"
 
 @ NOTE: This defeat text actually causes a buffer overflow. It's about 50 bytes too long for
 @ the gDisplayedStringBattle buffer that it's put into, and it stomps all over the gBattleTextBuffs
