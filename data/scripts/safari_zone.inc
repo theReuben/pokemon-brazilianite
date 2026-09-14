@@ -115,7 +115,9 @@ SafariZone_Text_PokeblockWasPlaced:
 Route121_SafariZoneEntrance_Text_WelcomeToSafariZone:
 	.string "Welcome to the SAFARI ZONE!\p"
 	.string "Here, you may witness many kinds of\n"
-	.string "POKéMON rarely seen in HOENN.\p"
+	.string "POKéMON found nowhere else in HOENN.\p"
+	.string "I know how that sounds. I promise you\n"
+	.string "it is the literal truth.\p"
 	.string "And, you'll see them in their wild,\n"
 	.string "untamed state in natural habitats.\p"
 	.string "What's more, we've thrown open the\n"
@@ -242,11 +244,17 @@ SafariZone_South_Text_Youngster:
 Route121_SafariZoneEntrance_Text_TrainerTip:
 	.string "SAFARI ZONE TRAINER TIP!\p"
 	.string "Throw {POKEBLOCK}S at wild POKéMON to make\n"
-	.string "them less likely to flee.$"
+	.string "them less likely to flee.\p"
+	.string "The front paddocks are stocked with\n"
+	.string "our common local species.\p"
+	.string "Please do not laugh at them.\n"
+	.string "They are all we have left.$"
 
 SafariZone_Southwest_Text_RestHouseSign:
 	.string "“Relieve your tired feet.”\n"
-	.string "REST HOUSE$"
+	.string "REST HOUSE\p"
+	.string "Someone has scrawled underneath:\n"
+	.string "“KEEP WALKING. IT GETS BETTER.”$"
 
 SafariZone_RestHouse_Text_Youngster:
 	.string "I don't have any {POKEBLOCK}S, but I caught\n"
