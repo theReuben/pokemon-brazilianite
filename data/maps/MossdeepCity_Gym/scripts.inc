@@ -376,8 +376,11 @@ MossdeepCity_Gym_Text_GymGuideAdvice:
 	.string "goes down. Not once. Not for anyone.\p"
 	.string "Water moves come off weak and FIRE\n"
 	.string "moves come off twice as hard.\p"
-	.string "As for the TRAINERS, they're all\n"
-	.string "members of chat!$"
+	.string "This GYM's a bit unusual, too. All the\n"
+	.string "TRAINERS in here came from chat!\p"
+	.string "And there's a pair of GYM LEADERS\n"
+	.string "instead of just the one!\p"
+	.string "...They're actually my parents.$"
 
 MossdeepCity_Gym_Text_GymGuidePostVictory:
 	.string "Wow, you're astounding!\n"
