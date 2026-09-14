@@ -52,9 +52,10 @@ gBirchDexRatingText_LessThan90::
 	.string "Your talent is remarkable!$"
 
 gBirchDexRatingText_LessThan100::
-	.string "Have you visited the SAFARI ZONE?\p"
-	.string "I hear there are some POKéMON that\n"
-	.string "can only be caught there.$"
+	.string "Have you visited the WILDLIFE\n"
+	.string "RESERVE?\p"
+	.string "I hear most of HOENN's own POKéMON\n"
+	.string "can only be caught there now.$"
 
 gBirchDexRatingText_LessThan110::
 	.string "You've finally reached\n"
