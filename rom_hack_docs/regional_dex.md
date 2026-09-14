@@ -8,7 +8,7 @@ It is also the source of the in-game Pokedex. After editing the table, run
 
 The dex is keyed by national dex number, which has no per-form entries, so a
 regional form shares its base species' slot - Meowth's three forms are one dex
-entry and Persian's two are another, making 150 rows into 147 dex slots.
+entry and Persian's two are another, making 156 rows into 153 dex slots.
 
 The list is exactly what the player can get before the post-game.
 `python3 dev_scripts/obtainable.py` derives that set from the encounter tables,
@@ -139,45 +139,51 @@ rebuilds the middle from encounter levels, moving each family as a block.
 | 113 | Galarian Slowking  | Poison/Psychic    |                                 |
 | 114 | Espurr             | Psychic           |                                 |
 | 115 | Meowstic           | Psychic           |                                 |
-| 116 | Spheal             | Ice/Water         |                                 |
-| 117 | Sealeo             | Ice/Water         |                                 |
-| 118 | Walrein            | Ice/Water         |                                 |
-| 119 | Orthworm           | Steel             |                                 |
-| 120 | Castform           | Normal            | Gift at Weather Institute       |
-| 121 | Vanillite          | Ice               |                                 |
-| 122 | Vanillish          | Ice               |                                 |
-| 123 | Vanilluxe          | Ice               |                                 |
-| 124 | Tropius            | Grass/Flying      |                                 |
-| 125 | Kecleon            | Normal            | Static, Route 120               |
-| 126 | Porygon            | Normal            | Static, Aqua Hideout            |
-| 127 | Porygon2           | Normal            |                                 |
-| 128 | Porygon-Z          | Normal            |                                 |
-| 129 | Yanma              | Bug/Flying        |                                 |
-| 130 | Yanmega            | Bug/Flying        |                                 |
-| 131 | Hisuian Basculin   | Water             |                                 |
-| 132 | Basculegion        | Water/Ghost       |                                 |
-| 133 | Hisuian Qwilfish   | Dark/Poison       |                                 |
-| 134 | Overqwil           | Dark/Poison       |                                 |
-| 135 | Feebas             | Water             |                                 |
-| 136 | Milotic            | Water             |                                 |
-| 137 | Rotom              | Electric/Ghost    |                                 |
-| 138 | Roaring Moon       | Dragon/Dark       | Paradox                         |
-| 139 | Iron Valiant       | Fairy/Fighting    | Paradox                         |
-| 140 | Raikou             | Electric          | Beast Den, one of three         |
-| 141 | Entei              | Fire              | Beast Den, one of three         |
-| 142 | Suicune            | Water             | Beast Den, one of three         |
-| 143 | Galarian Articuno  | Psychic/Flying    | Storm Roost, one of three       |
-| 144 | Galarian Zapdos    | Fighting/Flying   | Storm Roost, one of three       |
-| 145 | Galarian Moltres   | Dark/Flying       | Storm Roost, one of three       |
-| 146 | Tapu Koko          | Electric/Fairy    | Tapu Grotto, one of four        |
-| 147 | Tapu Lele          | Psychic/Fairy     | Tapu Grotto, one of four        |
-| 148 | Tapu Bulu          | Grass/Fairy       | Tapu Grotto, one of four        |
-| 149 | Tapu Fini          | Water/Fairy       | Tapu Grotto, one of four        |
-| 150 | Shuckle            | Bug/Rock          | Scam Pillar summit              |
+| 116 | Tinkatink          | Fairy/Steel       |                                 |
+| 117 | Tinkatuff          | Fairy/Steel       |                                 |
+| 118 | Tinkaton           | Fairy/Steel       |                                 |
+| 119 | Klink              | Steel             |                                 |
+| 120 | Klang              | Steel             |                                 |
+| 121 | Klinklang          | Steel             |                                 |
+| 122 | Spheal             | Ice/Water         |                                 |
+| 123 | Sealeo             | Ice/Water         |                                 |
+| 124 | Walrein            | Ice/Water         |                                 |
+| 125 | Orthworm           | Steel             |                                 |
+| 126 | Castform           | Normal            | Gift at Weather Institute       |
+| 127 | Vanillite          | Ice               |                                 |
+| 128 | Vanillish          | Ice               |                                 |
+| 129 | Vanilluxe          | Ice               |                                 |
+| 130 | Rotom              | Electric/Ghost    |                                 |
+| 131 | Tropius            | Grass/Flying      |                                 |
+| 132 | Kecleon            | Normal            | Static, Route 120               |
+| 133 | Porygon            | Normal            | Static, Aqua Hideout            |
+| 134 | Porygon2           | Normal            |                                 |
+| 135 | Porygon-Z          | Normal            |                                 |
+| 136 | Yanma              | Bug/Flying        |                                 |
+| 137 | Yanmega            | Bug/Flying        |                                 |
+| 138 | Hisuian Basculin   | Water             |                                 |
+| 139 | Basculegion        | Water/Ghost       |                                 |
+| 140 | Hisuian Qwilfish   | Dark/Poison       |                                 |
+| 141 | Overqwil           | Dark/Poison       |                                 |
+| 142 | Feebas             | Water             |                                 |
+| 143 | Milotic            | Water             |                                 |
+| 144 | Roaring Moon       | Dragon/Dark       | Paradox                         |
+| 145 | Iron Valiant       | Fairy/Fighting    | Paradox                         |
+| 146 | Raikou             | Electric          | Beast Den, one of three         |
+| 147 | Entei              | Fire              | Beast Den, one of three         |
+| 148 | Suicune            | Water             | Beast Den, one of three         |
+| 149 | Galarian Articuno  | Psychic/Flying    | Storm Roost, one of three       |
+| 150 | Galarian Zapdos    | Fighting/Flying   | Storm Roost, one of three       |
+| 151 | Galarian Moltres   | Dark/Flying       | Storm Roost, one of three       |
+| 152 | Tapu Koko          | Electric/Fairy    | Tapu Grotto, one of four        |
+| 153 | Tapu Lele          | Psychic/Fairy     | Tapu Grotto, one of four        |
+| 154 | Tapu Bulu          | Grass/Fairy       | Tapu Grotto, one of four        |
+| 155 | Tapu Fini          | Water/Fairy       | Tapu Grotto, one of four        |
+| 156 | Shuckle            | Bug/Rock          | Scam Pillar summit              |
 
 ## Summary
 
-- **Total**: 150 Pokemon
+- **Total**: 156 Pokemon
 - **Starters**: 3 lines (Turtwig, Fuecoco, Totodile)
 - **Regional forms**: Alolan (Grimer, Muk, Meowth, Persian, Geodude, Graveler, Golem), Galarian (Slowpoke, Slowbro, Slowking, Meowth, Perrserker, Farfetch'd, Yamask), Hisuian (Qwilfish, Voltorb, Electrode, Basculin), Paldean (Wooper)
 - **Paradox Pokemon**: Roaring Moon, Iron Valiant
