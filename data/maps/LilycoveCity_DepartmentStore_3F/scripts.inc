@@ -39,6 +39,12 @@ LilycoveCity_DepartmentStore_3F_Pokemart_Vitamins:
 	.2byte ITEM_GALARICA_WREATH
 	.2byte ITEM_LINKING_CORD
 	.2byte ITEM_PEAT_BLOCK
+	.2byte ITEM_PRISM_SCALE
+	.2byte ITEM_ELECTIRIZER
+	.2byte ITEM_MAGMARIZER
+	.2byte ITEM_REAPER_CLOTH
+	.2byte ITEM_UPGRADE
+	.2byte ITEM_DUBIOUS_DISC
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_3F_EventScript_ClerkRight::
