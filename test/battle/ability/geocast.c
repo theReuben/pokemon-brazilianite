@@ -100,3 +100,29 @@ SINGLE_BATTLE_TEST("Mega Castform stays Mega after switching out and back in")
         EXPECT_EQ(player->species, SPECIES_CASTFORM_MEGA);
     }
 }
+
+AI_SINGLE_BATTLE_TEST("AI sets terrain with Geocast rather than firing an unboosted Terrain Pulse")
+{
+    GIVEN {
+        AI_FLAGS(AI_FLAG_BASIC_TRAINER);
+        PLAYER(SPECIES_WOBBUFFET);
+        OPPONENT(SPECIES_CASTFORM_MEGA) { Ability(ABILITY_GEOCAST); Moves(MOVE_TERRAIN_PULSE, MOVE_PSYCHIC_TERRAIN, MOVE_MISTY_TERRAIN, MOVE_GRASSY_TERRAIN); }
+    } WHEN {
+        TURN { EXPECT_MOVES(opponent, MOVE_PSYCHIC_TERRAIN, MOVE_MISTY_TERRAIN, MOVE_GRASSY_TERRAIN); }
+        // With a terrain up the form change is done and Terrain Pulse is
+        // boosted and STAB, so swapping terrains is a wasted turn.
+        TURN { EXPECT_MOVE(opponent, MOVE_TERRAIN_PULSE); }
+    }
+}
+
+AI_SINGLE_BATTLE_TEST("AI picks the Geocast terrain whose typing beats the target")
+{
+    GIVEN {
+        AI_FLAGS(AI_FLAG_BASIC_TRAINER);
+        PLAYER(SPECIES_QUAGSIRE);
+        OPPONENT(SPECIES_CASTFORM_MEGA) { Ability(ABILITY_GEOCAST); Moves(MOVE_TERRAIN_PULSE, MOVE_PSYCHIC_TERRAIN, MOVE_MISTY_TERRAIN, MOVE_GRASSY_TERRAIN); }
+    } WHEN {
+        // Grass is 4x on Quagsire, while Psychic and Fairy are neutral.
+        TURN { EXPECT_MOVE(opponent, MOVE_GRASSY_TERRAIN); }
+    }
+}

@@ -185,6 +185,12 @@ static bool32 DoesAbilityBenefitFromFieldStatus(enum Ability ability, u32 fieldS
     {
     case ABILITY_MIMICRY:
         return (fieldStatus & STATUS_FIELD_TERRAIN_ANY);
+    case ABILITY_GEOCAST:
+        // Geocast trades a plain Normal typing for the terrain's type, so
+        // any terrain is an upgrade - but only the first one. Once a
+        // terrain is up the form has already changed, and re-setting a
+        // different one is just a wasted turn, so stop wanting it.
+        return (fieldStatus & STATUS_FIELD_TERRAIN_ANY) && !(gFieldStatuses & STATUS_FIELD_TERRAIN_ANY);
     case ABILITY_HADRON_ENGINE:
     case ABILITY_QUARK_DRIVE:
     case ABILITY_SURGE_SURFER:
