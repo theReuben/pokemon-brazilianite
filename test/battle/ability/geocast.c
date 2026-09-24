@@ -110,7 +110,7 @@ AI_SINGLE_BATTLE_TEST("AI sets terrain with Geocast rather than firing an unboos
     } WHEN {
         TURN { EXPECT_MOVES(opponent, MOVE_PSYCHIC_TERRAIN, MOVE_MISTY_TERRAIN, MOVE_GRASSY_TERRAIN); }
         // With a terrain up the form change is done and Terrain Pulse is
-        // boosted and STAB, so swapping terrains is a wasted turn.
+        // boosted and STAB, so with no better typing on offer it attacks.
         TURN { EXPECT_MOVE(opponent, MOVE_TERRAIN_PULSE); }
     }
 }
@@ -126,3 +126,22 @@ AI_SINGLE_BATTLE_TEST("AI picks the Geocast terrain whose typing beats the targe
         TURN { EXPECT_MOVE(opponent, MOVE_GRASSY_TERRAIN); }
     }
 }
+
+AI_SINGLE_BATTLE_TEST("AI re-picks its Geocast terrain when the player switches in a better matchup")
+{
+    GIVEN {
+        AI_FLAGS(AI_FLAG_BASIC_TRAINER);
+        PLAYER(SPECIES_QUAGSIRE);
+        PLAYER(SPECIES_TOXICROAK);
+        OPPONENT(SPECIES_CASTFORM_MEGA) { Ability(ABILITY_GEOCAST); Moves(MOVE_TERRAIN_PULSE, MOVE_PSYCHIC_TERRAIN, MOVE_MISTY_TERRAIN, MOVE_GRASSY_TERRAIN); }
+    } WHEN {
+        TURN { EXPECT_MOVE(opponent, MOVE_GRASSY_TERRAIN); }
+        // The AI commits to its move before the switch resolves, so this
+        // turn it is still aiming at Quagsire.
+        TURN { SWITCH(player, 1); }
+        // Now it sees Toxicroak: Poison/Fighting shrugs off a Grass pulse but
+        // folds to a Psychic one, so the turn spent swapping pays for itself.
+        TURN { EXPECT_MOVE(opponent, MOVE_PSYCHIC_TERRAIN); }
+    }
+}
+

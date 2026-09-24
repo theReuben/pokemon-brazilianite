@@ -4323,17 +4323,12 @@ static enum Type GetTerrainFormType(u32 terrain)
 }
 
 // Geocast turns the user into the terrain's type, so picking a terrain is
-// really picking a typing. Prefer the one that makes Terrain Pulse hit the
-// target hardest and that stands up best to what the target is carrying,
-// instead of treating all four as interchangeable.
-static s32 AI_GeocastTerrainScore(enum BattlerId battlerAtk, enum BattlerId battlerDef, u32 terrain, struct AiLogicData *aiData)
+// really picking a typing. How hard Terrain Pulse then hits the target is the
+// whole point of the choice, so that is scored on its own.
+static s32 AI_GeocastOffenceScore(enum BattlerId battlerAtk, enum BattlerId battlerDef, u32 terrain, struct AiLogicData *aiData)
 {
-    if (aiData->abilities[battlerAtk] != ABILITY_GEOCAST)
-        return NO_INCREASE;
-
     enum Type type = GetTerrainFormType(terrain);
     enum Move *moves = GetMovesArray(battlerAtk);
-    s32 score = NO_INCREASE;
 
     for (u32 i = 0; i < MAX_MON_MOVES; i++)
     {
@@ -4353,18 +4348,29 @@ static s32 AI_GeocastTerrainScore(enum BattlerId battlerAtk, enum BattlerId batt
 
         uq4_12_t modifier = CalcTypeEffectivenessMultiplier(&ctx);
         if (modifier == UQ_4_12(0.0))
-            score += AWFUL_EFFECT;
-        else if (modifier >= UQ_4_12(2.0))
-            score += GOOD_EFFECT;
-        else if (modifier < UQ_4_12(1.0))
-            score += BAD_EFFECT;
+            return AWFUL_EFFECT;
+        if (modifier <= UQ_4_12(0.25))
+            return -DECENT_EFFECT;
+        if (modifier < UQ_4_12(1.0))
+            return BAD_EFFECT;
+        if (modifier >= UQ_4_12(4.0))
+            return BEST_EFFECT;
+        if (modifier >= UQ_4_12(2.0))
+            return GOOD_EFFECT;
         break;
     }
 
-    // The new typing has to take hits as well as deal them, but that is a
-    // tiebreaker - the reason to change type at all is the offence.
-    s32 defensive = NO_INCREASE;
-    moves = GetMovesArray(battlerDef);
+    return NO_INCREASE;
+}
+
+// The new typing has to take hits as well as deal them, but that only breaks
+// ties between terrains the user is otherwise indifferent to.
+static s32 AI_GeocastDefenceScore(enum BattlerId battlerDef, u32 terrain)
+{
+    enum Type type = GetTerrainFormType(terrain);
+    enum Move *moves = GetMovesArray(battlerDef);
+    s32 score = NO_INCREASE;
+
     for (u32 i = 0; i < MAX_MON_MOVES; i++)
     {
         if (moves[i] == MOVE_NONE || moves[i] == MOVE_UNAVAILABLE || IsBattleMoveStatus(moves[i]))
@@ -4372,17 +4378,53 @@ static s32 AI_GeocastTerrainScore(enum BattlerId battlerAtk, enum BattlerId batt
 
         uq4_12_t modifier = GetTypeModifier(GetMoveType(moves[i]), type);
         if (modifier > UQ_4_12(1.0))
-            defensive += BAD_EFFECT;
+            score += BAD_EFFECT;
         else if (modifier < UQ_4_12(1.0))
-            defensive += WEAK_EFFECT;
+            score += WEAK_EFFECT;
     }
 
-    if (defensive > WEAK_EFFECT)
-        defensive = WEAK_EFFECT;
-    else if (defensive < -WEAK_EFFECT)
-        defensive = -WEAK_EFFECT;
+    if (score > WEAK_EFFECT)
+        return WEAK_EFFECT;
+    if (score < -WEAK_EFFECT)
+        return -WEAK_EFFECT;
+    return score;
+}
 
-    return score + defensive;
+static s32 AI_GeocastTerrainScore(enum BattlerId battlerAtk, enum BattlerId battlerDef, u32 terrain, struct AiLogicData *aiData)
+{
+    if (aiData->abilities[battlerAtk] != ABILITY_GEOCAST)
+        return NO_INCREASE;
+
+    return AI_GeocastOffenceScore(battlerAtk, battlerDef, terrain, aiData)
+         + AI_GeocastDefenceScore(battlerDef, terrain);
+}
+
+// A terrain is already up, so the form change has happened and re-setting one
+// costs a turn. That is only worth it when the Pokemon now in front of the AI
+// - which need not be the one the terrain was chosen for - makes another
+// typing clearly better to attack into. Defence does not enter it: it is too
+// small a gain to spend a turn on, and letting it decide would mean the AI
+// could talk itself back into the terrain it just left.
+static s32 AI_GeocastShouldSwapTerrain(enum BattlerId battlerAtk, enum BattlerId battlerDef, u32 terrain, struct AiLogicData *aiData)
+{
+    if (aiData->abilities[battlerAtk] != ABILITY_GEOCAST)
+        return NO_INCREASE;
+
+    u32 activeTerrain = gFieldStatuses & STATUS_FIELD_TERRAIN_ANY;
+    if (activeTerrain == 0 || activeTerrain == terrain)
+        return NO_INCREASE;
+
+    s32 improvement = AI_GeocastOffenceScore(battlerAtk, battlerDef, terrain, aiData)
+                    - AI_GeocastOffenceScore(battlerAtk, battlerDef, activeTerrain, aiData);
+
+    // Every tier is a doubling of Terrain Pulse's damage, which pays for the
+    // turn in any fight that lasts, but a bigger swing is worth more.
+    if (improvement <= NO_INCREASE)
+        return NO_INCREASE;
+    if (improvement >= DECENT_EFFECT)
+        return GOOD_EFFECT;
+
+    return DECENT_EFFECT;
 }
 
 static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId battlerDef, enum Move move, struct AiLogicData *aiData)
@@ -5553,6 +5595,10 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
             if (aiData->holdEffects[battlerAtk] == HOLD_EFFECT_TERRAIN_EXTENDER || HasBattlerSideMoveWithEffect(battlerAtk, EFFECT_TERRAIN_PULSE))
                 ADJUST_SCORE(WEAK_EFFECT);
         }
+        else
+        {
+            ADJUST_SCORE(AI_GeocastShouldSwapTerrain(battlerAtk, battlerDef, STATUS_FIELD_ELECTRIC_TERRAIN, aiData));
+        }
         break;
     case EFFECT_MISTY_TERRAIN:
         if (ShouldSetFieldStatus(battlerAtk, STATUS_FIELD_MISTY_TERRAIN))
@@ -5564,6 +5610,10 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
             if (aiData->holdEffects[battlerAtk] == HOLD_EFFECT_TERRAIN_EXTENDER || HasBattlerSideMoveWithEffect(battlerAtk, EFFECT_TERRAIN_PULSE))
                 ADJUST_SCORE(WEAK_EFFECT);
         }
+        else
+        {
+            ADJUST_SCORE(AI_GeocastShouldSwapTerrain(battlerAtk, battlerDef, STATUS_FIELD_MISTY_TERRAIN, aiData));
+        }
         break;
     case EFFECT_GRASSY_TERRAIN:
         if (ShouldSetFieldStatus(battlerAtk, STATUS_FIELD_GRASSY_TERRAIN))
@@ -5573,6 +5623,10 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
             if (aiData->holdEffects[battlerAtk] == HOLD_EFFECT_TERRAIN_EXTENDER || HasBattlerSideMoveWithEffect(battlerAtk, EFFECT_TERRAIN_PULSE))
                 ADJUST_SCORE(WEAK_EFFECT);
         }
+        else
+        {
+            ADJUST_SCORE(AI_GeocastShouldSwapTerrain(battlerAtk, battlerDef, STATUS_FIELD_GRASSY_TERRAIN, aiData));
+        }
         break;
     case EFFECT_PSYCHIC_TERRAIN:
         if (ShouldSetFieldStatus(battlerAtk, STATUS_FIELD_PSYCHIC_TERRAIN))
@@ -5581,6 +5635,10 @@ static s32 AI_CalcMoveEffectScore(enum BattlerId battlerAtk, enum BattlerId batt
             ADJUST_SCORE(AI_GeocastTerrainScore(battlerAtk, battlerDef, STATUS_FIELD_PSYCHIC_TERRAIN, aiData));
             if (aiData->holdEffects[battlerAtk] == HOLD_EFFECT_TERRAIN_EXTENDER || HasBattlerSideMoveWithEffect(battlerAtk, EFFECT_TERRAIN_PULSE))
                 ADJUST_SCORE(WEAK_EFFECT);
+        }
+        else
+        {
+            ADJUST_SCORE(AI_GeocastShouldSwapTerrain(battlerAtk, battlerDef, STATUS_FIELD_PSYCHIC_TERRAIN, aiData));
         }
         break;
     case EFFECT_STEEL_ROLLER:
