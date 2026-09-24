@@ -5245,42 +5245,46 @@ static const s16 sInitialReelPositions[NUM_REELS][2] = {
 // Brazilianite: the GAME CORNER is meant to be a way to fund a team, not a
 // grind, so the odds of drawing for a Special are far kinder than vanilla's
 // ~5%. Betting three coins is still clearly the best play.
+//
+// These are out of 256, so a three-coin bet draws for a Special roughly half
+// the time. Together with the 7 probabilities below that works out at a
+// jackpot every two or three spins. Lower the third column to slow it down.
 static const u8 sSpecialDrawOdds[NUM_SLOT_MACHINE_IDS][MAX_BET] = {
-    [SLOT_MACHINE_UNLUCKIEST] = {10, 20, 40},
-    [SLOT_MACHINE_UNLUCKIER]  = {10, 20, 42},
-    [SLOT_MACHINE_UNLUCKY]    = {12, 22, 44},
-    [SLOT_MACHINE_LUCKY]      = {12, 22, 44},
-    [SLOT_MACHINE_LUCKIER]    = {12, 24, 46},
-    [SLOT_MACHINE_LUCKIEST]   = {14, 24, 48}
+    [SLOT_MACHINE_UNLUCKIEST] = {30, 60, 120},
+    [SLOT_MACHINE_UNLUCKIER]  = {30, 61, 122},
+    [SLOT_MACHINE_UNLUCKY]    = {31, 62, 124},
+    [SLOT_MACHINE_LUCKY]      = {31, 62, 124},
+    [SLOT_MACHINE_LUCKIER]    = {31, 63, 126},
+    [SLOT_MACHINE_LUCKIEST]   = {32, 64, 128}
 };
 
 static const u8 sBiasProbabilities_Special[][NUM_SLOT_MACHINE_IDS] = {
     {
         // Probabilities for BIAS_STRAIGHT_7
-        [SLOT_MACHINE_UNLUCKIEST] = 100,
-        [SLOT_MACHINE_UNLUCKIER]  = 105,
-        [SLOT_MACHINE_UNLUCKY]    = 110,
-        [SLOT_MACHINE_LUCKY]      = 115,
-        [SLOT_MACHINE_LUCKIER]    = 118,
-        [SLOT_MACHINE_LUCKIEST]   = 125
+        [SLOT_MACHINE_UNLUCKIEST] = 170,
+        [SLOT_MACHINE_UNLUCKIER]  = 172,
+        [SLOT_MACHINE_UNLUCKY]    = 174,
+        [SLOT_MACHINE_LUCKY]      = 176,
+        [SLOT_MACHINE_LUCKIER]    = 178,
+        [SLOT_MACHINE_LUCKIEST]   = 180
     },
     {
         // Probabilities for BIAS_REELTIME
-        [SLOT_MACHINE_UNLUCKIEST] = 25,
-        [SLOT_MACHINE_UNLUCKIER]  = 25,
-        [SLOT_MACHINE_UNLUCKY]    = 30,
-        [SLOT_MACHINE_LUCKY]      = 30,
-        [SLOT_MACHINE_LUCKIER]    = 35,
-        [SLOT_MACHINE_LUCKIEST]   = 35
+        [SLOT_MACHINE_UNLUCKIEST] = 18,
+        [SLOT_MACHINE_UNLUCKIER]  = 18,
+        [SLOT_MACHINE_UNLUCKY]    = 20,
+        [SLOT_MACHINE_LUCKY]      = 20,
+        [SLOT_MACHINE_LUCKIER]    = 22,
+        [SLOT_MACHINE_LUCKIEST]   = 22
     },
     {
         // Probabilities for BIAS_MIXED_7
-        [SLOT_MACHINE_UNLUCKIEST] = 80,
-        [SLOT_MACHINE_UNLUCKIER]  = 80,
-        [SLOT_MACHINE_UNLUCKY]    = 85,
-        [SLOT_MACHINE_LUCKY]      = 85,
-        [SLOT_MACHINE_LUCKIER]    = 90,
-        [SLOT_MACHINE_LUCKIEST]   = 95
+        [SLOT_MACHINE_UNLUCKIEST] = 170,
+        [SLOT_MACHINE_UNLUCKIER]  = 172,
+        [SLOT_MACHINE_UNLUCKY]    = 174,
+        [SLOT_MACHINE_LUCKY]      = 176,
+        [SLOT_MACHINE_LUCKIER]    = 178,
+        [SLOT_MACHINE_LUCKIEST]   = 180
     }
 };
 
