@@ -19,6 +19,7 @@ This folder contains all design documentation for the Pokemon Brazilianite ROM h
 | [difficulty_and_progression.md](difficulty_and_progression.md) | Level curve, caps, scaling, QoL |
 | [config_changes.md](config_changes.md) | Expansion config flags to toggle |
 | [aesthetic_changes.md](aesthetic_changes.md) | Tilesets, sprites, music, UI changes |
+| [tm_party_icons.md](tm_party_icons.md) | TM pocket showing the party, faded for mons that can't learn the move |
 | [changelog.md](changelog.md) | Running log of changes made |
 
 ## How to Use

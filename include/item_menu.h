@@ -73,6 +73,7 @@ struct BagMenu
     MainCallback newScreenCallback;
     u8 tilemapBuffer[BG_SCREEN_SIZE];
     u8 spriteIds[ITEMMENUSPRITE_COUNT];
+    u8 partyIconSpriteIds[PARTY_SIZE]; // Party icons shown in place of the bag in the TM pocket
     u8 windowIds[ITEMWIN_COUNT];
     u8 toSwapPos;
     u8 pocketSwitchDisabled:4;

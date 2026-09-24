@@ -33,6 +33,7 @@
 #include "party_menu.h"
 #include "player_pc.h"
 #include "pokemon.h"
+#include "pokemon_icon.h"
 #include "pokemon_summary_screen.h"
 #include "scanline_effect.h"
 #include "script.h"
@@ -160,6 +161,12 @@ static void Task_HandleSwappingItemsInput(u8);
 static void DoItemSwap(u8);
 static void CancelItemSwap(u8);
 static void PrintTMHMMoveData(enum Item itemId);
+static bool32 ShouldShowTMPartyIcons(void);
+static void CreateTMPartyIcons(void);
+static void DestroyTMPartyIcons(void);
+static void RefreshTMPartyIcons(enum Item itemId);
+static void HideItemIconBox(void);
+static void RestoreItemIconBox(void);
 static void PrintContextMenuItems(u8);
 static void PrintContextMenuItemGrid(u8, u8, u8);
 static void Task_ItemContext_SingleRow(u8);
@@ -673,6 +680,7 @@ void GoToBagMenu(u8 location, u8 pocket, MainCallback exitCallback)
         gBagMenu->pocketScrollArrowsTask = TASK_NONE;
         gBagMenu->pocketSwitchArrowsTask = TASK_NONE;
         memset(gBagMenu->spriteIds, SPRITE_NONE, sizeof(gBagMenu->spriteIds));
+        memset(gBagMenu->partyIconSpriteIds, SPRITE_NONE, sizeof(gBagMenu->partyIconSpriteIds));
         memset(gBagMenu->windowIds, WINDOW_NONE, sizeof(gBagMenu->windowIds));
         SetMainCallback2(CB2_Bag);
     }
@@ -789,6 +797,13 @@ static bool8 SetupBagMenu(void)
         break;
     case 15:
         AddBagVisualSprite(gBagPosition.pocket);
+        if (ShouldShowTMPartyIcons())
+        {
+            // The list menu was set up before the icons existed, so tint them by hand once
+            u32 selected = gBagPosition.cursorPosition[POCKET_TM_HM] + gBagPosition.scrollPosition[POCKET_TM_HM];
+            CreateTMPartyIcons();
+            RefreshTMPartyIcons(selected < gBagMenu->numItemStacks[POCKET_TM_HM] ? GetBagItemId(POCKET_TM_HM, selected) : ITEM_NONE);
+        }
         gMain.state++;
         break;
     case 16:
@@ -981,6 +996,8 @@ static void BagMenu_MoveCursorCallback(s32 itemIndex, bool8 onInit, struct ListM
         gBagMenu->itemIconSlot ^= 1;
         if (!gBagMenu->inhibitItemDescriptionPrint)
             PrintItemDescription(itemIndex);
+        if (ShouldShowTMPartyIcons())
+            RefreshTMPartyIcons(itemIndex != LIST_CANCEL ? GetBagItemId(gBagPosition.pocket, itemIndex) : ITEM_NONE);
     }
 }
 
@@ -1139,6 +1156,7 @@ static void Task_CloseBagMenu(u8 taskId)
             SetMainCallback2(gBagPosition.exitCallback);
 
         BagDestroyPocketScrollArrowPair();
+        DestroyTMPartyIcons();
         ResetSpriteData();
         FreeAllSpritePalettes();
         FreeBagMenu();
@@ -1421,6 +1439,7 @@ static void SwitchBagPocket(u8 taskId, s16 deltaBagPocketId, bool16 skipEraseLis
     DrawPocketIndicatorSquare(newPocket, TRUE);
     FillBgTilemapBufferRect_Palette0(2, 11, 14, 2, 15, 16);
     ScheduleBgCopyTilemapToVram(2);
+    DestroyTMPartyIcons();
     SetBagVisualPocketId(newPocket, TRUE);
     RemoveBagSprite(ITEMMENUSPRITE_BALL);
     AddSwitchPocketRotatingBallSprite(deltaBagPocketId);
@@ -1464,6 +1483,8 @@ static void Task_SwitchBagPocket(u8 taskId)
     case 1:
         ChangeBagPocketId(&gBagPosition.pocket, tPocketSwitchDir);
         LoadBagItemListBuffers(gBagPosition.pocket);
+        if (ShouldShowTMPartyIcons())
+            CreateTMPartyIcons();
         tListTaskId = ListMenuInit(&gMultiuseListMenuTemplate, gBagPosition.scrollPosition[gBagPosition.pocket], gBagPosition.cursorPosition[gBagPosition.pocket]);
         PutWindowTilemap(WIN_DESCRIPTION);
         PutWindowTilemap(WIN_POCKET_NAME);
@@ -2661,6 +2682,141 @@ static void RemoveMoneyWindow(void)
 {
     BagMenu_RemoveWindow(ITEMWIN_MONEY);
     RemoveMoneyLabelObject();
+}
+
+// In the TM pocket the bag is replaced by the party, so the player can see at a
+// glance which of their Pokemon are able to learn the highlighted move. Mons that
+// can't learn it are darkened with the OBJ blend.
+#define TM_PARTY_ICON_X        24
+#define TM_PARTY_ICON_Y        44
+#define TM_PARTY_ICON_WIDTH    32
+#define TM_PARTY_ICON_HEIGHT   32
+#define TM_PARTY_ICON_COLUMNS   3
+#define TM_PARTY_ICON_EVA       6   // faded icon
+#define TM_PARTY_ICON_EVB      10   // background showing through
+
+// The bag screen draws a white panel for the selected item's icon at the bottom
+// left; the party grid needs that space, so it is papered over with the plain
+// striped background tiles from the column beside it.
+#define TM_ICON_BOX_TILE_X      0
+#define TM_ICON_BOX_TILE_Y      8
+#define TM_ICON_BOX_TILE_W      5
+#define TM_ICON_BOX_TILE_H      5
+#define TM_ICON_BOX_SRC_TILE_X  8
+
+static u16 sSavedItemIconBoxTiles[TM_ICON_BOX_TILE_W * TM_ICON_BOX_TILE_H];
+
+static bool32 ShouldShowTMPartyIcons(void)
+{
+    return gBagPosition.pocket == POCKET_TM_HM
+        && !IsWallysBag()
+        && !MenuHelpers_IsLinkActive()
+        && CalculatePlayerPartyCount() != 0;
+}
+
+static void HideItemIconBox(void)
+{
+    u16 *tilemap = (u16 *)gBagMenu->tilemapBuffer;
+    u32 x, y;
+
+    for (y = 0; y < TM_ICON_BOX_TILE_H; y++)
+    {
+        u16 plainTile = tilemap[(TM_ICON_BOX_TILE_Y + y) * 32 + TM_ICON_BOX_SRC_TILE_X];
+        for (x = 0; x < TM_ICON_BOX_TILE_W; x++)
+        {
+            u32 offset = (TM_ICON_BOX_TILE_Y + y) * 32 + TM_ICON_BOX_TILE_X + x;
+            sSavedItemIconBoxTiles[y * TM_ICON_BOX_TILE_W + x] = tilemap[offset];
+            tilemap[offset] = plainTile;
+        }
+    }
+    ScheduleBgCopyTilemapToVram(2);
+}
+
+static void RestoreItemIconBox(void)
+{
+    u16 *tilemap = (u16 *)gBagMenu->tilemapBuffer;
+    u32 x, y;
+
+    for (y = 0; y < TM_ICON_BOX_TILE_H; y++)
+    {
+        for (x = 0; x < TM_ICON_BOX_TILE_W; x++)
+            tilemap[(TM_ICON_BOX_TILE_Y + y) * 32 + TM_ICON_BOX_TILE_X + x] = sSavedItemIconBoxTiles[y * TM_ICON_BOX_TILE_W + x];
+    }
+    ScheduleBgCopyTilemapToVram(2);
+}
+
+static void CreateTMPartyIcons(void)
+{
+    u32 i;
+    u32 partyCount = CalculatePlayerPartyCount();
+
+    for (i = 0; i < PARTY_SIZE; i++)
+        gBagMenu->partyIconSpriteIds[i] = SPRITE_NONE;
+
+    for (i = 0; i < partyCount; i++)
+    {
+        struct Pokemon *mon = &gPlayerParty[i];
+        u16 species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG);
+
+        LoadMonIconPalette(species);
+        gBagMenu->partyIconSpriteIds[i] = CreateMonIcon(species, SpriteCB_MonIcon,
+                                                        TM_PARTY_ICON_X + (i % TM_PARTY_ICON_COLUMNS) * TM_PARTY_ICON_WIDTH,
+                                                        TM_PARTY_ICON_Y + (i / TM_PARTY_ICON_COLUMNS) * TM_PARTY_ICON_HEIGHT,
+                                                        0, GetMonData(mon, MON_DATA_PERSONALITY));
+    }
+
+    // Sprites flagged as semi-transparent blend with whatever is behind them;
+    // BLDCNT only needs to name the second target.
+    SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT2_BG_ALL | BLDCNT_TGT2_BD);
+    SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(TM_PARTY_ICON_EVA, TM_PARTY_ICON_EVB));
+    HideItemIconBox();
+    if (gBagMenu->spriteIds[ITEMMENUSPRITE_BAG] != SPRITE_NONE)
+        gSprites[gBagMenu->spriteIds[ITEMMENUSPRITE_BAG]].invisible = TRUE;
+}
+
+static void DestroyTMPartyIcons(void)
+{
+    u32 i;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (gBagMenu->partyIconSpriteIds[i] == SPRITE_NONE)
+            continue;
+        FreeAndDestroyMonIconSprite(&gSprites[gBagMenu->partyIconSpriteIds[i]]);
+        gBagMenu->partyIconSpriteIds[i] = SPRITE_NONE;
+    }
+
+    SetGpuReg(REG_OFFSET_BLDCNT, 0);
+    SetGpuReg(REG_OFFSET_BLDALPHA, 0);
+    RestoreItemIconBox();
+    if (gBagMenu->spriteIds[ITEMMENUSPRITE_BAG] != SPRITE_NONE)
+        gSprites[gBagMenu->spriteIds[ITEMMENUSPRITE_BAG]].invisible = FALSE;
+}
+
+static void RefreshTMPartyIcons(enum Item itemId)
+{
+    u32 i;
+    enum Move move = (itemId == ITEM_NONE) ? MOVE_NONE : ItemIdToBattleMoveId(itemId);
+
+    // The TM disc sprite would sit on top of the party grid
+    for (i = 0; i < 2; i++)
+    {
+        if (gBagMenu->spriteIds[ITEMMENUSPRITE_ITEM + i] != SPRITE_NONE)
+            gSprites[gBagMenu->spriteIds[ITEMMENUSPRITE_ITEM + i]].invisible = TRUE;
+    }
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        bool32 canLearn;
+
+        if (gBagMenu->partyIconSpriteIds[i] == SPRITE_NONE)
+            continue;
+
+        canLearn = move != MOVE_NONE
+                && !GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG)
+                && CanLearnTeachableMove(GetMonData(&gPlayerParty[i], MON_DATA_SPECIES), move);
+        gSprites[gBagMenu->partyIconSpriteIds[i]].oam.objMode = canLearn ? ST_OAM_OBJ_NORMAL : ST_OAM_OBJ_BLEND;
+    }
 }
 
 static void PrepareTMHMMoveWindow(void)
