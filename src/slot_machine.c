@@ -506,6 +506,7 @@ static bool8 DecideStop_Bias_Reel2(void);
 static bool8 DecideStop_Bias_Reel2_Bet1or2(void);
 static bool8 DecideStop_Bias_Reel2_Bet3(void);
 static bool8 DecideStop_Bias_Reel3(void);
+static bool8 AllSyms7(u8, u8, u8);
 static bool8 DecideStop_Bias_Reel3_Bet1or2(u8);
 static bool8 DecideStop_Bias_Reel3_Bet3(u8);
 static void DecideStop_NoBias_Reel1(void);
@@ -2090,9 +2091,7 @@ static u8 GetMatchFromSymbols(u8 sym1, u8 sym2, u8 sym3)
 {
     if (sym1 == sym2 && sym1 == sym3)
         return sSymbolToMatch[sym1];
-    if (sym1 == SYMBOL_7_RED && sym2 == SYMBOL_7_RED && sym3 == SYMBOL_7_BLUE)
-        return MATCH_MIXED_7;
-    if (sym1 == SYMBOL_7_BLUE && sym2 == SYMBOL_7_BLUE && sym3 == SYMBOL_7_RED)
+    if (AllSyms7(sym1, sym2, sym3))
         return MATCH_MIXED_7;
     if (sym1 == SYMBOL_CHERRY)
         return MATCH_CHERRY;
@@ -2922,32 +2921,27 @@ static bool8 MismatchedSyms_77(u8 sym1, u8 sym2)
         return FALSE;
 }
 
-// Returns true if the reel 1, reel 2 and reel 3 symbolss form a 7 mismatch,
-// i.e. {7R, 7B, 7R} or {7B, 7R, 7B}.
-static bool8 MismatchedSyms_777(u8 sym1, u8 sym2, u8 sym3)
+// Returns true if all three symbols are 7's, of any combination of colors.
+// Every such combination is a MATCH_MIXED_7, so there is no longer any
+// arrangement of three 7's that pays nothing.
+static bool8 AllSyms7(u8 sym1, u8 sym2, u8 sym3)
 {
-    if ((sym1 == SYMBOL_7_RED && sym2 == SYMBOL_7_BLUE && sym3 == SYMBOL_7_RED) ||
-        (sym1 == SYMBOL_7_BLUE && sym2 == SYMBOL_7_RED && sym3 == SYMBOL_7_BLUE))
+    if ((sym1 == SYMBOL_7_RED || sym1 == SYMBOL_7_BLUE)
+        && (sym2 == SYMBOL_7_RED || sym2 == SYMBOL_7_BLUE)
+        && (sym3 == SYMBOL_7_RED || sym3 == SYMBOL_7_BLUE))
         return TRUE;
     else
         return FALSE;
 }
 
-// Returns false if either:
-//  - The symbols form a match (including MATCH_MIXED_7)
-//  - Or, the symbols form a 7 mismatch (i.e., {7R, 7B, 7R} or {7B, 7R, 7B})
+// Returns false if the symbols form a match, including any combination of
+// three 7's.
 //
 // Note, this does not account for cherry matches.
 static bool8 NeitherMatchNor7Mismatch(u8 sym1, u8 sym2, u8 sym3)
 {
-    if ((sym1 == SYMBOL_7_RED && sym2 == SYMBOL_7_BLUE && sym3 == SYMBOL_7_RED)
-        || (sym1 == SYMBOL_7_BLUE && sym2 == SYMBOL_7_RED && sym3 == SYMBOL_7_BLUE)
-        || (sym1 == SYMBOL_7_RED && sym2 == SYMBOL_7_RED && sym3 == SYMBOL_7_BLUE)
-        || (sym1 == SYMBOL_7_BLUE && sym2 == SYMBOL_7_BLUE && sym3 == SYMBOL_7_RED)
-        || (sym1 == sym2 && sym1 == sym3))
-    {
+    if (AllSyms7(sym1, sym2, sym3) || (sym1 == sym2 && sym1 == sym3))
         return FALSE;
-    }
     return TRUE;
 }
 
@@ -2991,28 +2985,15 @@ static void DecideStop_NoBias_Reel3_Bet1(void)
             i++;
         }
     }
-    // First two symbols are opposite-color 7's
+    // First two symbols are opposite-color 7's. Any third 7 completes a match
+    // now, so spin until the symbol isn't a 7 at all.
     else if (MismatchedSyms_77(sym1, sym2))
     {
-        // If biased toward straight 7's, try to complete the 7 mismatch in 4
-        // turns
-        if (sSlotMachine->machineBias & BIAS_STRAIGHT_7)
-        {
-            for (i = 0; i <= MAX_EXTRA_TURNS; i++)
-            {
-                if (sym1 == GetSymbol(RIGHT_REEL, 2 - i))
-                {
-                    sSlotMachine->reelExtraTurns[2] = i;
-                    return;
-                }
-            }
-        }
-
-        // Otherwise, just spin until you get a non-matching symbol
         i = 0;
         while (TRUE)
         {
-            if (sym1 != GetSymbol(RIGHT_REEL, 2 - i))
+            u8 sym3 = GetSymbol(RIGHT_REEL, 2 - i);
+            if (sym3 != SYMBOL_7_RED && sym3 != SYMBOL_7_BLUE)
                 break;
             i++;
         }
@@ -3045,32 +3026,6 @@ static void DecideStop_NoBias_Reel3_Bet2(void)
     u8 sym2;
     u8 sym3;
 
-    // Effectively, if you lined up two 7's in the same row
-    if (sSlotMachine->winnerRows[1] != 0 &&
-        sSlotMachine->winnerRows[0] == sSlotMachine->winnerRows[1] &&
-        sSlotMachine->machineBias & BIAS_STRAIGHT_7)
-    {
-        sym1 = GetSymbol(LEFT_REEL, sSlotMachine->winnerRows[0] - sSlotMachine->reelExtraTurns[0]);
-        sym2 = GetSymbol(MIDDLE_REEL, sSlotMachine->winnerRows[1] - sSlotMachine->reelExtraTurns[1]);
-
-        // If the first two 7's are opposite colors, see if you can line up a 7
-        // mismatch in the same row. If so, advance initially to that position.
-        // More turns may be added further below.
-        if (MismatchedSyms_77(sym1, sym2))
-        {
-            // Iterate over the next 4 turns
-            for (i = 0; i <= MAX_EXTRA_TURNS; i++)
-            {
-                sym3 = GetSymbol(RIGHT_REEL, sSlotMachine->winnerRows[1] - i);
-                if (sym1 == sym3)
-                {
-                    extraTurns = i;
-                    break;
-                }
-            }
-        }
-    }
-
     while (TRUE)
     {
         s16 numMatches;
@@ -3085,8 +3040,7 @@ static void DecideStop_NoBias_Reel3_Bet2(void)
             //   If there's a match on screen, keep spinning. Otherwise, if
             //   there's a 7 mismatch on screen, keep spinning if the machine
             //   isn't biased toward straight 7's.
-            if (!NeitherMatchNor7Mismatch(sym1, sym2, sym3) &&
-                !(MismatchedSyms_777(sym1, sym2, sym3) && (sSlotMachine->machineBias & BIAS_STRAIGHT_7)))
+            if (!NeitherMatchNor7Mismatch(sym1, sym2, sym3))
             {
                 numMatches++;
                 break;
@@ -3144,42 +3098,13 @@ static void DecideStop_NoBias_Reel3_Bet3(void)
     // this function.
     DecideStop_NoBias_Reel3_Bet2();
 
-    // Essentially, if you lined up two 7's diagonally
-    if (sSlotMachine->winnerRows[1] != 0 &&
-        sSlotMachine->winnerRows[0] != sSlotMachine->winnerRows[1] &&
-        sSlotMachine->machineBias & BIAS_STRAIGHT_7)
-    {
-        sym1 = GetSymbol(LEFT_REEL, sSlotMachine->winnerRows[0] - sSlotMachine->reelExtraTurns[0]);
-        sym2 = GetSymbol(MIDDLE_REEL, sSlotMachine->winnerRows[1] - sSlotMachine->reelExtraTurns[1]);
-
-        // If the first two 7's are opposite colors, try advancing up to 4
-        // additional turns to line up a diagonal 7 mismatch. More turns may be
-        // added further below.
-        if (MismatchedSyms_77(sym1, sym2))
-        {
-            row = 1;
-            if (sSlotMachine->winnerRows[0] == 1)
-                row = 3;
-            for (i = 0; i <= MAX_EXTRA_TURNS; i++)
-            {
-                sym3 = GetSymbol(RIGHT_REEL, row - (sSlotMachine->reelExtraTurns[2] + i));
-                if (sym1 == sym3)
-                {
-                    sSlotMachine->reelExtraTurns[2] += i;
-                    break;
-                }
-            }
-        }
-    }
-
     while (TRUE)
     {
         // Check NWSE diagonal
         sym1 = GetSymbol(LEFT_REEL, 1 - sSlotMachine->reelExtraTurns[0]);
         sym2 = GetSymbol(MIDDLE_REEL, 2 - sSlotMachine->reelExtraTurns[1]);
         sym3 = GetSymbol(RIGHT_REEL, 3 - sSlotMachine->reelExtraTurns[2]);
-        if (NeitherMatchNor7Mismatch(sym1, sym2, sym3)
-            || (MismatchedSyms_777(sym1, sym2, sym3) && sSlotMachine->machineBias & BIAS_STRAIGHT_7))
+        if (NeitherMatchNor7Mismatch(sym1, sym2, sym3))
             break;
         sSlotMachine->reelExtraTurns[2]++;
     }
@@ -3190,8 +3115,7 @@ static void DecideStop_NoBias_Reel3_Bet3(void)
         sym1 = GetSymbol(LEFT_REEL, 3 - sSlotMachine->reelExtraTurns[0]);
         sym2 = GetSymbol(MIDDLE_REEL, 2 - sSlotMachine->reelExtraTurns[1]);
         sym3 = GetSymbol(RIGHT_REEL, 1 - sSlotMachine->reelExtraTurns[2]);
-        if (NeitherMatchNor7Mismatch(sym1, sym2, sym3)
-            || (MismatchedSyms_777(sym1, sym2, sym3) && sSlotMachine->machineBias & BIAS_STRAIGHT_7))
+        if (NeitherMatchNor7Mismatch(sym1, sym2, sym3))
             break;
         sSlotMachine->reelExtraTurns[2]++;
     }
@@ -5523,7 +5447,7 @@ static const u16 sSlotPayouts[] = {
     [MATCH_LOTAD]         = 6,
     [MATCH_AZURILL]       = 12,
     [MATCH_POWER]         = 3,
-    [MATCH_MIXED_7]       = 90,
+    [MATCH_MIXED_7]       = 300,
     [MATCH_RED_7]         = 300,
     [MATCH_BLUE_7]        = 300
 };
