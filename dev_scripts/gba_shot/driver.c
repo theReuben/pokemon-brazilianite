@@ -32,15 +32,21 @@ int main(int argc, char** argv) {
 
     int maxFrame = 0;
     for (int i = 4; i < argc; i++) {
-        int f = atoi(argv[i] + (argv[i][0] == 'S' ? 2 : 0));
+        int f, g; unsigned k;
+        if (sscanf(argv[i], "H:%d:%d:%x", &f, &g, &k) == 3) f = g;
+        else f = atoi(argv[i] + (argv[i][0] == 'S' || argv[i][0] == 'P' ? 2 : 0));
         if (f > maxFrame) maxFrame = f;
     }
 
     for (int frame = 0; frame <= maxFrame; frame++) {
         uint32_t keys = 0;
         for (int i = 4; i < argc; i++) {
-            if (argv[i][0] == 'S') continue;
-            int f; unsigned k;
+            int f, g; unsigned k;
+            if (sscanf(argv[i], "H:%d:%d:%x", &f, &g, &k) == 3) {
+                if (frame >= f && frame <= g) keys |= k;
+                continue;
+            }
+            if (argv[i][0] == 'S' || argv[i][0] == 'P') continue;
             if (sscanf(argv[i], "%d:%x", &f, &k) == 2 && f == frame) keys |= k;
         }
         core->setKeys(core, keys);
@@ -54,6 +60,13 @@ int main(int argc, char** argv) {
             fwrite(videoBuffer, 4, 240 * 160, fp);
             fclose(fp);
             printf("dumped frame %d\n", frame);
+        }
+        for (int i = 4; i < argc; i++) {
+            if (argv[i][0] != 'P') continue;
+            if (atoi(argv[i] + 2) != frame) continue;
+            uint32_t sb1 = core->busRead32(core, 0x03005200);
+            printf("frame %d player (%d, %d)\n", frame,
+                   (int16_t)core->busRead16(core, sb1), (int16_t)core->busRead16(core, sb1 + 2));
         }
     }
     return 0;
