@@ -18,7 +18,9 @@ EverGrandeCity_EventScript_PokemonLeagueSign::
 	msgbox EverGrandeCity_Text_EnteringPokemonLeague, MSGBOX_SIGN
 	end
 
-@ Fires on the way down from VICTORY ROAD, before the long climb to the league
+@ Fires in the neck below the VICTORY ROAD entrance, before the climb starts.
+@ (18, 43) rather than (18, 42) because 42 is where the cave warp lands you, and
+@ a coord event only fires when you step onto its tile.
 EverGrandeCity_EventScript_MamaBosaLeagueCall::
 	setvar VAR_TEMP_2, 1
 	goto_if_set FLAG_MAMA_BOSA_LEAGUE_CALL, EverGrandeCity_EventScript_MamaBosaLeagueCallEnd
