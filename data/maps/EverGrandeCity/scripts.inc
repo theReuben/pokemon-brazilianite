@@ -18,9 +18,12 @@ EverGrandeCity_EventScript_PokemonLeagueSign::
 	msgbox EverGrandeCity_Text_EnteringPokemonLeague, MSGBOX_SIGN
 	end
 
-@ Fires in the neck below the VICTORY ROAD entrance, before the climb starts.
-@ (18, 43) rather than (18, 42) because 42 is where the cave warp lands you, and
-@ a coord event only fires when you step onto its tile.
+@ Fires on the approach to the VICTORY ROAD entrance, five steps short of the
+@ cave mouth, so the reminder lands with the way back still in front of you.
+@ The row is y=46, x=12..24 - the full width of the flower field, which is a
+@ complete cut: nothing north of it is reachable without crossing it. It has to
+@ be a line rather than the tile at the mouth, because the tile the cave warp
+@ lands you on can never fire (a coord event only runs when you step onto it).
 EverGrandeCity_EventScript_MamaBosaLeagueCall::
 	setvar VAR_TEMP_2, 1
 	goto_if_set FLAG_MAMA_BOSA_LEAGUE_CALL, EverGrandeCity_EventScript_MamaBosaLeagueCallEnd

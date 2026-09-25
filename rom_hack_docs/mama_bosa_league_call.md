@@ -12,6 +12,7 @@ headless in mGBA.
   - [The old placement, reproduced](#the-old-placement-reproduced)
   - [Walking in from the city](#walking-in-from-the-city)
   - [Coming back out of Victory Road](#coming-back-out-of-victory-road)
+  - [Arriving from the Pokémon Center](#arriving-from-the-pokémon-center)
   - [Second pass, and the badge gate](#second-pass-and-the-badge-gate)
 - [How the headless run was driven](#how-the-headless-run-was-driven)
 
@@ -39,30 +40,51 @@ VICTORY ROAD to get back.
 
 ## The fix
 
-The trigger moves to **(18, 43)**, in the neck below the *lower* VICTORY ROAD entrance.
-
-(18, 42) is the obvious candidate and is a genuine one-block chokepoint, but it is the
-landing tile of the lower cave warp, so it carries exactly the same latent weakness as the
-old tile. (18, 43) is one step further out: no warp lands there, and it is still
-unavoidable, because (18, 42) connects only to the cave at 41 and to 43, and 19,43 is the
-VICTORY ROAD sign.
+The trigger becomes a **row of 13 coord events at y = 46, x = 12..24** — the full width of
+the flower field on the approach to the lower VICTORY ROAD entrance, five steps short of the
+cave mouth.
 
 ```
 y    x=15 16 17 18 19 20 21 22
 41      #  #  #  .  #  #  #  #     <- warp 2, the cave mouth
 42      #  #  #  .  #  #  #  #     <- warp 2 lands you here
-43      #  #  .  .  #  .  #  #     <- the trigger
+43      #  #  .  .  S  .  #  #     <- S is the VICTORY ROAD sign
 44      .  .  .  .  .  .  .  .
+45      .  .  .  .  .  .  .  .
+46      T  T  T  T  T  T  T  T     <- the trigger row, x=12..24
 ```
 
-That tile also fires in both directions, which the old one could never do: walking in from
-the city, *and* walking back out of VICTORY ROAD (you land on 42, then step south onto 43).
-So a save that has already been through VICTORY ROAD still gets the call.
+A row rather than a single tile for two reasons. The first is correctness: the tile at the
+mouth can never be a trigger, because (18, 42) is where the cave warp *puts* you, and a coord
+event only runs when the player steps onto it under their own power. Any design that depends
+on one tile at a chokepoint is one map edit away from the original bug. The second is feel —
+the user's words were that a single tile at the neck "doesn't feel the most natural". Out on
+the open field you get the call with the cave mouth and its sign in shot, walking toward
+them, rather than wedged in a one-tile corridor.
+
+Being a row does not weaken the guarantee, because the row is a complete graph cut. Flood
+filling the map from the south edge with the row removed reaches nothing north of it:
+
+| row | trigger tiles | tiles north of the row still reachable from the south |
+|---|---|---|
+| y=43 | 3 (x 17..20) | 0 |
+| y=44 | 13 (x 12..24) | 0 |
+| **y=46** | **13 (x 12..24)** | **0** |
+| y=49 | 15 (x 13..29) | 0 |
+
+Every row from 43 to 49 is a valid cut, so y=46 was chosen on framing alone. All 13 tiles are
+elevation 5 and passable (`MB_NORMAL` or `MB_SHORT_GRASS`), and no warp on the map lands on
+row 46, so every tile in it is reachable only by stepping.
+
+Firing on any of 13 tiles needs a guard so the row does not re-arm as you walk along it. The
+coord events are conditioned on `VAR_TEMP_2 == 0` and the script sets it to 1 on its first
+line, so the row fires at most once per visit to the map; `VAR_TEMP_*` clears on every map
+load, and `FLAG_MAMA_BOSA_LEAGUE_CALL` still holds it to once per save.
 
 ![Old and new trigger tiles](mama_bosa_league_call/00_trigger_move.png)
 
-The script is untouched — still gated on `FLAG_BADGE08_GET` as well as its own
-`FLAG_MAMA_BOSA_LEAGUE_CALL`, still once per save.
+The script body is untouched — still gated on `FLAG_BADGE08_GET` as well as its own
+`FLAG_MAMA_BOSA_LEAGUE_CALL`.
 
 ## Verification
 
@@ -84,7 +106,8 @@ Walking on across the plateau toward the league, still nothing:
 
 ### Walking in from the city
 
-New placement. Walking north from (18, 47), the call fires on the step onto (18, 43):
+New placement. Walking north from (18, 50), the call fires on the step onto (18, 46), with
+the cave mouth and the VICTORY ROAD sign in view ahead:
 
 ![The call fires](mama_bosa_league_call/03_inbound_call_fires.png)
 ![Greeting](mama_bosa_league_call/04_greeting.png)
@@ -104,31 +127,37 @@ exactly like a freeze and cost time during this investigation.
 ### Coming back out of Victory Road
 
 This one is walked end to end rather than warped into place, because "does the cave put you
-straight onto the trigger tile?" is precisely the question the old placement got wrong, and
-a debug warp is not proof about a real one.
+straight onto the trigger tile?" is precisely the question the old placement got wrong, and a
+debug warp is not proof about a real one.
 
 The player is placed inside VICTORY ROAD 1F on its warp 0 at (15, 40) — the real exit, whose
-`dest_warp_id` is EVER GRANDE CITY's warp 2 — and walks out under their own power. They land
-on **(18, 42)**, map banner still up, no call:
+`dest_warp_id` is EVER GRANDE CITY's warp 2 — and walks out under their own power, landing on
+(18, 42). Four steps south, the row fires:
 
-![Exiting Victory Road lands you on 42](mama_bosa_league_call/09a_vr_exit_lands_on_42.png)
+![The call fires on the way out of Victory Road](mama_bosa_league_call/09a_out_of_victory_road.png)
 
-One step south onto (18, 43) fires it:
+The exit tile and the trigger row are four rows apart, so no warp landing can swallow the
+trigger the way it did the old one.
 
-![The call fires on the way out](mama_bosa_league_call/09b_outbound_call_fires.png)
+### Arriving from the Pokémon Center
 
-So the warp exit and the trigger are on different tiles, which is the whole point of
-choosing 43 over 42.
+The other way onto the field. Walking north from (24, 48), by the Pokémon Center, the call
+fires on (24, 46) — the east end of the row, twelve tiles from where the middle approach
+fires it:
+
+![The call fires at the east end of the row](mama_bosa_league_call/09b_east_edge_from_pokemon_center.png)
 
 ### Second pass, and the badge gate
 
-Walking off the tile and back on after the call, position confirmed at (18, 43). No call —
-`FLAG_MAMA_BOSA_LEAGUE_CALL` holds:
+After the call, walking west along the row from (18, 46) to (12, 46) crosses six more trigger
+tiles, then turns north to (12, 44). Silent throughout — the `VAR_TEMP_2` guard holds, so the
+row does not stutter:
 
 ![Second pass is silent](mama_bosa_league_call/10_second_pass_silent.png)
 
 The same walk on a build that does not set `FLAG_BADGE08_GET`. The player is not stopped at
-all; they carry straight on through 43, 42 and 41 and into VICTORY ROAD 1F:
+all; they cross the row, the neck at 43/42 and the cave mouth, ending up at (15, 30) inside
+VICTORY ROAD 1F:
 
 ![No badge, walks straight through](mama_bosa_league_call/11_no_badge_walks_through.png)
 
