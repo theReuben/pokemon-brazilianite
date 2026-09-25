@@ -103,9 +103,22 @@ exactly like a freeze and cost time during this investigation.
 
 ### Coming back out of Victory Road
 
-Exiting the lower cave lands the player on (18, 42); one step south onto (18, 43) fires it:
+This one is walked end to end rather than warped into place, because "does the cave put you
+straight onto the trigger tile?" is precisely the question the old placement got wrong, and
+a debug warp is not proof about a real one.
 
-![The call fires on the way out](mama_bosa_league_call/09_outbound_call_fires.png)
+The player is placed inside VICTORY ROAD 1F on its warp 0 at (15, 40) — the real exit, whose
+`dest_warp_id` is EVER GRANDE CITY's warp 2 — and walks out under their own power. They land
+on **(18, 42)**, map banner still up, no call:
+
+![Exiting Victory Road lands you on 42](mama_bosa_league_call/09a_vr_exit_lands_on_42.png)
+
+One step south onto (18, 43) fires it:
+
+![The call fires on the way out](mama_bosa_league_call/09b_outbound_call_fires.png)
+
+So the warp exit and the trigger are on different tiles, which is the whole point of
+choosing 43 over 42.
 
 ### Second pass, and the badge gate
 
