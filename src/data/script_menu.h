@@ -738,7 +738,7 @@ static const struct MenuAction MultichoiceList_WheresRayquaza[] =
 {
     {COMPOUND_STRING("CAVE OF ORIGIN")},
     {COMPOUND_STRING("MT. PYRE")},
-    {COMPOUND_STRING("SKY PILLAR")},
+    {COMPOUND_STRING("SCAM PILLAR")},
     {COMPOUND_STRING("Don't remember")},
 };
 
