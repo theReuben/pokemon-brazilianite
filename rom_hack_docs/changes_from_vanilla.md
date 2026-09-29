@@ -91,6 +91,7 @@ Rare Candies cannot push past it. The cap rises with badges:
 | **Cap Candy** | Raises a Pokemon straight to the current level cap |
 | **Friend Band** | Held item for the three friendship evolutions in the dex |
 | **Castformite** | Mega Stone for Castform |
+| **Peppy Mac** | No sugar in it. Wakes a Pokemon and heals 60 HP. PRAESTA stands you one for beating him |
 
 The two candies are in the bag from the start.
 
