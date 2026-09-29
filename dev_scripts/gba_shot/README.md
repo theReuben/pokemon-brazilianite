@@ -8,7 +8,10 @@ UI change needs eyeballing.
   `cc -O2 -I/opt/homebrew/include -L/opt/homebrew/lib -lmgba -o driver driver.c`
 - `drive.py` - press/screenshot plans; edit `S` to point at the ROM copy.
 - `topng.py` - raw frame -> PNG, with an integer zoom for inspecting sprites.
-  The framebuffer is BGRA, so pass `bgr`.
+  The framebuffer is RGBA, which is the default; `bgr` swaps red and blue and is
+  only there for debugging. Getting this backwards is easy to miss, because most
+  of Hoenn is green and grey - check something you know is red, like a POKéMON
+  CENTER roof, before trusting a batch of screenshots.
 
 Notes:
 - `tools/mgba/mgba-rom-test-mac` advertises `--script` but was built without Lua,

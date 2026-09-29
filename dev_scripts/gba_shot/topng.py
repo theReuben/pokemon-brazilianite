@@ -1,5 +1,5 @@
 import sys, zlib, struct
-def png(raw, out, w=240, h=160, order="bgr", scale=1):
+def png(raw, out, w=240, h=160, order="rgb", scale=1):
     d=open(raw,'rb').read()
     px=[]
     for y in range(h):
@@ -21,4 +21,4 @@ def png(raw, out, w=240, h=160, order="bgr", scale=1):
     o=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',w*scale,h*scale,8,2,0,0,0))
     o+=chunk(b'IDAT',zlib.compress(rows,9))+chunk(b'IEND',b'')
     open(out,'wb').write(o)
-png(sys.argv[1], sys.argv[2], order=(sys.argv[3] if len(sys.argv)>3 else "bgr"), scale=int(sys.argv[4]) if len(sys.argv)>4 else 1)
+png(sys.argv[1], sys.argv[2], order=(sys.argv[3] if len(sys.argv)>3 else "rgb"), scale=int(sys.argv[4]) if len(sys.argv)>4 else 1)
