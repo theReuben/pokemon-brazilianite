@@ -324,7 +324,7 @@ static enum FieldEffectOutcome BenefitsFromRain(enum BattlerId battler)
 //TODO: when is electric terrain bad?
 static enum FieldEffectOutcome BenefitsFromElectricTerrain(enum BattlerId battler)
 {
-    if (DoesAbilityBenefitFromFieldStatus(gAiLogicData->abilities[battler], STATUS_FIELD_ELECTRIC_TERRAIN))
+    if (DoesAbilityBenefitFromFieldStatus(AI_GetAbilityAfterMega(battler), STATUS_FIELD_ELECTRIC_TERRAIN))
         return FIELD_EFFECT_POSITIVE;
 
     if (HasBattlerTerrainBoostMove(battler, STATUS_FIELD_ELECTRIC_TERRAIN))
@@ -353,7 +353,7 @@ static enum FieldEffectOutcome BenefitsFromElectricTerrain(enum BattlerId battle
 //TODO: when is grassy terrain bad?
 static enum FieldEffectOutcome BenefitsFromGrassyTerrain(enum BattlerId battler)
 {
-    if (DoesAbilityBenefitFromFieldStatus(gAiLogicData->abilities[battler], STATUS_FIELD_GRASSY_TERRAIN))
+    if (DoesAbilityBenefitFromFieldStatus(AI_GetAbilityAfterMega(battler), STATUS_FIELD_GRASSY_TERRAIN))
         return FIELD_EFFECT_POSITIVE;
 
     if (HasBattlerSideMoveWithEffect(battler, EFFECT_GRASSY_GLIDE))
@@ -381,7 +381,7 @@ static enum FieldEffectOutcome BenefitsFromGrassyTerrain(enum BattlerId battler)
 //TODO: when is misty terrain bad?
 static enum FieldEffectOutcome BenefitsFromMistyTerrain(enum BattlerId battler)
 {
-    if (DoesAbilityBenefitFromFieldStatus(gAiLogicData->abilities[battler], STATUS_FIELD_MISTY_TERRAIN))
+    if (DoesAbilityBenefitFromFieldStatus(AI_GetAbilityAfterMega(battler), STATUS_FIELD_MISTY_TERRAIN))
         return FIELD_EFFECT_POSITIVE;
 
     if (HasBattlerTerrainBoostMove(battler, STATUS_FIELD_MISTY_TERRAIN)
@@ -415,7 +415,7 @@ static enum FieldEffectOutcome BenefitsFromMistyTerrain(enum BattlerId battler)
 //TODO: when is Psychic Terrain negative?
 static enum FieldEffectOutcome BenefitsFromPsychicTerrain(enum BattlerId battler)
 {
-    if (DoesAbilityBenefitFromFieldStatus(gAiLogicData->abilities[battler], STATUS_FIELD_PSYCHIC_TERRAIN))
+    if (DoesAbilityBenefitFromFieldStatus(AI_GetAbilityAfterMega(battler), STATUS_FIELD_PSYCHIC_TERRAIN))
         return FIELD_EFFECT_POSITIVE;
 
     if (HasBattlerTerrainBoostMove(battler, STATUS_FIELD_PSYCHIC_TERRAIN)

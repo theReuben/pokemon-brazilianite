@@ -2243,6 +2243,25 @@ bool32 ShouldClearWeather(enum BattlerId battler, u32 weather)
     return WeatherChecker(battler, weather, FIELD_EFFECT_NEGATIVE);
 }
 
+// A Pokemon that is about to Mega Evolve should reason with the ability it is
+// about to have rather than the one it is losing. CASTFORM makes this matter:
+// it holds Forecast until it Megas into Geocast, and the turn it Megas is the
+// same turn it has to choose which terrain to stand on.
+enum Ability AI_GetAbilityAfterMega(enum BattlerId battler)
+{
+    enum Ability ability = gAiLogicData->abilities[battler];
+
+    if (GetActiveGimmick(battler) != GIMMICK_NONE
+     || gBattleStruct->gimmick.usableGimmick[battler] != GIMMICK_MEGA)
+        return ability;
+
+    u32 megaSpecies = GetBattleFormChangeTargetSpecies(battler, FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM, ability);
+    if (megaSpecies == gBattleMons[battler].species)
+        return ability;
+
+    return GetSpeciesAbility(megaSpecies, 0);
+}
+
 bool32 ShouldSetFieldStatus(enum BattlerId battler, u32 fieldStatus)
 {
     if (gFieldStatuses & fieldStatus)

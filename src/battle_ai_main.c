@@ -4339,7 +4339,7 @@ static s32 AI_GeocastOffenceScore(enum BattlerId battlerAtk, enum BattlerId batt
         ctx.battlerAtk = battlerAtk;
         ctx.battlerDef = battlerDef;
         ctx.updateFlags = FALSE;
-        ctx.abilityAtk = aiData->abilities[battlerAtk];
+        ctx.abilityAtk = AI_GetAbilityAfterMega(battlerAtk);
         ctx.abilityDef = aiData->abilities[battlerDef];
         ctx.holdEffectAtk = aiData->holdEffects[battlerAtk];
         ctx.holdEffectDef = aiData->holdEffects[battlerDef];
@@ -4390,24 +4390,49 @@ static s32 AI_GeocastDefenceScore(enum BattlerId battlerDef, u32 terrain)
     return score;
 }
 
+// CASTFORM carries Forecast until it Mega Evolves, and the turn it Mega Evolves
+// is usually the same turn it first has to pick a terrain. Reading the ability it
+// has right now would switch all of this off exactly when it matters most, so the
+// ability it is about to have is the one that counts.
+static bool32 AI_HasGeocast(enum BattlerId battlerAtk, struct AiLogicData *aiData)
+{
+    return AI_GetAbilityAfterMega(battlerAtk) == ABILITY_GEOCAST;
+}
+
+// Setting a terrain is also what arms Terrain Pulse: on bare ground it is a 50 BP
+// Normal move, and under terrain it is 100 BP, of the terrain's type, with STAB
+// from the form change. That is a fourfold swing, and it is the whole reason the
+// set carries three terrains, so it has to outweigh a turn of chip damage.
+static s32 AI_GeocastArmsTerrainPulse(enum BattlerId battlerAtk)
+{
+    if (gFieldStatuses & STATUS_FIELD_TERRAIN_ANY)
+        return NO_INCREASE;
+    if (!HasBattlerSideMoveWithEffect(battlerAtk, EFFECT_TERRAIN_PULSE))
+        return NO_INCREASE;
+
+    return GOOD_EFFECT;
+}
+
 static s32 AI_GeocastTerrainScore(enum BattlerId battlerAtk, enum BattlerId battlerDef, u32 terrain, struct AiLogicData *aiData)
 {
-    if (aiData->abilities[battlerAtk] != ABILITY_GEOCAST)
+    if (!AI_HasGeocast(battlerAtk, aiData))
         return NO_INCREASE;
 
     return AI_GeocastOffenceScore(battlerAtk, battlerDef, terrain, aiData)
-         + AI_GeocastDefenceScore(battlerDef, terrain);
+         + AI_GeocastDefenceScore(battlerDef, terrain)
+         + AI_GeocastArmsTerrainPulse(battlerAtk);
 }
 
 // A terrain is already up, so the form change has happened and re-setting one
 // costs a turn. That is only worth it when the Pokemon now in front of the AI
 // - which need not be the one the terrain was chosen for - makes another
-// typing clearly better to attack into. Defence does not enter it: it is too
+// typing clearly better to attack into, and when the free hit that giving up a
+// turn hands over is one it can afford. Defence does not enter it: it is too
 // small a gain to spend a turn on, and letting it decide would mean the AI
 // could talk itself back into the terrain it just left.
 static s32 AI_GeocastShouldSwapTerrain(enum BattlerId battlerAtk, enum BattlerId battlerDef, u32 terrain, struct AiLogicData *aiData)
 {
-    if (aiData->abilities[battlerAtk] != ABILITY_GEOCAST)
+    if (!AI_HasGeocast(battlerAtk, aiData))
         return NO_INCREASE;
 
     u32 activeTerrain = gFieldStatuses & STATUS_FIELD_TERRAIN_ANY;
@@ -4417,10 +4442,27 @@ static s32 AI_GeocastShouldSwapTerrain(enum BattlerId battlerAtk, enum BattlerId
     s32 improvement = AI_GeocastOffenceScore(battlerAtk, battlerDef, terrain, aiData)
                     - AI_GeocastOffenceScore(battlerAtk, battlerDef, activeTerrain, aiData);
 
-    // Every tier is a doubling of Terrain Pulse's damage, which pays for the
-    // turn in any fight that lasts, but a bigger swing is worth more.
     if (improvement <= NO_INCREASE)
         return NO_INCREASE;
+
+    // A better typing is worth nothing if Terrain Pulse off the terrain that is
+    // already up finishes the target this turn.
+    enum Move *moves = GetMovesArray(battlerAtk);
+    for (u32 i = 0; i < MAX_MON_MOVES; i++)
+    {
+        if (GetMoveEffect(moves[i]) == EFFECT_TERRAIN_PULSE
+         && CanIndexMoveFaintTarget(battlerAtk, battlerDef, i, AI_ATTACKING))
+            return NO_INCREASE;
+    }
+
+    // Otherwise weigh the swap against the hit taken for it. Every tier is a
+    // doubling of Terrain Pulse's damage, which pays for the turn in any fight
+    // that lasts, but when the free hit is a big share of what is left there may
+    // not be a later, so only a full tier or more is worth standing still for.
+    u32 incoming = GetBestDmgFromBattler(battlerDef, battlerAtk, AI_DEFENDING);
+    if (incoming * 2 >= gBattleMons[battlerAtk].hp && improvement < DECENT_EFFECT)
+        return NO_INCREASE;
+
     if (improvement >= DECENT_EFFECT)
         return GOOD_EFFECT;
 

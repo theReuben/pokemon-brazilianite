@@ -215,6 +215,7 @@ s32 ProtectChecks(enum BattlerId battlerAtk, enum BattlerId battlerDef, enum Mov
 bool32 ShouldRaiseAnyStat(enum BattlerId battlerAtk, enum BattlerId battlerDef);
 bool32 ShouldSetWeather(enum BattlerId battler, u32 weather);
 bool32 ShouldClearWeather(enum BattlerId battler, u32 weather);
+enum Ability AI_GetAbilityAfterMega(enum BattlerId battler);
 bool32 ShouldSetFieldStatus(enum BattlerId battler, u32 fieldStatus);
 bool32 ShouldClearFieldStatus(enum BattlerId battler, u32 fieldStatus);
 bool32 HasSleepMoveWithLowAccuracy(enum BattlerId battlerAtk, enum BattlerId battlerDef);
