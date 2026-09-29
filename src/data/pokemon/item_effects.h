@@ -68,6 +68,12 @@ const u8 gItemEffect_SodaPop[7] = {
     [6] = I_HEALTH_RECOVERY >= GEN_7 ? 50 : 60, // Amount of HP to recover
 };
 
+const u8 gItemEffect_PeppyMac[7] = {
+    [3] = ITEM3_SLEEP,
+    [4] = ITEM4_HEAL_HP,
+    [6] = 60, // Amount of HP to recover
+};
+
 const u8 gItemEffect_Lemonade[7] = {
     [4] = ITEM4_HEAL_HP,
     [6] = I_HEALTH_RECOVERY >= GEN_7 ? 70 : 80, // Amount of HP to recover

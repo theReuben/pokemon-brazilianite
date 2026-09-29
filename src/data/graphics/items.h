@@ -114,6 +114,9 @@ const u16 gItemIconPalette_FreshWater[] = INCBIN_U16("graphics/items/icon_palett
 const u32 gItemIcon_SodaPop[] = INCBIN_U32("graphics/items/icons/soda_pop.4bpp.smol");
 const u16 gItemIconPalette_SodaPop[] = INCBIN_U16("graphics/items/icon_palettes/soda_pop.gbapal");
 
+const u32 gItemIcon_PeppyMac[] = INCBIN_U32("graphics/items/icons/peppy_mac.4bpp.smol");
+const u16 gItemIconPalette_PeppyMac[] = INCBIN_U16("graphics/items/icon_palettes/peppy_mac.gbapal");
+
 const u32 gItemIcon_Lemonade[] = INCBIN_U32("graphics/items/icons/lemonade.4bpp.smol");
 const u16 gItemIconPalette_Lemonade[] = INCBIN_U16("graphics/items/icon_palettes/lemonade.gbapal");
 

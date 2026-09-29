@@ -819,6 +819,27 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_SodaPop,
     },
 
+    [ITEM_PEPPY_MAC] =
+    {
+        .name = ITEM_NAME("Peppy Mac"),
+        .pluralName = ITEM_PLURAL_NAME("Peppy Macs"),
+        .price = 350,
+        .holdEffectParam = 60,
+        .description = COMPOUND_STRING(
+            "No sugar in it.\n"
+            "Wakes a POKéMON\n"
+            "and heals 60 HP."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HEALTH_RECOVERY,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = EFFECT_ITEM_HEAL_AND_CURE_STATUS,
+        .effect = gItemEffect_PeppyMac,
+        .flingPower = 30,
+        .iconPic = gItemIcon_PeppyMac,
+        .iconPalette = gItemIconPalette_PeppyMac,
+    },
+
     [ITEM_LEMONADE] =
     {
         .name = ITEM_NAME("Lemonade"),

@@ -432,6 +432,8 @@ extern const u32 gItemIcon_FreshWater[];
 extern const u16 gItemIconPalette_FreshWater[];
 extern const u32 gItemIcon_SodaPop[];
 extern const u16 gItemIconPalette_SodaPop[];
+extern const u32 gItemIcon_PeppyMac[];
+extern const u16 gItemIconPalette_PeppyMac[];
 extern const u32 gItemIcon_Lemonade[];
 extern const u16 gItemIconPalette_Lemonade[];
 extern const u32 gItemIcon_MoomooMilk[];

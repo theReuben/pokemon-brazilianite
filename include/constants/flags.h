@@ -65,7 +65,7 @@
 #define FLAG_HIDE_TAPU_GROTTO_FINI               0x02B
 #define FLAG_MET_GAME_CORNER_WINNER              0x2C
 #define FLAG_MAMA_BOSA_LEAGUE_CALL               0x2D
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
+#define FLAG_RECEIVED_PEPPY_MAC                  0x2E
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag

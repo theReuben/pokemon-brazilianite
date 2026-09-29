@@ -47,14 +47,28 @@ EverGrandeCity_PhoebesRoom_EventScript_Phoebe::
 	end
 
 EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech::
-	msgbox EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	goto_if_unset FLAG_RECEIVED_PEPPY_MAC, EverGrandeCity_PhoebesRoom_EventScript_GivePeppyMac
+	msgbox EverGrandeCity_PhoebesRoom_Text_DrinkIt, MSGBOX_DEFAULT
 	release
 	end
 
 EverGrandeCity_PhoebesRoom_EventScript_Defeated::
 	setflag FLAG_DEFEATED_ELITE_4_PHOEBE
 	call PokemonLeague_EliteFour_SetAdvanceToNextRoomMetatiles
+	goto EverGrandeCity_PhoebesRoom_EventScript_GivePeppyMac
+	end
+
+EverGrandeCity_PhoebesRoom_EventScript_GivePeppyMac::
 	msgbox EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
+	giveitem ITEM_PEPPY_MAC
+	goto_if_eq VAR_RESULT, FALSE, EverGrandeCity_PhoebesRoom_EventScript_BagFull
+	setflag FLAG_RECEIVED_PEPPY_MAC
+	msgbox EverGrandeCity_PhoebesRoom_Text_DrinkIt, MSGBOX_DEFAULT
+	release
+	end
+
+EverGrandeCity_PhoebesRoom_EventScript_BagFull::
+	msgbox EverGrandeCity_PhoebesRoom_Text_BagFull, MSGBOX_DEFAULT
 	release
 	end
 
@@ -72,9 +86,16 @@ EverGrandeCity_PhoebesRoom_Text_Defeat:
 	.string "Consider my peppy mac quapt.$"
 
 EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech:
-	.string "A can, as promised.\p"
+	.string "A can, as promised.$"
+
+EverGrandeCity_PhoebesRoom_Text_DrinkIt:
 	.string "No sugar in it. All the taste, they\n"
 	.string "reckon. Maximum taste.\p"
 	.string "Drink it before the next room.\n"
 	.string "You'll want to be awake for that one.$"
+
+EverGrandeCity_PhoebesRoom_Text_BagFull:
+	.string "Your BAG's full.\p"
+	.string "I'll keep it cold. Come back when\n"
+	.string "you've room for it.$"
 
