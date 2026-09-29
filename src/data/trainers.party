@@ -4409,7 +4409,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer / Force Setup First Turn
+AI: Smart Trainer / Powerful Status / HP Aware
 Mugshot: Purple
 
 Bronzong @ Leftovers
@@ -4486,7 +4486,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Powerful Status / HP Aware
 Mugshot: Green
 
 Porygon-Z @ Focus Sash
@@ -4563,7 +4563,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer / Force Setup First Turn
+AI: Smart Trainer / Powerful Status / HP Aware
 Mugshot: Pink
 
 Bisharp @ Eviolite
@@ -4641,7 +4641,7 @@ Gender: Male
 Music: Elite Four
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Powerful Status / HP Aware
 Mugshot: Blue
 
 mutiny (Hippowdon) (M) @ Smooth Rock
@@ -5946,7 +5946,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Smart Trainer / Powerful Status / HP Aware
 Mugshot: Yellow
 
 Politoed (F) @ Damp Rock
